@@ -1,0 +1,126 @@
+DIGEST da6d8badf3cea529433a8b5d0367f230
+FRocqOfSolidity.RecordUpdate
+R265:270 Stdlib.Program.Basics <> <> lib
+R288:298 Ltac2.Ltac2 <> <> lib
+R309:320 Ltac2.Option <> <> lib
+R338:347 Ltac2.Bool <> <> lib
+binder 2240:2240 <> v:1
+binder 2242:2242 <> r:2
+ind 2520:2525 <> Setter
+constr 2565:2567 <> set
+rec 2520:2525 <> Setter
+proj 2565:2567 <> set
+binder 2527:2527 <> R:3
+binder 2529:2529 <> E:4
+R2547:2550 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2546:2546 RocqOfSolidity.RecordUpdate <> R:3 var
+R2551:2551 RocqOfSolidity.RecordUpdate <> E:4 var
+binder 2538:2543 <> getter:5
+R2572:2575 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2571:2571 RocqOfSolidity.RecordUpdate <> E:4 var
+R2577:2580 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2576:2576 RocqOfSolidity.RecordUpdate <> R:3 var
+R2581:2581 RocqOfSolidity.RecordUpdate <> R:3 var
+R2595:2597 RocqOfSolidity.RecordUpdate <> set def
+R2595:2597 RocqOfSolidity.RecordUpdate <> set def
+R2667:2672 RocqOfSolidity.RecordUpdate <> Setter class
+mod 2754:2772 <> RecordSetNotations1
+R2897:2899 RocqOfSolidity.RecordUpdate <> set def
+not 2867:2867 RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>'
+R3034:3052 RocqOfSolidity.RecordUpdate RecordSetNotations1 <> mod
+mod 3063:3079 <> RecordSetterTests
+mod 3091:3103 <> RecordSetterTests.PrimProjTests
+rec 3155:3158 RecordSetterTests.PrimProjTests Test
+proj 3182:3183 RecordSetterTests.PrimProjTests f1
+proj 3196:3197 RecordSetterTests.PrimProjTests f2
+binder 3161:3161 <> X:8
+R3187:3187 RocqOfSolidity.RecordUpdate <> X:8 var
+R3202:3204 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R3201:3201 RocqOfSolidity.RecordUpdate <> X:8 var
+R3205:3205 RocqOfSolidity.RecordUpdate <> X:8 var
+R3230:3231 RocqOfSolidity.RecordUpdate RecordSetterTests.PrimProjTests f1 proj
+R3230:3231 RocqOfSolidity.RecordUpdate RecordSetterTests.PrimProjTests f1 proj
+R3252:3253 RocqOfSolidity.RecordUpdate RecordSetterTests.PrimProjTests f2 proj
+R3252:3253 RocqOfSolidity.RecordUpdate RecordSetterTests.PrimProjTests f2 proj
+def 3265:3330 RecordSetterTests.PrimProjTests Unnamed_thm
+binder 3277:3277 <> X:12
+R3284:3287 RocqOfSolidity.RecordUpdate RecordSetterTests.PrimProjTests Test rec
+R3289:3289 RocqOfSolidity.RecordUpdate <> X:12 var
+binder 3280:3280 <> t:13
+R3297:3297 RocqOfSolidity.RecordUpdate <> X:12 var
+binder 3293:3293 <> x:14
+R3327:3329 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3324:3325 RocqOfSolidity.RecordUpdate RecordSetterTests.PrimProjTests f1 proj
+R3308:3311 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3314:3317 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3319:3321 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3312:3313 RocqOfSolidity.RecordUpdate RecordSetterTests.PrimProjTests f1 proj
+R3318:3318 RocqOfSolidity.RecordUpdate <> x:14 var
+R3307:3307 RocqOfSolidity.RecordUpdate <> t:13 var
+R3330:3330 RocqOfSolidity.RecordUpdate <> x:14 var
+def 3385:3455 RecordSetterTests.PrimProjTests Unnamed_thm0
+binder 3397:3397 <> X:15
+R3404:3407 RocqOfSolidity.RecordUpdate RecordSetterTests.PrimProjTests Test rec
+R3409:3409 RocqOfSolidity.RecordUpdate <> X:15 var
+binder 3400:3400 <> t:16
+R3417:3417 RocqOfSolidity.RecordUpdate <> X:15 var
+binder 3413:3413 <> x:17
+R3447:3449 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3444:3445 RocqOfSolidity.RecordUpdate RecordSetterTests.PrimProjTests f2 proj
+R3428:3431 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3434:3437 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3439:3441 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3432:3433 RocqOfSolidity.RecordUpdate RecordSetterTests.PrimProjTests f1 proj
+R3438:3438 RocqOfSolidity.RecordUpdate <> x:17 var
+R3427:3427 RocqOfSolidity.RecordUpdate <> t:16 var
+R3453:3454 RocqOfSolidity.RecordUpdate RecordSetterTests.PrimProjTests f2 proj
+R3450:3450 RocqOfSolidity.RecordUpdate <> t:16 var
+R3511:3523 RocqOfSolidity.RecordUpdate RecordSetterTests.PrimProjTests <> mod
+mod 3536:3551 <> RecordSetterTests.NonPrimProjTests
+rec 3565:3568 RecordSetterTests.NonPrimProjTests Test
+proj 3592:3593 RecordSetterTests.NonPrimProjTests f1
+proj 3606:3607 RecordSetterTests.NonPrimProjTests f2
+binder 3571:3571 <> X:18
+R3597:3597 RocqOfSolidity.RecordUpdate <> X:18 var
+R3612:3614 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R3611:3611 RocqOfSolidity.RecordUpdate <> X:18 var
+R3615:3615 RocqOfSolidity.RecordUpdate <> X:18 var
+R3640:3641 RocqOfSolidity.RecordUpdate RecordSetterTests.NonPrimProjTests f1 proj
+R3640:3641 RocqOfSolidity.RecordUpdate RecordSetterTests.NonPrimProjTests f1 proj
+R3662:3663 RocqOfSolidity.RecordUpdate RecordSetterTests.NonPrimProjTests f2 proj
+R3662:3663 RocqOfSolidity.RecordUpdate RecordSetterTests.NonPrimProjTests f2 proj
+def 3675:3740 RecordSetterTests.NonPrimProjTests Unnamed_thm
+binder 3687:3687 <> X:22
+R3694:3697 RocqOfSolidity.RecordUpdate RecordSetterTests.NonPrimProjTests Test rec
+R3699:3699 RocqOfSolidity.RecordUpdate <> X:22 var
+binder 3690:3690 <> t:23
+R3707:3707 RocqOfSolidity.RecordUpdate <> X:22 var
+binder 3703:3703 <> x:24
+R3737:3739 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3734:3735 RocqOfSolidity.RecordUpdate RecordSetterTests.NonPrimProjTests f1 proj
+R3718:3721 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3724:3727 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3729:3731 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3722:3723 RocqOfSolidity.RecordUpdate RecordSetterTests.NonPrimProjTests f1 proj
+R3728:3728 RocqOfSolidity.RecordUpdate <> x:24 var
+R3717:3717 RocqOfSolidity.RecordUpdate <> t:23 var
+R3740:3740 RocqOfSolidity.RecordUpdate <> x:24 var
+def 3795:3865 RecordSetterTests.NonPrimProjTests Unnamed_thm0
+binder 3807:3807 <> X:25
+R3814:3817 RocqOfSolidity.RecordUpdate RecordSetterTests.NonPrimProjTests Test rec
+R3819:3819 RocqOfSolidity.RecordUpdate <> X:25 var
+binder 3810:3810 <> t:26
+R3827:3827 RocqOfSolidity.RecordUpdate <> X:25 var
+binder 3823:3823 <> x:27
+R3857:3859 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3854:3855 RocqOfSolidity.RecordUpdate RecordSetterTests.NonPrimProjTests f2 proj
+R3838:3841 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3844:3847 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3849:3851 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3842:3843 RocqOfSolidity.RecordUpdate RecordSetterTests.NonPrimProjTests f1 proj
+R3848:3848 RocqOfSolidity.RecordUpdate <> x:27 var
+R3837:3837 RocqOfSolidity.RecordUpdate <> t:26 var
+R3863:3864 RocqOfSolidity.RecordUpdate RecordSetterTests.NonPrimProjTests f2 proj
+R3860:3860 RocqOfSolidity.RecordUpdate <> t:26 var
+R3921:3936 RocqOfSolidity.RecordUpdate RecordSetterTests.NonPrimProjTests <> mod
+R3943:3959 RocqOfSolidity.RecordUpdate RecordSetterTests <> mod

@@ -1,0 +1,363 @@
+DIGEST ef8552f8856aadd671df42cfe416578c
+FRocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest
+R41:69 RocqOfSolidity.RocqOfSolidity <> <> lib
+R87:112 RocqOfSolidity.simulations.RocqOfSolidity <> <> lib
+R124:165 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.C <> <> lib
+def 180:195 <> constructor_code
+R199:204 RocqOfSolidity.RocqOfSolidity Code t rec
+R211:259 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.C C code def
+def 274:286 <> deployed_code
+R290:295 RocqOfSolidity.RocqOfSolidity Code t rec
+R302:359 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.C C.deployed code def
+def 374:378 <> codes
+R382:385 Corelib.Init.Datatypes <> list ind
+R387:392 RocqOfSolidity.RocqOfSolidity Code t rec
+R399:446 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.C <> codes def
+mod 457:467 <> Constructor
+def 483:493 Constructor environment
+R497:509 RocqOfSolidity.RocqOfSolidity Environment t rec
+R520:537 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R520:537 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R520:537 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R590:610 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R590:610 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R622:641 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R622:641 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R654:672 RocqOfSolidity.RocqOfSolidity Environment address proj
+R654:672 RocqOfSolidity.RocqOfSolidity Environment address proj
+R725:745 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R725:745 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R646:647 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R768:780 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R750:765 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> constructor_code def
+def 804:816 Constructor initial_state
+R820:826 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R863:881 RocqOfSolidity.RocqOfSolidity Environment address proj
+R850:860 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Constructor environment def
+binder 839:845 <> address:1
+R915:929 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R915:929 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R915:929 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R977:989 RocqOfSolidity.simulations.RocqOfSolidity Account nonce proj
+R977:989 RocqOfSolidity.simulations.RocqOfSolidity Account nonce proj
+R1003:1014 RocqOfSolidity.simulations.RocqOfSolidity Account code proj
+R1003:1014 RocqOfSolidity.simulations.RocqOfSolidity Account code proj
+R1059:1074 RocqOfSolidity.simulations.RocqOfSolidity Account codedata proj
+R1059:1074 RocqOfSolidity.simulations.RocqOfSolidity Account codedata proj
+R1116:1130 RocqOfSolidity.simulations.RocqOfSolidity Account storage proj
+R1116:1130 RocqOfSolidity.simulations.RocqOfSolidity Account storage proj
+R1155:1172 RocqOfSolidity.simulations.RocqOfSolidity Account immutables proj
+R1155:1172 RocqOfSolidity.simulations.RocqOfSolidity Account immutables proj
+R947:967 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R934:944 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Constructor environment def
+R1037:1049 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1019:1034 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> constructor_code def
+R1079:1104 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R1135:1146 RocqOfSolidity.simulations.RocqOfSolidity Memory empty def
+R1177:1178 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+binder 895:901 <> account:2
+R1205:1208 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1223:1226 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1247:1249 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1209:1222 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R1227:1227 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1246:1246 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1228:1228 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1236:1237 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1245:1245 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1229:1235 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> address:1 var
+R1238:1244 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> account:2 var
+R1195:1204 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 1266:1277 Constructor result_state
+R1286:1301 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R1308:1312 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> codes def
+R1314:1324 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Constructor environment def
+R1344:1352 RocqOfSolidity.RocqOfSolidity Code body proj
+R1326:1341 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> constructor_code def
+R1355:1367 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Constructor initial_state def
+def 1384:1389 Constructor result
+R1394:1396 Corelib.Init.Datatypes <> fst def
+R1398:1409 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Constructor result_state def
+def 1425:1429 Constructor state
+R1434:1436 Corelib.Init.Datatypes <> snd def
+R1438:1449 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Constructor result_state def
+def 1455:1545 Constructor Unnamed_thm
+R1487:1489 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1460:1473 RocqOfSolidity.simulations.RocqOfSolidity Test is_return def
+R1475:1480 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Constructor result def
+R1482:1486 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Constructor state def
+R1490:1492 Corelib.Init.Datatypes <> inl constr
+R1495:1514 RocqOfSolidity.simulations.RocqOfSolidity Memory u256_as_bytes def
+R1531:1543 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1516:1528 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> deployed_code def
+def 1609:1619 Constructor final_state
+R1623:1629 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R1636:1638 Corelib.Init.Datatypes <> snd def
+R1646:1649 RocqOfSolidity.simulations.RocqOfSolidity <> eval def
+R1737:1741 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Constructor state def
+R1675:1704 RocqOfSolidity.simulations.RocqOfSolidity <> update_current_code_for_deploy def
+R1721:1733 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1706:1718 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> deployed_code def
+R1662:1672 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Constructor environment def
+R1656:1660 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> codes def
+R1752:1762 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Constructor <> mod
+mod 1800:1804 <> Step1
+def 1820:1830 Step1 environment
+R1834:1846 RocqOfSolidity.RocqOfSolidity Environment t rec
+R1857:1874 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R1857:1874 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R1857:1874 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R1927:1947 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R1927:1947 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R1959:1978 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R1959:1978 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R2026:2044 RocqOfSolidity.RocqOfSolidity Environment address proj
+R2026:2044 RocqOfSolidity.RocqOfSolidity Environment address proj
+R2097:2117 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R2097:2117 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R1983:2008 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R2137:2149 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R2122:2134 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> deployed_code def
+def 2173:2185 Step1 initial_state
+R2189:2195 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R2214:2217 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2232:2235 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2276:2278 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2218:2231 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R2261:2274 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R2236:2258 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Constructor final_state def
+R2204:2213 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 2295:2306 Step1 result_state
+R2315:2330 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R2337:2341 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> codes def
+R2343:2353 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step1 environment def
+R2370:2378 RocqOfSolidity.RocqOfSolidity Code body proj
+R2355:2367 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> deployed_code def
+R2381:2393 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step1 initial_state def
+def 2410:2415 Step1 result
+R2420:2422 Corelib.Init.Datatypes <> fst def
+R2424:2435 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step1 result_state def
+def 2451:2455 Step1 state
+R2460:2462 Corelib.Init.Datatypes <> snd def
+R2464:2475 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step1 result_state def
+def 2492:2506 Step1 expected_output
+R2510:2513 Corelib.Init.Datatypes <> list ind
+R2515:2515 Corelib.Numbers.BinNums <> Z ind
+R2524:2549 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+def 2686:2764 Step1 Unnamed_thm
+R2743:2745 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2691:2709 RocqOfSolidity.simulations.RocqOfSolidity Test extract_output def
+R2711:2716 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step1 result def
+R2718:2722 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step1 state def
+R2724:2742 RocqOfSolidity.simulations.RocqOfSolidity Test.Status Success constr
+R2746:2748 Corelib.Init.Datatypes <> inl constr
+R2750:2764 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step1 expected_output def
+R2820:2824 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step1 <> mod
+mod 2873:2877 <> Step2
+def 2893:2903 Step2 environment
+R2907:2919 RocqOfSolidity.RocqOfSolidity Environment t rec
+R2930:2947 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R2930:2947 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R2930:2947 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R3000:3020 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R3000:3020 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R3032:3051 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R3032:3051 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R3099:3117 RocqOfSolidity.RocqOfSolidity Environment address proj
+R3099:3117 RocqOfSolidity.RocqOfSolidity Environment address proj
+R3170:3190 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R3170:3190 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R3056:3081 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R3210:3222 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R3195:3207 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> deployed_code def
+def 3246:3258 Step2 initial_state
+R3262:3268 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R3287:3290 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3305:3308 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3337:3339 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3291:3304 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R3322:3335 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R3309:3319 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step1 state def
+R3277:3286 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 3356:3367 Step2 result_state
+R3376:3391 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R3398:3402 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> codes def
+R3404:3414 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step2 environment def
+R3431:3439 RocqOfSolidity.RocqOfSolidity Code body proj
+R3416:3428 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> deployed_code def
+R3442:3454 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step2 initial_state def
+def 3471:3476 Step2 result
+R3481:3483 Corelib.Init.Datatypes <> fst def
+R3485:3496 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step2 result_state def
+def 3512:3516 Step2 state
+R3521:3523 Corelib.Init.Datatypes <> snd def
+R3525:3536 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step2 result_state def
+def 3553:3567 Step2 expected_output
+R3571:3574 Corelib.Init.Datatypes <> list ind
+R3576:3576 Corelib.Numbers.BinNums <> Z ind
+R3585:3610 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+def 3875:3953 Step2 Unnamed_thm
+R3932:3934 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3880:3898 RocqOfSolidity.simulations.RocqOfSolidity Test extract_output def
+R3900:3905 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step2 result def
+R3907:3911 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step2 state def
+R3913:3931 RocqOfSolidity.simulations.RocqOfSolidity Test.Status Success constr
+R3935:3937 Corelib.Init.Datatypes <> inl constr
+R3939:3953 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step2 expected_output def
+R4009:4013 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step2 <> mod
+mod 4080:4084 <> Step3
+def 4100:4110 Step3 environment
+R4114:4126 RocqOfSolidity.RocqOfSolidity Environment t rec
+R4137:4154 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R4137:4154 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R4137:4154 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R4207:4227 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R4207:4227 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R4239:4258 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R4239:4258 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R4306:4324 RocqOfSolidity.RocqOfSolidity Environment address proj
+R4306:4324 RocqOfSolidity.RocqOfSolidity Environment address proj
+R4377:4397 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R4377:4397 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R4263:4288 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R4417:4429 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R4402:4414 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> deployed_code def
+def 4453:4465 Step3 initial_state
+R4469:4475 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R4494:4497 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R4512:4515 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R4544:4546 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R4498:4511 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R4529:4542 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R4516:4526 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step2 state def
+R4484:4493 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 4563:4574 Step3 result_state
+R4583:4598 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R4605:4609 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> codes def
+R4611:4621 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step3 environment def
+R4638:4646 RocqOfSolidity.RocqOfSolidity Code body proj
+R4623:4635 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> deployed_code def
+R4649:4661 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step3 initial_state def
+def 4678:4683 Step3 result
+R4688:4690 Corelib.Init.Datatypes <> fst def
+R4692:4703 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step3 result_state def
+def 4719:4723 Step3 state
+R4728:4730 Corelib.Init.Datatypes <> snd def
+R4732:4743 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step3 result_state def
+def 4760:4774 Step3 expected_output
+R4778:4781 Corelib.Init.Datatypes <> list ind
+R4783:4783 Corelib.Numbers.BinNums <> Z ind
+R4792:4817 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+def 5274:5352 Step3 Unnamed_thm
+R5331:5333 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5279:5297 RocqOfSolidity.simulations.RocqOfSolidity Test extract_output def
+R5299:5304 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step3 result def
+R5306:5310 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step3 state def
+R5312:5330 RocqOfSolidity.simulations.RocqOfSolidity Test.Status Success constr
+R5334:5336 Corelib.Init.Datatypes <> inl constr
+R5338:5352 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step3 expected_output def
+R5408:5412 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step3 <> mod
+mod 5479:5483 <> Step4
+def 5499:5509 Step4 environment
+R5513:5525 RocqOfSolidity.RocqOfSolidity Environment t rec
+R5536:5553 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R5536:5553 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R5536:5553 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R5606:5626 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R5606:5626 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R5638:5657 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R5638:5657 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R5705:5723 RocqOfSolidity.RocqOfSolidity Environment address proj
+R5705:5723 RocqOfSolidity.RocqOfSolidity Environment address proj
+R5776:5796 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R5776:5796 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R5662:5687 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R5816:5828 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R5801:5813 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> deployed_code def
+def 5852:5864 Step4 initial_state
+R5868:5874 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R5893:5896 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R5911:5914 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R5943:5945 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R5897:5910 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R5928:5941 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R5915:5925 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step3 state def
+R5883:5892 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 5962:5973 Step4 result_state
+R5982:5997 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R6004:6008 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> codes def
+R6010:6020 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step4 environment def
+R6037:6045 RocqOfSolidity.RocqOfSolidity Code body proj
+R6022:6034 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> deployed_code def
+R6048:6060 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step4 initial_state def
+def 6077:6082 Step4 result
+R6087:6089 Corelib.Init.Datatypes <> fst def
+R6091:6102 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step4 result_state def
+def 6118:6122 Step4 state
+R6127:6129 Corelib.Init.Datatypes <> snd def
+R6131:6142 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step4 result_state def
+def 6159:6173 Step4 expected_output
+R6177:6180 Corelib.Init.Datatypes <> list ind
+R6182:6182 Corelib.Numbers.BinNums <> Z ind
+R6191:6216 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+def 6673:6751 Step4 Unnamed_thm
+R6730:6732 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6678:6696 RocqOfSolidity.simulations.RocqOfSolidity Test extract_output def
+R6698:6703 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step4 result def
+R6705:6709 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step4 state def
+R6711:6729 RocqOfSolidity.simulations.RocqOfSolidity Test.Status Success constr
+R6733:6735 Corelib.Init.Datatypes <> inl constr
+R6737:6751 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step4 expected_output def
+R6807:6811 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step4 <> mod
+mod 6991:6995 <> Step5
+def 7011:7021 Step5 environment
+R7025:7037 RocqOfSolidity.RocqOfSolidity Environment t rec
+R7048:7065 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R7048:7065 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R7048:7065 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R7118:7138 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R7118:7138 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R7150:7169 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R7150:7169 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R7217:7235 RocqOfSolidity.RocqOfSolidity Environment address proj
+R7217:7235 RocqOfSolidity.RocqOfSolidity Environment address proj
+R7288:7308 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R7288:7308 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R7174:7199 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R7328:7340 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R7313:7325 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> deployed_code def
+def 7364:7376 Step5 initial_state
+R7380:7386 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R7405:7408 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R7423:7426 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R7455:7457 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R7409:7422 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R7440:7453 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R7427:7437 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step4 state def
+R7395:7404 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 7474:7485 Step5 result_state
+R7494:7509 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R7516:7520 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> codes def
+R7522:7532 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step5 environment def
+R7549:7557 RocqOfSolidity.RocqOfSolidity Code body proj
+R7534:7546 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest <> deployed_code def
+R7560:7572 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step5 initial_state def
+def 7589:7594 Step5 result
+R7599:7601 Corelib.Init.Datatypes <> fst def
+R7603:7614 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step5 result_state def
+def 7630:7634 Step5 state
+R7639:7641 Corelib.Init.Datatypes <> snd def
+R7643:7654 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step5 result_state def
+def 7671:7685 Step5 expected_output
+R7689:7692 Corelib.Init.Datatypes <> list ind
+R7694:7694 Corelib.Numbers.BinNums <> Z ind
+R7703:7728 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+def 8569:8647 Step5 Unnamed_thm
+R8626:8628 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8574:8592 RocqOfSolidity.simulations.RocqOfSolidity Test extract_output def
+R8594:8599 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step5 result def
+R8601:8605 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step5 state def
+R8607:8625 RocqOfSolidity.simulations.RocqOfSolidity Test.Status Success constr
+R8629:8631 Corelib.Init.Datatypes <> inl constr
+R8633:8647 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step5 expected_output def
+R8703:8707 RocqOfSolidityTests.semanticTests.abiEncoderV2.abi_encode_v2.GeneratedTest Step5 <> mod

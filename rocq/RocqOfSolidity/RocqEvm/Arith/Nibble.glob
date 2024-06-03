@@ -1,0 +1,1711 @@
+DIGEST f54a03fcc95317235759fbfe17551259
+FRocqOfSolidity.RocqEvm.Arith.Nibble
+R27:31 Stdlib.Strings.Ascii <> <> lib
+R61:66 Stdlib.NArith.NArith <> <> lib
+R96:101 Stdlib.ZArith.ZArith <> <> lib
+R131:136 Stdlib.Numbers.Cyclic.Int63.Uint63 <> <> lib
+R166:168 Stdlib.micromega.Lia <> <> lib
+R191:196 Stdlib.Strings.String <> <> lib
+R198:202 Stdlib.Strings.Ascii <> <> lib
+R241:246 RocqOfSolidity.RocqEvm.Arith.UInt63 <> <> lib
+R248:253 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> <> lib
+ind 267:272 <> nibble
+constr 277:282 <> Nibble
+R298:301 Corelib.Init.Datatypes <> bool ind
+binder 285:286 <> x3:3
+binder 288:289 <> x2:4
+binder 291:292 <> x1:5
+binder 294:295 <> x0:6
+scheme 267:272 <> nibble_rect
+scheme 267:272 <> nibble_ind
+scheme 267:272 <> nibble_rec
+scheme 267:272 <> nibble_sind
+ind 315:323 <> hex_digit
+constr 330:331 <> x0
+constr 335:336 <> x1
+constr 340:341 <> x2
+constr 345:346 <> x3
+constr 350:351 <> x4
+constr 355:356 <> x5
+constr 360:361 <> x6
+constr 365:366 <> x7
+constr 370:371 <> x8
+constr 375:376 <> x9
+constr 380:381 <> xA
+constr 385:386 <> xB
+constr 390:391 <> xC
+constr 395:396 <> xD
+constr 400:401 <> xE
+constr 405:406 <> xF
+scheme 315:323 <> hex_digit_rect
+scheme 315:323 <> hex_digit_ind
+scheme 315:323 <> hex_digit_rec
+scheme 315:323 <> hex_digit_sind
+def 421:438 <> ascii_of_hex_digit
+R448:456 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+binder 441:445 <> digit:9
+R467:470 Corelib.Init.Datatypes <> bool ind
+binder 460:464 <> lower:10
+R475:479 Stdlib.Strings.Ascii <> ascii ind
+R490:494 RocqOfSolidity.RocqEvm.Arith.Nibble <> digit:9 var
+R506:507 RocqOfSolidity.RocqEvm.Arith.Nibble <> x0 constr
+R521:522 RocqOfSolidity.RocqEvm.Arith.Nibble <> x1 constr
+R536:537 RocqOfSolidity.RocqEvm.Arith.Nibble <> x2 constr
+R551:552 RocqOfSolidity.RocqEvm.Arith.Nibble <> x3 constr
+R566:567 RocqOfSolidity.RocqEvm.Arith.Nibble <> x4 constr
+R581:582 RocqOfSolidity.RocqEvm.Arith.Nibble <> x5 constr
+R596:597 RocqOfSolidity.RocqEvm.Arith.Nibble <> x6 constr
+R611:612 RocqOfSolidity.RocqEvm.Arith.Nibble <> x7 constr
+R626:627 RocqOfSolidity.RocqEvm.Arith.Nibble <> x8 constr
+R641:642 RocqOfSolidity.RocqEvm.Arith.Nibble <> x9 constr
+R656:657 RocqOfSolidity.RocqEvm.Arith.Nibble <> xA constr
+R665:669 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:10 var
+R694:695 RocqOfSolidity.RocqEvm.Arith.Nibble <> xB constr
+R703:707 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:10 var
+R732:733 RocqOfSolidity.RocqEvm.Arith.Nibble <> xC constr
+R741:745 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:10 var
+R770:771 RocqOfSolidity.RocqEvm.Arith.Nibble <> xD constr
+R779:783 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:10 var
+R808:809 RocqOfSolidity.RocqEvm.Arith.Nibble <> xE constr
+R817:821 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:10 var
+R846:847 RocqOfSolidity.RocqEvm.Arith.Nibble <> xF constr
+R855:859 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:10 var
+def 899:916 <> hex_digit_of_ascii
+R922:926 Stdlib.Strings.Ascii <> ascii ind
+binder 919:919 <> a:12
+R931:936 Corelib.Init.Datatypes <> option ind
+R938:946 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+R957:957 RocqOfSolidity.RocqEvm.Arith.Nibble <> a:12 var
+R976:979 Corelib.Init.Datatypes <> Some constr
+R981:982 RocqOfSolidity.RocqEvm.Arith.Nibble <> x0 constr
+R996:999 Corelib.Init.Datatypes <> Some constr
+R1001:1002 RocqOfSolidity.RocqEvm.Arith.Nibble <> x1 constr
+R1016:1019 Corelib.Init.Datatypes <> Some constr
+R1021:1022 RocqOfSolidity.RocqEvm.Arith.Nibble <> x2 constr
+R1036:1039 Corelib.Init.Datatypes <> Some constr
+R1041:1042 RocqOfSolidity.RocqEvm.Arith.Nibble <> x3 constr
+R1056:1059 Corelib.Init.Datatypes <> Some constr
+R1061:1062 RocqOfSolidity.RocqEvm.Arith.Nibble <> x4 constr
+R1076:1079 Corelib.Init.Datatypes <> Some constr
+R1081:1082 RocqOfSolidity.RocqEvm.Arith.Nibble <> x5 constr
+R1096:1099 Corelib.Init.Datatypes <> Some constr
+R1101:1102 RocqOfSolidity.RocqEvm.Arith.Nibble <> x6 constr
+R1116:1119 Corelib.Init.Datatypes <> Some constr
+R1121:1122 RocqOfSolidity.RocqEvm.Arith.Nibble <> x7 constr
+R1136:1139 Corelib.Init.Datatypes <> Some constr
+R1141:1142 RocqOfSolidity.RocqEvm.Arith.Nibble <> x8 constr
+R1156:1159 Corelib.Init.Datatypes <> Some constr
+R1161:1162 RocqOfSolidity.RocqEvm.Arith.Nibble <> x9 constr
+R1182:1185 Corelib.Init.Datatypes <> Some constr
+R1187:1188 RocqOfSolidity.RocqEvm.Arith.Nibble <> xA constr
+R1182:1185 Corelib.Init.Datatypes <> Some constr
+R1187:1188 RocqOfSolidity.RocqEvm.Arith.Nibble <> xA constr
+R1208:1211 Corelib.Init.Datatypes <> Some constr
+R1213:1214 RocqOfSolidity.RocqEvm.Arith.Nibble <> xB constr
+R1208:1211 Corelib.Init.Datatypes <> Some constr
+R1213:1214 RocqOfSolidity.RocqEvm.Arith.Nibble <> xB constr
+R1234:1237 Corelib.Init.Datatypes <> Some constr
+R1239:1240 RocqOfSolidity.RocqEvm.Arith.Nibble <> xC constr
+R1234:1237 Corelib.Init.Datatypes <> Some constr
+R1239:1240 RocqOfSolidity.RocqEvm.Arith.Nibble <> xC constr
+R1260:1263 Corelib.Init.Datatypes <> Some constr
+R1265:1266 RocqOfSolidity.RocqEvm.Arith.Nibble <> xD constr
+R1260:1263 Corelib.Init.Datatypes <> Some constr
+R1265:1266 RocqOfSolidity.RocqEvm.Arith.Nibble <> xD constr
+R1286:1289 Corelib.Init.Datatypes <> Some constr
+R1291:1292 RocqOfSolidity.RocqEvm.Arith.Nibble <> xE constr
+R1286:1289 Corelib.Init.Datatypes <> Some constr
+R1291:1292 RocqOfSolidity.RocqEvm.Arith.Nibble <> xE constr
+R1312:1315 Corelib.Init.Datatypes <> Some constr
+R1317:1318 RocqOfSolidity.RocqEvm.Arith.Nibble <> xF constr
+R1312:1315 Corelib.Init.Datatypes <> Some constr
+R1317:1318 RocqOfSolidity.RocqEvm.Arith.Nibble <> xF constr
+R1330:1333 Corelib.Init.Datatypes <> None constr
+def 1360:1371 <> is_hex_digit
+R1377:1381 Stdlib.Strings.Ascii <> ascii ind
+binder 1374:1374 <> a:14
+R1393:1410 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii def
+R1412:1412 RocqOfSolidity.RocqEvm.Arith.Nibble <> a:14 var
+R1424:1427 Corelib.Init.Datatypes <> Some constr
+R1434:1437 Corelib.Init.Datatypes <> true constr
+R1444:1447 Corelib.Init.Datatypes <> None constr
+R1452:1456 Corelib.Init.Datatypes <> false constr
+prf 1473:1503 <> hex_digit_of_ascii_of_hex_digit
+R1509:1517 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+binder 1506:1506 <> h:15
+R1528:1531 Corelib.Init.Datatypes <> bool ind
+binder 1521:1525 <> lower:16
+R1584:1586 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1537:1554 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii def
+R1557:1574 RocqOfSolidity.RocqEvm.Arith.Nibble <> ascii_of_hex_digit def
+R1576:1576 RocqOfSolidity.RocqEvm.Arith.Nibble <> h:15 var
+R1578:1582 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:16 var
+R1587:1590 Corelib.Init.Datatypes <> Some constr
+R1592:1592 RocqOfSolidity.RocqEvm.Arith.Nibble <> h:15 var
+prf 1651:1667 <> is_hex_digit_true
+R1673:1677 Stdlib.Strings.Ascii <> ascii ind
+binder 1670:1670 <> a:17
+R1704:1709 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1697:1699 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1683:1694 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_digit def
+R1696:1696 RocqOfSolidity.RocqEvm.Arith.Nibble <> a:17 var
+R1700:1703 Corelib.Init.Datatypes <> true constr
+R1730:1733 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R1710:1727 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii def
+R1729:1729 RocqOfSolidity.RocqEvm.Arith.Nibble <> a:17 var
+R1734:1737 Corelib.Init.Datatypes <> None constr
+R1754:1765 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_digit def
+R1781:1798 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii def
+def 1818:1836 <> hex_digit_of_ascii'
+R1842:1846 Stdlib.Strings.Ascii <> ascii ind
+binder 1839:1839 <> a:18
+R1868:1870 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1854:1865 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_digit def
+R1867:1867 RocqOfSolidity.RocqEvm.Arith.Nibble <> a:18 var
+R1871:1874 Corelib.Init.Datatypes <> true constr
+binder 1850:1851 <> ok:19
+R1879:1887 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+R1898:1915 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii def
+R1917:1917 RocqOfSolidity.RocqEvm.Arith.Nibble <> a:18 var
+R1936:1939 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1932:1934 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1935:1935 RocqOfSolidity.RocqEvm.Arith.Nibble <> h:20 var
+R1952:1955 Corelib.Init.Datatypes <> Some constr
+R1978:1981 Corelib.Init.Datatypes <> None constr
+binder 1990:1990 <> E:21
+R1995:2004 Corelib.Init.Logic <> False_rect scheme
+R2009:2025 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_digit_true thm
+R2027:2027 RocqOfSolidity.RocqEvm.Arith.Nibble <> a:18 var
+R2029:2030 RocqOfSolidity.RocqEvm.Arith.Nibble <> ok:19 var
+R2032:2032 RocqOfSolidity.RocqEvm.Arith.Nibble <> E:21 var
+R2042:2048 Corelib.Init.Logic <> eq_refl constr
+prf 2058:2089 <> hex_digit_of_ascii_of_hex_digit'
+R2095:2103 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+binder 2092:2092 <> h:22
+R2114:2117 Corelib.Init.Datatypes <> bool ind
+binder 2107:2111 <> lower:23
+R2205:2207 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2164:2175 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_digit def
+R2178:2195 RocqOfSolidity.RocqEvm.Arith.Nibble <> ascii_of_hex_digit def
+R2197:2197 RocqOfSolidity.RocqEvm.Arith.Nibble <> h:22 var
+R2199:2203 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:23 var
+R2208:2211 Corelib.Init.Datatypes <> true constr
+binder 2160:2161 <> ok:24
+R2268:2270 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2217:2235 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii' def
+R2238:2255 RocqOfSolidity.RocqEvm.Arith.Nibble <> ascii_of_hex_digit def
+R2257:2257 RocqOfSolidity.RocqEvm.Arith.Nibble <> h:22 var
+R2259:2263 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:23 var
+R2266:2267 RocqOfSolidity.RocqEvm.Arith.Nibble <> ok:24 var
+R2271:2271 RocqOfSolidity.RocqEvm.Arith.Nibble <> h:22 var
+def 2335:2353 <> nibble_of_hex_digit
+R2363:2371 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+binder 2356:2360 <> digit:25
+R2376:2381 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+R2392:2396 RocqOfSolidity.RocqEvm.Arith.Nibble <> digit:25 var
+R2408:2409 RocqOfSolidity.RocqEvm.Arith.Nibble <> x0 constr
+R2414:2419 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2421:2425 Corelib.Init.Datatypes <> false constr
+R2427:2431 Corelib.Init.Datatypes <> false constr
+R2433:2437 Corelib.Init.Datatypes <> false constr
+R2439:2443 Corelib.Init.Datatypes <> false constr
+R2450:2451 RocqOfSolidity.RocqEvm.Arith.Nibble <> x1 constr
+R2456:2461 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2463:2467 Corelib.Init.Datatypes <> false constr
+R2469:2473 Corelib.Init.Datatypes <> false constr
+R2475:2479 Corelib.Init.Datatypes <> false constr
+R2481:2484 Corelib.Init.Datatypes <> true constr
+R2491:2492 RocqOfSolidity.RocqEvm.Arith.Nibble <> x2 constr
+R2497:2502 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2504:2508 Corelib.Init.Datatypes <> false constr
+R2510:2514 Corelib.Init.Datatypes <> false constr
+R2516:2519 Corelib.Init.Datatypes <> true constr
+R2522:2526 Corelib.Init.Datatypes <> false constr
+R2533:2534 RocqOfSolidity.RocqEvm.Arith.Nibble <> x3 constr
+R2539:2544 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2546:2550 Corelib.Init.Datatypes <> false constr
+R2552:2556 Corelib.Init.Datatypes <> false constr
+R2558:2561 Corelib.Init.Datatypes <> true constr
+R2564:2567 Corelib.Init.Datatypes <> true constr
+R2574:2575 RocqOfSolidity.RocqEvm.Arith.Nibble <> x4 constr
+R2580:2585 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2587:2591 Corelib.Init.Datatypes <> false constr
+R2593:2596 Corelib.Init.Datatypes <> true constr
+R2599:2603 Corelib.Init.Datatypes <> false constr
+R2605:2609 Corelib.Init.Datatypes <> false constr
+R2616:2617 RocqOfSolidity.RocqEvm.Arith.Nibble <> x5 constr
+R2622:2627 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2629:2633 Corelib.Init.Datatypes <> false constr
+R2635:2638 Corelib.Init.Datatypes <> true constr
+R2641:2645 Corelib.Init.Datatypes <> false constr
+R2647:2650 Corelib.Init.Datatypes <> true constr
+R2657:2658 RocqOfSolidity.RocqEvm.Arith.Nibble <> x6 constr
+R2663:2668 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2670:2674 Corelib.Init.Datatypes <> false constr
+R2676:2679 Corelib.Init.Datatypes <> true constr
+R2682:2685 Corelib.Init.Datatypes <> true constr
+R2688:2692 Corelib.Init.Datatypes <> false constr
+R2699:2700 RocqOfSolidity.RocqEvm.Arith.Nibble <> x7 constr
+R2705:2710 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2712:2716 Corelib.Init.Datatypes <> false constr
+R2718:2721 Corelib.Init.Datatypes <> true constr
+R2724:2727 Corelib.Init.Datatypes <> true constr
+R2730:2733 Corelib.Init.Datatypes <> true constr
+R2740:2741 RocqOfSolidity.RocqEvm.Arith.Nibble <> x8 constr
+R2746:2751 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2753:2756 Corelib.Init.Datatypes <> true constr
+R2759:2763 Corelib.Init.Datatypes <> false constr
+R2765:2769 Corelib.Init.Datatypes <> false constr
+R2771:2775 Corelib.Init.Datatypes <> false constr
+R2782:2783 RocqOfSolidity.RocqEvm.Arith.Nibble <> x9 constr
+R2788:2793 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2795:2798 Corelib.Init.Datatypes <> true constr
+R2801:2805 Corelib.Init.Datatypes <> false constr
+R2807:2811 Corelib.Init.Datatypes <> false constr
+R2813:2816 Corelib.Init.Datatypes <> true constr
+R2823:2824 RocqOfSolidity.RocqEvm.Arith.Nibble <> xA constr
+R2829:2834 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2836:2839 Corelib.Init.Datatypes <> true constr
+R2842:2846 Corelib.Init.Datatypes <> false constr
+R2848:2851 Corelib.Init.Datatypes <> true constr
+R2854:2858 Corelib.Init.Datatypes <> false constr
+R2865:2866 RocqOfSolidity.RocqEvm.Arith.Nibble <> xB constr
+R2871:2876 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2878:2881 Corelib.Init.Datatypes <> true constr
+R2884:2888 Corelib.Init.Datatypes <> false constr
+R2890:2893 Corelib.Init.Datatypes <> true constr
+R2896:2899 Corelib.Init.Datatypes <> true constr
+R2906:2907 RocqOfSolidity.RocqEvm.Arith.Nibble <> xC constr
+R2912:2917 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2919:2922 Corelib.Init.Datatypes <> true constr
+R2925:2928 Corelib.Init.Datatypes <> true constr
+R2931:2935 Corelib.Init.Datatypes <> false constr
+R2937:2941 Corelib.Init.Datatypes <> false constr
+R2948:2949 RocqOfSolidity.RocqEvm.Arith.Nibble <> xD constr
+R2954:2959 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R2961:2964 Corelib.Init.Datatypes <> true constr
+R2967:2970 Corelib.Init.Datatypes <> true constr
+R2973:2977 Corelib.Init.Datatypes <> false constr
+R2979:2982 Corelib.Init.Datatypes <> true constr
+R2989:2990 RocqOfSolidity.RocqEvm.Arith.Nibble <> xE constr
+R2995:3000 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3002:3005 Corelib.Init.Datatypes <> true constr
+R3008:3011 Corelib.Init.Datatypes <> true constr
+R3014:3017 Corelib.Init.Datatypes <> true constr
+R3020:3024 Corelib.Init.Datatypes <> false constr
+R3031:3032 RocqOfSolidity.RocqEvm.Arith.Nibble <> xF constr
+R3037:3042 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3044:3047 Corelib.Init.Datatypes <> true constr
+R3050:3053 Corelib.Init.Datatypes <> true constr
+R3056:3059 Corelib.Init.Datatypes <> true constr
+R3062:3065 Corelib.Init.Datatypes <> true constr
+def 3087:3105 <> hex_digit_of_nibble
+R3111:3116 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 3108:3108 <> n:27
+R3121:3129 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+R3140:3140 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:27 var
+R3152:3157 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3177:3181 Corelib.Init.Datatypes <> false constr
+R3171:3175 Corelib.Init.Datatypes <> false constr
+R3165:3169 Corelib.Init.Datatypes <> false constr
+R3159:3163 Corelib.Init.Datatypes <> false constr
+R3186:3187 RocqOfSolidity.RocqEvm.Arith.Nibble <> x0 constr
+R3194:3199 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3219:3222 Corelib.Init.Datatypes <> true constr
+R3213:3217 Corelib.Init.Datatypes <> false constr
+R3207:3211 Corelib.Init.Datatypes <> false constr
+R3201:3205 Corelib.Init.Datatypes <> false constr
+R3228:3229 RocqOfSolidity.RocqEvm.Arith.Nibble <> x1 constr
+R3236:3241 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3261:3265 Corelib.Init.Datatypes <> false constr
+R3255:3258 Corelib.Init.Datatypes <> true constr
+R3249:3253 Corelib.Init.Datatypes <> false constr
+R3243:3247 Corelib.Init.Datatypes <> false constr
+R3270:3271 RocqOfSolidity.RocqEvm.Arith.Nibble <> x2 constr
+R3278:3283 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3303:3306 Corelib.Init.Datatypes <> true constr
+R3297:3300 Corelib.Init.Datatypes <> true constr
+R3291:3295 Corelib.Init.Datatypes <> false constr
+R3285:3289 Corelib.Init.Datatypes <> false constr
+R3312:3313 RocqOfSolidity.RocqEvm.Arith.Nibble <> x3 constr
+R3320:3325 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3345:3349 Corelib.Init.Datatypes <> false constr
+R3339:3343 Corelib.Init.Datatypes <> false constr
+R3333:3336 Corelib.Init.Datatypes <> true constr
+R3327:3331 Corelib.Init.Datatypes <> false constr
+R3354:3355 RocqOfSolidity.RocqEvm.Arith.Nibble <> x4 constr
+R3362:3367 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3387:3390 Corelib.Init.Datatypes <> true constr
+R3381:3385 Corelib.Init.Datatypes <> false constr
+R3375:3378 Corelib.Init.Datatypes <> true constr
+R3369:3373 Corelib.Init.Datatypes <> false constr
+R3396:3397 RocqOfSolidity.RocqEvm.Arith.Nibble <> x5 constr
+R3404:3409 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3429:3433 Corelib.Init.Datatypes <> false constr
+R3423:3426 Corelib.Init.Datatypes <> true constr
+R3417:3420 Corelib.Init.Datatypes <> true constr
+R3411:3415 Corelib.Init.Datatypes <> false constr
+R3438:3439 RocqOfSolidity.RocqEvm.Arith.Nibble <> x6 constr
+R3446:3451 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3471:3474 Corelib.Init.Datatypes <> true constr
+R3465:3468 Corelib.Init.Datatypes <> true constr
+R3459:3462 Corelib.Init.Datatypes <> true constr
+R3453:3457 Corelib.Init.Datatypes <> false constr
+R3480:3481 RocqOfSolidity.RocqEvm.Arith.Nibble <> x7 constr
+R3488:3493 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3513:3517 Corelib.Init.Datatypes <> false constr
+R3507:3511 Corelib.Init.Datatypes <> false constr
+R3501:3505 Corelib.Init.Datatypes <> false constr
+R3495:3498 Corelib.Init.Datatypes <> true constr
+R3522:3523 RocqOfSolidity.RocqEvm.Arith.Nibble <> x8 constr
+R3530:3535 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3555:3558 Corelib.Init.Datatypes <> true constr
+R3549:3553 Corelib.Init.Datatypes <> false constr
+R3543:3547 Corelib.Init.Datatypes <> false constr
+R3537:3540 Corelib.Init.Datatypes <> true constr
+R3564:3565 RocqOfSolidity.RocqEvm.Arith.Nibble <> x9 constr
+R3572:3577 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3597:3601 Corelib.Init.Datatypes <> false constr
+R3591:3594 Corelib.Init.Datatypes <> true constr
+R3585:3589 Corelib.Init.Datatypes <> false constr
+R3579:3582 Corelib.Init.Datatypes <> true constr
+R3606:3607 RocqOfSolidity.RocqEvm.Arith.Nibble <> xA constr
+R3614:3619 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3639:3642 Corelib.Init.Datatypes <> true constr
+R3633:3636 Corelib.Init.Datatypes <> true constr
+R3627:3631 Corelib.Init.Datatypes <> false constr
+R3621:3624 Corelib.Init.Datatypes <> true constr
+R3648:3649 RocqOfSolidity.RocqEvm.Arith.Nibble <> xB constr
+R3656:3661 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3681:3685 Corelib.Init.Datatypes <> false constr
+R3675:3679 Corelib.Init.Datatypes <> false constr
+R3669:3672 Corelib.Init.Datatypes <> true constr
+R3663:3666 Corelib.Init.Datatypes <> true constr
+R3690:3691 RocqOfSolidity.RocqEvm.Arith.Nibble <> xC constr
+R3698:3703 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3723:3726 Corelib.Init.Datatypes <> true constr
+R3717:3721 Corelib.Init.Datatypes <> false constr
+R3711:3714 Corelib.Init.Datatypes <> true constr
+R3705:3708 Corelib.Init.Datatypes <> true constr
+R3732:3733 RocqOfSolidity.RocqEvm.Arith.Nibble <> xD constr
+R3740:3745 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3765:3769 Corelib.Init.Datatypes <> false constr
+R3759:3762 Corelib.Init.Datatypes <> true constr
+R3753:3756 Corelib.Init.Datatypes <> true constr
+R3747:3750 Corelib.Init.Datatypes <> true constr
+R3774:3775 RocqOfSolidity.RocqEvm.Arith.Nibble <> xE constr
+R3782:3787 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R3807:3810 Corelib.Init.Datatypes <> true constr
+R3801:3804 Corelib.Init.Datatypes <> true constr
+R3795:3798 Corelib.Init.Datatypes <> true constr
+R3789:3792 Corelib.Init.Datatypes <> true constr
+R3816:3817 RocqOfSolidity.RocqEvm.Arith.Nibble <> xF constr
+prf 3834:3865 <> hex_digit_of_nibble_of_hex_digit
+R3871:3879 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+binder 3868:3868 <> d:29
+R3928:3930 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3885:3903 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_nibble def
+R3906:3924 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_hex_digit def
+R3926:3926 RocqOfSolidity.RocqEvm.Arith.Nibble <> d:29 var
+R3931:3931 RocqOfSolidity.RocqEvm.Arith.Nibble <> d:29 var
+prf 3971:3999 <> nibble_of_hex_digit_of_nibble
+R4005:4010 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 4002:4002 <> n:30
+R4059:4061 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4016:4034 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_hex_digit def
+R4037:4055 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_nibble def
+R4057:4057 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:30 var
+R4062:4062 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:30 var
+def 4179:4192 <> N_of_hex_digit
+R4202:4210 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+binder 4195:4199 <> digit:31
+R4215:4215 Corelib.Numbers.BinNums <> N ind
+R4227:4231 RocqOfSolidity.RocqEvm.Arith.Nibble <> digit:31 var
+R4243:4244 RocqOfSolidity.RocqEvm.Arith.Nibble <> x0 constr
+R4257:4258 RocqOfSolidity.RocqEvm.Arith.Nibble <> x1 constr
+R4271:4272 RocqOfSolidity.RocqEvm.Arith.Nibble <> x2 constr
+R4285:4286 RocqOfSolidity.RocqEvm.Arith.Nibble <> x3 constr
+R4299:4300 RocqOfSolidity.RocqEvm.Arith.Nibble <> x4 constr
+R4313:4314 RocqOfSolidity.RocqEvm.Arith.Nibble <> x5 constr
+R4327:4328 RocqOfSolidity.RocqEvm.Arith.Nibble <> x6 constr
+R4341:4342 RocqOfSolidity.RocqEvm.Arith.Nibble <> x7 constr
+R4355:4356 RocqOfSolidity.RocqEvm.Arith.Nibble <> x8 constr
+R4369:4370 RocqOfSolidity.RocqEvm.Arith.Nibble <> x9 constr
+R4383:4384 RocqOfSolidity.RocqEvm.Arith.Nibble <> xA constr
+R4397:4398 RocqOfSolidity.RocqEvm.Arith.Nibble <> xB constr
+R4411:4412 RocqOfSolidity.RocqEvm.Arith.Nibble <> xC constr
+R4425:4426 RocqOfSolidity.RocqEvm.Arith.Nibble <> xD constr
+R4439:4440 RocqOfSolidity.RocqEvm.Arith.Nibble <> xE constr
+R4453:4454 RocqOfSolidity.RocqEvm.Arith.Nibble <> xF constr
+prf 4477:4493 <> N_of_hex_digit_ub
+R4503:4511 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+binder 4496:4500 <> digit:33
+R4538:4540 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R4518:4531 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_hex_digit def
+R4533:4537 RocqOfSolidity.RocqEvm.Arith.Nibble <> digit:33 var
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+R4588:4595 Stdlib.NArith.BinNat N ltb_lt thm
+def 4624:4634 <> N_of_nibble
+R4640:4645 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 4637:4637 <> n:34
+R4650:4650 Corelib.Numbers.BinNums <> N ind
+R4665:4668 Corelib.Init.Datatypes <> bool ind
+binder 4662:4662 <> a:35
+R4677:4677 RocqOfSolidity.RocqEvm.Arith.Nibble <> a:35 var
+R4692:4693 Corelib.Numbers.BinNums <> xO constr
+R4684:4685 Corelib.Numbers.BinNums <> xI constr
+binder 4659:4659 <> f:36
+R4707:4707 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:34 var
+R4719:4724 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R4726:4729 Corelib.Init.Datatypes <> true constr
+R4743:4746 Corelib.Numbers.BinNums <> Npos constr
+R4749:4749 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:36 var
+R4755:4755 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:36 var
+R4761:4761 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:36 var
+R4766:4767 Corelib.Numbers.BinNums <> xH constr
+R4777:4782 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R4790:4793 Corelib.Init.Datatypes <> true constr
+R4784:4788 Corelib.Init.Datatypes <> false constr
+R4804:4807 Corelib.Numbers.BinNums <> Npos constr
+R4810:4810 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:36 var
+R4816:4816 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:36 var
+R4821:4822 Corelib.Numbers.BinNums <> xH constr
+R4831:4836 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R4850:4853 Corelib.Init.Datatypes <> true constr
+R4844:4848 Corelib.Init.Datatypes <> false constr
+R4838:4842 Corelib.Init.Datatypes <> false constr
+R4861:4864 Corelib.Numbers.BinNums <> Npos constr
+R4867:4867 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:36 var
+R4872:4873 Corelib.Numbers.BinNums <> xH constr
+R4881:4886 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R4906:4909 Corelib.Init.Datatypes <> true constr
+R4900:4904 Corelib.Init.Datatypes <> false constr
+R4894:4898 Corelib.Init.Datatypes <> false constr
+R4888:4892 Corelib.Init.Datatypes <> false constr
+R4914:4917 Corelib.Numbers.BinNums <> Npos constr
+R4919:4920 Corelib.Numbers.BinNums <> xH constr
+R4927:4932 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R4952:4956 Corelib.Init.Datatypes <> false constr
+R4946:4950 Corelib.Init.Datatypes <> false constr
+R4940:4944 Corelib.Init.Datatypes <> false constr
+R4934:4938 Corelib.Init.Datatypes <> false constr
+R4961:4962 Corelib.Numbers.BinNums <> N0 constr
+prf 4979:4995 <> N_of_nibble_bound
+R5001:5006 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 4998:4998 <> n:38
+R5026:5028 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R5013:5023 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_nibble def
+R5025:5025 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:38 var
+prf 5147:5171 <> hex_digit_to_N_via_nibble
+R5177:5185 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+binder 5174:5174 <> d:39
+R5226:5228 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5191:5201 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_nibble def
+R5204:5222 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_hex_digit def
+R5224:5224 RocqOfSolidity.RocqEvm.Arith.Nibble <> d:39 var
+R5229:5242 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_hex_digit def
+R5244:5244 RocqOfSolidity.RocqEvm.Arith.Nibble <> d:39 var
+prf 5286:5310 <> nibble_to_N_via_hex_digit
+R5316:5321 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 5313:5313 <> n:40
+R5365:5367 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5327:5340 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_hex_digit def
+R5343:5361 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_nibble def
+R5363:5363 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:40 var
+R5368:5378 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_nibble def
+R5380:5380 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:40 var
+def 5499:5506 <> push_bit
+R5512:5512 Corelib.Numbers.BinNums <> N ind
+binder 5509:5509 <> n:41
+R5521:5524 Corelib.Init.Datatypes <> bool ind
+binder 5516:5518 <> bit:42
+R5529:5529 Corelib.Numbers.BinNums <> N ind
+R5540:5540 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:41 var
+R5552:5553 Corelib.Numbers.BinNums <> N0 constr
+R5561:5563 RocqOfSolidity.RocqEvm.Arith.Nibble <> bit:42 var
+R5584:5587 Corelib.Numbers.BinNums <> Npos constr
+R5594:5597 Corelib.Numbers.BinNums <> Npos constr
+R5604:5606 RocqOfSolidity.RocqEvm.Arith.Nibble <> bit:42 var
+R5621:5622 Corelib.Numbers.BinNums <> xO constr
+R5613:5614 Corelib.Numbers.BinNums <> xI constr
+prf 5643:5656 <> push_bit_arith
+R5662:5662 Corelib.Numbers.BinNums <> N ind
+binder 5659:5659 <> n:44
+R5671:5674 Corelib.Init.Datatypes <> bool ind
+binder 5666:5668 <> bit:45
+R5694:5696 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5680:5687 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit def
+R5689:5689 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:44 var
+R5691:5693 RocqOfSolidity.RocqEvm.Arith.Nibble <> bit:45 var
+R5703:5705 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R5699:5701 Stdlib.NArith.BinNat <> ::N_scope:x_'*'_x not
+R5702:5702 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:44 var
+R5709:5711 RocqOfSolidity.RocqEvm.Arith.Nibble <> bit:45 var
+def 5785:5792 <> last_bit
+R5798:5798 Corelib.Numbers.BinNums <> N ind
+binder 5795:5795 <> n:46
+R5803:5806 Corelib.Init.Datatypes <> bool ind
+R5817:5817 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:46 var
+R5829:5830 Corelib.Numbers.BinNums <> N0 constr
+R5839:5842 Corelib.Numbers.BinNums <> Npos constr
+R5845:5846 Corelib.Numbers.BinNums <> xO constr
+R5854:5858 Corelib.Init.Datatypes <> false constr
+R5854:5858 Corelib.Init.Datatypes <> false constr
+R5865:5868 Corelib.Numbers.BinNums <> Npos constr
+R5870:5871 Corelib.Numbers.BinNums <> xH constr
+R5875:5878 Corelib.Numbers.BinNums <> Npos constr
+R5881:5882 Corelib.Numbers.BinNums <> xI constr
+R5890:5893 Corelib.Init.Datatypes <> true constr
+R5890:5893 Corelib.Init.Datatypes <> true constr
+prf 5910:5921 <> last_bit_odd
+R5927:5927 Corelib.Numbers.BinNums <> N ind
+binder 5924:5924 <> n:48
+R5943:5945 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5933:5940 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit def
+R5942:5942 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:48 var
+R5946:5950 Stdlib.NArith.BinNat N odd def
+R5952:5952 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:48 var
+prf 6017:6034 <> push_bit_then_shr1
+R6040:6040 Corelib.Numbers.BinNums <> N ind
+binder 6037:6037 <> n:49
+R6049:6052 Corelib.Init.Datatypes <> bool ind
+binder 6044:6046 <> bit:50
+R6081:6083 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6058:6063 Stdlib.NArith.BinNat N div2 def
+R6066:6073 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit def
+R6075:6075 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:49 var
+R6077:6079 RocqOfSolidity.RocqEvm.Arith.Nibble <> bit:50 var
+R6084:6084 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:49 var
+prf 6140:6155 <> last_of_push_bit
+R6161:6161 Corelib.Numbers.BinNums <> N ind
+binder 6158:6158 <> n:51
+R6170:6173 Corelib.Init.Datatypes <> bool ind
+binder 6165:6167 <> bit:52
+R6204:6206 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6179:6186 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit def
+R6189:6196 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit def
+R6198:6198 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:51 var
+R6200:6202 RocqOfSolidity.RocqEvm.Arith.Nibble <> bit:52 var
+R6207:6209 RocqOfSolidity.RocqEvm.Arith.Nibble <> bit:52 var
+prf 6265:6277 <> push_last_bit
+R6283:6283 Corelib.Numbers.BinNums <> N ind
+binder 6280:6280 <> n:53
+R6321:6323 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6289:6296 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit def
+R6299:6304 Stdlib.NArith.BinNat N div2 def
+R6306:6306 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:53 var
+R6310:6317 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit def
+R6319:6319 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:53 var
+R6324:6324 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:53 var
+def 6391:6401 <> push_nibble
+R6407:6407 Corelib.Numbers.BinNums <> N ind
+binder 6404:6404 <> n:54
+R6416:6421 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 6411:6413 <> nib:55
+R6426:6426 Corelib.Numbers.BinNums <> N ind
+R6437:6439 RocqOfSolidity.RocqEvm.Arith.Nibble <> nib:55 var
+R6451:6456 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R6473:6480 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit def
+R6483:6490 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit def
+R6493:6500 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit def
+R6503:6510 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit def
+R6512:6512 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:54 var
+prf 6544:6560 <> push_nibble_arith
+R6566:6566 Corelib.Numbers.BinNums <> N ind
+binder 6563:6563 <> n:57
+R6575:6580 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 6570:6572 <> nib:58
+R6603:6605 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6586:6596 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble def
+R6598:6598 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:57 var
+R6600:6602 RocqOfSolidity.RocqEvm.Arith.Nibble <> nib:58 var
+R6613:6615 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R6609:6611 Stdlib.NArith.BinNat <> ::N_scope:x_'*'_x not
+R6612:6612 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:57 var
+R6616:6626 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_nibble def
+R6628:6630 RocqOfSolidity.RocqEvm.Arith.Nibble <> nib:58 var
+R6684:6694 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble def
+R6712:6725 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_arith thm
+R6712:6725 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_arith thm
+R6712:6725 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_arith thm
+R6712:6725 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_arith thm
+R6712:6725 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_arith thm
+R6712:6725 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_arith thm
+R6712:6725 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_arith thm
+R6712:6725 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_arith thm
+R6712:6725 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_arith thm
+R6712:6725 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_arith thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6743:6759 Stdlib.NArith.BinNat N mul_add_distr_l thm
+R6779:6789 Stdlib.NArith.BinNat N add_assoc thm
+R6779:6789 Stdlib.NArith.BinNat N add_assoc thm
+R6779:6789 Stdlib.NArith.BinNat N add_assoc thm
+R6779:6789 Stdlib.NArith.BinNat N add_assoc thm
+R6779:6789 Stdlib.NArith.BinNat N add_assoc thm
+R6779:6789 Stdlib.NArith.BinNat N add_assoc thm
+R6779:6789 Stdlib.NArith.BinNat N add_assoc thm
+R6779:6789 Stdlib.NArith.BinNat N add_assoc thm
+R6822:6832 Stdlib.NArith.BinNat N mul_assoc thm
+R6822:6832 Stdlib.NArith.BinNat N mul_assoc thm
+R6822:6832 Stdlib.NArith.BinNat N mul_assoc thm
+R6822:6832 Stdlib.NArith.BinNat N mul_assoc thm
+R6822:6832 Stdlib.NArith.BinNat N mul_assoc thm
+R6822:6832 Stdlib.NArith.BinNat N mul_assoc thm
+R6822:6832 Stdlib.NArith.BinNat N mul_assoc thm
+R6822:6832 Stdlib.NArith.BinNat N mul_assoc thm
+def 6912:6921 <> pop_nibble
+R6927:6927 Corelib.Numbers.BinNums <> N ind
+binder 6924:6924 <> n:59
+R6933:6935 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R6932:6932 Corelib.Numbers.BinNums <> N ind
+R6936:6941 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+R6956:6963 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit def
+R6965:6965 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:59 var
+binder 6950:6951 <> a0:60
+R6983:6988 Stdlib.NArith.BinNat N div2 def
+R6990:6990 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:59 var
+binder 6977:6978 <> n1:61
+R7008:7015 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit def
+R7017:7018 RocqOfSolidity.RocqEvm.Arith.Nibble <> n1:61 var
+binder 7002:7003 <> a1:62
+R7036:7041 Stdlib.NArith.BinNat N div2 def
+R7043:7044 RocqOfSolidity.RocqEvm.Arith.Nibble <> n1:61 var
+binder 7030:7031 <> n2:63
+R7062:7069 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit def
+R7071:7072 RocqOfSolidity.RocqEvm.Arith.Nibble <> n2:63 var
+binder 7056:7057 <> a2:64
+R7090:7095 Stdlib.NArith.BinNat N div2 def
+R7097:7098 RocqOfSolidity.RocqEvm.Arith.Nibble <> n2:63 var
+binder 7084:7085 <> n3:65
+R7116:7123 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit def
+R7125:7126 RocqOfSolidity.RocqEvm.Arith.Nibble <> n3:65 var
+binder 7110:7111 <> a3:66
+R7144:7149 Stdlib.NArith.BinNat N div2 def
+R7151:7152 RocqOfSolidity.RocqEvm.Arith.Nibble <> n3:65 var
+binder 7138:7139 <> n4:67
+R7162:7162 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7165:7166 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7185:7185 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7163:7164 RocqOfSolidity.RocqEvm.Arith.Nibble <> n4:67 var
+R7167:7172 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R7174:7175 RocqOfSolidity.RocqEvm.Arith.Nibble <> a3:66 var
+R7177:7178 RocqOfSolidity.RocqEvm.Arith.Nibble <> a2:64 var
+R7180:7181 RocqOfSolidity.RocqEvm.Arith.Nibble <> a1:62 var
+R7183:7184 RocqOfSolidity.RocqEvm.Arith.Nibble <> a0:60 var
+prf 7195:7214 <> push_nibble_then_pop
+R7220:7220 Corelib.Numbers.BinNums <> N ind
+binder 7217:7217 <> n:68
+R7229:7234 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 7224:7226 <> nib:69
+R7270:7272 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7240:7249 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble def
+R7252:7262 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble def
+R7264:7264 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:68 var
+R7266:7268 RocqOfSolidity.RocqEvm.Arith.Nibble <> nib:69 var
+R7273:7273 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7275:7276 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7280:7280 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7274:7274 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:68 var
+R7277:7279 RocqOfSolidity.RocqEvm.Arith.Nibble <> nib:69 var
+R7333:7342 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble def
+R7367:7384 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_then_shr1 thm
+R7367:7384 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_then_shr1 thm
+R7367:7384 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_then_shr1 thm
+R7367:7384 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_then_shr1 thm
+R7367:7384 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_then_shr1 thm
+R7367:7384 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_then_shr1 thm
+R7367:7384 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_then_shr1 thm
+R7367:7384 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_then_shr1 thm
+R7367:7384 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_then_shr1 thm
+R7367:7384 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_bit_then_shr1 thm
+R7408:7423 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_of_push_bit thm
+R7408:7423 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_of_push_bit thm
+R7408:7423 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_of_push_bit thm
+R7408:7423 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_of_push_bit thm
+R7408:7423 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_of_push_bit thm
+R7408:7423 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_of_push_bit thm
+R7408:7423 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_of_push_bit thm
+R7408:7423 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_of_push_bit thm
+R7408:7423 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_of_push_bit thm
+R7408:7423 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_of_push_bit thm
+prf 7439:7458 <> pop_nibble_then_push
+R7464:7464 Corelib.Numbers.BinNums <> N ind
+binder 7461:7461 <> n:70
+R7523:7525 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7470:7480 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble def
+R7483:7485 Corelib.Init.Datatypes <> fst def
+R7488:7497 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble def
+R7499:7499 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:70 var
+R7504:7506 Corelib.Init.Datatypes <> snd def
+R7509:7518 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble def
+R7520:7520 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:70 var
+R7526:7526 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:70 var
+R7565:7574 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble def
+R7584:7586 Corelib.Init.Datatypes <> fst def
+R7596:7598 Corelib.Init.Datatypes <> snd def
+R7610:7620 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble def
+R7644:7656 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_last_bit thm
+R7644:7656 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_last_bit thm
+R7644:7656 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_last_bit thm
+R7644:7656 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_last_bit thm
+R7644:7656 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_last_bit thm
+R7644:7656 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_last_bit thm
+R7644:7656 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_last_bit thm
+R7644:7656 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_last_bit thm
+R7644:7656 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_last_bit thm
+R7644:7656 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_last_bit thm
+def 7676:7686 <> nibble_of_N
+R7692:7692 Corelib.Numbers.BinNums <> N ind
+binder 7689:7689 <> n:71
+R7697:7702 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+R7707:7709 Corelib.Init.Datatypes <> snd def
+R7712:7721 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble def
+R7723:7723 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:71 var
+prf 7734:7749 <> N_of_nibble_of_N
+R7755:7755 Corelib.Numbers.BinNums <> N ind
+binder 7752:7752 <> n:72
+R7764:7766 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R7763:7763 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:72 var
+binder 7759:7759 <> B:73
+R7804:7806 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7777:7787 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_nibble def
+R7790:7800 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_N def
+R7802:7802 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:72 var
+R7807:7807 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:72 var
+R7829:7848 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble_then_push thm
+R7829:7848 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble_then_push thm
+R7862:7878 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble_arith thm
+R7862:7878 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble_arith thm
+R7862:7878 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble_arith thm
+R7893:7903 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_N def
+R7916:7926 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_nibble def
+R7916:7926 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_nibble def
+R7959:7961 Corelib.Init.Datatypes <> fst def
+R7959:7961 Corelib.Init.Datatypes <> fst def
+def 8006:8021 <> pop_nibble_arith
+R8029:8029 Corelib.Numbers.BinNums <> N ind
+binder 8024:8024 <> a:74
+binder 8026:8026 <> b:75
+R8038:8040 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R8037:8037 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:75 var
+binder 8033:8033 <> B:76
+R8074:8076 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8051:8060 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble def
+R8069:8071 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8065:8067 Stdlib.NArith.BinNat <> ::N_scope:x_'*'_x not
+R8068:8068 RocqOfSolidity.RocqEvm.Arith.Nibble <> a:74 var
+R8072:8072 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:75 var
+R8077:8077 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8079:8080 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8094:8094 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8078:8078 RocqOfSolidity.RocqEvm.Arith.Nibble <> a:74 var
+R8081:8091 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_N def
+R8093:8093 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:75 var
+R8144:8146 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8115:8125 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble def
+R8130:8140 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_N def
+R8154:8156 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8150:8152 Stdlib.NArith.BinNat <> ::N_scope:x_'*'_x not
+R8144:8146 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8115:8125 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble def
+R8130:8140 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_N def
+R8154:8156 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8150:8152 Stdlib.NArith.BinNat <> ::N_scope:x_'*'_x not
+R8185:8204 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble_then_pop thm
+R8185:8204 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble_then_pop thm
+R8217:8233 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble_arith thm
+R8217:8233 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble_arith thm
+R8217:8233 RocqOfSolidity.RocqEvm.Arith.Nibble <> push_nibble_arith thm
+R8251:8266 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_nibble_of_N thm
+R8251:8266 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_nibble_of_N thm
+def 8298:8319 <> pop_nibble_arith_small
+R8325:8325 Corelib.Numbers.BinNums <> N ind
+binder 8322:8322 <> b:77
+R8334:8336 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R8333:8333 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:77 var
+binder 8329:8329 <> B:78
+R8359:8361 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8347:8356 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble def
+R8358:8358 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:77 var
+R8362:8362 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8366:8367 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8381:8381 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8368:8378 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_N def
+R8380:8380 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:77 var
+R8402:8417 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble_arith def
+R8402:8417 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble_arith def
+R8402:8417 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble_arith def
+def 8453:8468 <> nibble_of_uint63
+R8474:8476 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 8471:8471 <> i:79
+R8482:8487 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R8491:8495 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R8504:8504 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R8497:8502 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R8496:8496 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:79 var
+R8526:8530 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R8539:8539 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R8532:8537 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R8531:8531 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:79 var
+R8561:8565 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R8574:8574 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R8567:8572 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R8566:8566 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:79 var
+R8596:8600 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R8609:8609 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R8602:8607 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R8601:8601 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:79 var
+def 8632:8647 <> uint63_of_nibble
+R8653:8658 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 8650:8650 <> n:80
+R8670:8670 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:80 var
+R8682:8687 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R8861:8883 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R8917:8917 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R8804:8826 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R8860:8860 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R8712:8712 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R8746:8769 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R8803:8803 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+prf 8942:8967 <> nibble_of_uint63_of_nibble
+R8973:8978 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 8970:8970 <> n:82
+R9021:9023 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8984:8999 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_uint63 def
+R9002:9017 RocqOfSolidity.RocqEvm.Arith.Nibble <> uint63_of_nibble def
+R9019:9019 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:82 var
+R9024:9024 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:82 var
+def 9220:9238 <> hex_digit_of_uint63
+R9244:9246 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 9241:9241 <> i:83
+R9257:9261 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9270:9270 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9263:9268 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9262:9262 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9667:9671 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9680:9680 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9673:9678 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9672:9672 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9875:9879 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9888:9888 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9881:9886 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9880:9880 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9982:9986 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9995:9995 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9988:9993 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9987:9987 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R10018:10019 RocqOfSolidity.RocqEvm.Arith.Nibble <> x0 constr
+R10010:10011 RocqOfSolidity.RocqEvm.Arith.Nibble <> x1 constr
+R9917:9921 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9930:9930 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9923:9928 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9922:9922 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9953:9954 RocqOfSolidity.RocqEvm.Arith.Nibble <> x2 constr
+R9945:9946 RocqOfSolidity.RocqEvm.Arith.Nibble <> x3 constr
+R9707:9711 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9720:9720 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9713:9718 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9712:9712 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9814:9818 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9827:9827 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9820:9825 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9819:9819 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9850:9851 RocqOfSolidity.RocqEvm.Arith.Nibble <> x4 constr
+R9842:9843 RocqOfSolidity.RocqEvm.Arith.Nibble <> x5 constr
+R9749:9753 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9762:9762 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9755:9760 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9754:9754 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9785:9786 RocqOfSolidity.RocqEvm.Arith.Nibble <> x6 constr
+R9777:9778 RocqOfSolidity.RocqEvm.Arith.Nibble <> x7 constr
+R9295:9299 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9308:9308 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9301:9306 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9300:9300 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9503:9507 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9516:9516 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9509:9514 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9508:9508 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9610:9614 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9623:9623 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9616:9621 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9615:9615 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9646:9647 RocqOfSolidity.RocqEvm.Arith.Nibble <> x8 constr
+R9638:9639 RocqOfSolidity.RocqEvm.Arith.Nibble <> x9 constr
+R9545:9549 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9558:9558 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9551:9556 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9550:9550 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9581:9582 RocqOfSolidity.RocqEvm.Arith.Nibble <> xA constr
+R9573:9574 RocqOfSolidity.RocqEvm.Arith.Nibble <> xB constr
+R9335:9339 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9348:9348 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9341:9346 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9340:9340 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9442:9446 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9455:9455 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9448:9453 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9447:9447 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9478:9479 RocqOfSolidity.RocqEvm.Arith.Nibble <> xC constr
+R9470:9471 RocqOfSolidity.RocqEvm.Arith.Nibble <> xD constr
+R9377:9381 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9390:9390 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R9383:9388 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R9382:9382 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:83 var
+R9413:9414 RocqOfSolidity.RocqEvm.Arith.Nibble <> xE constr
+R9405:9406 RocqOfSolidity.RocqEvm.Arith.Nibble <> xF constr
+prf 10029:10057 <> hex_digit_of_nibble_of_uint63
+R10063:10065 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 10060:10060 <> i:84
+R10111:10113 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10071:10089 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_nibble def
+R10092:10107 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_uint63 def
+R10109:10109 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:84 var
+R10114:10132 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_uint63 def
+R10134:10134 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:84 var
+R10151:10169 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_nibble def
+R10179:10194 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_uint63 def
+R10204:10222 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_uint63 def
+R10236:10239 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10241:10246 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10271:10274 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10276:10281 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10306:10309 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10311:10316 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10341:10344 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10346:10351 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10236:10239 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10241:10246 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10271:10274 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10276:10281 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10271:10274 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10276:10281 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10306:10309 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10311:10316 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10306:10309 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10311:10316 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10306:10309 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10311:10316 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10306:10309 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10311:10316 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10341:10344 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10346:10351 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10341:10344 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10346:10351 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10341:10344 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10346:10351 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10341:10344 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10346:10351 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10341:10344 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10346:10351 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10341:10344 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10346:10351 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10341:10344 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10346:10351 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R10341:10344 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R10346:10351 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+prf 10381:10401 <> nibble_of_uint63_of_N
+R10407:10407 Corelib.Numbers.BinNums <> N ind
+binder 10404:10404 <> n:85
+R10445:10447 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10413:10428 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_uint63 def
+R10431:10441 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_of_N def
+R10443:10443 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:85 var
+R10448:10458 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_N def
+R10460:10460 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:85 var
+R10477:10487 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_N def
+R10497:10506 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble def
+R10524:10534 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_of_N def
+R10524:10534 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_of_N def
+R10552:10567 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_uint63 def
+R10585:10596 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit_odd thm
+R10585:10596 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit_odd thm
+R10585:10596 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit_odd thm
+R10585:10596 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit_odd thm
+R10585:10596 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit_odd thm
+R10585:10596 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit_odd thm
+R10585:10596 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit_odd thm
+R10585:10596 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit_odd thm
+R10585:10596 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit_odd thm
+R10585:10596 RocqOfSolidity.RocqEvm.Arith.Nibble <> last_bit_odd thm
+R10614:10624 Stdlib.NArith.BinNat N div2_spec thm
+R10614:10624 Stdlib.NArith.BinNat N div2_spec thm
+R10614:10624 Stdlib.NArith.BinNat N div2_spec thm
+R10614:10624 Stdlib.NArith.BinNat N div2_spec thm
+R10614:10624 Stdlib.NArith.BinNat N div2_spec thm
+R10614:10624 Stdlib.NArith.BinNat N div2_spec thm
+R10614:10624 Stdlib.NArith.BinNat N div2_spec thm
+R10614:10624 Stdlib.NArith.BinNat N div2_spec thm
+R10642:10656 Stdlib.NArith.BinNat N shiftr_shiftr thm
+R10642:10656 Stdlib.NArith.BinNat N shiftr_shiftr thm
+R10642:10656 Stdlib.NArith.BinNat N shiftr_shiftr thm
+R10642:10656 Stdlib.NArith.BinNat N shiftr_shiftr thm
+R10642:10656 Stdlib.NArith.BinNat N shiftr_shiftr thm
+R10642:10656 Stdlib.NArith.BinNat N shiftr_shiftr thm
+R10642:10656 Stdlib.NArith.BinNat N shiftr_shiftr thm
+R10642:10656 Stdlib.NArith.BinNat N shiftr_shiftr thm
+R10676:10688 Stdlib.NArith.BinNat N testbit_odd thm
+R10676:10688 Stdlib.NArith.BinNat N testbit_odd thm
+R10676:10688 Stdlib.NArith.BinNat N testbit_odd thm
+R10676:10688 Stdlib.NArith.BinNat N testbit_odd thm
+R10676:10688 Stdlib.NArith.BinNat N testbit_odd thm
+R10676:10688 Stdlib.NArith.BinNat N testbit_odd thm
+R10676:10688 Stdlib.NArith.BinNat N testbit_odd thm
+R10676:10688 Stdlib.NArith.BinNat N testbit_odd thm
+R10701:10710 Stdlib.NArith.BinNat N bit0_odd thm
+R10701:10710 Stdlib.NArith.BinNat N bit0_odd thm
+R10701:10710 Stdlib.NArith.BinNat N bit0_odd thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10728:10753 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_N_low_digit thm
+R10772:10780 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> get_digit def
+ind 11019:11022 <> byte
+constr 11027:11030 <> Byte
+R11058:11061 Corelib.Init.Datatypes <> bool ind
+binder 11033:11034 <> a7:88
+binder 11036:11037 <> a6:89
+binder 11039:11040 <> a5:90
+binder 11042:11043 <> a4:91
+binder 11045:11046 <> a3:92
+binder 11048:11049 <> a2:93
+binder 11051:11052 <> a1:94
+binder 11054:11055 <> a0:95
+scheme 11019:11022 <> byte_rect
+scheme 11019:11022 <> byte_ind
+scheme 11019:11022 <> byte_rec
+scheme 11019:11022 <> byte_sind
+def 11077:11086 <> low_nibble
+R11092:11095 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 11089:11089 <> b:96
+R11100:11105 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+R11116:11116 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:96 var
+R11128:11131 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R11156:11161 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+def 11195:11205 <> high_nibble
+R11211:11214 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 11208:11208 <> b:98
+R11219:11224 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+R11235:11235 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:98 var
+R11247:11250 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R11275:11280 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+def 11314:11328 <> byte_of_nibbles
+R11341:11346 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 11331:11334 <> high:100
+binder 11336:11338 <> low:101
+R11351:11354 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R11365:11368 RocqOfSolidity.RocqEvm.Arith.Nibble <> high:100 var
+R11380:11385 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R11414:11416 RocqOfSolidity.RocqEvm.Arith.Nibble <> low:101 var
+R11431:11436 RocqOfSolidity.RocqEvm.Arith.Nibble <> Nibble constr
+R11462:11465 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+prf 11516:11528 <> low_nibble_ok
+R11541:11546 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 11531:11534 <> high:104
+binder 11536:11538 <> low:105
+R11589:11591 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11552:11561 RocqOfSolidity.RocqEvm.Arith.Nibble <> low_nibble def
+R11564:11578 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_nibbles def
+R11580:11583 RocqOfSolidity.RocqEvm.Arith.Nibble <> high:104 var
+R11585:11587 RocqOfSolidity.RocqEvm.Arith.Nibble <> low:105 var
+R11592:11594 RocqOfSolidity.RocqEvm.Arith.Nibble <> low:105 var
+prf 11653:11666 <> high_nibble_ok
+R11679:11684 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble ind
+binder 11669:11672 <> high:106
+binder 11674:11676 <> low:107
+R11728:11730 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11690:11700 RocqOfSolidity.RocqEvm.Arith.Nibble <> high_nibble def
+R11703:11717 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_nibbles def
+R11719:11722 RocqOfSolidity.RocqEvm.Arith.Nibble <> high:106 var
+R11724:11726 RocqOfSolidity.RocqEvm.Arith.Nibble <> low:107 var
+R11731:11734 RocqOfSolidity.RocqEvm.Arith.Nibble <> high:106 var
+prf 11793:11810 <> byte_of_nibbles_ok
+R11816:11819 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 11813:11813 <> b:108
+R11871:11873 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11825:11839 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_nibbles def
+R11842:11852 RocqOfSolidity.RocqEvm.Arith.Nibble <> high_nibble def
+R11854:11854 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:108 var
+R11858:11867 RocqOfSolidity.RocqEvm.Arith.Nibble <> low_nibble def
+R11869:11869 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:108 var
+R11874:11874 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:108 var
+def 11919:11936 <> byte_of_hex_digits
+R11949:11957 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+binder 11939:11942 <> high:109
+binder 11944:11946 <> low:110
+R11962:11965 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R11970:11984 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_nibbles def
+R11987:12005 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_hex_digit def
+R12007:12010 RocqOfSolidity.RocqEvm.Arith.Nibble <> high:109 var
+R12014:12032 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_hex_digit def
+R12034:12036 RocqOfSolidity.RocqEvm.Arith.Nibble <> low:110 var
+def 12052:12069 <> hex_digits_of_byte
+R12075:12078 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 12072:12072 <> b:111
+R12092:12094 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R12083:12091 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+R12095:12103 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+R12108:12108 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12144:12149 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12184:12184 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R12109:12127 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_nibble def
+R12130:12140 RocqOfSolidity.RocqEvm.Arith.Nibble <> high_nibble def
+R12142:12142 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:111 var
+R12150:12168 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_nibble def
+R12171:12180 RocqOfSolidity.RocqEvm.Arith.Nibble <> low_nibble def
+R12182:12182 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:111 var
+def 12199:12207 <> N_of_byte
+R12213:12216 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 12210:12210 <> b:112
+R12221:12221 Corelib.Numbers.BinNums <> N ind
+R12236:12239 Corelib.Init.Datatypes <> bool ind
+binder 12233:12233 <> a:113
+R12248:12248 RocqOfSolidity.RocqEvm.Arith.Nibble <> a:113 var
+R12263:12264 Corelib.Numbers.BinNums <> xO constr
+R12255:12256 Corelib.Numbers.BinNums <> xI constr
+binder 12230:12230 <> f:114
+R12278:12278 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:112 var
+R12290:12293 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R12295:12298 Corelib.Init.Datatypes <> true constr
+R12324:12327 Corelib.Numbers.BinNums <> Npos constr
+R12330:12330 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12336:12336 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12342:12342 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12348:12348 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12354:12354 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12360:12360 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12366:12366 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12371:12372 Corelib.Numbers.BinNums <> xH constr
+R12386:12389 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R12397:12400 Corelib.Init.Datatypes <> true constr
+R12391:12395 Corelib.Init.Datatypes <> false constr
+R12423:12426 Corelib.Numbers.BinNums <> Npos constr
+R12429:12429 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12435:12435 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12441:12441 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12447:12447 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12453:12453 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12459:12459 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12464:12465 Corelib.Numbers.BinNums <> xH constr
+R12478:12481 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R12495:12498 Corelib.Init.Datatypes <> true constr
+R12489:12493 Corelib.Init.Datatypes <> false constr
+R12483:12487 Corelib.Init.Datatypes <> false constr
+R12518:12521 Corelib.Numbers.BinNums <> Npos constr
+R12524:12524 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12530:12530 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12536:12536 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12542:12542 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12548:12548 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12553:12554 Corelib.Numbers.BinNums <> xH constr
+R12566:12569 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R12589:12592 Corelib.Init.Datatypes <> true constr
+R12583:12587 Corelib.Init.Datatypes <> false constr
+R12577:12581 Corelib.Init.Datatypes <> false constr
+R12571:12575 Corelib.Init.Datatypes <> false constr
+R12609:12612 Corelib.Numbers.BinNums <> Npos constr
+R12615:12615 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12621:12621 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12627:12627 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12633:12633 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12638:12639 Corelib.Numbers.BinNums <> xH constr
+R12650:12653 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R12679:12682 Corelib.Init.Datatypes <> true constr
+R12673:12677 Corelib.Init.Datatypes <> false constr
+R12667:12671 Corelib.Init.Datatypes <> false constr
+R12661:12665 Corelib.Init.Datatypes <> false constr
+R12655:12659 Corelib.Init.Datatypes <> false constr
+R12696:12699 Corelib.Numbers.BinNums <> Npos constr
+R12702:12702 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12708:12708 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12714:12714 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12719:12720 Corelib.Numbers.BinNums <> xH constr
+R12730:12733 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R12765:12768 Corelib.Init.Datatypes <> true constr
+R12759:12763 Corelib.Init.Datatypes <> false constr
+R12753:12757 Corelib.Init.Datatypes <> false constr
+R12747:12751 Corelib.Init.Datatypes <> false constr
+R12741:12745 Corelib.Init.Datatypes <> false constr
+R12735:12739 Corelib.Init.Datatypes <> false constr
+R12779:12782 Corelib.Numbers.BinNums <> Npos constr
+R12785:12785 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12791:12791 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12796:12797 Corelib.Numbers.BinNums <> xH constr
+R12806:12809 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R12847:12850 Corelib.Init.Datatypes <> true constr
+R12841:12845 Corelib.Init.Datatypes <> false constr
+R12835:12839 Corelib.Init.Datatypes <> false constr
+R12829:12833 Corelib.Init.Datatypes <> false constr
+R12823:12827 Corelib.Init.Datatypes <> false constr
+R12817:12821 Corelib.Init.Datatypes <> false constr
+R12811:12815 Corelib.Init.Datatypes <> false constr
+R12858:12861 Corelib.Numbers.BinNums <> Npos constr
+R12864:12864 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:114 var
+R12869:12870 Corelib.Numbers.BinNums <> xH constr
+R12878:12881 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R12925:12928 Corelib.Init.Datatypes <> true constr
+R12919:12923 Corelib.Init.Datatypes <> false constr
+R12913:12917 Corelib.Init.Datatypes <> false constr
+R12907:12911 Corelib.Init.Datatypes <> false constr
+R12901:12905 Corelib.Init.Datatypes <> false constr
+R12895:12899 Corelib.Init.Datatypes <> false constr
+R12889:12893 Corelib.Init.Datatypes <> false constr
+R12883:12887 Corelib.Init.Datatypes <> false constr
+R12933:12936 Corelib.Numbers.BinNums <> Npos constr
+R12938:12939 Corelib.Numbers.BinNums <> xH constr
+R12946:12949 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R12993:12997 Corelib.Init.Datatypes <> false constr
+R12987:12991 Corelib.Init.Datatypes <> false constr
+R12981:12985 Corelib.Init.Datatypes <> false constr
+R12975:12979 Corelib.Init.Datatypes <> false constr
+R12969:12973 Corelib.Init.Datatypes <> false constr
+R12963:12967 Corelib.Init.Datatypes <> false constr
+R12957:12961 Corelib.Init.Datatypes <> false constr
+R12951:12955 Corelib.Init.Datatypes <> false constr
+R13002:13003 Corelib.Numbers.BinNums <> N0 constr
+def 13025:13032 <> pop_byte
+R13038:13038 Corelib.Numbers.BinNums <> N ind
+binder 13035:13035 <> n:116
+R13044:13046 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R13043:13043 Corelib.Numbers.BinNums <> N ind
+R13047:13050 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R13070:13079 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble def
+R13081:13081 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:116 var
+binder 13060:13061 <> n1:117
+binder 13064:13064 <> x:118
+R13104:13113 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble def
+R13115:13116 RocqOfSolidity.RocqEvm.Arith.Nibble <> n1:117 var
+binder 13094:13095 <> n2:119
+binder 13098:13098 <> y:120
+R13126:13126 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13129:13130 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13150:13150 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13127:13128 RocqOfSolidity.RocqEvm.Arith.Nibble <> n2:119 var
+R13131:13145 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_nibbles def
+R13147:13147 RocqOfSolidity.RocqEvm.Arith.Nibble <> y:120 var
+R13149:13149 RocqOfSolidity.RocqEvm.Arith.Nibble <> x:118 var
+def 13165:13173 <> byte_of_N
+R13179:13179 Corelib.Numbers.BinNums <> N ind
+binder 13176:13176 <> n:121
+R13184:13187 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R13192:13194 Corelib.Init.Datatypes <> snd def
+R13197:13204 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_byte def
+R13206:13206 RocqOfSolidity.RocqEvm.Arith.Nibble <> n:121 var
+prf 13217:13231 <> byte_of_N_arith
+R13244:13244 Corelib.Numbers.BinNums <> N ind
+binder 13234:13237 <> high:122
+binder 13239:13241 <> low:123
+R13281:13283 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R13277:13280 RocqOfSolidity.RocqEvm.Arith.Nibble <> high:122 var
+binder 13271:13273 <> H16:124
+R13324:13326 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R13321:13323 RocqOfSolidity.RocqEvm.Arith.Nibble <> low:123 var
+binder 13315:13317 <> L16:125
+R13364:13366 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13337:13345 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_N def
+R13357:13359 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R13350:13352 Stdlib.NArith.BinNat <> ::N_scope:x_'*'_x not
+R13353:13356 RocqOfSolidity.RocqEvm.Arith.Nibble <> high:122 var
+R13360:13362 RocqOfSolidity.RocqEvm.Arith.Nibble <> low:123 var
+R13367:13381 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_nibbles def
+R13384:13394 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_N def
+R13396:13399 RocqOfSolidity.RocqEvm.Arith.Nibble <> high:122 var
+R13403:13413 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_N def
+R13415:13417 RocqOfSolidity.RocqEvm.Arith.Nibble <> low:123 var
+R13435:13443 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_N def
+R13453:13460 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_byte def
+R13472:13487 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble_arith def
+R13472:13487 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble_arith def
+R13472:13487 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble_arith def
+R13509:13519 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_N def
+R13509:13519 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_N def
+R13565:13586 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble_arith_small def
+R13565:13586 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble_arith_small def
+R13565:13586 RocqOfSolidity.RocqEvm.Arith.Nibble <> pop_nibble_arith_small def
+prf 13617:13633 <> byte_of_N_of_byte
+R13639:13642 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 13636:13636 <> b:126
+R13671:13673 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13648:13656 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_N def
+R13659:13667 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R13669:13669 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:126 var
+R13674:13674 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:126 var
+def 13862:13872 <> byte_of_int
+R13878:13880 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 13875:13875 <> i:127
+R13886:13889 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R13893:13897 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R13908:13908 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R13899:13904 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R13898:13898 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:127 var
+R13928:13932 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R13942:13942 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R13934:13939 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R13933:13933 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:127 var
+R13962:13966 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R13976:13976 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R13968:13973 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R13967:13967 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:127 var
+R13996:14000 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R14010:14010 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R14002:14007 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R14001:14001 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:127 var
+R14030:14034 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R14043:14043 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R14036:14041 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R14035:14035 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:127 var
+R14063:14067 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R14076:14076 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R14069:14074 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R14068:14068 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:127 var
+R14096:14100 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R14109:14109 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R14102:14107 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R14101:14101 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:127 var
+R14129:14133 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R14142:14142 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R14135:14140 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R14134:14134 RocqOfSolidity.RocqEvm.Arith.Nibble <> i:127 var
+def 14165:14175 <> int_of_byte
+R14181:14184 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 14178:14178 <> b:128
+R14196:14196 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:128 var
+R14208:14211 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+binder 14250:14251 <> a7:130
+R14324:14325 RocqOfSolidity.RocqEvm.Arith.Nibble <> a7:130 var
+R14311:14315 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R14316:14317 RocqOfSolidity.RocqEvm.Arith.Nibble <> a7:130 var
+binder 14291:14292 <> a6:131
+R14373:14374 RocqOfSolidity.RocqEvm.Arith.Nibble <> a6:131 var
+R14360:14364 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R14365:14366 RocqOfSolidity.RocqEvm.Arith.Nibble <> a6:131 var
+binder 14340:14341 <> a5:132
+R14422:14423 RocqOfSolidity.RocqEvm.Arith.Nibble <> a5:132 var
+R14409:14413 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R14414:14415 RocqOfSolidity.RocqEvm.Arith.Nibble <> a5:132 var
+binder 14389:14390 <> a4:133
+R14471:14472 RocqOfSolidity.RocqEvm.Arith.Nibble <> a4:133 var
+R14458:14462 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R14463:14464 RocqOfSolidity.RocqEvm.Arith.Nibble <> a4:133 var
+binder 14438:14439 <> a3:134
+R14520:14521 RocqOfSolidity.RocqEvm.Arith.Nibble <> a3:134 var
+R14507:14511 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R14512:14513 RocqOfSolidity.RocqEvm.Arith.Nibble <> a3:134 var
+binder 14487:14488 <> a2:135
+R14569:14570 RocqOfSolidity.RocqEvm.Arith.Nibble <> a2:135 var
+R14556:14560 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R14561:14562 RocqOfSolidity.RocqEvm.Arith.Nibble <> a2:135 var
+binder 14536:14537 <> a1:136
+R14618:14619 RocqOfSolidity.RocqEvm.Arith.Nibble <> a1:136 var
+R14605:14609 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R14610:14611 RocqOfSolidity.RocqEvm.Arith.Nibble <> a1:136 var
+prf 14644:14662 <> byte_of_int_of_byte
+R14668:14671 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 14665:14665 <> b:137
+R14704:14706 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R14677:14687 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R14690:14700 RocqOfSolidity.RocqEvm.Arith.Nibble <> int_of_byte def
+R14702:14702 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:137 var
+R14707:14707 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:137 var
+def 14893:14904 <> hex_of_bytes
+R14910:14913 Corelib.Init.Datatypes <> list ind
+R14915:14918 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 14907:14907 <> b:138
+R14929:14932 Corelib.Init.Datatypes <> bool ind
+binder 14922:14926 <> lower:139
+R14937:14949 Stdlib.Strings.String <> string ind
+R14960:14960 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:138 var
+R14972:14974 Corelib.Init.Datatypes <> nil constr
+R14979:14996 Stdlib.Strings.String <> EmptyString constr
+R15005:15008 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R15044:15061 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digits_of_byte def
+binder 15033:15034 <> hi:142
+binder 15037:15038 <> lo:143
+R15078:15090 Stdlib.Strings.String <> String constr
+R15093:15110 RocqOfSolidity.RocqEvm.Arith.Nibble <> ascii_of_hex_digit def
+R15112:15113 RocqOfSolidity.RocqEvm.Arith.Nibble <> hi:142 var
+R15115:15119 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:139 var
+R15147:15159 Stdlib.Strings.String <> String constr
+R15162:15179 RocqOfSolidity.RocqEvm.Arith.Nibble <> ascii_of_hex_digit def
+R15181:15182 RocqOfSolidity.RocqEvm.Arith.Nibble <> lo:143 var
+R15184:15188 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:139 var
+R15231:15242 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_of_bytes:140 def
+R15246:15250 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:139 var
+def 15274:15286 <> byte_of_ascii
+R15292:15296 Stdlib.Strings.Ascii <> ascii ind
+binder 15289:15289 <> a:144
+R15342:15342 RocqOfSolidity.RocqEvm.Arith.Nibble <> a:144 var
+binder 15307:15308 <> b0:145
+binder 15311:15312 <> b1:146
+binder 15315:15316 <> b2:147
+binder 15319:15320 <> b3:148
+binder 15323:15324 <> b4:149
+binder 15327:15328 <> b5:150
+binder 15331:15332 <> b6:151
+binder 15335:15336 <> b7:152
+R15347:15350 RocqOfSolidity.RocqEvm.Arith.Nibble <> Byte constr
+R15352:15353 RocqOfSolidity.RocqEvm.Arith.Nibble <> b7:152 var
+R15355:15356 RocqOfSolidity.RocqEvm.Arith.Nibble <> b6:151 var
+R15358:15359 RocqOfSolidity.RocqEvm.Arith.Nibble <> b5:150 var
+R15361:15362 RocqOfSolidity.RocqEvm.Arith.Nibble <> b4:149 var
+R15364:15365 RocqOfSolidity.RocqEvm.Arith.Nibble <> b3:148 var
+R15367:15368 RocqOfSolidity.RocqEvm.Arith.Nibble <> b2:147 var
+R15370:15371 RocqOfSolidity.RocqEvm.Arith.Nibble <> b1:146 var
+R15373:15374 RocqOfSolidity.RocqEvm.Arith.Nibble <> b0:145 var
+def 15387:15401 <> bytes_of_string
+R15407:15419 Stdlib.Strings.String <> string ind
+binder 15404:15404 <> s:153
+R15424:15427 Corelib.Init.Datatypes <> list ind
+R15429:15432 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R15443:15443 RocqOfSolidity.RocqEvm.Arith.Nibble <> s:153 var
+R15455:15472 Stdlib.Strings.String <> EmptyString constr
+R15477:15479 Corelib.Init.Datatypes <> nil constr
+R15486:15498 Stdlib.Strings.String <> String constr
+R15522:15525 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R15507:15519 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_ascii def
+R15526:15540 RocqOfSolidity.RocqEvm.Arith.Nibble <> bytes_of_string:154 def
+def 15581:15594 <> string_forallb
+R15605:15608 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15600:15604 Stdlib.Strings.Ascii <> ascii ind
+R15609:15612 Corelib.Init.Datatypes <> bool ind
+binder 15597:15597 <> f:156
+R15619:15631 Stdlib.Strings.String <> string ind
+binder 15616:15616 <> s:157
+R15636:15639 Corelib.Init.Datatypes <> bool ind
+R15650:15650 RocqOfSolidity.RocqEvm.Arith.Nibble <> s:157 var
+R15662:15679 Stdlib.Strings.String <> EmptyString constr
+R15684:15687 Corelib.Init.Datatypes <> true constr
+R15694:15706 Stdlib.Strings.String <> String constr
+R15718:15721 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R15715:15715 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:156 var
+R15722:15735 RocqOfSolidity.RocqEvm.Arith.Nibble <> string_forallb:158 def
+R15737:15737 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:156 var
+prf 15756:15773 <> string_forallb_iff
+R15784:15787 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15779:15783 Stdlib.Strings.Ascii <> ascii ind
+R15788:15791 Corelib.Init.Datatypes <> bool ind
+binder 15776:15776 <> f:160
+R15798:15810 Stdlib.Strings.String <> string ind
+binder 15795:15795 <> s:161
+R15834:15836 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R15816:15829 RocqOfSolidity.RocqEvm.Arith.Nibble <> string_forallb def
+R15831:15831 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:160 var
+R15833:15833 RocqOfSolidity.RocqEvm.Arith.Nibble <> s:161 var
+R15837:15848 Stdlib.Lists.List <> forallb def
+R15853:15879 Stdlib.Strings.String <> list_ascii_of_string def
+R15881:15881 RocqOfSolidity.RocqEvm.Arith.Nibble <> s:161 var
+R15850:15850 RocqOfSolidity.RocqEvm.Arith.Nibble <> f:160 var
+def 15960:15972 <> is_hex_string
+R15978:15990 Stdlib.Strings.String <> string ind
+binder 15975:15975 <> s:162
+R15995:15998 Corelib.Init.Datatypes <> bool ind
+R16029:16040 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R16003:16010 Stdlib.Arith.PeanoNat Nat even def
+R16013:16025 Stdlib.Strings.String <> length def
+R16027:16027 RocqOfSolidity.RocqEvm.Arith.Nibble <> s:162 var
+R16041:16054 RocqOfSolidity.RocqEvm.Arith.Nibble <> string_forallb def
+R16056:16067 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_digit def
+R16069:16069 RocqOfSolidity.RocqEvm.Arith.Nibble <> s:162 var
+def 16082:16093 <> bytes_of_hex
+R16099:16111 Stdlib.Strings.String <> string ind
+binder 16096:16096 <> s:163
+R16157:16159 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16142:16154 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_string def
+R16156:16156 RocqOfSolidity.RocqEvm.Arith.Nibble <> s:163 var
+R16160:16163 Corelib.Init.Datatypes <> true constr
+binder 16138:16139 <> ok:164
+R16168:16171 Corelib.Init.Datatypes <> list ind
+R16173:16176 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R16220:16223 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R16215:16217 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16218:16219 RocqOfSolidity.RocqEvm.Arith.Nibble <> s':166 var
+R16240:16257 Stdlib.Strings.String <> EmptyString constr
+R16271:16273 Corelib.Init.Datatypes <> nil constr
+R16284:16296 Stdlib.Strings.String <> String constr
+R16300:16317 Stdlib.Strings.String <> EmptyString constr
+binder 16326:16326 <> E:167
+R16342:16354 Stdlib.Strings.String <> String constr
+R16360:16372 Stdlib.Strings.String <> String constr
+binder 16390:16390 <> E:168
+R16479:16506 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R16407:16424 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_hex_digits def
+R16427:16445 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii' def
+R16454:16472 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii' def
+R16544:16550 Corelib.Init.Logic <> eq_refl constr
+R16564:16576 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_string def
+R16592:16605 RocqOfSolidity.RocqEvm.Arith.Nibble <> string_forallb def
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16220:16223 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R16215:16217 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16218:16219 RocqOfSolidity.RocqEvm.Arith.Nibble <> s':169 var
+R16240:16257 Stdlib.Strings.String <> EmptyString constr
+R16271:16273 Corelib.Init.Datatypes <> nil constr
+R16284:16296 Stdlib.Strings.String <> String constr
+R16300:16317 Stdlib.Strings.String <> EmptyString constr
+binder 16326:16326 <> E:170
+R16342:16354 Stdlib.Strings.String <> String constr
+R16360:16372 Stdlib.Strings.String <> String constr
+binder 16390:16390 <> E:171
+R16479:16506 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R16407:16424 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_hex_digits def
+R16427:16445 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii' def
+R16454:16472 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii' def
+R16544:16550 Corelib.Init.Logic <> eq_refl constr
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16649:16666 Stdlib.Bool.Bool <> andb_true_iff thm
+R16690:16703 RocqOfSolidity.RocqEvm.Arith.Nibble <> string_forallb def
+R16690:16703 RocqOfSolidity.RocqEvm.Arith.Nibble <> string_forallb def
+R16719:16731 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_string def
+R16742:16759 Stdlib.Bool.Bool <> andb_true_iff thm
+R16742:16759 Stdlib.Bool.Bool <> andb_true_iff thm
+R16742:16759 Stdlib.Bool.Bool <> andb_true_iff thm
+prf 16785:16815 <> ascii_of_hex_digit_is_hex_digit
+R16821:16829 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit ind
+binder 16818:16818 <> h:172
+R16840:16843 Corelib.Init.Datatypes <> bool ind
+binder 16833:16837 <> lower:173
+R16890:16892 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R16849:16860 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_digit def
+R16863:16880 RocqOfSolidity.RocqEvm.Arith.Nibble <> ascii_of_hex_digit def
+R16882:16882 RocqOfSolidity.RocqEvm.Arith.Nibble <> h:172 var
+R16884:16888 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:173 var
+R16893:16896 Corelib.Init.Datatypes <> true constr
+R16913:16924 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_digit def
+R16939:16969 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii_of_hex_digit thm
+R16939:16969 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii_of_hex_digit thm
+R16939:16969 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii_of_hex_digit thm
+prf 16984:17009 <> hex_of_bytes_is_hex_string
+R17015:17018 Corelib.Init.Datatypes <> list ind
+R17020:17023 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 17012:17012 <> b:174
+R17034:17037 Corelib.Init.Datatypes <> bool ind
+binder 17027:17031 <> lower:175
+R17078:17080 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17042:17054 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_string def
+R17057:17068 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_of_bytes def
+R17070:17070 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:174 var
+R17072:17076 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:175 var
+R17081:17084 Corelib.Init.Datatypes <> true constr
+R17101:17113 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_string def
+R17132:17149 Stdlib.Bool.Bool <> andb_true_iff thm
+R17132:17149 Stdlib.Bool.Bool <> andb_true_iff thm
+R17132:17149 Stdlib.Bool.Bool <> andb_true_iff thm
+R17132:17149 Stdlib.Bool.Bool <> andb_true_iff thm
+R17203:17233 RocqOfSolidity.RocqEvm.Arith.Nibble <> ascii_of_hex_digit_is_hex_digit thm
+R17203:17233 RocqOfSolidity.RocqEvm.Arith.Nibble <> ascii_of_hex_digit_is_hex_digit thm
+R17203:17233 RocqOfSolidity.RocqEvm.Arith.Nibble <> ascii_of_hex_digit_is_hex_digit thm
+R17203:17233 RocqOfSolidity.RocqEvm.Arith.Nibble <> ascii_of_hex_digit_is_hex_digit thm
+R17203:17233 RocqOfSolidity.RocqEvm.Arith.Nibble <> ascii_of_hex_digit_is_hex_digit thm
+R17203:17233 RocqOfSolidity.RocqEvm.Arith.Nibble <> ascii_of_hex_digit_is_hex_digit thm
+prf 17270:17290 <> bytes_of_hex_of_bytes
+R17296:17299 Corelib.Init.Datatypes <> list ind
+R17301:17304 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 17293:17293 <> b:176
+R17315:17318 Corelib.Init.Datatypes <> bool ind
+binder 17308:17312 <> lower:177
+R17335:17346 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_of_bytes def
+R17348:17348 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:176 var
+R17350:17354 RocqOfSolidity.RocqEvm.Arith.Nibble <> lower:177 var
+binder 17328:17330 <> hex:178
+R17389:17391 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17372:17384 RocqOfSolidity.RocqEvm.Arith.Nibble <> is_hex_string def
+R17386:17388 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex:178 var
+R17392:17395 Corelib.Init.Datatypes <> true constr
+binder 17368:17369 <> ok:179
+R17421:17423 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R17402:17413 RocqOfSolidity.RocqEvm.Arith.Nibble <> bytes_of_hex def
+R17415:17417 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex:178 var
+R17419:17420 RocqOfSolidity.RocqEvm.Arith.Nibble <> ok:179 var
+R17424:17424 RocqOfSolidity.RocqEvm.Arith.Nibble <> b:176 var
+R17507:17524 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_hex_digits def
+R17544:17575 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii_of_hex_digit' thm
+R17544:17575 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii_of_hex_digit' thm
+R17544:17575 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii_of_hex_digit' thm
+R17544:17575 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii_of_hex_digit' thm
+R17544:17575 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii_of_hex_digit' thm
+R17544:17575 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_digit_of_ascii_of_hex_digit' thm
+R17595:17623 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_hex_digit_of_nibble thm
+R17595:17623 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_hex_digit_of_nibble thm
+R17595:17623 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_hex_digit_of_nibble thm
+R17595:17623 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_hex_digit_of_nibble thm
+R17595:17623 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_hex_digit_of_nibble thm
+R17595:17623 RocqOfSolidity.RocqEvm.Arith.Nibble <> nibble_of_hex_digit_of_nibble thm
+R17634:17651 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_nibbles_ok thm
+R17634:17651 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_nibbles_ok thm

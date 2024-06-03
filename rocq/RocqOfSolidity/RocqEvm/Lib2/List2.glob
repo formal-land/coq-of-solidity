@@ -1,0 +1,96 @@
+DIGEST 15a736638f14d6ce5c40d26d575e506b
+FRocqOfSolidity.RocqEvm.Lib2.List2
+R27:30 Stdlib.Lists.List <> <> lib
+R32:36 Stdlib.Arith.Arith <> <> lib
+prf 76:86 <> skipn_skipn
+binder 89:89 <> A:1
+R96:99 Corelib.Init.Datatypes <> list ind
+R101:101 RocqOfSolidity.RocqEvm.Lib2.List2 <> A:1 var
+binder 93:93 <> l:2
+R110:112 Corelib.Init.Datatypes <> nat ind
+binder 105:105 <> n:3
+binder 107:107 <> m:4
+R137:139 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R118:122 Corelib.Lists.ListDef <> skipn def
+R127:131 Corelib.Lists.ListDef <> skipn def
+R135:135 RocqOfSolidity.RocqEvm.Lib2.List2 <> l:2 var
+R133:133 RocqOfSolidity.RocqEvm.Lib2.List2 <> m:4 var
+R124:124 RocqOfSolidity.RocqEvm.Lib2.List2 <> n:3 var
+R140:144 Corelib.Lists.ListDef <> skipn def
+R154:154 RocqOfSolidity.RocqEvm.Lib2.List2 <> l:2 var
+R148:150 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R147:147 RocqOfSolidity.RocqEvm.Lib2.List2 <> n:3 var
+R151:151 RocqOfSolidity.RocqEvm.Lib2.List2 <> m:4 var
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R219:227 Stdlib.Lists.List <> skipn_nil thm
+R259:269 Stdlib.Arith.PeanoNat Nat add_0_r thm
+R259:269 Stdlib.Arith.PeanoNat Nat add_0_r thm
+R259:269 Stdlib.Arith.PeanoNat Nat add_0_r thm
+R284:286 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R287:287 Corelib.Init.Datatypes <> S constr
+R298:298 Corelib.Init.Datatypes <> S constr
+R302:304 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R284:286 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R287:287 Corelib.Init.Datatypes <> S constr
+R298:298 Corelib.Init.Datatypes <> S constr
+R302:304 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R344:353 Stdlib.Lists.List <> skipn_cons thm
+R344:353 Stdlib.Lists.List <> skipn_cons thm
+R344:353 Stdlib.Lists.List <> skipn_cons thm
+R344:353 Stdlib.Lists.List <> skipn_cons thm
+R344:353 Stdlib.Lists.List <> skipn_cons thm
+R344:353 Stdlib.Lists.List <> skipn_cons thm
+prf 379:390 <> nth_hd_skipn
+binder 393:393 <> A:5
+R400:403 Corelib.Init.Datatypes <> list ind
+R405:405 RocqOfSolidity.RocqEvm.Lib2.List2 <> A:5 var
+binder 397:397 <> l:6
+R412:414 Corelib.Init.Datatypes <> nat ind
+binder 409:409 <> n:7
+R433:435 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R420:428 Stdlib.Lists.List <> nth_error def
+R432:432 RocqOfSolidity.RocqEvm.Lib2.List2 <> n:7 var
+R430:430 RocqOfSolidity.RocqEvm.Lib2.List2 <> l:6 var
+R436:443 Stdlib.Lists.List <> hd_error def
+R446:450 Corelib.Lists.ListDef <> skipn def
+R454:454 RocqOfSolidity.RocqEvm.Lib2.List2 <> l:6 var
+R452:452 RocqOfSolidity.RocqEvm.Lib2.List2 <> n:7 var
+def 532:539 <> list_eqb
+binder 542:542 <> A:8
+R552:555 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R551:551 RocqOfSolidity.RocqEvm.Lib2.List2 <> A:8 var
+R557:560 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R556:556 RocqOfSolidity.RocqEvm.Lib2.List2 <> A:8 var
+R561:564 Corelib.Init.Datatypes <> bool ind
+binder 546:548 <> eqb:9
+R574:577 Corelib.Init.Datatypes <> list ind
+R579:579 RocqOfSolidity.RocqEvm.Lib2.List2 <> A:8 var
+binder 568:568 <> l:10
+binder 570:571 <> l':11
+R584:587 Corelib.Init.Datatypes <> bool ind
+R598:598 RocqOfSolidity.RocqEvm.Lib2.List2 <> l:10 var
+R610:612 Corelib.Init.Datatypes <> nil constr
+R623:624 RocqOfSolidity.RocqEvm.Lib2.List2 <> l':11 var
+R645:647 Corelib.Init.Datatypes <> nil constr
+R652:655 Corelib.Init.Datatypes <> true constr
+R676:680 Corelib.Init.Datatypes <> false constr
+R704:707 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R719:720 RocqOfSolidity.RocqEvm.Lib2.List2 <> l':11 var
+R744:746 Corelib.Init.Datatypes <> nil constr
+R751:755 Corelib.Init.Datatypes <> false constr
+R776:779 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R789:791 RocqOfSolidity.RocqEvm.Lib2.List2 <> eqb:9 var
+R888:892 Corelib.Init.Datatypes <> false constr
+R834:841 RocqOfSolidity.RocqEvm.Lib2.List2 <> list_eqb:12 def
+R843:845 RocqOfSolidity.RocqEvm.Lib2.List2 <> eqb:9 var

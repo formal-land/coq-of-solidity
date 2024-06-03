@@ -1,0 +1,155 @@
+DIGEST aa63030e4451c3d8b5a51df5322b1ead
+FRocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest
+R41:69 RocqOfSolidity.RocqOfSolidity <> <> lib
+R87:112 RocqOfSolidity.simulations.RocqOfSolidity <> <> lib
+R124:206 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.C <> <> lib
+def 221:236 <> constructor_code
+R240:245 RocqOfSolidity.RocqOfSolidity Code t rec
+R252:341 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.C C code def
+def 356:368 <> deployed_code
+R372:377 RocqOfSolidity.RocqOfSolidity Code t rec
+R384:482 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.C C.deployed code def
+def 497:501 <> codes
+R505:508 Corelib.Init.Datatypes <> list ind
+R510:515 RocqOfSolidity.RocqOfSolidity Code t rec
+R522:610 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.C <> codes def
+mod 621:631 <> Constructor
+def 647:657 Constructor environment
+R661:673 RocqOfSolidity.RocqOfSolidity Environment t rec
+R684:701 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R684:701 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R684:701 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R754:774 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R754:774 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R786:805 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R786:805 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R818:836 RocqOfSolidity.RocqOfSolidity Environment address proj
+R818:836 RocqOfSolidity.RocqOfSolidity Environment address proj
+R889:909 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R889:909 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R810:811 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R932:944 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R914:929 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest <> constructor_code def
+def 968:980 Constructor initial_state
+R984:990 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R1027:1045 RocqOfSolidity.RocqOfSolidity Environment address proj
+R1014:1024 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Constructor environment def
+binder 1003:1009 <> address:1
+R1079:1093 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R1079:1093 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R1079:1093 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R1141:1153 RocqOfSolidity.simulations.RocqOfSolidity Account nonce proj
+R1141:1153 RocqOfSolidity.simulations.RocqOfSolidity Account nonce proj
+R1167:1178 RocqOfSolidity.simulations.RocqOfSolidity Account code proj
+R1167:1178 RocqOfSolidity.simulations.RocqOfSolidity Account code proj
+R1223:1238 RocqOfSolidity.simulations.RocqOfSolidity Account codedata proj
+R1223:1238 RocqOfSolidity.simulations.RocqOfSolidity Account codedata proj
+R1280:1294 RocqOfSolidity.simulations.RocqOfSolidity Account storage proj
+R1280:1294 RocqOfSolidity.simulations.RocqOfSolidity Account storage proj
+R1319:1336 RocqOfSolidity.simulations.RocqOfSolidity Account immutables proj
+R1319:1336 RocqOfSolidity.simulations.RocqOfSolidity Account immutables proj
+R1111:1131 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R1098:1108 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Constructor environment def
+R1201:1213 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1183:1198 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest <> constructor_code def
+R1243:1268 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R1299:1310 RocqOfSolidity.simulations.RocqOfSolidity Memory empty def
+R1341:1342 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+binder 1059:1065 <> account:2
+R1369:1372 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1387:1390 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1411:1413 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1373:1386 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R1391:1391 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1410:1410 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1392:1392 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1400:1401 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1409:1409 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1393:1399 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest <> address:1 var
+R1402:1408 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest <> account:2 var
+R1359:1368 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 1430:1441 Constructor result_state
+R1450:1465 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R1472:1476 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest <> codes def
+R1478:1488 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Constructor environment def
+R1508:1516 RocqOfSolidity.RocqOfSolidity Code body proj
+R1490:1505 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest <> constructor_code def
+R1519:1531 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Constructor initial_state def
+def 1548:1553 Constructor result
+R1558:1560 Corelib.Init.Datatypes <> fst def
+R1562:1573 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Constructor result_state def
+def 1589:1593 Constructor state
+R1598:1600 Corelib.Init.Datatypes <> snd def
+R1602:1613 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Constructor result_state def
+def 1619:1709 Constructor Unnamed_thm
+R1651:1653 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1624:1637 RocqOfSolidity.simulations.RocqOfSolidity Test is_return def
+R1639:1644 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Constructor result def
+R1646:1650 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Constructor state def
+R1654:1656 Corelib.Init.Datatypes <> inl constr
+R1659:1678 RocqOfSolidity.simulations.RocqOfSolidity Memory u256_as_bytes def
+R1695:1707 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1680:1692 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest <> deployed_code def
+def 1773:1783 Constructor final_state
+R1787:1793 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R1800:1802 Corelib.Init.Datatypes <> snd def
+R1810:1813 RocqOfSolidity.simulations.RocqOfSolidity <> eval def
+R1901:1905 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Constructor state def
+R1839:1868 RocqOfSolidity.simulations.RocqOfSolidity <> update_current_code_for_deploy def
+R1885:1897 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1870:1882 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest <> deployed_code def
+R1826:1836 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Constructor environment def
+R1820:1824 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest <> codes def
+R1916:1926 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Constructor <> mod
+mod 1981:1985 <> Step1
+def 2001:2011 Step1 environment
+R2015:2027 RocqOfSolidity.RocqOfSolidity Environment t rec
+R2038:2055 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R2038:2055 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R2038:2055 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R2108:2128 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R2108:2128 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R2140:2159 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R2140:2159 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R2207:2225 RocqOfSolidity.RocqOfSolidity Environment address proj
+R2207:2225 RocqOfSolidity.RocqOfSolidity Environment address proj
+R2278:2298 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R2278:2298 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R2164:2189 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R2318:2330 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R2303:2315 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest <> deployed_code def
+def 2354:2366 Step1 initial_state
+R2370:2376 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R2395:2398 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2413:2416 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2457:2459 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2399:2412 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R2442:2455 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R2417:2439 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Constructor final_state def
+R2385:2394 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 2476:2487 Step1 result_state
+R2496:2511 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R2518:2522 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest <> codes def
+R2524:2534 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Step1 environment def
+R2551:2559 RocqOfSolidity.RocqOfSolidity Code body proj
+R2536:2548 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest <> deployed_code def
+R2562:2574 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Step1 initial_state def
+def 2591:2596 Step1 result
+R2601:2603 Corelib.Init.Datatypes <> fst def
+R2605:2616 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Step1 result_state def
+def 2632:2636 Step1 state
+R2641:2643 Corelib.Init.Datatypes <> snd def
+R2645:2656 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Step1 result_state def
+def 2673:2687 Step1 expected_output
+R2691:2694 Corelib.Init.Datatypes <> list ind
+R2696:2696 Corelib.Numbers.BinNums <> Z ind
+R2705:2730 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+def 2739:2817 Step1 Unnamed_thm
+R2796:2798 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2744:2762 RocqOfSolidity.simulations.RocqOfSolidity Test extract_output def
+R2764:2769 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Step1 result def
+R2771:2775 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Step1 state def
+R2777:2795 RocqOfSolidity.simulations.RocqOfSolidity Test.Status Success constr
+R2799:2801 Corelib.Init.Datatypes <> inl constr
+R2803:2817 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Step1 expected_output def
+R2873:2877 RocqOfSolidityTests.semanticTests.cleanup.indexed_log_topic_during_explicit_downcast_during_emissions.GeneratedTest Step1 <> mod

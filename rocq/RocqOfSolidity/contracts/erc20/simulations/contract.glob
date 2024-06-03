@@ -1,0 +1,1168 @@
+DIGEST 528dfe4b39ad1098114cdd866acf26fd
+FRocqOfSolidity.contracts.erc20.simulations.contract
+R15:43 RocqOfSolidity.RocqOfSolidity <> <> lib
+R61:86 RocqOfSolidity.simulations.RocqOfSolidity <> <> lib
+R105:128 RocqOfSolidity.contracts.erc20.contract <> <> lib
+mod 204:210 <> Address
+def 226:226 Address t
+R241:246 RocqOfSolidity.RocqOfSolidity U256 t def
+R253:259 RocqOfSolidity.contracts.erc20.simulations.contract Address <> mod
+mod 270:276 <> Storage
+rec 288:288 Storage t
+proj 299:306 Storage balances
+proj 339:348 Storage allowances
+proj 395:406 Storage total_supply
+R310:315 RocqOfSolidity.simulations.RocqOfSolidity Dict t def
+R317:325 RocqOfSolidity.contracts.erc20.simulations.contract Address t def
+R327:332 RocqOfSolidity.RocqOfSolidity U256 t def
+R352:357 RocqOfSolidity.simulations.RocqOfSolidity Dict t def
+R369:371 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R360:368 RocqOfSolidity.contracts.erc20.simulations.contract Address t def
+R372:380 RocqOfSolidity.contracts.erc20.simulations.contract Address t def
+R383:388 RocqOfSolidity.RocqOfSolidity U256 t def
+R410:415 RocqOfSolidity.RocqOfSolidity U256 t def
+def 437:440 Storage init
+R444:444 RocqOfSolidity.contracts.erc20.simulations.contract Storage t rec
+R456:463 RocqOfSolidity.contracts.erc20.simulations.contract Storage balances proj
+R456:463 RocqOfSolidity.contracts.erc20.simulations.contract Storage balances proj
+R456:463 RocqOfSolidity.contracts.erc20.simulations.contract Storage balances proj
+R476:485 RocqOfSolidity.contracts.erc20.simulations.contract Storage allowances proj
+R476:485 RocqOfSolidity.contracts.erc20.simulations.contract Storage allowances proj
+R498:509 RocqOfSolidity.contracts.erc20.simulations.contract Storage total_supply proj
+R498:509 RocqOfSolidity.contracts.erc20.simulations.contract Storage total_supply proj
+R468:469 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R490:491 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R527:533 RocqOfSolidity.contracts.erc20.simulations.contract Storage <> mod
+mod 544:549 <> Result
+ind 564:564 Result t
+constr 589:595 Result Success
+constr 613:618 Result Revert
+binder 567:567 <> A:5
+R606:606 RocqOfSolidity.contracts.erc20.simulations.contract <> A:5 var
+binder 598:602 <> value:8
+R627:632 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 621:621 <> p:9
+binder 623:623 <> s:10
+scheme 564:564 Result t_rect
+scheme 564:564 Result t_ind
+scheme 564:564 Result t_rec
+scheme 564:564 Result t_sind
+R648:654 RocqOfSolidity.contracts.erc20.simulations.contract Result Success constr
+R648:654 RocqOfSolidity.contracts.erc20.simulations.contract Result Success constr
+R673:678 RocqOfSolidity.contracts.erc20.simulations.contract Result Revert constr
+R673:678 RocqOfSolidity.contracts.erc20.simulations.contract Result Revert constr
+R689:694 RocqOfSolidity.contracts.erc20.simulations.contract Result <> mod
+def 709:719 <> constructor
+R731:739 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 722:727 <> sender:11
+R744:752 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R766:781 RocqOfSolidity.contracts.erc20.simulations.contract <> balances proj
+R766:781 RocqOfSolidity.contracts.erc20.simulations.contract <> balances proj
+R766:781 RocqOfSolidity.contracts.erc20.simulations.contract <> balances proj
+R806:823 RocqOfSolidity.contracts.erc20.simulations.contract <> allowances proj
+R806:823 RocqOfSolidity.contracts.erc20.simulations.contract <> allowances proj
+R836:855 RocqOfSolidity.contracts.erc20.simulations.contract <> total_supply proj
+R836:855 RocqOfSolidity.contracts.erc20.simulations.contract <> total_supply proj
+R786:786 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R799:799 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R787:787 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R794:795 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R798:798 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R788:793 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:11 var
+R828:829 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+def 882:892 <> totalSupply
+R899:907 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 895:895 <> s:12
+R912:917 RocqOfSolidity.RocqOfSolidity U256 t def
+R927:946 RocqOfSolidity.contracts.erc20.simulations.contract <> total_supply proj
+R924:924 RocqOfSolidity.contracts.erc20.simulations.contract <> s:12 var
+def 962:970 <> balanceOf
+R977:985 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 973:973 <> s:13
+R997:1005 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 989:993 <> owner:14
+R1010:1015 RocqOfSolidity.RocqOfSolidity U256 t def
+R1028:1035 RocqOfSolidity.simulations.RocqOfSolidity Dict get def
+R1058:1062 RocqOfSolidity.contracts.erc20.simulations.contract <> owner:14 var
+R1040:1055 RocqOfSolidity.contracts.erc20.simulations.contract <> balances proj
+R1037:1037 RocqOfSolidity.contracts.erc20.simulations.contract <> s:13 var
+R1073:1076 Corelib.Init.Datatypes <> Some constr
+R1101:1104 Corelib.Init.Datatypes <> None constr
+def 1130:1141 <> getAllowance
+R1148:1156 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 1144:1144 <> s:15
+R1176:1184 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 1160:1164 <> owner:16
+binder 1166:1172 <> spender:17
+R1189:1194 RocqOfSolidity.RocqOfSolidity U256 t def
+R1207:1214 RocqOfSolidity.simulations.RocqOfSolidity Dict get def
+R1239:1239 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1245:1246 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1254:1254 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1240:1244 RocqOfSolidity.contracts.erc20.simulations.contract <> owner:16 var
+R1247:1253 RocqOfSolidity.contracts.erc20.simulations.contract <> spender:17 var
+R1219:1236 RocqOfSolidity.contracts.erc20.simulations.contract <> allowances proj
+R1216:1216 RocqOfSolidity.contracts.erc20.simulations.contract <> s:15 var
+R1265:1268 Corelib.Init.Datatypes <> Some constr
+R1297:1300 Corelib.Init.Datatypes <> None constr
+def 1326:1344 <> revert_address_null
+binder 1347:1347 <> A:18
+R1358:1365 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R1367:1367 RocqOfSolidity.contracts.erc20.simulations.contract <> A:18 var
+R1374:1386 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+def 1409:1425 <> revert_arithmetic
+binder 1428:1428 <> A:19
+R1439:1446 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R1448:1448 RocqOfSolidity.contracts.erc20.simulations.contract <> A:19 var
+R1455:1467 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+def 1487:1495 <> _transfer
+R1508:1516 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 1498:1501 <> from:20
+binder 1503:1504 <> to:21
+R1528:1533 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 1520:1524 <> value:22
+R1541:1549 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 1537:1537 <> s:23
+R1554:1561 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R1563:1571 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R1583:1586 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R1581:1582 RocqOfSolidity.contracts.erc20.simulations.contract <> to:21 var
+R1644:1647 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R1628:1636 RocqOfSolidity.contracts.erc20.simulations.contract <> balanceOf def
+R1638:1638 RocqOfSolidity.contracts.erc20.simulations.contract <> s:23 var
+R1640:1643 RocqOfSolidity.contracts.erc20.simulations.contract <> from:20 var
+R1648:1652 RocqOfSolidity.contracts.erc20.simulations.contract <> value:22 var
+R1708:1711 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1728:1739 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1815:1823 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1712:1727 RocqOfSolidity.contracts.erc20.simulations.contract <> balances proj
+R1740:1761 RocqOfSolidity.simulations.RocqOfSolidity Dict declare_or_assign def
+R1806:1808 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R1790:1798 RocqOfSolidity.contracts.erc20.simulations.contract <> balanceOf def
+R1800:1800 RocqOfSolidity.contracts.erc20.simulations.contract <> s:23 var
+R1802:1805 RocqOfSolidity.contracts.erc20.simulations.contract <> from:20 var
+R1809:1813 RocqOfSolidity.contracts.erc20.simulations.contract <> value:22 var
+R1784:1787 RocqOfSolidity.contracts.erc20.simulations.contract <> from:20 var
+R1766:1781 RocqOfSolidity.contracts.erc20.simulations.contract <> balances proj
+R1763:1763 RocqOfSolidity.contracts.erc20.simulations.contract <> s:23 var
+R1707:1707 RocqOfSolidity.contracts.erc20.simulations.contract <> s:23 var
+binder 1696:1696 <> s:24
+R1857:1861 Stdlib.ZArith.BinInt <> ::Z_scope:x_'>=?'_x not
+R1849:1851 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R1835:1843 RocqOfSolidity.contracts.erc20.simulations.contract <> balanceOf def
+R1845:1845 RocqOfSolidity.contracts.erc20.simulations.contract <> s:24 var
+R1847:1848 RocqOfSolidity.contracts.erc20.simulations.contract <> to:21 var
+R1852:1856 RocqOfSolidity.contracts.erc20.simulations.contract <> value:22 var
+R1863:1865 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R1914:1927 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R1930:1933 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1950:1961 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2033:2041 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1934:1949 RocqOfSolidity.contracts.erc20.simulations.contract <> balances proj
+R1962:1983 RocqOfSolidity.simulations.RocqOfSolidity Dict declare_or_assign def
+R2024:2026 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R2010:2018 RocqOfSolidity.contracts.erc20.simulations.contract <> balanceOf def
+R2020:2020 RocqOfSolidity.contracts.erc20.simulations.contract <> s:24 var
+R2022:2023 RocqOfSolidity.contracts.erc20.simulations.contract <> to:21 var
+R2027:2031 RocqOfSolidity.contracts.erc20.simulations.contract <> value:22 var
+R2006:2007 RocqOfSolidity.contracts.erc20.simulations.contract <> to:21 var
+R1988:2003 RocqOfSolidity.contracts.erc20.simulations.contract <> balances proj
+R1985:1985 RocqOfSolidity.contracts.erc20.simulations.contract <> s:24 var
+R1929:1929 RocqOfSolidity.contracts.erc20.simulations.contract <> s:24 var
+R1881:1897 RocqOfSolidity.contracts.erc20.simulations.contract <> revert_arithmetic def
+R1663:1679 RocqOfSolidity.contracts.erc20.simulations.contract <> revert_arithmetic def
+R1598:1616 RocqOfSolidity.contracts.erc20.simulations.contract <> revert_address_null def
+def 2056:2060 <> _mint
+R2073:2081 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 2063:2069 <> account:25
+R2093:2098 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 2085:2089 <> value:26
+R2106:2114 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 2102:2102 <> s:27
+R2119:2124 Corelib.Init.Datatypes <> option ind
+R2126:2134 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R2151:2154 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R2144:2150 RocqOfSolidity.contracts.erc20.simulations.contract <> account:25 var
+R2217:2221 Stdlib.ZArith.BinInt <> ::Z_scope:x_'>=?'_x not
+R2209:2211 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R2188:2207 RocqOfSolidity.contracts.erc20.simulations.contract <> total_supply proj
+R2185:2185 RocqOfSolidity.contracts.erc20.simulations.contract <> s:27 var
+R2212:2216 RocqOfSolidity.contracts.erc20.simulations.contract <> value:26 var
+R2223:2225 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R2271:2274 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2295:2298 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2331:2333 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2275:2294 RocqOfSolidity.contracts.erc20.simulations.contract <> total_supply proj
+R2323:2325 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R2302:2321 RocqOfSolidity.contracts.erc20.simulations.contract <> total_supply proj
+R2299:2299 RocqOfSolidity.contracts.erc20.simulations.contract <> s:27 var
+R2326:2330 RocqOfSolidity.contracts.erc20.simulations.contract <> value:26 var
+R2270:2270 RocqOfSolidity.contracts.erc20.simulations.contract <> s:27 var
+binder 2265:2265 <> s:28
+R2374:2378 Stdlib.ZArith.BinInt <> ::Z_scope:x_'>=?'_x not
+R2366:2368 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R2347:2355 RocqOfSolidity.contracts.erc20.simulations.contract <> balanceOf def
+R2357:2357 RocqOfSolidity.contracts.erc20.simulations.contract <> s:28 var
+R2359:2365 RocqOfSolidity.contracts.erc20.simulations.contract <> account:25 var
+R2369:2373 RocqOfSolidity.contracts.erc20.simulations.contract <> value:26 var
+R2380:2382 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R2424:2427 Corelib.Init.Datatypes <> Some constr
+R2430:2433 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2450:2463 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2545:2555 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2434:2449 RocqOfSolidity.contracts.erc20.simulations.contract <> balances proj
+R2464:2485 RocqOfSolidity.simulations.RocqOfSolidity Dict declare_or_assign def
+R2536:2538 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R2517:2525 RocqOfSolidity.contracts.erc20.simulations.contract <> balanceOf def
+R2527:2527 RocqOfSolidity.contracts.erc20.simulations.contract <> s:28 var
+R2529:2535 RocqOfSolidity.contracts.erc20.simulations.contract <> account:25 var
+R2539:2543 RocqOfSolidity.contracts.erc20.simulations.contract <> value:26 var
+R2508:2514 RocqOfSolidity.contracts.erc20.simulations.contract <> account:25 var
+R2490:2505 RocqOfSolidity.contracts.erc20.simulations.contract <> balances proj
+R2487:2487 RocqOfSolidity.contracts.erc20.simulations.contract <> s:28 var
+R2429:2429 RocqOfSolidity.contracts.erc20.simulations.contract <> s:28 var
+R2400:2403 Corelib.Init.Datatypes <> None constr
+R2241:2244 Corelib.Init.Datatypes <> None constr
+R2166:2169 Corelib.Init.Datatypes <> None constr
+def 2570:2574 <> _burn
+R2587:2595 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 2577:2583 <> account:29
+R2607:2612 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 2599:2603 <> value:30
+R2620:2628 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 2616:2616 <> s:31
+R2633:2640 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R2642:2650 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R2667:2670 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R2660:2666 RocqOfSolidity.contracts.erc20.simulations.contract <> account:29 var
+R2717:2721 Stdlib.ZArith.BinInt <> ::Z_scope:x_'>=?'_x not
+R2712:2716 RocqOfSolidity.contracts.erc20.simulations.contract <> value:30 var
+R2725:2744 RocqOfSolidity.contracts.erc20.simulations.contract <> total_supply proj
+R2722:2722 RocqOfSolidity.contracts.erc20.simulations.contract <> s:31 var
+R2795:2798 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2819:2822 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2855:2857 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2799:2818 RocqOfSolidity.contracts.erc20.simulations.contract <> total_supply proj
+R2847:2849 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R2826:2845 RocqOfSolidity.contracts.erc20.simulations.contract <> total_supply proj
+R2823:2823 RocqOfSolidity.contracts.erc20.simulations.contract <> s:31 var
+R2850:2854 RocqOfSolidity.contracts.erc20.simulations.contract <> value:30 var
+R2794:2794 RocqOfSolidity.contracts.erc20.simulations.contract <> s:31 var
+binder 2789:2789 <> s:32
+R2888:2891 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R2869:2877 RocqOfSolidity.contracts.erc20.simulations.contract <> balanceOf def
+R2879:2879 RocqOfSolidity.contracts.erc20.simulations.contract <> s:32 var
+R2881:2887 RocqOfSolidity.contracts.erc20.simulations.contract <> account:29 var
+R2892:2896 RocqOfSolidity.contracts.erc20.simulations.contract <> value:30 var
+R2942:2955 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R2958:2961 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2978:2989 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3071:3079 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2962:2977 RocqOfSolidity.contracts.erc20.simulations.contract <> balances proj
+R2990:3011 RocqOfSolidity.simulations.RocqOfSolidity Dict declare_or_assign def
+R3062:3064 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R3043:3051 RocqOfSolidity.contracts.erc20.simulations.contract <> balanceOf def
+R3053:3053 RocqOfSolidity.contracts.erc20.simulations.contract <> s:32 var
+R3055:3061 RocqOfSolidity.contracts.erc20.simulations.contract <> account:29 var
+R3065:3069 RocqOfSolidity.contracts.erc20.simulations.contract <> value:30 var
+R3034:3040 RocqOfSolidity.contracts.erc20.simulations.contract <> account:29 var
+R3016:3031 RocqOfSolidity.contracts.erc20.simulations.contract <> balances proj
+R3013:3013 RocqOfSolidity.contracts.erc20.simulations.contract <> s:32 var
+R2957:2957 RocqOfSolidity.contracts.erc20.simulations.contract <> s:32 var
+R2909:2925 RocqOfSolidity.contracts.erc20.simulations.contract <> revert_arithmetic def
+R2756:2772 RocqOfSolidity.contracts.erc20.simulations.contract <> revert_arithmetic def
+R2682:2700 RocqOfSolidity.contracts.erc20.simulations.contract <> revert_address_null def
+def 3094:3101 <> _approve
+R3120:3128 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 3104:3108 <> owner:33
+binder 3110:3116 <> spender:34
+R3140:3145 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3132:3136 <> value:35
+R3153:3161 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 3149:3149 <> s:36
+R3166:3173 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R3175:3183 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R3193:3193 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R3204:3209 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R3222:3222 Corelib.Init.Datatypes <> ::bool_scope:x_'||'_x not
+R3199:3202 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R3194:3198 RocqOfSolidity.contracts.erc20.simulations.contract <> owner:33 var
+R3217:3220 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R3210:3216 RocqOfSolidity.contracts.erc20.simulations.contract <> spender:34 var
+R3264:3277 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R3280:3283 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3302:3311 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3380:3386 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3284:3301 RocqOfSolidity.contracts.erc20.simulations.contract <> allowances proj
+R3312:3333 RocqOfSolidity.simulations.RocqOfSolidity Dict declare_or_assign def
+R3375:3379 RocqOfSolidity.contracts.erc20.simulations.contract <> value:35 var
+R3358:3358 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3364:3365 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3373:3373 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3359:3363 RocqOfSolidity.contracts.erc20.simulations.contract <> owner:33 var
+R3366:3372 RocqOfSolidity.contracts.erc20.simulations.contract <> spender:34 var
+R3338:3355 RocqOfSolidity.contracts.erc20.simulations.contract <> allowances proj
+R3335:3335 RocqOfSolidity.contracts.erc20.simulations.contract <> s:36 var
+R3279:3279 RocqOfSolidity.contracts.erc20.simulations.contract <> s:36 var
+R3233:3251 RocqOfSolidity.contracts.erc20.simulations.contract <> revert_address_null def
+def 3401:3409 <> _burnFrom
+R3421:3429 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 3412:3417 <> sender:37
+R3443:3451 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 3433:3439 <> account:38
+R3463:3468 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3455:3459 <> value:39
+R3476:3484 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 3472:3472 <> s:40
+R3493:3500 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R3502:3510 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R3523:3527 RocqOfSolidity.contracts.erc20.simulations.contract <> _burn def
+R3529:3535 RocqOfSolidity.contracts.erc20.simulations.contract <> account:38 var
+R3537:3541 RocqOfSolidity.contracts.erc20.simulations.contract <> value:39 var
+R3543:3543 RocqOfSolidity.contracts.erc20.simulations.contract <> s:40 var
+R3554:3566 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R3575:3587 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R3591:3591 RocqOfSolidity.contracts.erc20.simulations.contract <> s:40 var
+R3597:3610 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R3638:3649 RocqOfSolidity.contracts.erc20.simulations.contract <> getAllowance def
+R3651:3651 RocqOfSolidity.contracts.erc20.simulations.contract <> s:40 var
+R3653:3659 RocqOfSolidity.contracts.erc20.simulations.contract <> account:38 var
+R3661:3666 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:37 var
+binder 3625:3633 <> allowance:41
+R3687:3690 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R3678:3686 RocqOfSolidity.contracts.erc20.simulations.contract <> allowance:41 var
+R3691:3695 RocqOfSolidity.contracts.erc20.simulations.contract <> value:39 var
+R3741:3748 RocqOfSolidity.contracts.erc20.simulations.contract <> _approve def
+R3750:3756 RocqOfSolidity.contracts.erc20.simulations.contract <> account:38 var
+R3758:3763 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:37 var
+R3775:3777 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R3766:3774 RocqOfSolidity.contracts.erc20.simulations.contract <> allowance:41 var
+R3778:3782 RocqOfSolidity.contracts.erc20.simulations.contract <> value:39 var
+R3785:3785 RocqOfSolidity.contracts.erc20.simulations.contract <> s:40 var
+R3708:3724 RocqOfSolidity.contracts.erc20.simulations.contract <> revert_arithmetic def
+def 3806:3813 <> transfer
+R3825:3830 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3816:3821 <> sender:42
+R3838:3846 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 3834:3834 <> s:43
+R3855:3863 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 3850:3851 <> to:44
+R3875:3880 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3867:3871 <> value:45
+R3889:3896 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R3903:3905 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R3899:3902 Corelib.Init.Datatypes <> bool ind
+R3906:3914 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R3931:3939 RocqOfSolidity.contracts.erc20.simulations.contract <> _transfer def
+R3941:3946 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:42 var
+R3948:3949 RocqOfSolidity.contracts.erc20.simulations.contract <> to:44 var
+R3951:3955 RocqOfSolidity.contracts.erc20.simulations.contract <> value:45 var
+R3957:3957 RocqOfSolidity.contracts.erc20.simulations.contract <> s:43 var
+binder 3926:3926 <> s:46
+R3970:3970 RocqOfSolidity.contracts.erc20.simulations.contract <> s:46 var
+R3981:3994 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R4001:4014 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R4016:4016 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4021:4022 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4024:4024 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4017:4020 Corelib.Init.Datatypes <> true constr
+R4023:4023 RocqOfSolidity.contracts.erc20.simulations.contract <> s:46 var
+R4030:4042 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R4051:4063 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R4067:4067 RocqOfSolidity.contracts.erc20.simulations.contract <> s:46 var
+def 4088:4094 <> approve
+R4106:4111 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4097:4102 <> sender:48
+R4119:4127 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 4115:4115 <> s:49
+R4141:4149 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 4131:4137 <> spender:50
+R4161:4166 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4153:4157 <> value:51
+R4175:4182 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R4189:4191 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R4185:4188 Corelib.Init.Datatypes <> bool ind
+R4192:4200 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R4217:4224 RocqOfSolidity.contracts.erc20.simulations.contract <> _approve def
+R4226:4231 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:48 var
+R4233:4239 RocqOfSolidity.contracts.erc20.simulations.contract <> spender:50 var
+R4241:4245 RocqOfSolidity.contracts.erc20.simulations.contract <> value:51 var
+R4247:4247 RocqOfSolidity.contracts.erc20.simulations.contract <> s:49 var
+binder 4212:4212 <> s:52
+R4260:4260 RocqOfSolidity.contracts.erc20.simulations.contract <> s:52 var
+R4271:4284 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R4291:4304 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R4306:4306 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4311:4312 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4314:4314 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4307:4310 Corelib.Init.Datatypes <> true constr
+R4313:4313 RocqOfSolidity.contracts.erc20.simulations.contract <> s:52 var
+R4320:4332 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R4341:4353 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R4357:4357 RocqOfSolidity.contracts.erc20.simulations.contract <> s:52 var
+def 4378:4389 <> transferFrom
+R4401:4406 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4392:4397 <> sender:54
+R4420:4428 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 4410:4413 <> from:55
+binder 4415:4416 <> to:56
+R4440:4445 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4432:4436 <> value:57
+R4453:4461 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 4449:4449 <> s:58
+R4470:4477 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R4484:4486 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R4480:4483 Corelib.Init.Datatypes <> bool ind
+R4487:4495 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R4512:4520 RocqOfSolidity.contracts.erc20.simulations.contract <> _transfer def
+R4522:4525 RocqOfSolidity.contracts.erc20.simulations.contract <> from:55 var
+R4527:4528 RocqOfSolidity.contracts.erc20.simulations.contract <> to:56 var
+R4530:4534 RocqOfSolidity.contracts.erc20.simulations.contract <> value:57 var
+R4536:4536 RocqOfSolidity.contracts.erc20.simulations.contract <> s:58 var
+binder 4507:4507 <> s:59
+R4549:4549 RocqOfSolidity.contracts.erc20.simulations.contract <> s:59 var
+R4560:4572 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R4581:4593 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R4597:4597 RocqOfSolidity.contracts.erc20.simulations.contract <> s:59 var
+R4603:4616 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R4656:4659 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R4630:4641 RocqOfSolidity.contracts.erc20.simulations.contract <> getAllowance def
+R4643:4643 RocqOfSolidity.contracts.erc20.simulations.contract <> s:59 var
+R4645:4648 RocqOfSolidity.contracts.erc20.simulations.contract <> from:55 var
+R4650:4655 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:54 var
+R4660:4664 RocqOfSolidity.contracts.erc20.simulations.contract <> value:57 var
+R4719:4726 RocqOfSolidity.contracts.erc20.simulations.contract <> _approve def
+R4728:4731 RocqOfSolidity.contracts.erc20.simulations.contract <> from:55 var
+R4733:4738 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:54 var
+R4767:4769 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R4741:4752 RocqOfSolidity.contracts.erc20.simulations.contract <> getAllowance def
+R4754:4754 RocqOfSolidity.contracts.erc20.simulations.contract <> s:59 var
+R4756:4759 RocqOfSolidity.contracts.erc20.simulations.contract <> from:55 var
+R4761:4766 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:54 var
+R4770:4774 RocqOfSolidity.contracts.erc20.simulations.contract <> value:57 var
+R4777:4777 RocqOfSolidity.contracts.erc20.simulations.contract <> s:59 var
+binder 4714:4714 <> s:61
+R4794:4794 RocqOfSolidity.contracts.erc20.simulations.contract <> s:61 var
+R4809:4821 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R4830:4842 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R4846:4846 RocqOfSolidity.contracts.erc20.simulations.contract <> s:61 var
+R4856:4869 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R4876:4889 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R4891:4891 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4896:4897 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4899:4899 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R4892:4895 Corelib.Init.Datatypes <> true constr
+R4898:4898 RocqOfSolidity.contracts.erc20.simulations.contract <> s:61 var
+R4677:4693 RocqOfSolidity.contracts.erc20.simulations.contract <> revert_arithmetic def
+def 4930:4946 <> increaseAllowance
+R4958:4963 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4949:4954 <> sender:63
+R4977:4985 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 4967:4973 <> spender:64
+R5002:5007 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4989:4998 <> addedValue:65
+R5019:5027 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 5015:5015 <> s:66
+R5032:5039 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R5046:5048 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R5042:5045 Corelib.Init.Datatypes <> bool ind
+R5049:5057 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R5110:5114 Stdlib.ZArith.BinInt <> ::Z_scope:x_'>=?'_x not
+R5097:5099 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R5068:5079 RocqOfSolidity.contracts.erc20.simulations.contract <> getAllowance def
+R5081:5081 RocqOfSolidity.contracts.erc20.simulations.contract <> s:66 var
+R5083:5088 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:63 var
+R5090:5096 RocqOfSolidity.contracts.erc20.simulations.contract <> spender:64 var
+R5100:5109 RocqOfSolidity.contracts.erc20.simulations.contract <> addedValue:65 var
+R5116:5118 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R5170:5177 RocqOfSolidity.contracts.erc20.simulations.contract <> _approve def
+R5179:5184 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:63 var
+R5186:5192 RocqOfSolidity.contracts.erc20.simulations.contract <> spender:64 var
+R5224:5226 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R5195:5206 RocqOfSolidity.contracts.erc20.simulations.contract <> getAllowance def
+R5208:5208 RocqOfSolidity.contracts.erc20.simulations.contract <> s:66 var
+R5210:5215 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:63 var
+R5217:5223 RocqOfSolidity.contracts.erc20.simulations.contract <> spender:64 var
+R5227:5236 RocqOfSolidity.contracts.erc20.simulations.contract <> addedValue:65 var
+R5239:5239 RocqOfSolidity.contracts.erc20.simulations.contract <> s:66 var
+binder 5165:5165 <> s:67
+R5254:5254 RocqOfSolidity.contracts.erc20.simulations.contract <> s:67 var
+R5267:5280 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R5287:5300 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R5302:5302 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5307:5308 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5310:5310 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5303:5306 Corelib.Init.Datatypes <> true constr
+R5309:5309 RocqOfSolidity.contracts.erc20.simulations.contract <> s:67 var
+R5318:5330 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R5339:5351 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R5355:5355 RocqOfSolidity.contracts.erc20.simulations.contract <> s:67 var
+R5132:5148 RocqOfSolidity.contracts.erc20.simulations.contract <> revert_arithmetic def
+def 5378:5394 <> decreaseAllowance
+R5406:5411 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 5397:5402 <> sender:69
+R5425:5433 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 5415:5421 <> spender:70
+R5455:5460 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 5437:5451 <> subtractedValue:71
+R5472:5480 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 5468:5468 <> s:72
+R5485:5492 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R5499:5501 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R5495:5498 Corelib.Init.Datatypes <> bool ind
+R5502:5510 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R5550:5553 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R5521:5532 RocqOfSolidity.contracts.erc20.simulations.contract <> getAllowance def
+R5534:5534 RocqOfSolidity.contracts.erc20.simulations.contract <> s:72 var
+R5536:5541 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:69 var
+R5543:5549 RocqOfSolidity.contracts.erc20.simulations.contract <> spender:70 var
+R5554:5568 RocqOfSolidity.contracts.erc20.simulations.contract <> subtractedValue:71 var
+R5617:5624 RocqOfSolidity.contracts.erc20.simulations.contract <> _approve def
+R5626:5631 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:69 var
+R5633:5639 RocqOfSolidity.contracts.erc20.simulations.contract <> spender:70 var
+R5671:5673 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R5642:5653 RocqOfSolidity.contracts.erc20.simulations.contract <> getAllowance def
+R5655:5655 RocqOfSolidity.contracts.erc20.simulations.contract <> s:72 var
+R5657:5662 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:69 var
+R5664:5670 RocqOfSolidity.contracts.erc20.simulations.contract <> spender:70 var
+R5674:5688 RocqOfSolidity.contracts.erc20.simulations.contract <> subtractedValue:71 var
+R5691:5691 RocqOfSolidity.contracts.erc20.simulations.contract <> s:72 var
+binder 5612:5612 <> s:73
+R5706:5706 RocqOfSolidity.contracts.erc20.simulations.contract <> s:73 var
+R5719:5732 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R5739:5752 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R5754:5754 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5759:5760 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5762:5762 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5755:5758 Corelib.Init.Datatypes <> true constr
+R5761:5761 RocqOfSolidity.contracts.erc20.simulations.contract <> s:73 var
+R5770:5782 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R5791:5803 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R5807:5807 RocqOfSolidity.contracts.erc20.simulations.contract <> s:73 var
+R5579:5595 RocqOfSolidity.contracts.erc20.simulations.contract <> revert_arithmetic def
+mod 5826:5832 <> Payload
+ind 5847:5847 Payload t
+constr 5862:5869 Payload Transfer
+constr 5907:5913 Payload Approve
+constr 5956:5967 Payload TransferFrom
+constr 6023:6039 Payload IncreaseAllowance
+constr 6087:6103 Payload DecreaseAllowance
+constr 6156:6166 Payload TotalSupply
+constr 6172:6180 Payload BalanceOf
+constr 6205:6213 Payload Allowance
+R5876:5884 RocqOfSolidity.contracts.erc20.simulations.contract Address t def
+binder 5872:5873 <> to:77
+R5895:5900 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 5888:5892 <> value:78
+R5925:5933 RocqOfSolidity.contracts.erc20.simulations.contract Address t def
+binder 5916:5922 <> spender:79
+R5944:5949 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 5937:5941 <> value:80
+R5976:5984 RocqOfSolidity.contracts.erc20.simulations.contract Address t def
+binder 5970:5973 <> from:81
+R5992:6000 RocqOfSolidity.contracts.erc20.simulations.contract Address t def
+binder 5988:5989 <> to:82
+R6011:6016 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 6004:6008 <> value:83
+R6051:6059 RocqOfSolidity.contracts.erc20.simulations.contract Address t def
+binder 6042:6048 <> spender:84
+R6075:6080 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 6063:6072 <> addedValue:85
+R6115:6123 RocqOfSolidity.contracts.erc20.simulations.contract Address t def
+binder 6106:6112 <> spender:86
+R6144:6149 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 6127:6141 <> subtractedValue:87
+R6190:6198 RocqOfSolidity.contracts.erc20.simulations.contract Address t def
+binder 6183:6187 <> owner:88
+R6223:6231 RocqOfSolidity.contracts.erc20.simulations.contract Address t def
+binder 6216:6220 <> owner:89
+R6244:6252 RocqOfSolidity.contracts.erc20.simulations.contract Address t def
+binder 6235:6241 <> spender:90
+scheme 5847:5847 Payload t_rect
+scheme 5847:5847 Payload t_ind
+scheme 5847:5847 Payload t_rec
+scheme 5847:5847 Payload t_sind
+def 6270:6280 Payload to_calldata
+R6292:6292 RocqOfSolidity.contracts.erc20.simulations.contract Payload t ind
+binder 6283:6289 <> payload:91
+R6298:6300 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R6297:6297 Corelib.Numbers.BinNums <> Z ind
+R6301:6304 Corelib.Init.Datatypes <> list ind
+R6306:6311 RocqOfSolidity.RocqOfSolidity U256 t def
+R6326:6332 RocqOfSolidity.contracts.erc20.simulations.contract <> payload:91 var
+R6345:6352 RocqOfSolidity.contracts.erc20.simulations.contract Payload Transfer constr
+R6372:6372 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6383:6384 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6396:6396 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6385:6385 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6388:6389 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6395:6395 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6404:6410 RocqOfSolidity.contracts.erc20.simulations.contract Payload Approve constr
+R6435:6435 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6446:6447 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6464:6464 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6448:6448 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6456:6457 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6463:6463 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6472:6483 RocqOfSolidity.contracts.erc20.simulations.contract Payload TransferFrom constr
+R6508:6508 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6519:6520 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6538:6538 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6521:6521 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6526:6527 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6530:6531 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6537:6537 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6546:6562 RocqOfSolidity.contracts.erc20.simulations.contract Payload IncreaseAllowance constr
+R6592:6592 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6603:6604 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6626:6626 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6605:6605 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6613:6614 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6625:6625 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6634:6650 RocqOfSolidity.contracts.erc20.simulations.contract Payload DecreaseAllowance constr
+R6685:6685 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6696:6697 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6724:6724 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6698:6698 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6706:6707 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6723:6723 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6732:6742 RocqOfSolidity.contracts.erc20.simulations.contract Payload TotalSupply constr
+R6753:6753 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6764:6765 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6768:6768 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6766:6767 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R6776:6784 RocqOfSolidity.contracts.erc20.simulations.contract Payload BalanceOf constr
+R6801:6801 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6812:6813 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6821:6821 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6814:6814 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R6820:6820 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R6829:6837 RocqOfSolidity.contracts.erc20.simulations.contract Payload Allowance constr
+R6862:6862 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6873:6874 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6891:6891 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R6875:6875 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6881:6882 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R6890:6890 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+def 6916:6929 Payload get_return_Set
+R6942:6942 RocqOfSolidity.contracts.erc20.simulations.contract Payload t ind
+binder 6932:6938 <> payload:93
+R6964:6970 RocqOfSolidity.contracts.erc20.simulations.contract <> payload:93 var
+R6983:6990 RocqOfSolidity.contracts.erc20.simulations.contract Payload Transfer constr
+R6999:7002 Corelib.Init.Datatypes <> bool ind
+R7010:7016 RocqOfSolidity.contracts.erc20.simulations.contract Payload Approve constr
+R7025:7028 Corelib.Init.Datatypes <> bool ind
+R7036:7047 RocqOfSolidity.contracts.erc20.simulations.contract Payload TransferFrom constr
+R7058:7061 Corelib.Init.Datatypes <> bool ind
+R7069:7085 RocqOfSolidity.contracts.erc20.simulations.contract Payload IncreaseAllowance constr
+R7094:7097 Corelib.Init.Datatypes <> bool ind
+R7105:7121 RocqOfSolidity.contracts.erc20.simulations.contract Payload DecreaseAllowance constr
+R7130:7133 Corelib.Init.Datatypes <> bool ind
+R7141:7151 RocqOfSolidity.contracts.erc20.simulations.contract Payload TotalSupply constr
+R7156:7161 RocqOfSolidity.RocqOfSolidity U256 t def
+R7169:7177 RocqOfSolidity.contracts.erc20.simulations.contract Payload BalanceOf constr
+R7184:7189 RocqOfSolidity.RocqOfSolidity U256 t def
+R7197:7205 RocqOfSolidity.contracts.erc20.simulations.contract Payload Allowance constr
+R7214:7219 RocqOfSolidity.RocqOfSolidity U256 t def
+def 7244:7259 Payload serialize_return
+R7272:7272 RocqOfSolidity.contracts.erc20.simulations.contract Payload t ind
+binder 7262:7268 <> payload:95
+R7284:7297 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_return_Set def
+R7299:7305 RocqOfSolidity.contracts.erc20.simulations.contract <> payload:95 var
+binder 7276:7280 <> value:96
+R7310:7313 Corelib.Init.Datatypes <> list ind
+R7315:7320 RocqOfSolidity.RocqOfSolidity U256 t def
+R7344:7348 RocqOfSolidity.contracts.erc20.simulations.contract <> value:96 var
+R7335:7341 RocqOfSolidity.contracts.erc20.simulations.contract <> payload:95 var
+R7361:7368 RocqOfSolidity.contracts.erc20.simulations.contract Payload Transfer constr
+R7380:7380 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7395:7395 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7381:7392 RocqOfSolidity.RocqOfSolidity U256 of_bool def
+R7403:7409 RocqOfSolidity.contracts.erc20.simulations.contract Payload Approve constr
+R7421:7421 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7436:7436 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7422:7433 RocqOfSolidity.RocqOfSolidity U256 of_bool def
+R7444:7455 RocqOfSolidity.contracts.erc20.simulations.contract Payload TransferFrom constr
+R7469:7469 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7484:7484 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7470:7481 RocqOfSolidity.RocqOfSolidity U256 of_bool def
+R7492:7508 RocqOfSolidity.contracts.erc20.simulations.contract Payload IncreaseAllowance constr
+R7520:7520 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7535:7535 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7521:7532 RocqOfSolidity.RocqOfSolidity U256 of_bool def
+R7543:7559 RocqOfSolidity.contracts.erc20.simulations.contract Payload DecreaseAllowance constr
+R7571:7571 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7586:7586 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7572:7583 RocqOfSolidity.RocqOfSolidity U256 of_bool def
+R7594:7604 RocqOfSolidity.contracts.erc20.simulations.contract Payload TotalSupply constr
+R7612:7612 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7614:7614 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7622:7630 RocqOfSolidity.contracts.erc20.simulations.contract Payload BalanceOf constr
+R7640:7640 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7642:7642 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7650:7658 RocqOfSolidity.contracts.erc20.simulations.contract Payload Allowance constr
+R7670:7670 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R7672:7672 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+def 7697:7720 Payload get_have_enough_calldata
+R7733:7733 Corelib.Numbers.BinNums <> Z ind
+binder 7723:7729 <> minimum:99
+R7748:7751 Corelib.Init.Datatypes <> list ind
+R7753:7758 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 7737:7744 <> calldata:100
+R7763:7766 Corelib.Init.Datatypes <> bool ind
+R7806:7810 Stdlib.ZArith.BinInt <> ::Z_scope:x_'>=?'_x not
+R7775:7782 Stdlib.ZArith.BinInt Z of_nat def
+R7785:7795 Stdlib.Lists.List <> length abbrev
+R7797:7804 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:100 var
+R7818:7820 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R7811:7817 RocqOfSolidity.contracts.erc20.simulations.contract <> minimum:99 var
+prf 7833:7859 Payload get_have_enough_calldata_eq
+R7872:7872 Corelib.Numbers.BinNums <> Z ind
+binder 7862:7868 <> minimum:101
+R7887:7890 Corelib.Init.Datatypes <> list ind
+R7892:7897 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 7876:7883 <> calldata:102
+R7947:7954 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8082:8082 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7906:7929 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_have_enough_calldata def
+R7931:7937 RocqOfSolidity.contracts.erc20.simulations.contract <> minimum:101 var
+R7939:7946 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:102 var
+R8077:8080 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R7955:7969 RocqOfSolidity.simulations.RocqOfSolidity Stdlib.Pure slt def
+R7978:7992 RocqOfSolidity.simulations.RocqOfSolidity Stdlib.Pure add def
+R8003:8010 Stdlib.ZArith.BinInt Z of_nat def
+R8013:8028 Corelib.Init.Datatypes <> length def
+R8030:8037 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:102 var
+R8050:8064 RocqOfSolidity.simulations.RocqOfSolidity Stdlib.Pure not def
+R8070:8076 RocqOfSolidity.contracts.erc20.simulations.contract <> minimum:101 var
+def 8120:8139 Payload get_is_address_valid
+R8152:8157 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 8142:8148 <> address:103
+R8162:8165 Corelib.Init.Datatypes <> bool ind
+R8181:8184 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R8174:8180 RocqOfSolidity.contracts.erc20.simulations.contract <> address:103 var
+R8185:8190 Stdlib.ZArith.BinInt Z land def
+R8192:8198 RocqOfSolidity.contracts.erc20.simulations.contract <> address:103 var
+R8208:8210 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R8202:8204 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+prf 8224:8257 Payload get_is_address_valid_implies_valid
+R8270:8275 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 8260:8266 <> address:104
+R8319:8326 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8312:8314 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8284:8303 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_is_address_valid def
+R8305:8311 RocqOfSolidity.contracts.erc20.simulations.contract <> address:104 var
+R8315:8318 Corelib.Init.Datatypes <> true constr
+R8327:8341 RocqOfSolidity.RocqOfSolidity Address.Valid t def
+R8343:8349 RocqOfSolidity.contracts.erc20.simulations.contract <> address:104 var
+def 8387:8397 Payload of_calldata
+R8412:8417 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 8400:8408 <> callvalue:105
+R8431:8434 Corelib.Init.Datatypes <> list ind
+R8436:8441 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 8421:8428 <> calldata:106
+R8446:8451 Corelib.Init.Datatypes <> option ind
+R8453:8453 RocqOfSolidity.contracts.erc20.simulations.contract Payload t ind
+R8496:8499 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R8465:8472 Stdlib.ZArith.BinInt Z of_nat def
+R8475:8485 Stdlib.Lists.List <> length abbrev
+R8487:8494 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R8549:8563 RocqOfSolidity.simulations.RocqOfSolidity Stdlib.Pure shr def
+R8569:8571 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R8577:8603 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R8605:8612 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+binder 8537:8544 <> selector:107
+R8637:8640 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R8629:8636 RocqOfSolidity.contracts.erc20.simulations.contract <> selector:107 var
+R8641:8652 RocqOfSolidity.simulations.RocqOfSolidity <> get_selector def
+R9106:9109 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R9098:9105 RocqOfSolidity.contracts.erc20.simulations.contract <> selector:107 var
+R9110:9121 RocqOfSolidity.simulations.RocqOfSolidity <> get_selector def
+R9345:9348 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R9337:9344 RocqOfSolidity.contracts.erc20.simulations.contract <> selector:107 var
+R9349:9360 RocqOfSolidity.simulations.RocqOfSolidity <> get_selector def
+R9979:9982 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R9971:9978 RocqOfSolidity.contracts.erc20.simulations.contract <> selector:107 var
+R9983:9994 RocqOfSolidity.simulations.RocqOfSolidity <> get_selector def
+R10468:10471 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R10460:10467 RocqOfSolidity.contracts.erc20.simulations.contract <> selector:107 var
+R10472:10483 RocqOfSolidity.simulations.RocqOfSolidity <> get_selector def
+R10862:10865 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R10854:10861 RocqOfSolidity.contracts.erc20.simulations.contract <> selector:107 var
+R10866:10877 RocqOfSolidity.simulations.RocqOfSolidity <> get_selector def
+R11351:11354 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R11343:11350 RocqOfSolidity.contracts.erc20.simulations.contract <> selector:107 var
+R11355:11366 RocqOfSolidity.simulations.RocqOfSolidity <> get_selector def
+R11822:11825 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R11814:11821 RocqOfSolidity.contracts.erc20.simulations.contract <> selector:107 var
+R11826:11837 RocqOfSolidity.simulations.RocqOfSolidity <> get_selector def
+R12377:12380 Corelib.Init.Datatypes <> None constr
+R11894:11920 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R11922:11929 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R11933:11935 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R11938:11940 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 11885:11889 <> owner:108
+R11970:11996 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R11998:12005 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R12009:12011 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R12014:12016 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 11959:11965 <> spender:109
+R12034:12037 Corelib.Init.Datatypes <> negb def
+R12049:12052 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R12040:12048 RocqOfSolidity.contracts.erc20.simulations.contract <> callvalue:105 var
+R12092:12095 Corelib.Init.Datatypes <> negb def
+R12098:12121 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_have_enough_calldata def
+R12126:12128 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R12132:12139 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R12178:12181 Corelib.Init.Datatypes <> negb def
+R12184:12203 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_is_address_valid def
+R12205:12209 RocqOfSolidity.contracts.erc20.simulations.contract <> owner:108 var
+R12248:12251 Corelib.Init.Datatypes <> negb def
+R12254:12273 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_is_address_valid def
+R12275:12281 RocqOfSolidity.contracts.erc20.simulations.contract <> spender:109 var
+R12327:12330 Corelib.Init.Datatypes <> Some constr
+R12333:12341 RocqOfSolidity.contracts.erc20.simulations.contract Payload Allowance constr
+R12343:12347 RocqOfSolidity.contracts.erc20.simulations.contract <> owner:108 var
+R12349:12355 RocqOfSolidity.contracts.erc20.simulations.contract <> spender:109 var
+R12299:12302 Corelib.Init.Datatypes <> None constr
+R12227:12230 Corelib.Init.Datatypes <> None constr
+R12157:12160 Corelib.Init.Datatypes <> None constr
+R12071:12074 Corelib.Init.Datatypes <> None constr
+R11419:11445 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R11447:11454 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R11458:11460 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R11463:11465 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 11413:11414 <> to:110
+R11493:11519 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R11521:11528 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R11532:11534 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R11537:11539 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 11484:11488 <> value:111
+R11557:11560 Corelib.Init.Datatypes <> negb def
+R11572:11575 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R11563:11571 RocqOfSolidity.contracts.erc20.simulations.contract <> callvalue:105 var
+R11615:11618 Corelib.Init.Datatypes <> negb def
+R11621:11644 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_have_enough_calldata def
+R11649:11651 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R11655:11662 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R11701:11704 Corelib.Init.Datatypes <> negb def
+R11707:11726 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_is_address_valid def
+R11728:11729 RocqOfSolidity.contracts.erc20.simulations.contract <> to:110 var
+R11775:11778 Corelib.Init.Datatypes <> Some constr
+R11781:11788 RocqOfSolidity.contracts.erc20.simulations.contract Payload Transfer constr
+R11790:11791 RocqOfSolidity.contracts.erc20.simulations.contract <> to:110 var
+R11793:11797 RocqOfSolidity.contracts.erc20.simulations.contract <> value:111 var
+R11747:11750 Corelib.Init.Datatypes <> None constr
+R11680:11683 Corelib.Init.Datatypes <> None constr
+R11594:11597 Corelib.Init.Datatypes <> None constr
+R10939:10965 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R10967:10974 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R10978:10980 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R10983:10985 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 10933:10934 <> to:112
+R11013:11039 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R11041:11048 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R11052:11054 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R11057:11059 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 11004:11008 <> value:113
+R11077:11080 Corelib.Init.Datatypes <> negb def
+R11092:11095 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R11083:11091 RocqOfSolidity.contracts.erc20.simulations.contract <> callvalue:105 var
+R11135:11138 Corelib.Init.Datatypes <> negb def
+R11141:11164 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_have_enough_calldata def
+R11169:11171 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R11175:11182 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R11221:11224 Corelib.Init.Datatypes <> negb def
+R11227:11246 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_is_address_valid def
+R11248:11249 RocqOfSolidity.contracts.erc20.simulations.contract <> to:112 var
+R11295:11298 Corelib.Init.Datatypes <> Some constr
+R11301:11317 RocqOfSolidity.contracts.erc20.simulations.contract Payload DecreaseAllowance constr
+R11319:11320 RocqOfSolidity.contracts.erc20.simulations.contract <> to:112 var
+R11322:11326 RocqOfSolidity.contracts.erc20.simulations.contract <> value:113 var
+R11267:11270 Corelib.Init.Datatypes <> None constr
+R11200:11203 Corelib.Init.Datatypes <> None constr
+R11114:11117 Corelib.Init.Datatypes <> None constr
+R10532:10558 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R10560:10567 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R10571:10573 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R10576:10578 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 10523:10527 <> owner:114
+R10596:10599 Corelib.Init.Datatypes <> negb def
+R10611:10614 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R10602:10610 RocqOfSolidity.contracts.erc20.simulations.contract <> callvalue:105 var
+R10654:10657 Corelib.Init.Datatypes <> negb def
+R10660:10683 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_have_enough_calldata def
+R10688:10690 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R10694:10701 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R10740:10743 Corelib.Init.Datatypes <> negb def
+R10746:10765 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_is_address_valid def
+R10767:10771 RocqOfSolidity.contracts.erc20.simulations.contract <> owner:114 var
+R10817:10820 Corelib.Init.Datatypes <> Some constr
+R10823:10831 RocqOfSolidity.contracts.erc20.simulations.contract Payload BalanceOf constr
+R10833:10837 RocqOfSolidity.contracts.erc20.simulations.contract <> owner:114 var
+R10789:10792 Corelib.Init.Datatypes <> None constr
+R10719:10722 Corelib.Init.Datatypes <> None constr
+R10633:10636 Corelib.Init.Datatypes <> None constr
+R10056:10082 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R10084:10091 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R10095:10097 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R10100:10102 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 10050:10051 <> to:115
+R10130:10156 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R10158:10165 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R10169:10171 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R10174:10176 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 10121:10125 <> value:116
+R10194:10197 Corelib.Init.Datatypes <> negb def
+R10209:10212 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R10200:10208 RocqOfSolidity.contracts.erc20.simulations.contract <> callvalue:105 var
+R10252:10255 Corelib.Init.Datatypes <> negb def
+R10258:10281 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_have_enough_calldata def
+R10286:10288 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R10292:10299 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R10338:10341 Corelib.Init.Datatypes <> negb def
+R10344:10363 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_is_address_valid def
+R10365:10366 RocqOfSolidity.contracts.erc20.simulations.contract <> to:115 var
+R10412:10415 Corelib.Init.Datatypes <> Some constr
+R10418:10434 RocqOfSolidity.contracts.erc20.simulations.contract Payload IncreaseAllowance constr
+R10436:10437 RocqOfSolidity.contracts.erc20.simulations.contract <> to:115 var
+R10439:10443 RocqOfSolidity.contracts.erc20.simulations.contract <> value:116 var
+R10384:10387 Corelib.Init.Datatypes <> None constr
+R10317:10320 Corelib.Init.Datatypes <> None constr
+R10231:10234 Corelib.Init.Datatypes <> None constr
+R9427:9453 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R9455:9462 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R9466:9468 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R9471:9473 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 9419:9422 <> from:117
+R9498:9524 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R9526:9533 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R9537:9539 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R9542:9544 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 9492:9493 <> to:118
+R9572:9598 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R9600:9607 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R9611:9613 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R9616:9618 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 9563:9567 <> value:119
+R9636:9639 Corelib.Init.Datatypes <> negb def
+R9651:9654 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R9642:9650 RocqOfSolidity.contracts.erc20.simulations.contract <> callvalue:105 var
+R9694:9697 Corelib.Init.Datatypes <> negb def
+R9700:9723 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_have_enough_calldata def
+R9728:9730 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R9734:9741 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R9780:9783 Corelib.Init.Datatypes <> negb def
+R9786:9805 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_is_address_valid def
+R9807:9810 RocqOfSolidity.contracts.erc20.simulations.contract <> from:117 var
+R9849:9852 Corelib.Init.Datatypes <> negb def
+R9855:9874 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_is_address_valid def
+R9876:9877 RocqOfSolidity.contracts.erc20.simulations.contract <> to:118 var
+R9923:9926 Corelib.Init.Datatypes <> Some constr
+R9929:9940 RocqOfSolidity.contracts.erc20.simulations.contract Payload TransferFrom constr
+R9942:9945 RocqOfSolidity.contracts.erc20.simulations.contract <> from:117 var
+R9947:9948 RocqOfSolidity.contracts.erc20.simulations.contract <> to:118 var
+R9950:9954 RocqOfSolidity.contracts.erc20.simulations.contract <> value:119 var
+R9895:9898 Corelib.Init.Datatypes <> None constr
+R9828:9831 Corelib.Init.Datatypes <> None constr
+R9759:9762 Corelib.Init.Datatypes <> None constr
+R9673:9676 Corelib.Init.Datatypes <> None constr
+R9155:9158 Corelib.Init.Datatypes <> negb def
+R9170:9173 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R9161:9169 RocqOfSolidity.contracts.erc20.simulations.contract <> callvalue:105 var
+R9213:9216 Corelib.Init.Datatypes <> negb def
+R9219:9242 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_have_enough_calldata def
+R9247:9249 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R9253:9260 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R9306:9309 Corelib.Init.Datatypes <> Some constr
+R9311:9321 RocqOfSolidity.contracts.erc20.simulations.contract Payload TotalSupply constr
+R9278:9281 Corelib.Init.Datatypes <> None constr
+R9192:9195 Corelib.Init.Datatypes <> None constr
+R8704:8730 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R8732:8739 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R8743:8745 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R8748:8750 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 8698:8699 <> to:120
+R8778:8804 RocqOfSolidity.simulations.RocqOfSolidity StdlibAux get_calldata_u256 def
+R8806:8813 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R8817:8819 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R8822:8824 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+binder 8769:8773 <> value:121
+R8842:8845 Corelib.Init.Datatypes <> negb def
+R8857:8860 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R8848:8856 RocqOfSolidity.contracts.erc20.simulations.contract <> callvalue:105 var
+R8900:8903 Corelib.Init.Datatypes <> negb def
+R8906:8929 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_have_enough_calldata def
+R8934:8936 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R8940:8947 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:106 var
+R8986:8989 Corelib.Init.Datatypes <> negb def
+R8992:9011 RocqOfSolidity.contracts.erc20.simulations.contract Payload get_is_address_valid def
+R9013:9014 RocqOfSolidity.contracts.erc20.simulations.contract <> to:120 var
+R9060:9063 Corelib.Init.Datatypes <> Some constr
+R9066:9072 RocqOfSolidity.contracts.erc20.simulations.contract Payload Approve constr
+R9074:9075 RocqOfSolidity.contracts.erc20.simulations.contract <> to:120 var
+R9077:9081 RocqOfSolidity.contracts.erc20.simulations.contract <> value:121 var
+R9032:9035 Corelib.Init.Datatypes <> None constr
+R8965:8968 Corelib.Init.Datatypes <> None constr
+R8879:8882 Corelib.Init.Datatypes <> None constr
+R8513:8516 Corelib.Init.Datatypes <> None constr
+R12387:12393 RocqOfSolidity.contracts.erc20.simulations.contract Payload <> mod
+def 12408:12411 <> main
+R12423:12431 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 12414:12419 <> sender:122
+R12447:12452 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 12435:12443 <> callvalue:123
+R12460:12468 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 12456:12456 <> s:124
+R12482:12490 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+binder 12472:12478 <> payload:125
+R12499:12506 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R12539:12541 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R12509:12530 RocqOfSolidity.contracts.erc20.simulations.contract <> get_return_Set def
+R12532:12538 RocqOfSolidity.contracts.erc20.simulations.contract <> payload:125 var
+R12542:12550 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R12564:12570 RocqOfSolidity.contracts.erc20.simulations.contract <> payload:125 var
+R12581:12596 RocqOfSolidity.contracts.erc20.simulations.contract <> Transfer constr
+R12610:12617 RocqOfSolidity.contracts.erc20.simulations.contract <> transfer def
+R12619:12624 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:122 var
+R12626:12626 RocqOfSolidity.contracts.erc20.simulations.contract <> s:124 var
+R12641:12655 RocqOfSolidity.contracts.erc20.simulations.contract <> Approve constr
+R12674:12680 RocqOfSolidity.contracts.erc20.simulations.contract <> approve def
+R12682:12687 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:122 var
+R12689:12689 RocqOfSolidity.contracts.erc20.simulations.contract <> s:124 var
+R12709:12728 RocqOfSolidity.contracts.erc20.simulations.contract <> TransferFrom constr
+R12747:12758 RocqOfSolidity.contracts.erc20.simulations.contract <> transferFrom def
+R12760:12765 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:122 var
+R12781:12781 RocqOfSolidity.contracts.erc20.simulations.contract <> s:124 var
+R12787:12811 RocqOfSolidity.contracts.erc20.simulations.contract <> IncreaseAllowance constr
+R12835:12851 RocqOfSolidity.contracts.erc20.simulations.contract <> increaseAllowance def
+R12853:12858 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:122 var
+R12879:12879 RocqOfSolidity.contracts.erc20.simulations.contract <> s:124 var
+R12885:12909 RocqOfSolidity.contracts.erc20.simulations.contract <> DecreaseAllowance constr
+R12942:12958 RocqOfSolidity.contracts.erc20.simulations.contract <> decreaseAllowance def
+R12960:12965 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:122 var
+R12991:12991 RocqOfSolidity.contracts.erc20.simulations.contract <> s:124 var
+R12997:13015 RocqOfSolidity.contracts.erc20.simulations.contract <> TotalSupply constr
+R13020:13033 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R13035:13035 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13049:13050 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13052:13052 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13036:13046 RocqOfSolidity.contracts.erc20.simulations.contract <> totalSupply def
+R13048:13048 RocqOfSolidity.contracts.erc20.simulations.contract <> s:124 var
+R13051:13051 RocqOfSolidity.contracts.erc20.simulations.contract <> s:124 var
+R13058:13074 RocqOfSolidity.contracts.erc20.simulations.contract <> BalanceOf constr
+R13085:13098 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R13100:13100 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13118:13119 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13121:13121 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13101:13109 RocqOfSolidity.contracts.erc20.simulations.contract <> balanceOf def
+R13111:13111 RocqOfSolidity.contracts.erc20.simulations.contract <> s:124 var
+R13120:13120 RocqOfSolidity.contracts.erc20.simulations.contract <> s:124 var
+R13127:13143 RocqOfSolidity.contracts.erc20.simulations.contract <> Allowance constr
+R13162:13175 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R13177:13177 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13206:13207 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13209:13209 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13178:13189 RocqOfSolidity.contracts.erc20.simulations.contract <> getAllowance def
+R13191:13191 RocqOfSolidity.contracts.erc20.simulations.contract <> s:124 var
+R13208:13208 RocqOfSolidity.contracts.erc20.simulations.contract <> s:124 var
+def 13665:13688 <> get_memory_end_beginning
+R13700:13708 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 13691:13696 <> sender:127
+R13722:13730 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+binder 13712:13718 <> payload:128
+R13741:13743 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R13735:13740 RocqOfSolidity.RocqOfSolidity U256 t def
+R13744:13749 RocqOfSolidity.RocqOfSolidity U256 t def
+R13762:13768 RocqOfSolidity.contracts.erc20.simulations.contract <> payload:128 var
+R13779:13794 RocqOfSolidity.contracts.erc20.simulations.contract <> Transfer constr
+R13804:13804 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13807:13808 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13810:13810 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13816:13830 RocqOfSolidity.contracts.erc20.simulations.contract <> Approve constr
+R13840:13840 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13843:13844 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13870:13870 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13845:13860 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R13862:13867 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:127 var
+R13876:13895 RocqOfSolidity.contracts.erc20.simulations.contract <> TransferFrom constr
+R13909:13909 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13916:13917 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13941:13941 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13910:13915 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:127 var
+R13918:13933 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R13947:13971 RocqOfSolidity.contracts.erc20.simulations.contract <> IncreaseAllowance constr
+R13981:13981 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13984:13985 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14011:14011 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R13986:14001 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R14003:14008 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:127 var
+R14017:14041 RocqOfSolidity.contracts.erc20.simulations.contract <> DecreaseAllowance constr
+R14051:14051 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14054:14055 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14081:14081 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14056:14071 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R14073:14078 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:127 var
+R14087:14105 RocqOfSolidity.contracts.erc20.simulations.contract <> TotalSupply constr
+R14110:14110 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14112:14113 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14115:14115 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14121:14137 RocqOfSolidity.contracts.erc20.simulations.contract <> BalanceOf constr
+R14148:14148 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14154:14155 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14157:14157 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14163:14179 RocqOfSolidity.contracts.erc20.simulations.contract <> Allowance constr
+R14198:14198 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14206:14207 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14232:14232 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14208:14223 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+def 14253:14256 <> body
+R14268:14276 RocqOfSolidity.contracts.erc20.simulations.contract <> t def
+binder 14259:14264 <> sender:130
+R14292:14297 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 14280:14288 <> callvalue:131
+R14305:14313 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+binder 14301:14301 <> s:132
+R14328:14331 Corelib.Init.Datatypes <> list ind
+R14333:14333 Corelib.Numbers.BinNums <> Z ind
+binder 14317:14324 <> calldata:133
+R14342:14349 RocqOfSolidity.contracts.erc20.simulations.contract <> t ind
+R14377:14379 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R14363:14365 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R14352:14355 Corelib.Init.Datatypes <> list ind
+R14357:14362 RocqOfSolidity.RocqOfSolidity U256 t def
+R14366:14369 Corelib.Init.Datatypes <> list ind
+R14371:14376 RocqOfSolidity.RocqOfSolidity U256 t def
+R14380:14388 RocqOfSolidity.contracts.erc20.simulations.contract <> t rec
+R14402:14420 RocqOfSolidity.contracts.erc20.simulations.contract <> of_calldata def
+R14422:14430 RocqOfSolidity.contracts.erc20.simulations.contract <> callvalue:131 var
+R14432:14439 RocqOfSolidity.contracts.erc20.simulations.contract <> calldata:133 var
+R14450:14453 Corelib.Init.Datatypes <> Some constr
+R14476:14479 RocqOfSolidity.contracts.erc20.simulations.contract <> main def
+R14481:14486 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:130 var
+R14488:14496 RocqOfSolidity.contracts.erc20.simulations.contract <> callvalue:131 var
+R14498:14498 RocqOfSolidity.contracts.erc20.simulations.contract <> s:132 var
+R14519:14532 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R14534:14534 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14540:14541 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14543:14543 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14571:14594 RocqOfSolidity.contracts.erc20.simulations.contract <> get_memory_end_beginning def
+R14596:14601 RocqOfSolidity.contracts.erc20.simulations.contract <> sender:130 var
+R14559:14559 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14562:14563 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14566:14566 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14620:14633 RocqOfSolidity.contracts.erc20.simulations.contract <> Success constr
+R14635:14644 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14653:14662 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14701:14710 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14712:14719 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14645:14645 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R14648:14649 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R14652:14652 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R14663:14686 RocqOfSolidity.contracts.erc20.simulations.contract <> serialize_return def
+R14711:14711 RocqOfSolidity.contracts.erc20.simulations.contract <> s:132 var
+R14727:14739 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R14748:14760 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr
+R14764:14764 RocqOfSolidity.contracts.erc20.simulations.contract <> s:132 var
+R14778:14781 Corelib.Init.Datatypes <> None constr
+R14786:14798 RocqOfSolidity.contracts.erc20.simulations.contract <> Revert constr

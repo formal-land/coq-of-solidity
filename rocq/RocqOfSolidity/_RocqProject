@@ -1,0 +1,35 @@
+-R . RocqOfSolidity
+-arg -impredicative-set -arg -w -arg -stdlib-vector
+./contracts/erc20/contract.v
+./contracts/erc20/simulations/contract.v
+./contracts/plonk/PlonkVerifier.v
+./contracts/scl/mulmuladdX_fullgen_b4/contract.v
+./contracts/scl/mulmuladdX_fullgen_b4/curve.v
+./contracts/scl/mulmuladdX_fullgen_b4/run.v
+./contracts/scl/mulmuladdX_fullgen_b4/shallow.v
+./contracts/tutorial/contract.v
+./contracts/tutorial/model.v
+./contracts/tutorial/shallow.v
+./proofs/RocqOfSolidity.v
+./RecordUpdate.v
+./RocqEvm/Arith/Nibble.v
+./RocqEvm/Arith/UInt63.v
+./RocqEvm/Arith/UInt64.v
+./RocqEvm/Arith/UInt.v
+./RocqEvm/Containers/Tuplevector.v
+./RocqEvm/Containers/Vec16.v
+./RocqEvm/Containers/Vec8.v
+./RocqEvm/Crypto/BLAKE2b.v
+./RocqEvm/Crypto/Keccak.v
+./RocqEvm/Crypto/RIPEMD160.v
+./RocqEvm/Crypto/SHA256.v
+./RocqEvm/Instructions.v
+./RocqEvm/JumpDest.v
+./RocqEvm/Lib2/Arith2.v
+./RocqEvm/Lib2/List2.v
+./RocqEvm/Lib2/ListSet2.v
+./RocqEvm/Lib2/Logic2.v
+./RocqEvm/Lib2/QArith2.v
+./RocqEvm/Lib2/Vector2.v
+./RocqOfSolidity.v
+./simulations/RocqOfSolidity.v

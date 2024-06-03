@@ -1,0 +1,775 @@
+DIGEST 4c2af8ea0a74e655f4a689655bfd2650
+FRocqOfSolidity.RocqEvm.Containers.Tuplevector
+R27:31 Stdlib.Arith.Arith <> <> lib
+R54:57 Stdlib.Lists.List <> <> lib
+def 137:137 <> t
+binder 140:140 <> T:1
+R153:155 Corelib.Init.Datatypes <> nat ind
+binder 150:150 <> n:2
+R174:174 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:2 var
+R186:186 Corelib.Init.Datatypes <> O constr
+R191:194 Corelib.Init.Datatypes <> unit ind
+R210:210 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:1 var
+R217:217 Corelib.Init.Datatypes <> S constr
+R230:232 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R225:225 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t:3 def
+R227:227 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:1 var
+R233:233 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:1 var
+def 336:347 <> type_example
+R357:359 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R350:350 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R352:354 Corelib.Init.Datatypes <> nat ind
+R370:372 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R364:366 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R361:363 Corelib.Init.Datatypes <> nat ind
+R367:369 Corelib.Init.Datatypes <> nat ind
+R373:375 Corelib.Init.Datatypes <> nat ind
+def 512:526 <> example_tuple_5
+R529:529 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R531:533 Corelib.Init.Datatypes <> nat ind
+R540:540 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R543:544 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R547:548 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R551:552 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R555:556 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R559:559 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+def 766:780 <> example_tuple_1
+R783:783 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R785:787 Corelib.Init.Datatypes <> nat ind
+def 874:894 <> destructuring_example
+R899:899 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R987:998 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R913:913 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R916:917 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R920:921 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R924:925 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R928:929 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R932:932 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R935:935 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R937:939 Corelib.Init.Datatypes <> nat ind
+binder 904:908 <> tuple:5
+R973:977 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tuple:5 var
+R954:954 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R956:957 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R959:960 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R962:963 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R965:966 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R968:968 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+def 1099:1102 <> snoc
+binder 1105:1105 <> T:7
+binder 1107:1107 <> n:8
+R1115:1115 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R1117:1117 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:7 var
+R1119:1119 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:8 var
+binder 1111:1112 <> tv:9
+R1129:1129 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:7 var
+binder 1123:1126 <> last:10
+R1134:1134 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R1136:1136 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:7 var
+R1139:1139 Corelib.Init.Datatypes <> S constr
+R1141:1141 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:8 var
+R1156:1157 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:9 var
+R1153:1153 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:8 var
+R1177:1180 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> last:10 var
+R1187:1187 Corelib.Init.Datatypes <> S constr
+R1197:1197 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1199:1200 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1205:1205 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1201:1204 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> last:10 var
+def 1230:1241 <> snoc_example
+R1277:1279 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1246:1249 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> snoc def
+R1266:1266 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R1268:1270 Corelib.Init.Datatypes <> nat ind
+R1252:1252 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1255:1256 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1259:1260 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1263:1263 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1280:1280 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1283:1284 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1287:1288 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1291:1292 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1295:1295 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+def 1331:1334 <> last
+binder 1337:1337 <> T:13
+binder 1339:1339 <> n:14
+R1347:1347 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R1349:1349 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:13 var
+R1352:1352 Corelib.Init.Datatypes <> S constr
+R1354:1354 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:14 var
+binder 1343:1344 <> tv:15
+R1360:1360 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:13 var
+R1374:1375 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:15 var
+R1371:1371 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:14 var
+R1402:1402 Corelib.Init.Datatypes <> S constr
+R1407:1407 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1409:1410 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1412:1412 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+prf 1434:1445 <> last_of_snoc
+binder 1448:1448 <> T:18
+binder 1450:1450 <> n:19
+R1458:1458 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R1460:1460 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:18 var
+R1462:1462 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:19 var
+binder 1454:1455 <> tv:20
+R1469:1469 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:18 var
+binder 1466:1466 <> x:21
+R1491:1493 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1475:1478 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> last def
+R1481:1484 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> snoc def
+R1489:1489 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> x:21 var
+R1486:1487 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:20 var
+R1494:1494 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> x:21 var
+def 1539:1546 <> but_last
+binder 1549:1549 <> T:22
+binder 1551:1551 <> n:23
+R1559:1559 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R1561:1561 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:22 var
+R1564:1564 Corelib.Init.Datatypes <> S constr
+R1566:1566 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:23 var
+binder 1555:1556 <> tv:24
+R1572:1572 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R1574:1574 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:22 var
+R1576:1576 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:23 var
+R1590:1591 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:24 var
+R1587:1587 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:23 var
+R1611:1612 Corelib.Init.Datatypes <> tt constr
+R1619:1619 Corelib.Init.Datatypes <> S constr
+R1624:1624 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1629:1630 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1632:1632 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+prf 1657:1672 <> but_last_of_snoc
+binder 1675:1675 <> T:27
+binder 1677:1677 <> n:28
+R1685:1685 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R1687:1687 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:27 var
+R1689:1689 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:28 var
+binder 1681:1682 <> tv:29
+R1696:1696 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:27 var
+binder 1693:1693 <> x:30
+R1722:1724 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1702:1709 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> but_last def
+R1712:1715 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> snoc def
+R1720:1720 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> x:30 var
+R1717:1718 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:29 var
+R1725:1726 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:29 var
+prf 1799:1805 <> snoc_ok
+binder 1808:1808 <> T:31
+binder 1810:1810 <> n:32
+R1818:1818 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R1820:1820 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:31 var
+R1823:1823 Corelib.Init.Datatypes <> S constr
+R1825:1825 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:32 var
+binder 1814:1815 <> tv:33
+R1860:1862 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1832:1835 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> snoc def
+R1852:1855 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> last def
+R1857:1858 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:33 var
+R1838:1845 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> but_last def
+R1847:1848 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:33 var
+R1863:1864 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:33 var
+def 1928:1938 <> app_to_list
+binder 1941:1941 <> T:34
+binder 1943:1943 <> n:35
+R1951:1951 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R1953:1953 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:34 var
+R1955:1955 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:35 var
+binder 1947:1948 <> tv:36
+R1962:1965 Corelib.Init.Datatypes <> list ind
+R1967:1967 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:34 var
+binder 1959:1959 <> l:37
+R1972:1975 Corelib.Init.Datatypes <> list ind
+R1977:1977 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:34 var
+R1988:1988 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:35 var
+R2010:2013 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2004:2004 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R2006:2006 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:34 var
+R2008:2009 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n':39 var
+R2014:2017 Corelib.Init.Datatypes <> list ind
+R2019:2019 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:34 var
+R2046:2046 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:37 var
+R2053:2053 Corelib.Init.Datatypes <> S constr
+binder 2064:2066 <> tv':40
+R2071:2081 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> app_to_list:38 def
+R2107:2110 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2099:2102 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> last def
+R2104:2106 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv':40 var
+R2111:2111 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:37 var
+R2084:2091 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> but_last def
+R2093:2095 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv':40 var
+R2126:2127 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:36 var
+def 2145:2163 <> app_to_list_example
+R2225:2227 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2168:2178 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> app_to_list def
+R2200:2203 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2206:2209 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2212:2215 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2216:2218 Corelib.Init.Datatypes <> nil constr
+R2190:2190 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R2181:2181 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2183:2184 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2187:2187 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2230:2233 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2236:2239 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2242:2245 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2248:2251 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2254:2257 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2258:2260 Corelib.Init.Datatypes <> nil constr
+prf 2297:2314 <> app_to_list_length
+binder 2317:2317 <> T:41
+binder 2319:2319 <> n:42
+R2327:2327 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R2329:2329 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:41 var
+R2331:2331 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:42 var
+binder 2323:2324 <> tv:43
+R2338:2341 Corelib.Init.Datatypes <> list ind
+R2343:2343 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:41 var
+binder 2335:2335 <> l:44
+R2374:2376 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2349:2354 Corelib.Init.Datatypes <> length def
+R2357:2367 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> app_to_list def
+R2372:2372 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:44 var
+R2369:2370 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:43 var
+R2378:2380 Corelib.Init.Peano <> ::nat_scope:x_'+'_x not
+R2377:2377 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:42 var
+R2381:2386 Corelib.Init.Datatypes <> length def
+R2388:2388 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:44 var
+R2478:2486 Corelib.Init.Peano <> plus_n_Sm thm
+R2478:2486 Corelib.Init.Peano <> plus_n_Sm thm
+def 2504:2510 <> prepend
+binder 2513:2513 <> T:45
+R2526:2528 Corelib.Init.Datatypes <> nat ind
+binder 2523:2523 <> n:46
+R2537:2537 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:45 var
+binder 2532:2534 <> new:47
+R2545:2545 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R2547:2547 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:45 var
+R2549:2549 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:46 var
+binder 2541:2542 <> tv:48
+R2554:2554 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R2556:2556 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:45 var
+R2559:2559 Corelib.Init.Datatypes <> S constr
+R2561:2561 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:46 var
+R2576:2577 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:48 var
+R2573:2573 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:46 var
+R2597:2599 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> new:47 var
+R2606:2606 Corelib.Init.Datatypes <> S constr
+R2616:2616 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2641:2642 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2649:2649 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2617:2623 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> prepend:49 def
+R2630:2637 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> but_last def
+R2625:2627 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> new:47 var
+R2643:2646 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> last def
+def 2674:2688 <> prepend_example
+R2723:2725 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2693:2699 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> prepend def
+R2715:2715 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R2717:2719 Corelib.Init.Datatypes <> nat ind
+R2704:2704 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2706:2707 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2709:2710 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2712:2712 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2726:2726 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2728:2729 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2731:2732 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2734:2735 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2737:2737 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+def 2771:2773 <> rev
+binder 2776:2776 <> T:52
+R2789:2791 Corelib.Init.Datatypes <> nat ind
+binder 2786:2786 <> n:53
+R2799:2799 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R2801:2801 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:52 var
+R2803:2803 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:53 var
+binder 2795:2796 <> tv:54
+R2808:2808 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R2810:2810 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:52 var
+R2812:2812 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:53 var
+R2826:2827 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:54 var
+R2823:2823 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:53 var
+R2847:2848 Corelib.Init.Datatypes <> tt constr
+R2855:2855 Corelib.Init.Datatypes <> S constr
+R2865:2871 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> prepend def
+R2883:2885 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> rev:55 def
+R2888:2895 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> but_last def
+R2874:2877 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> last def
+def 2924:2934 <> rev_example
+R2967:2969 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2940:2942 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> rev def
+R2959:2959 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R2961:2963 Corelib.Init.Datatypes <> nat ind
+R2945:2945 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2947:2948 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2950:2951 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2953:2954 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2956:2956 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2970:2970 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2972:2973 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2975:2976 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2978:2979 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2981:2981 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+prf 3070:3090 <> take_from_list_helper
+binder 3093:3093 <> T:58
+binder 3095:3095 <> k:59
+R3105:3105 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:58 var
+binder 3099:3102 <> head:60
+R3115:3118 Corelib.Init.Datatypes <> list ind
+R3120:3120 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:58 var
+binder 3109:3112 <> tail:61
+R3165:3168 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R3162:3162 Corelib.Init.Datatypes <> S constr
+R3164:3164 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> k:59 var
+R3169:3174 Corelib.Init.Datatypes <> length def
+R3181:3184 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R3177:3180 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> head:60 var
+R3185:3188 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tail:61 var
+binder 3159:3159 <> H:62
+R3201:3204 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R3200:3200 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> k:59 var
+R3205:3210 Corelib.Init.Datatypes <> length def
+R3212:3215 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tail:61 var
+R3231:3236 Corelib.Init.Peano <> le_S_n thm
+R3231:3236 Corelib.Init.Peano <> le_S_n thm
+def 3264:3281 <> take_from_list_rev
+binder 3284:3284 <> T:63
+binder 3286:3286 <> n:64
+R3293:3296 Corelib.Init.Datatypes <> list ind
+R3298:3298 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:63 var
+binder 3290:3290 <> l:65
+R3307:3310 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R3306:3306 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:64 var
+R3311:3316 Corelib.Init.Datatypes <> length def
+R3318:3318 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:65 var
+binder 3302:3303 <> ok:66
+R3328:3330 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R3323:3323 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R3325:3325 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:63 var
+R3327:3327 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:64 var
+R3331:3334 Corelib.Init.Datatypes <> list ind
+R3336:3336 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:63 var
+R3347:3347 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:64 var
+R3376:3379 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3364:3367 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R3362:3363 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n':68 var
+R3368:3373 Corelib.Init.Datatypes <> length def
+R3375:3375 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:65 var
+R3386:3388 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R3380:3380 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R3382:3382 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:63 var
+R3384:3385 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n':68 var
+R3389:3392 Corelib.Init.Datatypes <> list ind
+R3394:3394 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:63 var
+R3406:3406 Corelib.Init.Datatypes <> O constr
+R3420:3420 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3423:3424 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3426:3426 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3421:3422 Corelib.Init.Datatypes <> tt constr
+R3425:3425 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:65 var
+R3433:3433 Corelib.Init.Datatypes <> S constr
+R3452:3452 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:65 var
+R3483:3486 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3470:3473 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R3467:3467 Corelib.Init.Datatypes <> S constr
+R3474:3479 Corelib.Init.Datatypes <> length def
+R3481:3482 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l':69 var
+R3496:3498 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R3487:3487 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R3489:3489 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:63 var
+R3492:3492 Corelib.Init.Datatypes <> S constr
+R3499:3502 Corelib.Init.Datatypes <> list ind
+R3504:3504 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:63 var
+R3519:3521 Corelib.Init.Datatypes <> nil constr
+binder 3530:3530 <> X:70
+R3535:3544 Corelib.Init.Logic <> False_rect scheme
+R3549:3562 Stdlib.Arith.PeanoNat Nat nle_succ_0 thm
+R3566:3566 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> X:70 var
+R3582:3585 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+binder 3604:3604 <> X:71
+R3642:3659 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_rev:67 def
+R3667:3687 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_helper thm
+R3689:3689 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> X:71 var
+binder 3625:3630 <> prefix:72
+binder 3633:3636 <> rest:73
+R3706:3706 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3723:3724 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3729:3729 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3707:3710 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> snoc def
+R3712:3717 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> prefix:72 var
+R3725:3728 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> rest:73 var
+R3748:3749 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> ok:66 var
+def 3762:3778 <> to_list_backwards
+binder 3781:3781 <> T:74
+binder 3783:3783 <> n:75
+R3791:3791 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R3793:3793 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:74 var
+R3795:3795 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:75 var
+binder 3787:3788 <> tv:76
+R3800:3803 Corelib.Init.Datatypes <> list ind
+R3805:3805 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:74 var
+R3819:3820 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> tv:76 var
+R3816:3816 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:75 var
+R3840:3842 Corelib.Init.Datatypes <> nil constr
+R3849:3849 Corelib.Init.Datatypes <> S constr
+R3865:3868 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R3859:3862 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> last def
+R3869:3885 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> to_list_backwards:77 def
+R3888:3895 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> but_last def
+def 3923:3947 <> to_list_backwards_example
+R3994:3996 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3953:3969 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> to_list_backwards def
+R3986:3986 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R3988:3990 Corelib.Init.Datatypes <> nat ind
+R3972:3972 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3974:3975 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3977:3978 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3980:3981 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3983:3983 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R3999:4002 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R4004:4007 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R4009:4012 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R4014:4017 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R4018:4020 Corelib.Init.Datatypes <> nil constr
+prf 4057:4081 <> take_from_list_rev_firstn
+binder 4084:4084 <> T:80
+binder 4086:4086 <> n:81
+R4093:4096 Corelib.Init.Datatypes <> list ind
+R4098:4098 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:80 var
+binder 4090:4090 <> l:82
+R4107:4110 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R4106:4106 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:81 var
+R4111:4116 Corelib.Init.Datatypes <> length def
+R4118:4118 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:82 var
+binder 4102:4103 <> ok:83
+R4173:4175 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4124:4140 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> to_list_backwards def
+R4143:4145 Corelib.Init.Datatypes <> fst def
+R4148:4165 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_rev def
+R4169:4170 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> ok:83 var
+R4167:4167 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:82 var
+R4176:4186 Stdlib.Lists.List <> firstn abbrev
+R4190:4190 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:82 var
+R4188:4188 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:81 var
+R4272:4292 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_helper thm
+R4272:4292 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_helper thm
+R4310:4327 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_rev def
+R4332:4352 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_helper thm
+R4310:4327 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_rev def
+R4332:4352 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_helper thm
+R4407:4418 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> last_of_snoc thm
+R4407:4418 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> last_of_snoc thm
+R4407:4418 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> last_of_snoc thm
+R4429:4444 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> but_last_of_snoc thm
+R4429:4444 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> but_last_of_snoc thm
+R4429:4444 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> but_last_of_snoc thm
+prf 4477:4500 <> take_from_list_rev_skipn
+binder 4503:4503 <> T:84
+binder 4505:4505 <> n:85
+R4512:4515 Corelib.Init.Datatypes <> list ind
+R4517:4517 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:84 var
+binder 4509:4509 <> l:86
+R4526:4529 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R4525:4525 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:85 var
+R4530:4535 Corelib.Init.Datatypes <> length def
+R4537:4537 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:86 var
+binder 4521:4522 <> ok:87
+R4572:4574 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4543:4545 Corelib.Init.Datatypes <> snd def
+R4548:4565 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_rev def
+R4569:4570 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> ok:87 var
+R4567:4567 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:86 var
+R4575:4584 Stdlib.Lists.List <> skipn abbrev
+R4588:4588 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:86 var
+R4586:4586 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:85 var
+R4670:4690 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_helper thm
+R4670:4690 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_helper thm
+R4708:4725 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_rev def
+R4730:4750 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_helper thm
+R4708:4725 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_rev def
+R4730:4750 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_helper thm
+def 5001:5019 <> take_from_list_slow
+binder 5022:5022 <> T:88
+binder 5024:5024 <> n:89
+R5031:5034 Corelib.Init.Datatypes <> list ind
+R5036:5036 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:88 var
+binder 5028:5028 <> l:90
+R5045:5048 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R5044:5044 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:89 var
+R5049:5054 Corelib.Init.Datatypes <> length def
+R5056:5056 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:90 var
+binder 5040:5041 <> ok:91
+R5066:5068 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R5061:5061 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R5063:5063 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:88 var
+R5065:5065 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:89 var
+R5069:5072 Corelib.Init.Datatypes <> list ind
+R5074:5074 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:88 var
+R5101:5118 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_rev def
+R5122:5123 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> ok:91 var
+R5120:5120 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:90 var
+binder 5084:5089 <> prefix:92
+binder 5092:5095 <> rest:93
+R5131:5131 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5142:5143 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5148:5148 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R5132:5134 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> rev def
+R5136:5141 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> prefix:92 var
+R5144:5147 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> rest:93 var
+prf 5250:5266 <> gather_helper_nil
+binder 5269:5269 <> T:94
+R5276:5276 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:94 var
+binder 5273:5273 <> x:95
+R5283:5286 Corelib.Init.Datatypes <> list ind
+R5288:5288 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:94 var
+binder 5280:5280 <> l:96
+binder 5292:5300 <> block_len:97
+R5306:5308 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R5340:5340 Corelib.Init.Logic <> ::type_scope:'~'_x not
+R5324:5326 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5309:5314 Corelib.Init.Datatypes <> length def
+R5318:5321 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R5317:5317 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> x:95 var
+R5322:5322 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:96 var
+R5328:5330 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R5331:5339 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:97 var
+prf 5382:5404 <> gather_helper_block_len
+binder 5407:5407 <> T:98
+R5424:5426 Corelib.Init.Datatypes <> nat ind
+binder 5411:5411 <> k:99
+binder 5413:5421 <> block_len:100
+R5433:5436 Corelib.Init.Datatypes <> list ind
+R5438:5438 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:98 var
+binder 5430:5430 <> l:101
+R5491:5493 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5483:5488 Corelib.Init.Datatypes <> length def
+R5490:5490 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:101 var
+R5497:5499 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R5494:5494 Corelib.Init.Datatypes <> S constr
+R5496:5496 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> k:99 var
+R5500:5508 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:100 var
+binder 5479:5479 <> E:102
+R5523:5526 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R5514:5522 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:100 var
+R5527:5532 Corelib.Init.Datatypes <> length def
+R5534:5534 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:101 var
+R5566:5576 Stdlib.Arith.PeanoNat Nat mul_1_l thm
+R5566:5576 Stdlib.Arith.PeanoNat Nat mul_1_l thm
+R5566:5576 Stdlib.Arith.PeanoNat Nat mul_1_l thm
+R5590:5606 Stdlib.Arith.PeanoNat Nat mul_le_mono_r thm
+R5590:5606 Stdlib.Arith.PeanoNat Nat mul_le_mono_r thm
+R5617:5622 Corelib.Init.Peano <> le_n_S thm
+R5617:5622 Corelib.Init.Peano <> le_n_S thm
+R5631:5640 Stdlib.Arith.PeanoNat Nat le_0_l thm
+R5631:5640 Stdlib.Arith.PeanoNat Nat le_0_l thm
+def 5660:5687 <> take_from_list_rev_dep_skipn
+binder 5690:5690 <> T:103
+binder 5692:5692 <> n:104
+R5699:5702 Corelib.Init.Datatypes <> list ind
+R5704:5704 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:103 var
+binder 5696:5696 <> l:105
+R5713:5716 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R5712:5712 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:104 var
+R5717:5722 Corelib.Init.Datatypes <> length def
+R5724:5724 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:105 var
+binder 5708:5709 <> ok:106
+R5729:5730 Corelib.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R5732:5733 Corelib.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R5748:5750 Corelib.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R5773:5774 Corelib.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R5739:5741 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R5734:5734 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R5736:5736 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:103 var
+R5738:5738 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:104 var
+R5742:5745 Corelib.Init.Datatypes <> list ind
+R5747:5747 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:103 var
+binder 5731:5731 <> x:107
+R5756:5758 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5751:5753 Corelib.Init.Datatypes <> snd def
+R5755:5755 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> x:107 var
+R5759:5768 Stdlib.Lists.List <> skipn abbrev
+R5772:5772 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:105 var
+R5770:5770 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:104 var
+R5779:5783 Corelib.Init.Specif <> exist constr
+R5814:5837 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_rev_skipn thm
+R5841:5842 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> ok:106 var
+R5839:5839 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:105 var
+R5788:5805 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_rev def
+R5809:5810 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> ok:106 var
+R5807:5807 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:105 var
+prf 5859:5877 <> gather_helper_skipn
+binder 5880:5880 <> T:108
+binder 5882:5882 <> k:109
+binder 5884:5892 <> block_len:110
+binder 5894:5894 <> l:111
+R5922:5924 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5914:5919 Corelib.Init.Datatypes <> length def
+R5921:5921 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:111 var
+R5928:5930 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R5925:5925 Corelib.Init.Datatypes <> S constr
+R5927:5927 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> k:109 var
+R5931:5939 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:110 var
+binder 5910:5911 <> ok:112
+R5958:5958 Corelib.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R5960:5962 Corelib.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R5985:5987 Corelib.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R6018:6018 Corelib.Init.Specif <> ::type_scope:'{'_x_':'_x_'|'_x_'}' not
+R5976:5978 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R5963:5963 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R5965:5965 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:108 var
+R5967:5975 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:110 var
+R5979:5982 Corelib.Init.Datatypes <> list ind
+R5984:5984 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:108 var
+binder 5959:5959 <> x:113
+R5993:5995 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5988:5990 Corelib.Init.Datatypes <> snd def
+R5992:5992 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> x:113 var
+R5996:6005 Stdlib.Lists.List <> skipn abbrev
+R6017:6017 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:111 var
+R6007:6015 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:110 var
+binder 5955:5955 <> p:114
+R6050:6052 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6024:6029 Corelib.Init.Datatypes <> length def
+R6032:6034 Corelib.Init.Datatypes <> snd def
+R6037:6045 Corelib.Init.Specif <> proj1_sig def
+R6047:6047 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> p:114 var
+R6054:6056 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R6053:6053 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> k:109 var
+R6057:6065 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:110 var
+R6088:6096 Corelib.Init.Specif <> proj2_sig def
+R6088:6096 Corelib.Init.Specif <> proj2_sig def
+R6131:6147 Stdlib.Lists.List <> length_skipn thm
+R6131:6147 Stdlib.Lists.List <> length_skipn thm
+R6131:6147 Stdlib.Lists.List <> length_skipn thm
+R6175:6186 Stdlib.Arith.PeanoNat Nat add_comm thm
+R6175:6186 Stdlib.Arith.PeanoNat Nat add_comm thm
+R6175:6186 Stdlib.Arith.PeanoNat Nat add_comm thm
+R6197:6207 Stdlib.Arith.PeanoNat Nat add_sub thm
+R6197:6207 Stdlib.Arith.PeanoNat Nat add_sub thm
+R6197:6207 Stdlib.Arith.PeanoNat Nat add_sub thm
+def 6234:6239 <> gather
+binder 6242:6242 <> T:115
+R6249:6252 Corelib.Init.Datatypes <> list ind
+R6254:6254 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:115 var
+binder 6246:6246 <> l:116
+R6271:6273 Corelib.Init.Datatypes <> nat ind
+binder 6258:6258 <> n:117
+binder 6260:6268 <> block_len:118
+R6289:6291 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6281:6286 Corelib.Init.Datatypes <> length def
+R6288:6288 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:116 var
+R6293:6295 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R6292:6292 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:117 var
+R6296:6304 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:118 var
+binder 6277:6278 <> ok:119
+R6320:6323 Corelib.Init.Datatypes <> list ind
+R6326:6326 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R6328:6328 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:115 var
+R6330:6338 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:118 var
+R6350:6350 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:117 var
+R6390:6393 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6373:6375 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6365:6370 Corelib.Init.Datatypes <> length def
+R6372:6372 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:116 var
+R6378:6380 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R6376:6377 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n':121 var
+R6381:6389 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:118 var
+R6394:6397 Corelib.Init.Datatypes <> list ind
+R6400:6400 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R6402:6402 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:115 var
+R6404:6412 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:118 var
+R6425:6425 Corelib.Init.Datatypes <> O constr
+R6436:6436 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:116 var
+R6476:6479 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6460:6462 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6451:6456 Corelib.Init.Datatypes <> length def
+R6458:6459 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l':122 var
+R6464:6466 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R6467:6475 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:118 var
+R6499:6501 Corelib.Init.Datatypes <> nil constr
+R6515:6517 Corelib.Init.Datatypes <> nil constr
+R6531:6534 Corelib.Init.Datatypes <> cons constr
+binder 6547:6549 <> ok':123
+R6554:6563 Corelib.Init.Logic <> False_rect scheme
+R6568:6584 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather_helper_nil thm
+R6586:6588 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> ok':123 var
+R6610:6610 Corelib.Init.Datatypes <> S constr
+binder 6621:6623 <> ok':124
+R6651:6678 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> take_from_list_rev_dep_skipn def
+R6683:6705 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather_helper_block_len thm
+R6721:6723 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> ok':124 var
+R6719:6719 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:116 var
+R6709:6717 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:118 var
+R6680:6680 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:116 var
+binder 6646:6646 <> p:125
+R6761:6764 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6744:6746 Corelib.Init.Datatypes <> fst def
+R6749:6757 Corelib.Init.Specif <> proj1_sig def
+R6759:6759 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> p:125 var
+R6765:6770 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather:120 def
+R6848:6866 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather_helper_skipn thm
+R6872:6872 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> p:125 var
+R6868:6870 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> ok':124 var
+R6794:6802 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:118 var
+R6773:6775 Corelib.Init.Datatypes <> snd def
+R6778:6786 Corelib.Init.Specif <> proj1_sig def
+R6788:6788 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> p:125 var
+R6888:6889 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> ok:119 var
+def 6901:6914 <> gather_example
+R6999:7006 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6919:6924 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather def
+R6992:6998 Corelib.Init.Logic <> eq_refl constr
+R6928:6931 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6933:6936 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6938:6941 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6943:6946 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6948:6951 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6953:6956 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6958:6961 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6963:6966 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6968:6971 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6974:6977 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6978:6980 Corelib.Init.Datatypes <> nil constr
+R7014:7017 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7008:7008 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7010:7011 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7013:7013 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7024:7027 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7018:7018 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7020:7021 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7023:7023 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7034:7037 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7028:7028 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7030:7031 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7033:7033 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7044:7047 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7038:7038 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7040:7041 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7043:7043 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7055:7058 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7048:7048 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7051:7052 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7054:7054 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7059:7061 Corelib.Init.Datatypes <> nil constr
+prf 7098:7110 <> gather_length
+binder 7113:7113 <> T:126
+R7120:7123 Corelib.Init.Datatypes <> list ind
+R7125:7125 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> T:126 var
+binder 7117:7117 <> l:127
+R7142:7144 Corelib.Init.Datatypes <> nat ind
+binder 7129:7129 <> n:128
+binder 7131:7139 <> block_len:129
+R7160:7162 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7152:7157 Corelib.Init.Datatypes <> length def
+R7159:7159 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:127 var
+R7164:7166 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R7163:7163 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:128 var
+R7167:7175 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:129 var
+binder 7148:7149 <> ok:130
+R7218:7220 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7181:7191 Stdlib.Lists.List <> length abbrev
+R7194:7199 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather def
+R7215:7216 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> ok:130 var
+R7205:7213 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> block_len:129 var
+R7203:7203 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:128 var
+R7201:7201 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> l:127 var
+R7221:7221 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> n:128 var

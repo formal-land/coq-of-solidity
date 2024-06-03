@@ -102,6 +102,7 @@ private:
 	void handleCombinedJSON();
 	void handleAst();
 	void handleEthdebug();
+	void handleCoq();
 	void handleEVMAssembly(std::string const& _contract);
 	void handleBinary(std::string const& _contract);
 	void handleOpcode(std::string const& _contract);

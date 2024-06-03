@@ -1,0 +1,643 @@
+DIGEST d06c0d3ca36ddbca88b85f1cd639eb49
+FRocqOfSolidity.RocqEvm.JumpDest
+R27:31 Stdlib.Arith.Arith <> <> lib
+R33:38 Stdlib.NArith.NArith <> <> lib
+R40:42 Stdlib.micromega.Lia <> <> lib
+R60:65 RocqOfSolidity.RocqEvm.Arith.Nibble <> <> lib
+R67:78 RocqOfSolidity.RocqEvm.Instructions <> <> lib
+R80:84 RocqOfSolidity.RocqEvm.Lib2.List2 <> <> lib
+R86:91 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> <> lib
+def 173:209 <> paper_next_valid_instruction_position
+R215:215 Corelib.Numbers.BinNums <> N ind
+binder 212:212 <> i:1
+R222:225 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 219:219 <> b:2
+R245:253 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R256:274 RocqOfSolidity.RocqEvm.Instructions <> byte_of_instruction def
+R277:280 RocqOfSolidity.RocqEvm.Instructions <> PUSH constr
+R285:291 Corelib.Init.Logic <> eq_refl constr
+binder 235:239 <> push1:3
+R315:323 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R326:344 RocqOfSolidity.RocqEvm.Instructions <> byte_of_instruction def
+R347:350 RocqOfSolidity.RocqEvm.Instructions <> PUSH constr
+R355:361 Corelib.Init.Logic <> eq_refl constr
+binder 305:310 <> push32:4
+R380:388 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R390:390 RocqOfSolidity.RocqEvm.JumpDest <> b:2 var
+binder 375:375 <> w:5
+R403:403 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R415:422 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R435:435 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R409:413 Stdlib.NArith.BinNat <> ::N_scope:x_'<=?'_x not
+R404:408 RocqOfSolidity.RocqEvm.JumpDest <> push1:3 var
+R414:414 RocqOfSolidity.RocqEvm.JumpDest <> w:5 var
+R424:428 Stdlib.NArith.BinNat <> ::N_scope:x_'<=?'_x not
+R423:423 RocqOfSolidity.RocqEvm.JumpDest <> w:5 var
+R429:434 RocqOfSolidity.RocqEvm.JumpDest <> push32:4 var
+R482:484 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R481:481 RocqOfSolidity.RocqEvm.JumpDest <> i:1 var
+R466:468 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R458:460 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R454:456 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R453:453 RocqOfSolidity.RocqEvm.JumpDest <> i:1 var
+R457:457 RocqOfSolidity.RocqEvm.JumpDest <> w:5 var
+R461:465 RocqOfSolidity.RocqEvm.JumpDest <> push1:3 var
+def 563:593 <> next_valid_instruction_position
+R599:599 Corelib.Numbers.BinNums <> N ind
+binder 596:596 <> i:6
+R606:609 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 603:603 <> b:7
+R617:619 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R616:616 RocqOfSolidity.RocqEvm.JumpDest <> i:6 var
+R626:644 RocqOfSolidity.RocqEvm.Instructions <> instruction_of_byte def
+R646:646 RocqOfSolidity.RocqEvm.JumpDest <> b:7 var
+R663:666 Corelib.Init.Datatypes <> Some constr
+R669:672 RocqOfSolidity.RocqEvm.Instructions <> PUSH constr
+R683:685 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+prf 742:775 <> next_valid_instruction_position_ok
+R781:781 Corelib.Numbers.BinNums <> N ind
+binder 778:778 <> i:8
+R788:791 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 785:785 <> b:9
+R832:834 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R797:827 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R829:829 RocqOfSolidity.RocqEvm.JumpDest <> i:8 var
+R831:831 RocqOfSolidity.RocqEvm.JumpDest <> b:9 var
+R835:871 RocqOfSolidity.RocqEvm.JumpDest <> paper_next_valid_instruction_position def
+R873:873 RocqOfSolidity.RocqEvm.JumpDest <> i:8 var
+R875:875 RocqOfSolidity.RocqEvm.JumpDest <> b:9 var
+R892:928 RocqOfSolidity.RocqEvm.JumpDest <> paper_next_valid_instruction_position def
+R951:953 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R996:998 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R980:982 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R975:977 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R970:972 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R951:953 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R996:998 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R980:982 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R975:977 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R970:972 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R1058:1060 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R1043:1045 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R1039:1041 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R1035:1037 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R1082:1084 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R1103:1105 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R1099:1101 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R1058:1060 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R1043:1045 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R1039:1041 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R1035:1037 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R1082:1084 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R1103:1105 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R1099:1101 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R1139:1142 Corelib.Init.Datatypes <> andb def
+R1139:1142 Corelib.Init.Datatypes <> andb def
+R1218:1228 Stdlib.NArith.BinNat N add_assoc thm
+R1191:1205 Stdlib.NArith.BinNat N add_sub_assoc thm
+R1191:1205 Stdlib.NArith.BinNat N add_sub_assoc thm
+R1218:1228 Stdlib.NArith.BinNat N add_assoc thm
+R1218:1228 Stdlib.NArith.BinNat N add_assoc thm
+R1191:1205 Stdlib.NArith.BinNat N add_sub_assoc thm
+R1191:1205 Stdlib.NArith.BinNat N add_sub_assoc thm
+R1191:1205 Stdlib.NArith.BinNat N add_sub_assoc thm
+R1191:1205 Stdlib.NArith.BinNat N add_sub_assoc thm
+R1218:1228 Stdlib.NArith.BinNat N add_assoc thm
+R1191:1205 Stdlib.NArith.BinNat N add_sub_assoc thm
+R1218:1228 Stdlib.NArith.BinNat N add_assoc thm
+R1277:1294 Stdlib.Bool.Bool <> andb_true_iff thm
+R1277:1294 Stdlib.Bool.Bool <> andb_true_iff thm
+R1316:1323 Stdlib.NArith.BinNat N leb_le thm
+R1316:1323 Stdlib.NArith.BinNat N leb_le thm
+R1342:1372 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+prf 1603:1639 <> next_valid_instruction_position_bound
+R1645:1645 Corelib.Numbers.BinNums <> N ind
+binder 1642:1642 <> i:10
+R1652:1655 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 1649:1649 <> b:11
+R1667:1670 Stdlib.NArith.BinNat <> ::N_scope:x_'<='_x not
+R1663:1665 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R1662:1662 RocqOfSolidity.RocqEvm.JumpDest <> i:10 var
+R1671:1701 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R1703:1703 RocqOfSolidity.RocqEvm.JumpDest <> i:10 var
+R1705:1705 RocqOfSolidity.RocqEvm.JumpDest <> b:11 var
+R1725:1755 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R1768:1786 RocqOfSolidity.RocqEvm.Instructions <> instruction_of_byte def
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1768:1786 RocqOfSolidity.RocqEvm.Instructions <> instruction_of_byte def
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+R1828:1836 Stdlib.NArith.BinNat N le_refl thm
+def 2005:2038 <> paper_valid_jump_destinations_from
+R2047:2050 Corelib.Init.Datatypes <> list ind
+R2052:2055 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 2041:2044 <> code:12
+R2107:2107 Corelib.Numbers.BinNums <> N ind
+binder 2104:2104 <> i:13
+R2162:2164 Corelib.Init.Datatypes <> nat ind
+binder 2156:2159 <> fuel:14
+R2169:2172 Corelib.Init.Datatypes <> list ind
+R2174:2174 Corelib.Numbers.BinNums <> N ind
+R2185:2188 RocqOfSolidity.RocqEvm.JumpDest <> fuel:14 var
+R2200:2200 Corelib.Init.Datatypes <> O constr
+R2205:2207 Corelib.Init.Datatypes <> nil constr
+R2214:2214 Corelib.Init.Datatypes <> S constr
+R2246:2259 Stdlib.Lists.List <> nth_error def
+R2267:2274 Stdlib.NArith.BinNat N to_nat def
+R2276:2276 RocqOfSolidity.RocqEvm.JumpDest <> i:13 var
+R2261:2264 RocqOfSolidity.RocqEvm.JumpDest <> code:12 var
+R2292:2295 Corelib.Init.Datatypes <> None constr
+R2300:2302 Corelib.Init.Datatypes <> nil constr
+R2312:2315 Corelib.Init.Datatypes <> Some constr
+R2343:2376 RocqOfSolidity.RocqEvm.JumpDest <> paper_valid_jump_destinations_from:15 def
+R2430:2460 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R2462:2462 RocqOfSolidity.RocqEvm.JumpDest <> i:13 var
+R2401:2404 RocqOfSolidity.RocqEvm.JumpDest <> code:12 var
+binder 2335:2338 <> tail:17
+R2532:2535 Stdlib.NArith.BinNat <> ::N_scope:x_'=?'_x not
+R2521:2529 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R2536:2544 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R2547:2565 RocqOfSolidity.RocqEvm.Instructions <> byte_of_instruction def
+R2567:2574 RocqOfSolidity.RocqEvm.Instructions <> JUMPDEST constr
+R2632:2635 RocqOfSolidity.RocqEvm.JumpDest <> tail:17 var
+R2602:2605 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R2601:2601 RocqOfSolidity.RocqEvm.JumpDest <> i:13 var
+R2606:2609 RocqOfSolidity.RocqEvm.JumpDest <> tail:17 var
+prf 2668:2704 <> valid_jump_destinations_from_2_helper
+R2729:2732 Corelib.Init.Datatypes <> list ind
+R2734:2737 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 2723:2726 <> code:18
+R2760:2760 Corelib.Numbers.BinNums <> N ind
+binder 2757:2757 <> i:19
+R2783:2786 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 2780:2780 <> b:20
+R2817:2820 Corelib.Init.Datatypes <> list ind
+R2822:2825 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 2806:2814 <> code_tail:21
+R2858:2860 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2849:2857 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:21 var
+R2861:2870 Stdlib.Lists.List <> skipn abbrev
+R2885:2888 RocqOfSolidity.RocqEvm.JumpDest <> code:18 var
+R2873:2880 Stdlib.NArith.BinNat N to_nat def
+R2882:2882 RocqOfSolidity.RocqEvm.JumpDest <> i:19 var
+binder 2845:2846 <> ok:22
+R2906:2936 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R2938:2938 RocqOfSolidity.RocqEvm.JumpDest <> i:19 var
+R2940:2940 RocqOfSolidity.RocqEvm.JumpDest <> b:20 var
+binder 2898:2901 <> next:23
+R2989:2991 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2947:2956 Stdlib.Lists.List <> skipn abbrev
+R2980:2988 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:21 var
+R2959:2966 Stdlib.NArith.BinNat N to_nat def
+R2973:2975 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R2969:2972 RocqOfSolidity.RocqEvm.JumpDest <> next:23 var
+R2976:2976 RocqOfSolidity.RocqEvm.JumpDest <> i:19 var
+R2992:3001 Stdlib.Lists.List <> skipn abbrev
+R3019:3022 RocqOfSolidity.RocqEvm.JumpDest <> code:18 var
+R3004:3011 Stdlib.NArith.BinNat N to_nat def
+R3013:3016 RocqOfSolidity.RocqEvm.JumpDest <> next:23 var
+R3053:3083 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R3102:3112 RocqOfSolidity.RocqEvm.Lib2.List2 <> skipn_skipn thm
+R3102:3112 RocqOfSolidity.RocqEvm.Lib2.List2 <> skipn_skipn thm
+R3102:3112 RocqOfSolidity.RocqEvm.Lib2.List2 <> skipn_skipn thm
+R3144:3153 Stdlib.NArith.BinNat N add_comm thm
+R3144:3153 Stdlib.NArith.BinNat N add_comm thm
+R3144:3153 Stdlib.NArith.BinNat N add_comm thm
+R3191:3199 Stdlib.NArith.BinNat N le_refl thm
+R3166:3180 Stdlib.NArith.BinNat N add_sub_assoc thm
+R3166:3180 Stdlib.NArith.BinNat N add_sub_assoc thm
+R3191:3199 Stdlib.NArith.BinNat N le_refl thm
+R3166:3180 Stdlib.NArith.BinNat N add_sub_assoc thm
+R3210:3219 Stdlib.NArith.BinNat N sub_diag thm
+R3210:3219 Stdlib.NArith.BinNat N sub_diag thm
+R3210:3219 Stdlib.NArith.BinNat N sub_diag thm
+R3230:3238 Stdlib.NArith.BinNat N add_0_r thm
+R3230:3238 Stdlib.NArith.BinNat N add_0_r thm
+R3230:3238 Stdlib.NArith.BinNat N add_0_r thm
+R3257:3269 Stdlib.NArith.Nnat N2Nat inj_add thm
+R3257:3269 Stdlib.NArith.Nnat N2Nat inj_add thm
+def 3390:3419 <> valid_jump_destinations_from_2
+R3428:3431 Corelib.Init.Datatypes <> list ind
+R3433:3436 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 3422:3425 <> code:24
+R3491:3491 Corelib.Numbers.BinNums <> N ind
+binder 3488:3488 <> i:25
+R3549:3551 Corelib.Init.Datatypes <> nat ind
+binder 3543:3546 <> fuel:26
+R3614:3617 Corelib.Init.Datatypes <> list ind
+R3619:3622 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 3603:3611 <> code_tail:27
+R3687:3689 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3678:3686 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:27 var
+R3690:3699 Stdlib.Lists.List <> skipn abbrev
+R3714:3717 RocqOfSolidity.RocqEvm.JumpDest <> code:24 var
+R3702:3709 Stdlib.NArith.BinNat N to_nat def
+R3711:3711 RocqOfSolidity.RocqEvm.JumpDest <> i:25 var
+binder 3674:3675 <> ok:28
+R3722:3725 Corelib.Init.Datatypes <> list ind
+R3727:3727 Corelib.Numbers.BinNums <> N ind
+R3738:3741 RocqOfSolidity.RocqEvm.JumpDest <> fuel:26 var
+R3753:3753 Corelib.Init.Datatypes <> O constr
+R3758:3760 Corelib.Init.Datatypes <> nil constr
+R3767:3767 Corelib.Init.Datatypes <> S constr
+R3799:3811 Stdlib.Lists.List <> hd_error def
+R3813:3821 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:27 var
+R3836:3839 Corelib.Init.Datatypes <> None constr
+R3844:3846 Corelib.Init.Datatypes <> nil constr
+R3856:3859 Corelib.Init.Datatypes <> Some constr
+R3887:3917 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R3919:3919 RocqOfSolidity.RocqEvm.JumpDest <> i:25 var
+binder 3879:3882 <> next:31
+R3947:3976 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_2:29 def
+R4164:4200 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_2_helper thm
+R4202:4205 RocqOfSolidity.RocqEvm.JumpDest <> code:24 var
+R4207:4207 RocqOfSolidity.RocqEvm.JumpDest <> i:25 var
+R4211:4219 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:27 var
+R4221:4222 RocqOfSolidity.RocqEvm.JumpDest <> ok:28 var
+R4096:4105 Stdlib.Lists.List <> skipn abbrev
+R4129:4137 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:27 var
+R4108:4115 Stdlib.NArith.BinNat N to_nat def
+R4122:4124 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R4118:4121 RocqOfSolidity.RocqEvm.JumpDest <> next:31 var
+R4125:4125 RocqOfSolidity.RocqEvm.JumpDest <> i:25 var
+R4029:4032 RocqOfSolidity.RocqEvm.JumpDest <> next:31 var
+R4001:4004 RocqOfSolidity.RocqEvm.JumpDest <> code:24 var
+binder 3939:3942 <> tail:32
+R4252:4255 Stdlib.NArith.BinNat <> ::N_scope:x_'=?'_x not
+R4241:4249 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R4256:4264 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R4267:4285 RocqOfSolidity.RocqEvm.Instructions <> byte_of_instruction def
+R4287:4294 RocqOfSolidity.RocqEvm.Instructions <> JUMPDEST constr
+R4359:4362 RocqOfSolidity.RocqEvm.JumpDest <> tail:32 var
+R4323:4326 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R4322:4322 RocqOfSolidity.RocqEvm.JumpDest <> i:25 var
+R4327:4330 RocqOfSolidity.RocqEvm.JumpDest <> tail:32 var
+prf 4395:4427 <> valid_jump_destinations_from_2_ok
+R4436:4439 Corelib.Init.Datatypes <> list ind
+R4441:4444 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 4430:4433 <> code:33
+R4499:4499 Corelib.Numbers.BinNums <> N ind
+binder 4496:4496 <> i:34
+R4557:4559 Corelib.Init.Datatypes <> nat ind
+binder 4551:4554 <> fuel:35
+R4622:4625 Corelib.Init.Datatypes <> list ind
+R4627:4630 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 4611:4619 <> code_tail:36
+R4695:4697 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4686:4694 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:36 var
+R4698:4707 Stdlib.Lists.List <> skipn abbrev
+R4722:4725 RocqOfSolidity.RocqEvm.JumpDest <> code:33 var
+R4710:4717 Stdlib.NArith.BinNat N to_nat def
+R4719:4719 RocqOfSolidity.RocqEvm.JumpDest <> i:34 var
+binder 4682:4683 <> ok:37
+R4777:4784 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4731:4764 RocqOfSolidity.RocqEvm.JumpDest <> paper_valid_jump_destinations_from def
+R4766:4769 RocqOfSolidity.RocqEvm.JumpDest <> code:33 var
+R4771:4771 RocqOfSolidity.RocqEvm.JumpDest <> i:34 var
+R4773:4776 RocqOfSolidity.RocqEvm.JumpDest <> fuel:35 var
+R4785:4814 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_2 def
+R4816:4819 RocqOfSolidity.RocqEvm.JumpDest <> code:33 var
+R4821:4821 RocqOfSolidity.RocqEvm.JumpDest <> i:34 var
+R4823:4826 RocqOfSolidity.RocqEvm.JumpDest <> fuel:35 var
+R4828:4836 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:36 var
+R4838:4839 RocqOfSolidity.RocqEvm.JumpDest <> ok:37 var
+R4959:4976 RocqOfSolidity.RocqEvm.Lib2.List2 <> nth_hd_skipn thm
+R4959:4976 RocqOfSolidity.RocqEvm.Lib2.List2 <> nth_hd_skipn thm
+R4959:4976 RocqOfSolidity.RocqEvm.Lib2.List2 <> nth_hd_skipn thm
+R4989:5002 Stdlib.Lists.List <> nth_error def
+R5010:5017 Stdlib.NArith.BinNat N to_nat def
+R4989:5002 Stdlib.Lists.List <> nth_error def
+R5010:5017 Stdlib.NArith.BinNat N to_nat def
+R5060:5063 Stdlib.NArith.BinNat <> ::N_scope:x_'=?'_x not
+R5049:5057 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R5060:5063 Stdlib.NArith.BinNat <> ::N_scope:x_'=?'_x not
+R5049:5057 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+def 5206:5235 <> valid_jump_destinations_from_3
+R5249:5252 Corelib.Init.Datatypes <> list ind
+R5254:5257 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 5238:5246 <> code_tail:38
+R5312:5312 Corelib.Numbers.BinNums <> N ind
+binder 5309:5309 <> i:39
+R5370:5372 Corelib.Init.Datatypes <> nat ind
+binder 5364:5367 <> fuel:40
+R5377:5380 Corelib.Init.Datatypes <> list ind
+R5382:5382 Corelib.Numbers.BinNums <> N ind
+R5393:5396 RocqOfSolidity.RocqEvm.JumpDest <> fuel:40 var
+R5408:5408 Corelib.Init.Datatypes <> O constr
+R5413:5415 Corelib.Init.Datatypes <> nil constr
+R5422:5422 Corelib.Init.Datatypes <> S constr
+R5454:5462 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:38 var
+R5477:5479 Corelib.Init.Datatypes <> nil constr
+R5484:5486 Corelib.Init.Datatypes <> nil constr
+R5498:5501 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R5534:5564 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R5566:5566 RocqOfSolidity.RocqEvm.JumpDest <> i:39 var
+binder 5526:5529 <> next:44
+R5594:5623 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_3:41 def
+R5716:5719 RocqOfSolidity.RocqEvm.JumpDest <> next:44 var
+R5649:5658 Stdlib.Lists.List <> skipn abbrev
+R5682:5690 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:38 var
+R5661:5668 Stdlib.NArith.BinNat N to_nat def
+R5675:5677 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R5671:5674 RocqOfSolidity.RocqEvm.JumpDest <> next:44 var
+R5678:5678 RocqOfSolidity.RocqEvm.JumpDest <> i:39 var
+binder 5586:5589 <> tail:45
+R5786:5789 Stdlib.NArith.BinNat <> ::N_scope:x_'=?'_x not
+R5775:5783 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R5790:5798 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R5801:5819 RocqOfSolidity.RocqEvm.Instructions <> byte_of_instruction def
+R5821:5828 RocqOfSolidity.RocqEvm.Instructions <> JUMPDEST constr
+R5893:5896 RocqOfSolidity.RocqEvm.JumpDest <> tail:45 var
+R5857:5860 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R5856:5856 RocqOfSolidity.RocqEvm.JumpDest <> i:39 var
+R5861:5864 RocqOfSolidity.RocqEvm.JumpDest <> tail:45 var
+prf 5929:5961 <> valid_jump_destinations_from_3_ok
+R5970:5973 Corelib.Init.Datatypes <> list ind
+R5975:5978 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 5964:5967 <> code:46
+R6032:6032 Corelib.Numbers.BinNums <> N ind
+binder 6029:6029 <> i:47
+R6089:6091 Corelib.Init.Datatypes <> nat ind
+binder 6083:6086 <> fuel:48
+R6153:6156 Corelib.Init.Datatypes <> list ind
+R6158:6161 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 6142:6150 <> code_tail:49
+R6225:6227 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6216:6224 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:49 var
+R6228:6237 Stdlib.Lists.List <> skipn abbrev
+R6252:6255 RocqOfSolidity.RocqEvm.JumpDest <> code:46 var
+R6240:6247 Stdlib.NArith.BinNat N to_nat def
+R6249:6249 RocqOfSolidity.RocqEvm.JumpDest <> i:47 var
+binder 6212:6213 <> ok:50
+R6308:6315 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6261:6290 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_3 def
+R6292:6300 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:49 var
+R6302:6302 RocqOfSolidity.RocqEvm.JumpDest <> i:47 var
+R6304:6307 RocqOfSolidity.RocqEvm.JumpDest <> fuel:48 var
+R6316:6345 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_2 def
+R6347:6350 RocqOfSolidity.RocqEvm.JumpDest <> code:46 var
+R6352:6352 RocqOfSolidity.RocqEvm.JumpDest <> i:47 var
+R6354:6357 RocqOfSolidity.RocqEvm.JumpDest <> fuel:48 var
+R6359:6367 RocqOfSolidity.RocqEvm.JumpDest <> code_tail:49 var
+R6369:6370 RocqOfSolidity.RocqEvm.JumpDest <> ok:50 var
+R6506:6509 Stdlib.NArith.BinNat <> ::N_scope:x_'=?'_x not
+R6495:6503 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R6506:6509 Stdlib.NArith.BinNat <> ::N_scope:x_'=?'_x not
+R6495:6503 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+def 6628:6657 <> valid_jump_destinations_from_4
+R6666:6669 Corelib.Init.Datatypes <> list ind
+R6671:6674 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 6660:6663 <> code:51
+R6687:6687 Corelib.Numbers.BinNums <> N ind
+binder 6678:6684 <> current:52
+R6703:6703 Corelib.Numbers.BinNums <> N ind
+binder 6691:6700 <> next_valid:53
+R6708:6711 Corelib.Init.Datatypes <> list ind
+R6713:6713 Corelib.Numbers.BinNums <> N ind
+R6724:6727 RocqOfSolidity.RocqEvm.JumpDest <> code:51 var
+R6739:6741 Corelib.Init.Datatypes <> nil constr
+R6746:6748 Corelib.Init.Datatypes <> nil constr
+R6757:6760 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R6791:6794 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R6784:6790 RocqOfSolidity.RocqEvm.JumpDest <> current:52 var
+R6795:6804 RocqOfSolidity.RocqEvm.JumpDest <> next_valid:53 var
+R6926:6955 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_4:54 def
+R7089:7119 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R7121:7127 RocqOfSolidity.RocqEvm.JumpDest <> current:52 var
+R7024:7026 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R7017:7023 RocqOfSolidity.RocqEvm.JumpDest <> current:52 var
+binder 6918:6921 <> tail:56
+R7163:7166 Stdlib.NArith.BinNat <> ::N_scope:x_'=?'_x not
+R7152:7160 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R7167:7175 RocqOfSolidity.RocqEvm.Arith.Nibble <> N_of_byte def
+R7178:7196 RocqOfSolidity.RocqEvm.Instructions <> byte_of_instruction def
+R7198:7205 RocqOfSolidity.RocqEvm.Instructions <> JUMPDEST constr
+R7280:7283 RocqOfSolidity.RocqEvm.JumpDest <> tail:56 var
+R7242:7245 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7235:7241 RocqOfSolidity.RocqEvm.JumpDest <> current:52 var
+R7246:7249 RocqOfSolidity.RocqEvm.JumpDest <> tail:56 var
+R6825:6854 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_4:54 def
+R6874:6883 RocqOfSolidity.RocqEvm.JumpDest <> next_valid:53 var
+R6866:6868 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R6859:6865 RocqOfSolidity.RocqEvm.JumpDest <> current:52 var
+prf 7305:7340 <> valid_jump_destinations_from_4_skips
+R7349:7352 Corelib.Init.Datatypes <> list ind
+R7354:7357 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 7343:7346 <> code:57
+R7370:7370 Corelib.Numbers.BinNums <> N ind
+binder 7361:7367 <> current:58
+R7386:7386 Corelib.Numbers.BinNums <> N ind
+binder 7374:7383 <> next_valid:59
+R7452:7455 Stdlib.NArith.BinNat <> ::N_scope:x_'<='_x not
+R7445:7451 RocqOfSolidity.RocqEvm.JumpDest <> current:58 var
+R7456:7465 RocqOfSolidity.RocqEvm.JumpDest <> next_valid:59 var
+binder 7440:7441 <> ok:60
+R7528:7535 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7474:7503 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_4 def
+R7505:7508 RocqOfSolidity.RocqEvm.JumpDest <> code:57 var
+R7510:7516 RocqOfSolidity.RocqEvm.JumpDest <> current:58 var
+R7518:7527 RocqOfSolidity.RocqEvm.JumpDest <> next_valid:59 var
+R7536:7565 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_4 def
+R7568:7577 Stdlib.Lists.List <> skipn abbrev
+R7613:7616 RocqOfSolidity.RocqEvm.JumpDest <> code:57 var
+R7580:7587 Stdlib.NArith.BinNat N to_nat def
+R7600:7602 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R7590:7599 RocqOfSolidity.RocqEvm.JumpDest <> next_valid:59 var
+R7603:7609 RocqOfSolidity.RocqEvm.JumpDest <> current:58 var
+R7653:7662 RocqOfSolidity.RocqEvm.JumpDest <> next_valid:59 var
+R7698:7707 RocqOfSolidity.RocqEvm.JumpDest <> next_valid:59 var
+R7727:7734 Stdlib.NArith.BinNat N to_nat def
+R7747:7749 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R7727:7734 Stdlib.NArith.BinNat N to_nat def
+R7747:7749 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R7786:7788 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7797:7799 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R7800:7807 Stdlib.NArith.BinNat N of_nat def
+R7786:7788 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7797:7799 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R7800:7807 Stdlib.NArith.BinNat N of_nat def
+R7924:7932 Stdlib.NArith.BinNat N add_0_r thm
+R7924:7932 Stdlib.NArith.BinNat N add_0_r thm
+R7924:7932 Stdlib.NArith.BinNat N add_0_r thm
+R7924:7932 Stdlib.NArith.BinNat N add_0_r thm
+R7986:7989 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R7997:7999 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8000:8004 Stdlib.NArith.BinNat N pos abbrev
+R8007:8021 Stdlib.PArith.BinPos Pos of_succ_nat def
+R8034:8037 Corelib.Init.Datatypes <> true constr
+R7986:7989 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R7997:7999 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8000:8004 Stdlib.NArith.BinNat N pos abbrev
+R8007:8021 Stdlib.PArith.BinPos Pos of_succ_nat def
+R8034:8037 Corelib.Init.Datatypes <> true constr
+R8065:8072 Stdlib.NArith.BinNat N ltb_lt thm
+R8065:8072 Stdlib.NArith.BinNat N ltb_lt thm
+R8100:8102 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8103:8107 Stdlib.NArith.BinNat N pos abbrev
+R8110:8124 Stdlib.PArith.BinPos Pos of_succ_nat def
+R8149:8151 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8145:8147 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8152:8159 Stdlib.NArith.BinNat N of_nat def
+R8100:8102 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8103:8107 Stdlib.NArith.BinNat N pos abbrev
+R8110:8124 Stdlib.PArith.BinPos Pos of_succ_nat def
+R8149:8151 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8145:8147 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8152:8159 Stdlib.NArith.BinNat N of_nat def
+prf 8203:8235 <> valid_jump_destinations_from_4_ok
+R8244:8247 Corelib.Init.Datatypes <> list ind
+R8249:8252 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 8238:8241 <> code:61
+R8306:8306 Corelib.Numbers.BinNums <> N ind
+binder 8303:8303 <> i:62
+R8363:8365 Corelib.Init.Datatypes <> nat ind
+binder 8357:8360 <> fuel:63
+R8440:8442 Corelib.Init.Peano <> ::nat_scope:x_'<'_x not
+R8429:8434 Corelib.Init.Datatypes <> length def
+R8436:8439 RocqOfSolidity.RocqEvm.JumpDest <> code:61 var
+R8443:8446 RocqOfSolidity.RocqEvm.JumpDest <> fuel:63 var
+binder 8416:8425 <> EnoughFuel:64
+R8496:8503 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8457:8486 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_4 def
+R8488:8491 RocqOfSolidity.RocqEvm.JumpDest <> code:61 var
+R8493:8493 RocqOfSolidity.RocqEvm.JumpDest <> i:62 var
+R8495:8495 RocqOfSolidity.RocqEvm.JumpDest <> i:62 var
+R8504:8533 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_3 def
+R8535:8538 RocqOfSolidity.RocqEvm.JumpDest <> code:61 var
+R8540:8540 RocqOfSolidity.RocqEvm.JumpDest <> i:62 var
+R8542:8545 RocqOfSolidity.RocqEvm.JumpDest <> fuel:63 var
+R8617:8627 Stdlib.Arith.PeanoNat Nat nlt_0_r thm
+R8617:8627 Stdlib.Arith.PeanoNat Nat nlt_0_r thm
+R8691:8694 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R8705:8709 Corelib.Init.Datatypes <> false constr
+R8691:8694 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R8705:8709 Corelib.Init.Datatypes <> false constr
+R8733:8739 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> b_false thm
+R8742:8749 Stdlib.NArith.BinNat N ltb_lt thm
+R8733:8739 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> b_false thm
+R8742:8749 Stdlib.NArith.BinNat N ltb_lt thm
+R8764:8774 Stdlib.NArith.BinNat N lt_irrefl thm
+R8764:8774 Stdlib.NArith.BinNat N lt_irrefl thm
+R8788:8817 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_4 def
+R8826:8828 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8833:8863 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R8879:8908 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_3 def
+R8919:8928 Stdlib.Lists.List <> skipn abbrev
+R8985:8988 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8931:8938 Stdlib.NArith.BinNat N to_nat def
+R8976:8978 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R8941:8971 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R9005:9035 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R8788:8817 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_4 def
+R8826:8828 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R8833:8863 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R8879:8908 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_3 def
+R8919:8928 Stdlib.Lists.List <> skipn abbrev
+R8985:8988 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8931:8938 Stdlib.NArith.BinNat N to_nat def
+R8976:8978 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R8941:8971 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R9005:9035 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R9075:9111 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position_bound thm
+R9075:9111 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position_bound thm
+R9127:9162 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_4_skips thm
+R9127:9162 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_4_skips thm
+R9127:9162 RocqOfSolidity.RocqEvm.JumpDest <> valid_jump_destinations_from_4_skips thm
+R9219:9226 Stdlib.NArith.BinNat N to_nat def
+R9264:9266 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R9229:9259 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R9282:9282 Corelib.Init.Datatypes <> S constr
+R9286:9293 Stdlib.NArith.BinNat N to_nat def
+R9331:9334 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R9340:9340 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R9296:9326 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R9336:9338 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R9219:9226 Stdlib.NArith.BinNat N to_nat def
+R9264:9266 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R9229:9259 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R9282:9282 Corelib.Init.Datatypes <> S constr
+R9286:9293 Stdlib.NArith.BinNat N to_nat def
+R9331:9334 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R9340:9340 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R9296:9326 RocqOfSolidity.RocqEvm.JumpDest <> next_valid_instruction_position def
+R9336:9338 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R9368:9382 Stdlib.Lists.List <> skipn_cons thm
+R9368:9382 Stdlib.Lists.List <> skipn_cons thm
+R9368:9382 Stdlib.Lists.List <> skipn_cons thm
+R9395:9411 Stdlib.Lists.List <> length_skipn thm
+R9395:9411 Stdlib.Lists.List <> length_skipn thm
+R9395:9411 Stdlib.Lists.List <> length_skipn thm

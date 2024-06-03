@@ -1,0 +1,155 @@
+DIGEST 4ec9cb2a120590579f21fee9efd6affb
+FRocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest
+R41:69 RocqOfSolidity.RocqOfSolidity <> <> lib
+R87:112 RocqOfSolidity.simulations.RocqOfSolidity <> <> lib
+R124:186 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.C <> <> lib
+def 201:216 <> constructor_code
+R220:225 RocqOfSolidity.RocqOfSolidity Code t rec
+R232:301 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.C C code def
+def 316:328 <> deployed_code
+R332:337 RocqOfSolidity.RocqOfSolidity Code t rec
+R344:422 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.C C.deployed code def
+def 437:441 <> codes
+R445:448 Corelib.Init.Datatypes <> list ind
+R450:455 RocqOfSolidity.RocqOfSolidity Code t rec
+R462:530 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.C <> codes def
+mod 541:551 <> Constructor
+def 567:577 Constructor environment
+R581:593 RocqOfSolidity.RocqOfSolidity Environment t rec
+R604:621 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R604:621 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R604:621 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R674:694 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R674:694 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R706:725 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R706:725 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R738:756 RocqOfSolidity.RocqOfSolidity Environment address proj
+R738:756 RocqOfSolidity.RocqOfSolidity Environment address proj
+R809:829 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R809:829 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R730:731 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R852:864 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R834:849 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest <> constructor_code def
+def 888:900 Constructor initial_state
+R904:910 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R947:965 RocqOfSolidity.RocqOfSolidity Environment address proj
+R934:944 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Constructor environment def
+binder 923:929 <> address:1
+R999:1013 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R999:1013 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R999:1013 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R1061:1073 RocqOfSolidity.simulations.RocqOfSolidity Account nonce proj
+R1061:1073 RocqOfSolidity.simulations.RocqOfSolidity Account nonce proj
+R1087:1098 RocqOfSolidity.simulations.RocqOfSolidity Account code proj
+R1087:1098 RocqOfSolidity.simulations.RocqOfSolidity Account code proj
+R1143:1158 RocqOfSolidity.simulations.RocqOfSolidity Account codedata proj
+R1143:1158 RocqOfSolidity.simulations.RocqOfSolidity Account codedata proj
+R1200:1214 RocqOfSolidity.simulations.RocqOfSolidity Account storage proj
+R1200:1214 RocqOfSolidity.simulations.RocqOfSolidity Account storage proj
+R1239:1256 RocqOfSolidity.simulations.RocqOfSolidity Account immutables proj
+R1239:1256 RocqOfSolidity.simulations.RocqOfSolidity Account immutables proj
+R1031:1051 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R1018:1028 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Constructor environment def
+R1121:1133 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1103:1118 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest <> constructor_code def
+R1163:1188 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R1219:1230 RocqOfSolidity.simulations.RocqOfSolidity Memory empty def
+R1261:1262 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+binder 979:985 <> account:2
+R1289:1292 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1307:1310 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1331:1333 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1293:1306 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R1311:1311 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1330:1330 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1312:1312 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1320:1321 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1329:1329 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1313:1319 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest <> address:1 var
+R1322:1328 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest <> account:2 var
+R1279:1288 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 1350:1361 Constructor result_state
+R1370:1385 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R1392:1396 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest <> codes def
+R1398:1408 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Constructor environment def
+R1428:1436 RocqOfSolidity.RocqOfSolidity Code body proj
+R1410:1425 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest <> constructor_code def
+R1439:1451 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Constructor initial_state def
+def 1468:1473 Constructor result
+R1478:1480 Corelib.Init.Datatypes <> fst def
+R1482:1493 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Constructor result_state def
+def 1509:1513 Constructor state
+R1518:1520 Corelib.Init.Datatypes <> snd def
+R1522:1533 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Constructor result_state def
+def 1539:1629 Constructor Unnamed_thm
+R1571:1573 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1544:1557 RocqOfSolidity.simulations.RocqOfSolidity Test is_return def
+R1559:1564 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Constructor result def
+R1566:1570 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Constructor state def
+R1574:1576 Corelib.Init.Datatypes <> inl constr
+R1579:1598 RocqOfSolidity.simulations.RocqOfSolidity Memory u256_as_bytes def
+R1615:1627 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1600:1612 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest <> deployed_code def
+def 1693:1703 Constructor final_state
+R1707:1713 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R1720:1722 Corelib.Init.Datatypes <> snd def
+R1730:1733 RocqOfSolidity.simulations.RocqOfSolidity <> eval def
+R1821:1825 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Constructor state def
+R1759:1788 RocqOfSolidity.simulations.RocqOfSolidity <> update_current_code_for_deploy def
+R1805:1817 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1790:1802 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest <> deployed_code def
+R1746:1756 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Constructor environment def
+R1740:1744 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest <> codes def
+R1836:1846 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Constructor <> mod
+mod 2076:2080 <> Step1
+def 2096:2106 Step1 environment
+R2110:2122 RocqOfSolidity.RocqOfSolidity Environment t rec
+R2133:2150 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R2133:2150 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R2133:2150 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R2203:2223 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R2203:2223 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R2235:2254 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R2235:2254 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R2302:2320 RocqOfSolidity.RocqOfSolidity Environment address proj
+R2302:2320 RocqOfSolidity.RocqOfSolidity Environment address proj
+R2373:2393 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R2373:2393 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R2259:2284 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R2413:2425 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R2398:2410 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest <> deployed_code def
+def 2449:2461 Step1 initial_state
+R2465:2471 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R2490:2493 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2508:2511 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2552:2554 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2494:2507 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R2537:2550 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R2512:2534 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Constructor final_state def
+R2480:2489 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 2571:2582 Step1 result_state
+R2591:2606 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R2613:2617 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest <> codes def
+R2619:2629 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Step1 environment def
+R2646:2654 RocqOfSolidity.RocqOfSolidity Code body proj
+R2631:2643 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest <> deployed_code def
+R2657:2669 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Step1 initial_state def
+def 2686:2691 Step1 result
+R2696:2698 Corelib.Init.Datatypes <> fst def
+R2700:2711 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Step1 result_state def
+def 2727:2731 Step1 state
+R2736:2738 Corelib.Init.Datatypes <> snd def
+R2740:2751 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Step1 result_state def
+def 2768:2782 Step1 expected_output
+R2786:2789 Corelib.Init.Datatypes <> list ind
+R2791:2791 Corelib.Numbers.BinNums <> Z ind
+R2800:2825 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+def 3026:3104 Step1 Unnamed_thm
+R3083:3085 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3031:3049 RocqOfSolidity.simulations.RocqOfSolidity Test extract_output def
+R3051:3056 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Step1 result def
+R3058:3062 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Step1 state def
+R3064:3082 RocqOfSolidity.simulations.RocqOfSolidity Test.Status Success constr
+R3086:3088 Corelib.Init.Datatypes <> inl constr
+R3090:3104 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Step1 expected_output def
+R3160:3164 RocqOfSolidityTests.semanticTests.builtinFunctions.keccak256_packed_complex_types.GeneratedTest Step1 <> mod

@@ -1,0 +1,155 @@
+DIGEST c2b08252a95ac93682024a788810b48c
+FRocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest
+R41:69 RocqOfSolidity.RocqOfSolidity <> <> lib
+R87:112 RocqOfSolidity.simulations.RocqOfSolidity <> <> lib
+R124:173 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.C <> <> lib
+def 188:203 <> constructor_code
+R207:212 RocqOfSolidity.RocqOfSolidity Code t rec
+R219:275 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.C C code def
+def 290:302 <> deployed_code
+R306:311 RocqOfSolidity.RocqOfSolidity Code t rec
+R318:383 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.C C.deployed code def
+def 398:402 <> codes
+R406:409 Corelib.Init.Datatypes <> list ind
+R411:416 RocqOfSolidity.RocqOfSolidity Code t rec
+R423:478 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.C <> codes def
+mod 489:499 <> Constructor
+def 515:525 Constructor environment
+R529:541 RocqOfSolidity.RocqOfSolidity Environment t rec
+R552:569 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R552:569 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R552:569 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R622:642 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R622:642 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R654:673 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R654:673 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R686:704 RocqOfSolidity.RocqOfSolidity Environment address proj
+R686:704 RocqOfSolidity.RocqOfSolidity Environment address proj
+R757:777 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R757:777 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R678:679 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R800:812 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R782:797 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest <> constructor_code def
+def 836:848 Constructor initial_state
+R852:858 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R895:913 RocqOfSolidity.RocqOfSolidity Environment address proj
+R882:892 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Constructor environment def
+binder 871:877 <> address:1
+R947:961 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R947:961 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R947:961 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R1009:1021 RocqOfSolidity.simulations.RocqOfSolidity Account nonce proj
+R1009:1021 RocqOfSolidity.simulations.RocqOfSolidity Account nonce proj
+R1035:1046 RocqOfSolidity.simulations.RocqOfSolidity Account code proj
+R1035:1046 RocqOfSolidity.simulations.RocqOfSolidity Account code proj
+R1091:1106 RocqOfSolidity.simulations.RocqOfSolidity Account codedata proj
+R1091:1106 RocqOfSolidity.simulations.RocqOfSolidity Account codedata proj
+R1148:1162 RocqOfSolidity.simulations.RocqOfSolidity Account storage proj
+R1148:1162 RocqOfSolidity.simulations.RocqOfSolidity Account storage proj
+R1187:1204 RocqOfSolidity.simulations.RocqOfSolidity Account immutables proj
+R1187:1204 RocqOfSolidity.simulations.RocqOfSolidity Account immutables proj
+R979:999 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R966:976 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Constructor environment def
+R1069:1081 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1051:1066 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest <> constructor_code def
+R1111:1136 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R1167:1178 RocqOfSolidity.simulations.RocqOfSolidity Memory empty def
+R1209:1210 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+binder 927:933 <> account:2
+R1237:1240 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1255:1258 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1279:1281 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1241:1254 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R1259:1259 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1278:1278 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1260:1260 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1268:1269 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1277:1277 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1261:1267 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest <> address:1 var
+R1270:1276 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest <> account:2 var
+R1227:1236 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 1298:1309 Constructor result_state
+R1318:1333 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R1340:1344 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest <> codes def
+R1346:1356 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Constructor environment def
+R1376:1384 RocqOfSolidity.RocqOfSolidity Code body proj
+R1358:1373 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest <> constructor_code def
+R1387:1399 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Constructor initial_state def
+def 1416:1421 Constructor result
+R1426:1428 Corelib.Init.Datatypes <> fst def
+R1430:1441 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Constructor result_state def
+def 1457:1461 Constructor state
+R1466:1468 Corelib.Init.Datatypes <> snd def
+R1470:1481 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Constructor result_state def
+def 1487:1577 Constructor Unnamed_thm
+R1519:1521 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1492:1505 RocqOfSolidity.simulations.RocqOfSolidity Test is_return def
+R1507:1512 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Constructor result def
+R1514:1518 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Constructor state def
+R1522:1524 Corelib.Init.Datatypes <> inl constr
+R1527:1546 RocqOfSolidity.simulations.RocqOfSolidity Memory u256_as_bytes def
+R1563:1575 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1548:1560 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest <> deployed_code def
+def 1641:1651 Constructor final_state
+R1655:1661 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R1668:1670 Corelib.Init.Datatypes <> snd def
+R1678:1681 RocqOfSolidity.simulations.RocqOfSolidity <> eval def
+R1769:1773 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Constructor state def
+R1707:1736 RocqOfSolidity.simulations.RocqOfSolidity <> update_current_code_for_deploy def
+R1753:1765 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1738:1750 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest <> deployed_code def
+R1694:1704 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Constructor environment def
+R1688:1692 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest <> codes def
+R1784:1794 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Constructor <> mod
+mod 1826:1830 <> Step1
+def 1846:1856 Step1 environment
+R1860:1872 RocqOfSolidity.RocqOfSolidity Environment t rec
+R1883:1900 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R1883:1900 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R1883:1900 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R1953:1973 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R1953:1973 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R1985:2004 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R1985:2004 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R2052:2070 RocqOfSolidity.RocqOfSolidity Environment address proj
+R2052:2070 RocqOfSolidity.RocqOfSolidity Environment address proj
+R2123:2143 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R2123:2143 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R2009:2034 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R2163:2175 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R2148:2160 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest <> deployed_code def
+def 2199:2211 Step1 initial_state
+R2215:2221 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R2240:2243 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2258:2261 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2302:2304 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2244:2257 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R2287:2300 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R2262:2284 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Constructor final_state def
+R2230:2239 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 2321:2332 Step1 result_state
+R2341:2356 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R2363:2367 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest <> codes def
+R2369:2379 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Step1 environment def
+R2396:2404 RocqOfSolidity.RocqOfSolidity Code body proj
+R2381:2393 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest <> deployed_code def
+R2407:2419 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Step1 initial_state def
+def 2436:2441 Step1 result
+R2446:2448 Corelib.Init.Datatypes <> fst def
+R2450:2461 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Step1 result_state def
+def 2477:2481 Step1 state
+R2486:2488 Corelib.Init.Datatypes <> snd def
+R2490:2501 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Step1 result_state def
+def 2518:2532 Step1 expected_output
+R2536:2539 Corelib.Init.Datatypes <> list ind
+R2541:2541 Corelib.Numbers.BinNums <> Z ind
+R2550:2575 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+def 2648:2726 Step1 Unnamed_thm
+R2705:2707 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2653:2671 RocqOfSolidity.simulations.RocqOfSolidity Test extract_output def
+R2673:2678 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Step1 result def
+R2680:2684 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Step1 state def
+R2686:2704 RocqOfSolidity.simulations.RocqOfSolidity Test.Status Success constr
+R2708:2710 Corelib.Init.Datatypes <> inl constr
+R2712:2726 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Step1 expected_output def
+R2782:2786 RocqOfSolidityTests.semanticTests.expressions.unary_too_long_literal.GeneratedTest Step1 <> mod

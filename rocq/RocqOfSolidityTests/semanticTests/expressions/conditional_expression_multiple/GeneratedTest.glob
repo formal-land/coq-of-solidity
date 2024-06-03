@@ -1,0 +1,311 @@
+DIGEST 2fb8a0a0f9ac62a5a85ad88ea74947b0
+FRocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest
+R41:69 RocqOfSolidity.RocqOfSolidity <> <> lib
+R87:112 RocqOfSolidity.simulations.RocqOfSolidity <> <> lib
+R124:185 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.test <> <> lib
+def 200:215 <> constructor_code
+R219:224 RocqOfSolidity.RocqOfSolidity Code t rec
+R231:302 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.test test code def
+def 317:329 <> deployed_code
+R333:338 RocqOfSolidity.RocqOfSolidity Code t rec
+R345:425 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.test test.deployed code def
+def 440:444 <> codes
+R448:451 Corelib.Init.Datatypes <> list ind
+R453:458 RocqOfSolidity.RocqOfSolidity Code t rec
+R465:532 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.test <> codes def
+mod 543:553 <> Constructor
+def 569:579 Constructor environment
+R583:595 RocqOfSolidity.RocqOfSolidity Environment t rec
+R606:623 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R606:623 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R606:623 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R676:696 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R676:696 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R708:727 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R708:727 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R740:758 RocqOfSolidity.RocqOfSolidity Environment address proj
+R740:758 RocqOfSolidity.RocqOfSolidity Environment address proj
+R811:831 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R811:831 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R732:733 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R854:866 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R836:851 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> constructor_code def
+def 890:902 Constructor initial_state
+R906:912 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R949:967 RocqOfSolidity.RocqOfSolidity Environment address proj
+R936:946 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Constructor environment def
+binder 925:931 <> address:1
+R1001:1015 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R1001:1015 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R1001:1015 RocqOfSolidity.simulations.RocqOfSolidity Account balance proj
+R1063:1075 RocqOfSolidity.simulations.RocqOfSolidity Account nonce proj
+R1063:1075 RocqOfSolidity.simulations.RocqOfSolidity Account nonce proj
+R1089:1100 RocqOfSolidity.simulations.RocqOfSolidity Account code proj
+R1089:1100 RocqOfSolidity.simulations.RocqOfSolidity Account code proj
+R1145:1160 RocqOfSolidity.simulations.RocqOfSolidity Account codedata proj
+R1145:1160 RocqOfSolidity.simulations.RocqOfSolidity Account codedata proj
+R1202:1216 RocqOfSolidity.simulations.RocqOfSolidity Account storage proj
+R1202:1216 RocqOfSolidity.simulations.RocqOfSolidity Account storage proj
+R1241:1258 RocqOfSolidity.simulations.RocqOfSolidity Account immutables proj
+R1241:1258 RocqOfSolidity.simulations.RocqOfSolidity Account immutables proj
+R1033:1053 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R1020:1030 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Constructor environment def
+R1123:1135 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1105:1120 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> constructor_code def
+R1165:1190 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R1221:1232 RocqOfSolidity.simulations.RocqOfSolidity Memory empty def
+R1263:1264 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+binder 981:987 <> account:2
+R1291:1294 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1309:1312 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1333:1335 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1295:1308 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R1313:1313 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1332:1332 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R1314:1314 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1322:1323 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1331:1331 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1315:1321 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> address:1 var
+R1324:1330 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> account:2 var
+R1281:1290 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 1352:1363 Constructor result_state
+R1372:1387 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R1394:1398 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> codes def
+R1400:1410 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Constructor environment def
+R1430:1438 RocqOfSolidity.RocqOfSolidity Code body proj
+R1412:1427 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> constructor_code def
+R1441:1453 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Constructor initial_state def
+def 1470:1475 Constructor result
+R1480:1482 Corelib.Init.Datatypes <> fst def
+R1484:1495 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Constructor result_state def
+def 1511:1515 Constructor state
+R1520:1522 Corelib.Init.Datatypes <> snd def
+R1524:1535 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Constructor result_state def
+def 1541:1631 Constructor Unnamed_thm
+R1573:1575 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1546:1559 RocqOfSolidity.simulations.RocqOfSolidity Test is_return def
+R1561:1566 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Constructor result def
+R1568:1572 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Constructor state def
+R1576:1578 Corelib.Init.Datatypes <> inl constr
+R1581:1600 RocqOfSolidity.simulations.RocqOfSolidity Memory u256_as_bytes def
+R1617:1629 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1602:1614 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> deployed_code def
+def 1695:1705 Constructor final_state
+R1709:1715 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R1722:1724 Corelib.Init.Datatypes <> snd def
+R1732:1735 RocqOfSolidity.simulations.RocqOfSolidity <> eval def
+R1823:1827 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Constructor state def
+R1761:1790 RocqOfSolidity.simulations.RocqOfSolidity <> update_current_code_for_deploy def
+R1807:1819 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R1792:1804 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> deployed_code def
+R1748:1758 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Constructor environment def
+R1742:1746 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> codes def
+R1838:1848 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Constructor <> mod
+mod 1893:1897 <> Step1
+def 1913:1923 Step1 environment
+R1927:1939 RocqOfSolidity.RocqOfSolidity Environment t rec
+R1950:1967 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R1950:1967 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R1950:1967 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R2020:2040 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R2020:2040 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R2052:2071 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R2052:2071 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R2183:2201 RocqOfSolidity.RocqOfSolidity Environment address proj
+R2183:2201 RocqOfSolidity.RocqOfSolidity Environment address proj
+R2254:2274 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R2254:2274 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R2076:2101 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R2294:2306 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R2279:2291 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> deployed_code def
+def 2330:2342 Step1 initial_state
+R2346:2352 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R2371:2374 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2389:2392 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2433:2435 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R2375:2388 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R2418:2431 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R2393:2415 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Constructor final_state def
+R2361:2370 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 2452:2463 Step1 result_state
+R2472:2487 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R2494:2498 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> codes def
+R2500:2510 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step1 environment def
+R2527:2535 RocqOfSolidity.RocqOfSolidity Code body proj
+R2512:2524 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> deployed_code def
+R2538:2550 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step1 initial_state def
+def 2567:2572 Step1 result
+R2577:2579 Corelib.Init.Datatypes <> fst def
+R2581:2592 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step1 result_state def
+def 2608:2612 Step1 state
+R2617:2619 Corelib.Init.Datatypes <> snd def
+R2621:2632 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step1 result_state def
+def 2649:2663 Step1 expected_output
+R2667:2670 Corelib.Init.Datatypes <> list ind
+R2672:2672 Corelib.Numbers.BinNums <> Z ind
+R2681:2706 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+def 2779:2857 Step1 Unnamed_thm
+R2836:2838 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2784:2802 RocqOfSolidity.simulations.RocqOfSolidity Test extract_output def
+R2804:2809 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step1 result def
+R2811:2815 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step1 state def
+R2817:2835 RocqOfSolidity.simulations.RocqOfSolidity Test.Status Success constr
+R2839:2841 Corelib.Init.Datatypes <> inl constr
+R2843:2857 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step1 expected_output def
+R2913:2917 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step1 <> mod
+mod 2960:2964 <> Step2
+def 2980:2990 Step2 environment
+R2994:3006 RocqOfSolidity.RocqOfSolidity Environment t rec
+R3017:3034 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R3017:3034 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R3017:3034 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R3087:3107 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R3087:3107 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R3119:3138 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R3119:3138 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R3250:3268 RocqOfSolidity.RocqOfSolidity Environment address proj
+R3250:3268 RocqOfSolidity.RocqOfSolidity Environment address proj
+R3321:3341 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R3321:3341 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R3143:3168 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R3361:3373 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R3346:3358 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> deployed_code def
+def 3397:3409 Step2 initial_state
+R3413:3419 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R3438:3441 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3456:3459 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3488:3490 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R3442:3455 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R3473:3486 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R3460:3470 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step1 state def
+R3428:3437 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 3507:3518 Step2 result_state
+R3527:3542 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R3549:3553 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> codes def
+R3555:3565 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step2 environment def
+R3582:3590 RocqOfSolidity.RocqOfSolidity Code body proj
+R3567:3579 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> deployed_code def
+R3593:3605 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step2 initial_state def
+def 3622:3627 Step2 result
+R3632:3634 Corelib.Init.Datatypes <> fst def
+R3636:3647 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step2 result_state def
+def 3663:3667 Step2 state
+R3672:3674 Corelib.Init.Datatypes <> snd def
+R3676:3687 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step2 result_state def
+def 3704:3718 Step2 expected_output
+R3722:3725 Corelib.Init.Datatypes <> list ind
+R3727:3727 Corelib.Numbers.BinNums <> Z ind
+R3736:3761 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+def 3834:3912 Step2 Unnamed_thm
+R3891:3893 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3839:3857 RocqOfSolidity.simulations.RocqOfSolidity Test extract_output def
+R3859:3864 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step2 result def
+R3866:3870 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step2 state def
+R3872:3890 RocqOfSolidity.simulations.RocqOfSolidity Test.Status Success constr
+R3894:3896 Corelib.Init.Datatypes <> inl constr
+R3898:3912 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step2 expected_output def
+R3968:3972 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step2 <> mod
+mod 4013:4017 <> Step3
+def 4033:4043 Step3 environment
+R4047:4059 RocqOfSolidity.RocqOfSolidity Environment t rec
+R4070:4087 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R4070:4087 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R4070:4087 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R4140:4160 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R4140:4160 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R4172:4191 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R4172:4191 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R4303:4321 RocqOfSolidity.RocqOfSolidity Environment address proj
+R4303:4321 RocqOfSolidity.RocqOfSolidity Environment address proj
+R4374:4394 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R4374:4394 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R4196:4221 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R4414:4426 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R4399:4411 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> deployed_code def
+def 4450:4462 Step3 initial_state
+R4466:4472 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R4491:4494 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R4509:4512 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R4541:4543 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R4495:4508 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R4526:4539 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R4513:4523 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step2 state def
+R4481:4490 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 4560:4571 Step3 result_state
+R4580:4595 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R4602:4606 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> codes def
+R4608:4618 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step3 environment def
+R4635:4643 RocqOfSolidity.RocqOfSolidity Code body proj
+R4620:4632 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> deployed_code def
+R4646:4658 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step3 initial_state def
+def 4675:4680 Step3 result
+R4685:4687 Corelib.Init.Datatypes <> fst def
+R4689:4700 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step3 result_state def
+def 4716:4720 Step3 state
+R4725:4727 Corelib.Init.Datatypes <> snd def
+R4729:4740 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step3 result_state def
+def 4757:4771 Step3 expected_output
+R4775:4778 Corelib.Init.Datatypes <> list ind
+R4780:4780 Corelib.Numbers.BinNums <> Z ind
+R4789:4814 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+def 4887:4965 Step3 Unnamed_thm
+R4944:4946 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4892:4910 RocqOfSolidity.simulations.RocqOfSolidity Test extract_output def
+R4912:4917 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step3 result def
+R4919:4923 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step3 state def
+R4925:4943 RocqOfSolidity.simulations.RocqOfSolidity Test.Status Success constr
+R4947:4949 Corelib.Init.Datatypes <> inl constr
+R4951:4965 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step3 expected_output def
+R5021:5025 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step3 <> mod
+mod 5066:5070 <> Step4
+def 5086:5096 Step4 environment
+R5100:5112 RocqOfSolidity.RocqOfSolidity Environment t rec
+R5123:5140 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R5123:5140 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R5123:5140 RocqOfSolidity.RocqOfSolidity Environment caller proj
+R5193:5213 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R5193:5213 RocqOfSolidity.RocqOfSolidity Environment callvalue proj
+R5225:5244 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R5225:5244 RocqOfSolidity.RocqOfSolidity Environment calldata proj
+R5356:5374 RocqOfSolidity.RocqOfSolidity Environment address proj
+R5356:5374 RocqOfSolidity.RocqOfSolidity Environment address proj
+R5427:5447 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R5427:5447 RocqOfSolidity.RocqOfSolidity Environment code_name proj
+R5249:5274 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+R5467:5479 RocqOfSolidity.RocqOfSolidity Code hex_name proj
+R5452:5464 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> deployed_code def
+def 5503:5515 Step4 initial_state
+R5519:5525 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R5544:5547 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R5562:5565 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R5594:5596 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R5548:5561 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R5579:5592 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R5566:5576 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step3 state def
+R5534:5543 RocqOfSolidity.simulations.RocqOfSolidity State init def
+def 5613:5624 Step4 result_state
+R5633:5648 RocqOfSolidity.simulations.RocqOfSolidity <> eval_with_revert def
+R5655:5659 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> codes def
+R5661:5671 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step4 environment def
+R5688:5696 RocqOfSolidity.RocqOfSolidity Code body proj
+R5673:5685 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest <> deployed_code def
+R5699:5711 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step4 initial_state def
+def 5728:5733 Step4 result
+R5738:5740 Corelib.Init.Datatypes <> fst def
+R5742:5753 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step4 result_state def
+def 5769:5773 Step4 state
+R5778:5780 Corelib.Init.Datatypes <> snd def
+R5782:5793 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step4 result_state def
+def 5810:5824 Step4 expected_output
+R5828:5831 Corelib.Init.Datatypes <> list ind
+R5833:5833 Corelib.Numbers.BinNums <> Z ind
+R5842:5867 RocqOfSolidity.simulations.RocqOfSolidity Memory hex_string_as_bytes def
+def 5940:6018 Step4 Unnamed_thm
+R5997:5999 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5945:5963 RocqOfSolidity.simulations.RocqOfSolidity Test extract_output def
+R5965:5970 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step4 result def
+R5972:5976 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step4 state def
+R5978:5996 RocqOfSolidity.simulations.RocqOfSolidity Test.Status Success constr
+R6000:6002 Corelib.Init.Datatypes <> inl constr
+R6004:6018 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step4 expected_output def
+R6074:6078 RocqOfSolidityTests.semanticTests.expressions.conditional_expression_multiple.GeneratedTest Step4 <> mod

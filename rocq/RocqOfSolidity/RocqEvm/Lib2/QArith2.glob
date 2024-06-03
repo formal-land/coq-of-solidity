@@ -1,0 +1,88 @@
+DIGEST 74ee9a1c41dd8ab29b7c03ab9924444d
+FRocqOfSolidity.RocqEvm.Lib2.QArith2
+R27:32 Stdlib.QArith.QArith <> <> lib
+R34:39 Stdlib.QArith.Qround <> <> lib
+R51:56 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> <> lib
+prf 66:78 <> Q_floor_via_Z
+R84:84 Corelib.Numbers.BinNums <> Z ind
+binder 81:81 <> a:1
+R91:98 Corelib.Numbers.BinNums <> positive ind
+binder 88:88 <> b:2
+R118:120 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R104:109 Stdlib.QArith.Qround <> Qfloor def
+R113:115 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+R112:112 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> a:1 var
+R116:116 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> b:2 var
+R123:125 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R122:122 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> a:1 var
+R126:129 Corelib.Numbers.BinNums <> Zpos constr
+R131:131 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> b:2 var
+R152:160 Stdlib.QArith.Qround <> Zdiv_Qdiv thm
+R152:160 Stdlib.QArith.Qround <> Zdiv_Qdiv thm
+R152:160 Stdlib.QArith.Qround <> Zdiv_Qdiv thm
+R171:180 Stdlib.QArith.QArith_base <> Qmake_Qdiv thm
+R171:180 Stdlib.QArith.QArith_base <> Qmake_Qdiv thm
+R171:180 Stdlib.QArith.QArith_base <> Qmake_Qdiv thm
+prf 204:218 <> Q_ceiling_via_Z
+R224:224 Corelib.Numbers.BinNums <> Z ind
+binder 221:221 <> a:3
+R231:238 Corelib.Numbers.BinNums <> positive ind
+binder 228:228 <> b:4
+R260:262 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R244:251 Stdlib.QArith.Qround <> Qceiling def
+R255:257 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+R254:254 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> a:3 var
+R258:258 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> b:4 var
+R264:266 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+R281:281 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+R267:267 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R271:274 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R268:269 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+R270:270 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> a:3 var
+R275:278 Corelib.Numbers.BinNums <> Zpos constr
+R280:280 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> b:4 var
+R301:315 Stdlib.QArith.Qround <> Qceiling def
+R326:335 Stdlib.QArith.QArith_base <> Qmake_Qdiv thm
+R326:335 Stdlib.QArith.QArith_base <> Qmake_Qdiv thm
+R326:335 Stdlib.QArith.QArith_base <> Qmake_Qdiv thm
+R346:354 Stdlib.QArith.Qround <> Zdiv_Qdiv thm
+R346:354 Stdlib.QArith.Qround <> Zdiv_Qdiv thm
+R346:354 Stdlib.QArith.Qround <> Zdiv_Qdiv thm
+R365:376 Stdlib.QArith.QArith_base <> inject_Z_opp thm
+R365:376 Stdlib.QArith.QArith_base <> inject_Z_opp thm
+R365:376 Stdlib.QArith.QArith_base <> inject_Z_opp thm
+R404:407 Stdlib.QArith.QArith_base <> Qdiv def
+R417:421 Stdlib.QArith.QArith_base <> Qmult def
+R444:452 Stdlib.ZArith.BinInt Z mul_1_r thm
+R444:452 Stdlib.ZArith.BinInt Z mul_1_r thm
+R444:452 Stdlib.ZArith.BinInt Z mul_1_r thm
+R444:452 Stdlib.ZArith.BinInt Z mul_1_r thm
+R444:452 Stdlib.ZArith.BinInt Z mul_1_r thm
+R444:452 Stdlib.ZArith.BinInt Z mul_1_r thm
+prf 476:496 <> Q_ceiling_via_Z_floor
+R502:502 Corelib.Numbers.BinNums <> Z ind
+binder 499:499 <> a:5
+R509:516 Corelib.Numbers.BinNums <> positive ind
+binder 506:506 <> b:6
+R538:540 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R522:529 Stdlib.QArith.Qround <> Qceiling def
+R533:535 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+R532:532 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> a:5 var
+R536:536 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> b:6 var
+R542:542 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R558:561 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R554:556 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R544:546 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R543:543 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> a:5 var
+R547:551 Stdlib.ZArith.BinInt Z pos abbrev
+R553:553 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> b:6 var
+R562:565 Corelib.Numbers.BinNums <> Zpos constr
+R567:567 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> b:6 var
+R588:602 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> Q_ceiling_via_Z thm
+R588:602 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> Q_ceiling_via_Z thm
+R588:602 RocqOfSolidity.RocqEvm.Lib2.QArith2 <> Q_ceiling_via_Z thm
+R611:636 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_ceiling_via_floor thm
+R611:636 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_ceiling_via_floor thm
+R649:656 Stdlib.ZArith.BinInt Z leb_le thm
+R649:656 Stdlib.ZArith.BinInt Z leb_le thm
+R649:656 Stdlib.ZArith.BinInt Z leb_le thm

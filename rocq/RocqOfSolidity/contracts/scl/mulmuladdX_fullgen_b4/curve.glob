@@ -1,0 +1,525 @@
+DIGEST 35f2542b14f778f72dcfaa3c4db7b5f9
+FRocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve
+R15:43 RocqOfSolidity.RocqOfSolidity <> <> lib
+mod 54:58 <> Curve
+rec 70:70 Curve t
+proj 87:87 Curve a
+proj 98:98 Curve b
+R91:91 Corelib.Numbers.BinNums <> Z ind
+R102:102 Corelib.Numbers.BinNums <> Z ind
+R114:118 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Curve <> mod
+mod 129:130 <> Zp
+mod 142:146 <> Zp.Valid
+def 164:164 Zp.Valid t
+R173:173 Corelib.Numbers.BinNums <> Z ind
+binder 167:167 <> p:4
+binder 169:169 <> n:5
+R193:196 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x_'<'_x not
+R198:200 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x_'<'_x not
+R197:197 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> n:5 var
+R197:197 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> n:5 var
+R201:201 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:4 var
+R210:214 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp.Valid <> mod
+R221:222 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp <> mod
+mod 270:271 <> PA
+rec 283:283 PA t
+proj 300:300 PA X
+proj 316:316 PA Y
+R304:309 RocqOfSolidity.RocqOfSolidity U256 t def
+R320:325 RocqOfSolidity.RocqOfSolidity U256 t def
+mod 343:347 <> PA.Valid
+rec 361:361 PA.Valid t
+proj 405:405 PA.Valid X
+proj 438:438 PA.Valid Y
+R368:373 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 364:364 <> p:9
+R381:384 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA t rec
+binder 377:377 <> P:10
+R409:418 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp.Valid t def
+R420:420 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:9 var
+R425:428 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R422:422 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:10 var
+R442:451 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp.Valid t def
+R453:453 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:9 var
+R458:461 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R455:455 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:10 var
+R478:482 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA.Valid <> mod
+def 499:501 PA add
+R510:510 Corelib.Numbers.BinNums <> Z ind
+binder 504:504 <> a:14
+binder 506:506 <> p:15
+R522:522 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA t rec
+binder 514:515 <> P1:16
+binder 517:518 <> P2:17
+R527:532 Corelib.Init.Datatypes <> option ind
+R534:534 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA t rec
+R565:565 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R582:587 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R606:606 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R572:575 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R570:570 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R566:567 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+R580:580 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R576:577 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:17 var
+R594:597 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R592:592 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R588:589 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+R598:599 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+R604:604 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R600:601 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:17 var
+R653:653 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R670:675 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R692:692 Corelib.Init.Datatypes <> ::bool_scope:x_'&&'_x not
+R660:663 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R658:658 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R654:655 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+R668:668 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R664:665 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:17 var
+R682:685 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R680:680 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R676:677 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+R690:690 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R686:687 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:17 var
+R943:943 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R959:963 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R979:979 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R950:952 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R948:948 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R944:945 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:17 var
+R957:957 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R953:954 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+R970:972 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R968:968 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R964:965 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:17 var
+R977:977 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R973:974 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+binder 933:938 <> lambda:18
+R999:999 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R1028:1033 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R1019:1021 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R1010:1012 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R1006:1008 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R1000:1005 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> lambda:18 var
+R1017:1017 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R1013:1014 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+R1026:1026 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R1022:1023 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:17 var
+R1034:1034 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:15 var
+binder 994:994 <> x:19
+R1045:1048 Corelib.Init.Datatypes <> Some constr
+R1061:1061 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R1061:1061 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R1061:1061 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R1077:1077 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R1077:1077 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R1066:1066 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> x:19 var
+R1082:1082 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R1113:1118 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R1104:1106 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R1089:1092 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R1103:1103 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R1083:1088 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> lambda:18 var
+R1099:1101 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R1097:1097 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R1093:1094 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+R1102:1102 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> x:19 var
+R1111:1111 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R1107:1108 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+R1119:1119 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:15 var
+R719:719 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R738:742 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R753:753 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R734:736 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R721:723 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R730:732 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R728:728 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R724:725 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+R737:737 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> a:14 var
+R744:746 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R751:751 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R747:748 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+binder 709:714 <> lambda:20
+R773:773 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R797:802 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R784:786 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R780:782 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R774:779 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> lambda:20 var
+R788:790 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R795:795 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R791:792 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+R803:803 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:15 var
+binder 768:768 <> x:21
+R814:817 Corelib.Init.Datatypes <> Some constr
+R830:830 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R830:830 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R830:830 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R846:846 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R846:846 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R835:835 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> x:21 var
+R851:851 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R882:887 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R873:875 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R858:861 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R872:872 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R852:857 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> lambda:20 var
+R868:870 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R866:866 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R862:863 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+R871:871 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> x:21 var
+R880:880 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R876:877 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:16 var
+R888:888 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:15 var
+R619:622 Corelib.Init.Datatypes <> None constr
+R1136:1137 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA <> mod
+mod 1195:1195 <> P
+def 1211:1211 P t
+R1226:1231 Corelib.Init.Datatypes <> option ind
+R1233:1236 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA t rec
+mod 1249:1253 <> P.Valid
+def 1271:1271 P.Valid t
+R1278:1283 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 1274:1274 <> p:22
+R1291:1293 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P t def
+binder 1287:1287 <> P:23
+R1318:1318 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:23 var
+R1333:1336 Corelib.Init.Datatypes <> None constr
+R1341:1344 Corelib.Init.Logic <> True ind
+R1354:1357 Corelib.Init.Datatypes <> Some constr
+R1364:1373 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA.Valid t rec
+R1375:1375 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:22 var
+R1377:1377 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:23 var
+R1396:1400 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P.Valid <> mod
+def 1417:1420 P zero
+R1424:1426 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P t def
+R1435:1438 Corelib.Init.Datatypes <> None constr
+def 1455:1457 P add
+R1466:1466 Corelib.Numbers.BinNums <> Z ind
+binder 1460:1460 <> a:25
+binder 1462:1462 <> p:26
+R1478:1478 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P t def
+binder 1470:1471 <> P1:27
+binder 1473:1474 <> P2:28
+R1483:1483 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P t def
+R1502:1503 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:28 var
+R1498:1499 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:27 var
+R1516:1519 Corelib.Init.Datatypes <> None constr
+R1529:1532 Corelib.Init.Datatypes <> None constr
+R1545:1548 Corelib.Init.Datatypes <> Some constr
+R1554:1557 Corelib.Init.Datatypes <> Some constr
+R1565:1570 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA add def
+R1572:1572 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> a:25 var
+R1574:1574 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:26 var
+R1576:1577 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:27 var
+R1579:1580 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:28 var
+prf 1600:1609 P add_zero_l
+R1618:1623 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 1612:1612 <> a:31
+binder 1614:1614 <> p:32
+R1631:1631 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P t def
+binder 1627:1627 <> P:33
+R1654:1656 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1640:1642 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P add def
+R1644:1644 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> a:31 var
+R1646:1646 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:32 var
+R1648:1651 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P zero def
+R1653:1653 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:33 var
+R1657:1657 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:33 var
+prf 1702:1711 P add_zero_r
+R1720:1725 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 1714:1714 <> a:34
+binder 1716:1716 <> p:35
+R1733:1733 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P t def
+binder 1729:1729 <> P:36
+R1756:1758 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1742:1744 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P add def
+R1746:1746 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> a:34 var
+R1748:1748 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:35 var
+R1750:1750 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:36 var
+R1752:1755 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P zero def
+R1759:1759 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:36 var
+ax 1816:1825 P add_commut
+R1847:1852 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 1841:1841 <> a:37
+binder 1843:1843 <> p:38
+R1864:1864 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P t def
+binder 1856:1857 <> P1:39
+binder 1859:1860 <> P2:40
+R1885:1891 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1872:1874 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P add def
+R1876:1876 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> a:37 var
+R1878:1878 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:38 var
+R1880:1881 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:39 var
+R1883:1884 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:40 var
+R1892:1894 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P add def
+R1896:1896 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> a:37 var
+R1898:1898 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:38 var
+R1900:1901 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:40 var
+R1903:1904 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:39 var
+ax 1916:1932 P add_commut_nested
+R1954:1959 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 1948:1948 <> a:43
+binder 1950:1950 <> p:44
+R1974:1974 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P t def
+binder 1963:1964 <> P1:45
+binder 1966:1967 <> P2:46
+binder 1969:1970 <> P3:47
+R2008:2014 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1982:1984 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P add def
+R1986:1986 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> a:43 var
+R1988:1988 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:44 var
+R1991:1993 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P add def
+R1995:1995 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> a:43 var
+R1997:1997 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:44 var
+R1999:2000 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:45 var
+R2002:2003 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:46 var
+R2006:2007 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P3:47 var
+R2015:2017 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P add def
+R2019:2019 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> a:43 var
+R2021:2021 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:44 var
+R2024:2026 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P add def
+R2028:2028 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> a:43 var
+R2030:2030 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:44 var
+R2032:2033 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P1:45 var
+R2035:2036 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P3:47 var
+R2039:2040 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P2:46 var
+R2047:2047 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P <> mod
+mod 2102:2104 <> PZZ
+rec 2116:2116 PZZ t
+proj 2133:2133 PZZ X
+proj 2149:2149 PZZ Y
+proj 2165:2166 PZZ ZZ
+proj 2182:2184 PZZ ZZZ
+R2137:2142 RocqOfSolidity.RocqOfSolidity U256 t def
+R2153:2158 RocqOfSolidity.RocqOfSolidity U256 t def
+R2170:2175 RocqOfSolidity.RocqOfSolidity U256 t def
+R2188:2193 RocqOfSolidity.RocqOfSolidity U256 t def
+mod 2211:2215 <> PZZ.Valid
+rec 2229:2229 PZZ.Valid t
+proj 2274:2274 PZZ.Valid X
+proj 2308:2308 PZZ.Valid Y
+proj 2342:2343 PZZ.Valid ZZ
+proj 2378:2380 PZZ.Valid ZZZ
+proj 2416:2419 PZZ.Valid zero
+R2236:2241 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 2232:2232 <> p:55
+R2249:2253 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ t rec
+binder 2245:2245 <> P:56
+R2278:2287 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp.Valid t def
+R2289:2289 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:55 var
+R2294:2298 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ X proj
+R2291:2291 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:56 var
+R2312:2321 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp.Valid t def
+R2323:2323 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:55 var
+R2328:2332 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ Y proj
+R2325:2325 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:56 var
+R2347:2356 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp.Valid t def
+R2358:2358 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:55 var
+R2363:2368 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZ proj
+R2360:2360 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:56 var
+R2384:2393 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp.Valid t def
+R2395:2395 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:55 var
+R2400:2406 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZZ proj
+R2397:2397 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:56 var
+R2437:2441 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R2433:2435 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2426:2431 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZ proj
+R2423:2423 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:56 var
+R2453:2455 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2445:2451 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZZ proj
+R2442:2442 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:56 var
+R2472:2476 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ.Valid <> mod
+def 2493:2496 PZZ zero
+R2500:2504 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ t rec
+R2516:2520 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ X proj
+R2516:2520 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ X proj
+R2516:2520 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ X proj
+R2532:2536 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ Y proj
+R2532:2536 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ Y proj
+R2548:2553 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZ proj
+R2548:2553 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZ proj
+R2565:2571 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZZ proj
+R2565:2571 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZZ proj
+prf 2594:2606 PZZ zero_is_valid
+R2613:2618 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 2609:2609 <> p:63
+R2635:2638 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R2639:2639 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:63 var
+binder 2628:2630 <> H_p:64
+R2648:2654 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ t rec
+R2656:2656 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:63 var
+R2658:2661 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ zero def
+R2697:2706 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp.Valid t def
+def 2742:2746 PZZ of_PA
+R2753:2756 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA t rec
+binder 2749:2749 <> P:65
+R2761:2765 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ t rec
+R2777:2781 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ X proj
+R2777:2781 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ X proj
+R2777:2781 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ X proj
+R2800:2804 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ Y proj
+R2800:2804 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ Y proj
+R2823:2828 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZ proj
+R2823:2828 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZ proj
+R2840:2846 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZZ proj
+R2840:2846 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZZ proj
+R2789:2792 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R2786:2786 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:65 var
+R2812:2815 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R2809:2809 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:65 var
+prf 2869:2882 PZZ of_PA_is_valid
+R2889:2894 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 2885:2885 <> p:66
+R2902:2905 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA t rec
+binder 2898:2898 <> P:67
+R2922:2925 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R2926:2926 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:66 var
+binder 2915:2917 <> H_p:68
+R2942:2951 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA.Valid t rec
+R2953:2953 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:66 var
+R2955:2955 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:67 var
+binder 2936:2938 <> H_P:69
+R2964:2970 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ t rec
+R2972:2972 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:66 var
+R2975:2979 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ of_PA def
+R2981:2981 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:67 var
+R3019:3028 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp.Valid t def
+R3047:3051 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ of_PA def
+R3078:3087 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp.Valid t def
+def 3123:3126 PZZ of_P
+R3133:3135 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P t def
+binder 3129:3129 <> P:70
+R3140:3144 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ t rec
+R3159:3159 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:70 var
+R3172:3175 Corelib.Init.Datatypes <> None constr
+R3180:3183 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ zero def
+R3191:3194 Corelib.Init.Datatypes <> Some constr
+R3201:3205 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ of_PA def
+R3207:3207 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:70 var
+prf 3227:3239 PZZ of_P_is_valid
+R3246:3251 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3242:3242 <> p:72
+R3259:3261 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P t def
+binder 3255:3255 <> P:73
+R3278:3281 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x_'<'_x not
+R3283:3285 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x_'<'_x not
+R3282:3282 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:72 var
+R3282:3282 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:72 var
+R3287:3287 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+binder 3271:3273 <> H_p:74
+R3306:3314 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P.Valid t def
+R3316:3316 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:72 var
+R3318:3318 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:73 var
+binder 3300:3302 <> H_P:75
+R3327:3333 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ t rec
+R3335:3335 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:72 var
+R3338:3341 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ of_P def
+R3343:3343 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:73 var
+R3396:3409 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ of_PA_is_valid thm
+R3396:3409 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ of_PA_is_valid thm
+R3430:3442 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ zero_is_valid thm
+R3430:3442 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ zero_is_valid thm
+def 3552:3558 PZZ is_zero
+R3565:3569 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ t rec
+binder 3561:3561 <> P:76
+R3574:3577 Corelib.Init.Datatypes <> bool ind
+R3592:3595 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R3589:3590 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZ proj
+R3586:3586 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:76 var
+def 3613:3616 PZZ to_P
+R3623:3623 Corelib.Numbers.BinNums <> Z ind
+binder 3619:3619 <> p:77
+R3631:3635 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ t rec
+binder 3627:3627 <> P:78
+R3640:3642 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P t def
+R3654:3660 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ is_zero def
+R3662:3662 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:78 var
+R3695:3698 Corelib.Init.Datatypes <> Some constr
+R3711:3714 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R3711:3714 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R3711:3714 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA X proj
+R3751:3754 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R3751:3754 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA Y proj
+R3719:3719 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R3734:3739 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R3725:3727 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R3723:3723 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ X proj
+R3720:3720 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:78 var
+R3731:3732 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZ proj
+R3728:3728 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:78 var
+R3740:3740 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:77 var
+R3759:3759 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R3775:3780 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R3765:3767 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R3763:3763 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ Y proj
+R3760:3760 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:78 var
+R3771:3773 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZZ proj
+R3768:3768 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:78 var
+R3781:3781 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:77 var
+R3675:3678 Corelib.Init.Datatypes <> None constr
+prf 3803:3815 PZZ to_P_is_valid
+R3822:3827 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3818:3818 <> p:79
+R3835:3839 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ t rec
+binder 3831:3831 <> P:80
+R3856:3859 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R3860:3860 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:79 var
+binder 3849:3851 <> H_p:81
+R3869:3877 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P.Valid t def
+R3879:3879 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:79 var
+R3882:3885 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ to_P def
+R3887:3887 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:79 var
+R3889:3889 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:80 var
+R3913:3921 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P.Valid t def
+R3924:3927 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ to_P def
+R3930:3936 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ is_zero def
+R3964:3967 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R3960:3961 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZ proj
+R3998:3998 Corelib.Init.Logic <> I constr
+R3964:3967 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R3960:3961 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ ZZ proj
+R3998:3998 Corelib.Init.Logic <> I constr
+R4027:4036 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp.Valid t def
+prf 4067:4079 PZZ to_P_of_PA_eq
+R4086:4091 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4082:4082 <> p:82
+R4099:4102 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA t rec
+binder 4095:4095 <> P:83
+R4118:4127 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PA.Valid t rec
+R4129:4129 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:82 var
+R4131:4131 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:83 var
+binder 4112:4114 <> H_P:84
+R4156:4158 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4140:4143 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ to_P def
+R4145:4145 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:82 var
+R4148:4152 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ of_PA def
+R4154:4154 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:83 var
+R4159:4162 Corelib.Init.Datatypes <> Some constr
+R4164:4164 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:83 var
+R4187:4190 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ to_P def
+R4193:4197 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ of_PA def
+R4232:4241 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve Zp.Valid t def
+R4314:4324 Stdlib.ZArith.BinInt Z mod_small thm
+R4314:4324 Stdlib.ZArith.BinInt Z mod_small thm
+R4314:4324 Stdlib.ZArith.BinInt Z mod_small thm
+R4314:4324 Stdlib.ZArith.BinInt Z mod_small thm
+R4314:4324 Stdlib.ZArith.BinInt Z mod_small thm
+R4314:4324 Stdlib.ZArith.BinInt Z mod_small thm
+R4314:4324 Stdlib.ZArith.BinInt Z mod_small thm
+prf 4348:4359 PZZ to_P_of_P_eq
+R4366:4371 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4362:4362 <> p:85
+R4379:4381 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P t def
+binder 4375:4375 <> P:86
+R4397:4405 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve P.Valid t def
+R4407:4407 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:85 var
+R4409:4409 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:86 var
+binder 4391:4393 <> H_P:87
+R4433:4435 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4418:4421 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ to_P def
+R4423:4423 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> p:85 var
+R4426:4429 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ of_P def
+R4431:4431 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:86 var
+R4436:4436 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve <> P:86 var
+R4484:4496 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ to_P_of_PA_eq thm
+R4484:4496 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ to_P_of_PA_eq thm
+R4538:4540 RocqOfSolidity.contracts.scl.mulmuladdX_fullgen_b4.curve PZZ <> mod

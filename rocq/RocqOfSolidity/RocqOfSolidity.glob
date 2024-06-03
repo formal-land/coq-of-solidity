@@ -1,0 +1,1330 @@
+DIGEST 96577d22fb6305d04aa2d47d5e17258a
+FRocqOfSolidity.RocqOfSolidity
+R27:31 Stdlib.Strings.Ascii <> <> lib
+R54:62 Stdlib.Strings.HexString <> <> lib
+R92:97 Stdlib.Strings.String <> <> lib
+R127:132 Stdlib.ZArith.ZArith <> <> lib
+R154:158 Ltac2.Ltac2 <> <> lib
+R176:187 RocqOfSolidity.RecordUpdate <> <> lib
+R218:220 Stdlib.micromega.Lia <> <> lib
+R250:256 Hammer.Tactics.Tactics <> <> lib
+R625:642 Stdlib.Lists.List ListNotations <> mod
+ind 656:659 <> sigS
+constr 698:703 <> existS
+binder 662:662 <> A:1
+R678:681 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R677:677 RocqOfSolidity.RocqOfSolidity <> A:1 var
+binder 673:673 <> P:2
+R719:719 RocqOfSolidity.RocqOfSolidity <> A:1 var
+binder 715:715 <> x:5
+R726:729 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R723:723 RocqOfSolidity.RocqOfSolidity <> P:2 var
+R725:725 RocqOfSolidity.RocqOfSolidity <> x:5 var
+R730:733 RocqOfSolidity.RocqOfSolidity <> sigS:3 ind
+R735:735 RocqOfSolidity.RocqOfSolidity <> P:2 var
+scheme 656:659 <> sigS_ind
+scheme 656:659 <> sigS_rec
+scheme 656:659 <> sigS_sind
+R748:753 RocqOfSolidity.RocqOfSolidity <> existS constr
+R748:753 RocqOfSolidity.RocqOfSolidity <> existS constr
+R1013:1016 RocqOfSolidity.RocqOfSolidity <> sigS ind
+binder 1023:1023 <> x:6
+not 997:997 <> ::type_scope:'{'_x_'@'_x_'}'
+R1075:1078 RocqOfSolidity.RocqOfSolidity <> sigS ind
+binder 1094:1094 <> x:7
+not 1055:1055 <> ::type_scope:'{'_x_':'_x_'@'_x_'}'
+R1150:1153 RocqOfSolidity.RocqOfSolidity <> sigS ind
+binder 1169:1171 <> pat:8
+not 1126:1126 <> ::type_scope:'{'_''''_x_':'_x_'@'_x_'}'
+mod 1202:1205 <> U256
+def 1221:1221 U256 t
+R1226:1226 Corelib.Numbers.BinNums <> Z ind
+mod 1239:1243 <> U256.Valid
+def 1261:1261 U256.Valid t
+R1272:1277 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 1264:1268 <> value:9
+R1297:1300 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x_'<'_x not
+R1306:1308 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x_'<'_x not
+R1301:1305 RocqOfSolidity.RocqOfSolidity <> value:9 var
+R1301:1305 RocqOfSolidity.RocqOfSolidity <> value:9 var
+R1310:1312 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R1324:1328 RocqOfSolidity.RocqOfSolidity U256.Valid <> mod
+def 1345:1351 U256 of_bool
+R1358:1361 Corelib.Init.Datatypes <> bool ind
+binder 1354:1354 <> b:10
+R1366:1371 RocqOfSolidity.RocqOfSolidity U256 t def
+R1383:1383 RocqOfSolidity.RocqOfSolidity <> b:10 var
+R1404:1407 RocqOfSolidity.RocqOfSolidity U256 <> mod
+mod 1418:1424 <> Address
+def 1514:1514 Address t
+R1525:1530 RocqOfSolidity.RocqOfSolidity U256 t def
+mod 1543:1547 <> Address.Valid
+def 1565:1565 Address.Valid t
+R1578:1586 RocqOfSolidity.RocqOfSolidity Address t def
+binder 1568:1574 <> address:11
+R1606:1609 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x_'<'_x not
+R1617:1619 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x_'<'_x not
+R1610:1616 RocqOfSolidity.RocqOfSolidity <> address:11 var
+R1610:1616 RocqOfSolidity.RocqOfSolidity <> address:11 var
+R1621:1623 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R1635:1639 RocqOfSolidity.RocqOfSolidity Address.Valid <> mod
+R1646:1652 RocqOfSolidity.RocqOfSolidity Address <> mod
+mod 1663:1673 <> Environment
+rec 1685:1685 Environment t
+proj 1702:1707 Environment caller
+proj 1777:1785 Environment callvalue
+proj 1801:1808 Environment calldata
+proj 1864:1870 Environment address
+proj 1950:1958 Environment code_name
+proj 2015:2020 Environment origin
+proj 2036:2043 Environment gasprice
+proj 2059:2065 Environment chainid
+proj 2081:2088 Environment coinbase
+proj 2104:2112 Environment timestamp
+proj 2128:2133 Environment number
+proj 2149:2158 Environment prevrandao
+proj 2174:2181 Environment gaslimit
+proj 2197:2203 Environment basefee
+proj 2219:2229 Environment blobbasefee
+proj 2245:2255 Environment blob_hashes
+R1711:1716 RocqOfSolidity.RocqOfSolidity U256 t def
+R1789:1794 RocqOfSolidity.RocqOfSolidity U256 t def
+R1812:1815 Corelib.Init.Datatypes <> list ind
+R1817:1817 Corelib.Numbers.BinNums <> Z ind
+R1874:1879 RocqOfSolidity.RocqOfSolidity U256 t def
+R1962:1967 RocqOfSolidity.RocqOfSolidity U256 t def
+R2024:2029 RocqOfSolidity.RocqOfSolidity U256 t def
+R2047:2052 RocqOfSolidity.RocqOfSolidity U256 t def
+R2069:2074 RocqOfSolidity.RocqOfSolidity U256 t def
+R2092:2097 RocqOfSolidity.RocqOfSolidity U256 t def
+R2116:2121 RocqOfSolidity.RocqOfSolidity U256 t def
+R2137:2142 RocqOfSolidity.RocqOfSolidity U256 t def
+R2162:2167 RocqOfSolidity.RocqOfSolidity U256 t def
+R2185:2190 RocqOfSolidity.RocqOfSolidity U256 t def
+R2207:2212 RocqOfSolidity.RocqOfSolidity U256 t def
+R2233:2238 RocqOfSolidity.RocqOfSolidity U256 t def
+R2259:2262 Corelib.Init.Datatypes <> list ind
+R2264:2269 RocqOfSolidity.RocqOfSolidity U256 t def
+R2281:2291 RocqOfSolidity.RocqOfSolidity Environment <> mod
+mod 2302:2310 <> BlockUnit
+ind 2368:2368 BlockUnit t
+constr 2429:2430 BlockUnit Tt
+constr 2480:2484 BlockUnit Break
+constr 2537:2544 BlockUnit Continue
+constr 2594:2598 BlockUnit Leave
+scheme 2368:2368 BlockUnit t_rect
+scheme 2368:2368 BlockUnit t_ind
+scheme 2368:2368 BlockUnit t_rec
+scheme 2368:2368 BlockUnit t_sind
+R2605:2613 RocqOfSolidity.RocqOfSolidity BlockUnit <> mod
+mod 2624:2629 <> Result
+ind 2845:2845 Result t
+constr 2870:2871 Result Ok
+constr 2890:2895 Result Return
+constr 2916:2921 Result Revert
+binder 2848:2848 <> A:31
+R2883:2883 RocqOfSolidity.RocqOfSolidity <> A:31 var
+binder 2874:2879 <> output:34
+R2904:2909 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 2898:2898 <> p:35
+binder 2900:2900 <> s:36
+R2930:2935 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 2924:2924 <> p:37
+binder 2926:2926 <> s:38
+scheme 2845:2845 Result t_rect
+scheme 2845:2845 Result t_ind
+scheme 2845:2845 Result t_rec
+scheme 2845:2845 Result t_sind
+R2951:2952 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R2951:2952 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R2971:2976 RocqOfSolidity.RocqOfSolidity Result Return constr
+R2971:2976 RocqOfSolidity.RocqOfSolidity Result Return constr
+R2995:3000 RocqOfSolidity.RocqOfSolidity Result Revert constr
+R2995:3000 RocqOfSolidity.RocqOfSolidity Result Revert constr
+def 3021:3023 Result map
+binder 3026:3026 <> A:39
+binder 3028:3028 <> B:40
+R3043:3046 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3042:3042 RocqOfSolidity.RocqOfSolidity <> A:39 var
+R3047:3047 RocqOfSolidity.RocqOfSolidity <> B:40 var
+binder 3038:3038 <> f:41
+R3059:3059 RocqOfSolidity.RocqOfSolidity Result t ind
+R3061:3061 RocqOfSolidity.RocqOfSolidity <> A:39 var
+binder 3051:3055 <> value:42
+R3066:3066 RocqOfSolidity.RocqOfSolidity Result t ind
+R3068:3068 RocqOfSolidity.RocqOfSolidity <> B:40 var
+R3083:3087 RocqOfSolidity.RocqOfSolidity <> value:42 var
+R3100:3101 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R3113:3114 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R3117:3117 RocqOfSolidity.RocqOfSolidity <> f:41 var
+R3133:3138 RocqOfSolidity.RocqOfSolidity Result Return constr
+R3147:3152 RocqOfSolidity.RocqOfSolidity Result Return constr
+R3164:3169 RocqOfSolidity.RocqOfSolidity Result Revert constr
+R3178:3183 RocqOfSolidity.RocqOfSolidity Result Revert constr
+R3202:3207 RocqOfSolidity.RocqOfSolidity Result <> mod
+mod 3218:3226 <> Primitive
+ind 3339:3339 Primitive t
+constr 3361:3369 Primitive OpenScope
+constr 3384:3393 Primitive CloseScope
+constr 3408:3413 Primitive GetVar
+constr 3446:3456 Primitive DeclareVars
+constr 3516:3525 Primitive AssignVars
+constr 3585:3589 Primitive MLoad
+constr 3634:3639 Primitive MStore
+constr 3690:3694 Primitive SLoad
+constr 3730:3735 Primitive SStore
+constr 3775:3779 Primitive RLoad
+constr 3798:3802 Primitive TLoad
+constr 3838:3843 Primitive TStore
+constr 3883:3885 Primitive Log
+constr 3942:3955 Primitive GetEnvironment
+constr 3979:3986 Primitive GetNonce
+constr 4003:4013 Primitive GetCodedata
+constr 4051:4063 Primitive CreateAccount
+constr 4122:4140 Primitive UpdateCodeForDeploy
+constr 4179:4191 Primitive LoadImmutable
+constr 4224:4235 Primitive SetImmutable
+constr 4336:4348 Primitive CallStackPush
+constr 4416:4427 Primitive CallStackPop
+R3346:3349 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3373:3373 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3375:3378 Corelib.Init.Datatypes <> unit ind
+R3397:3397 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3399:3402 Corelib.Init.Datatypes <> unit ind
+R3423:3428 Stdlib.Strings.String <> string ind
+binder 3416:3419 <> name:46
+R3433:3433 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3435:3440 RocqOfSolidity.RocqOfSolidity U256 t def
+R3467:3470 Corelib.Init.Datatypes <> list ind
+R3472:3477 Stdlib.Strings.String <> string ind
+binder 3459:3463 <> names:47
+R3490:3493 Corelib.Init.Datatypes <> list ind
+R3495:3500 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3481:3486 <> values:48
+R3505:3505 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3507:3510 Corelib.Init.Datatypes <> unit ind
+R3536:3539 Corelib.Init.Datatypes <> list ind
+R3541:3546 Stdlib.Strings.String <> string ind
+binder 3528:3532 <> names:49
+R3559:3562 Corelib.Init.Datatypes <> list ind
+R3564:3569 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3550:3555 <> values:50
+R3574:3574 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3576:3579 Corelib.Init.Datatypes <> unit ind
+R3609:3614 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3592:3598 <> address:51
+binder 3600:3605 <> length:52
+R3619:3619 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3622:3625 Corelib.Init.Datatypes <> list ind
+R3627:3627 Corelib.Numbers.BinNums <> Z ind
+R3652:3657 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3642:3648 <> address:53
+R3669:3672 Corelib.Init.Datatypes <> list ind
+R3674:3674 Corelib.Numbers.BinNums <> Z ind
+binder 3661:3665 <> bytes:54
+R3679:3679 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3681:3684 Corelib.Init.Datatypes <> unit ind
+R3707:3712 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3697:3703 <> address:55
+R3717:3717 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3719:3724 RocqOfSolidity.RocqOfSolidity U256 t def
+R3754:3759 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3738:3744 <> address:56
+binder 3746:3750 <> value:57
+R3764:3764 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3766:3769 Corelib.Init.Datatypes <> unit ind
+R3783:3783 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3786:3789 Corelib.Init.Datatypes <> list ind
+R3791:3791 Corelib.Numbers.BinNums <> Z ind
+R3815:3820 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3805:3811 <> address:58
+R3825:3825 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3827:3832 RocqOfSolidity.RocqOfSolidity U256 t def
+R3862:3867 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3846:3852 <> address:59
+binder 3854:3858 <> value:60
+R3872:3872 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3874:3877 Corelib.Init.Datatypes <> unit ind
+R3897:3900 Corelib.Init.Datatypes <> list ind
+R3902:3907 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 3888:3893 <> topics:61
+R3921:3924 Corelib.Init.Datatypes <> list ind
+R3926:3926 Corelib.Numbers.BinNums <> Z ind
+binder 3911:3917 <> payload:62
+R3931:3931 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3933:3936 Corelib.Init.Datatypes <> unit ind
+R3959:3959 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3961:3973 RocqOfSolidity.RocqOfSolidity Environment t rec
+R3990:3990 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R3992:3997 RocqOfSolidity.RocqOfSolidity U256 t def
+R4026:4031 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4016:4022 <> address:63
+R4036:4036 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R4039:4042 Corelib.Init.Datatypes <> list ind
+R4044:4044 Corelib.Numbers.BinNums <> Z ind
+R4081:4086 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4066:4072 <> address:64
+binder 4074:4077 <> code:65
+R4101:4104 Corelib.Init.Datatypes <> list ind
+R4106:4106 Corelib.Numbers.BinNums <> Z ind
+binder 4090:4097 <> codedata:66
+R4111:4111 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R4113:4116 Corelib.Init.Datatypes <> unit ind
+R4158:4163 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4143:4149 <> address:67
+binder 4151:4154 <> code:68
+R4168:4168 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R4170:4173 Corelib.Init.Datatypes <> unit ind
+R4201:4206 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4194:4197 <> name:69
+R4211:4211 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R4213:4218 RocqOfSolidity.RocqOfSolidity U256 t def
+R4251:4256 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4238:4241 <> name:70
+binder 4243:4247 <> value:71
+R4261:4261 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R4263:4266 Corelib.Init.Datatypes <> unit ind
+R4358:4363 Stdlib.Strings.String <> string ind
+binder 4351:4354 <> name:72
+R4379:4382 Corelib.Init.Datatypes <> list ind
+R4391:4393 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R4385:4390 Stdlib.Strings.String <> string ind
+R4394:4399 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4367:4375 <> arguments:73
+R4405:4405 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R4407:4410 Corelib.Init.Datatypes <> unit ind
+R4431:4431 RocqOfSolidity.RocqOfSolidity <> t:44 ind
+R4433:4436 Corelib.Init.Datatypes <> unit ind
+scheme 3339:3339 Primitive t_rect
+scheme 3339:3339 Primitive t_ind
+scheme 3339:3339 Primitive t_rec
+scheme 3339:3339 Primitive t_sind
+R4443:4451 RocqOfSolidity.RocqOfSolidity Primitive <> mod
+mod 4462:4465 <> LowM
+ind 4480:4480 LowM t
+constr 4505:4508 LowM Pure
+constr 4533:4541 LowM Primitive
+constr 4612:4623 LowM CallFunction
+constr 4725:4728 LowM Loop
+constr 4971:4982 LowM CallContract
+constr 5181:5183 LowM Let
+constr 5285:5288 LowM Call
+constr 5329:5338 LowM Impossible
+binder 4483:4483 <> A:74
+R4526:4526 RocqOfSolidity.RocqOfSolidity <> A:74 var
+binder 4517:4522 <> output:77
+binder 4544:4544 <> B:78
+R4572:4582 RocqOfSolidity.RocqOfSolidity Primitive t ind
+R4584:4584 RocqOfSolidity.RocqOfSolidity <> B:78 var
+binder 4560:4568 <> primitive:79
+R4599:4602 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4598:4598 RocqOfSolidity.RocqOfSolidity <> B:78 var
+R4603:4603 RocqOfSolidity.RocqOfSolidity <> t:75 ind
+R4605:4605 RocqOfSolidity.RocqOfSolidity <> A:74 var
+binder 4594:4594 <> k:80
+R4639:4644 Stdlib.Strings.String <> string ind
+binder 4632:4635 <> name:81
+R4666:4669 Corelib.Init.Datatypes <> list ind
+R4671:4676 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4654:4662 <> arguments:82
+R4712:4715 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4690:4697 RocqOfSolidity.RocqOfSolidity Result t ind
+R4700:4703 Corelib.Init.Datatypes <> list ind
+R4705:4710 RocqOfSolidity.RocqOfSolidity U256 t def
+R4716:4716 RocqOfSolidity.RocqOfSolidity <> t:75 ind
+R4718:4718 RocqOfSolidity.RocqOfSolidity <> A:74 var
+binder 4686:4686 <> k:83
+binder 4731:4732 <> In:84
+binder 4734:4736 <> Out:85
+R4759:4760 RocqOfSolidity.RocqOfSolidity <> In:84 var
+binder 4752:4755 <> init:86
+R4779:4782 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4777:4778 RocqOfSolidity.RocqOfSolidity <> In:84 var
+R4783:4783 RocqOfSolidity.RocqOfSolidity <> t:75 ind
+R4785:4787 RocqOfSolidity.RocqOfSolidity <> Out:85 var
+binder 4770:4773 <> body:87
+R4930:4933 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4927:4929 RocqOfSolidity.RocqOfSolidity <> Out:85 var
+R4936:4938 Corelib.Init.Datatypes <> ::type_scope:x_'+'_x not
+R4934:4935 RocqOfSolidity.RocqOfSolidity <> In:84 var
+R4939:4941 RocqOfSolidity.RocqOfSolidity <> Out:85 var
+binder 4914:4923 <> break_with:88
+R4958:4961 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4955:4957 RocqOfSolidity.RocqOfSolidity <> Out:85 var
+R4962:4962 RocqOfSolidity.RocqOfSolidity <> t:75 ind
+R4964:4964 RocqOfSolidity.RocqOfSolidity <> A:74 var
+binder 4951:4951 <> k:89
+R5001:5006 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4991:4997 <> address:90
+R5024:5029 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 5016:5020 <> value:91
+R5047:5050 Corelib.Init.Datatypes <> list ind
+R5052:5052 Corelib.Numbers.BinNums <> Z ind
+binder 5039:5043 <> input:92
+R5072:5075 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5066:5071 RocqOfSolidity.RocqOfSolidity U256 t def
+R5076:5076 RocqOfSolidity.RocqOfSolidity <> t:75 ind
+R5078:5078 RocqOfSolidity.RocqOfSolidity <> A:74 var
+binder 5062:5062 <> k:93
+binder 5186:5186 <> B:94
+R5201:5201 RocqOfSolidity.RocqOfSolidity <> t:75 ind
+R5203:5203 RocqOfSolidity.RocqOfSolidity <> B:94 var
+binder 5196:5197 <> e1:95
+R5212:5215 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5211:5211 RocqOfSolidity.RocqOfSolidity <> B:94 var
+R5216:5216 RocqOfSolidity.RocqOfSolidity <> t:75 ind
+R5218:5218 RocqOfSolidity.RocqOfSolidity <> A:74 var
+binder 5207:5207 <> k:96
+binder 5291:5291 <> B:97
+R5305:5305 RocqOfSolidity.RocqOfSolidity <> t:75 ind
+R5307:5307 RocqOfSolidity.RocqOfSolidity <> B:97 var
+binder 5301:5301 <> e:98
+R5316:5319 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5315:5315 RocqOfSolidity.RocqOfSolidity <> B:97 var
+R5320:5320 RocqOfSolidity.RocqOfSolidity <> t:75 ind
+R5322:5322 RocqOfSolidity.RocqOfSolidity <> A:74 var
+binder 5311:5311 <> k:99
+R5351:5356 Stdlib.Strings.String <> string ind
+binder 5341:5347 <> message:100
+scheme 4480:4480 LowM t_ind
+scheme 4480:4480 LowM t_rec
+scheme 4480:4480 LowM t_sind
+R5372:5375 RocqOfSolidity.RocqOfSolidity LowM Pure constr
+R5372:5375 RocqOfSolidity.RocqOfSolidity LowM Pure constr
+R5394:5402 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+R5394:5402 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+R5423:5434 RocqOfSolidity.RocqOfSolidity LowM CallFunction constr
+R5423:5434 RocqOfSolidity.RocqOfSolidity LowM CallFunction constr
+R5453:5456 RocqOfSolidity.RocqOfSolidity LowM Loop constr
+R5453:5456 RocqOfSolidity.RocqOfSolidity LowM Loop constr
+R5479:5490 RocqOfSolidity.RocqOfSolidity LowM CallContract constr
+R5479:5490 RocqOfSolidity.RocqOfSolidity LowM CallContract constr
+R5509:5511 RocqOfSolidity.RocqOfSolidity LowM Let constr
+R5509:5511 RocqOfSolidity.RocqOfSolidity LowM Let constr
+R5532:5535 RocqOfSolidity.RocqOfSolidity LowM Call constr
+R5532:5535 RocqOfSolidity.RocqOfSolidity LowM Call constr
+R5556:5565 RocqOfSolidity.RocqOfSolidity LowM Impossible constr
+R5556:5565 RocqOfSolidity.RocqOfSolidity LowM Impossible constr
+def 5584:5587 LowM let_
+binder 5590:5590 <> A:101
+binder 5592:5592 <> B:102
+R5607:5607 RocqOfSolidity.RocqOfSolidity LowM t ind
+R5609:5609 RocqOfSolidity.RocqOfSolidity <> A:101 var
+binder 5602:5603 <> e1:103
+R5619:5622 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5618:5618 RocqOfSolidity.RocqOfSolidity <> A:101 var
+R5623:5623 RocqOfSolidity.RocqOfSolidity LowM t ind
+R5625:5625 RocqOfSolidity.RocqOfSolidity <> B:102 var
+binder 5613:5614 <> e2:104
+R5630:5630 RocqOfSolidity.RocqOfSolidity LowM t ind
+R5632:5632 RocqOfSolidity.RocqOfSolidity <> B:102 var
+R5647:5648 RocqOfSolidity.RocqOfSolidity <> e1:103 var
+R5661:5664 RocqOfSolidity.RocqOfSolidity LowM Pure constr
+R5684:5685 RocqOfSolidity.RocqOfSolidity <> e2:104 var
+R5700:5708 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+R5731:5739 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+binder 5756:5761 <> result:107
+R5766:5769 RocqOfSolidity.RocqOfSolidity <> let_:105 def
+R5782:5783 RocqOfSolidity.RocqOfSolidity <> e2:104 var
+R5774:5779 RocqOfSolidity.RocqOfSolidity <> result:107 var
+R5792:5803 RocqOfSolidity.RocqOfSolidity LowM CallFunction constr
+R5831:5842 RocqOfSolidity.RocqOfSolidity LowM CallFunction constr
+binder 5864:5869 <> result:108
+R5874:5877 RocqOfSolidity.RocqOfSolidity <> let_:105 def
+R5890:5891 RocqOfSolidity.RocqOfSolidity <> e2:104 var
+R5882:5887 RocqOfSolidity.RocqOfSolidity <> result:108 var
+R5900:5903 RocqOfSolidity.RocqOfSolidity LowM Loop constr
+R5938:5941 RocqOfSolidity.RocqOfSolidity LowM Loop constr
+binder 5970:5975 <> result:109
+R5980:5983 RocqOfSolidity.RocqOfSolidity <> let_:105 def
+R5996:5997 RocqOfSolidity.RocqOfSolidity <> e2:104 var
+R5988:5993 RocqOfSolidity.RocqOfSolidity <> result:109 var
+R6006:6017 RocqOfSolidity.RocqOfSolidity LowM CallContract constr
+R6051:6062 RocqOfSolidity.RocqOfSolidity LowM CallContract constr
+binder 6090:6095 <> result:110
+R6100:6103 RocqOfSolidity.RocqOfSolidity <> let_:105 def
+R6116:6117 RocqOfSolidity.RocqOfSolidity <> e2:104 var
+R6108:6113 RocqOfSolidity.RocqOfSolidity <> result:110 var
+R6126:6128 RocqOfSolidity.RocqOfSolidity LowM Let constr
+R6144:6146 RocqOfSolidity.RocqOfSolidity LowM Let constr
+binder 6156:6161 <> result:111
+R6166:6169 RocqOfSolidity.RocqOfSolidity <> let_:105 def
+R6182:6183 RocqOfSolidity.RocqOfSolidity <> e2:104 var
+R6174:6179 RocqOfSolidity.RocqOfSolidity <> result:111 var
+R6148:6149 RocqOfSolidity.RocqOfSolidity <> e1:103 var
+R6192:6195 RocqOfSolidity.RocqOfSolidity LowM Call constr
+R6210:6213 RocqOfSolidity.RocqOfSolidity LowM Call constr
+binder 6222:6227 <> result:112
+R6232:6235 RocqOfSolidity.RocqOfSolidity <> let_:105 def
+R6248:6249 RocqOfSolidity.RocqOfSolidity <> e2:104 var
+R6240:6245 RocqOfSolidity.RocqOfSolidity <> result:112 var
+R6258:6267 RocqOfSolidity.RocqOfSolidity LowM Impossible constr
+R6280:6289 RocqOfSolidity.RocqOfSolidity LowM Impossible constr
+R6312:6315 RocqOfSolidity.RocqOfSolidity LowM <> mod
+mod 6326:6326 <> M
+def 6342:6342 M t
+binder 6345:6345 <> A:113
+R6357:6362 RocqOfSolidity.RocqOfSolidity LowM t ind
+R6365:6372 RocqOfSolidity.RocqOfSolidity Result t ind
+R6374:6374 RocqOfSolidity.RocqOfSolidity <> A:113 var
+ax 6460:6462 M run
+binder 6474:6474 <> A:114
+R6487:6490 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6484:6484 RocqOfSolidity.RocqOfSolidity M t def
+R6486:6486 RocqOfSolidity.RocqOfSolidity <> A:114 var
+R6491:6491 RocqOfSolidity.RocqOfSolidity <> A:114 var
+def 6508:6511 M pure
+binder 6514:6514 <> A:117
+R6533:6533 RocqOfSolidity.RocqOfSolidity <> A:117 var
+binder 6524:6529 <> output:118
+R6538:6538 RocqOfSolidity.RocqOfSolidity M t def
+R6540:6540 RocqOfSolidity.RocqOfSolidity <> A:117 var
+R6549:6557 RocqOfSolidity.RocqOfSolidity LowM Pure constr
+R6560:6568 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R6570:6575 RocqOfSolidity.RocqOfSolidity <> output:118 var
+R6591:6594 RocqOfSolidity.RocqOfSolidity M pure def
+def 6613:6623 M generic_let
+binder 6626:6626 <> A:119
+binder 6628:6628 <> B:120
+binder 6659:6659 <> A:121
+binder 6661:6661 <> B:122
+R6679:6682 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6671:6676 RocqOfSolidity.RocqOfSolidity LowM t ind
+R6678:6678 RocqOfSolidity.RocqOfSolidity <> A:121 var
+R6683:6683 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6697:6701 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6685:6688 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6684:6684 RocqOfSolidity.RocqOfSolidity <> A:121 var
+R6689:6694 RocqOfSolidity.RocqOfSolidity LowM t ind
+R6696:6696 RocqOfSolidity.RocqOfSolidity <> B:122 var
+R6702:6707 RocqOfSolidity.RocqOfSolidity LowM t ind
+R6709:6709 RocqOfSolidity.RocqOfSolidity <> B:122 var
+binder 6644:6647 <> let_:123
+R6724:6724 RocqOfSolidity.RocqOfSolidity M t def
+R6726:6726 RocqOfSolidity.RocqOfSolidity <> A:119 var
+binder 6719:6720 <> e1:124
+R6742:6745 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6741:6741 RocqOfSolidity.RocqOfSolidity <> A:119 var
+R6746:6746 RocqOfSolidity.RocqOfSolidity M t def
+R6748:6748 RocqOfSolidity.RocqOfSolidity <> B:120 var
+binder 6736:6737 <> e2:125
+R6759:6759 RocqOfSolidity.RocqOfSolidity M t def
+R6761:6761 RocqOfSolidity.RocqOfSolidity <> B:120 var
+R6770:6773 RocqOfSolidity.RocqOfSolidity <> let_:123 var
+binder 6783:6788 <> result:126
+R6803:6808 RocqOfSolidity.RocqOfSolidity <> result:126 var
+R6821:6829 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R6840:6841 RocqOfSolidity.RocqOfSolidity <> e2:125 var
+R6855:6867 RocqOfSolidity.RocqOfSolidity Result Return constr
+R6876:6884 RocqOfSolidity.RocqOfSolidity LowM Pure constr
+R6887:6899 RocqOfSolidity.RocqOfSolidity Result Return constr
+R6912:6924 RocqOfSolidity.RocqOfSolidity Result Revert constr
+R6933:6941 RocqOfSolidity.RocqOfSolidity LowM Pure constr
+R6944:6956 RocqOfSolidity.RocqOfSolidity Result Revert constr
+R6775:6776 RocqOfSolidity.RocqOfSolidity <> e1:124 var
+R6985:6995 RocqOfSolidity.RocqOfSolidity M generic_let def
+def 7014:7017 M let_
+binder 7020:7020 <> A:128
+binder 7022:7022 <> B:129
+R7036:7039 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7033:7033 RocqOfSolidity.RocqOfSolidity M t def
+R7035:7035 RocqOfSolidity.RocqOfSolidity <> A:128 var
+R7040:7040 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7049:7053 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7042:7045 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7041:7041 RocqOfSolidity.RocqOfSolidity <> A:128 var
+R7046:7046 RocqOfSolidity.RocqOfSolidity M t def
+R7048:7048 RocqOfSolidity.RocqOfSolidity <> B:129 var
+R7054:7054 RocqOfSolidity.RocqOfSolidity M t def
+R7056:7056 RocqOfSolidity.RocqOfSolidity <> B:129 var
+R7065:7075 RocqOfSolidity.RocqOfSolidity M generic_let def
+R7079:7087 RocqOfSolidity.RocqOfSolidity LowM let_ def
+def 7105:7115 M strong_let_
+binder 7118:7118 <> A:130
+binder 7120:7120 <> B:131
+R7134:7137 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7131:7131 RocqOfSolidity.RocqOfSolidity M t def
+R7133:7133 RocqOfSolidity.RocqOfSolidity <> A:130 var
+R7138:7138 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7147:7151 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7140:7143 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7139:7139 RocqOfSolidity.RocqOfSolidity <> A:130 var
+R7144:7144 RocqOfSolidity.RocqOfSolidity M t def
+R7146:7146 RocqOfSolidity.RocqOfSolidity <> B:131 var
+R7152:7152 RocqOfSolidity.RocqOfSolidity M t def
+R7154:7154 RocqOfSolidity.RocqOfSolidity <> B:131 var
+R7163:7173 RocqOfSolidity.RocqOfSolidity M generic_let def
+binder 7180:7180 <> A:132
+binder 7182:7182 <> B:133
+R7188:7195 RocqOfSolidity.RocqOfSolidity LowM Let constr
+R7197:7197 RocqOfSolidity.RocqOfSolidity <> B:133 var
+R7199:7199 RocqOfSolidity.RocqOfSolidity <> A:132 var
+def 7217:7218 M do
+R7226:7226 RocqOfSolidity.RocqOfSolidity M t def
+R7228:7238 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+binder 7221:7222 <> e1:134
+R7247:7247 RocqOfSolidity.RocqOfSolidity M t def
+R7249:7259 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+binder 7242:7243 <> e2:135
+R7264:7264 RocqOfSolidity.RocqOfSolidity M t def
+R7266:7276 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R7285:7295 RocqOfSolidity.RocqOfSolidity M strong_let_ def
+binder 7305:7310 <> output:136
+R7325:7330 RocqOfSolidity.RocqOfSolidity <> output:136 var
+R7343:7354 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R7359:7360 RocqOfSolidity.RocqOfSolidity <> e2:135 var
+R7373:7376 RocqOfSolidity.RocqOfSolidity M pure def
+R7378:7383 RocqOfSolidity.RocqOfSolidity <> output:136 var
+R7297:7298 RocqOfSolidity.RocqOfSolidity <> e1:134 var
+def 7409:7412 M call
+binder 7415:7415 <> A:138
+R7429:7429 RocqOfSolidity.RocqOfSolidity M t def
+R7431:7431 RocqOfSolidity.RocqOfSolidity <> A:138 var
+binder 7425:7425 <> e:139
+R7436:7436 RocqOfSolidity.RocqOfSolidity M t def
+R7438:7438 RocqOfSolidity.RocqOfSolidity <> A:138 var
+R7447:7455 RocqOfSolidity.RocqOfSolidity LowM Call constr
+R7459:7467 RocqOfSolidity.RocqOfSolidity LowM Pure constr
+R7457:7457 RocqOfSolidity.RocqOfSolidity <> e:139 var
+def 7645:7657 M IS_DEBUG_EXEC
+R7661:7664 Corelib.Init.Datatypes <> bool ind
+R7669:7673 Corelib.Init.Datatypes <> false constr
+def 7765:7769 M scope
+binder 7772:7772 <> A:140
+R7786:7786 RocqOfSolidity.RocqOfSolidity M t def
+R7788:7788 RocqOfSolidity.RocqOfSolidity <> A:140 var
+binder 7782:7782 <> e:141
+R7793:7793 RocqOfSolidity.RocqOfSolidity M t def
+R7795:7795 RocqOfSolidity.RocqOfSolidity <> A:140 var
+R7807:7819 RocqOfSolidity.RocqOfSolidity M IS_DEBUG_EXEC def
+R7993:8006 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+R8044:8052 RocqOfSolidity.RocqOfSolidity LowM let_ def
+binder 8061:8066 <> result:142
+R8077:8090 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+R8129:8137 RocqOfSolidity.RocqOfSolidity LowM Pure constr
+R8139:8144 RocqOfSolidity.RocqOfSolidity <> result:142 var
+R8092:8111 RocqOfSolidity.RocqOfSolidity Primitive CloseScope constr
+R8054:8054 RocqOfSolidity.RocqOfSolidity <> e:141 var
+R8008:8026 RocqOfSolidity.RocqOfSolidity Primitive OpenScope constr
+R7832:7845 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+R7883:7886 RocqOfSolidity.RocqOfSolidity M let_ def
+binder 7895:7900 <> output:143
+R7911:7924 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+R7963:7966 RocqOfSolidity.RocqOfSolidity M pure def
+R7968:7973 RocqOfSolidity.RocqOfSolidity <> output:143 var
+R7926:7945 RocqOfSolidity.RocqOfSolidity Primitive CloseScope constr
+R7888:7888 RocqOfSolidity.RocqOfSolidity <> e:141 var
+R7847:7865 RocqOfSolidity.RocqOfSolidity Primitive OpenScope constr
+def 8339:8352 M log_call_stack
+binder 8355:8355 <> A:144
+R8378:8383 Stdlib.Strings.String <> string ind
+binder 8371:8374 <> name:145
+R8405:8408 Corelib.Init.Datatypes <> list ind
+R8410:8415 Stdlib.Strings.String <> string ind
+binder 8393:8401 <> arguments:146
+R8443:8446 Corelib.Init.Datatypes <> list ind
+R8448:8453 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 8425:8439 <> argument_values:147
+R8467:8467 RocqOfSolidity.RocqOfSolidity M t def
+R8469:8469 RocqOfSolidity.RocqOfSolidity <> A:144 var
+binder 8463:8463 <> e:148
+R8480:8480 RocqOfSolidity.RocqOfSolidity M t def
+R8482:8482 RocqOfSolidity.RocqOfSolidity <> A:144 var
+R8494:8506 RocqOfSolidity.RocqOfSolidity M IS_DEBUG_EXEC def
+R8774:8774 RocqOfSolidity.RocqOfSolidity <> e:148 var
+R8519:8522 RocqOfSolidity.RocqOfSolidity M let_ def
+R8650:8653 RocqOfSolidity.RocqOfSolidity M let_ def
+binder 8662:8667 <> output:149
+R8678:8681 RocqOfSolidity.RocqOfSolidity M let_ def
+R8744:8747 RocqOfSolidity.RocqOfSolidity M pure def
+R8749:8754 RocqOfSolidity.RocqOfSolidity <> output:149 var
+R8684:8697 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+R8722:8725 RocqOfSolidity.RocqOfSolidity M pure def
+R8699:8720 RocqOfSolidity.RocqOfSolidity Primitive CallStackPop constr
+R8655:8655 RocqOfSolidity.RocqOfSolidity <> e:148 var
+R8534:8547 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+R8621:8624 RocqOfSolidity.RocqOfSolidity M pure def
+R8550:8572 RocqOfSolidity.RocqOfSolidity Primitive CallStackPush constr
+R8574:8577 RocqOfSolidity.RocqOfSolidity <> name:145 var
+R8580:8591 Stdlib.Lists.List <> combine def
+R8603:8617 RocqOfSolidity.RocqOfSolidity <> argument_values:147 var
+R8593:8601 RocqOfSolidity.RocqOfSolidity <> arguments:146 var
+def 8791:8799 M expr_stmt
+R8806:8809 Corelib.Init.Datatypes <> list ind
+R8811:8816 RocqOfSolidity.RocqOfSolidity U256 t def
+R8821:8821 RocqOfSolidity.RocqOfSolidity M t def
+R8823:8833 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R8842:8845 RocqOfSolidity.RocqOfSolidity M pure def
+R8847:8858 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+def 8875:8887 M call_function
+R8897:8902 Stdlib.Strings.String <> string ind
+binder 8890:8893 <> name:150
+R8918:8921 Corelib.Init.Datatypes <> list ind
+R8924:8927 Corelib.Init.Datatypes <> list ind
+R8929:8934 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 8906:8914 <> arguments:151
+R8940:8940 RocqOfSolidity.RocqOfSolidity M t def
+R8943:8946 Corelib.Init.Datatypes <> list ind
+R8948:8953 RocqOfSolidity.RocqOfSolidity U256 t def
+R8980:8987 Stdlib.Lists.List <> map abbrev
+R9026:9034 RocqOfSolidity.RocqOfSolidity <> arguments:151 var
+binder 8994:9001 <> argument:152
+R9006:9012 Stdlib.Lists.List <> hd def
+R9016:9023 RocqOfSolidity.RocqOfSolidity <> argument:152 var
+binder 8967:8975 <> arguments:153
+R9043:9059 RocqOfSolidity.RocqOfSolidity LowM CallFunction constr
+R9076:9084 RocqOfSolidity.RocqOfSolidity LowM Pure constr
+R9066:9074 RocqOfSolidity.RocqOfSolidity <> arguments:153 var
+R9061:9064 RocqOfSolidity.RocqOfSolidity <> name:150 var
+def 9101:9103 M if_
+R9119:9122 Corelib.Init.Datatypes <> list ind
+R9124:9129 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 9106:9115 <> conditions:154
+R9143:9143 RocqOfSolidity.RocqOfSolidity M t def
+R9145:9155 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+binder 9133:9139 <> success:155
+R9160:9160 RocqOfSolidity.RocqOfSolidity M t def
+R9162:9172 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R9187:9196 RocqOfSolidity.RocqOfSolidity <> conditions:154 var
+R9209:9209 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R9219:9219 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R9340:9343 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R9396:9402 RocqOfSolidity.RocqOfSolidity <> success:155 var
+R9359:9362 RocqOfSolidity.RocqOfSolidity M pure def
+R9364:9375 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R9415:9429 RocqOfSolidity.RocqOfSolidity LowM Impossible constr
+def 9497:9503 M if_unit
+R9518:9523 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 9506:9514 <> condition:157
+R9537:9537 RocqOfSolidity.RocqOfSolidity M t def
+R9539:9542 Corelib.Init.Datatypes <> unit ind
+binder 9527:9533 <> success:158
+R9547:9547 RocqOfSolidity.RocqOfSolidity M t def
+R9549:9552 Corelib.Init.Datatypes <> unit ind
+R9573:9576 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R9564:9572 RocqOfSolidity.RocqOfSolidity <> condition:157 var
+R9613:9619 RocqOfSolidity.RocqOfSolidity <> success:158 var
+R9590:9593 RocqOfSolidity.RocqOfSolidity M pure def
+R9595:9596 Corelib.Init.Datatypes <> tt constr
+def 9636:9642 M declare
+R9653:9656 Corelib.Init.Datatypes <> list ind
+R9658:9663 Stdlib.Strings.String <> string ind
+binder 9645:9649 <> names:159
+R9676:9681 Corelib.Init.Datatypes <> option ind
+R9684:9687 Corelib.Init.Datatypes <> list ind
+R9689:9694 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 9667:9672 <> values:160
+R9700:9700 RocqOfSolidity.RocqOfSolidity M t def
+R9702:9712 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R9760:9765 RocqOfSolidity.RocqOfSolidity <> values:160 var
+R9780:9783 Corelib.Init.Datatypes <> None constr
+R9788:9795 Stdlib.Lists.List <> map abbrev
+R9810:9814 RocqOfSolidity.RocqOfSolidity <> names:159 var
+R9824:9827 Corelib.Init.Datatypes <> Some constr
+R9839:9844 RocqOfSolidity.RocqOfSolidity <> values:160 var
+binder 9725:9743 <> values_with_default:162
+R9863:9876 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+R9938:9941 RocqOfSolidity.RocqOfSolidity M pure def
+R9943:9954 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R9879:9899 RocqOfSolidity.RocqOfSolidity Primitive DeclareVars constr
+R9901:9905 RocqOfSolidity.RocqOfSolidity <> names:159 var
+R9907:9925 RocqOfSolidity.RocqOfSolidity <> values_with_default:162 var
+def 9972:9977 M assign
+R9988:9991 Corelib.Init.Datatypes <> list ind
+R9993:9998 Stdlib.Strings.String <> string ind
+binder 9980:9984 <> names:163
+R10011:10016 Corelib.Init.Datatypes <> option ind
+R10019:10022 Corelib.Init.Datatypes <> list ind
+R10024:10029 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 10002:10007 <> values:164
+R10035:10035 RocqOfSolidity.RocqOfSolidity M t def
+R10037:10047 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R10095:10100 RocqOfSolidity.RocqOfSolidity <> values:164 var
+R10115:10118 Corelib.Init.Datatypes <> None constr
+R10123:10130 Stdlib.Lists.List <> map abbrev
+R10145:10149 RocqOfSolidity.RocqOfSolidity <> names:163 var
+R10159:10162 Corelib.Init.Datatypes <> Some constr
+R10174:10179 RocqOfSolidity.RocqOfSolidity <> values:164 var
+binder 10060:10078 <> values_with_default:166
+R10198:10211 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+R10272:10275 RocqOfSolidity.RocqOfSolidity M pure def
+R10277:10288 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R10214:10233 RocqOfSolidity.RocqOfSolidity Primitive AssignVars constr
+R10235:10239 RocqOfSolidity.RocqOfSolidity <> names:163 var
+R10241:10259 RocqOfSolidity.RocqOfSolidity <> values_with_default:166 var
+def 10306:10312 M get_var
+R10322:10327 Stdlib.Strings.String <> string ind
+binder 10315:10318 <> name:167
+R10332:10332 RocqOfSolidity.RocqOfSolidity M t def
+R10335:10338 Corelib.Init.Datatypes <> list ind
+R10340:10345 RocqOfSolidity.RocqOfSolidity U256 t def
+R10355:10368 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+binder 10399:10403 <> value:168
+R10408:10411 RocqOfSolidity.RocqOfSolidity M pure def
+R10413:10413 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R10419:10419 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R10414:10418 RocqOfSolidity.RocqOfSolidity <> value:168 var
+R10371:10386 RocqOfSolidity.RocqOfSolidity Primitive GetVar constr
+R10388:10391 RocqOfSolidity.RocqOfSolidity <> name:167 var
+def 10435:10442 M get_vars
+R10453:10456 Corelib.Init.Datatypes <> list ind
+R10458:10463 Stdlib.Strings.String <> string ind
+binder 10445:10449 <> names:169
+R10468:10468 RocqOfSolidity.RocqOfSolidity M t def
+R10471:10474 Corelib.Init.Datatypes <> list ind
+R10476:10481 RocqOfSolidity.RocqOfSolidity U256 t def
+R10497:10501 RocqOfSolidity.RocqOfSolidity <> names:169 var
+R10514:10515 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R10520:10523 RocqOfSolidity.RocqOfSolidity M pure def
+R10525:10526 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R10538:10541 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R10557:10570 RocqOfSolidity.RocqOfSolidity LowM Primitive constr
+binder 10601:10605 <> value:172
+R10616:10619 RocqOfSolidity.RocqOfSolidity M let_ def
+binder 10643:10648 <> values:173
+R10659:10662 RocqOfSolidity.RocqOfSolidity M pure def
+R10670:10673 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R10665:10669 RocqOfSolidity.RocqOfSolidity <> value:172 var
+R10674:10679 RocqOfSolidity.RocqOfSolidity <> values:173 var
+R10622:10629 RocqOfSolidity.RocqOfSolidity <> get_vars:170 def
+R10631:10635 RocqOfSolidity.RocqOfSolidity <> names:169 var
+R10573:10588 RocqOfSolidity.RocqOfSolidity Primitive GetVar constr
+def 10707:10719 M make_function
+R10735:10740 Stdlib.Strings.String <> string ind
+binder 10728:10731 <> name:174
+R10764:10767 Corelib.Init.Datatypes <> list ind
+R10769:10774 Stdlib.Strings.String <> string ind
+binder 10744:10752 <> arguments:175
+binder 10754:10760 <> results:176
+R10785:10785 RocqOfSolidity.RocqOfSolidity M t def
+R10787:10797 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+binder 10778:10781 <> body:177
+R10819:10822 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10808:10811 Corelib.Init.Datatypes <> list ind
+R10813:10818 RocqOfSolidity.RocqOfSolidity U256 t def
+R10823:10823 RocqOfSolidity.RocqOfSolidity M t def
+R10826:10829 Corelib.Init.Datatypes <> list ind
+R10831:10836 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 10850:10864 <> argument_values:178
+R10875:10888 RocqOfSolidity.RocqOfSolidity M log_call_stack def
+R10931:10935 RocqOfSolidity.RocqOfSolidity M scope def
+R10949:10952 RocqOfSolidity.RocqOfSolidity M let_ def
+R11017:11020 RocqOfSolidity.RocqOfSolidity M let_ def
+R11065:11068 RocqOfSolidity.RocqOfSolidity M let_ def
+R11095:11102 RocqOfSolidity.RocqOfSolidity M get_vars def
+R11104:11110 RocqOfSolidity.RocqOfSolidity <> results:176 var
+R11070:11073 RocqOfSolidity.RocqOfSolidity <> body:177 var
+R11023:11029 RocqOfSolidity.RocqOfSolidity M declare def
+R11031:11037 RocqOfSolidity.RocqOfSolidity <> results:176 var
+R11039:11042 Corelib.Init.Datatypes <> None constr
+R10955:10961 RocqOfSolidity.RocqOfSolidity M declare def
+R10963:10971 RocqOfSolidity.RocqOfSolidity <> arguments:175 var
+R10974:10977 Corelib.Init.Datatypes <> Some constr
+R10979:10993 RocqOfSolidity.RocqOfSolidity <> argument_values:178 var
+R10905:10919 RocqOfSolidity.RocqOfSolidity <> argument_values:178 var
+R10895:10903 RocqOfSolidity.RocqOfSolidity <> arguments:175 var
+R10890:10893 RocqOfSolidity.RocqOfSolidity <> name:174 var
+def 11146:11155 M switch_aux
+R11166:11171 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 11158:11162 <> value:179
+R11183:11186 Corelib.Init.Datatypes <> list ind
+R11202:11204 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R11189:11194 Corelib.Init.Datatypes <> option ind
+R11196:11201 RocqOfSolidity.RocqOfSolidity U256 t def
+R11205:11205 RocqOfSolidity.RocqOfSolidity M t def
+R11207:11217 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+binder 11175:11179 <> cases:180
+R11229:11229 RocqOfSolidity.RocqOfSolidity M t def
+R11231:11241 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R11256:11260 RocqOfSolidity.RocqOfSolidity <> cases:180 var
+R11273:11274 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R11279:11282 RocqOfSolidity.RocqOfSolidity M pure def
+R11284:11295 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R11315:11318 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R11303:11303 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R11308:11309 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R11314:11314 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R11304:11307 Corelib.Init.Datatypes <> None constr
+R11361:11364 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R11335:11335 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R11354:11355 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R11360:11360 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R11336:11339 Corelib.Init.Datatypes <> Some constr
+R11383:11387 Stdlib.ZArith.BinInt Z eqb def
+R11389:11393 RocqOfSolidity.RocqOfSolidity <> value:179 var
+R11446:11455 RocqOfSolidity.RocqOfSolidity <> switch_aux:181 def
+R11463:11467 RocqOfSolidity.RocqOfSolidity <> cases:180 var
+R11457:11461 RocqOfSolidity.RocqOfSolidity <> value:179 var
+def 11492:11497 M switch
+R11509:11512 Corelib.Init.Datatypes <> list ind
+R11514:11519 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 11500:11505 <> values:183
+R11531:11534 Corelib.Init.Datatypes <> list ind
+R11550:11552 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R11537:11542 Corelib.Init.Datatypes <> option ind
+R11544:11549 RocqOfSolidity.RocqOfSolidity U256 t def
+R11553:11553 RocqOfSolidity.RocqOfSolidity M t def
+R11555:11565 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+binder 11523:11527 <> cases:184
+R11577:11577 RocqOfSolidity.RocqOfSolidity M t def
+R11579:11589 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R11598:11601 RocqOfSolidity.RocqOfSolidity M let_ def
+binder 11747:11751 <> value:185
+R11762:11771 RocqOfSolidity.RocqOfSolidity M switch_aux def
+R11773:11777 RocqOfSolidity.RocqOfSolidity <> value:185 var
+R11779:11783 RocqOfSolidity.RocqOfSolidity <> cases:184 var
+R11617:11622 RocqOfSolidity.RocqOfSolidity <> values:183 var
+R11637:11637 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11643:11643 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R11648:11651 RocqOfSolidity.RocqOfSolidity M pure def
+R11672:11686 RocqOfSolidity.RocqOfSolidity LowM Impossible constr
+def 11806:11809 M for_
+R11824:11824 RocqOfSolidity.RocqOfSolidity M t def
+R11827:11830 Corelib.Init.Datatypes <> list ind
+R11832:11837 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 11812:11820 <> condition:187
+R11855:11855 RocqOfSolidity.RocqOfSolidity M t def
+R11857:11867 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+binder 11842:11846 <> after:188
+binder 11848:11851 <> body:189
+R11872:11872 RocqOfSolidity.RocqOfSolidity M t def
+R11874:11884 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R11912:11915 Corelib.Init.Datatypes <> unit ind
+R11943:11953 RocqOfSolidity.RocqOfSolidity M strong_let_ def
+binder 11970:11978 <> condition:190
+R11995:12003 RocqOfSolidity.RocqOfSolidity <> condition:190 var
+R12018:12018 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R12020:12020 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R12025:12028 RocqOfSolidity.RocqOfSolidity M pure def
+R12030:12044 RocqOfSolidity.RocqOfSolidity BlockUnit Break constr
+R12054:12054 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R12056:12056 Stdlib.Lists.List ListNotations ::list_scope:'['_x_']' not
+R12069:12079 RocqOfSolidity.RocqOfSolidity M strong_let_ def
+binder 12091:12096 <> output:192
+R12117:12122 RocqOfSolidity.RocqOfSolidity <> output:192 var
+R12141:12152 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R12156:12173 RocqOfSolidity.RocqOfSolidity BlockUnit Continue constr
+R12178:12182 RocqOfSolidity.RocqOfSolidity <> after:188 var
+R12178:12182 RocqOfSolidity.RocqOfSolidity <> after:188 var
+R12196:12210 RocqOfSolidity.RocqOfSolidity BlockUnit Break constr
+R12214:12228 RocqOfSolidity.RocqOfSolidity BlockUnit Leave constr
+R12233:12236 RocqOfSolidity.RocqOfSolidity M pure def
+R12238:12243 RocqOfSolidity.RocqOfSolidity <> output:192 var
+R12233:12236 RocqOfSolidity.RocqOfSolidity M pure def
+R12238:12243 RocqOfSolidity.RocqOfSolidity <> output:192 var
+R12081:12084 RocqOfSolidity.RocqOfSolidity <> body:189 var
+R12282:12296 RocqOfSolidity.RocqOfSolidity LowM Impossible constr
+R11955:11963 RocqOfSolidity.RocqOfSolidity <> condition:187 var
+R11912:11915 Corelib.Init.Datatypes <> unit ind
+R11920:11920 RocqOfSolidity.RocqOfSolidity M t def
+R11922:11932 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+binder 11897:11905 <> loop_body:194
+R12385:12392 RocqOfSolidity.RocqOfSolidity Result t ind
+R12394:12404 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+binder 12376:12381 <> result:195
+R12452:12457 RocqOfSolidity.RocqOfSolidity <> result:195 var
+R12472:12480 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R12528:12542 RocqOfSolidity.RocqOfSolidity BlockUnit Break constr
+R12547:12549 Corelib.Init.Datatypes <> inr constr
+R12552:12560 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R12562:12573 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R12586:12600 RocqOfSolidity.RocqOfSolidity BlockUnit Leave constr
+R12605:12607 Corelib.Init.Datatypes <> inr constr
+R12610:12618 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R12620:12634 RocqOfSolidity.RocqOfSolidity BlockUnit Leave constr
+R12647:12658 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R12662:12679 RocqOfSolidity.RocqOfSolidity BlockUnit Continue constr
+R12684:12686 Corelib.Init.Datatypes <> inl constr
+R12688:12689 Corelib.Init.Datatypes <> tt constr
+R12684:12686 Corelib.Init.Datatypes <> inl constr
+R12688:12689 Corelib.Init.Datatypes <> tt constr
+R12716:12718 Corelib.Init.Datatypes <> inr constr
+R12720:12725 RocqOfSolidity.RocqOfSolidity <> result:195 var
+R12385:12392 RocqOfSolidity.RocqOfSolidity Result t ind
+R12394:12404 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+binder 12376:12381 <> result:198
+R12413:12415 Corelib.Init.Datatypes <> ::type_scope:x_'+'_x not
+R12409:12412 Corelib.Init.Datatypes <> unit ind
+R12416:12423 RocqOfSolidity.RocqOfSolidity Result t ind
+R12425:12435 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+binder 12364:12373 <> break_with:199
+R12744:12752 RocqOfSolidity.RocqOfSolidity LowM Loop constr
+R12778:12786 RocqOfSolidity.RocqOfSolidity LowM Pure constr
+R12767:12776 RocqOfSolidity.RocqOfSolidity <> break_with:199 var
+R12757:12765 RocqOfSolidity.RocqOfSolidity <> loop_body:194 var
+R12754:12755 Corelib.Init.Datatypes <> tt constr
+def 12803:12807 M break
+R12811:12811 RocqOfSolidity.RocqOfSolidity M t def
+R12813:12823 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R12832:12835 RocqOfSolidity.RocqOfSolidity M pure def
+R12837:12851 RocqOfSolidity.RocqOfSolidity BlockUnit Break constr
+def 12868:12875 M continue
+R12879:12879 RocqOfSolidity.RocqOfSolidity M t def
+R12881:12891 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R12900:12903 RocqOfSolidity.RocqOfSolidity M pure def
+R12905:12922 RocqOfSolidity.RocqOfSolidity BlockUnit Continue constr
+def 12939:12943 M leave
+R12947:12947 RocqOfSolidity.RocqOfSolidity M t def
+R12949:12959 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R12968:12971 RocqOfSolidity.RocqOfSolidity M pure def
+R12973:12987 RocqOfSolidity.RocqOfSolidity BlockUnit Leave constr
+binder 13257:13257 <> v:200
+R13272:13272 RocqOfSolidity.RocqOfSolidity <> v:200 var
+binder 13257:13257 <> v:201
+R13272:13272 RocqOfSolidity.RocqOfSolidity <> v:201 var
+R13787:13789 RocqOfSolidity.RocqOfSolidity M run defax
+R13787:13789 RocqOfSolidity.RocqOfSolidity M run defax
+R14119:14119 RocqOfSolidity.RocqOfSolidity M t def
+R14119:14119 RocqOfSolidity.RocqOfSolidity M t def
+R14154:14157 RocqOfSolidity.RocqOfSolidity M pure def
+R13848:13850 RocqOfSolidity.RocqOfSolidity M run defax
+R13848:13850 RocqOfSolidity.RocqOfSolidity M run defax
+R13896:13899 RocqOfSolidity.RocqOfSolidity M let_ def
+R13828:13830 RocqOfSolidity.RocqOfSolidity M run defax
+R13292:13295 RocqOfSolidity.RocqOfSolidity M let_ def
+R13556:13559 RocqOfSolidity.RocqOfSolidity M let_ def
+binder 13460:13460 <> v:202
+R14185:14185 RocqOfSolidity.RocqOfSolidity M <> mod
+mod 14246:14252 <> Shallow
+def 14268:14268 Shallow t
+binder 14271:14275 <> State:203
+R14297:14299 RocqOfSolidity.RocqOfSolidity M t def
+R14313:14315 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R14302:14312 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R14316:14320 RocqOfSolidity.RocqOfSolidity <> State:203 var
+def 14338:14346 Shallow let_state
+binder 14349:14354 <> State1:204
+binder 14356:14361 <> State2:205
+R14390:14390 RocqOfSolidity.RocqOfSolidity Shallow t def
+R14392:14397 RocqOfSolidity.RocqOfSolidity <> State1:204 var
+binder 14377:14386 <> expression:206
+R14414:14417 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14408:14413 RocqOfSolidity.RocqOfSolidity <> State1:204 var
+R14424:14426 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R14418:14423 RocqOfSolidity.RocqOfSolidity <> State2:205 var
+R14427:14427 RocqOfSolidity.RocqOfSolidity Shallow t def
+R14429:14434 RocqOfSolidity.RocqOfSolidity <> State2:205 var
+binder 14401:14404 <> body:207
+R14445:14445 RocqOfSolidity.RocqOfSolidity Shallow t def
+R14447:14452 RocqOfSolidity.RocqOfSolidity <> State2:205 var
+R14461:14473 RocqOfSolidity.RocqOfSolidity M strong_let_ def
+binder 14491:14495 <> value:208
+R14527:14531 RocqOfSolidity.RocqOfSolidity <> value:208 var
+R14509:14509 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14514:14515 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14522:14522 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14562:14573 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R14578:14580 Corelib.Init.Datatypes <> snd def
+R14583:14586 RocqOfSolidity.RocqOfSolidity <> body:207 var
+R14607:14612 RocqOfSolidity.RocqOfSolidity M pure def
+R14614:14614 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14619:14620 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14638:14638 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14621:14623 Corelib.Init.Datatypes <> fst def
+R14626:14629 RocqOfSolidity.RocqOfSolidity <> body:207 var
+R14475:14484 RocqOfSolidity.RocqOfSolidity <> expression:206 var
+def 14664:14680 Shallow lift_state_update
+binder 14683:14688 <> State1:211
+binder 14690:14695 <> State2:212
+R14721:14724 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R14715:14720 RocqOfSolidity.RocqOfSolidity <> State1:211 var
+R14725:14730 RocqOfSolidity.RocqOfSolidity <> State2:212 var
+binder 14711:14711 <> f:213
+R14744:14746 RocqOfSolidity.RocqOfSolidity M t def
+R14760:14762 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R14749:14759 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R14763:14768 RocqOfSolidity.RocqOfSolidity <> State1:211 var
+binder 14740:14740 <> e:214
+R14780:14782 RocqOfSolidity.RocqOfSolidity M t def
+R14796:14798 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R14785:14795 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R14799:14804 RocqOfSolidity.RocqOfSolidity <> State2:212 var
+R14814:14819 RocqOfSolidity.RocqOfSolidity M let_ def
+R14829:14829 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14836:14837 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14843:14843 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+binder 14838:14842 <> state:215
+binder 14830:14835 <> output:216
+binder 14829:14843 <> pat:217
+R14852:14857 RocqOfSolidity.RocqOfSolidity M pure def
+R14859:14859 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14866:14867 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14875:14875 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R14860:14865 RocqOfSolidity.RocqOfSolidity <> output:216 var
+R14868:14868 RocqOfSolidity.RocqOfSolidity <> f:213 var
+R14870:14874 RocqOfSolidity.RocqOfSolidity <> state:215 var
+R14821:14821 RocqOfSolidity.RocqOfSolidity <> e:214 var
+def 14893:14895 Shallow if_
+binder 14898:14902 <> State:218
+R14930:14935 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 14918:14926 <> condition:219
+R14955:14957 RocqOfSolidity.RocqOfSolidity M t def
+R14971:14973 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R14960:14970 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R14974:14978 RocqOfSolidity.RocqOfSolidity <> State:218 var
+binder 14945:14951 <> success:220
+R14999:15003 RocqOfSolidity.RocqOfSolidity <> State:218 var
+binder 14989:14995 <> failure:221
+R15014:15016 RocqOfSolidity.RocqOfSolidity M t def
+R15030:15032 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R15019:15029 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R15033:15037 RocqOfSolidity.RocqOfSolidity <> State:218 var
+R15059:15062 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R15050:15058 RocqOfSolidity.RocqOfSolidity <> condition:219 var
+R15122:15128 RocqOfSolidity.RocqOfSolidity <> success:220 var
+R15076:15081 RocqOfSolidity.RocqOfSolidity M pure def
+R15083:15083 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15096:15097 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15105:15105 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15084:15095 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R15098:15104 RocqOfSolidity.RocqOfSolidity <> failure:221 var
+def 15145:15148 Shallow for_
+binder 15151:15155 <> State:222
+R15184:15188 RocqOfSolidity.RocqOfSolidity <> State:222 var
+binder 15171:15180 <> init_state:223
+R15215:15218 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15210:15214 RocqOfSolidity.RocqOfSolidity <> State:222 var
+R15219:15221 RocqOfSolidity.RocqOfSolidity M t def
+R15223:15228 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 15198:15206 <> condition:224
+R15250:15253 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15245:15249 RocqOfSolidity.RocqOfSolidity <> State:222 var
+R15254:15256 RocqOfSolidity.RocqOfSolidity M t def
+R15270:15272 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R15259:15269 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R15273:15277 RocqOfSolidity.RocqOfSolidity <> State:222 var
+binder 15238:15241 <> body:225
+R15300:15303 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R15295:15299 RocqOfSolidity.RocqOfSolidity <> State:222 var
+R15304:15306 RocqOfSolidity.RocqOfSolidity M t def
+R15320:15322 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R15309:15319 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R15323:15327 RocqOfSolidity.RocqOfSolidity <> State:222 var
+binder 15288:15291 <> post:226
+R15339:15341 RocqOfSolidity.RocqOfSolidity M t def
+R15355:15357 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R15344:15354 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R15358:15362 RocqOfSolidity.RocqOfSolidity <> State:222 var
+R15395:15399 RocqOfSolidity.RocqOfSolidity <> State:222 var
+binder 15387:15391 <> state:227
+R15439:15451 RocqOfSolidity.RocqOfSolidity M strong_let_ def
+binder 15476:15484 <> condition:228
+R15507:15510 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R15498:15506 RocqOfSolidity.RocqOfSolidity <> condition:228 var
+R15577:15589 RocqOfSolidity.RocqOfSolidity M strong_let_ def
+R15610:15610 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15617:15618 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15624:15624 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+binder 15619:15623 <> state:229
+binder 15611:15616 <> output:230
+binder 15610:15624 <> pat:231
+R15643:15648 RocqOfSolidity.RocqOfSolidity <> output:230 var
+R15665:15676 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R15680:15697 RocqOfSolidity.RocqOfSolidity BlockUnit Continue constr
+R15702:15705 RocqOfSolidity.RocqOfSolidity <> post:226 var
+R15707:15711 RocqOfSolidity.RocqOfSolidity <> state:229 var
+R15702:15705 RocqOfSolidity.RocqOfSolidity <> post:226 var
+R15707:15711 RocqOfSolidity.RocqOfSolidity <> state:229 var
+R15723:15737 RocqOfSolidity.RocqOfSolidity BlockUnit Break constr
+R15741:15755 RocqOfSolidity.RocqOfSolidity BlockUnit Leave constr
+R15760:15765 RocqOfSolidity.RocqOfSolidity M pure def
+R15767:15767 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15774:15775 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15781:15781 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15768:15773 RocqOfSolidity.RocqOfSolidity <> output:230 var
+R15776:15780 RocqOfSolidity.RocqOfSolidity <> state:229 var
+R15760:15765 RocqOfSolidity.RocqOfSolidity M pure def
+R15767:15767 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15774:15775 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15781:15781 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15768:15773 RocqOfSolidity.RocqOfSolidity <> output:230 var
+R15776:15780 RocqOfSolidity.RocqOfSolidity <> state:229 var
+R15592:15595 RocqOfSolidity.RocqOfSolidity <> body:225 var
+R15597:15601 RocqOfSolidity.RocqOfSolidity <> state:227 var
+R15526:15531 RocqOfSolidity.RocqOfSolidity M pure def
+R15533:15533 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15549:15550 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15556:15556 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15534:15548 RocqOfSolidity.RocqOfSolidity BlockUnit Break constr
+R15551:15555 RocqOfSolidity.RocqOfSolidity <> state:227 var
+R15454:15462 RocqOfSolidity.RocqOfSolidity <> condition:224 var
+R15464:15468 RocqOfSolidity.RocqOfSolidity <> state:227 var
+R15395:15399 RocqOfSolidity.RocqOfSolidity <> State:222 var
+binder 15387:15391 <> state:233
+R15404:15406 RocqOfSolidity.RocqOfSolidity M t def
+R15420:15422 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R15409:15419 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R15423:15427 RocqOfSolidity.RocqOfSolidity <> State:222 var
+binder 15376:15384 <> loop_body:234
+R15829:15836 RocqOfSolidity.RocqOfSolidity Result t ind
+R15850:15852 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R15839:15849 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R15853:15857 RocqOfSolidity.RocqOfSolidity <> State:222 var
+binder 15820:15825 <> result:235
+R15925:15930 RocqOfSolidity.RocqOfSolidity <> result:235 var
+R15945:15953 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R15955:15955 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15962:15963 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R15969:15969 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R16010:16024 RocqOfSolidity.RocqOfSolidity BlockUnit Break constr
+R16029:16031 Corelib.Init.Datatypes <> inr constr
+R16034:16042 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R16044:16044 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R16057:16058 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R16064:16064 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R16045:16056 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R16077:16091 RocqOfSolidity.RocqOfSolidity BlockUnit Leave constr
+R16096:16098 Corelib.Init.Datatypes <> inr constr
+R16101:16109 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R16111:16111 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R16127:16128 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R16134:16134 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R16112:16126 RocqOfSolidity.RocqOfSolidity BlockUnit Leave constr
+R16147:16158 RocqOfSolidity.RocqOfSolidity BlockUnit Tt constr
+R16162:16179 RocqOfSolidity.RocqOfSolidity BlockUnit Continue constr
+R16184:16186 Corelib.Init.Datatypes <> inl constr
+R16184:16186 Corelib.Init.Datatypes <> inl constr
+R16219:16221 Corelib.Init.Datatypes <> inr constr
+R16223:16228 RocqOfSolidity.RocqOfSolidity <> result:235 var
+R15829:15836 RocqOfSolidity.RocqOfSolidity Result t ind
+R15850:15852 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R15839:15849 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R15853:15857 RocqOfSolidity.RocqOfSolidity <> State:222 var
+binder 15820:15825 <> result:238
+R15876:15878 Corelib.Init.Datatypes <> ::type_scope:x_'+'_x not
+R15871:15875 RocqOfSolidity.RocqOfSolidity <> State:222 var
+R15879:15886 RocqOfSolidity.RocqOfSolidity Result t ind
+R15900:15902 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R15889:15899 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R15903:15907 RocqOfSolidity.RocqOfSolidity <> State:222 var
+binder 15808:15817 <> break_with:239
+R16247:16255 RocqOfSolidity.RocqOfSolidity LowM Loop constr
+R16289:16297 RocqOfSolidity.RocqOfSolidity LowM Pure constr
+R16278:16287 RocqOfSolidity.RocqOfSolidity <> break_with:239 var
+R16268:16276 RocqOfSolidity.RocqOfSolidity <> loop_body:234 var
+R16257:16266 RocqOfSolidity.RocqOfSolidity <> init_state:223 var
+R16304:16310 RocqOfSolidity.RocqOfSolidity Shallow <> mod
+mod 16321:16329 <> Notations
+R16376:16381 RocqOfSolidity.RocqOfSolidity M let_ def
+binder 16390:16390 <> x:240
+not 16343:16343 Notations :::'let*'_x_':='_x_'in'_x
+R16505:16517 RocqOfSolidity.RocqOfSolidity M strong_let_ def
+binder 16526:16526 <> x:241
+not 16472:16472 Notations :::'let~'_x_':='_x_'in'_x
+R16643:16655 RocqOfSolidity.RocqOfSolidity M strong_let_ def
+binder 16664:16664 <> p:242
+not 16608:16608 Notations :::'let~'_''''_x_':='_x_'in'_x
+R16804:16820 RocqOfSolidity.RocqOfSolidity Shallow let_state def
+binder 16829:16829 <> x:243
+R16834:16834 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R16840:16841 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R16843:16843 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+not 16748:16748 Notations :::'let_state~'_x_':='_x_'default~'_x_'in'_x
+R16998:17014 RocqOfSolidity.RocqOfSolidity Shallow let_state def
+binder 17023:17023 <> p:244
+R17028:17028 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R17034:17035 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R17037:17037 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+not 16940:16940 Notations :::'let_state~'_''''_x_':='_x_'default~'_x_'in'_x
+R17161:17166 RocqOfSolidity.RocqOfSolidity M let_ def
+not 17136:17136 Notations :::'do*'_x_'in'_x
+R17241:17253 RocqOfSolidity.RocqOfSolidity M strong_let_ def
+not 17216:17216 Notations :::'do~'_x_'in'_x
+R17328:17331 RocqOfSolidity.RocqOfSolidity M do def
+not 17303:17303 Notations :::'do!'_x_'in'_x
+R17401:17405 RocqOfSolidity.RocqOfSolidity M run defax
+not 17370:17370 Notations :::x_'(|'_x_','_'..'_','_x_'|)'
+R17477:17481 RocqOfSolidity.RocqOfSolidity M run defax
+not 17460:17460 Notations :::x_'(||)'
+R17550:17554 RocqOfSolidity.RocqOfSolidity M run defax
+R17557:17562 RocqOfSolidity.RocqOfSolidity M call def
+not 17518:17518 Notations :::x_'~(|'_x_','_'..'_','_x_'|)'
+R17636:17640 RocqOfSolidity.RocqOfSolidity M run defax
+R17643:17648 RocqOfSolidity.RocqOfSolidity M call def
+not 17618:17618 Notations :::x_'~(||)'
+not 17686:17686 Notations :::'[['_x_']]'
+R17748:17756 RocqOfSolidity.RocqOfSolidity Notations <> mod
+R17767:17767 RocqOfSolidity.RocqOfSolidity M <> mod
+R17777:17785 RocqOfSolidity.RocqOfSolidity Notations <> mod
+mod 17796:17802 <> Literal
+def 17818:17823 Literal number
+R17830:17830 Corelib.Numbers.BinNums <> Z ind
+binder 17826:17826 <> z:245
+R17835:17840 RocqOfSolidity.RocqOfSolidity U256 t def
+R17849:17849 RocqOfSolidity.RocqOfSolidity <> z:245 var
+R17864:17869 RocqOfSolidity.RocqOfSolidity Literal number def
+def 17888:17891 Literal bool
+R17898:17901 Corelib.Init.Datatypes <> bool ind
+binder 17894:17894 <> b:246
+R17906:17911 RocqOfSolidity.RocqOfSolidity U256 t def
+R17923:17923 RocqOfSolidity.RocqOfSolidity <> b:246 var
+R17952:17955 RocqOfSolidity.RocqOfSolidity Literal bool def
+def 17974:17979 Literal string
+R17986:17986 Corelib.Numbers.BinNums <> Z ind
+binder 17982:17982 <> z:247
+R17991:17996 RocqOfSolidity.RocqOfSolidity U256 t def
+R18005:18005 RocqOfSolidity.RocqOfSolidity <> z:247 var
+R18020:18025 RocqOfSolidity.RocqOfSolidity Literal string def
+R18034:18040 RocqOfSolidity.RocqOfSolidity Literal <> mod
+mod 18051:18054 <> Code
+mod 18066:18073 <> Code.Function
+rec 18087:18087 Code.Function t
+proj 18106:18114 Code.Function arguments
+proj 18137:18143 Code.Function results
+proj 18166:18169 Code.Function body
+R18118:18121 Corelib.Init.Datatypes <> list ind
+R18123:18128 Stdlib.Strings.String <> string ind
+R18147:18150 Corelib.Init.Datatypes <> list ind
+R18152:18157 Stdlib.Strings.String <> string ind
+R18173:18175 RocqOfSolidity.RocqOfSolidity M t def
+R18177:18187 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+def 18213:18216 Code.Function make
+R18266:18268 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R18252:18254 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R18238:18240 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R18232:18237 Stdlib.Strings.String <> string ind
+R18241:18244 Corelib.Init.Datatypes <> list ind
+R18246:18251 Stdlib.Strings.String <> string ind
+R18255:18258 Corelib.Init.Datatypes <> list ind
+R18260:18265 Stdlib.Strings.String <> string ind
+R18269:18271 RocqOfSolidity.RocqOfSolidity M t def
+R18273:18283 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+binder 18219:18228 <> parameters:252
+R18302:18304 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R18296:18301 Stdlib.Strings.String <> string ind
+R18305:18305 RocqOfSolidity.RocqOfSolidity Code.Function t rec
+R18357:18366 RocqOfSolidity.RocqOfSolidity <> parameters:252 var
+R18321:18321 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R18326:18327 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R18337:18338 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R18346:18347 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R18352:18352 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R18377:18386 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R18391:18413 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R18491:18509 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R18414:18422 RocqOfSolidity.RocqOfSolidity Code.Function arguments proj
+R18414:18422 RocqOfSolidity.RocqOfSolidity Code.Function arguments proj
+R18414:18422 RocqOfSolidity.RocqOfSolidity Code.Function arguments proj
+R18448:18454 RocqOfSolidity.RocqOfSolidity Code.Function results proj
+R18448:18454 RocqOfSolidity.RocqOfSolidity Code.Function results proj
+R18478:18481 RocqOfSolidity.RocqOfSolidity Code.Function body proj
+R18478:18481 RocqOfSolidity.RocqOfSolidity Code.Function body proj
+R18518:18525 RocqOfSolidity.RocqOfSolidity Code.Function <> mod
+rec 18538:18538 Code t
+proj 18555:18558 Code name
+proj 18574:18581 Code hex_name
+proj 18597:18605 Code functions
+proj 18641:18644 Code body
+R18562:18567 Stdlib.Strings.String <> string ind
+R18585:18590 RocqOfSolidity.RocqOfSolidity U256 t def
+R18609:18612 Corelib.Init.Datatypes <> list ind
+R18621:18623 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R18615:18620 Stdlib.Strings.String <> string ind
+R18624:18633 RocqOfSolidity.RocqOfSolidity Code t rec
+R18648:18650 RocqOfSolidity.RocqOfSolidity M t def
+R18652:18662 RocqOfSolidity.RocqOfSolidity BlockUnit t ind
+R18771:18775 Ltac2.Ltac2 <> <> mod
+R18866:18867 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R18935:18938 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R19356:19356 RocqOfSolidity.RocqOfSolidity Code t rec
+R19419:19422 RocqOfSolidity.RocqOfSolidity Code <> mod

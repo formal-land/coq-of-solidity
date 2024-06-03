@@ -1,0 +1,1487 @@
+DIGEST 2317b323a931a1cf00631fe48eb04dc3
+FRocqOfSolidity.RocqEvm.Lib2.Arith2
+R27:32 Stdlib.NArith.NArith <> <> lib
+R34:39 Stdlib.ZArith.ZArith <> <> lib
+R41:43 Stdlib.micromega.Lia <> <> lib
+R82:87 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> <> lib
+prf 175:187 <> N_ltb_lt_quad
+R199:199 Corelib.Numbers.BinNums <> N ind
+binder 190:190 <> a:1
+binder 192:192 <> b:2
+binder 194:194 <> c:3
+binder 196:196 <> d:4
+R205:205 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R229:235 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R259:259 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R216:218 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R208:211 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R207:207 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:1 var
+R212:212 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:2 var
+R221:224 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R220:220 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:3 var
+R225:225 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> d:4 var
+R245:249 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R238:240 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R237:237 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:1 var
+R241:241 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:2 var
+R252:254 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R251:251 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:3 var
+R255:255 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> d:4 var
+R275:287 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R296:303 Stdlib.NArith.BinNat N ltb_lt thm
+R275:287 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R296:303 Stdlib.NArith.BinNat N ltb_lt thm
+R296:303 Stdlib.NArith.BinNat N ltb_lt thm
+prf 318:330 <> Z_ltb_lt_quad
+R342:342 Corelib.Numbers.BinNums <> Z ind
+binder 333:333 <> a:5
+binder 335:335 <> b:6
+binder 337:337 <> c:7
+binder 339:339 <> d:8
+R348:348 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R372:378 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R402:402 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R359:361 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R351:354 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R350:350 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:5 var
+R355:355 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:6 var
+R364:367 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R363:363 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:7 var
+R368:368 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> d:8 var
+R388:392 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R381:383 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R380:380 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:5 var
+R384:384 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:6 var
+R395:397 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R394:394 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:7 var
+R398:398 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> d:8 var
+R418:430 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R439:446 Stdlib.ZArith.BinInt Z ltb_lt thm
+R418:430 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R439:446 Stdlib.ZArith.BinInt Z ltb_lt thm
+R439:446 Stdlib.ZArith.BinInt Z ltb_lt thm
+prf 461:473 <> N_leb_le_quad
+R485:485 Corelib.Numbers.BinNums <> N ind
+binder 476:476 <> a:9
+binder 478:478 <> b:10
+binder 480:480 <> c:11
+binder 482:482 <> d:12
+R491:491 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R517:523 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R549:549 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R503:505 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R494:498 Stdlib.NArith.BinNat <> ::N_scope:x_'<=?'_x not
+R493:493 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:9 var
+R499:499 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:10 var
+R508:512 Stdlib.NArith.BinNat <> ::N_scope:x_'<=?'_x not
+R507:507 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:11 var
+R513:513 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> d:12 var
+R534:538 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R526:529 Stdlib.NArith.BinNat <> ::N_scope:x_'<='_x not
+R525:525 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:9 var
+R530:530 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:10 var
+R541:544 Stdlib.NArith.BinNat <> ::N_scope:x_'<='_x not
+R540:540 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:11 var
+R545:545 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> d:12 var
+R565:577 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R586:593 Stdlib.NArith.BinNat N leb_le thm
+R565:577 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R586:593 Stdlib.NArith.BinNat N leb_le thm
+R586:593 Stdlib.NArith.BinNat N leb_le thm
+prf 608:620 <> Z_leb_le_quad
+R632:632 Corelib.Numbers.BinNums <> Z ind
+binder 623:623 <> a:13
+binder 625:625 <> b:14
+binder 627:627 <> c:15
+binder 629:629 <> d:16
+R638:638 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R664:670 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R696:696 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R650:652 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R641:645 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<=?'_x not
+R640:640 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:13 var
+R646:646 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:14 var
+R655:659 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<=?'_x not
+R654:654 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:15 var
+R660:660 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> d:16 var
+R681:685 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R673:676 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R672:672 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:13 var
+R677:677 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:14 var
+R688:691 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R687:687 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:15 var
+R692:692 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> d:16 var
+R712:724 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R733:740 Stdlib.ZArith.BinInt Z leb_le thm
+R712:724 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R733:740 Stdlib.ZArith.BinInt Z leb_le thm
+R733:740 Stdlib.ZArith.BinInt Z leb_le thm
+prf 755:761 <> N2Z_ltb
+R769:769 Corelib.Numbers.BinNums <> N ind
+binder 764:764 <> n:17
+binder 766:766 <> m:18
+R785:787 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R777:780 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R776:776 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:17 var
+R781:781 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:18 var
+R797:800 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R789:794 Stdlib.ZArith.BinInt Z of_N def
+R796:796 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:17 var
+R801:806 Stdlib.ZArith.BinInt Z of_N def
+R808:808 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:18 var
+R828:840 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R851:858 Stdlib.ZArith.BinInt Z ltb_lt thm
+R842:849 Stdlib.NArith.BinNat N ltb_lt thm
+R828:840 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R851:858 Stdlib.ZArith.BinInt Z ltb_lt thm
+R842:849 Stdlib.NArith.BinNat N ltb_lt thm
+R868:877 Stdlib.ZArith.Znat N2Z inj_lt thm
+R868:877 Stdlib.ZArith.Znat N2Z inj_lt thm
+prf 892:898 <> N2Z_leb
+R906:906 Corelib.Numbers.BinNums <> N ind
+binder 901:901 <> n:19
+binder 903:903 <> m:20
+R923:925 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R914:918 Stdlib.NArith.BinNat <> ::N_scope:x_'<=?'_x not
+R913:913 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:19 var
+R919:919 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:20 var
+R935:939 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<=?'_x not
+R927:932 Stdlib.ZArith.BinInt Z of_N def
+R934:934 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:19 var
+R940:945 Stdlib.ZArith.BinInt Z of_N def
+R947:947 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:20 var
+R967:979 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R990:997 Stdlib.ZArith.BinInt Z leb_le thm
+R981:988 Stdlib.NArith.BinNat N leb_le thm
+R967:979 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R990:997 Stdlib.ZArith.BinInt Z leb_le thm
+R981:988 Stdlib.NArith.BinNat N leb_le thm
+R1007:1016 Stdlib.ZArith.Znat N2Z inj_le thm
+R1007:1016 Stdlib.ZArith.Znat N2Z inj_le thm
+prf 1109:1121 <> Z_shiftr_pow2
+R1127:1127 Corelib.Numbers.BinNums <> Z ind
+binder 1124:1124 <> n:21
+R1136:1139 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R1140:1140 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:21 var
+binder 1131:1131 <> B:22
+R1167:1169 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1149:1156 Stdlib.ZArith.BinInt Z shiftr def
+R1160:1162 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R1163:1163 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:21 var
+R1166:1166 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:21 var
+R1191:1207 Stdlib.ZArith.BinInt Z shiftr_div_pow2 thm
+R1191:1207 Stdlib.ZArith.BinInt Z shiftr_div_pow2 thm
+R1191:1207 Stdlib.ZArith.BinInt Z shiftr_div_pow2 thm
+R1223:1232 Stdlib.ZArith.BinInt Z div_same thm
+R1223:1232 Stdlib.ZArith.BinInt Z div_same thm
+R1245:1257 Stdlib.ZArith.BinInt Z pow_nonzero thm
+R1245:1257 Stdlib.ZArith.BinInt Z pow_nonzero thm
+prf 1272:1283 <> Z_ltb_irrefl
+R1289:1289 Corelib.Numbers.BinNums <> Z ind
+binder 1286:1286 <> n:23
+R1305:1307 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1297:1300 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R1296:1296 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:23 var
+R1301:1301 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:23 var
+R1308:1312 Corelib.Init.Datatypes <> false constr
+R1333:1336 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R1333:1336 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R1395:1402 Stdlib.ZArith.BinInt Z ltb_lt thm
+R1395:1402 Stdlib.ZArith.BinInt Z ltb_lt thm
+R1395:1402 Stdlib.ZArith.BinInt Z ltb_lt thm
+R1419:1429 Stdlib.ZArith.BinInt Z lt_irrefl thm
+R1419:1429 Stdlib.ZArith.BinInt Z lt_irrefl thm
+prf 1467:1478 <> N_ltb_irrefl
+R1484:1484 Corelib.Numbers.BinNums <> N ind
+binder 1481:1481 <> n:24
+R1500:1502 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1492:1495 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R1491:1491 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:24 var
+R1496:1496 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:24 var
+R1503:1507 Corelib.Init.Datatypes <> false constr
+R1528:1531 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R1528:1531 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R1590:1597 Stdlib.NArith.BinNat N ltb_lt thm
+R1590:1597 Stdlib.NArith.BinNat N ltb_lt thm
+R1590:1597 Stdlib.NArith.BinNat N ltb_lt thm
+R1614:1624 Stdlib.NArith.BinNat N lt_irrefl thm
+R1614:1624 Stdlib.NArith.BinNat N lt_irrefl thm
+prf 1740:1756 <> Z_land_pow2_shift
+R1764:1764 Corelib.Numbers.BinNums <> Z ind
+binder 1759:1759 <> n:25
+binder 1761:1761 <> m:26
+R1774:1777 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R1778:1778 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:26 var
+binder 1768:1769 <> BM:27
+R1803:1805 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1787:1792 Stdlib.ZArith.BinInt Z land def
+R1794:1794 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:25 var
+R1798:1800 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R1801:1801 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:26 var
+R1806:1813 Stdlib.ZArith.BinInt Z shiftl def
+R1816:1821 Stdlib.ZArith.BinInt Z land def
+R1824:1831 Stdlib.ZArith.BinInt Z shiftr def
+R1833:1833 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:25 var
+R1835:1835 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:26 var
+R1841:1841 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:26 var
+R1862:1874 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_shiftr_pow2 thm
+R1862:1874 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_shiftr_pow2 thm
+R1862:1874 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_shiftr_pow2 thm
+R1893:1905 Stdlib.ZArith.BinInt Z shiftr_land thm
+R1893:1905 Stdlib.ZArith.BinInt Z shiftr_land thm
+R1893:1905 Stdlib.ZArith.BinInt Z shiftr_land thm
+R1919:1932 Stdlib.ZArith.BinInt Z ldiff_ones_r thm
+R1919:1932 Stdlib.ZArith.BinInt Z ldiff_ones_r thm
+R1919:1932 Stdlib.ZArith.BinInt Z ldiff_ones_r thm
+R1951:1962 Stdlib.ZArith.BinInt Z ldiff_land thm
+R1951:1962 Stdlib.ZArith.BinInt Z ldiff_land thm
+R1951:1962 Stdlib.ZArith.BinInt Z ldiff_land thm
+R1975:1986 Stdlib.ZArith.BinInt Z land_assoc thm
+R1975:1986 Stdlib.ZArith.BinInt Z land_assoc thm
+R1975:1986 Stdlib.ZArith.BinInt Z land_assoc thm
+R2004:2014 Stdlib.ZArith.BinInt Z bits_inj' thm
+R2004:2014 Stdlib.ZArith.BinInt Z bits_inj' thm
+R2038:2048 Stdlib.ZArith.BinInt Z land_spec thm
+R2038:2048 Stdlib.ZArith.BinInt Z land_spec thm
+R2038:2048 Stdlib.ZArith.BinInt Z land_spec thm
+R2060:2070 Stdlib.ZArith.BinInt Z lnot_spec thm
+R2060:2070 Stdlib.ZArith.BinInt Z lnot_spec thm
+R2060:2070 Stdlib.ZArith.BinInt Z lnot_spec thm
+R2090:2103 Stdlib.ZArith.BinInt Z testbit_ones thm
+R2090:2103 Stdlib.ZArith.BinInt Z testbit_ones thm
+R2090:2103 Stdlib.ZArith.BinInt Z testbit_ones thm
+R2123:2137 Stdlib.ZArith.BinInt Z pow2_bits_eqb thm
+R2123:2137 Stdlib.ZArith.BinInt Z pow2_bits_eqb thm
+R2123:2137 Stdlib.ZArith.BinInt Z pow2_bits_eqb thm
+R2158:2165 Stdlib.ZArith.BinInt Z leb_le thm
+R2158:2165 Stdlib.ZArith.BinInt Z leb_le thm
+R2158:2165 Stdlib.ZArith.BinInt Z leb_le thm
+R2194:2209 Stdlib.Bool.Bool <> andb_true_l thm
+R2194:2209 Stdlib.Bool.Bool <> andb_true_l thm
+R2194:2209 Stdlib.Bool.Bool <> andb_true_l thm
+R2223:2226 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R2223:2226 Stdlib.ZArith.BinInt <> ::Z_scope:x_'=?'_x not
+R2284:2291 Stdlib.ZArith.BinInt Z eqb_eq thm
+R2284:2291 Stdlib.ZArith.BinInt Z eqb_eq thm
+R2284:2291 Stdlib.ZArith.BinInt Z eqb_eq thm
+R2324:2335 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_ltb_irrefl thm
+R2324:2335 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_ltb_irrefl thm
+R2324:2335 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_ltb_irrefl thm
+prf 2361:2375 <> Z_mul_pos_iff_l
+R2383:2383 Corelib.Numbers.BinNums <> Z ind
+binder 2378:2378 <> n:28
+binder 2380:2380 <> m:29
+R2393:2395 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R2396:2396 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:29 var
+binder 2387:2388 <> BM:30
+R2414:2418 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R2407:2409 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R2410:2410 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:28 var
+R2421:2423 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R2425:2427 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R2424:2424 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:28 var
+R2428:2428 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:29 var
+R2463:2475 Stdlib.ZArith.BinInt Z mul_pos_pos thm
+R2463:2475 Stdlib.ZArith.BinInt Z mul_pos_pos thm
+R2499:2516 Stdlib.ZArith.BinInt Z mul_pos_cancel_r thm
+R2499:2516 Stdlib.ZArith.BinInt Z mul_pos_cancel_r thm
+prf 2539:2553 <> Z_mul_pos_iff_r
+R2561:2561 Corelib.Numbers.BinNums <> Z ind
+binder 2556:2556 <> n:31
+binder 2558:2558 <> m:32
+R2571:2573 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R2574:2574 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:31 var
+binder 2565:2566 <> BN:33
+R2592:2596 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R2585:2587 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R2588:2588 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:32 var
+R2599:2601 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R2603:2605 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R2602:2602 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:31 var
+R2606:2606 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:32 var
+R2635:2647 Stdlib.ZArith.BinInt Z mul_pos_pos thm
+R2635:2647 Stdlib.ZArith.BinInt Z mul_pos_pos thm
+R2667:2684 Stdlib.ZArith.BinInt Z mul_pos_cancel_l thm
+R2667:2684 Stdlib.ZArith.BinInt Z mul_pos_cancel_l thm
+prf 2707:2722 <> Z_shiftl_pos_iff
+R2730:2730 Corelib.Numbers.BinNums <> Z ind
+binder 2725:2725 <> n:34
+binder 2727:2727 <> m:35
+R2740:2743 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R2744:2744 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:35 var
+binder 2734:2735 <> BM:36
+R2761:2765 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R2754:2756 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R2757:2757 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:34 var
+R2768:2770 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R2771:2778 Stdlib.ZArith.BinInt Z shiftl def
+R2780:2780 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:34 var
+R2782:2782 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:35 var
+R2804:2820 Stdlib.ZArith.BinInt Z shiftl_mul_pow2 thm
+R2804:2820 Stdlib.ZArith.BinInt Z shiftl_mul_pow2 thm
+R2804:2820 Stdlib.ZArith.BinInt Z shiftl_mul_pow2 thm
+R2837:2851 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_mul_pos_iff_l thm
+R2837:2851 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_mul_pos_iff_l thm
+R2860:2875 Stdlib.ZArith.BinInt Z pow_pos_nonneg thm
+R2860:2875 Stdlib.ZArith.BinInt Z pow_pos_nonneg thm
+R2890:2897 Stdlib.ZArith.BinInt Z ltb_lt thm
+R2890:2897 Stdlib.ZArith.BinInt Z ltb_lt thm
+R2890:2897 Stdlib.ZArith.BinInt Z ltb_lt thm
+prf 2935:2946 <> Z_odd_land_1
+R2952:2952 Corelib.Numbers.BinNums <> Z ind
+binder 2949:2949 <> n:37
+R2961:2964 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R2965:2965 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:37 var
+binder 2956:2956 <> B:38
+R2981:2983 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2974:2978 Stdlib.ZArith.BinInt Z odd def
+R2980:2980 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:37 var
+R2986:2989 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R2990:2995 Stdlib.ZArith.BinInt Z land def
+R2997:2997 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:37 var
+prf 3056:3068 <> Z_testbit_alt
+R3076:3076 Corelib.Numbers.BinNums <> Z ind
+binder 3071:3071 <> n:39
+binder 3073:3073 <> m:40
+R3086:3089 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R3090:3090 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:39 var
+binder 3080:3081 <> BN:41
+R3103:3106 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R3107:3107 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:40 var
+binder 3097:3098 <> BM:42
+R3129:3131 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3116:3124 Stdlib.ZArith.BinInt Z testbit def
+R3126:3126 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:39 var
+R3128:3128 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:40 var
+R3134:3137 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R3138:3143 Stdlib.ZArith.BinInt Z land def
+R3145:3145 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:39 var
+R3149:3151 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R3152:3152 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:40 var
+R3175:3191 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_land_pow2_shift thm
+R3175:3191 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_land_pow2_shift thm
+R3175:3191 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_land_pow2_shift thm
+binder 3220:3220 <> x:43
+R3224:3224 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3242:3246 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3253:3253 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3226:3229 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R3230:3237 Stdlib.ZArith.BinInt Z shiftl def
+R3239:3239 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:43 var
+R3248:3251 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R3252:3252 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:43 var
+binder 3220:3220 <> x:44
+R3224:3224 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3242:3246 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3253:3253 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3226:3229 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R3230:3237 Stdlib.ZArith.BinInt Z shiftl def
+R3239:3239 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:44 var
+R3248:3251 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R3252:3252 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:44 var
+R3283:3295 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_ltb_lt_quad thm
+R3283:3295 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_ltb_lt_quad thm
+R3283:3295 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_ltb_lt_quad thm
+R3318:3333 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_shiftl_pos_iff thm
+R3318:3333 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_shiftl_pos_iff thm
+R3380:3392 Stdlib.ZArith.BinInt Z testbit_odd thm
+R3380:3392 Stdlib.ZArith.BinInt Z testbit_odd thm
+R3380:3392 Stdlib.ZArith.BinInt Z testbit_odd thm
+R3401:3412 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_odd_land_1 thm
+R3401:3412 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_odd_land_1 thm
+R3421:3435 Stdlib.ZArith.BinInt Z shiftr_nonneg thm
+R3421:3435 Stdlib.ZArith.BinInt Z shiftr_nonneg thm
+prf 3462:3475 <> Z_testbit_high
+R3483:3483 Corelib.Numbers.BinNums <> Z ind
+binder 3478:3478 <> a:45
+binder 3480:3480 <> n:46
+R3514:3517 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R3518:3518 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:46 var
+binder 3509:3509 <> B:47
+R3552:3555 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x_'<'_x not
+R3557:3559 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x_'<'_x not
+R3556:3556 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:45 var
+R3556:3556 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:45 var
+R3561:3563 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R3564:3564 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:46 var
+binder 3547:3547 <> A:48
+R3586:3588 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3573:3581 Stdlib.ZArith.BinInt Z testbit def
+R3583:3583 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:45 var
+R3585:3585 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:46 var
+R3589:3593 Corelib.Init.Datatypes <> false constr
+R3614:3624 Stdlib.ZArith.BinInt Z mod_small thm
+R3630:3632 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R3614:3624 Stdlib.ZArith.BinInt Z mod_small thm
+R3630:3632 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R3614:3624 Stdlib.ZArith.BinInt Z mod_small thm
+R3630:3632 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R3648:3667 Stdlib.ZArith.BinInt Z mod_pow2_bits_high thm
+R3648:3667 Stdlib.ZArith.BinInt Z mod_pow2_bits_high thm
+R3699:3707 Stdlib.ZArith.BinInt Z le_refl thm
+R3699:3707 Stdlib.ZArith.BinInt Z le_refl thm
+prf 3800:3810 <> Z_to_N_land
+R3818:3818 Corelib.Numbers.BinNums <> Z ind
+binder 3813:3813 <> x:49
+binder 3815:3815 <> y:50
+R3828:3831 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R3832:3832 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:49 var
+binder 3822:3823 <> BX:51
+R3845:3848 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R3849:3849 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:50 var
+binder 3839:3840 <> BY:52
+R3877:3879 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R3858:3863 Stdlib.ZArith.BinInt Z to_N def
+R3866:3871 Stdlib.ZArith.BinInt Z land def
+R3873:3873 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:49 var
+R3875:3875 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:50 var
+R3880:3885 Stdlib.NArith.BinNat N land def
+R3888:3893 Stdlib.ZArith.BinInt Z to_N def
+R3895:3895 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:49 var
+R3899:3904 Stdlib.ZArith.BinInt Z to_N def
+R3906:3906 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:50 var
+R3923:3932 Stdlib.NArith.BinNat N bits_inj thm
+R3923:3932 Stdlib.NArith.BinNat N bits_inj thm
+R3952:3962 Stdlib.NArith.BinNat N land_spec thm
+R3952:3962 Stdlib.NArith.BinNat N land_spec thm
+R3952:3962 Stdlib.NArith.BinNat N land_spec thm
+R3975:3980 Stdlib.ZArith.BinInt Z of_N def
+R3975:3980 Stdlib.ZArith.BinInt Z of_N def
+R4004:4006 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4007:4012 Stdlib.ZArith.BinInt Z to_N def
+R4004:4006 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4007:4012 Stdlib.ZArith.BinInt Z to_N def
+R4045:4050 Stdlib.ZArith.Znat N2Z id thm
+R4045:4050 Stdlib.ZArith.Znat N2Z id thm
+R4088:4091 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R4088:4091 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R4114:4126 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R4114:4126 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4148:4162 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4196:4201 Stdlib.ZArith.Znat Z2N id thm
+R4228:4238 Stdlib.ZArith.BinInt Z land_spec thm
+R4228:4238 Stdlib.ZArith.BinInt Z land_spec thm
+R4251:4263 Stdlib.ZArith.BinInt Z land_nonneg thm
+R4251:4263 Stdlib.ZArith.BinInt Z land_nonneg thm
+R4251:4263 Stdlib.ZArith.BinInt Z land_nonneg thm
+prf 4286:4296 <> N_to_Z_land
+R4304:4304 Corelib.Numbers.BinNums <> N ind
+binder 4299:4299 <> x:53
+binder 4301:4301 <> y:54
+R4329:4331 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4310:4315 Stdlib.ZArith.BinInt Z of_N def
+R4318:4323 Stdlib.NArith.BinNat N land def
+R4325:4325 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:53 var
+R4327:4327 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:54 var
+R4332:4337 Stdlib.ZArith.BinInt Z land def
+R4340:4345 Stdlib.ZArith.BinInt Z of_N def
+R4347:4347 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:53 var
+R4351:4356 Stdlib.ZArith.BinInt Z of_N def
+R4358:4358 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:54 var
+R4380:4385 Stdlib.ZArith.Znat Z2N id thm
+R4388:4393 Stdlib.ZArith.BinInt Z land def
+R4396:4401 Stdlib.ZArith.BinInt Z of_N def
+R4407:4412 Stdlib.ZArith.BinInt Z of_N def
+R4380:4385 Stdlib.ZArith.Znat Z2N id thm
+R4388:4393 Stdlib.ZArith.BinInt Z land def
+R4396:4401 Stdlib.ZArith.BinInt Z of_N def
+R4407:4412 Stdlib.ZArith.BinInt Z of_N def
+R4380:4385 Stdlib.ZArith.Znat Z2N id thm
+R4388:4393 Stdlib.ZArith.BinInt Z land def
+R4396:4401 Stdlib.ZArith.BinInt Z of_N def
+R4407:4412 Stdlib.ZArith.BinInt Z of_N def
+R4380:4385 Stdlib.ZArith.Znat Z2N id thm
+R4388:4393 Stdlib.ZArith.BinInt Z land def
+R4396:4401 Stdlib.ZArith.BinInt Z of_N def
+R4407:4412 Stdlib.ZArith.BinInt Z of_N def
+R4443:4453 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_land thm
+R4466:4478 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R4443:4453 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_land thm
+R4443:4453 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_land thm
+R4443:4453 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_land thm
+R4443:4453 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_land thm
+R4466:4478 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R4466:4478 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R4466:4478 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R4498:4503 Stdlib.ZArith.Znat N2Z id thm
+R4498:4503 Stdlib.ZArith.Znat N2Z id thm
+R4498:4503 Stdlib.ZArith.Znat N2Z id thm
+R4498:4503 Stdlib.ZArith.Znat N2Z id thm
+R4498:4503 Stdlib.ZArith.Znat N2Z id thm
+R4498:4503 Stdlib.ZArith.Znat N2Z id thm
+R4525:4537 Stdlib.ZArith.BinInt Z land_nonneg thm
+R4525:4537 Stdlib.ZArith.BinInt Z land_nonneg thm
+R4552:4564 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R4552:4564 Stdlib.ZArith.Znat N2Z is_nonneg thm
+prf 4579:4588 <> Z_to_N_lor
+R4596:4596 Corelib.Numbers.BinNums <> Z ind
+binder 4591:4591 <> x:55
+binder 4593:4593 <> y:56
+R4606:4609 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R4610:4610 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:55 var
+binder 4600:4601 <> BX:57
+R4623:4626 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R4627:4627 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:56 var
+binder 4617:4618 <> BY:58
+R4654:4656 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4636:4641 Stdlib.ZArith.BinInt Z to_N def
+R4644:4648 Stdlib.ZArith.BinInt Z lor def
+R4650:4650 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:55 var
+R4652:4652 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:56 var
+R4657:4661 Stdlib.NArith.BinNat N lor def
+R4664:4669 Stdlib.ZArith.BinInt Z to_N def
+R4671:4671 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:55 var
+R4675:4680 Stdlib.ZArith.BinInt Z to_N def
+R4682:4682 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:56 var
+R4699:4708 Stdlib.NArith.BinNat N bits_inj thm
+R4699:4708 Stdlib.NArith.BinNat N bits_inj thm
+R4728:4737 Stdlib.NArith.BinNat N lor_spec thm
+R4728:4737 Stdlib.NArith.BinNat N lor_spec thm
+R4728:4737 Stdlib.NArith.BinNat N lor_spec thm
+R4750:4755 Stdlib.ZArith.BinInt Z of_N def
+R4750:4755 Stdlib.ZArith.BinInt Z of_N def
+R4779:4781 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4782:4787 Stdlib.ZArith.BinInt Z to_N def
+R4779:4781 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4782:4787 Stdlib.ZArith.BinInt Z to_N def
+R4820:4825 Stdlib.ZArith.Znat N2Z id thm
+R4820:4825 Stdlib.ZArith.Znat N2Z id thm
+R4863:4866 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R4863:4866 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R4889:4901 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R4889:4901 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4923:4937 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R4971:4976 Stdlib.ZArith.Znat Z2N id thm
+R5003:5012 Stdlib.ZArith.BinInt Z lor_spec thm
+R5003:5012 Stdlib.ZArith.BinInt Z lor_spec thm
+R5025:5036 Stdlib.ZArith.BinInt Z lor_nonneg thm
+R5025:5036 Stdlib.ZArith.BinInt Z lor_nonneg thm
+R5025:5036 Stdlib.ZArith.BinInt Z lor_nonneg thm
+prf 5058:5067 <> N_to_Z_lor
+R5075:5075 Corelib.Numbers.BinNums <> N ind
+binder 5070:5070 <> x:59
+binder 5072:5072 <> y:60
+R5099:5101 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5081:5086 Stdlib.ZArith.BinInt Z of_N def
+R5089:5093 Stdlib.NArith.BinNat N lor def
+R5095:5095 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:59 var
+R5097:5097 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:60 var
+R5102:5106 Stdlib.ZArith.BinInt Z lor def
+R5109:5114 Stdlib.ZArith.BinInt Z of_N def
+R5116:5116 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:59 var
+R5120:5125 Stdlib.ZArith.BinInt Z of_N def
+R5127:5127 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:60 var
+R5149:5154 Stdlib.ZArith.Znat Z2N id thm
+R5157:5161 Stdlib.ZArith.BinInt Z lor def
+R5164:5169 Stdlib.ZArith.BinInt Z of_N def
+R5175:5180 Stdlib.ZArith.BinInt Z of_N def
+R5149:5154 Stdlib.ZArith.Znat Z2N id thm
+R5157:5161 Stdlib.ZArith.BinInt Z lor def
+R5164:5169 Stdlib.ZArith.BinInt Z of_N def
+R5175:5180 Stdlib.ZArith.BinInt Z of_N def
+R5149:5154 Stdlib.ZArith.Znat Z2N id thm
+R5157:5161 Stdlib.ZArith.BinInt Z lor def
+R5164:5169 Stdlib.ZArith.BinInt Z of_N def
+R5175:5180 Stdlib.ZArith.BinInt Z of_N def
+R5149:5154 Stdlib.ZArith.Znat Z2N id thm
+R5157:5161 Stdlib.ZArith.BinInt Z lor def
+R5164:5169 Stdlib.ZArith.BinInt Z of_N def
+R5175:5180 Stdlib.ZArith.BinInt Z of_N def
+R5211:5220 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lor thm
+R5233:5245 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R5211:5220 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lor thm
+R5211:5220 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lor thm
+R5211:5220 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lor thm
+R5211:5220 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lor thm
+R5233:5245 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R5233:5245 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R5233:5245 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R5265:5270 Stdlib.ZArith.Znat N2Z id thm
+R5265:5270 Stdlib.ZArith.Znat N2Z id thm
+R5265:5270 Stdlib.ZArith.Znat N2Z id thm
+R5265:5270 Stdlib.ZArith.Znat N2Z id thm
+R5265:5270 Stdlib.ZArith.Znat N2Z id thm
+R5265:5270 Stdlib.ZArith.Znat N2Z id thm
+R5292:5303 Stdlib.ZArith.BinInt Z lor_nonneg thm
+R5292:5303 Stdlib.ZArith.BinInt Z lor_nonneg thm
+R5319:5331 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R5319:5331 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R5319:5331 Stdlib.ZArith.Znat N2Z is_nonneg thm
+prf 5346:5356 <> Z_to_N_lxor
+R5364:5364 Corelib.Numbers.BinNums <> Z ind
+binder 5359:5359 <> x:61
+binder 5361:5361 <> y:62
+R5374:5377 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R5378:5378 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:61 var
+binder 5368:5369 <> BX:63
+R5391:5394 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R5395:5395 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:62 var
+binder 5385:5386 <> BY:64
+R5423:5425 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5404:5409 Stdlib.ZArith.BinInt Z to_N def
+R5412:5417 Stdlib.ZArith.BinInt Z lxor def
+R5419:5419 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:61 var
+R5421:5421 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:62 var
+R5426:5431 Stdlib.NArith.BinNat N lxor def
+R5434:5439 Stdlib.ZArith.BinInt Z to_N def
+R5441:5441 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:61 var
+R5445:5450 Stdlib.ZArith.BinInt Z to_N def
+R5452:5452 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:62 var
+R5469:5478 Stdlib.NArith.BinNat N bits_inj thm
+R5469:5478 Stdlib.NArith.BinNat N bits_inj thm
+R5498:5508 Stdlib.NArith.BinNat N lxor_spec thm
+R5498:5508 Stdlib.NArith.BinNat N lxor_spec thm
+R5498:5508 Stdlib.NArith.BinNat N lxor_spec thm
+R5521:5526 Stdlib.ZArith.BinInt Z of_N def
+R5521:5526 Stdlib.ZArith.BinInt Z of_N def
+R5550:5552 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5553:5558 Stdlib.ZArith.BinInt Z to_N def
+R5550:5552 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5553:5558 Stdlib.ZArith.BinInt Z to_N def
+R5591:5596 Stdlib.ZArith.Znat N2Z id thm
+R5591:5596 Stdlib.ZArith.Znat N2Z id thm
+R5634:5637 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R5634:5637 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R5660:5672 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R5660:5672 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5694:5708 Stdlib.ZArith.Znat Z2N inj_testbit thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5742:5747 Stdlib.ZArith.Znat Z2N id thm
+R5774:5784 Stdlib.ZArith.BinInt Z lxor_spec thm
+R5774:5784 Stdlib.ZArith.BinInt Z lxor_spec thm
+R5797:5809 Stdlib.ZArith.BinInt Z lxor_nonneg thm
+R5797:5809 Stdlib.ZArith.BinInt Z lxor_nonneg thm
+R5797:5809 Stdlib.ZArith.BinInt Z lxor_nonneg thm
+prf 5831:5841 <> N_to_Z_lxor
+R5849:5849 Corelib.Numbers.BinNums <> N ind
+binder 5844:5844 <> x:65
+binder 5846:5846 <> y:66
+R5874:5876 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5855:5860 Stdlib.ZArith.BinInt Z of_N def
+R5863:5868 Stdlib.NArith.BinNat N lxor def
+R5870:5870 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:65 var
+R5872:5872 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:66 var
+R5877:5882 Stdlib.ZArith.BinInt Z lxor def
+R5885:5890 Stdlib.ZArith.BinInt Z of_N def
+R5892:5892 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> x:65 var
+R5896:5901 Stdlib.ZArith.BinInt Z of_N def
+R5903:5903 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> y:66 var
+R5925:5930 Stdlib.ZArith.Znat Z2N id thm
+R5933:5938 Stdlib.ZArith.BinInt Z lxor def
+R5941:5946 Stdlib.ZArith.BinInt Z of_N def
+R5952:5957 Stdlib.ZArith.BinInt Z of_N def
+R5925:5930 Stdlib.ZArith.Znat Z2N id thm
+R5933:5938 Stdlib.ZArith.BinInt Z lxor def
+R5941:5946 Stdlib.ZArith.BinInt Z of_N def
+R5952:5957 Stdlib.ZArith.BinInt Z of_N def
+R5925:5930 Stdlib.ZArith.Znat Z2N id thm
+R5933:5938 Stdlib.ZArith.BinInt Z lxor def
+R5941:5946 Stdlib.ZArith.BinInt Z of_N def
+R5952:5957 Stdlib.ZArith.BinInt Z of_N def
+R5925:5930 Stdlib.ZArith.Znat Z2N id thm
+R5933:5938 Stdlib.ZArith.BinInt Z lxor def
+R5941:5946 Stdlib.ZArith.BinInt Z of_N def
+R5952:5957 Stdlib.ZArith.BinInt Z of_N def
+R5988:5998 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lxor thm
+R6011:6023 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R5988:5998 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lxor thm
+R5988:5998 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lxor thm
+R5988:5998 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lxor thm
+R5988:5998 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lxor thm
+R6011:6023 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R6011:6023 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R6011:6023 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R6043:6048 Stdlib.ZArith.Znat N2Z id thm
+R6043:6048 Stdlib.ZArith.Znat N2Z id thm
+R6043:6048 Stdlib.ZArith.Znat N2Z id thm
+R6043:6048 Stdlib.ZArith.Znat N2Z id thm
+R6043:6048 Stdlib.ZArith.Znat N2Z id thm
+R6043:6048 Stdlib.ZArith.Znat N2Z id thm
+R6070:6082 Stdlib.ZArith.BinInt Z lxor_nonneg thm
+R6070:6082 Stdlib.ZArith.BinInt Z lxor_nonneg thm
+R6105:6117 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R6105:6117 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R6105:6117 Stdlib.ZArith.Znat N2Z is_nonneg thm
+prf 6210:6222 <> N_testbit_alt
+R6230:6230 Corelib.Numbers.BinNums <> N ind
+binder 6225:6225 <> n:67
+binder 6227:6227 <> m:68
+R6249:6251 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6236:6244 Stdlib.NArith.BinNat N testbit def
+R6246:6246 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:67 var
+R6248:6248 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:68 var
+R6254:6257 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R6258:6263 Stdlib.NArith.BinNat N land def
+R6265:6265 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:67 var
+R6269:6271 Stdlib.NArith.BinNat <> ::N_scope:x_'^'_x not
+R6272:6272 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:68 var
+R6296:6309 Stdlib.ZArith.BinInt Z testbit_of_N thm
+R6296:6309 Stdlib.ZArith.BinInt Z testbit_of_N thm
+R6296:6309 Stdlib.ZArith.BinInt Z testbit_of_N thm
+R6322:6325 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R6326:6331 Stdlib.NArith.BinNat N land def
+R6337:6339 Stdlib.NArith.BinNat <> ::N_scope:x_'^'_x not
+R6353:6356 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R6357:6362 Stdlib.ZArith.BinInt Z land def
+R6365:6370 Stdlib.ZArith.BinInt Z of_N def
+R6377:6380 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R6389:6389 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R6381:6386 Stdlib.ZArith.BinInt Z of_N def
+R6322:6325 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R6326:6331 Stdlib.NArith.BinNat N land def
+R6337:6339 Stdlib.NArith.BinNat <> ::N_scope:x_'^'_x not
+R6353:6356 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R6357:6362 Stdlib.ZArith.BinInt Z land def
+R6365:6370 Stdlib.ZArith.BinInt Z of_N def
+R6377:6380 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R6389:6389 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R6381:6386 Stdlib.ZArith.BinInt Z of_N def
+R6410:6416 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N2Z_ltb thm
+R6410:6416 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N2Z_ltb thm
+R6410:6416 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N2Z_ltb thm
+R6429:6439 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_to_Z_land thm
+R6429:6439 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_to_Z_land thm
+R6429:6439 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_to_Z_land thm
+R6477:6487 Stdlib.ZArith.Znat N2Z inj_pow thm
+R6477:6487 Stdlib.ZArith.Znat N2Z inj_pow thm
+R6477:6487 Stdlib.ZArith.Znat N2Z inj_pow thm
+R6509:6521 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_testbit_alt thm
+R6530:6542 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R6509:6521 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_testbit_alt thm
+R6530:6542 Stdlib.ZArith.Znat N2Z is_nonneg thm
+R6530:6542 Stdlib.ZArith.Znat N2Z is_nonneg thm
+def 6640:6650 <> N_0_lt_pow2
+R6656:6656 Corelib.Numbers.BinNums <> N ind
+binder 6653:6653 <> n:69
+R6664:6666 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R6668:6670 Stdlib.NArith.BinNat <> ::N_scope:x_'^'_x not
+R6671:6671 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:69 var
+R6690:6706 Stdlib.NArith.BinNat N eq_0_gt_0_cases thm
+R6710:6712 Stdlib.NArith.BinNat <> ::N_scope:x_'^'_x not
+R6690:6706 Stdlib.NArith.BinNat N eq_0_gt_0_cases thm
+R6710:6712 Stdlib.NArith.BinNat <> ::N_scope:x_'^'_x not
+R6747:6759 Stdlib.NArith.BinNat N pow_nonzero thm
+R6747:6759 Stdlib.NArith.BinNat N pow_nonzero thm
+def 6817:6827 <> Z_0_lt_pow2
+R6833:6833 Corelib.Numbers.BinNums <> Z ind
+binder 6830:6830 <> n:70
+R6842:6845 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R6846:6846 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:70 var
+binder 6837:6837 <> B:71
+R6857:6859 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R6861:6863 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R6864:6864 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:70 var
+R6890:6900 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_0_lt_pow2 def
+R6903:6908 Stdlib.ZArith.BinInt Z to_N def
+R6890:6900 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_0_lt_pow2 def
+R6903:6908 Stdlib.ZArith.BinInt Z to_N def
+R6921:6930 Stdlib.ZArith.Znat N2Z inj_lt thm
+R6921:6930 Stdlib.ZArith.Znat N2Z inj_lt thm
+R6946:6956 Stdlib.ZArith.Znat N2Z inj_pow thm
+R6946:6956 Stdlib.ZArith.Znat N2Z inj_pow thm
+R6946:6956 Stdlib.ZArith.Znat N2Z inj_pow thm
+R6986:6991 Stdlib.ZArith.Znat Z2N id thm
+R6986:6991 Stdlib.ZArith.Znat Z2N id thm
+R6986:6991 Stdlib.ZArith.Znat Z2N id thm
+R6986:6991 Stdlib.ZArith.Znat Z2N id thm
+prf 7011:7021 <> N_ne_0_gt_0
+R7027:7027 Corelib.Numbers.BinNums <> N ind
+binder 7024:7024 <> n:72
+R7041:7045 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R7034:7037 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R7033:7033 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:72 var
+R7048:7050 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R7051:7051 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:72 var
+R7096:7112 Stdlib.NArith.BinNat N eq_0_gt_0_cases thm
+R7096:7112 Stdlib.NArith.BinNat N eq_0_gt_0_cases thm
+R7151:7161 Stdlib.NArith.BinNat N lt_irrefl thm
+R7151:7161 Stdlib.NArith.BinNat N lt_irrefl thm
+prf 7197:7205 <> N_div_0_r
+R7211:7211 Corelib.Numbers.BinNums <> N ind
+binder 7208:7208 <> n:73
+R7223:7225 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7219:7221 Stdlib.NArith.BinNat <> ::N_scope:x_'/'_x not
+R7218:7218 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:73 var
+prf 7267:7275 <> Z_div_0_r
+R7281:7281 Corelib.Numbers.BinNums <> Z ind
+binder 7278:7278 <> n:74
+R7293:7295 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7289:7291 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R7288:7288 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:74 var
+prf 7337:7344 <> N_div_le
+R7350:7350 Corelib.Numbers.BinNums <> N ind
+binder 7347:7347 <> n:75
+R7357:7357 Corelib.Numbers.BinNums <> N ind
+binder 7354:7354 <> d:76
+R7369:7372 Stdlib.NArith.BinNat <> ::N_scope:x_'<='_x not
+R7365:7367 Stdlib.NArith.BinNat <> ::N_scope:x_'/'_x not
+R7364:7364 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:75 var
+R7368:7368 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> d:76 var
+R7373:7373 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:75 var
+R7400:7416 Stdlib.NArith.BinNat N eq_0_gt_0_cases thm
+R7400:7416 Stdlib.NArith.BinNat N eq_0_gt_0_cases thm
+R7436:7452 Stdlib.NArith.BinNat N eq_0_gt_0_cases thm
+R7436:7452 Stdlib.NArith.BinNat N eq_0_gt_0_cases thm
+R7494:7502 Stdlib.NArith.BinNat N le_refl thm
+R7494:7502 Stdlib.NArith.BinNat N le_refl thm
+R7540:7548 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_div_0_r thm
+R7540:7548 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_div_0_r thm
+R7540:7548 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_div_0_r thm
+R7561:7572 Stdlib.NArith.BinNat N lt_le_incl thm
+R7561:7572 Stdlib.NArith.BinNat N lt_le_incl thm
+R7605:7607 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7588:7593 Stdlib.NArith.BinNat N succ def
+R7596:7601 Stdlib.NArith.BinNat N pred def
+R7605:7607 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7588:7593 Stdlib.NArith.BinNat N succ def
+R7596:7601 Stdlib.NArith.BinNat N pred def
+R7620:7634 Stdlib.NArith.BinNat N succ_pred_pos thm
+R7620:7634 Stdlib.NArith.BinNat N succ_pred_pos thm
+R7661:7666 Stdlib.NArith.BinNat N pred def
+R7661:7666 Stdlib.NArith.BinNat N pred def
+R7710:7726 Stdlib.NArith.BinNat N eq_0_gt_0_cases thm
+R7710:7726 Stdlib.NArith.BinNat N eq_0_gt_0_cases thm
+R7774:7782 Stdlib.NArith.BinNat N div_1_r def
+R7774:7782 Stdlib.NArith.BinNat N div_1_r def
+R7774:7782 Stdlib.NArith.BinNat N div_1_r def
+R7793:7804 Stdlib.NArith.BinNat N lt_le_incl thm
+R7793:7804 Stdlib.NArith.BinNat N lt_le_incl thm
+R7813:7820 Stdlib.NArith.BinNat N div_lt def
+R7813:7820 Stdlib.NArith.BinNat N div_lt def
+R7849:7865 Stdlib.NArith.BinNat N lt_pred_lt_succ thm
+R7849:7865 Stdlib.NArith.BinNat N lt_pred_lt_succ thm
+prf 7880:7891 <> Z_div_nonneg
+R7899:7899 Corelib.Numbers.BinNums <> Z ind
+binder 7894:7894 <> a:77
+binder 7896:7896 <> b:78
+R7928:7931 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R7932:7932 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:77 var
+binder 7923:7923 <> A:79
+R7964:7967 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R7968:7968 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:78 var
+binder 7959:7959 <> B:80
+R7979:7982 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R7984:7986 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R7983:7983 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:77 var
+R7987:7987 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:78 var
+R8022:8029 Stdlib.ZArith.Zdiv <> Zdiv_0_r thm
+R8022:8029 Stdlib.ZArith.Zdiv <> Zdiv_0_r thm
+R8022:8029 Stdlib.ZArith.Zdiv <> Zdiv_0_r thm
+R8038:8046 Stdlib.ZArith.BinInt Z le_refl thm
+R8038:8046 Stdlib.ZArith.BinInt Z le_refl thm
+R8059:8067 Stdlib.ZArith.BinInt Z div_pos thm
+R8059:8067 Stdlib.ZArith.BinInt Z div_pos thm
+prf 8096:8107 <> Z_abs_div_le
+R8115:8115 Corelib.Numbers.BinNums <> Z ind
+binder 8110:8110 <> a:81
+binder 8112:8112 <> b:82
+R8139:8142 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R8129:8131 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R8122:8126 Stdlib.ZArith.BinInt Z abs def
+R8128:8128 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:81 var
+R8132:8136 Stdlib.ZArith.BinInt Z abs def
+R8138:8138 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:82 var
+R8143:8147 Stdlib.ZArith.BinInt Z abs def
+R8149:8149 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:81 var
+R8174:8185 Stdlib.ZArith.BinInt Z abs_nonneg thm
+R8174:8185 Stdlib.ZArith.BinInt Z abs_nonneg thm
+R8203:8214 Stdlib.ZArith.BinInt Z abs_nonneg thm
+R8203:8214 Stdlib.ZArith.BinInt Z abs_nonneg thm
+R8226:8235 Stdlib.ZArith.Znat Z2N inj_le thm
+R8226:8235 Stdlib.ZArith.Znat Z2N inj_le thm
+R8250:8261 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_div_nonneg thm
+R8250:8261 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_div_nonneg thm
+R8290:8300 Stdlib.ZArith.Znat Z2N inj_div thm
+R8290:8300 Stdlib.ZArith.Znat Z2N inj_div thm
+R8290:8300 Stdlib.ZArith.Znat Z2N inj_div thm
+R8290:8300 Stdlib.ZArith.Znat Z2N inj_div thm
+R8290:8300 Stdlib.ZArith.Znat Z2N inj_div thm
+R8325:8332 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_div_le thm
+R8325:8332 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_div_le thm
+prf 8347:8355 <> Z_abs_sgn
+R8363:8363 Corelib.Numbers.BinNums <> Z ind
+binder 8358:8358 <> a:83
+binder 8360:8360 <> b:84
+R8390:8392 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8369:8373 Stdlib.ZArith.BinInt Z abs def
+R8383:8385 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R8376:8380 Stdlib.ZArith.BinInt Z sgn def
+R8382:8382 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:83 var
+R8386:8386 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:84 var
+R8399:8399 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:83 var
+R8478:8482 Stdlib.ZArith.BinInt Z abs def
+R8484:8484 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:84 var
+prf 8555:8563 <> Z_sgn_abs
+R8569:8569 Corelib.Numbers.BinNums <> Z ind
+binder 8566:8566 <> a:86
+R8596:8598 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8583:8585 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R8576:8580 Stdlib.ZArith.BinInt Z sgn def
+R8582:8582 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:86 var
+R8586:8590 Stdlib.ZArith.BinInt Z abs def
+R8592:8592 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:86 var
+R8599:8599 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:86 var
+prf 8637:8653 <> Z_add_nocarry_lor
+R8661:8661 Corelib.Numbers.BinNums <> Z ind
+binder 8656:8656 <> a:87
+binder 8658:8658 <> b:88
+R8678:8680 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8668:8673 Stdlib.ZArith.BinInt Z land def
+R8675:8675 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:87 var
+R8677:8677 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:88 var
+binder 8665:8665 <> H:89
+R8695:8697 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8691:8693 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R8690:8690 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:87 var
+R8694:8694 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:88 var
+R8698:8702 Stdlib.ZArith.BinInt Z lor def
+R8704:8704 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:87 var
+R8706:8706 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:88 var
+R8727:8744 Stdlib.ZArith.BinInt Z add_nocarry_lxor thm
+R8727:8744 Stdlib.ZArith.BinInt Z add_nocarry_lxor thm
+R8727:8744 Stdlib.ZArith.BinInt Z add_nocarry_lxor thm
+R8767:8776 Stdlib.ZArith.BinInt Z lxor_lor thm
+R8767:8776 Stdlib.ZArith.BinInt Z lxor_lor thm
+prf 8803:8819 <> Z_land_pow2_small
+R8827:8827 Corelib.Numbers.BinNums <> Z ind
+binder 8822:8822 <> a:90
+binder 8824:8824 <> b:91
+R8836:8839 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x_'<'_x not
+R8841:8843 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x_'<'_x not
+R8840:8840 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:90 var
+R8840:8840 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:90 var
+R8845:8847 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R8848:8848 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:91 var
+binder 8831:8831 <> A:92
+R8860:8863 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R8864:8864 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:91 var
+binder 8855:8855 <> B:93
+R8889:8891 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8873:8878 Stdlib.ZArith.BinInt Z land def
+R8880:8880 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:90 var
+R8884:8886 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R8887:8887 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:91 var
+R8912:8935 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_land_pow2_shift thm
+R8912:8935 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_land_pow2_shift thm
+R8912:8935 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_land_pow2_shift thm
+R8956:8963 Stdlib.ZArith.BinInt Z shiftr def
+R8956:8963 Stdlib.ZArith.BinInt Z shiftr def
+R8993:9004 Stdlib.ZArith.BinInt Z shiftl_0_l thm
+R8993:9004 Stdlib.ZArith.BinInt Z shiftl_0_l thm
+R9017:9033 Stdlib.ZArith.BinInt Z shiftr_div_pow2 thm
+R9017:9033 Stdlib.ZArith.BinInt Z shiftr_div_pow2 thm
+R9017:9033 Stdlib.ZArith.BinInt Z shiftr_div_pow2 thm
+R9061:9071 Stdlib.ZArith.BinInt Z div_small thm
+R9061:9071 Stdlib.ZArith.BinInt Z div_small thm
+prf 9095:9117 <> Z_testbit_flag_mul_pow2
+R9123:9126 Corelib.Init.Datatypes <> bool ind
+binder 9120:9120 <> f:94
+R9133:9133 Corelib.Numbers.BinNums <> Z ind
+binder 9130:9130 <> k:95
+R9142:9145 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R9146:9146 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> k:95 var
+binder 9137:9137 <> K:96
+R9197:9199 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9155:9163 Stdlib.ZArith.BinInt Z testbit def
+R9166:9166 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R9185:9188 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R9170:9170 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> f:94 var
+R9190:9192 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R9193:9193 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> k:95 var
+R9196:9196 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> k:95 var
+R9200:9200 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> f:94 var
+R9232:9240 Stdlib.ZArith.BinInt Z mul_1_l thm
+R9232:9240 Stdlib.ZArith.BinInt Z mul_1_l thm
+R9232:9240 Stdlib.ZArith.BinInt Z mul_1_l thm
+R9249:9264 Stdlib.ZArith.BinInt Z pow2_bits_true thm
+R9249:9264 Stdlib.ZArith.BinInt Z pow2_bits_true thm
+R9289:9297 Stdlib.ZArith.BinInt Z mul_0_l thm
+R9289:9297 Stdlib.ZArith.BinInt Z mul_0_l thm
+R9289:9297 Stdlib.ZArith.BinInt Z mul_0_l thm
+R9306:9313 Stdlib.ZArith.BinInt Z bits_0 thm
+R9306:9313 Stdlib.ZArith.BinInt Z bits_0 thm
+prf 9389:9403 <> Z_testbit_small
+R9411:9411 Corelib.Numbers.BinNums <> Z ind
+binder 9406:9406 <> a:97
+binder 9408:9408 <> n:98
+R9420:9423 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R9424:9424 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:97 var
+binder 9415:9415 <> A:99
+R9467:9469 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R9466:9466 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:97 var
+R9471:9473 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R9474:9474 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:98 var
+binder 9462:9462 <> B:100
+R9496:9498 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9483:9491 Stdlib.ZArith.BinInt Z testbit def
+R9493:9493 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:97 var
+R9495:9495 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> n:98 var
+R9499:9503 Corelib.Init.Datatypes <> false constr
+R9533:9545 Stdlib.ZArith.BinInt Z testbit_0_l thm
+R9533:9545 Stdlib.ZArith.BinInt Z testbit_0_l thm
+R9558:9574 Stdlib.ZArith.BinInt Z bits_above_log2 thm
+R9558:9574 Stdlib.ZArith.BinInt Z bits_above_log2 thm
+R9596:9609 Stdlib.ZArith.BinInt Z log2_lt_pow2 thm
+R9596:9609 Stdlib.ZArith.BinInt Z log2_lt_pow2 thm
+R9633:9640 Stdlib.ZArith.BinInt Z leb_le thm
+R9633:9640 Stdlib.ZArith.BinInt Z leb_le thm
+R9633:9640 Stdlib.ZArith.BinInt Z leb_le thm
+prf 9762:9771 <> Z_pos_ne_0
+R9777:9784 Corelib.Numbers.BinNums <> positive ind
+binder 9774:9774 <> a:101
+R9797:9800 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R9790:9794 Stdlib.ZArith.BinInt Z pos abbrev
+R9796:9796 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:101 var
+prf 9839:9848 <> Z_0_lt_pos
+R9854:9861 Corelib.Numbers.BinNums <> positive ind
+binder 9851:9851 <> a:102
+R9869:9871 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R9872:9876 Stdlib.ZArith.BinInt Z pos abbrev
+R9878:9878 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:102 var
+R9901:9908 Stdlib.ZArith.BinInt Z ltb_lt thm
+R9901:9908 Stdlib.ZArith.BinInt Z ltb_lt thm
+R9901:9908 Stdlib.ZArith.BinInt Z ltb_lt thm
+prf 9932:9950 <> Z_ceiling_via_floor
+R9958:9958 Corelib.Numbers.BinNums <> Z ind
+binder 9953:9953 <> a:103
+binder 9955:9955 <> b:104
+R9967:9970 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R9971:9971 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:104 var
+binder 9962:9962 <> B:105
+R9994:9996 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9981:9983 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+R9993:9993 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+R9984:9984 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R9988:9991 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R9985:9986 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+R9987:9987 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:103 var
+R9992:9992 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:104 var
+R9997:9997 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R10007:10010 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R10003:10005 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R9999:10001 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R9998:9998 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:103 var
+R10002:10002 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:104 var
+R10011:10011 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:104 var
+R10067:10075 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_div_0_r thm
+R10067:10075 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_div_0_r thm
+R10067:10075 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_div_0_r thm
+R10067:10075 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_div_0_r thm
+R10067:10075 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_div_0_r thm
+R10067:10075 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_div_0_r thm
+R10097:10105 Stdlib.ZArith.BinInt Z div_mod thm
+R10108:10108 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+R10113:10117 Stdlib.ZArith.BinInt Z pos abbrev
+R10123:10132 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_pos_ne_0 thm
+R10097:10105 Stdlib.ZArith.BinInt Z div_mod thm
+R10108:10108 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+R10113:10117 Stdlib.ZArith.BinInt Z pos abbrev
+R10123:10132 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_pos_ne_0 thm
+R10154:10162 Stdlib.ZArith.BinInt Z div_mod thm
+R10176:10178 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R10166:10168 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R10169:10173 Stdlib.ZArith.BinInt Z pos abbrev
+R10183:10187 Stdlib.ZArith.BinInt Z pos abbrev
+R10193:10202 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_pos_ne_0 thm
+R10154:10162 Stdlib.ZArith.BinInt Z div_mod thm
+R10176:10178 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R10166:10168 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R10169:10173 Stdlib.ZArith.BinInt Z pos abbrev
+R10183:10187 Stdlib.ZArith.BinInt Z pos abbrev
+R10193:10202 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_pos_ne_0 thm
+R10224:10238 Stdlib.ZArith.BinInt Z mod_pos_bound thm
+R10241:10241 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+R10246:10250 Stdlib.ZArith.BinInt Z pos abbrev
+R10256:10265 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_0_lt_pos thm
+R10224:10238 Stdlib.ZArith.BinInt Z mod_pos_bound thm
+R10241:10241 Stdlib.ZArith.BinInt <> ::Z_scope:'-'_x not
+R10246:10250 Stdlib.ZArith.BinInt Z pos abbrev
+R10256:10265 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_0_lt_pos thm
+R10287:10301 Stdlib.ZArith.BinInt Z mod_pos_bound thm
+R10315:10317 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R10305:10307 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R10308:10312 Stdlib.ZArith.BinInt Z pos abbrev
+R10322:10326 Stdlib.ZArith.BinInt Z pos abbrev
+R10332:10341 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_0_lt_pos thm
+R10287:10301 Stdlib.ZArith.BinInt Z mod_pos_bound thm
+R10315:10317 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R10305:10307 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R10308:10312 Stdlib.ZArith.BinInt Z pos abbrev
+R10322:10326 Stdlib.ZArith.BinInt Z pos abbrev
+R10332:10341 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_0_lt_pos thm
+R10367:10374 Stdlib.ZArith.BinInt Z leb_le thm
+R10367:10374 Stdlib.ZArith.BinInt Z leb_le thm
+R10367:10374 Stdlib.ZArith.BinInt Z leb_le thm
+prf 10486:10504 <> Z_land_lxor_distr_l
+R10514:10514 Corelib.Numbers.BinNums <> Z ind
+binder 10507:10507 <> a:106
+binder 10509:10509 <> b:107
+binder 10511:10511 <> c:108
+R10541:10543 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10520:10525 Stdlib.ZArith.BinInt Z land def
+R10528:10533 Stdlib.ZArith.BinInt Z lxor def
+R10535:10535 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:106 var
+R10537:10537 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:107 var
+R10540:10540 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:108 var
+R10544:10549 Stdlib.ZArith.BinInt Z lxor def
+R10552:10557 Stdlib.ZArith.BinInt Z land def
+R10559:10559 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:106 var
+R10561:10561 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:108 var
+R10565:10570 Stdlib.ZArith.BinInt Z land def
+R10572:10572 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:107 var
+R10574:10574 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:108 var
+R10591:10600 Stdlib.ZArith.BinInt Z bits_inj thm
+R10591:10600 Stdlib.ZArith.BinInt Z bits_inj thm
+R10649:10659 Stdlib.ZArith.BinInt Z lxor_spec thm
+R10626:10636 Stdlib.ZArith.BinInt Z land_spec thm
+R10626:10636 Stdlib.ZArith.BinInt Z land_spec thm
+R10626:10636 Stdlib.ZArith.BinInt Z land_spec thm
+R10626:10636 Stdlib.ZArith.BinInt Z land_spec thm
+R10649:10659 Stdlib.ZArith.BinInt Z lxor_spec thm
+R10649:10659 Stdlib.ZArith.BinInt Z lxor_spec thm
+R10626:10636 Stdlib.ZArith.BinInt Z land_spec thm
+R10649:10659 Stdlib.ZArith.BinInt Z lxor_spec thm
+R10649:10659 Stdlib.ZArith.BinInt Z lxor_spec thm
+R10626:10636 Stdlib.ZArith.BinInt Z land_spec thm
+R10626:10636 Stdlib.ZArith.BinInt Z land_spec thm
+R10626:10636 Stdlib.ZArith.BinInt Z land_spec thm
+R10626:10636 Stdlib.ZArith.BinInt Z land_spec thm
+R10626:10636 Stdlib.ZArith.BinInt Z land_spec thm
+R10649:10659 Stdlib.ZArith.BinInt Z lxor_spec thm
+R10673:10681 Stdlib.ZArith.BinInt Z testbit def
+R10699:10707 Stdlib.ZArith.BinInt Z testbit def
+R10725:10733 Stdlib.ZArith.BinInt Z testbit def
+R10673:10681 Stdlib.ZArith.BinInt Z testbit def
+R10699:10707 Stdlib.ZArith.BinInt Z testbit def
+R10699:10707 Stdlib.ZArith.BinInt Z testbit def
+R10725:10733 Stdlib.ZArith.BinInt Z testbit def
+R10725:10733 Stdlib.ZArith.BinInt Z testbit def
+R10725:10733 Stdlib.ZArith.BinInt Z testbit def
+R10725:10733 Stdlib.ZArith.BinInt Z testbit def
+prf 10759:10777 <> Z_land_lxor_distr_r
+R10787:10787 Corelib.Numbers.BinNums <> Z ind
+binder 10780:10780 <> a:109
+binder 10782:10782 <> b:110
+binder 10784:10784 <> c:111
+R10814:10816 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10793:10798 Stdlib.ZArith.BinInt Z land def
+R10800:10800 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:109 var
+R10803:10808 Stdlib.ZArith.BinInt Z lxor def
+R10810:10810 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:110 var
+R10812:10812 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:111 var
+R10817:10822 Stdlib.ZArith.BinInt Z lxor def
+R10825:10830 Stdlib.ZArith.BinInt Z land def
+R10832:10832 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:109 var
+R10834:10834 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:110 var
+R10838:10843 Stdlib.ZArith.BinInt Z land def
+R10845:10845 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:109 var
+R10847:10847 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:111 var
+R10864:10873 Stdlib.ZArith.BinInt Z bits_inj thm
+R10864:10873 Stdlib.ZArith.BinInt Z bits_inj thm
+R10922:10932 Stdlib.ZArith.BinInt Z lxor_spec thm
+R10899:10909 Stdlib.ZArith.BinInt Z land_spec thm
+R10899:10909 Stdlib.ZArith.BinInt Z land_spec thm
+R10899:10909 Stdlib.ZArith.BinInt Z land_spec thm
+R10899:10909 Stdlib.ZArith.BinInt Z land_spec thm
+R10922:10932 Stdlib.ZArith.BinInt Z lxor_spec thm
+R10922:10932 Stdlib.ZArith.BinInt Z lxor_spec thm
+R10899:10909 Stdlib.ZArith.BinInt Z land_spec thm
+R10922:10932 Stdlib.ZArith.BinInt Z lxor_spec thm
+R10922:10932 Stdlib.ZArith.BinInt Z lxor_spec thm
+R10899:10909 Stdlib.ZArith.BinInt Z land_spec thm
+R10899:10909 Stdlib.ZArith.BinInt Z land_spec thm
+R10899:10909 Stdlib.ZArith.BinInt Z land_spec thm
+R10899:10909 Stdlib.ZArith.BinInt Z land_spec thm
+R10899:10909 Stdlib.ZArith.BinInt Z land_spec thm
+R10922:10932 Stdlib.ZArith.BinInt Z lxor_spec thm
+R10946:10954 Stdlib.ZArith.BinInt Z testbit def
+R10972:10980 Stdlib.ZArith.BinInt Z testbit def
+R10998:11006 Stdlib.ZArith.BinInt Z testbit def
+R10946:10954 Stdlib.ZArith.BinInt Z testbit def
+R10972:10980 Stdlib.ZArith.BinInt Z testbit def
+R10972:10980 Stdlib.ZArith.BinInt Z testbit def
+R10998:11006 Stdlib.ZArith.BinInt Z testbit def
+R10998:11006 Stdlib.ZArith.BinInt Z testbit def
+R10998:11006 Stdlib.ZArith.BinInt Z testbit def
+R10998:11006 Stdlib.ZArith.BinInt Z testbit def
+prf 11181:11194 <> Z_log2_lt_pow2
+R11202:11202 Corelib.Numbers.BinNums <> Z ind
+binder 11197:11197 <> a:112
+binder 11199:11199 <> b:113
+R11212:11215 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R11216:11216 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:112 var
+binder 11206:11207 <> BA:114
+R11229:11231 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R11232:11232 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:113 var
+binder 11223:11224 <> BB:115
+R11253:11257 Corelib.Init.Logic <> ::type_scope:x_'<->'_x not
+R11245:11247 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R11244:11244 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:112 var
+R11249:11251 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R11252:11252 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:113 var
+R11266:11268 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R11258:11263 Stdlib.ZArith.BinInt Z log2 def
+R11265:11265 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:112 var
+R11269:11269 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:113 var
+R11316:11318 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R11320:11322 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R11316:11318 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<'_x not
+R11320:11322 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R11336:11346 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_0_lt_pow2 def
+R11336:11346 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_0_lt_pow2 def
+R11357:11368 Stdlib.ZArith.BinInt Z lt_le_incl thm
+R11357:11368 Stdlib.ZArith.BinInt Z lt_le_incl thm
+R11404:11417 Stdlib.ZArith.BinInt Z log2_lt_pow2 thm
+R11404:11417 Stdlib.ZArith.BinInt Z log2_lt_pow2 thm
+R11430:11437 Stdlib.ZArith.BinInt Z ltb_lt thm
+R11430:11437 Stdlib.ZArith.BinInt Z ltb_lt thm
+R11430:11437 Stdlib.ZArith.BinInt Z ltb_lt thm
+R11461:11468 Stdlib.ZArith.BinInt Z leb_le thm
+R11461:11468 Stdlib.ZArith.BinInt Z leb_le thm
+R11461:11468 Stdlib.ZArith.BinInt Z leb_le thm
+prf 11581:11591 <> Z_mod_add_l
+R11603:11603 Corelib.Numbers.BinNums <> Z ind
+binder 11594:11594 <> a:116
+binder 11596:11596 <> b:117
+binder 11598:11598 <> c:118
+binder 11600:11600 <> m:119
+R11636:11638 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11630:11634 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R11629:11629 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:117 var
+R11635:11635 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:119 var
+R11640:11644 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R11639:11639 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:118 var
+R11645:11645 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:119 var
+binder 11625:11625 <> H:120
+R11668:11670 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11655:11655 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R11661:11666 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R11657:11659 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R11656:11656 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:116 var
+R11660:11660 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:117 var
+R11667:11667 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:119 var
+R11671:11671 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R11677:11682 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R11673:11675 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R11672:11672 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:116 var
+R11676:11676 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:118 var
+R11683:11683 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:119 var
+R11707:11723 Stdlib.ZArith.Zdiv <> Zplus_mod_idemp_r thm
+R11707:11723 Stdlib.ZArith.Zdiv <> Zplus_mod_idemp_r thm
+R11707:11723 Stdlib.ZArith.Zdiv <> Zplus_mod_idemp_r thm
+R11742:11758 Stdlib.ZArith.Zdiv <> Zplus_mod_idemp_r thm
+R11742:11758 Stdlib.ZArith.Zdiv <> Zplus_mod_idemp_r thm
+R11742:11758 Stdlib.ZArith.Zdiv <> Zplus_mod_idemp_r thm
+prf 11798:11808 <> Z_mod_add_r
+R11820:11820 Corelib.Numbers.BinNums <> Z ind
+binder 11811:11811 <> a:121
+binder 11813:11813 <> b:122
+binder 11815:11815 <> c:123
+binder 11817:11817 <> m:124
+R11853:11855 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11847:11851 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R11846:11846 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:121 var
+R11852:11852 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:124 var
+R11857:11861 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R11856:11856 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:122 var
+R11862:11862 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:124 var
+binder 11842:11842 <> H:125
+R11885:11887 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11872:11872 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R11878:11883 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R11874:11876 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R11873:11873 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:121 var
+R11877:11877 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:123 var
+R11884:11884 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:124 var
+R11888:11888 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R11894:11899 Stdlib.ZArith.BinInt <> ::Z_scope:x_'mod'_x not
+R11890:11892 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R11889:11889 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:122 var
+R11893:11893 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> c:123 var
+R11900:11900 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> m:124 var
+R11924:11940 Stdlib.ZArith.Zdiv <> Zplus_mod_idemp_l thm
+R11924:11940 Stdlib.ZArith.Zdiv <> Zplus_mod_idemp_l thm
+R11924:11940 Stdlib.ZArith.Zdiv <> Zplus_mod_idemp_l thm
+R11959:11975 Stdlib.ZArith.Zdiv <> Zplus_mod_idemp_l thm
+R11959:11975 Stdlib.ZArith.Zdiv <> Zplus_mod_idemp_l thm
+R11959:11975 Stdlib.ZArith.Zdiv <> Zplus_mod_idemp_l thm
+prf 12093:12105 <> Nat2N_inj_div
+R12113:12115 Corelib.Init.Datatypes <> nat ind
+binder 12108:12108 <> a:126
+binder 12110:12110 <> b:127
+R12137:12139 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12121:12128 Stdlib.NArith.BinNat N of_nat def
+R12132:12134 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R12131:12131 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:126 var
+R12135:12135 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:127 var
+R12151:12153 Stdlib.NArith.BinNat <> ::N_scope:x_'/'_x not
+R12141:12148 Stdlib.NArith.BinNat N of_nat def
+R12150:12150 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:126 var
+R12154:12161 Stdlib.NArith.BinNat N of_nat def
+R12163:12163 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:127 var
+R12207:12215 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_div_0_r thm
+R12207:12215 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_div_0_r thm
+R12207:12215 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> N_div_0_r thm
+R12236:12239 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12233:12233 Corelib.Init.Datatypes <> S constr
+R12236:12239 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12233:12233 Corelib.Init.Datatypes <> S constr
+R12273:12283 Stdlib.Arith.PeanoNat Nat div_mod thm
+R12288:12288 Corelib.Init.Datatypes <> S constr
+R12273:12283 Stdlib.Arith.PeanoNat Nat div_mod thm
+R12288:12288 Corelib.Init.Datatypes <> S constr
+R12310:12312 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R12313:12313 Corelib.Init.Datatypes <> S constr
+R12310:12312 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R12313:12313 Corelib.Init.Datatypes <> S constr
+R12335:12339 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R12340:12340 Corelib.Init.Datatypes <> S constr
+R12335:12339 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R12340:12340 Corelib.Init.Datatypes <> S constr
+R12381:12388 Stdlib.NArith.BinNat N of_nat def
+R12357:12368 Stdlib.NArith.BinNat N div_unique def
+R12381:12388 Stdlib.NArith.BinNat N of_nat def
+R12357:12368 Stdlib.NArith.BinNat N div_unique def
+R12405:12408 Stdlib.NArith.BinNat N lt def
+R12423:12439 Stdlib.NArith.Nnat Nat2N inj_compare thm
+R12423:12439 Stdlib.NArith.Nnat Nat2N inj_compare thm
+R12423:12439 Stdlib.NArith.Nnat Nat2N inj_compare thm
+R12450:12467 Stdlib.Arith.PeanoNat Nat compare_lt_iff thm
+R12450:12467 Stdlib.Arith.PeanoNat Nat compare_lt_iff thm
+R12486:12504 Stdlib.Arith.PeanoNat Nat mod_upper_bound def
+R12486:12504 Stdlib.Arith.PeanoNat Nat mod_upper_bound def
+R12528:12540 Stdlib.NArith.Nnat Nat2N inj_mul thm
+R12528:12540 Stdlib.NArith.Nnat Nat2N inj_mul thm
+R12528:12540 Stdlib.NArith.Nnat Nat2N inj_mul thm
+R12553:12565 Stdlib.NArith.Nnat Nat2N inj_add thm
+R12553:12565 Stdlib.NArith.Nnat Nat2N inj_add thm
+R12553:12565 Stdlib.NArith.Nnat Nat2N inj_add thm
+prf 12595:12607 <> Nat2N_inj_mod
+R12615:12617 Corelib.Init.Datatypes <> nat ind
+binder 12610:12610 <> a:128
+binder 12612:12612 <> b:129
+R12626:12629 Corelib.Init.Logic <> ::type_scope:x_'<>'_x not
+R12625:12625 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:129 var
+binder 12621:12622 <> ok:130
+R12654:12656 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R12636:12643 Stdlib.NArith.BinNat N of_nat def
+R12647:12651 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'mod'_x not
+R12646:12646 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:128 var
+R12652:12652 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:129 var
+R12668:12672 Stdlib.NArith.BinNat <> ::N_scope:x_'mod'_x not
+R12658:12665 Stdlib.NArith.BinNat N of_nat def
+R12667:12667 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> a:128 var
+R12673:12680 Stdlib.NArith.BinNat N of_nat def
+R12682:12682 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> b:129 var
+R12734:12748 Stdlib.Arith.PeanoNat Nat.Div0 mod_eq thm
+R12734:12748 Stdlib.Arith.PeanoNat Nat.Div0 mod_eq thm
+R12734:12748 Stdlib.Arith.PeanoNat Nat.Div0 mod_eq thm
+R12775:12787 Stdlib.NArith.Nnat Nat2N inj_sub thm
+R12775:12787 Stdlib.NArith.Nnat Nat2N inj_sub thm
+R12775:12787 Stdlib.NArith.Nnat Nat2N inj_sub thm
+R12798:12810 Stdlib.NArith.Nnat Nat2N inj_mul thm
+R12798:12810 Stdlib.NArith.Nnat Nat2N inj_mul thm
+R12798:12810 Stdlib.NArith.Nnat Nat2N inj_mul thm
+R12821:12833 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Nat2N_inj_div thm
+R12821:12833 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Nat2N_inj_div thm
+R12821:12833 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Nat2N_inj_div thm
+R12852:12864 Stdlib.NArith.BinNat N.Div0 mod_eq thm
+R12852:12864 Stdlib.NArith.BinNat N.Div0 mod_eq thm
+prf 13038:13058 <> Pos_size_nat_monotone
+R13066:13073 Corelib.Numbers.BinNums <> positive ind
+binder 13061:13061 <> p:131
+binder 13063:13063 <> q:132
+R13083:13086 Stdlib.PArith.BinPos <> ::positive_scope:x_'<='_x not
+R13082:13082 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> p:131 var
+R13087:13087 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> q:132 var
+binder 13077:13078 <> LE:133
+R13118:13121 Corelib.Init.Peano <> ::nat_scope:x_'<='_x not
+R13104:13115 Stdlib.PArith.BinPos Pos size_nat def
+R13117:13117 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> p:131 var
+R13122:13133 Stdlib.PArith.BinPos Pos size_nat def
+R13135:13135 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> q:132 var
+R13160:13170 Stdlib.PArith.BinPos Pos compare def
+R13160:13170 Stdlib.PArith.BinPos Pos compare def
+R13227:13240 Stdlib.PArith.BinPos Pos compare_eq thm
+R13227:13240 Stdlib.PArith.BinPos Pos compare_eq thm
+R13266:13276 Stdlib.Arith.PeanoNat Nat le_refl thm
+R13266:13276 Stdlib.Arith.PeanoNat Nat le_refl thm
+R13289:13309 Stdlib.PArith.BinPos Pos size_nat_monotone thm
+R13289:13309 Stdlib.PArith.BinPos Pos size_nat_monotone thm

@@ -1,0 +1,480 @@
+DIGEST 2483ec90f020e7100db9466b65a5d967
+FRocqOfSolidity.RocqEvm.Arith.UInt63
+R132:137 Stdlib.Numbers.Cyclic.Int63.Uint63 <> <> lib
+R139:144 Stdlib.NArith.NArith <> <> lib
+R146:151 Stdlib.ZArith.ZArith <> <> lib
+R153:155 Stdlib.micromega.Lia <> <> lib
+R194:199 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> <> lib
+R201:206 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> <> lib
+def 221:226 <> uint63
+R231:233 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+def 247:257 <> Z_of_uint63
+R262:265 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+def 279:289 <> uint63_of_Z
+R294:297 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> of_Z def
+R659:666 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> leb_spec prfax
+R631:638 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> ltb_spec prfax
+R603:610 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> mod_spec prfax
+R575:582 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> div_spec prfax
+R547:554 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> mul_spec prfax
+R519:526 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> sub_spec prfax
+R491:498 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> add_spec prfax
+R461:470 Stdlib.Numbers.Cyclic.Int63.Uint63 <> lxor_spec' thm
+R432:440 Stdlib.Numbers.Cyclic.Int63.Uint63 <> lor_spec' thm
+R402:411 Stdlib.Numbers.Cyclic.Int63.Uint63 <> land_spec' thm
+R374:381 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> lsr_spec prfax
+R346:353 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> lsl_spec prfax
+def 682:692 <> N_of_uint63
+R698:703 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 695:695 <> i:1
+R707:707 Corelib.Numbers.BinNums <> N ind
+R712:717 Stdlib.ZArith.BinInt Z to_N def
+R720:723 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R725:725 RocqOfSolidity.RocqEvm.Arith.UInt63 <> i:1 var
+def 740:750 <> uint63_of_N
+R756:756 Corelib.Numbers.BinNums <> N ind
+binder 753:753 <> n:2
+R760:765 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+R770:773 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> of_Z def
+R776:781 Stdlib.ZArith.BinInt Z of_N def
+R783:783 RocqOfSolidity.RocqEvm.Arith.UInt63 <> n:2 var
+def 799:811 <> nat_of_uint63
+R817:822 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 814:814 <> i:3
+R826:828 Corelib.Init.Datatypes <> nat ind
+R833:840 Stdlib.NArith.BinNat N to_nat def
+R843:853 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R855:855 RocqOfSolidity.RocqEvm.Arith.UInt63 <> i:3 var
+def 871:883 <> uint63_of_nat
+R889:891 Corelib.Init.Datatypes <> nat ind
+binder 886:886 <> n:4
+R895:900 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+R905:915 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_of_N def
+R918:925 Stdlib.NArith.BinNat N of_nat def
+R927:927 RocqOfSolidity.RocqEvm.Arith.UInt63 <> n:4 var
+prf 939:956 <> Z_of_uint63_nonneg
+R962:967 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 959:959 <> i:5
+R975:978 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R979:982 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R984:984 RocqOfSolidity.RocqEvm.Arith.UInt63 <> i:5 var
+R1009:1020 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R1009:1020 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+prf 1045:1056 <> uint63_ltb_Z
+R1064:1069 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 1059:1059 <> x:6
+binder 1061:1061 <> y:7
+R1090:1092 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1077:1080 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R1076:1076 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:6 var
+R1081:1081 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:7 var
+R1100:1103 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<?'_x not
+R1094:1097 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R1099:1099 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:6 var
+R1104:1107 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R1109:1109 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:7 var
+R1129:1141 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R1167:1174 Stdlib.ZArith.BinInt Z ltb_lt thm
+binder 1148:1148 <> x:8
+binder 1150:1150 <> y:9
+R1155:1162 Corelib.Init.Logic <> iff_refl thm
+R1129:1141 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R1167:1174 Stdlib.ZArith.BinInt Z ltb_lt thm
+binder 1148:1148 <> x:10
+binder 1150:1150 <> y:11
+R1155:1162 Corelib.Init.Logic <> iff_refl thm
+R1184:1191 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> ltb_spec prfax
+R1184:1191 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> ltb_spec prfax
+prf 1206:1217 <> uint63_leb_Z
+R1225:1230 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 1220:1220 <> x:12
+binder 1222:1222 <> y:13
+R1252:1254 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1238:1242 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<=?'_x not
+R1237:1237 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:12 var
+R1243:1243 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:13 var
+R1262:1266 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<=?'_x not
+R1256:1259 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R1261:1261 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:12 var
+R1267:1270 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R1272:1272 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:13 var
+R1292:1304 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R1330:1337 Stdlib.ZArith.BinInt Z leb_le thm
+binder 1311:1311 <> x:14
+binder 1313:1313 <> y:15
+R1318:1325 Corelib.Init.Logic <> iff_refl thm
+R1292:1304 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R1330:1337 Stdlib.ZArith.BinInt Z leb_le thm
+binder 1311:1311 <> x:16
+binder 1313:1313 <> y:17
+R1318:1325 Corelib.Init.Logic <> iff_refl thm
+R1347:1354 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> leb_spec prfax
+R1347:1354 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> leb_spec prfax
+prf 1369:1380 <> uint63_ltb_N
+R1388:1393 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 1383:1383 <> x:18
+binder 1385:1385 <> y:19
+R1414:1416 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1401:1404 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R1400:1400 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:18 var
+R1405:1405 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:19 var
+R1431:1434 Stdlib.NArith.BinNat <> ::N_scope:x_'<?'_x not
+R1418:1428 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R1430:1430 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:18 var
+R1435:1445 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R1447:1447 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:19 var
+R1468:1479 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_ltb_Z thm
+R1468:1479 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_ltb_Z thm
+R1468:1479 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_ltb_Z thm
+R1489:1499 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R1516:1527 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R1516:1527 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R1547:1558 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R1547:1558 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R1625:1634 Stdlib.ZArith.Znat Z2N inj_lt thm
+R1637:1640 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R1646:1649 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R1625:1634 Stdlib.ZArith.Znat Z2N inj_lt thm
+R1637:1640 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R1646:1649 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R1682:1694 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R1705:1712 Stdlib.NArith.BinNat N ltb_lt thm
+R1696:1703 Stdlib.ZArith.BinInt Z ltb_lt thm
+R1682:1694 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R1705:1712 Stdlib.NArith.BinNat N ltb_lt thm
+R1696:1703 Stdlib.ZArith.BinInt Z ltb_lt thm
+prf 1737:1748 <> uint63_leb_N
+R1756:1761 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 1751:1751 <> x:20
+binder 1753:1753 <> y:21
+R1783:1785 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1769:1773 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<=?'_x not
+R1768:1768 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:20 var
+R1774:1774 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:21 var
+R1800:1804 Stdlib.NArith.BinNat <> ::N_scope:x_'<=?'_x not
+R1787:1797 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R1799:1799 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:20 var
+R1805:1815 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R1817:1817 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:21 var
+R1838:1849 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_leb_Z thm
+R1838:1849 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_leb_Z thm
+R1838:1849 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_leb_Z thm
+R1859:1869 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R1886:1897 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R1886:1897 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R1917:1928 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R1917:1928 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R1995:2004 Stdlib.ZArith.Znat Z2N inj_le thm
+R2007:2010 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R2016:2019 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R1995:2004 Stdlib.ZArith.Znat Z2N inj_le thm
+R2007:2010 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R2016:2019 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R2052:2064 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R2075:2082 Stdlib.NArith.BinNat N leb_le thm
+R2066:2073 Stdlib.ZArith.BinInt Z leb_le thm
+R2052:2064 RocqOfSolidity.RocqEvm.Lib2.Logic2 <> relation_quad thm
+R2075:2082 Stdlib.NArith.BinNat N leb_le thm
+R2066:2073 Stdlib.ZArith.BinInt Z leb_le thm
+prf 2107:2127 <> uint63_get_high_digit
+R2135:2140 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 2130:2130 <> i:22
+binder 2132:2132 <> k:23
+R2192:2194 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2178:2182 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<=?'_x not
+R2183:2183 RocqOfSolidity.RocqEvm.Arith.UInt63 <> k:23 var
+R2195:2198 Corelib.Init.Datatypes <> true constr
+binder 2172:2172 <> B:24
+R2217:2219 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2204:2212 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> get_digit def
+R2214:2214 RocqOfSolidity.RocqEvm.Arith.UInt63 <> i:22 var
+R2216:2216 RocqOfSolidity.RocqEvm.Arith.UInt63 <> k:23 var
+R2220:2224 Corelib.Init.Datatypes <> false constr
+R2241:2249 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> get_digit def
+R2270:2272 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2265:2268 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<<'_x not
+R2270:2272 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2265:2268 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<<'_x not
+R2311:2322 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_ltb_Z thm
+R2311:2322 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_ltb_Z thm
+R2311:2322 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_ltb_Z thm
+R2335:2344 Stdlib.Numbers.Cyclic.Int63.Uint63 <> land_spec' thm
+R2335:2344 Stdlib.Numbers.Cyclic.Int63.Uint63 <> land_spec' thm
+R2335:2344 Stdlib.Numbers.Cyclic.Int63.Uint63 <> land_spec' thm
+R2357:2362 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_0 thm
+R2357:2362 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_0 thm
+R2357:2362 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_0 thm
+R2375:2384 Stdlib.ZArith.BinInt Z land_0_r thm
+R2375:2384 Stdlib.ZArith.BinInt Z land_0_r thm
+R2375:2384 Stdlib.ZArith.BinInt Z land_0_r thm
+R2423:2425 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2423:2425 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2445:2451 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> of_to_Z prfax
+R2470:2476 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> of_to_Z prfax
+R2445:2451 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> of_to_Z prfax
+R2445:2451 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> of_to_Z prfax
+R2470:2476 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> of_to_Z prfax
+R2470:2476 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> of_to_Z prfax
+R2505:2512 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> lsl_spec prfax
+R2505:2512 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> lsl_spec prfax
+R2505:2512 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> lsl_spec prfax
+R2523:2528 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_1 thm
+R2523:2528 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_1 thm
+R2523:2528 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_1 thm
+R2539:2544 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_0 thm
+R2539:2544 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_0 thm
+R2539:2544 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_0 thm
+R2555:2563 Stdlib.ZArith.BinInt Z mul_1_l thm
+R2555:2563 Stdlib.ZArith.BinInt Z mul_1_l thm
+R2555:2563 Stdlib.ZArith.BinInt Z mul_1_l thm
+R2574:2585 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_leb_Z thm
+R2574:2585 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_leb_Z thm
+R2574:2585 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_leb_Z thm
+R2602:2605 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R2602:2605 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R2659:2662 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R2659:2662 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R2700:2702 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R2700:2702 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R2727:2729 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2732:2734 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R2727:2729 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2732:2734 Stdlib.ZArith.BinInt <> ::Z_scope:x_'+'_x not
+R2776:2786 Stdlib.ZArith.BinInt Z pow_add_r thm
+R2797:2804 Stdlib.ZArith.BinInt Z leb_le thm
+R2776:2786 Stdlib.ZArith.BinInt Z pow_add_r thm
+R2776:2786 Stdlib.ZArith.BinInt Z pow_add_r thm
+R2776:2786 Stdlib.ZArith.BinInt Z pow_add_r thm
+R2776:2786 Stdlib.ZArith.BinInt Z pow_add_r thm
+R2797:2804 Stdlib.ZArith.BinInt Z leb_le thm
+R2797:2804 Stdlib.ZArith.BinInt Z leb_le thm
+R2797:2804 Stdlib.ZArith.BinInt Z leb_le thm
+R2797:2804 Stdlib.ZArith.BinInt Z leb_le thm
+R2797:2804 Stdlib.ZArith.BinInt Z leb_le thm
+R2797:2804 Stdlib.ZArith.BinInt Z leb_le thm
+R2835:2844 Stdlib.ZArith.Zdiv <> Z_mod_mult thm
+R2835:2844 Stdlib.ZArith.Zdiv <> Z_mod_mult thm
+prf 2859:2874 <> uint63_testbit_Z
+R2882:2887 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 2877:2877 <> i:25
+binder 2879:2879 <> k:26
+R2906:2908 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2893:2901 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> get_digit def
+R2903:2903 RocqOfSolidity.RocqEvm.Arith.UInt63 <> i:25 var
+R2905:2905 RocqOfSolidity.RocqEvm.Arith.UInt63 <> k:26 var
+R2909:2917 Stdlib.ZArith.BinInt Z testbit def
+R2920:2923 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R2925:2925 RocqOfSolidity.RocqEvm.Arith.UInt63 <> i:25 var
+R2929:2932 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R2934:2934 RocqOfSolidity.RocqEvm.Arith.UInt63 <> k:26 var
+R2956:2959 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R2956:2959 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<?'_x not
+R3025:3033 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> get_digit def
+R3046:3057 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_ltb_Z thm
+R3046:3057 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_ltb_Z thm
+R3046:3057 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_ltb_Z thm
+R3070:3079 Stdlib.Numbers.Cyclic.Int63.Uint63 <> land_spec' thm
+R3070:3079 Stdlib.Numbers.Cyclic.Int63.Uint63 <> land_spec' thm
+R3070:3079 Stdlib.Numbers.Cyclic.Int63.Uint63 <> land_spec' thm
+R3092:3099 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> lsl_spec prfax
+R3092:3099 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> lsl_spec prfax
+R3092:3099 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> lsl_spec prfax
+R3114:3117 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R3114:3117 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R3140:3143 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R3140:3143 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R3165:3168 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R3165:3168 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R3216:3219 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R3216:3219 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R3266:3274 Stdlib.ZArith.BinInt Z mul_1_l thm
+R3266:3274 Stdlib.ZArith.BinInt Z mul_1_l thm
+R3266:3274 Stdlib.ZArith.BinInt Z mul_1_l thm
+R3287:3297 Stdlib.ZArith.BinInt Z mod_small thm
+R3287:3297 Stdlib.ZArith.BinInt Z mod_small thm
+R3287:3297 Stdlib.ZArith.BinInt Z mod_small thm
+R3287:3297 Stdlib.ZArith.BinInt Z mod_small thm
+R3325:3336 Stdlib.ZArith.BinInt Z pow_nonneg thm
+R3325:3336 Stdlib.ZArith.BinInt Z pow_nonneg thm
+R3349:3356 Stdlib.ZArith.BinInt Z leb_le thm
+R3349:3356 Stdlib.ZArith.BinInt Z leb_le thm
+R3349:3356 Stdlib.ZArith.BinInt Z leb_le thm
+R3381:3382 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> wB def
+R3395:3409 Stdlib.ZArith.BinInt Z pow_lt_mono_r thm
+R3395:3409 Stdlib.ZArith.BinInt Z pow_lt_mono_r thm
+R3428:3435 Stdlib.ZArith.BinInt Z ltb_lt thm
+R3428:3435 Stdlib.ZArith.BinInt Z ltb_lt thm
+R3428:3435 Stdlib.ZArith.BinInt Z ltb_lt thm
+R3465:3472 Stdlib.ZArith.BinInt Z leb_le thm
+R3465:3472 Stdlib.ZArith.BinInt Z leb_le thm
+R3465:3472 Stdlib.ZArith.BinInt Z leb_le thm
+R3509:3516 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> ltb_spec prfax
+R3509:3516 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> ltb_spec prfax
+R3509:3516 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> ltb_spec prfax
+R3563:3575 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_testbit_alt thm
+R3563:3575 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_testbit_alt thm
+R3592:3603 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R3592:3603 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R3637:3648 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R3637:3648 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R3684:3687 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R3688:3691 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R3684:3687 Stdlib.ZArith.BinInt <> ::Z_scope:x_'<='_x not
+R3688:3691 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R3712:3723 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_ltb_Z thm
+R3712:3723 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_ltb_Z thm
+R3712:3723 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_ltb_Z thm
+R3747:3750 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R3747:3750 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> to_Z def
+R3809:3816 Stdlib.ZArith.BinInt Z ltb_ge thm
+R3809:3816 Stdlib.ZArith.BinInt Z ltb_ge thm
+R3809:3816 Stdlib.ZArith.BinInt Z ltb_ge thm
+R3853:3873 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_get_high_digit thm
+R3853:3873 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_get_high_digit thm
+R3853:3873 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_get_high_digit thm
+R3853:3873 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_get_high_digit thm
+R3905:3916 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R3905:3916 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R3930:3943 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_testbit_high thm
+R3930:3943 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_testbit_high thm
+R3963:3974 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R3963:3974 Stdlib.Numbers.Cyclic.Int63.Uint63 <> to_Z_bounded thm
+R4018:4030 Stdlib.ZArith.BinInt Z lt_le_trans thm
+R4034:4035 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> wB def
+R4018:4030 Stdlib.ZArith.BinInt Z lt_le_trans thm
+R4034:4035 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> wB def
+R4060:4074 Stdlib.ZArith.BinInt Z pow_le_mono_r thm
+R4060:4074 Stdlib.ZArith.BinInt Z pow_le_mono_r thm
+R4089:4096 Stdlib.ZArith.BinInt Z ltb_lt thm
+R4089:4096 Stdlib.ZArith.BinInt Z ltb_lt thm
+R4089:4096 Stdlib.ZArith.BinInt Z ltb_lt thm
+R4132:4139 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> leb_spec prfax
+R4132:4139 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> leb_spec prfax
+R4132:4139 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> leb_spec prfax
+prf 4164:4189 <> uint63_testbit_N_low_digit
+R4197:4197 Corelib.Numbers.BinNums <> N ind
+binder 4192:4192 <> n:27
+binder 4194:4194 <> k:28
+R4240:4242 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R4239:4239 RocqOfSolidity.RocqEvm.Arith.UInt63 <> k:28 var
+binder 4235:4235 <> B:29
+R4266:4268 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4253:4261 Stdlib.NArith.BinNat N testbit def
+R4263:4263 RocqOfSolidity.RocqEvm.Arith.UInt63 <> n:27 var
+R4265:4265 RocqOfSolidity.RocqEvm.Arith.UInt63 <> k:28 var
+R4269:4277 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> get_digit def
+R4280:4290 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_of_N def
+R4292:4292 RocqOfSolidity.RocqEvm.Arith.UInt63 <> n:27 var
+R4296:4306 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_of_N def
+R4308:4308 RocqOfSolidity.RocqEvm.Arith.UInt63 <> k:28 var
+R4329:4343 Stdlib.ZArith.Znat N2Z inj_testbit thm
+R4329:4343 Stdlib.ZArith.Znat N2Z inj_testbit thm
+R4329:4343 Stdlib.ZArith.Znat N2Z inj_testbit thm
+R4354:4369 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_Z thm
+R4354:4369 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_Z thm
+R4354:4369 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_Z thm
+R4379:4389 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_of_N def
+R4407:4415 Stdlib.Numbers.Cyclic.Int63.Uint63 <> of_Z_spec thm
+R4407:4415 Stdlib.Numbers.Cyclic.Int63.Uint63 <> of_Z_spec thm
+R4407:4415 Stdlib.Numbers.Cyclic.Int63.Uint63 <> of_Z_spec thm
+R4407:4415 Stdlib.Numbers.Cyclic.Int63.Uint63 <> of_Z_spec thm
+R4407:4415 Stdlib.Numbers.Cyclic.Int63.Uint63 <> of_Z_spec thm
+R4407:4415 Stdlib.Numbers.Cyclic.Int63.Uint63 <> of_Z_spec thm
+R4427:4437 Stdlib.ZArith.BinInt Z mod_small thm
+R4440:4445 Stdlib.ZArith.BinInt Z of_N def
+R4427:4437 Stdlib.ZArith.BinInt Z mod_small thm
+R4440:4445 Stdlib.ZArith.BinInt Z of_N def
+R4427:4437 Stdlib.ZArith.BinInt Z mod_small thm
+R4440:4445 Stdlib.ZArith.BinInt Z of_N def
+R4427:4437 Stdlib.ZArith.BinInt Z mod_small thm
+R4440:4445 Stdlib.ZArith.BinInt Z of_N def
+R4463:4464 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> wB def
+R4495:4513 Stdlib.ZArith.BinInt Z mod_pow2_bits_low thm
+R4495:4513 Stdlib.ZArith.BinInt Z mod_pow2_bits_low thm
+R4523:4526 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> size def
+prf 4546:4565 <> uint63_bit_get_digit
+R4573:4578 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 4568:4568 <> i:30
+binder 4570:4570 <> k:31
+R4591:4593 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4584:4586 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> bit def
+R4588:4588 RocqOfSolidity.RocqEvm.Arith.UInt63 <> i:30 var
+R4590:4590 RocqOfSolidity.RocqEvm.Arith.UInt63 <> k:31 var
+R4594:4602 Corelib.Numbers.Cyclic.Int63.Uint63Axioms <> get_digit def
+R4604:4604 RocqOfSolidity.RocqEvm.Arith.UInt63 <> i:30 var
+R4606:4606 RocqOfSolidity.RocqEvm.Arith.UInt63 <> k:31 var
+R4624:4627 Stdlib.Numbers.Cyclic.Int63.Uint63 <> bitE thm
+R4624:4627 Stdlib.Numbers.Cyclic.Int63.Uint63 <> bitE thm
+R4624:4627 Stdlib.Numbers.Cyclic.Int63.Uint63 <> bitE thm
+R4638:4653 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_Z thm
+R4638:4653 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_Z thm
+R4638:4653 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63_testbit_Z thm
+prf 4755:4767 <> uint63_land_N
+R4775:4780 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 4770:4770 <> x:32
+binder 4772:4772 <> y:33
+R4815:4817 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4786:4796 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R4800:4805 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R4799:4799 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:32 var
+R4806:4806 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:33 var
+R4818:4823 Stdlib.NArith.BinNat N land def
+R4826:4836 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R4838:4838 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:32 var
+R4842:4852 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R4854:4854 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:33 var
+R4872:4882 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R4893:4902 Stdlib.Numbers.Cyclic.Int63.Uint63 <> land_spec' thm
+R4893:4902 Stdlib.Numbers.Cyclic.Int63.Uint63 <> land_spec' thm
+R4893:4902 Stdlib.Numbers.Cyclic.Int63.Uint63 <> land_spec' thm
+R4911:4921 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_land thm
+R4930:4947 RocqOfSolidity.RocqEvm.Arith.UInt63 <> Z_of_uint63_nonneg thm
+R4911:4921 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_land thm
+R4930:4947 RocqOfSolidity.RocqEvm.Arith.UInt63 <> Z_of_uint63_nonneg thm
+R4930:4947 RocqOfSolidity.RocqEvm.Arith.UInt63 <> Z_of_uint63_nonneg thm
+prf 4962:4973 <> uint63_lor_N
+R4981:4986 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 4976:4976 <> x:34
+binder 4978:4978 <> y:35
+R5020:5022 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4992:5002 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R5006:5010 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R5005:5005 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:34 var
+R5011:5011 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:35 var
+R5023:5027 Stdlib.NArith.BinNat N lor def
+R5030:5040 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R5042:5042 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:34 var
+R5046:5056 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R5058:5058 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:35 var
+R5076:5086 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R5097:5105 Stdlib.Numbers.Cyclic.Int63.Uint63 <> lor_spec' thm
+R5097:5105 Stdlib.Numbers.Cyclic.Int63.Uint63 <> lor_spec' thm
+R5097:5105 Stdlib.Numbers.Cyclic.Int63.Uint63 <> lor_spec' thm
+R5114:5123 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lor thm
+R5132:5149 RocqOfSolidity.RocqEvm.Arith.UInt63 <> Z_of_uint63_nonneg thm
+R5114:5123 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lor thm
+R5132:5149 RocqOfSolidity.RocqEvm.Arith.UInt63 <> Z_of_uint63_nonneg thm
+R5132:5149 RocqOfSolidity.RocqEvm.Arith.UInt63 <> Z_of_uint63_nonneg thm
+prf 5164:5176 <> uint63_lxor_N
+R5184:5189 RocqOfSolidity.RocqEvm.Arith.UInt63 <> uint63 def
+binder 5179:5179 <> x:36
+binder 5181:5181 <> y:37
+R5224:5226 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5195:5205 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R5209:5214 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lxor'_x not
+R5208:5208 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:36 var
+R5215:5215 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:37 var
+R5227:5232 Stdlib.NArith.BinNat N lxor def
+R5235:5245 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R5247:5247 RocqOfSolidity.RocqEvm.Arith.UInt63 <> x:36 var
+R5251:5261 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R5263:5263 RocqOfSolidity.RocqEvm.Arith.UInt63 <> y:37 var
+R5281:5291 RocqOfSolidity.RocqEvm.Arith.UInt63 <> N_of_uint63 def
+R5302:5311 Stdlib.Numbers.Cyclic.Int63.Uint63 <> lxor_spec' thm
+R5302:5311 Stdlib.Numbers.Cyclic.Int63.Uint63 <> lxor_spec' thm
+R5302:5311 Stdlib.Numbers.Cyclic.Int63.Uint63 <> lxor_spec' thm
+R5320:5330 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lxor thm
+R5339:5356 RocqOfSolidity.RocqEvm.Arith.UInt63 <> Z_of_uint63_nonneg thm
+R5320:5330 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Z_to_N_lxor thm
+R5339:5356 RocqOfSolidity.RocqEvm.Arith.UInt63 <> Z_of_uint63_nonneg thm
+R5339:5356 RocqOfSolidity.RocqEvm.Arith.UInt63 <> Z_of_uint63_nonneg thm

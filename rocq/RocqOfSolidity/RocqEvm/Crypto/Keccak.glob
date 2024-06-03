@@ -1,0 +1,1221 @@
+DIGEST 9ba24dc242d49e58c1b6939695f8c91a
+FRocqOfSolidity.RocqEvm.Crypto.Keccak
+R117:120 Stdlib.Lists.List <> <> lib
+R143:151 Stdlib.Strings.HexString <> <> lib
+R181:186 Stdlib.Strings.String <> <> lib
+R216:221 Stdlib.NArith.NArith <> <> lib
+R223:228 Stdlib.ZArith.ZArith <> <> lib
+R230:232 Stdlib.micromega.Lia <> <> lib
+R262:267 Stdlib.Numbers.Cyclic.Int63.Uint63 <> <> lib
+R299:304 RocqOfSolidity.RocqEvm.Arith.UInt64 <> <> lib
+R306:316 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> <> lib
+R354:359 RocqOfSolidity.RocqEvm.Arith.Nibble <> <> lib
+def 406:411 <> rc_hex
+R414:417 Corelib.Init.Datatypes <> list ind
+R419:424 Stdlib.Strings.String <> string ind
+R449:452 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R473:476 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R497:500 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R521:524 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R545:548 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R569:572 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R593:596 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R617:620 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R641:644 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R665:668 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R689:692 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R713:716 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R737:740 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R761:764 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R785:788 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R809:812 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R833:836 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R857:860 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R881:884 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R905:908 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R929:932 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R953:956 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R977:980 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1001:1004 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R1005:1007 Corelib.Init.Datatypes <> nil constr
+def 1022:1023 <> rc
+R1028:1030 Corelib.Lists.ListDef <> map def
+R1056:1058 Corelib.Lists.ListDef <> map def
+R1075:1080 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rc_hex def
+R1060:1073 Stdlib.Strings.HexString <> to_Z def
+R1032:1053 RocqOfSolidity.RocqEvm.Arith.UInt64 <> uint64_of_Z_mod def
+prf 1090:1094 <> rc_ok
+R1124:1126 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1099:1101 Corelib.Lists.ListDef <> map def
+R1122:1123 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rc def
+R1103:1120 RocqOfSolidity.RocqEvm.Arith.UInt64 <> Z_of_uint64 def
+R1127:1129 Corelib.Lists.ListDef <> map def
+R1146:1151 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rc_hex def
+R1131:1144 Stdlib.Strings.HexString <> to_Z def
+def 1187:1204 <> rc_quads_backwards
+R1209:1226 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather def
+R1235:1241 Corelib.Init.Logic <> eq_refl constr
+R1228:1229 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rc def
+ind 1255:1259 <> vec25
+constr 1274:1278 <> Vec25
+binder 1262:1262 <> T:1
+R1420:1420 RocqOfSolidity.RocqEvm.Crypto.Keccak <> T:1 var
+binder 1281:1282 <> a0:4
+binder 1285:1286 <> a1:5
+binder 1289:1290 <> a2:6
+binder 1293:1294 <> a3:7
+binder 1297:1298 <> a4:8
+binder 1310:1311 <> a5:9
+binder 1314:1315 <> a6:10
+binder 1318:1319 <> a7:11
+binder 1322:1323 <> a8:12
+binder 1326:1327 <> a9:13
+binder 1339:1341 <> a10:14
+binder 1343:1345 <> a11:15
+binder 1347:1349 <> a12:16
+binder 1351:1353 <> a13:17
+binder 1355:1357 <> a14:18
+binder 1369:1371 <> a15:19
+binder 1373:1375 <> a16:20
+binder 1377:1379 <> a17:21
+binder 1381:1383 <> a18:22
+binder 1385:1387 <> a19:23
+binder 1399:1401 <> a20:24
+binder 1403:1405 <> a21:25
+binder 1407:1409 <> a22:26
+binder 1411:1413 <> a23:27
+binder 1415:1417 <> a24:28
+scheme 1255:1259 <> vec25_rect
+scheme 1255:1259 <> vec25_ind
+scheme 1255:1259 <> vec25_rec
+scheme 1255:1259 <> vec25_sind
+R1434:1438 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+R1434:1438 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+def 1457:1466 <> vec25_fill
+binder 1469:1469 <> T:29
+R1482:1482 RocqOfSolidity.RocqEvm.Crypto.Keccak <> T:29 var
+binder 1479:1479 <> x:30
+R1488:1492 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+R1578:1578 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1576:1576 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1574:1574 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1572:1572 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1570:1570 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1559:1559 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1557:1557 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1555:1555 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1553:1553 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1551:1551 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1540:1540 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1538:1538 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1536:1536 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1534:1534 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1532:1532 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1521:1521 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1519:1519 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1517:1517 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1515:1515 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1513:1513 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1502:1502 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1500:1500 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1498:1498 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1496:1496 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+R1494:1494 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:30 var
+def 1593:1598 <> uint64
+R1603:1615 RocqOfSolidity.RocqEvm.Arith.UInt64 <> uint64 def
+def 1630:1640 <> vec25_zeros
+R1645:1654 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25_fill def
+R1657:1671 RocqOfSolidity.RocqEvm.Arith.UInt64 <> uint64_0 def
+sec 1684:1694 <> Permutation
+R1726:1743 RocqOfSolidity.RocqEvm.Arith.UInt64 <> bitwise_xor def
+not 1713:1713 Permutation :::x_'^'_x
+def 1763:1789 <> vec25_xor_tuple17_backwards
+R1795:1799 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R1801:1806 RocqOfSolidity.RocqEvm.Crypto.Keccak <> uint64 def
+binder 1792:1792 <> a:31
+R1813:1825 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R1827:1832 RocqOfSolidity.RocqEvm.Crypto.Keccak <> uint64 def
+binder 1810:1810 <> b:32
+R1847:1847 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:31 var
+R1859:1863 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+R2019:2019 RocqOfSolidity.RocqEvm.Crypto.Keccak <> b:32 var
+R2034:2034 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2038:2039 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2043:2044 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2048:2049 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2053:2054 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2058:2059 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2063:2064 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2068:2069 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2072:2073 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2076:2077 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2080:2081 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2084:2085 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2088:2089 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2092:2093 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2096:2097 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2100:2101 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2104:2105 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2108:2108 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2126:2130 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+R2385:2387 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2373:2375 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2342:2344 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2330:2332 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2318:2320 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2306:2308 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2294:2296 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2263:2266 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2251:2254 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2239:2242 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2227:2230 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2215:2218 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2184:2187 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2172:2175 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2160:2163 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2148:2151 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2136:2139 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R2541:2557 RocqOfSolidity.RocqEvm.Arith.UInt64 <> shl_uint63 def
+not 2528:2528 Permutation :::x_'<<'_x
+R2593:2609 RocqOfSolidity.RocqEvm.Arith.UInt64 <> shr_uint63 def
+not 2580:2580 Permutation :::x_'>>'_x
+R2645:2661 RocqOfSolidity.RocqEvm.Arith.UInt64 <> bitwise_or def
+not 2632:2632 Permutation :::x_'|'_x
+R2746:2763 RocqOfSolidity.RocqEvm.Arith.UInt64 <> bitwise_and def
+not 2733:2733 Permutation :::x_'&'_x
+R2811:2828 RocqOfSolidity.RocqEvm.Arith.UInt64 <> bitwise_not def
+not 2800:2800 Permutation :::'~'_x
+def 2846:2848 <> rot
+binder 2850:2850 <> x:35
+binder 2852:2852 <> k:36
+R2858:2858 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'|'_x not
+R2865:2869 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'|'_x not
+R2890:2890 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'|'_x not
+R2860:2863 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'<<'_x not
+R2859:2859 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:35 var
+R2864:2864 RocqOfSolidity.RocqEvm.Crypto.Keccak <> k:36 var
+R2871:2874 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'>>'_x not
+R2870:2870 RocqOfSolidity.RocqEvm.Crypto.Keccak <> x:35 var
+R2878:2880 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'-'_x not
+R2881:2881 RocqOfSolidity.RocqEvm.Crypto.Keccak <> k:36 var
+def 2906:2910 <> round
+R2917:2922 RocqOfSolidity.RocqEvm.Crypto.Keccak <> uint64 def
+binder 2913:2914 <> rc:37
+R2929:2933 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R2935:2940 RocqOfSolidity.RocqEvm.Crypto.Keccak <> uint64 def
+binder 2926:2926 <> a:38
+R2947:2951 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R2953:2958 RocqOfSolidity.RocqEvm.Crypto.Keccak <> uint64 def
+binder 2944:2944 <> b:39
+R2963:2967 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R2969:2974 RocqOfSolidity.RocqEvm.Crypto.Keccak <> uint64 def
+R2988:2988 RocqOfSolidity.RocqEvm.Crypto.Keccak <> b:39 var
+R2985:2985 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:38 var
+R3000:3004 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+R3154:3158 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+R3326:3328 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3331:3333 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3337:3339 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3343:3345 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+binder 3317:3319 <> bc0:42
+R3372:3374 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3377:3379 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3383:3385 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3389:3391 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+binder 3363:3365 <> bc1:43
+R3418:3420 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3423:3425 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3429:3431 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3435:3437 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+binder 3409:3411 <> bc2:44
+R3464:3466 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3469:3471 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3475:3477 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3481:3483 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+binder 3455:3457 <> bc3:45
+R3510:3512 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3515:3517 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3521:3523 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3527:3529 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+binder 3501:3503 <> bc4:46
+R3557:3559 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3554:3556 RocqOfSolidity.RocqEvm.Crypto.Keccak <> bc4:46 var
+R3560:3562 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R3564:3566 RocqOfSolidity.RocqEvm.Crypto.Keccak <> bc1:43 var
+binder 3548:3549 <> d0:47
+R3599:3601 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3596:3598 RocqOfSolidity.RocqEvm.Crypto.Keccak <> bc0:42 var
+R3602:3604 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R3606:3608 RocqOfSolidity.RocqEvm.Crypto.Keccak <> bc2:44 var
+binder 3590:3591 <> d1:48
+R3641:3643 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3638:3640 RocqOfSolidity.RocqEvm.Crypto.Keccak <> bc1:43 var
+R3644:3646 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R3648:3650 RocqOfSolidity.RocqEvm.Crypto.Keccak <> bc3:45 var
+binder 3632:3633 <> d2:49
+R3683:3685 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3680:3682 RocqOfSolidity.RocqEvm.Crypto.Keccak <> bc2:44 var
+R3686:3688 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R3690:3692 RocqOfSolidity.RocqEvm.Crypto.Keccak <> bc4:46 var
+binder 3674:3675 <> d3:50
+R3725:3727 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3722:3724 RocqOfSolidity.RocqEvm.Crypto.Keccak <> bc3:45 var
+R3728:3730 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R3732:3734 RocqOfSolidity.RocqEvm.Crypto.Keccak <> bc0:42 var
+binder 3716:3717 <> d4:51
+R3767:3769 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3770:3771 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d0:47 var
+binder 3759:3760 <> p0:52
+R3792:3794 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R3799:3801 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3802:3803 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d1:48 var
+binder 3786:3787 <> p1:53
+R3835:3837 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R3842:3844 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3845:3846 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d2:49 var
+binder 3829:3830 <> p2:54
+R3878:3880 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R3885:3887 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3888:3889 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d3:50 var
+binder 3872:3873 <> p3:55
+R3921:3923 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R3928:3930 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3931:3932 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d4:51 var
+binder 3915:3916 <> p4:56
+R3968:3970 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3966:3967 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p0:52 var
+R3971:3971 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3981:3984 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R3974:3976 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R3972:3973 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p2:54 var
+R3977:3978 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R3979:3980 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p1:53 var
+R3985:3986 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rc:37 var
+binder 3959:3960 <> z0:57
+R4010:4013 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4023:4023 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4008:4009 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p1:53 var
+R4016:4018 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4014:4015 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p3:55 var
+R4019:4020 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4021:4022 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p2:54 var
+binder 4001:4002 <> z1:58
+R4047:4050 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4060:4060 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4045:4046 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p2:54 var
+R4053:4055 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4051:4052 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p4:56 var
+R4056:4057 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4058:4059 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p3:55 var
+binder 4038:4039 <> z2:59
+R4084:4087 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4097:4097 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4082:4083 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p3:55 var
+R4090:4092 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4088:4089 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p0:52 var
+R4093:4094 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4095:4096 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p4:56 var
+binder 4075:4076 <> z3:60
+R4121:4124 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4134:4134 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4119:4120 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p4:56 var
+R4127:4129 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4125:4126 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p1:53 var
+R4130:4131 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4132:4133 RocqOfSolidity.RocqEvm.Crypto.Keccak <> p0:52 var
+binder 4112:4113 <> z4:61
+R4156:4158 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R4163:4165 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4166:4167 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d0:47 var
+binder 4150:4151 <> q2:62
+R4199:4201 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R4206:4208 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4209:4210 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d1:48 var
+binder 4193:4194 <> q3:63
+R4242:4244 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R4249:4251 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4252:4253 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d2:49 var
+binder 4236:4237 <> q4:64
+R4285:4287 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R4292:4294 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4295:4296 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d3:50 var
+binder 4279:4280 <> q0:65
+R4328:4330 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R4335:4337 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4338:4339 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d4:51 var
+binder 4322:4323 <> q1:66
+R4375:4378 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4388:4388 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4373:4374 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q0:65 var
+R4381:4383 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4379:4380 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q2:62 var
+R4384:4385 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4386:4387 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q1:66 var
+binder 4366:4367 <> z5:67
+R4412:4415 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4425:4425 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4410:4411 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q1:66 var
+R4418:4420 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4416:4417 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q3:63 var
+R4421:4422 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4423:4424 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q2:62 var
+binder 4403:4404 <> z6:68
+R4449:4452 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4462:4462 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4447:4448 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q2:62 var
+R4455:4457 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4453:4454 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q4:64 var
+R4458:4459 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4460:4461 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q3:63 var
+binder 4440:4441 <> z7:69
+R4486:4489 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4499:4499 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4484:4485 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q3:63 var
+R4492:4494 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4490:4491 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q0:65 var
+R4495:4496 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4497:4498 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q4:64 var
+binder 4477:4478 <> z8:70
+R4523:4526 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4536:4536 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4521:4522 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q4:64 var
+R4529:4531 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4527:4528 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q1:66 var
+R4532:4533 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4534:4535 RocqOfSolidity.RocqEvm.Crypto.Keccak <> q0:65 var
+binder 4514:4515 <> z9:71
+R4558:4560 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R4566:4568 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4569:4570 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d0:47 var
+binder 4552:4553 <> r4:72
+R4602:4604 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R4610:4612 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4613:4614 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d1:48 var
+binder 4596:4597 <> r0:73
+R4646:4648 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R4654:4656 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4657:4658 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d2:49 var
+binder 4640:4641 <> r1:74
+R4690:4692 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R4698:4700 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4701:4702 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d3:50 var
+binder 4684:4685 <> r2:75
+R4734:4736 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R4742:4744 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4745:4746 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d4:51 var
+binder 4728:4729 <> r3:76
+R4782:4785 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4795:4795 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4780:4781 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r0:73 var
+R4788:4790 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4786:4787 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r2:75 var
+R4791:4792 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4793:4794 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r1:74 var
+binder 4773:4775 <> z10:77
+R4819:4822 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4832:4832 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4817:4818 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r1:74 var
+R4825:4827 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4823:4824 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r3:76 var
+R4828:4829 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4830:4831 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r2:75 var
+binder 4810:4812 <> z11:78
+R4856:4859 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4869:4869 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4854:4855 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r2:75 var
+R4862:4864 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4860:4861 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r4:72 var
+R4865:4866 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4867:4868 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r3:76 var
+binder 4847:4849 <> z12:79
+R4893:4896 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4906:4906 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4891:4892 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r3:76 var
+R4899:4901 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4897:4898 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r0:73 var
+R4902:4903 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4904:4905 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r4:72 var
+binder 4884:4886 <> z13:80
+R4930:4933 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4943:4943 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4928:4929 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r4:72 var
+R4936:4938 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R4934:4935 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r1:74 var
+R4939:4940 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R4941:4942 RocqOfSolidity.RocqEvm.Crypto.Keccak <> r0:73 var
+binder 4921:4923 <> z14:81
+R4965:4967 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R4973:4975 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R4976:4977 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d0:47 var
+binder 4959:4960 <> s1:82
+R5009:5011 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R5017:5019 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5020:5021 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d1:48 var
+binder 5003:5004 <> s2:83
+R5053:5055 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R5061:5063 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5064:5065 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d2:49 var
+binder 5047:5048 <> s3:84
+R5097:5099 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R5105:5107 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5108:5109 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d3:50 var
+binder 5091:5092 <> s4:85
+R5141:5143 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R5149:5151 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5152:5153 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d4:51 var
+binder 5135:5136 <> s0:86
+R5189:5192 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5202:5202 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5187:5188 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s0:86 var
+R5195:5197 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R5193:5194 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s2:83 var
+R5198:5199 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R5200:5201 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s1:82 var
+binder 5180:5182 <> z15:87
+R5226:5229 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5239:5239 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5224:5225 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s1:82 var
+R5232:5234 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R5230:5231 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s3:84 var
+R5235:5236 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R5237:5238 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s2:83 var
+binder 5217:5219 <> z16:88
+R5263:5266 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5276:5276 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5261:5262 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s2:83 var
+R5269:5271 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R5267:5268 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s4:85 var
+R5272:5273 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R5274:5275 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s3:84 var
+binder 5254:5256 <> z17:89
+R5300:5303 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5313:5313 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5298:5299 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s3:84 var
+R5306:5308 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R5304:5305 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s0:86 var
+R5309:5310 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R5311:5312 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s4:85 var
+binder 5291:5293 <> z18:90
+R5337:5340 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5350:5350 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5335:5336 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s4:85 var
+R5343:5345 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R5341:5342 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s1:82 var
+R5346:5347 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R5348:5349 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s0:86 var
+binder 5328:5330 <> z19:91
+R5372:5374 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R5380:5382 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5383:5384 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d0:47 var
+binder 5366:5367 <> t3:92
+R5416:5418 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R5424:5426 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5427:5428 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d1:48 var
+binder 5410:5411 <> t4:93
+R5460:5462 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R5468:5470 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5471:5472 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d2:49 var
+binder 5454:5455 <> t0:94
+R5504:5506 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R5512:5514 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5515:5516 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d3:50 var
+binder 5498:5499 <> t1:95
+R5548:5550 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rot def
+R5556:5558 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5559:5560 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d4:51 var
+binder 5542:5543 <> t2:96
+R5596:5599 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5609:5609 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5594:5595 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t0:94 var
+R5602:5604 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R5600:5601 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t2:96 var
+R5605:5606 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R5607:5608 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t1:95 var
+binder 5587:5589 <> z20:97
+R5633:5636 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5646:5646 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5631:5632 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t1:95 var
+R5639:5641 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R5637:5638 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t3:92 var
+R5642:5643 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R5644:5645 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t2:96 var
+binder 5624:5626 <> z21:98
+R5670:5673 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5683:5683 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5668:5669 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t2:96 var
+R5676:5678 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R5674:5675 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t4:93 var
+R5679:5680 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R5681:5682 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t3:92 var
+binder 5661:5663 <> z22:99
+R5707:5710 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5720:5720 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5705:5706 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t3:92 var
+R5713:5715 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R5711:5712 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t0:94 var
+R5716:5717 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R5718:5719 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t4:93 var
+binder 5698:5700 <> z23:100
+R5744:5747 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5757:5757 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'^'_x not
+R5742:5743 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t4:93 var
+R5750:5752 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::x_'&'_x not
+R5748:5749 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t1:95 var
+R5753:5754 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation :::'~'_x not
+R5755:5756 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t0:94 var
+binder 5735:5737 <> z24:101
+R5769:5773 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+R5917:5919 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z24:101 var
+R5913:5915 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z23:100 var
+R5909:5911 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z22:99 var
+R5905:5907 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z21:98 var
+R5901:5903 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z20:97 var
+R5885:5887 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z19:91 var
+R5881:5883 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z18:90 var
+R5877:5879 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z17:89 var
+R5873:5875 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z16:88 var
+R5869:5871 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z15:87 var
+R5853:5855 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z14:81 var
+R5849:5851 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z13:80 var
+R5845:5847 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z12:79 var
+R5841:5843 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z11:78 var
+R5837:5839 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z10:77 var
+R5822:5823 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z9:71 var
+R5818:5819 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z8:70 var
+R5814:5815 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z7:69 var
+R5810:5811 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z6:68 var
+R5806:5807 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z5:67 var
+R5791:5792 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z4:61 var
+R5787:5788 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z3:60 var
+R5783:5784 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z2:59 var
+R5779:5780 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z1:58 var
+R5775:5776 RocqOfSolidity.RocqEvm.Crypto.Keccak <> z0:57 var
+def 5941:5948 <> permute1
+binder 5951:5951 <> T:102
+R5958:5962 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R5964:5964 RocqOfSolidity.RocqEvm.Crypto.Keccak <> T:102 var
+binder 5955:5955 <> a:103
+R5976:5976 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:103 var
+R5988:5992 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+R6144:6148 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+def 6311:6318 <> permute2
+binder 6321:6321 <> T:105
+R6328:6332 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R6334:6334 RocqOfSolidity.RocqEvm.Crypto.Keccak <> T:105 var
+binder 6325:6325 <> a:106
+R6346:6346 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:106 var
+R6358:6362 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+R6514:6518 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+def 6681:6688 <> permute3
+binder 6691:6691 <> T:108
+R6698:6702 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R6704:6704 RocqOfSolidity.RocqEvm.Crypto.Keccak <> T:108 var
+binder 6695:6695 <> a:109
+R6716:6716 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:109 var
+R6728:6732 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+R6884:6888 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+prf 7046:7065 <> permute1_of_permute3
+binder 7068:7068 <> T:111
+R7075:7079 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R7081:7081 RocqOfSolidity.RocqEvm.Crypto.Keccak <> T:111 var
+binder 7072:7072 <> a:112
+R7108:7110 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7087:7094 RocqOfSolidity.RocqEvm.Crypto.Keccak <> permute1 def
+R7097:7104 RocqOfSolidity.RocqEvm.Crypto.Keccak <> permute3 def
+R7106:7106 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:112 var
+R7111:7111 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:112 var
+prf 7148:7167 <> permute3_of_permute1
+binder 7170:7170 <> T:113
+R7177:7181 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R7183:7183 RocqOfSolidity.RocqEvm.Crypto.Keccak <> T:113 var
+binder 7174:7174 <> a:114
+R7210:7212 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7189:7196 RocqOfSolidity.RocqEvm.Crypto.Keccak <> permute3 def
+R7199:7206 RocqOfSolidity.RocqEvm.Crypto.Keccak <> permute1 def
+R7208:7208 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:114 var
+R7213:7213 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:114 var
+prf 7250:7269 <> permute2_of_permute2
+binder 7272:7272 <> T:115
+R7279:7283 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R7285:7285 RocqOfSolidity.RocqEvm.Crypto.Keccak <> T:115 var
+binder 7276:7276 <> a:116
+R7312:7314 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7291:7298 RocqOfSolidity.RocqEvm.Crypto.Keccak <> permute2 def
+R7301:7308 RocqOfSolidity.RocqEvm.Crypto.Keccak <> permute2 def
+R7310:7310 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:116 var
+R7315:7315 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:116 var
+def 7359:7368 <> quad_round
+R7374:7378 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R7380:7385 RocqOfSolidity.RocqEvm.Crypto.Keccak <> uint64 def
+binder 7371:7371 <> a:117
+R7394:7406 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R7408:7413 RocqOfSolidity.RocqEvm.Crypto.Keccak <> uint64 def
+binder 7389:7391 <> rcs:118
+R7420:7424 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R7426:7431 RocqOfSolidity.RocqEvm.Crypto.Keccak <> uint64 def
+R7442:7444 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rcs:118 var
+R7456:7456 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7460:7461 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7465:7466 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7470:7471 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7475:7475 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7498:7505 RocqOfSolidity.RocqEvm.Crypto.Keccak <> permute1 def
+R7508:7512 RocqOfSolidity.RocqEvm.Crypto.Keccak <> round def
+R7518:7518 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:117 var
+R7522:7529 RocqOfSolidity.RocqEvm.Crypto.Keccak <> permute3 def
+R7531:7531 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:117 var
+binder 7492:7493 <> a1:120
+R7557:7564 RocqOfSolidity.RocqEvm.Crypto.Keccak <> permute2 def
+R7567:7571 RocqOfSolidity.RocqEvm.Crypto.Keccak <> round def
+R7577:7578 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a1:120 var
+R7581:7588 RocqOfSolidity.RocqEvm.Crypto.Keccak <> permute2 def
+R7590:7591 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a1:120 var
+binder 7551:7552 <> a2:121
+R7616:7623 RocqOfSolidity.RocqEvm.Crypto.Keccak <> permute3 def
+R7626:7630 RocqOfSolidity.RocqEvm.Crypto.Keccak <> round def
+R7636:7637 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a2:121 var
+R7640:7647 RocqOfSolidity.RocqEvm.Crypto.Keccak <> permute1 def
+R7649:7650 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a2:121 var
+binder 7610:7611 <> a3:122
+R7665:7669 RocqOfSolidity.RocqEvm.Crypto.Keccak <> round def
+R7675:7676 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a3:122 var
+R7678:7679 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a3:122 var
+def 7701:7705 <> F1600
+R7710:7718 Stdlib.Lists.List <> fold_left def
+R7731:7748 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rc_quads_backwards def
+R7720:7729 RocqOfSolidity.RocqEvm.Crypto.Keccak <> quad_round def
+R7756:7766 RocqOfSolidity.RocqEvm.Crypto.Keccak Permutation <> sec
+def 7857:7863 <> padding
+R7871:7878 Corelib.Numbers.BinNums <> positive ind
+binder 7866:7868 <> len:123
+R7889:7891 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 7882:7886 <> start:124
+R7948:7951 Corelib.Init.Datatypes <> list ind
+R7953:7956 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R7967:7969 RocqOfSolidity.RocqEvm.Crypto.Keccak <> len:123 var
+R8029:8032 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R7995:8005 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8011:8015 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R8016:8020 RocqOfSolidity.RocqEvm.Crypto.Keccak <> start:124 var
+R8033:8035 Corelib.Init.Datatypes <> nil constr
+R8047:8047 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8065:8069 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8048:8058 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8060:8064 RocqOfSolidity.RocqEvm.Crypto.Keccak <> start:124 var
+R8119:8135 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R8070:8075 Corelib.Lists.ListDef <> repeat def
+R8094:8101 Stdlib.NArith.BinNat N to_nat def
+R8113:8115 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R8104:8108 Stdlib.NArith.BinNat N pos abbrev
+R8110:8112 RocqOfSolidity.RocqEvm.Crypto.Keccak <> len:123 var
+R8078:8088 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8151:8154 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8136:8146 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8155:8157 Corelib.Init.Datatypes <> nil constr
+prf 8217:8226 <> padding_ok
+R8234:8241 Corelib.Numbers.BinNums <> positive ind
+binder 8229:8231 <> len:126
+R8252:8254 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 8245:8249 <> start:127
+R8291:8293 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8260:8270 Stdlib.Lists.List <> length abbrev
+R8273:8279 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding def
+R8281:8283 RocqOfSolidity.RocqEvm.Crypto.Keccak <> len:126 var
+R8285:8289 RocqOfSolidity.RocqEvm.Crypto.Keccak <> start:127 var
+R8294:8303 Stdlib.PArith.BinPos Pos to_nat def
+R8305:8307 RocqOfSolidity.RocqEvm.Crypto.Keccak <> len:126 var
+R8324:8330 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding def
+R8360:8374 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8343:8353 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8424:8437 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R8375:8380 Corelib.Lists.ListDef <> repeat def
+R8399:8406 Stdlib.NArith.BinNat N to_nat def
+R8418:8420 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R8409:8413 Stdlib.NArith.BinNat N pos abbrev
+R8383:8393 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8453:8466 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8438:8448 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8467:8469 Corelib.Init.Datatypes <> nil constr
+R8360:8374 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8343:8353 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8424:8437 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R8375:8380 Corelib.Lists.ListDef <> repeat def
+R8399:8406 Stdlib.NArith.BinNat N to_nat def
+R8418:8420 Stdlib.NArith.BinNat <> ::N_scope:x_'-'_x not
+R8409:8413 Stdlib.NArith.BinNat N pos abbrev
+R8383:8393 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8453:8466 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8438:8448 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8467:8469 Corelib.Init.Datatypes <> nil constr
+binder 8507:8507 <> T:128
+binder 8510:8510 <> h:129
+R8516:8519 Corelib.Init.Datatypes <> list ind
+R8521:8521 RocqOfSolidity.RocqEvm.Crypto.Keccak <> T:128 var
+binder 8513:8513 <> t:130
+R8545:8547 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8525:8535 Stdlib.Lists.List <> length abbrev
+R8539:8542 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8538:8538 RocqOfSolidity.RocqEvm.Crypto.Keccak <> h:129 var
+R8543:8543 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t:130 var
+R8548:8548 Corelib.Init.Datatypes <> S constr
+R8551:8561 Stdlib.Lists.List <> length abbrev
+R8563:8563 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t:130 var
+binder 8507:8507 <> T:131
+binder 8510:8510 <> h:132
+R8516:8519 Corelib.Init.Datatypes <> list ind
+R8521:8521 RocqOfSolidity.RocqEvm.Crypto.Keccak <> T:131 var
+binder 8513:8513 <> t:133
+R8545:8547 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8525:8535 Stdlib.Lists.List <> length abbrev
+R8539:8542 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8538:8538 RocqOfSolidity.RocqEvm.Crypto.Keccak <> h:132 var
+R8543:8543 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t:133 var
+R8548:8548 Corelib.Init.Datatypes <> S constr
+R8551:8561 Stdlib.Lists.List <> length abbrev
+R8563:8563 RocqOfSolidity.RocqEvm.Crypto.Keccak <> t:133 var
+R8647:8664 Stdlib.Lists.List <> repeat_length thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8702:8712 Stdlib.Lists.List <> length abbrev
+R8716:8718 Corelib.Init.Datatypes <> nil constr
+R8720:8723 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8647:8664 Stdlib.Lists.List <> repeat_length thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8647:8664 Stdlib.Lists.List <> repeat_length thm
+R8647:8664 Stdlib.Lists.List <> repeat_length thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8647:8664 Stdlib.Lists.List <> repeat_length thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8647:8664 Stdlib.Lists.List <> repeat_length thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8647:8664 Stdlib.Lists.List <> repeat_length thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8647:8664 Stdlib.Lists.List <> repeat_length thm
+R8647:8664 Stdlib.Lists.List <> repeat_length thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8647:8664 Stdlib.Lists.List <> repeat_length thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8647:8664 Stdlib.Lists.List <> repeat_length thm
+R8620:8634 Stdlib.Lists.List <> length_app thm
+R8647:8664 Stdlib.Lists.List <> repeat_length thm
+R8702:8712 Stdlib.Lists.List <> length abbrev
+R8716:8718 Corelib.Init.Datatypes <> nil constr
+R8720:8723 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R8702:8712 Stdlib.Lists.List <> length abbrev
+R8716:8718 Corelib.Init.Datatypes <> nil constr
+R8720:8723 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R8702:8712 Stdlib.Lists.List <> length abbrev
+R8716:8718 Corelib.Init.Datatypes <> nil constr
+R8720:8723 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+def 8827:8840 <> padding_length
+R8856:8856 Corelib.Numbers.BinNums <> N ind
+binder 8843:8853 <> data_length:134
+R8866:8873 Corelib.Numbers.BinNums <> positive ind
+binder 8860:8863 <> rate:135
+R8878:8885 Corelib.Numbers.BinNums <> positive ind
+R8908:8912 Stdlib.NArith.BinNat <> ::N_scope:x_'mod'_x not
+R8897:8907 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data_length:134 var
+R8913:8917 Stdlib.NArith.BinNat N pos abbrev
+R8919:8922 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rate:135 var
+R8944:8947 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rate:135 var
+R8954:8957 Corelib.Numbers.BinNums <> Npos constr
+R8968:8970 Stdlib.PArith.BinPos <> ::positive_scope:x_'-'_x not
+R8964:8967 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rate:135 var
+prf 8988:9004 <> padding_length_ok
+R9020:9020 Corelib.Numbers.BinNums <> N ind
+binder 9007:9017 <> data_length:136
+R9030:9037 Corelib.Numbers.BinNums <> positive ind
+binder 9024:9027 <> rate:137
+R9114:9116 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9044:9044 Stdlib.NArith.BinNat <> ::N_scope:x_'mod'_x not
+R9098:9103 Stdlib.NArith.BinNat <> ::N_scope:x_'mod'_x not
+R9056:9058 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R9045:9055 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data_length:136 var
+R9059:9063 Stdlib.NArith.BinNat N pos abbrev
+R9066:9079 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_length def
+R9081:9091 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data_length:136 var
+R9093:9096 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rate:137 var
+R9104:9108 Stdlib.NArith.BinNat N pos abbrev
+R9110:9113 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rate:137 var
+R9137:9150 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_length def
+R9174:9178 Stdlib.NArith.BinNat <> ::N_scope:x_'mod'_x not
+R9179:9183 Stdlib.NArith.BinNat N pos abbrev
+R9174:9178 Stdlib.NArith.BinNat <> ::N_scope:x_'mod'_x not
+R9179:9183 Stdlib.NArith.BinNat N pos abbrev
+R9219:9232 Stdlib.NArith.BinNat N.Div0 add_mod thm
+R9219:9232 Stdlib.NArith.BinNat N.Div0 add_mod thm
+R9219:9232 Stdlib.NArith.BinNat N.Div0 add_mod thm
+R9219:9232 Stdlib.NArith.BinNat N.Div0 add_mod thm
+R9219:9232 Stdlib.NArith.BinNat N.Div0 add_mod thm
+R9277:9285 Stdlib.NArith.BinNat N add_0_l thm
+R9277:9285 Stdlib.NArith.BinNat N add_0_l thm
+R9277:9285 Stdlib.NArith.BinNat N add_0_l thm
+R9296:9310 Stdlib.NArith.BinNat N.Div0 mod_same thm
+R9296:9310 Stdlib.NArith.BinNat N.Div0 mod_same thm
+R9296:9310 Stdlib.NArith.BinNat N.Div0 mod_same thm
+R9335:9348 Stdlib.NArith.BinNat N.Div0 mod_0_l thm
+R9335:9348 Stdlib.NArith.BinNat N.Div0 mod_0_l thm
+R9371:9373 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R9364:9368 Stdlib.NArith.BinNat N pos abbrev
+R9374:9378 Stdlib.NArith.BinNat N pos abbrev
+R9371:9373 Stdlib.NArith.BinNat <> ::N_scope:x_'<'_x not
+R9364:9368 Stdlib.NArith.BinNat N pos abbrev
+R9374:9378 Stdlib.NArith.BinNat N pos abbrev
+R9412:9428 Stdlib.NArith.BinNat N mod_upper_bound def
+R9412:9428 Stdlib.NArith.BinNat N mod_upper_bound def
+R9472:9476 Stdlib.NArith.BinNat <> ::N_scope:x_'mod'_x not
+R9456:9460 Stdlib.NArith.BinNat N pos abbrev
+R9467:9469 Stdlib.PArith.BinPos <> ::positive_scope:x_'-'_x not
+R9477:9481 Stdlib.NArith.BinNat N pos abbrev
+R9497:9501 Stdlib.NArith.BinNat N pos abbrev
+R9508:9510 Stdlib.PArith.BinPos <> ::positive_scope:x_'-'_x not
+R9472:9476 Stdlib.NArith.BinNat <> ::N_scope:x_'mod'_x not
+R9456:9460 Stdlib.NArith.BinNat N pos abbrev
+R9467:9469 Stdlib.PArith.BinPos <> ::positive_scope:x_'-'_x not
+R9477:9481 Stdlib.NArith.BinNat N pos abbrev
+R9497:9501 Stdlib.NArith.BinNat N pos abbrev
+R9508:9510 Stdlib.PArith.BinPos <> ::positive_scope:x_'-'_x not
+R9536:9546 Stdlib.NArith.BinNat N mod_small def
+R9536:9546 Stdlib.NArith.BinNat N mod_small def
+R9572:9574 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R9565:9569 Stdlib.NArith.BinNat N pos abbrev
+R9575:9579 Stdlib.NArith.BinNat N pos abbrev
+R9586:9588 Stdlib.PArith.BinPos <> ::positive_scope:x_'-'_x not
+R9601:9605 Stdlib.NArith.BinNat N pos abbrev
+R9572:9574 Stdlib.NArith.BinNat <> ::N_scope:x_'+'_x not
+R9565:9569 Stdlib.NArith.BinNat N pos abbrev
+R9575:9579 Stdlib.NArith.BinNat N pos abbrev
+R9586:9588 Stdlib.PArith.BinPos <> ::positive_scope:x_'-'_x not
+R9601:9605 Stdlib.NArith.BinNat N pos abbrev
+R9627:9641 Stdlib.NArith.BinNat N.Div0 mod_same thm
+R9627:9641 Stdlib.NArith.BinNat N.Div0 mod_same thm
+def 9661:9663 <> pad
+R9681:9684 Corelib.Init.Datatypes <> list ind
+R9686:9689 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 9666:9678 <> unpadded_data:138
+R9699:9706 Corelib.Numbers.BinNums <> positive ind
+binder 9693:9696 <> rate:139
+R9717:9719 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 9710:9714 <> start:140
+R9724:9727 Corelib.Init.Datatypes <> list ind
+R9729:9732 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R9751:9754 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R9738:9750 RocqOfSolidity.RocqEvm.Crypto.Keccak <> unpadded_data:138 var
+R9755:9761 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding def
+R9764:9777 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_length def
+R9780:9787 Stdlib.NArith.BinNat N of_nat def
+R9790:9800 Stdlib.Lists.List <> length abbrev
+R9802:9814 RocqOfSolidity.RocqEvm.Crypto.Keccak <> unpadded_data:138 var
+R9818:9821 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rate:139 var
+R9824:9828 RocqOfSolidity.RocqEvm.Crypto.Keccak <> start:140 var
+prf 9844:9853 <> pad_ok_mod
+R9862:9865 Corelib.Init.Datatypes <> list ind
+R9867:9870 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 9856:9859 <> data:141
+R9880:9887 Corelib.Numbers.BinNums <> positive ind
+binder 9874:9877 <> rate:142
+R9898:9900 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 9891:9895 <> start:143
+R9966:9968 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9951:9955 Stdlib.NArith.BinNat <> ::N_scope:x_'mod'_x not
+R9907:9914 Stdlib.NArith.BinNat N of_nat def
+R9917:9927 Stdlib.Lists.List <> length abbrev
+R9930:9932 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad def
+R9934:9937 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:141 var
+R9939:9942 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rate:142 var
+R9944:9948 RocqOfSolidity.RocqEvm.Crypto.Keccak <> start:143 var
+R9956:9960 Stdlib.NArith.BinNat N pos abbrev
+R9962:9965 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rate:142 var
+R9989:9991 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad def
+R10002:10016 Stdlib.Lists.List <> length_app thm
+R10002:10016 Stdlib.Lists.List <> length_app thm
+R10002:10016 Stdlib.Lists.List <> length_app thm
+R10027:10039 Stdlib.NArith.Nnat Nat2N inj_add thm
+R10027:10039 Stdlib.NArith.Nnat Nat2N inj_add thm
+R10027:10039 Stdlib.NArith.Nnat Nat2N inj_add thm
+R10052:10062 Stdlib.Lists.List <> length abbrev
+R10052:10062 Stdlib.Lists.List <> length abbrev
+R10084:10093 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_ok thm
+R10084:10093 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_ok thm
+R10084:10093 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_ok thm
+R10104:10117 Stdlib.ZArith.Znat <> positive_nat_N thm
+R10104:10117 Stdlib.ZArith.Znat <> positive_nat_N thm
+R10104:10117 Stdlib.ZArith.Znat <> positive_nat_N thm
+R10128:10144 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_length_ok thm
+R10128:10144 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_length_ok thm
+R10128:10144 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_length_ok thm
+prf 10168:10173 <> pad_ok
+R10182:10185 Corelib.Init.Datatypes <> list ind
+R10187:10190 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 10176:10179 <> data:144
+R10200:10207 Corelib.Numbers.BinNums <> positive ind
+binder 10194:10197 <> rate:145
+R10218:10220 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 10211:10215 <> start:146
+R10268:10270 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R10235:10245 Stdlib.Lists.List <> length abbrev
+R10248:10250 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad def
+R10252:10255 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:144 var
+R10257:10260 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rate:145 var
+R10262:10266 RocqOfSolidity.RocqEvm.Crypto.Keccak <> start:146 var
+R10271:10280 Stdlib.PArith.BinPos Pos to_nat def
+R10282:10285 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rate:145 var
+binder 10230:10230 <> d:147
+R10327:10329 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10294:10304 Stdlib.Lists.List <> length abbrev
+R10307:10309 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad def
+R10311:10314 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:144 var
+R10316:10319 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rate:145 var
+R10321:10325 RocqOfSolidity.RocqEvm.Crypto.Keccak <> start:146 var
+R10331:10333 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R10330:10330 RocqOfSolidity.RocqEvm.Crypto.Keccak <> d:147 var
+R10334:10343 Stdlib.PArith.BinPos Pos to_nat def
+R10345:10348 RocqOfSolidity.RocqEvm.Crypto.Keccak <> rate:145 var
+R10364:10372 Stdlib.NArith.Nnat Nat2N inj thm
+R10364:10372 Stdlib.NArith.Nnat Nat2N inj thm
+R10388:10397 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad_ok_mod thm
+R10388:10397 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad_ok_mod thm
+R10427:10437 Stdlib.Lists.List <> length abbrev
+R10427:10437 Stdlib.Lists.List <> length abbrev
+R10488:10490 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10488:10490 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10510:10518 Stdlib.NArith.BinNat N add_0_r thm
+R10510:10518 Stdlib.NArith.BinNat N add_0_r thm
+R10510:10518 Stdlib.NArith.BinNat N add_0_r thm
+R10551:10562 Stdlib.Arith.PeanoNat Nat mul_comm thm
+R10551:10562 Stdlib.Arith.PeanoNat Nat mul_comm thm
+R10551:10562 Stdlib.Arith.PeanoNat Nat mul_comm thm
+R10573:10585 Stdlib.NArith.Nnat Nat2N inj_mul thm
+R10573:10585 Stdlib.NArith.Nnat Nat2N inj_mul thm
+R10573:10585 Stdlib.NArith.Nnat Nat2N inj_mul thm
+R10596:10615 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Nat2N_inj_div thm
+R10596:10615 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Nat2N_inj_div thm
+R10596:10615 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Nat2N_inj_div thm
+R10628:10637 Stdlib.PArith.BinPos Pos to_nat def
+R10628:10637 Stdlib.PArith.BinPos Pos to_nat def
+R10672:10674 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10662:10666 Stdlib.NArith.BinNat N pos abbrev
+R10675:10682 Stdlib.NArith.BinNat N of_nat def
+R10672:10674 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10662:10666 Stdlib.NArith.BinNat N pos abbrev
+R10675:10682 Stdlib.NArith.BinNat N of_nat def
+R10713:10726 Stdlib.ZArith.Znat <> positive_nat_N thm
+R10713:10726 Stdlib.ZArith.Znat <> positive_nat_N thm
+R10764:10772 Stdlib.NArith.BinNat N div_mod thm
+R10764:10772 Stdlib.NArith.BinNat N div_mod thm
+R10794:10807 Stdlib.PArith.Pnat Pos2Nat is_pos thm
+R10794:10807 Stdlib.PArith.Pnat Pos2Nat is_pos thm
+R10826:10835 Stdlib.PArith.BinPos Pos to_nat def
+R10826:10835 Stdlib.PArith.BinPos Pos to_nat def
+R10856:10868 Stdlib.Arith.PeanoNat Nat lt_irrefl thm
+R10856:10868 Stdlib.Arith.PeanoNat Nat lt_irrefl thm
+prf 10910:10924 <> can_gather_by_8
+R10930:10932 Corelib.Init.Datatypes <> nat ind
+binder 10927:10927 <> n:148
+R10955:10960 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R10939:10941 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10938:10938 RocqOfSolidity.RocqEvm.Crypto.Keccak <> n:148 var
+R10949:10951 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R10943:10945 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R10942:10942 RocqOfSolidity.RocqEvm.Crypto.Keccak <> n:148 var
+R10962:10964 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10961:10961 RocqOfSolidity.RocqEvm.Crypto.Keccak <> n:148 var
+R10965:10965 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R10978:10981 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R10973:10975 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R10967:10969 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R10966:10966 RocqOfSolidity.RocqEvm.Crypto.Keccak <> n:148 var
+R11006:11018 Stdlib.Arith.PeanoNat Nat mul_assoc thm
+R11006:11018 Stdlib.Arith.PeanoNat Nat mul_assoc thm
+R11006:11018 Stdlib.Arith.PeanoNat Nat mul_assoc thm
+def 11038:11071 <> pad_by_136_and_gather_into_uint64s
+R11080:11083 Corelib.Init.Datatypes <> list ind
+R11085:11088 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 11074:11077 <> data:149
+R11107:11109 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 11092:11104 <> padding_start:150
+R11129:11131 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad def
+R11133:11136 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:149 var
+R11151:11163 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_start:150 var
+binder 11119:11124 <> padded:151
+R11185:11190 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad_ok thm
+R11192:11195 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:149 var
+R11210:11222 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_start:150 var
+binder 11175:11179 <> PadOk:152
+R11230:11237 Stdlib.Lists.List <> map abbrev
+R11278:11295 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather def
+R11309:11323 RocqOfSolidity.RocqEvm.Crypto.Keccak <> can_gather_by_8 thm
+R11327:11331 RocqOfSolidity.RocqEvm.Crypto.Keccak <> PadOk:152 var
+R11297:11302 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padded:151 var
+R11239:11263 RocqOfSolidity.RocqEvm.Arith.UInt64 <> uint64_of_be_bytes def
+prf 11343:11383 <> pad_by_136_and_gather_into_uint64s_length
+R11392:11395 Corelib.Init.Datatypes <> list ind
+R11397:11400 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 11386:11389 <> data:153
+R11407:11409 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 11404:11404 <> s:154
+R11470:11478 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R11415:11425 Stdlib.Lists.List <> length abbrev
+R11428:11461 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad_by_136_and_gather_into_uint64s def
+R11463:11466 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:153 var
+R11468:11468 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s:154 var
+R11515:11517 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R11479:11479 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R11508:11511 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R11480:11490 Stdlib.Lists.List <> length abbrev
+R11493:11495 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad def
+R11497:11500 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:153 var
+R11506:11506 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s:154 var
+R11536:11569 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad_by_136_and_gather_into_uint64s def
+R11580:11594 Stdlib.Lists.List <> length_map thm
+R11580:11594 Stdlib.Lists.List <> length_map thm
+R11580:11594 Stdlib.Lists.List <> length_map thm
+R11604:11628 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather_length thm
+R11723:11737 RocqOfSolidity.RocqEvm.Crypto.Keccak <> can_gather_by_8 thm
+R11740:11755 Corelib.Init.Datatypes <> length def
+R11758:11760 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad def
+R11776:11781 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad_ok thm
+R11700:11702 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R11694:11696 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R11661:11676 Corelib.Init.Datatypes <> length def
+R11679:11681 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad def
+R11631:11633 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad def
+R11604:11628 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather_length thm
+R11723:11737 RocqOfSolidity.RocqEvm.Crypto.Keccak <> can_gather_by_8 thm
+R11740:11755 Corelib.Init.Datatypes <> length def
+R11758:11760 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad def
+R11776:11781 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad_ok thm
+R11700:11702 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R11694:11696 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R11661:11676 Corelib.Init.Datatypes <> length def
+R11679:11681 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad def
+R11631:11633 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad def
+def 11815:11820 <> blocks
+R11829:11832 Corelib.Init.Datatypes <> list ind
+R11834:11837 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 11823:11826 <> data:155
+R11856:11858 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 11841:11853 <> padding_start:156
+R11864:11881 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather def
+R11989:12029 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad_by_136_and_gather_into_uint64s_length thm
+R12031:12034 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:155 var
+R12036:12048 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_start:156 var
+R11884:11917 RocqOfSolidity.RocqEvm.Crypto.Keccak <> pad_by_136_and_gather_into_uint64s def
+R11919:11922 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:155 var
+R11924:11936 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_start:156 var
+def 12064:12069 <> absorb
+R12078:12081 Corelib.Init.Datatypes <> list ind
+R12083:12086 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 12072:12075 <> data:157
+R12105:12107 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 12090:12102 <> padding_start:158
+R12113:12121 Stdlib.Lists.List <> fold_left def
+R12246:12256 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25_zeros def
+R12206:12211 RocqOfSolidity.RocqEvm.Crypto.Keccak <> blocks def
+R12213:12216 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:157 var
+R12218:12230 RocqOfSolidity.RocqEvm.Crypto.Keccak <> padding_start:158 var
+binder 12128:12132 <> state:159
+binder 12134:12138 <> block:160
+R12143:12147 RocqOfSolidity.RocqEvm.Crypto.Keccak <> F1600 def
+R12150:12176 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25_xor_tuple17_backwards def
+R12178:12182 RocqOfSolidity.RocqEvm.Crypto.Keccak <> state:159 var
+R12184:12188 RocqOfSolidity.RocqEvm.Crypto.Keccak <> block:160 var
+def 12271:12281 <> squeeze_256
+R12287:12291 RocqOfSolidity.RocqEvm.Crypto.Keccak <> vec25 ind
+R12293:12298 RocqOfSolidity.RocqEvm.Crypto.Keccak <> uint64 def
+binder 12284:12284 <> a:161
+R12311:12311 RocqOfSolidity.RocqEvm.Crypto.Keccak <> a:161 var
+R12323:12327 RocqOfSolidity.RocqEvm.Crypto.Keccak <> Vec25 constr
+R12531:12533 Corelib.Lists.ListDef <> map def
+R12564:12567 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R12570:12573 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R12576:12579 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R12582:12585 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R12586:12588 Corelib.Init.Datatypes <> nil constr
+R12535:12559 RocqOfSolidity.RocqEvm.Arith.UInt64 <> uint64_to_le_bytes def
+R12484:12487 Corelib.Init.Datatypes <> list ind
+R12490:12502 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R12504:12507 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 12476:12481 <> eights:163
+R12600:12609 Stdlib.Lists.List <> fold_right def
+R12639:12644 RocqOfSolidity.RocqEvm.Crypto.Keccak <> eights:163 var
+R12635:12637 Corelib.Init.Datatypes <> nil constr
+R12611:12633 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> app_to_list def
+def 12666:12675 <> keccak_256
+R12684:12687 Corelib.Init.Datatypes <> list ind
+R12689:12692 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 12678:12681 <> data:164
+R12696:12699 Corelib.Init.Datatypes <> list ind
+R12701:12704 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R12709:12719 RocqOfSolidity.RocqEvm.Crypto.Keccak <> squeeze_256 def
+R12722:12727 RocqOfSolidity.RocqEvm.Crypto.Keccak <> absorb def
+R12729:12732 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:164 var
+def 12749:12756 <> sha3_256
+R12767:12770 Corelib.Init.Datatypes <> list ind
+R12772:12775 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 12761:12764 <> data:165
+R12779:12782 Corelib.Init.Datatypes <> list ind
+R12784:12787 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R12792:12802 RocqOfSolidity.RocqEvm.Crypto.Keccak <> squeeze_256 def
+R12805:12810 RocqOfSolidity.RocqEvm.Crypto.Keccak <> absorb def
+R12812:12815 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:165 var
+def 12833:12852 <> keccak_256_of_string
+R12858:12870 Stdlib.Strings.String <> string ind
+binder 12855:12855 <> s:166
+R12876:12885 RocqOfSolidity.RocqEvm.Crypto.Keccak <> keccak_256 def
+R12888:12902 RocqOfSolidity.RocqEvm.Arith.Nibble <> bytes_of_string def
+R12904:12904 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s:166 var
+def 12919:12936 <> sha3_256_of_string
+R12942:12954 Stdlib.Strings.String <> string ind
+binder 12939:12939 <> s:167
+R12960:12967 RocqOfSolidity.RocqEvm.Crypto.Keccak <> sha3_256 def
+R12970:12984 RocqOfSolidity.RocqEvm.Arith.Nibble <> bytes_of_string def
+R12986:12986 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s:167 var
+def 13002:13015 <> keccak_256_hex
+R13024:13027 Corelib.Init.Datatypes <> list ind
+R13029:13032 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 13018:13021 <> data:168
+R13037:13049 Stdlib.Strings.String <> string ind
+R13054:13065 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_of_bytes def
+R13068:13077 RocqOfSolidity.RocqEvm.Crypto.Keccak <> keccak_256 def
+R13079:13082 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:168 var
+R13085:13088 Corelib.Init.Datatypes <> true constr
+def 13102:13113 <> sha3_256_hex
+R13122:13125 Corelib.Init.Datatypes <> list ind
+R13127:13130 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 13116:13119 <> data:169
+R13135:13147 Stdlib.Strings.String <> string ind
+R13152:13163 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_of_bytes def
+R13166:13173 RocqOfSolidity.RocqEvm.Crypto.Keccak <> sha3_256 def
+R13175:13178 RocqOfSolidity.RocqEvm.Crypto.Keccak <> data:169 var
+R13181:13184 Corelib.Init.Datatypes <> true constr
+def 13199:13222 <> keccak_256_hex_of_string
+R13228:13240 Stdlib.Strings.String <> string ind
+binder 13225:13225 <> s:170
+R13245:13257 Stdlib.Strings.String <> string ind
+R13262:13273 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_of_bytes def
+R13276:13295 RocqOfSolidity.RocqEvm.Crypto.Keccak <> keccak_256_of_string def
+R13297:13297 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s:170 var
+R13300:13303 Corelib.Init.Datatypes <> true constr
+def 13317:13338 <> sha3_256_hex_of_string
+R13344:13356 Stdlib.Strings.String <> string ind
+binder 13341:13341 <> s:171
+R13361:13373 Stdlib.Strings.String <> string ind
+R13378:13389 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_of_bytes def
+R13392:13409 RocqOfSolidity.RocqEvm.Crypto.Keccak <> sha3_256_of_string def
+R13411:13411 RocqOfSolidity.RocqEvm.Crypto.Keccak <> s:171 var
+R13414:13417 Corelib.Init.Datatypes <> true constr
+def 13472:13492 <> keccak_256_smoke_test
+R13527:13534 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13497:13520 RocqOfSolidity.RocqEvm.Crypto.Keccak <> keccak_256_hex_of_string def
+def 13694:13709 <> sha3_256_test_CC
+R13769:13778 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R13714:13725 RocqOfSolidity.RocqEvm.Crypto.Keccak <> sha3_256_hex def
+R13761:13764 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R13728:13736 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_N def
+R13739:13752 Stdlib.Strings.HexString <> to_N def
+R13765:13767 Corelib.Init.Datatypes <> nil constr

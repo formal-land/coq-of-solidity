@@ -1,0 +1,1120 @@
+DIGEST c954dd98295768594747bac49a69afd6
+FRocqOfSolidity.proofs.RocqOfSolidity
+R15:43 RocqOfSolidity.RocqOfSolidity <> <> lib
+R61:86 RocqOfSolidity.simulations.RocqOfSolidity <> <> lib
+R97:118 coqutil.Datatypes.List <> <> lib
+R129:132 RocqOfSolidity.simulations.RocqOfSolidity RunO <> mod
+mod 143:148 <> Memory
+def 164:175 Memory of_u256_list
+R186:189 Corelib.Init.Datatypes <> list ind
+R191:196 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 178:182 <> words:1
+R201:208 RocqOfSolidity.simulations.RocqOfSolidity Memory t def
+prf 232:240 Memory run_mload
+binder 242:246 <> codes:2
+binder 248:258 <> environment:3
+binder 260:264 <> state:4
+R281:284 Corelib.Init.Datatypes <> list ind
+R286:291 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 273:277 <> words:5
+R303:305 Corelib.Init.Datatypes <> nat ind
+binder 295:299 <> index:6
+R316:321 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 309:312 <> word:7
+R368:375 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R356:358 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R330:343 Stdlib.Lists.List <> nth_error def
+R351:355 RocqOfSolidity.proofs.RocqOfSolidity <> index:6 var
+R345:349 RocqOfSolidity.proofs.RocqOfSolidity <> words:5 var
+R359:362 Corelib.Init.Datatypes <> Some constr
+R364:367 RocqOfSolidity.proofs.RocqOfSolidity <> word:7 var
+R417:424 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R396:398 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R383:394 RocqOfSolidity.simulations.RocqOfSolidity State memory proj
+R376:380 RocqOfSolidity.proofs.RocqOfSolidity <> state:4 var
+R399:410 RocqOfSolidity.proofs.RocqOfSolidity Memory of_u256_list prfax
+R412:416 RocqOfSolidity.proofs.RocqOfSolidity <> words:5 var
+R425:428 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R434:435 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R447:448 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R459:467 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R502:512 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R527:533 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R544:545 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R429:433 RocqOfSolidity.proofs.RocqOfSolidity <> codes:2 var
+R436:446 RocqOfSolidity.proofs.RocqOfSolidity <> environment:3 var
+R513:521 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R523:526 RocqOfSolidity.proofs.RocqOfSolidity <> word:7 var
+R449:452 Corelib.Init.Datatypes <> Some constr
+R454:458 RocqOfSolidity.proofs.RocqOfSolidity <> state:4 var
+R468:479 RocqOfSolidity.simulations.RocqOfSolidity Stdlib mload def
+R484:486 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R487:494 Stdlib.ZArith.BinInt Z of_nat def
+R496:500 RocqOfSolidity.proofs.RocqOfSolidity <> index:6 var
+R534:537 Corelib.Init.Datatypes <> Some constr
+R539:543 RocqOfSolidity.proofs.RocqOfSolidity <> state:4 var
+prf 580:589 Memory run_mstore
+binder 591:595 <> codes:8
+binder 597:607 <> environment:9
+binder 609:613 <> state:10
+R630:633 Corelib.Init.Datatypes <> list ind
+R635:640 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 622:626 <> words:11
+R652:654 Corelib.Init.Datatypes <> nat ind
+binder 644:648 <> index:12
+R665:670 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 658:661 <> word:13
+R685:699 RocqOfSolidity.simulations.RocqOfSolidity List update_nth def
+R713:716 RocqOfSolidity.proofs.RocqOfSolidity <> word:13 var
+R707:711 RocqOfSolidity.proofs.RocqOfSolidity <> index:12 var
+R701:705 RocqOfSolidity.proofs.RocqOfSolidity <> words:11 var
+R729:732 Corelib.Init.Datatypes <> Some constr
+R769:772 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R785:788 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R808:810 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R773:784 RocqOfSolidity.simulations.RocqOfSolidity State memory proj
+R789:800 RocqOfSolidity.proofs.RocqOfSolidity Memory of_u256_list prfax
+R764:768 RocqOfSolidity.proofs.RocqOfSolidity <> state:10 var
+binder 754:759 <> state':14
+R821:824 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R830:831 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R843:844 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R855:865 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R906:918 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R931:939 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R951:952 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R825:829 RocqOfSolidity.proofs.RocqOfSolidity <> codes:8 var
+R832:842 RocqOfSolidity.proofs.RocqOfSolidity <> environment:9 var
+R919:927 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R929:930 Corelib.Init.Datatypes <> tt constr
+R845:848 Corelib.Init.Datatypes <> Some constr
+R850:854 RocqOfSolidity.proofs.RocqOfSolidity <> state:10 var
+R866:878 RocqOfSolidity.simulations.RocqOfSolidity Stdlib mstore def
+R883:885 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R886:893 Stdlib.ZArith.BinInt Z of_nat def
+R895:899 RocqOfSolidity.proofs.RocqOfSolidity <> index:12 var
+R902:905 RocqOfSolidity.proofs.RocqOfSolidity <> word:13 var
+R940:943 Corelib.Init.Datatypes <> Some constr
+R945:950 RocqOfSolidity.proofs.RocqOfSolidity <> state':14 var
+R962:965 Corelib.Init.Datatypes <> None constr
+R970:973 Corelib.Init.Logic <> True ind
+prf 1014:1022 Memory update_at
+R1033:1035 Corelib.Init.Datatypes <> nat ind
+binder 1025:1029 <> index:15
+R1047:1052 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 1039:1043 <> word2:16
+binder 1062:1062 <> A:17
+binder 1071:1075 <> codes:18
+binder 1077:1087 <> environment:19
+binder 1089:1094 <> state1:20
+binder 1096:1096 <> e:21
+R1108:1108 RocqOfSolidity.proofs.RocqOfSolidity <> A:17 var
+binder 1099:1104 <> output:22
+binder 1111:1116 <> state':23
+R1134:1137 Corelib.Init.Datatypes <> list ind
+R1139:1144 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 1125:1130 <> words1:24
+R1156:1161 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 1148:1152 <> word1:25
+R1185:1187 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1180:1184 RocqOfSolidity.proofs.RocqOfSolidity <> word2:16 var
+R1188:1192 RocqOfSolidity.proofs.RocqOfSolidity <> word1:25 var
+binder 1171:1176 <> H_word:26
+R1237:1239 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1210:1223 Stdlib.Lists.List <> nth_error def
+R1232:1236 RocqOfSolidity.proofs.RocqOfSolidity <> index:15 var
+R1225:1230 RocqOfSolidity.proofs.RocqOfSolidity <> words1:24 var
+R1240:1243 Corelib.Init.Datatypes <> Some constr
+R1245:1249 RocqOfSolidity.proofs.RocqOfSolidity <> word1:25 var
+binder 1202:1206 <> H_nth:27
+R1291:1293 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1278:1289 RocqOfSolidity.simulations.RocqOfSolidity State memory proj
+R1270:1275 RocqOfSolidity.proofs.RocqOfSolidity <> state1:20 var
+R1294:1305 RocqOfSolidity.proofs.RocqOfSolidity Memory of_u256_list prfax
+R1307:1312 RocqOfSolidity.proofs.RocqOfSolidity <> words1:24 var
+binder 1259:1266 <> H_memory:28
+R1347:1350 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1363:1366 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1417:1419 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R1351:1362 RocqOfSolidity.simulations.RocqOfSolidity State memory proj
+R1367:1378 RocqOfSolidity.proofs.RocqOfSolidity Memory of_u256_list prfax
+R1381:1396 coqutil.Datatypes.List <> replace_nth def
+R1398:1402 RocqOfSolidity.proofs.RocqOfSolidity <> index:15 var
+R1404:1409 RocqOfSolidity.proofs.RocqOfSolidity <> words1:24 var
+R1411:1415 RocqOfSolidity.proofs.RocqOfSolidity <> word2:16 var
+R1341:1346 RocqOfSolidity.proofs.RocqOfSolidity <> state1:20 var
+binder 1325:1330 <> state2:29
+R1499:1508 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R1428:1431 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1437:1438 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1450:1451 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1463:1471 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1473:1477 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1484:1490 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1497:1498 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1432:1436 RocqOfSolidity.proofs.RocqOfSolidity <> codes:18 var
+R1439:1449 RocqOfSolidity.proofs.RocqOfSolidity <> environment:19 var
+R1478:1483 RocqOfSolidity.proofs.RocqOfSolidity <> output:22 var
+R1452:1455 Corelib.Init.Datatypes <> Some constr
+R1457:1462 RocqOfSolidity.proofs.RocqOfSolidity <> state2:29 var
+R1472:1472 RocqOfSolidity.proofs.RocqOfSolidity <> e:21 var
+R1491:1496 RocqOfSolidity.proofs.RocqOfSolidity <> state':23 var
+R1509:1512 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1518:1519 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1531:1532 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1544:1552 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1554:1558 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1565:1571 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1578:1579 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R1513:1517 RocqOfSolidity.proofs.RocqOfSolidity <> codes:18 var
+R1520:1530 RocqOfSolidity.proofs.RocqOfSolidity <> environment:19 var
+R1559:1564 RocqOfSolidity.proofs.RocqOfSolidity <> output:22 var
+R1533:1536 Corelib.Init.Datatypes <> Some constr
+R1538:1543 RocqOfSolidity.proofs.RocqOfSolidity <> state1:20 var
+R1553:1553 RocqOfSolidity.proofs.RocqOfSolidity <> e:21 var
+R1572:1577 RocqOfSolidity.proofs.RocqOfSolidity <> state':23 var
+R1623:1625 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1623:1625 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1673:1684 RocqOfSolidity.proofs.RocqOfSolidity Memory of_u256_list prfax
+R1702:1713 RocqOfSolidity.simulations.RocqOfSolidity State memory proj
+R1673:1684 RocqOfSolidity.proofs.RocqOfSolidity Memory of_u256_list prfax
+R1702:1713 RocqOfSolidity.simulations.RocqOfSolidity State memory proj
+R1938:1943 RocqOfSolidity.proofs.RocqOfSolidity Memory <> mod
+mod 1954:1968 <> SimulatedMemory
+def 1984:1984 SimulatedMemory t
+R1999:2002 Corelib.Init.Datatypes <> list ind
+R2004:2009 RocqOfSolidity.RocqOfSolidity U256 t def
+def 2026:2029 SimulatedMemory init
+R2033:2033 RocqOfSolidity.proofs.RocqOfSolidity SimulatedMemory t def
+R2042:2042 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2044:2045 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2047:2048 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2050:2051 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2053:2054 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2056:2056 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R2063:2077 RocqOfSolidity.proofs.RocqOfSolidity SimulatedMemory <> mod
+mod 2088:2094 <> Address
+prf 2105:2120 Address implies_and_mask
+binder 2122:2128 <> address:30
+R2159:2166 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2136:2150 RocqOfSolidity.RocqOfSolidity Address.Valid t def
+R2152:2158 RocqOfSolidity.proofs.RocqOfSolidity <> address:30 var
+R2174:2176 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2167:2173 RocqOfSolidity.proofs.RocqOfSolidity <> address:30 var
+R2177:2182 Stdlib.ZArith.BinInt Z land def
+R2184:2190 RocqOfSolidity.proofs.RocqOfSolidity <> address:30 var
+R2200:2202 Stdlib.ZArith.BinInt <> ::Z_scope:x_'-'_x not
+R2194:2196 Stdlib.ZArith.BinInt <> ::Z_scope:x_'^'_x not
+R2232:2238 RocqOfSolidity.proofs.RocqOfSolidity Address <> mod
+mod 2316:2328 <> StorableValue
+ind 2396:2396 StorableValue t
+constr 2411:2414 StorableValue U256
+constr 2437:2439 StorableValue Map
+constr 2476:2479 StorableValue Map2
+R2425:2430 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 2417:2421 <> value:33
+R2450:2455 RocqOfSolidity.simulations.RocqOfSolidity Dict t def
+R2457:2462 RocqOfSolidity.RocqOfSolidity U256 t def
+R2464:2469 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 2442:2446 <> value:34
+R2490:2495 RocqOfSolidity.simulations.RocqOfSolidity Dict t def
+R2504:2506 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R2498:2503 RocqOfSolidity.RocqOfSolidity U256 t def
+R2507:2512 RocqOfSolidity.RocqOfSolidity U256 t def
+R2515:2520 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 2482:2486 <> value:35
+scheme 2396:2396 StorableValue t_rect
+scheme 2396:2396 StorableValue t_ind
+scheme 2396:2396 StorableValue t_rec
+scheme 2396:2396 StorableValue t_sind
+def 2605:2616 StorableValue map_get_u256
+binder 2619:2619 <> K:36
+R2630:2638 RocqOfSolidity.simulations.RocqOfSolidity Dict.Eq C class
+R2640:2640 RocqOfSolidity.proofs.RocqOfSolidity <> K:36 var
+binder 2630:2640 <> H:37
+R2656:2661 RocqOfSolidity.simulations.RocqOfSolidity Dict t def
+R2663:2663 RocqOfSolidity.proofs.RocqOfSolidity <> K:36 var
+R2665:2670 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 2650:2652 <> map:38
+R2680:2680 RocqOfSolidity.proofs.RocqOfSolidity <> K:36 var
+binder 2674:2676 <> key:39
+R2685:2690 RocqOfSolidity.RocqOfSolidity U256 t def
+R2705:2712 RocqOfSolidity.simulations.RocqOfSolidity Dict get def
+R2718:2720 RocqOfSolidity.proofs.RocqOfSolidity <> key:39 var
+R2714:2716 RocqOfSolidity.proofs.RocqOfSolidity <> map:38 var
+R2733:2736 Corelib.Init.Datatypes <> Some constr
+R2759:2762 Corelib.Init.Datatypes <> None constr
+prf 2787:2807 StorableValue map_get_u256_is_valid
+binder 2810:2810 <> K:40
+R2821:2829 RocqOfSolidity.simulations.RocqOfSolidity Dict.Eq C class
+R2831:2831 RocqOfSolidity.proofs.RocqOfSolidity <> K:40 var
+binder 2821:2831 <> H:41
+R2842:2845 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R2841:2841 RocqOfSolidity.proofs.RocqOfSolidity <> K:40 var
+binder 2835:2837 <> P_K:42
+R2865:2870 RocqOfSolidity.simulations.RocqOfSolidity Dict t def
+R2872:2872 RocqOfSolidity.proofs.RocqOfSolidity <> K:40 var
+R2874:2879 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 2859:2861 <> map:43
+R2889:2889 RocqOfSolidity.proofs.RocqOfSolidity <> K:40 var
+binder 2883:2885 <> key:44
+R2907:2918 RocqOfSolidity.simulations.RocqOfSolidity Dict.Valid t def
+R2937:2939 RocqOfSolidity.proofs.RocqOfSolidity <> map:43 var
+R2924:2935 RocqOfSolidity.RocqOfSolidity U256.Valid t def
+R2920:2922 RocqOfSolidity.proofs.RocqOfSolidity <> P_K:42 var
+binder 2899:2903 <> H_map:45
+R2948:2959 RocqOfSolidity.RocqOfSolidity U256.Valid t def
+R2962:2973 RocqOfSolidity.proofs.RocqOfSolidity StorableValue map_get_u256 def
+R2979:2981 RocqOfSolidity.proofs.RocqOfSolidity <> key:44 var
+R2975:2977 RocqOfSolidity.proofs.RocqOfSolidity <> map:43 var
+R3005:3016 RocqOfSolidity.proofs.RocqOfSolidity StorableValue map_get_u256 def
+R3035:3051 RocqOfSolidity.simulations.RocqOfSolidity Dict get_is_valid thm
+R3035:3051 RocqOfSolidity.simulations.RocqOfSolidity Dict get_is_valid thm
+R3084:3091 RocqOfSolidity.simulations.RocqOfSolidity Dict get def
+R3101:3112 RocqOfSolidity.RocqOfSolidity U256.Valid t def
+R3084:3091 RocqOfSolidity.simulations.RocqOfSolidity Dict get def
+R3136:3148 RocqOfSolidity.proofs.RocqOfSolidity StorableValue <> mod
+mod 3159:3168 <> IsStorable
+rec 3179:3179 IsStorable C
+proj 3206:3222 IsStorable to_storable_value
+binder 3182:3182 <> A:46
+R3227:3230 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3226:3226 RocqOfSolidity.proofs.RocqOfSolidity <> A:46 var
+R3231:3245 RocqOfSolidity.proofs.RocqOfSolidity StorableValue t ind
+inst 3272:3276 IsStorable IU256
+R3280:3280 RocqOfSolidity.proofs.RocqOfSolidity IsStorable C class
+R3282:3287 RocqOfSolidity.RocqOfSolidity U256 t def
+R3298:3314 RocqOfSolidity.proofs.RocqOfSolidity IsStorable to_storable_value meth
+R3319:3336 RocqOfSolidity.proofs.RocqOfSolidity StorableValue U256 constr
+inst 3363:3366 IsStorable IMap
+R3370:3370 RocqOfSolidity.proofs.RocqOfSolidity IsStorable C class
+R3373:3378 RocqOfSolidity.simulations.RocqOfSolidity Dict t def
+R3380:3385 RocqOfSolidity.RocqOfSolidity U256 t def
+R3387:3392 RocqOfSolidity.RocqOfSolidity U256 t def
+R3404:3420 RocqOfSolidity.proofs.RocqOfSolidity IsStorable to_storable_value meth
+R3425:3441 RocqOfSolidity.proofs.RocqOfSolidity StorableValue Map constr
+inst 3468:3472 IsStorable IMap2
+R3476:3476 RocqOfSolidity.proofs.RocqOfSolidity IsStorable C class
+R3479:3484 RocqOfSolidity.simulations.RocqOfSolidity Dict t def
+R3493:3495 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R3487:3492 RocqOfSolidity.RocqOfSolidity U256 t def
+R3496:3501 RocqOfSolidity.RocqOfSolidity U256 t def
+R3504:3509 RocqOfSolidity.RocqOfSolidity U256 t def
+R3521:3537 RocqOfSolidity.proofs.RocqOfSolidity IsStorable to_storable_value meth
+R3542:3559 RocqOfSolidity.proofs.RocqOfSolidity StorableValue Map2 constr
+R3571:3580 RocqOfSolidity.proofs.RocqOfSolidity IsStorable <> mod
+mod 3591:3595 <> State
+def 3611:3629 State get_current_storage
+R3652:3664 RocqOfSolidity.RocqOfSolidity Environment t rec
+binder 3638:3648 <> environment:49
+R3676:3682 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+binder 3668:3672 <> state:50
+R3693:3698 Corelib.Init.Datatypes <> option ind
+R3700:3708 RocqOfSolidity.simulations.RocqOfSolidity Storage t def
+R3745:3763 RocqOfSolidity.RocqOfSolidity Environment address proj
+R3732:3742 RocqOfSolidity.proofs.RocqOfSolidity <> environment:49 var
+binder 3721:3727 <> address:51
+R3788:3795 RocqOfSolidity.simulations.RocqOfSolidity Dict get def
+R3820:3826 RocqOfSolidity.proofs.RocqOfSolidity <> address:51 var
+R3804:3817 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R3797:3801 RocqOfSolidity.proofs.RocqOfSolidity <> state:50 var
+binder 3777:3783 <> account:52
+R3841:3847 RocqOfSolidity.proofs.RocqOfSolidity <> account:52 var
+R3860:3863 Corelib.Init.Datatypes <> None constr
+R3868:3871 Corelib.Init.Datatypes <> None constr
+R3879:3882 Corelib.Init.Datatypes <> Some constr
+R3895:3898 Corelib.Init.Datatypes <> Some constr
+R3909:3923 RocqOfSolidity.simulations.RocqOfSolidity Account storage proj
+R3900:3906 RocqOfSolidity.proofs.RocqOfSolidity <> account:52 var
+def 3949:3968 State with_current_storage
+R3991:4003 RocqOfSolidity.RocqOfSolidity Environment t rec
+binder 3977:3987 <> environment:54
+R4015:4021 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+binder 4007:4011 <> state:55
+R4035:4043 RocqOfSolidity.simulations.RocqOfSolidity Storage t def
+binder 4025:4031 <> storage:56
+R4054:4060 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R4097:4115 RocqOfSolidity.RocqOfSolidity Environment address proj
+R4084:4094 RocqOfSolidity.proofs.RocqOfSolidity <> environment:54 var
+binder 4073:4079 <> address:57
+R4147:4166 RocqOfSolidity.simulations.RocqOfSolidity Dict assign_function def
+binder 4204:4210 <> account:58
+R4230:4233 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R4249:4252 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R4260:4262 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R4234:4248 RocqOfSolidity.simulations.RocqOfSolidity Account storage proj
+R4253:4259 RocqOfSolidity.proofs.RocqOfSolidity <> storage:56 var
+R4223:4229 RocqOfSolidity.proofs.RocqOfSolidity <> account:58 var
+R4191:4197 RocqOfSolidity.proofs.RocqOfSolidity <> address:57 var
+R4175:4188 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R4168:4172 RocqOfSolidity.proofs.RocqOfSolidity <> state:55 var
+binder 4129:4136 <> accounts:59
+R4285:4292 RocqOfSolidity.proofs.RocqOfSolidity <> accounts:59 var
+R4305:4308 Corelib.Init.Datatypes <> None constr
+R4313:4317 RocqOfSolidity.proofs.RocqOfSolidity <> state:55 var
+R4325:4328 Corelib.Init.Datatypes <> Some constr
+R4347:4350 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R4365:4368 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R4377:4379 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R4351:4364 RocqOfSolidity.simulations.RocqOfSolidity State accounts proj
+R4369:4376 RocqOfSolidity.proofs.RocqOfSolidity <> accounts:59 var
+R4342:4346 RocqOfSolidity.proofs.RocqOfSolidity <> state:55 var
+prf 4399:4441 State get_current_storage_with_current_storage_eq
+binder 4449:4459 <> environment:61
+binder 4461:4465 <> state:62
+binder 4467:4473 <> storage:63
+R4561:4567 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4481:4499 RocqOfSolidity.proofs.RocqOfSolidity State get_current_storage def
+R4501:4511 RocqOfSolidity.proofs.RocqOfSolidity <> environment:61 var
+R4514:4533 RocqOfSolidity.proofs.RocqOfSolidity State with_current_storage def
+R4535:4545 RocqOfSolidity.proofs.RocqOfSolidity <> environment:61 var
+R4547:4551 RocqOfSolidity.proofs.RocqOfSolidity <> state:62 var
+R4553:4559 RocqOfSolidity.proofs.RocqOfSolidity <> storage:63 var
+R4568:4571 Corelib.Init.Datatypes <> Some constr
+R4573:4579 RocqOfSolidity.proofs.RocqOfSolidity <> storage:63 var
+R4607:4611 RocqOfSolidity.proofs.RocqOfSolidity State <> mod
+R4628:4652 RocqOfSolidity.proofs.RocqOfSolidity <> get_current_storage def
+R4654:4679 RocqOfSolidity.proofs.RocqOfSolidity <> with_current_storage def
+prf 4689:4708 <> run_keccak256_tuple2
+binder 4710:4714 <> codes:64
+binder 4716:4726 <> environment:65
+binder 4728:4732 <> state:66
+R4748:4751 Corelib.Init.Datatypes <> list ind
+R4753:4758 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4739:4744 <> memory:67
+R4770:4772 Corelib.Init.Datatypes <> nat ind
+binder 4762:4766 <> index:68
+R4782:4787 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 4776:4776 <> a:69
+binder 4778:4778 <> b:70
+R4843:4848 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4814:4816 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4801:4812 RocqOfSolidity.simulations.RocqOfSolidity State memory proj
+R4794:4798 RocqOfSolidity.proofs.RocqOfSolidity <> state:66 var
+R4817:4835 RocqOfSolidity.proofs.RocqOfSolidity <> of_u256_list prfax
+R4837:4842 RocqOfSolidity.proofs.RocqOfSolidity <> memory:67 var
+R4885:4890 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4876:4878 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4849:4862 Stdlib.Lists.List <> nth_error def
+R4871:4875 RocqOfSolidity.proofs.RocqOfSolidity <> index:68 var
+R4864:4869 RocqOfSolidity.proofs.RocqOfSolidity <> memory:67 var
+R4879:4882 Corelib.Init.Datatypes <> Some constr
+R4884:4884 RocqOfSolidity.proofs.RocqOfSolidity <> a:69 var
+R4931:4936 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R4922:4924 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R4891:4904 Stdlib.Lists.List <> nth_error def
+R4914:4914 Corelib.Init.Datatypes <> S constr
+R4916:4920 RocqOfSolidity.proofs.RocqOfSolidity <> index:68 var
+R4906:4911 RocqOfSolidity.proofs.RocqOfSolidity <> memory:67 var
+R4925:4928 Corelib.Init.Datatypes <> Some constr
+R4930:4930 RocqOfSolidity.proofs.RocqOfSolidity <> b:70 var
+R4937:4940 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R4946:4947 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R4959:4960 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R4971:4977 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R5027:5035 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R5068:5072 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R5083:5084 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R4941:4945 RocqOfSolidity.proofs.RocqOfSolidity <> codes:64 var
+R4948:4958 RocqOfSolidity.proofs.RocqOfSolidity <> environment:65 var
+R5036:5044 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R5047:5062 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R5064:5064 RocqOfSolidity.proofs.RocqOfSolidity <> a:69 var
+R5066:5066 RocqOfSolidity.proofs.RocqOfSolidity <> b:70 var
+R4961:4964 Corelib.Init.Datatypes <> Some constr
+R4966:4970 RocqOfSolidity.proofs.RocqOfSolidity <> state:66 var
+R4978:4993 RocqOfSolidity.simulations.RocqOfSolidity Stdlib keccak256 def
+R4998:5001 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R5016:5016 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R5002:5009 Stdlib.ZArith.BinInt Z of_nat def
+R5011:5015 RocqOfSolidity.proofs.RocqOfSolidity <> index:68 var
+R5022:5024 Stdlib.ZArith.BinInt <> ::Z_scope:x_'*'_x not
+R5073:5076 Corelib.Init.Datatypes <> Some constr
+R5078:5082 RocqOfSolidity.proofs.RocqOfSolidity <> state:66 var
+mod 5114:5120 <> Storage
+def 5136:5153 Storage of_storable_values
+R5165:5168 Corelib.Init.Datatypes <> list ind
+R5170:5184 RocqOfSolidity.proofs.RocqOfSolidity StorableValue t ind
+binder 5156:5161 <> values:71
+R5189:5197 RocqOfSolidity.simulations.RocqOfSolidity Storage t def
+prf 5221:5234 Storage run_sload_u256
+R5252:5255 Corelib.Init.Datatypes <> list ind
+R5257:5271 RocqOfSolidity.proofs.RocqOfSolidity StorableValue t ind
+binder 5243:5248 <> values:72
+R5289:5291 Corelib.Init.Datatypes <> nat ind
+binder 5281:5285 <> index:73
+R5309:5314 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 5301:5305 <> value:74
+binder 5323:5327 <> codes:75
+binder 5329:5339 <> environment:76
+binder 5341:5345 <> state:77
+R5431:5438 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5396:5398 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5353:5377 RocqOfSolidity.proofs.RocqOfSolidity State get_current_storage def
+R5379:5389 RocqOfSolidity.proofs.RocqOfSolidity <> environment:76 var
+R5391:5395 RocqOfSolidity.proofs.RocqOfSolidity <> state:77 var
+R5399:5402 Corelib.Init.Datatypes <> Some constr
+R5405:5422 RocqOfSolidity.proofs.RocqOfSolidity Storage of_storable_values prfax
+R5424:5429 RocqOfSolidity.proofs.RocqOfSolidity <> values:72 var
+R5500:5507 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5466:5468 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R5439:5452 Stdlib.Lists.List <> nth_error def
+R5461:5465 RocqOfSolidity.proofs.RocqOfSolidity <> index:73 var
+R5454:5459 RocqOfSolidity.proofs.RocqOfSolidity <> values:72 var
+R5469:5472 Corelib.Init.Datatypes <> Some constr
+R5475:5492 RocqOfSolidity.proofs.RocqOfSolidity StorableValue U256 constr
+R5494:5498 RocqOfSolidity.proofs.RocqOfSolidity <> value:74 var
+R5508:5511 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R5517:5518 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R5530:5531 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R5542:5550 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R5580:5590 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R5606:5612 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R5623:5624 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R5512:5516 RocqOfSolidity.proofs.RocqOfSolidity <> codes:75 var
+R5519:5529 RocqOfSolidity.proofs.RocqOfSolidity <> environment:76 var
+R5591:5599 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R5601:5605 RocqOfSolidity.proofs.RocqOfSolidity <> value:74 var
+R5532:5535 Corelib.Init.Datatypes <> Some constr
+R5537:5541 RocqOfSolidity.proofs.RocqOfSolidity <> state:77 var
+R5551:5562 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sload def
+R5565:5572 Stdlib.ZArith.BinInt Z of_nat def
+R5574:5578 RocqOfSolidity.proofs.RocqOfSolidity <> index:73 var
+R5613:5616 Corelib.Init.Datatypes <> Some constr
+R5618:5622 RocqOfSolidity.proofs.RocqOfSolidity <> state:77 var
+prf 5659:5673 Storage run_sstore_u256
+R5691:5694 Corelib.Init.Datatypes <> list ind
+R5696:5710 RocqOfSolidity.proofs.RocqOfSolidity StorableValue t ind
+binder 5682:5687 <> values:78
+R5728:5730 Corelib.Init.Datatypes <> nat ind
+binder 5720:5724 <> index:79
+R5748:5753 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 5740:5744 <> value:80
+binder 5762:5766 <> codes:81
+binder 5768:5778 <> environment:82
+binder 5780:5784 <> state:83
+R5805:5830 RocqOfSolidity.proofs.RocqOfSolidity State with_current_storage def
+R5832:5842 RocqOfSolidity.proofs.RocqOfSolidity <> environment:82 var
+R5844:5848 RocqOfSolidity.proofs.RocqOfSolidity <> state:83 var
+R5851:5868 RocqOfSolidity.proofs.RocqOfSolidity Storage of_storable_values prfax
+R5870:5875 RocqOfSolidity.proofs.RocqOfSolidity <> values:78 var
+binder 5796:5800 <> state:84
+R5891:5905 RocqOfSolidity.simulations.RocqOfSolidity List update_nth def
+R5921:5938 RocqOfSolidity.proofs.RocqOfSolidity StorableValue U256 constr
+R5940:5944 RocqOfSolidity.proofs.RocqOfSolidity <> value:80 var
+R5914:5918 RocqOfSolidity.proofs.RocqOfSolidity <> index:79 var
+R5907:5912 RocqOfSolidity.proofs.RocqOfSolidity <> values:78 var
+R5958:5961 Corelib.Init.Datatypes <> Some constr
+R5994:6019 RocqOfSolidity.proofs.RocqOfSolidity State with_current_storage def
+R6021:6031 RocqOfSolidity.proofs.RocqOfSolidity <> environment:82 var
+R6033:6037 RocqOfSolidity.proofs.RocqOfSolidity <> state:84 var
+R6040:6057 RocqOfSolidity.proofs.RocqOfSolidity Storage of_storable_values prfax
+binder 5984:5989 <> state':85
+R6077:6080 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6086:6087 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6099:6100 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6111:6121 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6158:6170 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6183:6191 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6203:6204 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6081:6085 RocqOfSolidity.proofs.RocqOfSolidity <> codes:81 var
+R6088:6098 RocqOfSolidity.proofs.RocqOfSolidity <> environment:82 var
+R6171:6179 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R6181:6182 Corelib.Init.Datatypes <> tt constr
+R6101:6104 Corelib.Init.Datatypes <> Some constr
+R6106:6110 RocqOfSolidity.proofs.RocqOfSolidity <> state:84 var
+R6122:6134 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sstore def
+R6137:6144 Stdlib.ZArith.BinInt Z of_nat def
+R6146:6150 RocqOfSolidity.proofs.RocqOfSolidity <> index:79 var
+R6153:6157 RocqOfSolidity.proofs.RocqOfSolidity <> value:80 var
+R6192:6195 Corelib.Init.Datatypes <> Some constr
+R6197:6202 RocqOfSolidity.proofs.RocqOfSolidity <> state':85 var
+R6214:6217 Corelib.Init.Datatypes <> None constr
+R6222:6225 Corelib.Init.Logic <> True ind
+prf 6266:6283 Storage run_sload_map_u256
+R6301:6304 Corelib.Init.Datatypes <> list ind
+R6306:6320 RocqOfSolidity.proofs.RocqOfSolidity StorableValue t ind
+binder 6292:6297 <> values:86
+R6338:6340 Corelib.Init.Datatypes <> nat ind
+binder 6330:6334 <> index:87
+R6356:6361 RocqOfSolidity.simulations.RocqOfSolidity Dict t def
+R6363:6368 RocqOfSolidity.RocqOfSolidity U256 t def
+R6370:6375 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 6350:6352 <> map:88
+R6391:6396 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 6385:6387 <> key:89
+binder 6405:6409 <> codes:90
+binder 6411:6421 <> environment:91
+binder 6423:6427 <> state:92
+R6493:6500 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6462:6464 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6435:6448 Stdlib.Lists.List <> nth_error def
+R6457:6461 RocqOfSolidity.proofs.RocqOfSolidity <> index:87 var
+R6450:6455 RocqOfSolidity.proofs.RocqOfSolidity <> values:86 var
+R6465:6468 Corelib.Init.Datatypes <> Some constr
+R6471:6487 RocqOfSolidity.proofs.RocqOfSolidity StorableValue Map constr
+R6489:6491 RocqOfSolidity.proofs.RocqOfSolidity <> map:88 var
+R6501:6504 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6510:6511 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6523:6524 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6530:6538 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6591:6601 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6648:6654 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6660:6661 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R6505:6509 RocqOfSolidity.proofs.RocqOfSolidity <> codes:90 var
+R6512:6522 RocqOfSolidity.proofs.RocqOfSolidity <> environment:91 var
+R6602:6610 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R6613:6638 RocqOfSolidity.proofs.RocqOfSolidity StorableValue map_get_u256 def
+R6644:6646 RocqOfSolidity.proofs.RocqOfSolidity <> key:89 var
+R6640:6642 RocqOfSolidity.proofs.RocqOfSolidity <> map:88 var
+R6525:6529 RocqOfSolidity.proofs.RocqOfSolidity <> state:92 var
+R6539:6550 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sload def
+R6553:6568 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R6570:6572 RocqOfSolidity.proofs.RocqOfSolidity <> key:89 var
+R6575:6582 Stdlib.ZArith.BinInt Z of_nat def
+R6584:6588 RocqOfSolidity.proofs.RocqOfSolidity <> index:87 var
+R6655:6659 RocqOfSolidity.proofs.RocqOfSolidity <> state:92 var
+prf 6696:6714 Storage run_sstore_map_u256
+R6732:6735 Corelib.Init.Datatypes <> list ind
+R6737:6751 RocqOfSolidity.proofs.RocqOfSolidity StorableValue t ind
+binder 6723:6728 <> values:93
+R6769:6771 Corelib.Init.Datatypes <> nat ind
+binder 6761:6765 <> index:94
+R6787:6792 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 6781:6783 <> key:95
+R6804:6809 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 6796:6800 <> value:96
+binder 6818:6822 <> codes:97
+binder 6824:6834 <> environment:98
+binder 6836:6840 <> state:99
+R6926:6933 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R6891:6893 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R6848:6872 RocqOfSolidity.proofs.RocqOfSolidity State get_current_storage def
+R6874:6884 RocqOfSolidity.proofs.RocqOfSolidity <> environment:98 var
+R6886:6890 RocqOfSolidity.proofs.RocqOfSolidity <> state:99 var
+R6894:6897 Corelib.Init.Datatypes <> Some constr
+R6900:6917 RocqOfSolidity.proofs.RocqOfSolidity Storage of_storable_values prfax
+R6919:6924 RocqOfSolidity.proofs.RocqOfSolidity <> values:93 var
+R6940:6953 Stdlib.Lists.List <> nth_error def
+R6962:6966 RocqOfSolidity.proofs.RocqOfSolidity <> index:94 var
+R6955:6960 RocqOfSolidity.proofs.RocqOfSolidity <> values:93 var
+R6979:6982 Corelib.Init.Datatypes <> Some constr
+R6985:7001 RocqOfSolidity.proofs.RocqOfSolidity StorableValue Map constr
+R7029:7050 RocqOfSolidity.simulations.RocqOfSolidity Dict declare_or_assign def
+R7060:7064 RocqOfSolidity.proofs.RocqOfSolidity <> value:96 var
+R7056:7058 RocqOfSolidity.proofs.RocqOfSolidity <> key:95 var
+binder 7021:7024 <> map':100
+R7081:7095 RocqOfSolidity.simulations.RocqOfSolidity List update_nth def
+R7111:7127 RocqOfSolidity.proofs.RocqOfSolidity StorableValue Map constr
+R7129:7132 RocqOfSolidity.proofs.RocqOfSolidity <> map':100 var
+R7104:7108 RocqOfSolidity.proofs.RocqOfSolidity <> index:94 var
+R7097:7102 RocqOfSolidity.proofs.RocqOfSolidity <> values:93 var
+R7148:7151 Corelib.Init.Datatypes <> Some constr
+R7186:7211 RocqOfSolidity.proofs.RocqOfSolidity State with_current_storage def
+R7213:7223 RocqOfSolidity.proofs.RocqOfSolidity <> environment:98 var
+R7225:7229 RocqOfSolidity.proofs.RocqOfSolidity <> state:99 var
+R7232:7249 RocqOfSolidity.proofs.RocqOfSolidity Storage of_storable_values prfax
+binder 7176:7181 <> state':101
+R7271:7274 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7280:7281 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7293:7294 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7305:7317 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7377:7391 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7404:7414 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7426:7427 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7275:7279 RocqOfSolidity.proofs.RocqOfSolidity <> codes:97 var
+R7282:7292 RocqOfSolidity.proofs.RocqOfSolidity <> environment:98 var
+R7392:7400 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R7402:7403 Corelib.Init.Datatypes <> tt constr
+R7295:7298 Corelib.Init.Datatypes <> Some constr
+R7300:7304 RocqOfSolidity.proofs.RocqOfSolidity <> state:99 var
+R7318:7330 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sstore def
+R7333:7348 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R7350:7352 RocqOfSolidity.proofs.RocqOfSolidity <> key:95 var
+R7355:7362 Stdlib.ZArith.BinInt Z of_nat def
+R7364:7368 RocqOfSolidity.proofs.RocqOfSolidity <> index:94 var
+R7372:7376 RocqOfSolidity.proofs.RocqOfSolidity <> value:96 var
+R7415:7418 Corelib.Init.Datatypes <> Some constr
+R7420:7425 RocqOfSolidity.proofs.RocqOfSolidity <> state':101 var
+R7439:7442 Corelib.Init.Datatypes <> None constr
+R7447:7450 Corelib.Init.Logic <> True ind
+R7473:7476 Corelib.Init.Logic <> True ind
+prf 7517:7535 Storage run_sload_map2_u256
+R7553:7556 Corelib.Init.Datatypes <> list ind
+R7558:7572 RocqOfSolidity.proofs.RocqOfSolidity StorableValue t ind
+binder 7544:7549 <> values:102
+R7590:7592 Corelib.Init.Datatypes <> nat ind
+binder 7582:7586 <> index:103
+R7608:7613 RocqOfSolidity.simulations.RocqOfSolidity Dict t def
+R7622:7624 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R7616:7621 RocqOfSolidity.RocqOfSolidity U256 t def
+R7625:7630 RocqOfSolidity.RocqOfSolidity U256 t def
+R7633:7638 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 7602:7604 <> map:104
+R7660:7665 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 7648:7651 <> key1:105
+binder 7653:7656 <> key2:106
+binder 7674:7678 <> codes:107
+binder 7680:7690 <> environment:108
+binder 7692:7696 <> state:109
+R7763:7770 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R7731:7733 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R7704:7717 Stdlib.Lists.List <> nth_error def
+R7726:7730 RocqOfSolidity.proofs.RocqOfSolidity <> index:103 var
+R7719:7724 RocqOfSolidity.proofs.RocqOfSolidity <> values:102 var
+R7734:7737 Corelib.Init.Datatypes <> Some constr
+R7740:7757 RocqOfSolidity.proofs.RocqOfSolidity StorableValue Map2 constr
+R7759:7761 RocqOfSolidity.proofs.RocqOfSolidity <> map:104 var
+R7771:7774 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7780:7781 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7793:7794 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7800:7808 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7886:7896 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7952:7958 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7964:7965 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R7775:7779 RocqOfSolidity.proofs.RocqOfSolidity <> codes:107 var
+R7782:7792 RocqOfSolidity.proofs.RocqOfSolidity <> environment:108 var
+R7897:7905 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R7908:7933 RocqOfSolidity.proofs.RocqOfSolidity StorableValue map_get_u256 def
+R7939:7939 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7944:7945 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7950:7950 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R7940:7943 RocqOfSolidity.proofs.RocqOfSolidity <> key1:105 var
+R7946:7949 RocqOfSolidity.proofs.RocqOfSolidity <> key2:106 var
+R7935:7937 RocqOfSolidity.proofs.RocqOfSolidity <> map:104 var
+R7795:7799 RocqOfSolidity.proofs.RocqOfSolidity <> state:109 var
+R7809:7820 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sload def
+R7823:7838 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R7840:7843 RocqOfSolidity.proofs.RocqOfSolidity <> key2:106 var
+R7846:7861 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R7863:7866 RocqOfSolidity.proofs.RocqOfSolidity <> key1:105 var
+R7869:7876 Stdlib.ZArith.BinInt Z of_nat def
+R7878:7882 RocqOfSolidity.proofs.RocqOfSolidity <> index:103 var
+R7959:7963 RocqOfSolidity.proofs.RocqOfSolidity <> state:109 var
+prf 8000:8019 Storage run_sstore_map2_u256
+R8037:8040 Corelib.Init.Datatypes <> list ind
+R8042:8056 RocqOfSolidity.proofs.RocqOfSolidity StorableValue t ind
+binder 8028:8033 <> values:110
+R8074:8076 Corelib.Init.Datatypes <> nat ind
+binder 8066:8070 <> index:111
+R8098:8103 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 8086:8089 <> key1:112
+binder 8091:8094 <> key2:113
+R8115:8120 RocqOfSolidity.RocqOfSolidity U256 t def
+binder 8107:8111 <> value:114
+binder 8129:8133 <> codes:115
+binder 8135:8145 <> environment:116
+binder 8147:8151 <> state:117
+R8237:8244 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R8202:8204 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8159:8183 RocqOfSolidity.proofs.RocqOfSolidity State get_current_storage def
+R8185:8195 RocqOfSolidity.proofs.RocqOfSolidity <> environment:116 var
+R8197:8201 RocqOfSolidity.proofs.RocqOfSolidity <> state:117 var
+R8205:8208 Corelib.Init.Datatypes <> Some constr
+R8211:8228 RocqOfSolidity.proofs.RocqOfSolidity Storage of_storable_values prfax
+R8230:8235 RocqOfSolidity.proofs.RocqOfSolidity <> values:110 var
+R8251:8264 Stdlib.Lists.List <> nth_error def
+R8273:8277 RocqOfSolidity.proofs.RocqOfSolidity <> index:111 var
+R8266:8271 RocqOfSolidity.proofs.RocqOfSolidity <> values:110 var
+R8290:8293 Corelib.Init.Datatypes <> Some constr
+R8296:8313 RocqOfSolidity.proofs.RocqOfSolidity StorableValue Map2 constr
+R8341:8362 RocqOfSolidity.simulations.RocqOfSolidity Dict declare_or_assign def
+R8381:8385 RocqOfSolidity.proofs.RocqOfSolidity <> value:114 var
+R8368:8368 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8373:8374 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8379:8379 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R8369:8372 RocqOfSolidity.proofs.RocqOfSolidity <> key1:112 var
+R8375:8378 RocqOfSolidity.proofs.RocqOfSolidity <> key2:113 var
+binder 8333:8336 <> map':118
+R8402:8416 RocqOfSolidity.simulations.RocqOfSolidity List update_nth def
+R8432:8449 RocqOfSolidity.proofs.RocqOfSolidity StorableValue Map2 constr
+R8451:8454 RocqOfSolidity.proofs.RocqOfSolidity <> map':118 var
+R8425:8429 RocqOfSolidity.proofs.RocqOfSolidity <> index:111 var
+R8418:8423 RocqOfSolidity.proofs.RocqOfSolidity <> values:110 var
+R8470:8473 Corelib.Init.Datatypes <> Some constr
+R8508:8533 RocqOfSolidity.proofs.RocqOfSolidity State with_current_storage def
+R8535:8545 RocqOfSolidity.proofs.RocqOfSolidity <> environment:116 var
+R8547:8551 RocqOfSolidity.proofs.RocqOfSolidity <> state:117 var
+R8554:8571 RocqOfSolidity.proofs.RocqOfSolidity Storage of_storable_values prfax
+binder 8498:8503 <> state':119
+R8593:8596 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R8602:8603 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R8615:8616 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R8627:8639 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R8736:8750 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R8763:8773 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R8785:8786 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R8597:8601 RocqOfSolidity.proofs.RocqOfSolidity <> codes:115 var
+R8604:8614 RocqOfSolidity.proofs.RocqOfSolidity <> environment:116 var
+R8751:8759 RocqOfSolidity.RocqOfSolidity Result Ok constr
+R8761:8762 Corelib.Init.Datatypes <> tt constr
+R8617:8620 Corelib.Init.Datatypes <> Some constr
+R8622:8626 RocqOfSolidity.proofs.RocqOfSolidity <> state:117 var
+R8640:8652 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sstore def
+R8667:8682 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R8684:8687 RocqOfSolidity.proofs.RocqOfSolidity <> key2:113 var
+R8690:8705 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R8707:8710 RocqOfSolidity.proofs.RocqOfSolidity <> key1:112 var
+R8713:8720 Stdlib.ZArith.BinInt Z of_nat def
+R8722:8726 RocqOfSolidity.proofs.RocqOfSolidity <> index:111 var
+R8731:8735 RocqOfSolidity.proofs.RocqOfSolidity <> value:114 var
+R8774:8777 Corelib.Init.Datatypes <> Some constr
+R8779:8784 RocqOfSolidity.proofs.RocqOfSolidity <> state':119 var
+R8798:8801 Corelib.Init.Datatypes <> None constr
+R8806:8809 Corelib.Init.Logic <> True ind
+R8832:8835 Corelib.Init.Logic <> True ind
+R8871:8877 RocqOfSolidity.proofs.RocqOfSolidity Storage <> mod
+mod 8888:8903 <> SimulatedStorage
+def 8919:8919 SimulatedStorage t
+R8934:8937 Corelib.Init.Datatypes <> list ind
+R8939:8953 RocqOfSolidity.proofs.RocqOfSolidity StorableValue t ind
+def 8970:8973 SimulatedStorage init
+R8977:8977 RocqOfSolidity.proofs.RocqOfSolidity SimulatedStorage t def
+R8982:8987 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R9008:9013 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R9034:9039 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R9060:9063 Stdlib.Lists.List ListNotations ::list_scope:'['_x_';'_x_';'_'..'_';'_x_']' not
+R8988:9004 RocqOfSolidity.proofs.RocqOfSolidity StorableValue Map constr
+R9006:9007 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9014:9030 RocqOfSolidity.proofs.RocqOfSolidity StorableValue Map constr
+R9032:9033 Stdlib.Lists.List ListNotations ::list_scope:'['_']' not
+R9040:9057 RocqOfSolidity.proofs.RocqOfSolidity StorableValue U256 constr
+R9070:9085 RocqOfSolidity.proofs.RocqOfSolidity SimulatedStorage <> mod
+def 9100:9109 <> make_state
+binder 9111:9121 <> environment:120
+binder 9123:9127 <> state:121
+R9143:9159 RocqOfSolidity.proofs.RocqOfSolidity <> t def
+binder 9134:9139 <> memory:122
+R9173:9190 RocqOfSolidity.proofs.RocqOfSolidity <> t def
+binder 9163:9169 <> storage:123
+R9199:9205 RocqOfSolidity.simulations.RocqOfSolidity State t rec
+R9212:9237 RocqOfSolidity.proofs.RocqOfSolidity <> with_current_storage def
+R9239:9249 RocqOfSolidity.proofs.RocqOfSolidity <> environment:120 var
+R9261:9264 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R9277:9280 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R9307:9309 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R9265:9276 RocqOfSolidity.simulations.RocqOfSolidity State memory proj
+R9281:9299 RocqOfSolidity.proofs.RocqOfSolidity <> of_u256_list prfax
+R9301:9306 RocqOfSolidity.proofs.RocqOfSolidity <> memory:122 var
+R9256:9260 RocqOfSolidity.proofs.RocqOfSolidity <> state:121 var
+R9317:9342 RocqOfSolidity.proofs.RocqOfSolidity <> of_storable_values prfax
+R9344:9350 RocqOfSolidity.proofs.RocqOfSolidity <> storage:123 var
+prf 9361:9384 <> get_memory_make_state_eq
+binder 9386:9396 <> environment:124
+binder 9398:9402 <> state:125
+binder 9408:9413 <> memory:126
+binder 9415:9421 <> storage:127
+R9487:9491 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9474:9485 RocqOfSolidity.simulations.RocqOfSolidity State memory proj
+R9428:9437 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R9439:9449 RocqOfSolidity.proofs.RocqOfSolidity <> environment:124 var
+R9451:9455 RocqOfSolidity.proofs.RocqOfSolidity <> state:125 var
+R9457:9462 RocqOfSolidity.proofs.RocqOfSolidity <> memory:126 var
+R9464:9470 RocqOfSolidity.proofs.RocqOfSolidity <> storage:127 var
+R9492:9510 RocqOfSolidity.proofs.RocqOfSolidity <> of_u256_list prfax
+R9512:9517 RocqOfSolidity.proofs.RocqOfSolidity <> memory:126 var
+mod 9600:9612 <> CanonizeState
+prf 9623:9638 CanonizeState update_memory_eq
+binder 9640:9650 <> environment:128
+binder 9652:9656 <> state:129
+binder 9664:9669 <> memory:130
+binder 9671:9677 <> storage:131
+binder 9679:9688 <> new_memory:132
+R9804:9810 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9696:9696 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R9740:9750 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R9763:9766 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R9797:9803 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R9751:9762 RocqOfSolidity.simulations.RocqOfSolidity State memory proj
+R9767:9785 RocqOfSolidity.proofs.RocqOfSolidity Memory of_u256_list prfax
+R9787:9796 RocqOfSolidity.proofs.RocqOfSolidity <> new_memory:132 var
+R9697:9706 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R9708:9718 RocqOfSolidity.proofs.RocqOfSolidity <> environment:128 var
+R9720:9724 RocqOfSolidity.proofs.RocqOfSolidity <> state:129 var
+R9726:9731 RocqOfSolidity.proofs.RocqOfSolidity <> memory:130 var
+R9733:9739 RocqOfSolidity.proofs.RocqOfSolidity <> storage:131 var
+R9811:9820 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R9822:9832 RocqOfSolidity.proofs.RocqOfSolidity <> environment:128 var
+R9834:9838 RocqOfSolidity.proofs.RocqOfSolidity <> state:129 var
+R9840:9849 RocqOfSolidity.proofs.RocqOfSolidity <> new_memory:132 var
+R9851:9857 RocqOfSolidity.proofs.RocqOfSolidity <> storage:131 var
+prf 9890:9906 CanonizeState update_storage_eq
+binder 9908:9918 <> environment:133
+binder 9920:9924 <> state:134
+binder 9934:9939 <> memory:135
+binder 9941:9947 <> storage:136
+binder 9949:9959 <> new_storage:137
+R10104:10110 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R9967:9992 RocqOfSolidity.proofs.RocqOfSolidity State with_current_storage def
+R9994:10004 RocqOfSolidity.proofs.RocqOfSolidity <> environment:133 var
+R10013:10022 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R10024:10034 RocqOfSolidity.proofs.RocqOfSolidity <> environment:133 var
+R10036:10040 RocqOfSolidity.proofs.RocqOfSolidity <> state:134 var
+R10042:10047 RocqOfSolidity.proofs.RocqOfSolidity <> memory:135 var
+R10049:10055 RocqOfSolidity.proofs.RocqOfSolidity <> storage:136 var
+R10065:10090 RocqOfSolidity.proofs.RocqOfSolidity Storage of_storable_values prfax
+R10092:10102 RocqOfSolidity.proofs.RocqOfSolidity <> new_storage:137 var
+R10111:10120 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R10122:10132 RocqOfSolidity.proofs.RocqOfSolidity <> environment:133 var
+R10134:10138 RocqOfSolidity.proofs.RocqOfSolidity <> state:134 var
+R10140:10145 RocqOfSolidity.proofs.RocqOfSolidity <> memory:135 var
+R10147:10157 RocqOfSolidity.proofs.RocqOfSolidity <> new_storage:137 var
+prf 10190:10218 CanonizeState with_current_storage_twice_eq
+binder 10220:10230 <> environment:138
+binder 10232:10236 <> state:139
+binder 10244:10251 <> storage1:140
+binder 10253:10260 <> storage2:141
+R10383:10389 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R10268:10293 RocqOfSolidity.proofs.RocqOfSolidity State with_current_storage def
+R10295:10305 RocqOfSolidity.proofs.RocqOfSolidity <> environment:138 var
+R10314:10339 RocqOfSolidity.proofs.RocqOfSolidity State with_current_storage def
+R10341:10351 RocqOfSolidity.proofs.RocqOfSolidity <> environment:138 var
+R10353:10357 RocqOfSolidity.proofs.RocqOfSolidity <> state:139 var
+R10359:10366 RocqOfSolidity.proofs.RocqOfSolidity <> storage1:140 var
+R10375:10382 RocqOfSolidity.proofs.RocqOfSolidity <> storage2:141 var
+R10390:10415 RocqOfSolidity.proofs.RocqOfSolidity State with_current_storage def
+R10417:10427 RocqOfSolidity.proofs.RocqOfSolidity <> environment:138 var
+R10429:10433 RocqOfSolidity.proofs.RocqOfSolidity <> state:139 var
+R10435:10442 RocqOfSolidity.proofs.RocqOfSolidity <> storage2:141 var
+R10648:10673 RocqOfSolidity.proofs.RocqOfSolidity State with_current_storage def
+R10703:10705 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R10718:10720 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R10748:10750 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R10706:10717 RocqOfSolidity.simulations.RocqOfSolidity State memory proj
+R10721:10739 RocqOfSolidity.proofs.RocqOfSolidity Memory of_u256_list prfax
+R10762:10787 RocqOfSolidity.proofs.RocqOfSolidity Storage of_storable_values prfax
+R10648:10673 RocqOfSolidity.proofs.RocqOfSolidity State with_current_storage def
+R10703:10705 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R10718:10720 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R10748:10750 RocqOfSolidity.RecordUpdate RecordSetNotations1 ::record_set:x_'<|'_x_':='_x_'|>' not
+R10706:10717 RocqOfSolidity.simulations.RocqOfSolidity State memory proj
+R10721:10739 RocqOfSolidity.proofs.RocqOfSolidity Memory of_u256_list prfax
+R10762:10787 RocqOfSolidity.proofs.RocqOfSolidity Storage of_storable_values prfax
+R10816:10825 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R10571:10599 RocqOfSolidity.proofs.RocqOfSolidity CanonizeState with_current_storage_twice_eq prfax
+R10538:10554 RocqOfSolidity.proofs.RocqOfSolidity CanonizeState update_storage_eq prfax
+R10506:10521 RocqOfSolidity.proofs.RocqOfSolidity CanonizeState update_memory_eq prfax
+R10878:10890 RocqOfSolidity.proofs.RocqOfSolidity CanonizeState <> mod
+R10943:10946 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R10948:10949 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R10951:10952 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R10984:10986 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11007:11011 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11013:11015 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11017:11018 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R10953:10956 Corelib.Init.Datatypes <> Some constr
+R10959:10968 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R10987:10998 RocqOfSolidity.simulations.RocqOfSolidity Stdlib mload def
+R10943:10946 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R10948:10949 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R10951:10952 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R10984:10986 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11007:11011 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11013:11015 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11017:11018 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R10953:10956 Corelib.Init.Datatypes <> Some constr
+R10959:10968 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R10987:10998 RocqOfSolidity.simulations.RocqOfSolidity Stdlib mload def
+R11037:11052 RocqOfSolidity.proofs.RocqOfSolidity <> run_mload prfax
+R11068:11075 Stdlib.ZArith.BinInt Z to_nat def
+R11084:11086 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R11129:11152 RocqOfSolidity.proofs.RocqOfSolidity <> get_memory_make_state_eq prfax
+R11212:11215 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11217:11218 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11220:11221 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11253:11255 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11284:11288 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11290:11292 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11294:11295 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11222:11225 Corelib.Init.Datatypes <> Some constr
+R11228:11237 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R11256:11268 RocqOfSolidity.simulations.RocqOfSolidity Stdlib mstore def
+R11212:11215 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11217:11218 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11220:11221 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11253:11255 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11284:11288 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11290:11292 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11294:11295 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11222:11225 Corelib.Init.Datatypes <> Some constr
+R11228:11237 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R11256:11268 RocqOfSolidity.simulations.RocqOfSolidity Stdlib mstore def
+R11313:11329 RocqOfSolidity.proofs.RocqOfSolidity <> run_mstore prfax
+R11345:11352 Stdlib.ZArith.BinInt Z to_nat def
+R11361:11363 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R11455:11462 Stdlib.ZArith.BinInt Z to_nat def
+R11470:11472 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R11491:11506 RocqOfSolidity.proofs.RocqOfSolidity <> update_at thm
+R11536:11559 RocqOfSolidity.proofs.RocqOfSolidity <> get_memory_make_state_eq prfax
+R11594:11609 coqutil.Datatypes.List <> replace_nth def
+R11694:11697 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11699:11700 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11702:11703 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11736:11738 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11757:11761 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11763:11765 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11767:11768 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11704:11707 Corelib.Init.Datatypes <> Some constr
+R11710:11719 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R11739:11750 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sload def
+R11694:11697 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11699:11700 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11702:11703 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11736:11738 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11757:11761 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11763:11765 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11767:11768 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11704:11707 Corelib.Init.Datatypes <> Some constr
+R11710:11719 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R11739:11750 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sload def
+R11786:11807 RocqOfSolidity.proofs.RocqOfSolidity <> run_sload_u256 prfax
+R11818:11825 Stdlib.ZArith.BinInt Z to_nat def
+R11870:11918 RocqOfSolidity.proofs.RocqOfSolidity <> get_current_storage_with_current_storage_eq prfax
+R11983:11986 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11988:11989 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11991:11992 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12025:12027 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12054:12058 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12060:12062 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12064:12065 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11993:11996 Corelib.Init.Datatypes <> Some constr
+R11999:12008 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R12028:12040 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sstore def
+R11983:11986 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11988:11989 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11991:11992 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12025:12027 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12054:12058 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12060:12062 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12064:12065 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R11993:11996 Corelib.Init.Datatypes <> Some constr
+R11999:12008 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R12028:12040 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sstore def
+R12083:12105 RocqOfSolidity.proofs.RocqOfSolidity <> run_sstore_u256 prfax
+R12116:12123 Stdlib.ZArith.BinInt Z to_nat def
+R12204:12207 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12209:12210 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12212:12213 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12246:12254 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12298:12302 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12304:12310 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12312:12313 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12214:12217 Corelib.Init.Datatypes <> Some constr
+R12220:12229 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R12255:12266 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sload def
+R12269:12284 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R12204:12207 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12209:12210 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12212:12213 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12246:12254 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12298:12302 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12304:12310 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12312:12313 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12214:12217 Corelib.Init.Datatypes <> Some constr
+R12220:12229 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R12255:12266 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sload def
+R12269:12284 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R12332:12357 RocqOfSolidity.proofs.RocqOfSolidity <> run_sload_map_u256 prfax
+R12368:12375 Stdlib.ZArith.BinInt Z to_nat def
+R12479:12482 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12484:12485 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12487:12488 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12521:12529 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12581:12585 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12587:12593 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12595:12596 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12489:12492 Corelib.Init.Datatypes <> Some constr
+R12495:12504 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R12530:12542 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sstore def
+R12545:12560 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R12479:12482 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12484:12485 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12487:12488 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12521:12529 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12581:12585 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12587:12593 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12595:12596 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12489:12492 Corelib.Init.Datatypes <> Some constr
+R12495:12504 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R12530:12542 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sstore def
+R12545:12560 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R12615:12641 RocqOfSolidity.proofs.RocqOfSolidity <> run_sstore_map_u256 prfax
+R12652:12659 Stdlib.ZArith.BinInt Z to_nat def
+R12715:12763 RocqOfSolidity.proofs.RocqOfSolidity <> get_current_storage_with_current_storage_eq prfax
+R12832:12835 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12837:12838 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12840:12841 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12874:12882 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12952:12956 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12958:12964 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12966:12967 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12842:12845 Corelib.Init.Datatypes <> Some constr
+R12848:12857 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R12883:12894 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sload def
+R12897:12912 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R12921:12936 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R12832:12835 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12837:12838 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12840:12841 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12874:12882 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12952:12956 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12958:12964 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12966:12967 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R12842:12845 Corelib.Init.Datatypes <> Some constr
+R12848:12857 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R12883:12894 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sload def
+R12897:12912 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R12921:12936 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R12986:13012 RocqOfSolidity.proofs.RocqOfSolidity <> run_sload_map2_u256 prfax
+R13023:13030 Stdlib.ZArith.BinInt Z to_nat def
+R13141:13144 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13146:13147 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13149:13150 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13183:13191 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13269:13273 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13275:13281 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13283:13284 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13151:13154 Corelib.Init.Datatypes <> Some constr
+R13157:13166 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R13192:13204 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sstore def
+R13207:13222 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R13231:13246 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R13141:13144 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13146:13147 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13149:13150 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13183:13191 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13269:13273 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13275:13281 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13283:13284 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13151:13154 Corelib.Init.Datatypes <> Some constr
+R13157:13166 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R13192:13204 RocqOfSolidity.simulations.RocqOfSolidity Stdlib sstore def
+R13207:13222 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R13231:13246 RocqOfSolidity.simulations.RocqOfSolidity <> keccak256_tuple2 defax
+R13303:13330 RocqOfSolidity.proofs.RocqOfSolidity <> run_sstore_map2_u256 prfax
+R13341:13348 Stdlib.ZArith.BinInt Z to_nat def
+R13410:13458 RocqOfSolidity.proofs.RocqOfSolidity <> get_current_storage_with_current_storage_eq prfax
+R13528:13531 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13533:13534 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13536:13537 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13569:13571 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13600:13604 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13606:13608 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13610:13611 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13538:13541 Corelib.Init.Datatypes <> Some constr
+R13544:13553 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R13572:13587 RocqOfSolidity.simulations.RocqOfSolidity Stdlib keccak256 def
+R13528:13531 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13533:13534 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13536:13537 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13569:13571 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13600:13604 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13606:13608 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13610:13611 RocqOfSolidity.simulations.RocqOfSolidity RunO :::'{{?'_x_','_x_','_x_'|'_x_'⇓'_x_'|'_x_'?}}' not
+R13538:13541 Corelib.Init.Datatypes <> Some constr
+R13544:13553 RocqOfSolidity.proofs.RocqOfSolidity <> make_state def
+R13572:13587 RocqOfSolidity.simulations.RocqOfSolidity Stdlib keccak256 def
+R13629:13648 RocqOfSolidity.proofs.RocqOfSolidity <> run_keccak256_tuple2 prfax
+R13664:13671 Stdlib.ZArith.BinInt Z to_nat def
+R13681:13683 Stdlib.ZArith.BinInt <> ::Z_scope:x_'/'_x not
+R13726:13749 RocqOfSolidity.proofs.RocqOfSolidity <> get_memory_make_state_eq prfax

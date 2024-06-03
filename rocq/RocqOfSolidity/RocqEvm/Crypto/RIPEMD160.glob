@@ -1,0 +1,769 @@
+DIGEST 1fc798acf2403a08ac0d3abb19284004
+FRocqOfSolidity.RocqEvm.Crypto.RIPEMD160
+R27:32 Stdlib.NArith.NArith <> <> lib
+R34:39 Stdlib.ZArith.ZArith <> <> lib
+R41:46 Stdlib.Numbers.Cyclic.Int63.Uint63 <> <> lib
+R48:53 Stdlib.Strings.String <> <> lib
+R76:84 Stdlib.Strings.HexString <> <> lib
+R123:128 RocqOfSolidity.RocqEvm.Arith.Nibble <> <> lib
+R159:163 RocqOfSolidity.RocqEvm.Containers.Vec16 <> <> lib
+R194:199 RocqOfSolidity.RocqEvm.Crypto.SHA256 <> <> lib
+def 543:545 <> pad
+R554:557 Corelib.Init.Datatypes <> list ind
+R559:562 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 548:551 <> data:1
+R567:570 Corelib.Init.Datatypes <> list ind
+R572:575 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R591:598 Stdlib.NArith.BinNat N of_nat def
+R601:611 Stdlib.Lists.List <> length abbrev
+R613:616 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:1 var
+binder 584:586 <> len:2
+R644:651 Stdlib.NArith.BinNat N shiftl def
+R653:655 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> len:2 var
+binder 629:639 <> len_in_bits:3
+R669:679 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R665:668 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:1 var
+R722:732 Corelib.Init.Datatypes <> ::list_scope:x_'++'_x not
+R680:693 RocqOfSolidity.RocqEvm.Crypto.SHA256 <> padding def
+R696:716 RocqOfSolidity.RocqEvm.Crypto.SHA256 <> padding_length def
+R718:720 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> len:2 var
+R733:755 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> app_to_list def
+R874:876 Corelib.Init.Datatypes <> nil constr
+R851:863 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R762:786 RocqOfSolidity.RocqEvm.Arith.UInt64 <> uint64_to_le_bytes def
+R796:817 RocqOfSolidity.RocqEvm.Arith.UInt64 <> uint64_of_Z_mod def
+R829:834 Stdlib.ZArith.BinInt Z of_N def
+R836:846 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> len_in_bits:3 var
+prf 944:953 <> pad_ok_mod
+R962:965 Corelib.Init.Datatypes <> list ind
+R967:970 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 956:959 <> data:4
+R1019:1021 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R977:977 Stdlib.NArith.BinNat <> ::N_scope:x_'mod'_x not
+R1011:1016 Stdlib.NArith.BinNat <> ::N_scope:x_'mod'_x not
+R978:985 Stdlib.NArith.BinNat N of_nat def
+R988:998 Stdlib.Lists.List <> length abbrev
+R1001:1003 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad def
+R1005:1008 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:4 var
+R1042:1044 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad def
+R1062:1076 Stdlib.Lists.List <> length_app thm
+R1062:1076 Stdlib.Lists.List <> length_app thm
+R1062:1076 Stdlib.Lists.List <> length_app thm
+R1062:1076 Stdlib.Lists.List <> length_app thm
+R1062:1076 Stdlib.Lists.List <> length_app thm
+R1062:1076 Stdlib.Lists.List <> length_app thm
+R1087:1116 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> app_to_list_length thm
+R1087:1116 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> app_to_list_length thm
+R1087:1116 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> app_to_list_length thm
+R1134:1146 Stdlib.NArith.Nnat Nat2N inj_add thm
+R1134:1146 Stdlib.NArith.Nnat Nat2N inj_add thm
+R1134:1146 Stdlib.NArith.Nnat Nat2N inj_add thm
+R1134:1146 Stdlib.NArith.Nnat Nat2N inj_add thm
+R1134:1146 Stdlib.NArith.Nnat Nat2N inj_add thm
+R1134:1146 Stdlib.NArith.Nnat Nat2N inj_add thm
+R1134:1146 Stdlib.NArith.Nnat Nat2N inj_add thm
+R1134:1146 Stdlib.NArith.Nnat Nat2N inj_add thm
+R1157:1167 Stdlib.NArith.BinNat N add_assoc thm
+R1157:1167 Stdlib.NArith.BinNat N add_assoc thm
+R1157:1167 Stdlib.NArith.BinNat N add_assoc thm
+R1178:1191 Stdlib.NArith.BinNat N.Div0 add_mod thm
+R1178:1191 Stdlib.NArith.BinNat N.Div0 add_mod thm
+R1178:1191 Stdlib.NArith.BinNat N.Div0 add_mod thm
+R1225:1232 Stdlib.NArith.BinNat N of_nat def
+R1235:1245 Stdlib.Lists.List <> length abbrev
+R1225:1232 Stdlib.NArith.BinNat N of_nat def
+R1235:1245 Stdlib.Lists.List <> length abbrev
+R1268:1284 RocqOfSolidity.RocqEvm.Crypto.SHA256 <> padding_ok thm
+R1268:1284 RocqOfSolidity.RocqEvm.Crypto.SHA256 <> padding_ok thm
+R1268:1284 RocqOfSolidity.RocqEvm.Crypto.SHA256 <> padding_ok thm
+R1295:1318 RocqOfSolidity.RocqEvm.Crypto.SHA256 <> padding_length_ok thm
+R1295:1318 RocqOfSolidity.RocqEvm.Crypto.SHA256 <> padding_length_ok thm
+R1295:1318 RocqOfSolidity.RocqEvm.Crypto.SHA256 <> padding_length_ok thm
+prf 1342:1347 <> pad_ok
+R1356:1359 Corelib.Init.Datatypes <> list ind
+R1361:1364 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 1350:1353 <> data:5
+R1402:1404 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R1380:1390 Stdlib.Lists.List <> length abbrev
+R1393:1395 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad def
+R1397:1400 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:5 var
+binder 1374:1374 <> d:6
+R1443:1445 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1421:1431 Stdlib.Lists.List <> length abbrev
+R1434:1436 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad def
+R1438:1441 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:5 var
+R1447:1449 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R1446:1446 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> d:6 var
+R1472:1480 Stdlib.NArith.Nnat Nat2N inj thm
+R1472:1480 Stdlib.NArith.Nnat Nat2N inj thm
+R1496:1505 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad_ok_mod thm
+R1496:1505 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad_ok_mod thm
+R1524:1534 Stdlib.Lists.List <> length abbrev
+R1524:1534 Stdlib.Lists.List <> length abbrev
+R1585:1587 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1585:1587 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1607:1615 Stdlib.NArith.BinNat N add_0_r thm
+R1607:1615 Stdlib.NArith.BinNat N add_0_r thm
+R1607:1615 Stdlib.NArith.BinNat N add_0_r thm
+R1648:1659 Stdlib.Arith.PeanoNat Nat mul_comm thm
+R1648:1659 Stdlib.Arith.PeanoNat Nat mul_comm thm
+R1648:1659 Stdlib.Arith.PeanoNat Nat mul_comm thm
+R1670:1682 Stdlib.NArith.Nnat Nat2N inj_mul thm
+R1670:1682 Stdlib.NArith.Nnat Nat2N inj_mul thm
+R1670:1682 Stdlib.NArith.Nnat Nat2N inj_mul thm
+R1693:1712 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Nat2N_inj_div thm
+R1693:1712 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Nat2N_inj_div thm
+R1693:1712 RocqOfSolidity.RocqEvm.Lib2.Arith2 <> Nat2N_inj_div thm
+R1721:1729 Stdlib.NArith.BinNat N div_mod thm
+R1721:1729 Stdlib.NArith.BinNat N div_mod thm
+def 1770:1786 <> int_of_4_be_bytes
+R1810:1812 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1803:1805 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1796:1798 Corelib.Init.Datatypes <> ::type_scope:x_'*'_x not
+R1792:1795 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R1799:1802 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R1806:1809 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R1813:1816 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 1789:1789 <> b:7
+R1821:1823 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R1853:1853 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> b:7 var
+R1833:1833 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1836:1837 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1840:1841 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1844:1845 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1848:1848 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R1947:1956 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R1971:1971 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R1916:1925 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R1946:1946 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R1862:1862 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R1883:1894 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R1915:1915 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R1877:1880 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<<'_x not
+R1863:1873 RocqOfSolidity.RocqEvm.Arith.Nibble <> int_of_byte def
+R1909:1912 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<<'_x not
+R1895:1905 RocqOfSolidity.RocqEvm.Arith.Nibble <> int_of_byte def
+R1940:1944 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<<'_x not
+R1926:1936 RocqOfSolidity.RocqEvm.Arith.Nibble <> int_of_byte def
+R1957:1967 RocqOfSolidity.RocqEvm.Arith.Nibble <> int_of_byte def
+def 1994:2020 <> pad_and_gather_into_uint32s
+R2029:2032 Corelib.Init.Datatypes <> list ind
+R2034:2037 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 2023:2026 <> data:9
+R2057:2059 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad def
+R2061:2064 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:9 var
+binder 2047:2052 <> padded:10
+R2086:2091 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad_ok thm
+R2093:2096 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:9 var
+binder 2076:2080 <> PadOk:11
+R2104:2111 Stdlib.Lists.List <> map abbrev
+R2174:2191 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather def
+R2205:2226 RocqOfSolidity.RocqEvm.Crypto.SHA256 <> can_gather_by_4 thm
+R2230:2234 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> PadOk:11 var
+R2193:2198 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> padded:10 var
+R2113:2129 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> int_of_4_be_bytes def
+prf 2246:2279 <> pad_and_gather_into_uint32s_length
+R2288:2291 Corelib.Init.Datatypes <> list ind
+R2293:2296 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 2282:2285 <> data:12
+R2334:2336 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R2312:2322 Stdlib.Lists.List <> length abbrev
+R2325:2327 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad def
+R2329:2332 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:12 var
+binder 2306:2306 <> d:13
+R2399:2401 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R2353:2363 Stdlib.Lists.List <> length abbrev
+R2366:2392 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad_and_gather_into_uint32s def
+R2394:2397 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:12 var
+R2403:2405 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2402:2402 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> d:13 var
+R2429:2455 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad_and_gather_into_uint32s def
+R2466:2480 Stdlib.Lists.List <> length_map thm
+R2466:2480 Stdlib.Lists.List <> length_map thm
+R2466:2480 Stdlib.Lists.List <> length_map thm
+R2490:2514 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather_length thm
+R2575:2596 RocqOfSolidity.RocqEvm.Crypto.SHA256 <> can_gather_by_4 thm
+R2599:2614 Corelib.Init.Datatypes <> length def
+R2617:2619 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad def
+R2629:2634 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad_ok thm
+R2560:2562 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2555:2557 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R2528:2543 Corelib.Init.Datatypes <> length def
+R2546:2548 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad def
+R2517:2519 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad def
+R2490:2514 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather_length thm
+R2575:2596 RocqOfSolidity.RocqEvm.Crypto.SHA256 <> can_gather_by_4 thm
+R2599:2614 Corelib.Init.Datatypes <> length def
+R2617:2619 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad def
+R2629:2634 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad_ok thm
+R2560:2562 Corelib.Init.Peano <> ::nat_scope:x_'*'_x not
+R2555:2557 Stdlib.Arith.PeanoNat <> ::nat_scope:x_'/'_x not
+R2528:2543 Corelib.Init.Datatypes <> length def
+R2546:2548 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad def
+R2517:2519 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad def
+def 2662:2675 <> block_of_tuple
+R2685:2697 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> t def
+R2699:2701 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 2678:2682 <> block:14
+R2709:2715 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R2717:2719 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R2797:2801 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> block:14 var
+R2729:2729 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2732:2733 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2736:2737 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2740:2741 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2744:2745 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2748:2749 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2752:2753 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2756:2757 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2760:2761 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2764:2765 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2768:2769 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2772:2773 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2776:2777 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2780:2781 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2784:2785 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2788:2789 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2792:2792 Corelib.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R2809:2819 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 2882:2887 <> blocks
+R2896:2899 Corelib.Init.Datatypes <> list ind
+R2901:2904 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 2890:2893 <> data:16
+R2909:2912 Corelib.Init.Datatypes <> list ind
+R2915:2921 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R2923:2925 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R2931:2938 Stdlib.Lists.List <> map abbrev
+R2968:2985 RocqOfSolidity.RocqEvm.Containers.Tuplevector <> gather def
+R3092:3125 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad_and_gather_into_uint32s_length thm
+R3127:3130 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:16 var
+R2988:3014 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> pad_and_gather_into_uint32s def
+R3016:3019 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:16 var
+R2940:2953 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> block_of_tuple def
+ind 3223:3226 <> vec5
+constr 3241:3244 <> Vec5
+binder 3229:3229 <> T:17
+R3258:3258 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> T:17 var
+binder 3247:3247 <> a:20
+binder 3249:3249 <> b:21
+binder 3251:3251 <> c:22
+binder 3253:3253 <> d:23
+binder 3255:3255 <> e:24
+scheme 3223:3226 <> vec5_rect
+scheme 3223:3226 <> vec5_ind
+scheme 3223:3226 <> vec5_rec
+scheme 3223:3226 <> vec5_sind
+R3272:3275 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> Vec5 constr
+R3272:3275 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> Vec5 constr
+def 3294:3305 <> vec5_to_list
+binder 3308:3308 <> T:25
+R3321:3324 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> vec5 ind
+R3326:3326 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> T:25 var
+binder 3318:3318 <> v:26
+R3331:3334 Corelib.Init.Datatypes <> list ind
+R3336:3336 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> T:25 var
+R3364:3364 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> v:26 var
+R3346:3349 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> Vec5 constr
+R3373:3376 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R3378:3381 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R3383:3386 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R3388:3391 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R3393:3396 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R3397:3399 Corelib.Init.Datatypes <> nil constr
+def 3414:3421 <> vec5_map
+binder 3424:3424 <> A:28
+binder 3426:3426 <> B:29
+R3440:3443 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R3439:3439 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> A:28 var
+R3444:3444 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> B:29 var
+binder 3436:3436 <> f:30
+R3451:3454 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> vec5 ind
+R3456:3456 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> A:28 var
+binder 3448:3448 <> v:31
+R3461:3464 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> vec5 ind
+R3466:3466 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> B:29 var
+R3494:3494 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> v:31 var
+R3476:3479 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> Vec5 constr
+R3502:3505 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> Vec5 constr
+R3532:3532 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f:30 var
+R3526:3526 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f:30 var
+R3520:3520 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f:30 var
+R3514:3514 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f:30 var
+R3508:3508 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f:30 var
+def 3580:3582 <> _n1
+R3585:3591 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R3593:3595 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R3600:3610 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 3668:3670 <> _n2
+R3673:3679 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R3681:3683 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R3688:3698 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 3756:3758 <> _n3
+R3761:3767 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R3769:3771 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R3776:3786 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 3844:3846 <> _n4
+R3849:3855 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R3857:3859 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R3864:3874 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 3932:3934 <> _n5
+R3937:3943 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R3945:3947 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R3952:3962 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 4021:4023 <> _r1
+R4026:4032 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R4034:4036 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R4041:4051 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 4111:4113 <> _r2
+R4116:4122 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R4124:4126 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R4131:4141 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 4201:4203 <> _r3
+R4206:4212 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R4214:4216 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R4221:4231 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 4291:4293 <> _r4
+R4296:4302 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R4304:4306 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R4311:4321 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 4381:4383 <> _r5
+R4386:4392 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R4394:4396 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R4401:4411 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 4472:4474 <> n_1
+R4477:4483 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R4485:4487 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R4492:4502 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 4560:4562 <> n_2
+R4565:4571 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R4573:4575 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R4580:4590 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 4648:4650 <> n_3
+R4653:4659 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R4661:4663 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R4668:4678 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 4736:4738 <> n_4
+R4741:4747 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R4749:4751 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R4756:4766 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 4824:4826 <> n_5
+R4829:4835 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R4837:4839 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R4844:4854 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 4913:4915 <> r_1
+R4918:4924 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R4926:4928 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R4933:4943 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 5003:5005 <> r_2
+R5008:5014 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R5016:5018 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5023:5033 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 5093:5095 <> r_3
+R5098:5104 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R5106:5108 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5113:5123 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 5183:5185 <> r_4
+R5188:5194 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R5196:5198 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5203:5213 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 5273:5275 <> r_5
+R5278:5284 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R5286:5288 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5293:5303 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 5358:5368 <> uint32_mask
+R5371:5373 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5378:5378 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'-'_x not
+R5386:5389 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'-'_x not
+R5380:5383 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<<'_x not
+def 5404:5413 <> uint32_not
+R5419:5421 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 5416:5416 <> i:33
+R5439:5444 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lxor'_x not
+R5428:5438 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> uint32_mask def
+R5445:5445 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> i:33 var
+def 5514:5516 <> rot
+binder 5518:5518 <> x:34
+binder 5520:5520 <> k:35
+R5526:5526 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R5533:5539 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R5572:5572 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R5528:5531 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'<<'_x not
+R5527:5527 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:34 var
+R5532:5532 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> k:35 var
+R5540:5540 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'>>'_x not
+R5559:5564 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'>>'_x not
+R5571:5571 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'>>'_x not
+R5542:5547 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R5541:5541 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:34 var
+R5548:5558 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> uint32_mask def
+R5567:5569 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'-'_x not
+R5570:5570 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> k:35 var
+def 5595:5596 <> f1
+R5606:5608 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 5599:5599 <> x:36
+binder 5601:5601 <> y:37
+binder 5603:5603 <> z:38
+R5612:5614 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5627:5632 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lxor'_x not
+R5620:5625 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lxor'_x not
+R5619:5619 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:36 var
+R5626:5626 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> y:37 var
+R5633:5633 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> z:38 var
+def 5647:5648 <> f2
+R5658:5660 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 5651:5651 <> x:39
+binder 5653:5653 <> y:40
+binder 5655:5655 <> z:41
+R5664:5666 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5671:5671 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R5680:5686 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R5706:5706 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R5673:5678 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R5672:5672 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:39 var
+R5679:5679 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> y:40 var
+R5699:5704 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R5687:5696 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> uint32_not def
+R5698:5698 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:39 var
+R5705:5705 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> z:41 var
+def 5720:5721 <> f3
+R5731:5733 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 5724:5724 <> x:42
+binder 5726:5726 <> y:43
+binder 5728:5728 <> z:44
+R5737:5739 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5744:5744 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lxor'_x not
+R5763:5769 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lxor'_x not
+R5746:5750 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R5745:5745 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:42 var
+R5751:5760 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> uint32_not def
+R5762:5762 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> y:43 var
+R5770:5770 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> z:44 var
+def 5784:5785 <> f4
+R5795:5797 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 5788:5788 <> x:45
+binder 5790:5790 <> y:46
+binder 5792:5792 <> z:47
+R5801:5803 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5808:5808 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R5817:5823 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R5843:5843 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R5810:5815 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R5809:5809 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:45 var
+R5816:5816 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> z:47 var
+R5825:5830 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'land'_x not
+R5824:5824 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> y:46 var
+R5831:5840 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> uint32_not def
+R5842:5842 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> z:47 var
+def 5857:5858 <> f5
+R5868:5870 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 5861:5861 <> x:48
+binder 5863:5863 <> y:49
+binder 5865:5865 <> z:50
+R5874:5876 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5882:5888 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lxor'_x not
+R5907:5907 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lxor'_x not
+R5881:5881 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:48 var
+R5890:5894 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'lor'_x not
+R5889:5889 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> y:49 var
+R5895:5904 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> uint32_not def
+R5906:5906 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> z:50 var
+def 5922:5926 <> round
+R5934:5940 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R5942:5944 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 5929:5929 <> n:51
+binder 5931:5931 <> r:52
+R5955:5957 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 5948:5952 <> const:53
+R5967:5970 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5964:5966 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5974:5977 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5971:5973 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5981:5984 Corelib.Init.Logic <> ::type_scope:x_'->'_x not
+R5978:5980 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R5985:5987 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 5961:5961 <> f:54
+R6012:6018 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R6020:6022 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 6009:6009 <> x:55
+R6029:6032 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> vec5 ind
+R6034:6036 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 6026:6026 <> s:56
+R6043:6045 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 6040:6040 <> i:57
+R6050:6053 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> vec5 ind
+R6055:6057 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R6085:6085 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> s:56 var
+R6067:6070 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> Vec5 constr
+R6191:6207 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R6133:6149 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R6108:6125 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R6126:6126 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f:54 var
+R6150:6165 RocqOfSolidity.RocqEvm.Containers.Vec16 <> get_by_int def
+R6170:6185 RocqOfSolidity.RocqEvm.Containers.Vec16 <> get_by_int def
+R6189:6189 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> i:57 var
+R6187:6187 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> n:51 var
+R6167:6167 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:55 var
+R6208:6212 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> const:53 var
+binder 6097:6101 <> alpha:59
+R6275:6277 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R6243:6245 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> rot def
+R6247:6251 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> alpha:59 var
+R6254:6269 RocqOfSolidity.RocqEvm.Containers.Vec16 <> get_by_int def
+R6273:6273 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> i:57 var
+R6271:6271 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> r:52 var
+binder 6232:6237 <> alpha':60
+R6306:6308 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> rot def
+binder 6298:6301 <> beta:61
+R6321:6324 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> Vec5 constr
+R6337:6340 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> beta:61 var
+R6328:6333 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> alpha':60 var
+def 6357:6366 <> int_of_hex
+R6372:6377 Stdlib.Strings.String <> string ind
+binder 6369:6369 <> s:62
+R6383:6393 Stdlib.Numbers.Cyclic.Int63.Uint63 <> of_Z abbrev
+R6396:6409 Stdlib.Strings.HexString <> to_Z def
+R6411:6411 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> s:62 var
+def 6427:6430 <> iota
+R6433:6439 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R6441:6443 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R6448:6458 RocqOfSolidity.RocqEvm.Containers.Vec16 <> Vec16 constr
+def 6511:6517 <> round1a
+binder 6519:6519 <> x:63
+R6524:6538 RocqOfSolidity.RocqEvm.Containers.Vec16 <> fold_left def
+R6587:6590 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> iota def
+R6541:6545 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round def
+R6547:6549 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> _n1 def
+R6551:6553 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> _r1 def
+R6556:6565 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> int_of_hex def
+R6581:6582 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f1 def
+R6584:6584 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:63 var
+def 6604:6610 <> round2a
+binder 6612:6612 <> x:64
+R6617:6631 RocqOfSolidity.RocqEvm.Containers.Vec16 <> fold_left def
+R6680:6683 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> iota def
+R6634:6638 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round def
+R6640:6642 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> _n2 def
+R6644:6646 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> _r2 def
+R6649:6658 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> int_of_hex def
+R6674:6675 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f2 def
+R6677:6677 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:64 var
+def 6697:6703 <> round3a
+binder 6705:6705 <> x:65
+R6710:6724 RocqOfSolidity.RocqEvm.Containers.Vec16 <> fold_left def
+R6773:6776 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> iota def
+R6727:6731 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round def
+R6733:6735 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> _n3 def
+R6737:6739 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> _r3 def
+R6742:6751 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> int_of_hex def
+R6767:6768 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f3 def
+R6770:6770 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:65 var
+def 6790:6796 <> round4a
+binder 6798:6798 <> x:66
+R6803:6817 RocqOfSolidity.RocqEvm.Containers.Vec16 <> fold_left def
+R6866:6869 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> iota def
+R6820:6824 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round def
+R6826:6828 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> _n4 def
+R6830:6832 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> _r4 def
+R6835:6844 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> int_of_hex def
+R6860:6861 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f4 def
+R6863:6863 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:66 var
+def 6883:6889 <> round5a
+binder 6891:6891 <> x:67
+R6896:6910 RocqOfSolidity.RocqEvm.Containers.Vec16 <> fold_left def
+R6959:6962 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> iota def
+R6913:6917 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round def
+R6919:6921 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> _n5 def
+R6923:6925 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> _r5 def
+R6928:6937 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> int_of_hex def
+R6953:6954 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f5 def
+R6956:6956 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:67 var
+def 6976:6982 <> round1b
+binder 6984:6984 <> x:68
+R6989:7003 RocqOfSolidity.RocqEvm.Containers.Vec16 <> fold_left def
+R7052:7055 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> iota def
+R7006:7010 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round def
+R7012:7014 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> n_1 def
+R7016:7018 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> r_1 def
+R7021:7030 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> int_of_hex def
+R7046:7047 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f5 def
+R7049:7049 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:68 var
+def 7069:7075 <> round2b
+binder 7077:7077 <> x:69
+R7082:7096 RocqOfSolidity.RocqEvm.Containers.Vec16 <> fold_left def
+R7145:7148 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> iota def
+R7099:7103 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round def
+R7105:7107 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> n_2 def
+R7109:7111 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> r_2 def
+R7114:7123 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> int_of_hex def
+R7139:7140 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f4 def
+R7142:7142 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:69 var
+def 7162:7168 <> round3b
+binder 7170:7170 <> x:70
+R7175:7189 RocqOfSolidity.RocqEvm.Containers.Vec16 <> fold_left def
+R7238:7241 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> iota def
+R7192:7196 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round def
+R7198:7200 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> n_3 def
+R7202:7204 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> r_3 def
+R7207:7216 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> int_of_hex def
+R7232:7233 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f3 def
+R7235:7235 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:70 var
+def 7255:7261 <> round4b
+binder 7263:7263 <> x:71
+R7268:7282 RocqOfSolidity.RocqEvm.Containers.Vec16 <> fold_left def
+R7331:7334 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> iota def
+R7285:7289 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round def
+R7291:7293 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> n_4 def
+R7295:7297 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> r_4 def
+R7300:7309 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> int_of_hex def
+R7325:7326 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f2 def
+R7328:7328 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:71 var
+def 7348:7354 <> round5b
+binder 7356:7356 <> x:72
+R7361:7375 RocqOfSolidity.RocqEvm.Containers.Vec16 <> fold_left def
+R7424:7427 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> iota def
+R7378:7382 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round def
+R7384:7386 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> n_5 def
+R7388:7390 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> r_5 def
+R7393:7402 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> int_of_hex def
+R7418:7419 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> f1 def
+R7421:7421 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:72 var
+def 7448:7455 <> init_hex
+R7458:7461 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> vec5 ind
+R7463:7468 Stdlib.Strings.String <> string ind
+R7473:7476 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> Vec5 constr
+def 7593:7596 <> init
+R7599:7602 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> vec5 ind
+R7604:7606 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R7611:7618 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> vec5_map def
+R7631:7638 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> init_hex def
+R7620:7629 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> int_of_hex def
+def 7653:7660 <> rounds_a
+binder 7662:7662 <> x:73
+binder 7664:7664 <> s:74
+R7669:7675 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round5a def
+R7677:7677 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:73 var
+R7680:7686 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round4a def
+R7688:7688 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:73 var
+R7691:7697 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round3a def
+R7699:7699 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:73 var
+R7702:7708 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round2a def
+R7710:7710 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:73 var
+R7713:7719 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round1a def
+R7721:7721 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:73 var
+R7723:7723 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> s:74 var
+def 7741:7748 <> rounds_b
+binder 7750:7750 <> x:75
+binder 7752:7752 <> s:76
+R7757:7763 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round5b def
+R7765:7765 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:75 var
+R7768:7774 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round4b def
+R7776:7776 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:75 var
+R7779:7785 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round3b def
+R7787:7787 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:75 var
+R7790:7796 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round2b def
+R7798:7798 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:75 var
+R7801:7807 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> round1b def
+R7809:7809 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:75 var
+R7811:7811 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> s:76 var
+def 7830:7841 <> absorb_block
+R7847:7850 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> vec5 ind
+R7852:7854 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 7844:7844 <> s:77
+R7861:7867 RocqOfSolidity.RocqEvm.Containers.Vec16 <> t def
+R7869:7871 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 7858:7858 <> x:78
+R7876:7879 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> vec5 ind
+R7881:7883 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+R7916:7916 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> s:77 var
+R7893:7896 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> Vec5 constr
+R7952:7959 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> rounds_a def
+R7961:7961 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:78 var
+R7963:7963 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> s:77 var
+R7929:7932 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> Vec5 constr
+R7999:8006 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> rounds_b def
+R8008:8008 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> x:78 var
+R8010:8010 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> s:77 var
+R7976:7979 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> Vec5 constr
+R8018:8021 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> Vec5 constr
+R8151:8153 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R8146:8148 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R8121:8123 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R8116:8118 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R8091:8093 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R8086:8088 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R8061:8063 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R8056:8058 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R8031:8033 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+R8026:8028 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'+'_x not
+def 8178:8183 <> absorb
+R8192:8195 Corelib.Init.Datatypes <> list ind
+R8197:8200 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 8186:8189 <> data:80
+R8206:8219 Stdlib.Lists.List <> fold_left def
+R8248:8251 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> init def
+R8235:8240 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> blocks def
+R8242:8245 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:80 var
+R8221:8232 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> absorb_block def
+def 8266:8282 <> le_4_bytes_of_int
+R8288:8290 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 8285:8285 <> i:81
+R8310:8314 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8297:8307 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8309:8309 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> i:81 var
+R8335:8339 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8315:8325 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8329:8332 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'>>'_x not
+R8328:8328 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> i:81 var
+R8361:8365 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8340:8350 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8354:8357 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'>>'_x not
+R8353:8353 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> i:81 var
+R8387:8390 Corelib.Init.Datatypes <> ::list_scope:x_'::'_x not
+R8366:8376 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte_of_int def
+R8380:8383 Stdlib.Numbers.Cyclic.Int63.Uint63 Uint63NotationsInternalB ::uint63_scope:x_'>>'_x not
+R8379:8379 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> i:81 var
+R8391:8393 Corelib.Init.Datatypes <> nil constr
+def 8421:8427 <> squeeze
+R8437:8440 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> vec5 ind
+R8442:8444 Corelib.Numbers.Cyclic.Int63.PrimInt63 <> int prim
+binder 8430:8434 <> state:82
+R8450:8460 Stdlib.Lists.List <> concat def
+R8463:8470 Stdlib.Lists.List <> map abbrev
+R8491:8502 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> vec5_to_list def
+R8504:8508 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> state:82 var
+R8472:8488 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> le_4_bytes_of_int def
+def 8525:8533 <> ripemd160
+R8542:8545 Corelib.Init.Datatypes <> list ind
+R8547:8550 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 8536:8539 <> data:83
+R8555:8558 Corelib.Init.Datatypes <> list ind
+R8560:8563 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+R8568:8574 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> squeeze def
+R8577:8582 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> absorb def
+R8584:8587 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:83 var
+def 8603:8621 <> ripemd160_of_string
+R8627:8639 Stdlib.Strings.String <> string ind
+binder 8624:8624 <> s:84
+R8645:8653 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> ripemd160 def
+R8656:8670 RocqOfSolidity.RocqEvm.Arith.Nibble <> bytes_of_string def
+R8672:8672 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> s:84 var
+def 8688:8700 <> ripemd160_hex
+R8709:8712 Corelib.Init.Datatypes <> list ind
+R8714:8717 RocqOfSolidity.RocqEvm.Arith.Nibble <> byte ind
+binder 8703:8706 <> data:85
+R8722:8734 Stdlib.Strings.String <> string ind
+R8739:8750 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_of_bytes def
+R8753:8761 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> ripemd160 def
+R8763:8766 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> data:85 var
+R8769:8772 Corelib.Init.Datatypes <> true constr
+def 8787:8809 <> ripemd160_hex_of_string
+R8815:8827 Stdlib.Strings.String <> string ind
+binder 8812:8812 <> s:86
+R8832:8844 Stdlib.Strings.String <> string ind
+R8849:8860 RocqOfSolidity.RocqEvm.Arith.Nibble <> hex_of_bytes def
+R8863:8881 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> ripemd160_of_string def
+R8883:8883 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> s:86 var
+R8886:8889 Corelib.Init.Datatypes <> true constr
+def 8968:8977 <> smoke_test
+R9038:9045 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R8982:9004 RocqOfSolidity.RocqEvm.Crypto.RIPEMD160 <> ripemd160_hex_of_string def
