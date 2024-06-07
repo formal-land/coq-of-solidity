@@ -143,6 +143,7 @@ public:
 	/// Pretty-print the input after having parsed it.
 	std::string print() const;
 	Json astJson() const;
+	std::string astCoq() const;
 
 	// return the JSON representation of the YuL CFG (experimental)
 	Json cfgJson() const;
