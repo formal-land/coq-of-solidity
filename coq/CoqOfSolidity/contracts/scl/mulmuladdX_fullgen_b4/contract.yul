@@ -1,328 +1,463 @@
-Optimized IR:
+IR:
+
 /// @use-src 0:"CoqOfSolidity/contracts/scl/mulmuladdX_fullgen_b4/contract.sol"
 object "Contract_91" {
     code {
-        {
-            /// @src 0:2011:14164  "contract Contract {..."
-            let _1 := memoryguard(0x80)
-            mstore(64, _1)
-            if callvalue() { revert(0, 0) }
-            let _2 := datasize("Contract_91_deployed")
-            codecopy(_1, dataoffset("Contract_91_deployed"), _2)
-            return(_1, _2)
+        /// @src 0:2011:14102  "contract Contract {..."
+        mstore(64, memoryguard(128))
+        if callvalue() { revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb() }
+
+        constructor_Contract_91()
+
+        let _1 := allocate_unbounded()
+        codecopy(_1, dataoffset("Contract_91_deployed"), datasize("Contract_91_deployed"))
+
+        return(_1, datasize("Contract_91_deployed"))
+
+        function allocate_unbounded() -> memPtr {
+            memPtr := mload(64)
         }
+
+        function revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb() {
+            revert(0, 0)
+        }
+
+        /// @src 0:2011:14102  "contract Contract {..."
+        function constructor_Contract_91() {
+
+            /// @src 0:2011:14102  "contract Contract {..."
+
+        }
+        /// @src 0:2011:14102  "contract Contract {..."
+
     }
     /// @use-src 0:"CoqOfSolidity/contracts/scl/mulmuladdX_fullgen_b4/contract.sol"
     object "Contract_91_deployed" {
         code {
+            /// @src 0:2011:14102  "contract Contract {..."
+            mstore(64, memoryguard(128))
+
+            if iszero(lt(calldatasize(), 4))
             {
-                /// @src 0:2011:14164  "contract Contract {..."
-                let _1 := memoryguard(0x0200)
-                if iszero(lt(calldatasize(), 4))
+                let selector := shift_right_224_unsigned(calldataload(0))
+                switch selector
+
+                case 0x81a379ec
                 {
-                    if eq(0x81a379ec, shr(224, calldataload(0)))
-                    {
-                        if callvalue() { revert(0, 0) }
-                        if slt(add(calldatasize(), not(3)), 384) { revert(0, 0) }
-                        if iszero(slt(35, calldatasize())) { revert(0, 0) }
-                        let newFreePtr := add(_1, 320)
-                        if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, _1))
-                        {
-                            mstore(0, shl(224, 0x4e487b71))
-                            mstore(4, 0x41)
-                            revert(0, 0x24)
-                        }
-                        mstore(64, newFreePtr)
-                        let dst := _1
-                        if gt(324, calldatasize()) { revert(0, 0) }
-                        let src := 4
-                        for { } lt(src, 324) { src := add(src, 0x20) }
-                        {
-                            mstore(dst, calldataload(src))
-                            dst := add(dst, 0x20)
-                        }
-                        let ret := fun_ecGenMulmuladdX_store(_1, calldataload(324), calldataload(356))
-                        let memPos := mload(64)
-                        mstore(memPos, ret)
-                        return(memPos, 0x20)
-                    }
+                    // ecGenMulmuladdX_store(uint256[10],uint256,uint256)
+
+                    external_fun_ecGenMulmuladdX_store_90()
                 }
+
+                default {}
+            }
+
+            revert_error_42b3090547df1d2001c96683413b8cf91c1b902ef5e3cb8d9f6f304cf7446f74()
+
+            function shift_right_224_unsigned(value) -> newValue {
+                newValue :=
+
+                shr(224, value)
+
+            }
+
+            function allocate_unbounded() -> memPtr {
+                memPtr := mload(64)
+            }
+
+            function revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb() {
                 revert(0, 0)
             }
-            /// @src 0:2864:14142  "assembly (\"memory-safe\") {..."
-            function usr$ecAddn2_2189(usr$x1, usr$y1, usr$x2, usr$y2, usr_p) -> usr_x, usr_y, usr_zz, usr_zzz
-            {
-                let usr$y1_1 := sub(usr_p, usr$y1)
-                let usr$y2_1 := addmod(mulmod(usr$y2, 1, usr_p), usr$y1_1, usr_p)
-                let usr$x2_1 := addmod(mulmod(usr$x2, 1, usr_p), sub(usr_p, usr$x1), usr_p)
-                let usr_x_1 := mulmod(usr$x2_1, usr$x2_1, usr_p)
-                let usr_y_1 := mulmod(usr_x_1, usr$x2_1, usr_p)
-                usr_zz := mulmod(1, usr_x_1, usr_p)
-                usr_zzz := mulmod(1, usr_y_1, usr_p)
-                let usr$zz1 := mulmod(usr$x1, usr_x_1, usr_p)
-                usr_x := addmod(addmod(mulmod(usr$y2_1, usr$y2_1, usr_p), sub(usr_p, usr_y_1), usr_p), mulmod(add(usr_p, not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ usr$zz1, usr_p), usr_p)
-                usr_y := addmod(mulmod(addmod(usr$zz1, sub(usr_p, usr_x), usr_p), usr$y2_1, usr_p), mulmod(usr$y1_1, usr_y_1, usr_p), usr_p)
+
+            function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() {
+                revert(0, 0)
             }
-            function usr$ecAddn2(usr$x1, usr$y1, usr$zz1, usr$zzz1, usr$x2, usr$y2, usr$_p) -> usr_x, usr_y, usr_zz, usr_zzz
-            {
-                let usr$y2_1 := addmod(mulmod(usr$y2, usr$zzz1, usr$_p), sub(usr$_p, usr$y1), usr$_p)
-                let usr$x2_1 := addmod(mulmod(usr$x2, usr$zz1, usr$_p), sub(usr$_p, usr$x1), usr$_p)
-                let usr_x_1 := mulmod(usr$x2_1, usr$x2_1, usr$_p)
-                let usr_y_1 := mulmod(usr_x_1, usr$x2_1, usr$_p)
-                usr_zz := mulmod(usr$zz1, usr_x_1, usr$_p)
-                usr_zzz := mulmod(usr$zzz1, usr_y_1, usr$_p)
-                let usr$zz1_1 := mulmod(usr$x1, usr_x_1, usr$_p)
-                usr_x := addmod(addmod(mulmod(usr$y2_1, usr$y2_1, usr$_p), sub(usr$_p, usr_y_1), usr$_p), mulmod(add(usr$_p, not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ usr$zz1_1, usr$_p), usr$_p)
-                usr_y := addmod(mulmod(addmod(usr$zz1_1, sub(usr$_p, usr_x), usr$_p), usr$y2_1, usr$_p), mulmod(sub(usr$_p, usr$y1), usr_y_1, usr$_p), usr$_p)
+
+            function revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db() {
+                revert(0, 0)
             }
-            /// @ast-id 90 @src 0:2383:14162  "function ecGenMulmuladdX_store(..."
-            function fun_ecGenMulmuladdX_store(var_Q_mpos, var_scalar_u, var_scalar_v) -> var_X
-            /// @ast-id 90
-            {
-                mstore(0x0140, var_Q_mpos)
-                mstore(0x0120, var_scalar_u)
-                mstore(0x0160, var_scalar_v)
-                mstore(0xa0, 0)
-                /// @ast-id 90
-                /** @ast-id 90 */ /** @ast-id 90 */ fun_ecGenMulmuladdX_store_2814()
-                /// @ast-id 90
-                /** @ast-id 90 */ var_X := /** @ast-id 90 */ /** @ast-id 90 */ mload(/** @ast-id 90 */ 0xa0)
+
+            function revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() {
+                revert(0, 0)
             }
-            /// @ast-id 90
-            function fun_ecGenMulmuladdX_store_2814()
-            {
-                /// @src 0:2586:2595  "uint256 X"
-                mstore(0xa0, /** @src 0:2011:14164  "contract Contract {..." */ 0)
-                /// @src 0:2607:2626  "uint256 mask=1<<127"
-                mstore(0x01a0, /** @src 0:2620:2626  "1<<127" */ shl(127, /** @src 0:2011:14164  "contract Contract {..." */ 1))
-                /// @src 0:2679:2703  "scalar_u==0&&scalar_v==0"
-                let expr := /** @src 0:2679:2690  "scalar_u==0" */ iszero(mload(0x0120))
-                /// @src 0:2679:2703  "scalar_u==0&&scalar_v==0"
-                if expr
+
+            function round_up_to_mul_of_32(value) -> result {
+                result := and(add(value, 31), not(31))
+            }
+
+            function panic_error_0x41() {
+                mstore(0, 35408467139433450592217433187231851964531694900788300625387963629091585785856)
+                mstore(4, 0x41)
+                revert(0, 0x24)
+            }
+
+            function finalize_allocation(memPtr, size) {
+                let newFreePtr := add(memPtr, round_up_to_mul_of_32(size))
+                // protect against overflow
+                if or(gt(newFreePtr, 0xffffffffffffffff), lt(newFreePtr, memPtr)) { panic_error_0x41() }
+                mstore(64, newFreePtr)
+            }
+
+            function allocate_memory(size) -> memPtr {
+                memPtr := allocate_unbounded()
+                finalize_allocation(memPtr, size)
+            }
+
+            function array_allocation_size_t_array$_t_uint256_$10_memory_ptr(length) -> size {
+                // Make sure we can allocate memory without overflow
+                if gt(length, 0xffffffffffffffff) { panic_error_0x41() }
+
+                size := mul(length, 0x20)
+
+            }
+
+            function revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef() {
+                revert(0, 0)
+            }
+
+            function cleanup_t_uint256(value) -> cleaned {
+                cleaned := value
+            }
+
+            function validator_revert_t_uint256(value) {
+                if iszero(eq(value, cleanup_t_uint256(value))) { revert(0, 0) }
+            }
+
+            function abi_decode_t_uint256(offset, end) -> value {
+                value := calldataload(offset)
+                validator_revert_t_uint256(value)
+            }
+
+            // uint256[10]
+            function abi_decode_available_length_t_array$_t_uint256_$10_memory_ptr(offset, length, end) -> array {
+                array := allocate_memory(array_allocation_size_t_array$_t_uint256_$10_memory_ptr(length))
+                let dst := array
+
+                let srcEnd := add(offset, mul(length, 0x20))
+                if gt(srcEnd, end) {
+                    revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef()
+                }
+                for { let src := offset } lt(src, srcEnd) { src := add(src, 0x20) }
                 {
-                    expr := /** @src 0:2692:2703  "scalar_v==0" */ iszero(mload(0x0160))
+
+                    let elementPos := src
+
+                    mstore(dst, abi_decode_t_uint256(elementPos, end))
+                    dst := add(dst, 0x20)
+                }
+            }
+
+            // uint256[10]
+            function abi_decode_t_array$_t_uint256_$10_memory_ptr(offset, end) -> array {
+                if iszero(slt(add(offset, 0x1f), end)) { revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d() }
+                let length := 0x0a
+                array := abi_decode_available_length_t_array$_t_uint256_$10_memory_ptr(offset, length, end)
+            }
+
+            function abi_decode_tuple_t_array$_t_uint256_$10_memory_ptrt_uint256t_uint256(headStart, dataEnd) -> value0, value1, value2 {
+                if slt(sub(dataEnd, headStart), 384) { revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b() }
+
+                {
+
+                    let offset := 0
+
+                    value0 := abi_decode_t_array$_t_uint256_$10_memory_ptr(add(headStart, offset), dataEnd)
+                }
+
+                {
+
+                    let offset := 320
+
+                    value1 := abi_decode_t_uint256(add(headStart, offset), dataEnd)
+                }
+
+                {
+
+                    let offset := 352
+
+                    value2 := abi_decode_t_uint256(add(headStart, offset), dataEnd)
+                }
+
+            }
+
+            function abi_encode_t_uint256_to_t_uint256_fromStack(value, pos) {
+                mstore(pos, cleanup_t_uint256(value))
+            }
+
+            function abi_encode_tuple_t_uint256__to_t_uint256__fromStack(headStart , value0) -> tail {
+                tail := add(headStart, 32)
+
+                abi_encode_t_uint256_to_t_uint256_fromStack(value0,  add(headStart, 0))
+
+            }
+
+            function external_fun_ecGenMulmuladdX_store_90() {
+
+                if callvalue() { revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb() }
+                let param_0, param_1, param_2 :=  abi_decode_tuple_t_array$_t_uint256_$10_memory_ptrt_uint256t_uint256(4, calldatasize())
+                let ret_0 :=  fun_ecGenMulmuladdX_store_90(param_0, param_1, param_2)
+                let memPos := allocate_unbounded()
+                let memEnd := abi_encode_tuple_t_uint256__to_t_uint256__fromStack(memPos , ret_0)
+                return(memPos, sub(memEnd, memPos))
+
+            }
+
+            function revert_error_42b3090547df1d2001c96683413b8cf91c1b902ef5e3cb8d9f6f304cf7446f74() {
+                revert(0, 0)
+            }
+
+            function zero_value_for_split_t_uint256() -> ret {
+                ret := 0
+            }
+
+            function cleanup_t_rational_170141183460469231731687303715884105728_by_1(value) -> cleaned {
+                cleaned := value
+            }
+
+            function identity(value) -> ret {
+                ret := value
+            }
+
+            function convert_t_rational_170141183460469231731687303715884105728_by_1_to_t_uint256(value) -> converted {
+                converted := cleanup_t_uint256(identity(cleanup_t_rational_170141183460469231731687303715884105728_by_1(value)))
+            }
+
+            function cleanup_t_rational_0_by_1(value) -> cleaned {
+                cleaned := value
+            }
+
+            function convert_t_rational_0_by_1_to_t_uint256(value) -> converted {
+                converted := cleanup_t_uint256(identity(cleanup_t_rational_0_by_1(value)))
+            }
+
+            function usr$mstore4(usr$addr, usr$offset, usr$val1, usr$val2, usr$val3, usr$val4)
+            {
+                mstore(add(usr$offset, usr$addr), usr$val1)
+                usr$offset := add(32, usr$offset)
+                mstore(add(usr$offset, usr$addr), usr$val2)
+                usr$offset := add(32, usr$offset)
+                mstore(add(usr$offset, usr$addr), usr$val3)
+                usr$offset := add(32, usr$offset)
+                mstore(add(usr$offset, usr$addr), usr$val4)
+                usr$offset := add(32, usr$offset)
+            }
+
+            function usr$ecAddn2(usr$x1, usr$y1, usr$zz1, usr$zzz1, usr$x2, usr$y2, usr$_p) -> usr$_x, usr$_y, usr$_zz, usr$_zzz
+            {
+                usr$y1 := sub(usr$_p, usr$y1)
+                usr$y2 := addmod(mulmod(usr$y2, usr$zzz1, usr$_p), usr$y1, usr$_p)
+                usr$x2 := addmod(mulmod(usr$x2, usr$zz1, usr$_p), sub(usr$_p, usr$x1), usr$_p)
+                usr$_x := mulmod(usr$x2, usr$x2, usr$_p)
+                usr$_y := mulmod(usr$_x, usr$x2, usr$_p)
+                usr$_zz := mulmod(usr$zz1, usr$_x, usr$_p)
+                usr$_zzz := mulmod(usr$zzz1, usr$_y, usr$_p)
+                usr$zz1 := mulmod(usr$x1, usr$_x, usr$_p)
+                usr$_x := addmod(addmod(mulmod(usr$y2, usr$y2, usr$_p), sub(usr$_p, usr$_y), usr$_p), mulmod(sub(usr$_p, 2), usr$zz1, usr$_p), usr$_p)
+                usr$x1 := mulmod(addmod(usr$zz1, sub(usr$_p, usr$_x), usr$_p), usr$y2, usr$_p)
+                usr$_y := addmod(usr$x1, mulmod(usr$y1, usr$_y, usr$_p), usr$_p)
+            }
+
+            /// @ast-id 90
+            /// @src 0:2383:14100  "function ecGenMulmuladdX_store(..."
+            function fun_ecGenMulmuladdX_store_90(var_Q_53_mpos, var_scalar_u_55, var_scalar_v_57) -> var_X_60 {
+                /// @src 0:2586:2595  "uint256 X"
+                let zero_t_uint256_1 := zero_value_for_split_t_uint256()
+                var_X_60 := zero_t_uint256_1
+
+                /// @src 0:2620:2626  "1<<127"
+                let expr_66 := 0x80000000000000000000000000000000
+                /// @src 0:2607:2626  "uint256 mask=1<<127"
+                let var_mask_63 := convert_t_rational_170141183460469231731687303715884105728_by_1_to_t_uint256(expr_66)
+                /// @src 0:2679:2687  "scalar_u"
+                let _2 := var_scalar_u_55
+                let expr_68 := _2
+                /// @src 0:2689:2690  "0"
+                let expr_69 := 0x00
+                /// @src 0:2679:2690  "scalar_u==0"
+                let expr_70 := eq(cleanup_t_uint256(expr_68), convert_t_rational_0_by_1_to_t_uint256(expr_69))
+                /// @src 0:2679:2703  "scalar_u==0&&scalar_v==0"
+                let expr_74 := expr_70
+                if expr_74 {
+                    /// @src 0:2692:2700  "scalar_v"
+                    let _3 := var_scalar_v_57
+                    let expr_71 := _3
+                    /// @src 0:2702:2703  "0"
+                    let expr_72 := 0x00
+                    /// @src 0:2692:2703  "scalar_v==0"
+                    let expr_73 := eq(cleanup_t_uint256(expr_71), convert_t_rational_0_by_1_to_t_uint256(expr_72))
+                    /// @src 0:2679:2703  "scalar_u==0&&scalar_v==0"
+                    expr_74 := expr_73
                 }
                 /// @src 0:2676:2737  "if(scalar_u==0&&scalar_v==0){..."
-                if expr
-                {
+                if expr_74 {
+                    /// @src 0:2725:2726  "0"
+                    let expr_75 := 0x00
                     /// @src 0:2718:2726  "return 0"
-                    mstore(0xa0, /** @src 0:2011:14164  "contract Contract {..." */ 0)
-                    /// @src 0:2718:2726  "return 0"
+                    var_X_60 := convert_t_rational_0_by_1_to_t_uint256(expr_75)
                     leave
+                    /// @src 0:2676:2737  "if(scalar_u==0&&scalar_v==0){..."
                 }
                 /// @src 0:2746:2755  "uint256 Y"
-                mstore(0x0100, /** @src 0:2011:14164  "contract Contract {..." */ 0)
+                let var_Y_80
+                let zero_t_uint256_4 := zero_value_for_split_t_uint256()
+                var_Y_80 := zero_t_uint256_4
                 /// @src 0:2765:2776  "uint256 ZZZ"
-                mstore(0xe0, /** @src 0:2011:14164  "contract Contract {..." */ 0)
+                let var_ZZZ_83
+                let zero_t_uint256_5 := zero_value_for_split_t_uint256()
+                var_ZZZ_83 := zero_t_uint256_5
                 /// @src 0:2786:2796  "uint256 ZZ"
-                mstore(0x01c0, /** @src 0:2011:14164  "contract Contract {..." */ 0)
-                /// @src 0:2864:14142  "assembly (\"memory-safe\") {..."
-                let _1 := mload(0x40)
-                mstore(0x40, add(_1, 2048))
-                mstore(add(_1, 4128), mload(add(mload(0x0140), 128)))
-                let _2 := mload(0x40)
-                let usr_modulusp := mload(add(_2, 2080))
-                let _3 := add(mload(0x0140), 224)
-                let _4 := mload(_3)
-                let _5 := add(mload(0x0140), 192)
-                mstore(add(128, _2), mload(_5))
-                mstore(add(_2, 160), _4)
-                mstore(add(_2, 192), 1)
-                mstore(add(_2, 224), 1)
-                let _6 := add(mload(0x0140), 288)
-                let _7 := mload(_6)
-                let _8 := add(mload(0x0140), 256)
-                let _9 := mload(_8)
-                let _10 := mload(0x40)
-                mstore(add(256, _10), _9)
-                mstore(add(_10, 288), _7)
-                mstore(add(_10, 320), 1)
-                mstore(add(_10, 352), 1)
-                let var_X := mload(_8)
-                let var_Y := mload(_6)
-                let var_X_1, var_Y_1, var_ZZ, var_ZZZ := usr$ecAddn2_2189(var_X, var_Y, mload(_5), mload(_3), usr_modulusp)
-                let _11 := mload(0x40)
-                mstore(add(384, _11), var_X_1)
-                mstore(add(_11, 416), var_Y_1)
-                mstore(add(_11, 448), var_ZZ)
-                mstore(add(_11, 480), var_ZZZ)
-                let _12 := mload(add(32, mload(0x0140)))
-                let _13 := mload(mload(0x0140))
-                let _14 := mload(0x40)
-                mstore(add(512, _14), _13)
-                mstore(add(_14, 544), _12)
-                mstore(add(_14, 576), 1)
-                mstore(add(_14, 608), 1)
-                let _15 := mload(_3)
-                let _16 := mload(_5)
-                let _17 := add(mload(0x0140), 32)
-                let var_X_2, var_Y_2, var_ZZ_1, var_ZZZ_1 := usr$ecAddn2_2189(mload(mload(0x0140)), mload(_17), _16, _15, usr_modulusp)
-                let _18 := mload(0x40)
-                mstore(add(640, _18), var_X_2)
-                mstore(add(_18, 672), var_Y_2)
-                mstore(add(_18, 704), var_ZZ_1)
-                mstore(add(_18, 736), var_ZZZ_1)
-                let var_X_3 := mload(_8)
-                let var_Y_3 := mload(_6)
-                let var_X_4, var_Y_4, var_ZZ_2, var_ZZZ_2 := usr$ecAddn2_2189(var_X_3, var_Y_3, mload(mload(0x0140)), mload(_17), usr_modulusp)
-                let _19 := mload(0x40)
-                mstore(add(768, _19), var_X_4)
-                mstore(add(_19, 800), var_Y_4)
-                mstore(add(_19, 832), var_ZZ_2)
-                mstore(add(_19, 864), var_ZZZ_2)
-                let var_X_5, var_Y_5, var_ZZ_3, var_ZZZ_3 := usr$ecAddn2(var_X_4, var_Y_4, var_ZZ_2, var_ZZZ_2, mload(_5), mload(_3), usr_modulusp)
-                let _20 := mload(0x40)
-                mstore(add(896, _20), var_X_5)
-                mstore(add(_20, 928), var_Y_5)
-                mstore(add(_20, 960), var_ZZ_3)
-                mstore(add(_20, 992), var_ZZZ_3)
-                let _21 := add(mload(0x0140), 96)
-                let _22 := mload(_21)
-                let _23 := add(mload(0x0140), 0x40)
-                let _24 := mload(_23)
-                let _25 := mload(0x40)
-                mstore(add(1024, _25), _24)
-                mstore(add(_25, 1056), _22)
-                mstore(add(_25, 1088), 1)
-                mstore(add(_25, 1120), 1)
-                let _26 := mload(0x40)
-                let var_X_6, var_Y_6, var_ZZ_4, var_ZZZ_4 := usr$ecAddn2_2189(mload(_23), mload(_21), mload(_5), mload(_3), mload(add(_26, 2080)))
-                mstore(add(1152, _26), var_X_6)
-                mstore(add(_26, 1184), var_Y_6)
-                mstore(add(_26, 1216), var_ZZ_4)
-                mstore(add(_26, 1248), var_ZZZ_4)
-                let var_X_7 := mload(_8)
-                let var_Y_7 := mload(_6)
-                let _27 := mload(0x40)
-                let var_X_8, var_Y_8, var_ZZ_5, var_ZZZ_5 := usr$ecAddn2_2189(mload(_23), mload(_21), var_X_7, var_Y_7, mload(add(_27, 2080)))
-                mstore(add(1280, _27), var_X_8)
-                mstore(add(_27, 1312), var_Y_8)
-                mstore(add(_27, 1344), var_ZZ_5)
-                mstore(add(_27, 1376), var_ZZZ_5)
-                let _28 := mload(0x40)
-                let var_X_9, var_Y_9, var_ZZ_6, var_ZZZ_6 := usr$ecAddn2(var_X_8, var_Y_8, var_ZZ_5, var_ZZZ_5, mload(_5), mload(_3), mload(add(_28, 2080)))
-                mstore(add(1408, _28), var_X_9)
-                mstore(add(_28, 1440), var_Y_9)
-                mstore(add(_28, 1472), var_ZZ_6)
-                mstore(add(_28, 1504), var_ZZZ_6)
-                let _29 := mload(0x40)
-                let var_X_10, var_Y_10, var_ZZ_7, var_ZZZ_7 := usr$ecAddn2_2189(mload(mload(0x0140)), mload(_17), mload(_23), mload(_21), mload(add(_29, 2080)))
-                mstore(add(1536, _29), var_X_10)
-                mstore(add(_29, 1568), var_Y_10)
-                mstore(add(_29, 1600), var_ZZ_7)
-                mstore(add(_29, 1632), var_ZZZ_7)
-                let _30 := mload(0x40)
-                let var_X_11, var_Y_11, var_ZZ_8, var_ZZZ_8 := usr$ecAddn2(var_X_10, var_Y_10, var_ZZ_7, var_ZZZ_7, mload(_5), mload(_3), mload(add(_30, 2080)))
-                mstore(add(1664, _30), var_X_11)
-                mstore(add(_30, 1696), var_Y_11)
-                mstore(add(_30, 1728), var_ZZ_8)
-                mstore(add(_30, 1760), var_ZZZ_8)
-                let _31 := mload(0x40)
-                let var_X_12 := mload(add(768, _31))
-                let var_Y_12 := mload(add(800, _31))
-                let var_ZZ_9 := mload(add(832, _31))
-                let var_ZZZ_9 := mload(add(864, _31))
-                let var_X_13, var_Y_13, var_ZZ_10, var_ZZZ_10 := usr$ecAddn2(var_X_12, var_Y_12, var_ZZ_9, var_ZZZ_9, mload(_23), mload(_21), mload(add(_31, 2080)))
-                mstore(add(1792, _31), var_X_13)
-                mstore(add(_31, 1824), var_Y_13)
-                mstore(add(_31, 1856), var_ZZ_10)
-                mstore(add(_31, 1888), var_ZZZ_10)
-                let _32 := mload(0x40)
-                let var_X_14, var_Y_14, var_ZZ_11, var_ZZZ_11 := usr$ecAddn2(var_X_13, var_Y_13, var_ZZ_10, var_ZZZ_10, mload(_5), mload(_3), mload(add(_32, 2080)))
-                mstore(add(1920, _32), var_X_14)
-                mstore(add(_32, 1952), var_Y_14)
-                mstore(add(_32, 1984), var_ZZ_11)
-                mstore(add(_32, 2016), var_ZZZ_11)
-                mstore(0xe0, /** @src 0:2011:14164  "contract Contract {..." */ 0)
-                /// @src 0:2864:14142  "assembly (\"memory-safe\") {..."
-                for { }
-                iszero(mload(0xe0))
+                let var_ZZ_86
+                let zero_t_uint256_6 := zero_value_for_split_t_uint256()
+                var_ZZ_86 := zero_t_uint256_6
+                /// @src 0:2864:14080  "assembly (\"memory-safe\") {..."
                 {
-                    mstore(0x01a0, shr(1, mload(0x01a0)))
-                }
-                {
-                    mstore(0xe0, add(add(sub(1, iszero(and(mload(0x0120), mload(0x01a0)))), shl(1, sub(1, iszero(and(shr(128, mload(0x0120)), mload(0x01a0)))))), add(shl(2, sub(1, iszero(and(mload(0x0160), mload(0x01a0))))), shl(3, sub(1, iszero(and(shr(128, mload(0x0160)), mload(0x01a0))))))))
-                }
-                mstore(0x0180, mload(0x40))
-                let _33 := add(mload(0x0180), shl(7, mload(0xe0)))
-                mstore(0xa0, mload(_33))
-                mstore(0x0100, mload(add(_33, 32)))
-                mstore(0x01c0, mload(add(_33, 0x40)))
-                mstore(0xe0, mload(add(_33, 96)))
-                mstore(0x01e0, mload(add(mload(0x0180), 2080)))
-                for { }
-                mload(0x01a0)
-                {
-                    mstore(0x01a0, shr(1, mload(0x01a0)))
-                }
-                {
-                    mstore(0xc0, mulmod(mload(0xa0), mulmod(mulmod(2, mload(0x0100), mload(0x01e0)), mulmod(2, mload(0x0100), mload(0x01e0)), mload(0x01e0)), mload(0x01e0)))
-                    let usr$T4 := addmod(mulmod(3, mulmod(mload(0xa0), mload(0xa0), mload(0x01e0)), mload(0x01e0)), mulmod(mload(add(mload(0x0140), 160)), mulmod(mload(0x01c0), mload(0x01c0), mload(0x01e0)), mload(0x01e0)), mload(0x01e0))
-                    mstore(0xe0, mulmod(mulmod(mulmod(2, mload(0x0100), mload(0x01e0)), mulmod(mulmod(2, mload(0x0100), mload(0x01e0)), mulmod(2, mload(0x0100), mload(0x01e0)), mload(0x01e0)), mload(0x01e0)), mload(0xe0), mload(0x01e0)))
-                    mstore(0x01c0, mulmod(mulmod(mulmod(2, mload(0x0100), mload(0x01e0)), mulmod(2, mload(0x0100), mload(0x01e0)), mload(0x01e0)), mload(0x01c0), mload(0x01e0)))
-                    mstore(0xa0, addmod(mulmod(usr$T4, usr$T4, mload(0x01e0)), mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mload(0xc0), mload(0x01e0)), mload(0x01e0)))
-                    mstore(0x0100, addmod(mulmod(mulmod(mulmod(2, mload(0x0100), mload(0x01e0)), mulmod(mulmod(2, mload(0x0100), mload(0x01e0)), mulmod(2, mload(0x0100), mload(0x01e0)), mload(0x01e0)), mload(0x01e0)), mload(0x0100), mload(0x01e0)), mulmod(usr$T4, addmod(mload(0xa0), sub(mload(0x01e0), mload(0xc0)), mload(0x01e0)), mload(0x01e0)), mload(0x01e0)))
-                    let usr$T1 := add(add(sub(1, iszero(and(mload(0x0120), mload(0x01a0)))), shl(1, sub(1, iszero(and(shr(128, mload(0x0120)), mload(0x01a0)))))), add(shl(2, sub(1, iszero(and(mload(0x0160), mload(0x01a0))))), shl(3, sub(1, iszero(and(shr(128, mload(0x0160)), mload(0x01a0)))))))
-                    if iszero(usr$T1)
+                    mstore(0x40, add(mload(0x40), 2048))
+                    mstore(add(mload(0x40), 2080), mload(add(var_Q_53_mpos, 128)))
                     {
-                        mstore(0x0100, sub(mload(0x01e0), mload(0x0100)))
-                        continue
+                        let usr$_modulusp := mload(add(mload(0x40), 2080))
+                        usr$mstore4(mload(0x40), 128, mload(add(var_Q_53_mpos, 192)), mload(add(var_Q_53_mpos, 224)), 1, 1)
+                        usr$mstore4(mload(0x40), 256, mload(add(var_Q_53_mpos, 256)), mload(add(var_Q_53_mpos, 288)), 1, 1)
+                        var_X_60 := mload(add(var_Q_53_mpos, 256))
+                        var_Y_80 := mload(add(var_Q_53_mpos, 288))
+                        var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 := usr$ecAddn2(var_X_60, var_Y_80, 1, 1, mload(add(var_Q_53_mpos, 192)), mload(add(var_Q_53_mpos, 224)), usr$_modulusp)
+                        usr$mstore4(mload(0x40), 384, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83)
+                        usr$mstore4(mload(0x40), 512, mload(var_Q_53_mpos), mload(add(32, var_Q_53_mpos)), 1, 1)
+                        var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 := usr$ecAddn2(mload(var_Q_53_mpos), mload(add(var_Q_53_mpos, 32)), 1, 1, mload(add(var_Q_53_mpos, 192)), mload(add(var_Q_53_mpos, 224)), usr$_modulusp)
+                        usr$mstore4(mload(0x40), 640, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83)
+                        var_X_60 := mload(add(var_Q_53_mpos, 256))
+                        var_Y_80 := mload(add(var_Q_53_mpos, 288))
+                        var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 := usr$ecAddn2(var_X_60, var_Y_80, 1, 1, mload(var_Q_53_mpos), mload(add(var_Q_53_mpos, 32)), usr$_modulusp)
+                        usr$mstore4(mload(0x40), 768, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83)
+                        var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 := usr$ecAddn2(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83, mload(add(var_Q_53_mpos, 192)), mload(add(var_Q_53_mpos, 224)), usr$_modulusp)
+                        usr$mstore4(mload(0x40), 896, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83)
+                        usr$mstore4(mload(0x40), 1024, mload(add(var_Q_53_mpos, 64)), mload(add(var_Q_53_mpos, 96)), 1, 1)
+                        var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 := usr$ecAddn2(mload(add(var_Q_53_mpos, 64)), mload(add(var_Q_53_mpos, 96)), 1, 1, mload(add(var_Q_53_mpos, 192)), mload(add(var_Q_53_mpos, 224)), mload(add(mload(0x40), 2080)))
+                        usr$mstore4(mload(0x40), 1152, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83)
+                        var_X_60 := mload(add(var_Q_53_mpos, 256))
+                        var_Y_80 := mload(add(var_Q_53_mpos, 288))
+                        var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 := usr$ecAddn2(mload(add(var_Q_53_mpos, 64)), mload(add(var_Q_53_mpos, 96)), 1, 1, var_X_60, var_Y_80, mload(add(mload(0x40), 2080)))
+                        usr$mstore4(mload(0x40), 1280, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83)
+                        var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 := usr$ecAddn2(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83, mload(add(var_Q_53_mpos, 192)), mload(add(var_Q_53_mpos, 224)), mload(add(mload(0x40), 2080)))
+                        usr$mstore4(mload(0x40), 1408, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83)
+                        var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 := usr$ecAddn2(mload(var_Q_53_mpos), mload(add(var_Q_53_mpos, 32)), 1, 1, mload(add(var_Q_53_mpos, 64)), mload(add(var_Q_53_mpos, 96)), mload(add(mload(0x40), 2080)))
+                        usr$mstore4(mload(0x40), 1536, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83)
+                        var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 := usr$ecAddn2(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83, mload(add(var_Q_53_mpos, 192)), mload(add(var_Q_53_mpos, 224)), mload(add(mload(0x40), 2080)))
+                        usr$mstore4(mload(0x40), 1664, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83)
+                        var_X_60 := mload(add(768, mload(0x40)))
+                        var_Y_80 := mload(add(800, mload(0x40)))
+                        var_ZZ_86 := mload(add(832, mload(0x40)))
+                        var_ZZZ_83 := mload(add(864, mload(0x40)))
+                        var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 := usr$ecAddn2(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83, mload(add(var_Q_53_mpos, 64)), mload(add(var_Q_53_mpos, 96)), mload(add(mload(0x40), 2080)))
+                        usr$mstore4(mload(0x40), 1792, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83)
+                        var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 := usr$ecAddn2(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83, mload(add(var_Q_53_mpos, 0xc0)), mload(add(var_Q_53_mpos, 224)), mload(add(mload(0x40), 2080)))
+                        usr$mstore4(mload(0x40), 1920, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83)
                     }
-                    let usr$T4_1 := mload(add(mload(0x0180), shl(7, usr$T1)))
-                    let _34 := add(add(mload(0x0180), shl(7, usr$T1)), 96)
-                    let _35 := mload(_34)
-                    mstore(add(mload(0x0180), 2144), _35)
-                    if iszero(mload(0x01c0))
+                    var_ZZZ_83 := 0
+                    for { }
+                    iszero(var_ZZZ_83)
                     {
-                        mstore(0xa0, usr$T4_1)
-                        mstore(0x0100, mload(add(add(mload(0x0180), shl(7, usr$T1)), 32)))
-                        mstore(0x01c0, mload(add(add(mload(0x0180), shl(7, usr$T1)), 0x40)))
-                        mstore(0xe0, mload(_34))
-                        continue
+                        var_mask_63 := shr(1, var_mask_63)
                     }
-                    let _36 := addmod(mulmod(mload(add(add(mload(0x0180), shl(7, usr$T1)), 32)), mload(0xe0), mload(0x01e0)), mulmod(mload(0x0100), _35, mload(0x01e0)), mload(0x01e0))
-                    mstore(add(mload(0x0180), 2112), _36)
-                    let usr$T1_1 := mload(add(add(mload(0x0180), shl(7, usr$T1)), 0x40))
-                    let usr$T2 := addmod(mulmod(usr$T4_1, mload(0x01c0), mload(0x01e0)), sub(mload(0x01e0), mulmod(mload(0xa0), usr$T1_1, mload(0x01e0))), mload(0x01e0))
-                    if iszero(_36)
                     {
-                        if iszero(usr$T2)
+                        var_ZZZ_83 := add(add(sub(1, iszero(and(var_scalar_u_55, var_mask_63))), shl(1, sub(1, iszero(and(shr(128, var_scalar_u_55), var_mask_63))))), add(shl(2, sub(1, iszero(and(var_scalar_v_57, var_mask_63)))), shl(3, sub(1, iszero(and(shr(128, var_scalar_v_57), var_mask_63))))))
+                    }
+                    var_X_60 := mload(add(mload(0x40), shl(7, var_ZZZ_83)))
+                    var_Y_80 := mload(add(mload(0x40), add(32, shl(7, var_ZZZ_83))))
+                    var_ZZ_86 := mload(add(mload(0x40), add(64, shl(7, var_ZZZ_83))))
+                    var_ZZZ_83 := mload(add(mload(0x40), add(96, shl(7, var_ZZZ_83))))
+                    let usr$Mem := mload(0x40)
+                    let usr$_p := mload(add(usr$Mem, 2080))
+                    for { }
+                    gt(var_mask_63, 0)
+                    {
+                        var_mask_63 := shr(1, var_mask_63)
+                    }
+                    {
                         {
-                            mstore(0x80, mulmod(mload(0xa0), mulmod(mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mload(0x0100), mload(0x01e0)), mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mload(0x0100), mload(0x01e0)), mload(0x01e0)), mload(0x01e0)))
-                            mstore(add(mload(0x0180), 2112), mload(0x80))
-                            usr$T4_1 := addmod(mulmod(3, mulmod(mload(0xa0), mload(0xa0), mload(0x01e0)), mload(0x01e0)), mulmod(mload(add(mload(0x0140), 160)), mulmod(mload(0x01c0), mload(0x01c0), mload(0x01e0)), mload(0x01e0)), mload(0x01e0))
-                            mstore(0xe0, mulmod(mulmod(mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mload(0x0100), mload(0x01e0)), mulmod(mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mload(0x0100), mload(0x01e0)), mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mload(0x0100), mload(0x01e0)), mload(0x01e0)), mload(0x01e0)), mload(0xe0), mload(0x01e0)))
-                            mstore(0x01c0, mulmod(mulmod(mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mload(0x0100), mload(0x01e0)), mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mload(0x0100), mload(0x01e0)), mload(0x01e0)), mload(0x01c0), mload(0x01e0)))
-                            mstore(0xa0, addmod(mulmod(usr$T4_1, usr$T4_1, mload(0x01e0)), mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mload(0x80), mload(0x01e0)), mload(0x01e0)))
-                            usr$T2 := mulmod(usr$T4_1, addmod(mload(0x80), sub(mload(0x01e0), mload(0xa0)), mload(0x01e0)), mload(0x01e0))
-                            mstore(0x0100, addmod(usr$T2, mulmod(mulmod(mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mload(0x0100), mload(0x01e0)), mulmod(mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mload(0x0100), mload(0x01e0)), mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mload(0x0100), mload(0x01e0)), mload(0x01e0)), mload(0x01e0)), mload(0x0100), mload(0x01e0)), mload(0x01e0)))
+                            let usr$T1 := mulmod(2, var_Y_80, usr$_p)
+                            let usr$T2 := mulmod(usr$T1, usr$T1, usr$_p)
+                            let usr$T3 := mulmod(var_X_60, usr$T2, usr$_p)
+                            usr$T1 := mulmod(usr$T1, usr$T2, usr$_p)
+                            let usr$T4 := mulmod(mload(add(var_Q_53_mpos, 160)), mulmod(var_ZZ_86, var_ZZ_86, usr$_p), usr$_p)
+                            usr$T4 := addmod(mulmod(3, mulmod(var_X_60, var_X_60, usr$_p), usr$_p), usr$T4, usr$_p)
+                            var_ZZZ_83 := mulmod(usr$T1, var_ZZZ_83, usr$_p)
+                            var_ZZ_86 := mulmod(usr$T2, var_ZZ_86, usr$_p)
+                            var_X_60 := sub(usr$_p, 2)
+                            var_X_60 := addmod(mulmod(usr$T4, usr$T4, usr$_p), mulmod(var_X_60, usr$T3, usr$_p), usr$_p)
+                            usr$T2 := mulmod(usr$T4, addmod(var_X_60, sub(usr$_p, usr$T3), usr$_p), usr$_p)
+                            var_Y_80 := addmod(mulmod(usr$T1, var_Y_80, usr$_p), usr$T2, usr$_p)
+                        }
+                        let usr$T1 := add(add(sub(1, iszero(and(var_scalar_u_55, var_mask_63))), shl(1, sub(1, iszero(and(shr(128, var_scalar_u_55), var_mask_63))))), add(shl(2, sub(1, iszero(and(var_scalar_v_57, var_mask_63)))), shl(3, sub(1, iszero(and(shr(128, var_scalar_v_57), var_mask_63))))))
+                        if iszero(usr$T1)
+                        {
+                            var_Y_80 := sub(usr$_p, var_Y_80)
                             continue
                         }
+                        usr$T1 := shl(7, usr$T1)
+                        let usr$T4 := mload(add(usr$Mem, usr$T1))
+                        mstore(add(usr$Mem, 2144), mload(add(usr$Mem, add(96, usr$T1))))
+                        if iszero(var_ZZ_86)
+                        {
+                            var_X_60 := usr$T4
+                            var_Y_80 := mload(add(usr$Mem, add(32, usr$T1)))
+                            var_ZZ_86 := mload(add(usr$Mem, add(64, usr$T1)))
+                            var_ZZZ_83 := mload(add(usr$Mem, add(96, usr$T1)))
+                            continue
+                        }
+                        mstore(add(usr$Mem, 2112), addmod(mulmod(mload(add(usr$Mem, add(32, usr$T1))), var_ZZZ_83, usr$_p), mulmod(var_Y_80, mload(add(usr$Mem, 2144)), usr$_p), usr$_p))
+                        usr$T1 := mload(add(usr$Mem, add(64, usr$T1)))
+                        let usr$T2 := addmod(mulmod(usr$T4, var_ZZ_86, usr$_p), sub(usr$_p, mulmod(var_X_60, usr$T1, usr$_p)), usr$_p)
+                        if iszero(mload(add(usr$Mem, 2112)))
+                        {
+                            if iszero(usr$T2)
+                            {
+                                usr$T1 := mulmod(sub(usr$_p, 2), var_Y_80, usr$_p)
+                                usr$T2 := mulmod(usr$T1, usr$T1, usr$_p)
+                                mstore(add(usr$Mem, 2112), mulmod(var_X_60, usr$T2, usr$_p))
+                                usr$T1 := mulmod(usr$T1, usr$T2, usr$_p)
+                                usr$T4 := mulmod(mload(add(var_Q_53_mpos, 160)), mulmod(var_ZZ_86, var_ZZ_86, usr$_p), usr$_p)
+                                usr$T4 := addmod(mulmod(3, mulmod(var_X_60, var_X_60, usr$_p), usr$_p), usr$T4, usr$_p)
+                                var_ZZZ_83 := mulmod(usr$T1, var_ZZZ_83, usr$_p)
+                                var_ZZ_86 := mulmod(usr$T2, var_ZZ_86, usr$_p)
+                                var_X_60 := addmod(mulmod(usr$T4, usr$T4, usr$_p), mulmod(sub(usr$_p, 2), mload(add(usr$Mem, 2112)), usr$_p), usr$_p)
+                                usr$T2 := mulmod(usr$T4, addmod(mload(add(usr$Mem, 2112)), sub(usr$_p, var_X_60), usr$_p), usr$_p)
+                                var_Y_80 := addmod(usr$T2, mulmod(usr$T1, var_Y_80, usr$_p), usr$_p)
+                                continue
+                            }
+                        }
+                        usr$T4 := mulmod(usr$T2, usr$T2, usr$_p)
+                        usr$T2 := mulmod(usr$T4, usr$T2, usr$_p)
+                        var_ZZ_86 := mulmod(mulmod(var_ZZ_86, usr$T4, usr$_p), usr$T1, usr$_p)
+                        usr$T1 := mulmod(var_X_60, usr$T1, usr$_p)
+                        var_ZZZ_83 := mulmod(mulmod(var_ZZZ_83, usr$T2, usr$_p), mload(add(usr$Mem, 2144)), usr$_p)
+                        var_X_60 := addmod(addmod(mulmod(mload(add(usr$Mem, 2112)), mload(add(usr$Mem, 2112)), usr$_p), sub(usr$_p, usr$T2), usr$_p), mulmod(usr$T1, mulmod(sub(usr$_p, 2), usr$T4, usr$_p), usr$_p), usr$_p)
+                        usr$T4 := mulmod(usr$T1, usr$T4, usr$_p)
+                        var_Y_80 := addmod(mulmod(addmod(usr$T4, sub(usr$_p, var_X_60), usr$_p), mload(add(usr$Mem, 2112)), usr$_p), mulmod(mulmod(var_Y_80, mload(add(usr$Mem, 2144)), usr$_p), usr$T2, usr$_p), usr$_p)
                     }
-                    mstore(0x01c0, mulmod(mulmod(mload(0x01c0), mulmod(usr$T2, usr$T2, mload(0x01e0)), mload(0x01e0)), usr$T1_1, mload(0x01e0)))
-                    let usr$T1_2 := mulmod(mload(0xa0), usr$T1_1, mload(0x01e0))
-                    mstore(0xe0, mulmod(mulmod(mload(0xe0), mulmod(mulmod(usr$T2, usr$T2, mload(0x01e0)), usr$T2, mload(0x01e0)), mload(0x01e0)), _35, mload(0x01e0)))
-                    let _37 := mload(add(mload(0x0180), 2112))
-                    mstore(0xa0, addmod(addmod(mulmod(_37, _37, mload(0x01e0)), sub(mload(0x01e0), mulmod(mulmod(usr$T2, usr$T2, mload(0x01e0)), usr$T2, mload(0x01e0))), mload(0x01e0)), mulmod(usr$T1_2, mulmod(add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)), /** @src 0:2864:14142  "assembly (\"memory-safe\") {..." */ mulmod(usr$T2, usr$T2, mload(0x01e0)), mload(0x01e0)), mload(0x01e0)), mload(0x01e0)))
-                    mstore(0x0100, addmod(mulmod(addmod(mulmod(usr$T1_2, mulmod(usr$T2, usr$T2, mload(0x01e0)), mload(0x01e0)), sub(mload(0x01e0), mload(0xa0)), mload(0x01e0)), _37, mload(0x01e0)), mulmod(mulmod(mload(0x0100), _35, mload(0x01e0)), mulmod(mulmod(usr$T2, usr$T2, mload(0x01e0)), usr$T2, mload(0x01e0)), mload(0x01e0)), mload(0x01e0)))
+                    mstore(0x40, 2176)
+                    let usr$T := mload(0x40)
+                    mstore(add(usr$T, 0x60), var_ZZ_86)
+                    mstore(usr$T, 0x20)
+                    mstore(add(usr$T, 0x20), 0x20)
+                    mstore(add(usr$T, 0x40), 0x20)
+                    mstore(add(usr$T, 0x80), sub(usr$_p, 2))
+                    mstore(add(usr$T, 0xa0), usr$_p)
+                    if iszero(staticcall(not(0), 0x05, usr$T, 0xc0, usr$T, 0x20))
+                    {
+                        mstore(0x40, 2047)
+                        revert(0x40, 0x20)
+                    }
+                    var_X_60 := mulmod(var_X_60, mload(usr$T), usr$_p)
                 }
-                mstore(0x40, 2176)
-                mstore(2272, mload(0x01c0))
-                mstore(2176, 32)
-                mstore(2208, 32)
-                mstore(2240, 32)
-                mstore(2304, add(mload(0x01e0), not(/** @src 0:2011:14164  "contract Contract {..." */ 1)))
-                /// @src 0:2864:14142  "assembly (\"memory-safe\") {..."
-                mstore(2336, mload(0x01e0))
-                if iszero(staticcall(not(0), 0x05, 2176, 192, 2176, 32))
-                {
-                    mstore(0x40, 2047)
-                    revert(0x40, 32)
-                }
-                mstore(0xa0, mulmod(mload(0xa0), mload(2176), mload(0x01e0)))
+
             }
+            /// @src 0:2011:14102  "contract Contract {..."
+
         }
-        data ".metadata" hex"a26469706673582212206730a111b8db8822867b5c4ebd5f13275a06ffcd338937b7f32169a8773f4d6d64736f6c634300081b0033"
+
+        data ".metadata" hex"a2646970667358221220fabf0b08487ebc86e7a3d068a53dd1bf308d76dd68b5fb240112ed47c0c9263864736f6c634300081b0033"
     }
+
 }
+
 

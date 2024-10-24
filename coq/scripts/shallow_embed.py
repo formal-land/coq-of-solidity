@@ -27,7 +27,8 @@ def name_to_coq(name: str) -> str:
     if name in reserved_names:
         return name + "_"
 
-    return name.replace("$", "'dollar'")
+    # We do this replacement to get the name accepted in Coq
+    return name.replace("$", "δ")
 
 
 def names_to_coq(as_pattern: bool, names: list[str]) -> str:
@@ -151,10 +152,12 @@ def statement_to_coq(node) -> tuple[Callable[[set[str]], str], set[str], set[str
     if node_type == 'YulBlock':
         statement, statement_updated_vars = block_to_coq(None, node)
         return (
-            lambda _:
-                "do~\n" + \
+            lambda final_updated_vars:
+                "let_state~ " + \
+                updated_vars_to_coq(True, statement_updated_vars) + \
+                " :=\n" + \
                 indent(statement) + "\n" + \
-                "in",
+                "default~ " + updated_vars_to_coq(False, final_updated_vars) + " in",
             set(),
             statement_updated_vars,
         )
@@ -256,17 +259,17 @@ def statement_to_coq(node) -> tuple[Callable[[set[str]], str], set[str], set[str
                         indent(lift_state_update(
                             body,
                             updated_vars,
-                            final_updated_vars,
+                            commonly_updated_vars,
                         ))
                         for value, (body, updated_vars) in cases
                     ) + "\n" + \
                     "else\n" + \
                     indent(
                         "M.pure (BlockUnit.Tt, " + \
-                        updated_vars_to_coq(False, final_updated_vars) + ")"
+                        updated_vars_to_coq(False, commonly_updated_vars) + ")"
                     )
                 ) + "\n" + \
-                "]] in",
+                "]] default~ " + updated_vars_to_coq(False, final_updated_vars) + " in",
             set(),
             commonly_updated_vars,
         )
@@ -280,11 +283,21 @@ def statement_to_coq(node) -> tuple[Callable[[set[str]], str], set[str], set[str
         )
 
     elif node_type == 'YulForLoop':
-        # We have not yet seen a case where the pre block is not empty, so this is not
-        # tested and we prefer to return an exception.
         if not is_pre_empty_block(node.get('pre')):
-            # raise Exception("Non-empty pre block in for loop not handled")
-            print("Non-empty pre block in for loop not handled", file=sys.stderr)
+            return statement_to_coq({
+                'nodeType': 'YulBlock',
+                'statements':
+                    node.get('pre').get('statements', []) + [{
+                        'nodeType': 'YulForLoop',
+                        'pre': {
+                            'nodeType': 'YulBlock',
+                            'statements': [],
+                        },
+                        'condition': node.get('condition'),
+                        'post': node.get('post'),
+                        'body': node.get('body'),
+                    }]
+            })
 
         condition = expression_to_coq(node.get('condition'))
         post, post_updated_vars = block_to_coq(None, node.get('post'))
@@ -386,15 +399,29 @@ def function_definition_to_coq(node) -> str:
         " (" + name + " : U256.t)"
         for name in param_names
     ])
-    body, _ = block_to_coq(None, node.get('body'))
+    body, body_updated_vars = block_to_coq(None, node.get('body'))
+    returnVariables = node.get('returnVariables', [])
     return \
         f"Definition {name}{params} : M.t " + \
-        function_result_type(len(node.get('returnVariables', []))) + " :=\n" + \
+        function_result_type(len(returnVariables)) + " :=\n" + \
         indent(
-            "let~ '(_, result) :=" + "\n" + \
+            "let~ '(_, " + updated_vars_to_coq(False, body_updated_vars) + ") :=" + \
+            "\n" + \
+            (
+                indent(
+                    "let " + variable_names_to_coq(True, returnVariables) + " := " + \
+                    (
+                        "0"
+                        if len(returnVariables) == 1
+                        else "(" + ", ".join(["0"] * len(returnVariables)) + ")"
+                    ) + " in"
+                ) + "\n"
+                if len(returnVariables) != 0
+                else ""
+            ) + \
             indent(body) + "\n" + \
             "in\n" + \
-            "M.pure result"
+            "M.pure " + variable_names_to_coq(False, returnVariables)
         ) + "."
 
 
@@ -492,7 +519,12 @@ def top_level_to_coq(node) -> str:
         ]
         body = \
             "Definition body : M.t unit :=\n" + \
-            indent(block_to_coq([], node)[0]) + "."
+            indent(
+                "let~ '(_, result) :=" + "\n" + \
+                indent(block_to_coq(None, node)[0]) + "\n" + \
+                "in\n" + \
+                "M.pure result"
+            ) + "."
         return ("\n\n").join(functions + [body])
 
     return f"(* Unsupported top-level node type: {node_type} *)"

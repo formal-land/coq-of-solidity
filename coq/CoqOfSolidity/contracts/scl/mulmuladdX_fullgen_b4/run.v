@@ -23,59 +23,58 @@ Module Params.
 End Params.
 
 Definition ecAddn2 (p : U256.t) (P1 : PZZ.t) (P2 : PA.t) : PZZ.t :=
-  let usr'dollar'x1 := P1.(PZZ.X) in
-  let usr'dollar'y1 := P1.(PZZ.Y) in
-  let usr'dollar'zz1 := P1.(PZZ.ZZ) in
-  let usr'dollar'zzz1 := P1.(PZZ.ZZZ) in
-  let usr'dollar'x2 := P2.(PA.X) in
-  let usr'dollar'y2 := P2.(PA.Y) in
-  let usr'dollar'_p := p in
+  let P1_X := P1.(PZZ.X) in
+  let P1_Y := P1.(PZZ.Y) in
+  let P1_ZZ := P1.(PZZ.ZZ) in
+  let P1_ZZZ := P1.(PZZ.ZZZ) in
+  let P2_X := P2.(PA.X) in
+  let P2_Y := P2.(PA.Y) in
 
-  let usr'dollar'y2_1 :=
+  let y2_1 :=
     Pure.addmod
-      (Pure.mulmod usr'dollar'y2 usr'dollar'zzz1 usr'dollar'_p)
-      (Pure.sub usr'dollar'_p usr'dollar'y1)
-      usr'dollar'_p in
-  let usr'dollar'x2_1 :=
+      (Pure.mulmod P2_Y P1_ZZZ p)
+      (Pure.sub p P1_Y)
+      p in
+  let x2_1 :=
     Pure.addmod
-      (Pure.mulmod usr'dollar'x2 usr'dollar'zz1 usr'dollar'_p)
-      (Pure.sub usr'dollar'_p usr'dollar'x1)
-      usr'dollar'_p in
+      (Pure.mulmod P2_X P1_ZZ p)
+      (Pure.sub p P1_X)
+      p in
   let usr_x_1 :=
-    Pure.mulmod usr'dollar'x2_1 usr'dollar'x2_1 usr'dollar'_p in
+    Pure.mulmod x2_1 x2_1 p in
   let usr_y_1 :=
-    Pure.mulmod usr_x_1 usr'dollar'x2_1 usr'dollar'_p in
+    Pure.mulmod usr_x_1 x2_1 p in
   let usr_zz :=
-    Pure.mulmod usr'dollar'zz1 usr_x_1 usr'dollar'_p in
+    Pure.mulmod P1_ZZ usr_x_1 p in
   let usr_zzz :=
-    Pure.mulmod usr'dollar'zzz1 usr_y_1 usr'dollar'_p in
-  let usr'dollar'zz1_1 :=
-    Pure.mulmod usr'dollar'x1 usr_x_1 usr'dollar'_p in
+    Pure.mulmod P1_ZZZ usr_y_1 p in
+  let zz1_1 :=
+    Pure.mulmod P1_X usr_x_1 p in
   let usr_x :=
     Pure.addmod
       (Pure.addmod
-        (Pure.mulmod usr'dollar'y2_1 usr'dollar'y2_1 usr'dollar'_p)
-        (Pure.sub usr'dollar'_p usr_y_1)
-        usr'dollar'_p)
+        (Pure.mulmod y2_1 y2_1 p)
+        (Pure.sub p usr_y_1)
+        p)
       (Pure.mulmod
-        (Pure.add usr'dollar'_p (Pure.not 1))
-        usr'dollar'zz1_1
-        usr'dollar'_p)
-      usr'dollar'_p in
+        (Pure.sub p 2)
+        zz1_1
+        p)
+      p in
   let usr_y :=
     Pure.addmod
       (Pure.mulmod
         (Pure.addmod
-          usr'dollar'zz1_1
-          (Pure.sub usr'dollar'_p usr_x)
-          usr'dollar'_p)
-        usr'dollar'y2_1
-        usr'dollar'_p)
+          zz1_1
+          (Pure.sub p usr_x)
+          p)
+        y2_1
+        p)
       (Pure.mulmod
-        (Pure.sub usr'dollar'_p usr'dollar'y1)
+        (Pure.sub p P1_Y)
         usr_y_1
-        usr'dollar'_p)
-      usr'dollar'_p in
+        p)
+      p in
 
   {|
     PZZ.X := usr_x;
@@ -84,7 +83,7 @@ Definition ecAddn2 (p : U256.t) (P1 : PZZ.t) (P2 : PA.t) : PZZ.t :=
     PZZ.ZZZ := usr_zzz
   |}.
 
-Lemma run_usr'dollar'ecAddn2 codes environment state
+Lemma run_usrδecAddn2 codes environment state
     (P1_X P1_Y P1_ZZ P1_ZZZ P2_X P2_Y : U256.t) (p : U256.t) :
   let output :=
     ecAddn2 p
@@ -92,46 +91,18 @@ Lemma run_usr'dollar'ecAddn2 codes environment state
       {| PA.X := P2_X; PA.Y := P2_Y |} in
   let output := Result.Ok (output.(PZZ.X), output.(PZZ.Y), output.(PZZ.ZZ), output.(PZZ.ZZZ)) in
   {{? codes, environment, Some state |
-    Contract_91.Contract_91_deployed.usr'dollar'ecAddn2 P1_X P1_Y P1_ZZ P1_ZZZ P2_X P2_Y p ⇓
+    Contract_91.Contract_91_deployed.usrδecAddn2 P1_X P1_Y P1_ZZ P1_ZZZ P2_X P2_Y p ⇓
     output
   | Some state ?}}.
 Proof.
   simpl.
-  unfold Contract_91.Contract_91_deployed.usr'dollar'ecAddn2.
+  unfold Contract_91.Contract_91_deployed.usrδecAddn2.
   l. {
     repeat (l; [repeat cu; p|]).
     p.
   }
   p.
 Qed.
-
-Lemma run_usr'dollar'ecAddn2_2189 codes environment state
-    (P1_X P1_Y P2_X P2_Y : U256.t) (p : U256.t) :
-  let output :=
-    ecAddn2 p
-      {| PZZ.X := P1_X; PZZ.Y := P1_Y; PZZ.ZZ := 1; PZZ.ZZZ := 1 |}
-      {| PA.X := P2_X; PA.Y := P2_Y |} in
-  let output := Result.Ok (output.(PZZ.X), output.(PZZ.Y), output.(PZZ.ZZ), output.(PZZ.ZZZ)) in
-  {{? codes, environment, Some state |
-    Contract_91.Contract_91_deployed.usr'dollar'ecAddn2_2189 P1_X P1_Y P2_X P2_Y p ⇓
-    output
-  | Some state ?}}.
-Proof.
-  simpl.
-  unfold Contract_91.Contract_91_deployed.usr'dollar'ecAddn2_2189.
-  l. {
-    repeat (l; [repeat cu; p|]).
-    p.
-  }
-  p.
-Qed.
-
-Module Ts.
-  Definition t : Set := list PZZ.t.
-
-  Definition get (Ts : t) (index : nat) : PZZ.t :=
-    List.nth index Ts PZZ.zero.
-End Ts.
 
 (*
   {
@@ -388,8 +359,9 @@ Ltac load_store_line :=
         p ||
         apply_run_mload ||
         apply_run_mstore ||
-        apply run_usr'dollar'ecAddn2 ||
-        apply run_usr'dollar'ecAddn2_2189
+        apply run_usrδecAddn2 ||
+        (* For mstore4 *)
+        (l; [repeat load_store_line |])
       |];
       CanonizeState.execute;
       s
@@ -460,19 +432,19 @@ Lemma run_get_point_coordinate codes environment state
   let start_state := make_state environment state memory [] in
   start_state' = start_state ->
   {{? codes, environment, Some start_state' |
-    mload (Pure.add (Pure.add 0 2048) (Pure.shl 7 (PointsSelector.to_Z selector))) ⇓
+    mload (Pure.add 2048 (Pure.shl 7 (PointsSelector.to_Z selector))) ⇓
     Result.Ok (PointsSelector.get_point p Q Q' G G' selector).(PZZ.X)
   | Some start_state' ?}} /\
   {{? codes, environment, Some start_state' |
-    mload (Pure.add (Pure.add (Pure.add 0 2048) (Pure.shl 7 (PointsSelector.to_Z selector))) 32) ⇓
+    mload (Pure.add 2048 (Pure.add 32 (Pure.shl 7 (PointsSelector.to_Z selector)))) ⇓
     Result.Ok (PointsSelector.get_point p Q Q' G G' selector).(PZZ.Y)
   | Some start_state' ?}} /\
   {{? codes, environment, Some start_state' |
-    mload (Pure.add (Pure.add (Pure.add 0 2048) (Pure.shl 7 (PointsSelector.to_Z selector))) 64) ⇓
+    mload (Pure.add 2048 (Pure.add 64 (Pure.shl 7 (PointsSelector.to_Z selector)))) ⇓
     Result.Ok (PointsSelector.get_point p Q Q' G G' selector).(PZZ.ZZ)
   | Some start_state' ?}} /\
   {{? codes, environment, Some start_state' |
-    mload (Pure.add (Pure.add (Pure.add 0 2048) (Pure.shl 7 (PointsSelector.to_Z selector))) 96) ⇓
+    mload (Pure.add 2048 (Pure.add 96 (Pure.shl 7 (PointsSelector.to_Z selector)))) ⇓
     Result.Ok (PointsSelector.get_point p Q Q' G G' selector).(PZZ.ZZZ)
   | Some start_state' ?}}.
 Proof.
@@ -485,10 +457,20 @@ Proof.
     apply_run_mload.
 Qed.
 
+Lemma run_zero_value_for_split_t_uint256 codes environment state :
+  {{? codes, environment, state |
+    Contract_91.Contract_91_deployed.zero_value_for_split_t_uint256 ⇓
+    Result.Ok 0
+  | state ?}}.
+Proof.
+  unfold Contract_91.Contract_91_deployed.zero_value_for_split_t_uint256.
+  repeat lu; p.
+Qed.
+
 Lemma run_fun_ecGenMulmuladdX_store_2814 codes environment state
     (
-      mem0 mem1 mem3 mem4 mem5 mem6 mem7 mem8
-      mem12 mem13 mem14 :
+      mem0 mem1 mem3 mem4 mem5 mem6 mem7 mem8 mem9
+      mem11 mem12 mem13 mem14 :
       U256.t
     )
     (Q Q' G G' : PA.t) (p a : Z) (u_low u_high v_low v_high : U256.t)
@@ -514,8 +496,8 @@ Lemma run_fun_ecGenMulmuladdX_store_2814 codes environment state
   let params_offset : U256.t := 32 * 15 in
   let memory_start : list U256.t :=
     [
-      mem0; mem1; memoryguard; mem3; mem4; mem5; mem6; mem7; mem8; u;
-      params_offset; v; mem12; mem13; mem14;
+      mem0; mem1; memoryguard; mem3; mem4; mem5; mem6; mem7; mem8; mem9;
+      params_offset; mem11; mem12; mem13; mem14;
       params.(Params.Qx);
       params.(Params.Qy);
       params.(Params.Q'x);
@@ -534,15 +516,314 @@ Lemma run_fun_ecGenMulmuladdX_store_2814 codes environment state
   let state_end :=
     make_state environment state memory_end [] in
   (* let output := sim_fun_ecGenMulmuladdX_store_2814_beginning Q scalar_u scalar_v in *)
-  let output := Result.Ok tt in
+  let output := Result.Ok 12 in
   {{? codes, environment, Some state_start |
-    Contract_91.Contract_91_deployed.fun_ecGenMulmuladdX_store_2814 ⇓
+    Contract_91.Contract_91_deployed.fun_ecGenMulmuladdX_store_90 params_offset u v ⇓
     output
   | Some state_end ?}}.
 Proof.
   intros u v; simpl.
-  unfold Contract_91.Contract_91_deployed.fun_ecGenMulmuladdX_store_2814.
+  unfold Contract_91.Contract_91_deployed.fun_ecGenMulmuladdX_store_90.
   l. {
+    l. {
+      repeat (cu || lu); p.
+    }
+    repeat (l; [p|]).
+    l. {
+      repeat (cu || lu); p.
+    }
+    repeat (l; [p|]).
+    l. {
+      repeat (cu || lu); p.
+    }
+    repeat (l; [p|]).
+    eapply RunO.Let with (output_inter := Result.Ok (BlockUnit.Tt, if u =? 0 then _ else _)). {
+      unfold Pure.eq.
+      destruct (u =? 0);
+        repeat (cu || lu);
+        p.
+    }
+    unfold Shallow.if_.
+    match goal with
+    | |- context[if ?condition then _ else _] =>
+      destruct condition eqn:H_u_v_zero
+    end. 2: {
+      (* if [u] and [v] are null *)
+      repeat (cu || lu); p.
+    }
+    repeat (l; [p || (repeat (cu || lu); p)|]).
+    l. {
+      repeat load_store_line.
+      l. {
+        (* The long block of initialization of the pre-computed sums *)
+        repeat load_store_line.
+      }
+      (* We duplicate the tactic instead of doing a [repeat] as this is rather slow *)
+      set (ecAddn2 _ _ _) in |- *.
+      set (ecAddn2 _ _ _) in |- *.
+      set (ecAddn2 _ _ _) in |- *.
+      set (ecAddn2 _ _ _) in |- *.
+      set (ecAddn2 _ _ _) in |- *.
+      set (ecAddn2 _ _ _) in |- *.
+      set (ecAddn2 _ _ _) in |- *.
+      set (ecAddn2 _ _ _) in |- *.
+      set (ecAddn2 _ _ _) in |- *.
+      set (ecAddn2 _ _ _) in |- *.
+      set (ecAddn2 _ _ _) in |- *.
+      (* We simplify these additions that are a little bit too unfolded *)
+      repeat match goal with
+      | t := ecAddn2 _ ?P1 ?P2 : _ |- _ =>
+        match P1 with
+        | {| PZZ.X := ?P.(PA.X) |} =>
+          change P1 with (PZZ.of_PA P) in t
+        end ||
+        match goal with
+        | P := _ : _ |- _ =>
+          change P1 with P in t
+        end ||
+        match P2 with
+        | {| PA.X := ?P.(PA.X) |} =>
+          change P2 with P in t
+        end
+      end.
+      (* We flatten the additions *)
+      repeat match goal with
+      | _ := ?t : PZZ.t |- _ =>
+        let t' := eval cbv - [ecAddn2 PZZ.of_PA] in t in
+        progress change t with t' in * |-
+      end.
+      (* We show that the memory is equal to the description based on selectors *)
+      set (P0 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t false false false false)).
+      set (P1 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t true false false false)).
+      set (P2 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t false true false false)).
+      set (P3 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t true true false false)).
+      set (P4 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t false false true false)).
+      set (P5 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t true false true false)).
+      set (P6 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t false true true false)).
+      set (P7 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t true true true false)).
+      set (P8 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t false false false true)).
+      set (P9 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t true false false true)).
+      set (P10 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t false true false true)).
+      set (P11 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t true true false true)).
+      set (P12 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t false false true true)).
+      set (P13 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t true false true true)).
+      set (P14 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t false true true true)).
+      set (P15 := PointsSelector.get_point p Q Q' G G' (PointsSelector.Build_t true true true true)).
+      apply_memory_update_at (2048 + 0 * 32) P0.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 1 * 32) P0.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 2 * 32) P0.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 3 * 32) P0.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 4 * 32) P1.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 5 * 32) P1.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 6 * 32) P1.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 7 * 32) P1.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 8 * 32) P2.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 9 * 32) P2.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 10 * 32) P2.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 11 * 32) P2.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 12 * 32) P3.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 13 * 32) P3.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 14 * 32) P3.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 15 * 32) P3.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 16 * 32) P4.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 17 * 32) P4.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 18 * 32) P4.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 19 * 32) P4.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 20 * 32) P5.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 21 * 32) P5.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 22 * 32) P5.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 23 * 32) P5.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 24 * 32) P6.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 25 * 32) P6.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 26 * 32) P6.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 27 * 32) P6.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 28 * 32) P7.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 29 * 32) P7.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 30 * 32) P7.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 31 * 32) P7.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 32 * 32) P8.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 33 * 32) P8.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 34 * 32) P8.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 35 * 32) P8.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 36 * 32) P9.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 37 * 32) P9.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 38 * 32) P9.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 39 * 32) P9.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 40 * 32) P10.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 41 * 32) P10.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 42 * 32) P10.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 43 * 32) P10.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 44 * 32) P11.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 45 * 32) P11.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 46 * 32) P11.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 47 * 32) P11.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 48 * 32) P12.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 49 * 32) P12.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 50 * 32) P12.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 51 * 32) P12.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 52 * 32) P13.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 53 * 32) P13.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 54 * 32) P13.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 55 * 32) P13.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 56 * 32) P14.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 57 * 32) P14.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 58 * 32) P14.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 59 * 32) P14.(PZZ.ZZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 60 * 32) P15.(PZZ.X); [reflexivity|].
+      apply_memory_update_at (2048 + 61 * 32) P15.(PZZ.Y); [reflexivity|].
+      apply_memory_update_at (2048 + 62 * 32) P15.(PZZ.ZZ); [reflexivity|].
+      apply_memory_update_at (2048 + 63 * 32) P15.(PZZ.ZZZ); [reflexivity|].
+      (* Remove unused definitions *)
+      repeat match reverse goal with
+      | t := _ : PZZ.t |- _ => clear t
+      end.
+      l. {
+        p.
+      }
+      (* For loop for the most significant bit *)
+      l. {
+        eapply RunO.LoopOneStepUnsafe with (default_output := Result.Ok (BlockUnit.Tt, (
+          HighLow.raw_get_selector u v (2 ^ 127),
+          2 ^ 126
+        ))). {
+          l. {
+            cu; p.
+          }
+          l. {
+            l. {
+              repeat cu; p.
+            }
+            p.
+          }
+          repeat (lu || cu); p.
+        }
+        p.
+      }
+      unfold u, v.
+      change (Pure.add 0 2048) with 2048.
+      Ltac run_load_coordinate :=
+        l; [
+          repeat (c; [p || apply_run_mload|]);
+          c; [
+            rewrite <- HighLow.get_selector_eq by (try assumption; lia);
+            eapply run_get_point_coordinate; reflexivity
+          |];
+          p
+        |].
+      do 4 run_load_coordinate.
+      repeat load_store_line.
+      l. {
+        eapply RunO.LoopOneStepUnsafe with (default_output := Result.Ok (BlockUnit.Tt, (
+          0,
+          0,
+          0,
+          0,
+          0
+        ))). {
+          set (P_127 := PointsSelector.get_point p Q Q' G G' (HighLow.get_selector u_low u_high v_low v_high 127)).
+          load_store_line.
+          destruct (_ =? 0) in |- *; [p|].
+          l. {
+            l. {
+              repeat load_store_line.
+            }
+            set (dbl_neg_P_127 := ecDblNeg a p P_127).
+            match goal with
+            | |- context[Result.Ok (BlockUnit.Tt, (?X, ?Y, ?ZZZ, ?ZZ))] =>
+              replace X with dbl_neg_P_127.(PZZ.X) at 1 by reflexivity;
+              replace Y with dbl_neg_P_127.(PZZ.Y) at 1 by reflexivity;
+              replace ZZ with dbl_neg_P_127.(PZZ.ZZ) at 1 by reflexivity;
+              replace ZZZ with dbl_neg_P_127.(PZZ.ZZZ) at 1 by reflexivity
+            end.
+            load_store_line.
+            match goal with
+            | |- context[Stdlib.iszero ?selector] =>
+              change selector with (HighLow.raw_get_selector u v (2 ^ 126))
+            end.
+            l. {
+              c; [p|].
+              with_strategy opaque [Z.pow] s.
+              destruct (_ =? 0) in |- *. 2: {
+                load_store_line.
+              }
+              (* different end of branch *)
+              admit.
+            }
+            load_store_line.
+            2: {
+              unfold HighLow.raw_get_selector.
+            }
+            l. {
+
+            }
+            run_load_coordinate.
+          }
+        }
+      }
+      l. {
+        c. {
+          apply_run_mload.
+        }
+        p.
+      }
+      (* run_load_coordinate. *)
+      l. {
+        repeat (c; [p || apply_run_mload|]).
+        c. {
+          rewrite <- HighLow.get_selector_eq by (try assumption; lia).
+          eapply run_get_point_coordinate; reflexivity.
+        }
+        p.
+      }
+        c. {
+          apply_run_mload.
+        }
+        fold @LowM.let_.
+        c. {
+          p.
+        }
+        fold @LowM.let_.
+
+      }
+      (* l. {
+        try (c; [p || apply_run_mload|]; with_strategy opaque [Z.pow] s).
+      } *)
+      (* l. { *)
+        Ltac run_load_coordinate :=
+          l; [
+            try (c; [p || apply_run_mload|]; with_strategy opaque [Z.pow] s);
+            c; [
+              rewrite <- HighLow.get_selector_eq by (try assumption; lia);
+              eapply run_get_point_coordinate; reflexivity
+            |];
+            c; [
+              apply_run_mstore
+            |];
+            CanonizeState.execute;
+            p
+          |].
+        run_load_coordinate.
+      }
+        load_store_line.
+        unfold Contract_91.Contract_91_deployed.usrδmstore4 at 1.
+        load_store_line.
+      }
+    }
+    l. {
+      repeat (cu || lu); p.
+    }
+    l. {
+      repeat (cu || lu); p.
+    }
+    l. {
+      p.
+    }
+    l. {
+      p.
+    }
+    repeat (cu || lu); p.
+    end.
+    lu.
     repeat load_store_line.
     l. {
       unfold Shallow.if_, Pure.iszero.

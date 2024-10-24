@@ -66,41 +66,42 @@ contract Contract {
         
        // bytes memory Mem = new bytes(16*4*32);
         assembly ("memory-safe") {
-        
+          //store 4 256 bits values starting from addr+offset
+          function mstore4(addr, offset, val1, val2, val3, val4){
+            mstore(add(offset, addr),val1 )
+            offset:=add(32, offset)
+            mstore(add(offset, addr),val2 )
+            offset:=add(32, offset)
+            mstore(add(offset, addr),val3 )
+            offset:=add(32, offset)
+            mstore(add(offset, addr),val4 )
+            offset:=add(32, offset)
+          }
+
+          //normalized addition of two point, must not be neutral input 
+          function ecAddn2(x1, y1, zz1, zzz1, x2, y2, _p) -> _x, _y, _zz, _zzz {
+            y1 := sub(_p, y1)
+            y2 := addmod(mulmod(y2, zzz1, _p), y1, _p)
+            x2 := addmod(mulmod(x2, zz1, _p), sub(_p, x1), _p)
+            _x := mulmod(x2, x2, _p) //PP = P^2
+            _y := mulmod(_x, x2, _p) //PPP = P*PP
+            _zz := mulmod(zz1, _x, _p) ////ZZ3 = ZZ1*PP
+            
+            _zzz := mulmod(zzz1, _y, _p) ////ZZZ3 = ZZZ1*PPP
+            zz1 := mulmod(x1, _x, _p) //Q = X1*PP
+            _x := addmod(addmod(mulmod(y2, y2, _p), sub(_p, _y), _p), mulmod(sub(_p,2), zz1, _p), _p) //R^2-PPP-2*Q
+
+            x1:=mulmod(addmod(zz1, sub(_p, _x), _p), y2, _p)//necessary split not to explose stack
+            _y := addmod(x1, mulmod(y1, _y, _p), _p) //R*(Q-X3)
+          }
+
          mstore(0x40, add(mload(0x40), _Prec_T8))
          mstore(add(mload(0x40), _Ap), mload(add(Q, _modp)))  //load modulus into AP addresse 
 
-          //store 4 256 bits values starting from addr+offset
-          function mstore4(addr, offset, val1, val2, val3, val4){
-             mstore(add(offset, addr),val1 )
-             offset:=add(32, offset)
-             mstore(add(offset, addr),val2 )
-             offset:=add(32, offset)
-             mstore(add(offset, addr),val3 )
-             offset:=add(32, offset)
-             mstore(add(offset, addr),val4 )
-             offset:=add(32, offset)
-          }
           /* I. precomputations */
           //allocate memory for 15 projective points, first slot is unused
           {
            let _modulusp:=mload(add(mload(0x40), _Ap))   
-         //normalized addition of two point, must not be neutral input 
-         function ecAddn2(x1, y1, zz1, zzz1, x2, y2, _p) -> _x, _y, _zz, _zzz {
-                y1 := sub(_p, y1)
-                y2 := addmod(mulmod(y2, zzz1, _p), y1, _p)
-                x2 := addmod(mulmod(x2, zz1, _p), sub(_p, x1), _p)
-                _x := mulmod(x2, x2, _p) //PP = P^2
-                _y := mulmod(_x, x2, _p) //PPP = P*PP
-                _zz := mulmod(zz1, _x, _p) ////ZZ3 = ZZ1*PP
-                
-                _zzz := mulmod(zzz1, _y, _p) ////ZZZ3 = ZZZ1*PPP
-                zz1 := mulmod(x1, _x, _p) //Q = X1*PP
-                _x := addmod(addmod(mulmod(y2, y2, _p), sub(_p, _y), _p), mulmod(sub(_p,2), zz1, _p), _p) //R^2-PPP-2*Q
-
-                x1:=mulmod(addmod(zz1, sub(_p, _x), _p), y2, _p)//necessary split not to explose stack
-                _y := addmod(x1, mulmod(y1, _y, _p), _p) //R*(Q-X3)
-           }
 
           mstore4(mload(0x40), 128, mload(add(Q,_gx)), mload(add(Q,_gy)), 1, 1)                       //G the base point
           mstore4(mload(0x40), 256, mload(add(Q,_gpow2p128_x)), mload(add(Q,_gpow2p128_y)), 1, 1)     //G'=2^128.G

@@ -4,428 +4,658 @@ Require Import CoqOfSolidity.simulations.CoqOfSolidity.
 Import Stdlib.
 
 Module Contract_91.
-  Definition body : M.t unit :=
-    do~
-      let~ _1 := [[ memoryguard ~(| 0x80 |) ]] in
-      do~ [[ mstore ~(| 64, _1 |) ]] in
-      let_state~ 'tt := [[
-        Shallow.if_ (|
-          callvalue ~(||),
-          do~ [[ revert ~(| 0, 0 |) ]] in
-          M.pure (BlockUnit.Tt, tt),
-          tt
-        |)
-      ]] default~ tt in
-      let~ _2 := [[ datasize ~(| 0x436f6e74726163745f39315f6465706c6f796564000000000000000000000000 (* Contract_91_deployed *) |) ]] in
-      do~ [[ codecopy ~(| _1, dataoffset ~(| 0x436f6e74726163745f39315f6465706c6f796564000000000000000000000000 (* Contract_91_deployed *) |), _2 |) ]] in
-      do~ [[ return_ ~(| _1, _2 |) ]] in
+  Definition allocate_unbounded : M.t U256.t :=
+    let~ '(_, memPtr) :=
+      let memPtr := 0 in
+      let~ memPtr := [[ mload ~(| 64 |) ]] in
+      M.pure (BlockUnit.Tt, memPtr)
+    in
+    M.pure memPtr.
+
+  Definition constructor_Contract_91 : M.t unit :=
+    let~ '(_, tt) :=
       M.pure (BlockUnit.Tt, tt)
     in
     M.pure tt.
 
+  Definition revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb : M.t unit :=
+    let~ '(_, tt) :=
+      do~ [[ revert ~(| 0, 0 |) ]] in
+      M.pure (BlockUnit.Tt, tt)
+    in
+    M.pure tt.
+
+  Definition body : M.t unit :=
+    let~ '(_, result) :=
+      do~ [[ mstore ~(| 64, memoryguard ~(| 128 |) |) ]] in
+      let_state~ 'tt := [[
+        Shallow.if_ (|
+          callvalue ~(||),
+          do~ [[ revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb ~(||) ]] in
+          M.pure (BlockUnit.Tt, tt),
+          tt
+        |)
+      ]] default~ tt in
+      do~ [[ constructor_Contract_91 ~(||) ]] in
+      let~ _1 := [[ allocate_unbounded ~(||) ]] in
+      do~ [[ codecopy ~(| _1, dataoffset ~(| 0x436f6e74726163745f39315f6465706c6f796564000000000000000000000000 (* Contract_91_deployed *) |), datasize ~(| 0x436f6e74726163745f39315f6465706c6f796564000000000000000000000000 (* Contract_91_deployed *) |) |) ]] in
+      do~ [[ return_ ~(| _1, datasize ~(| 0x436f6e74726163745f39315f6465706c6f796564000000000000000000000000 (* Contract_91_deployed *) |) |) ]] in
+      M.pure (BlockUnit.Tt, tt)
+    in
+    M.pure result.
+
   Module Contract_91_deployed.
-    Definition usr'dollar'ecAddn2 (usr'dollar'x1 : U256.t) (usr'dollar'y1 : U256.t) (usr'dollar'zz1 : U256.t) (usr'dollar'zzz1 : U256.t) (usr'dollar'x2 : U256.t) (usr'dollar'y2 : U256.t) (usr'dollar'_p : U256.t) : M.t (U256.t * U256.t * U256.t * U256.t) :=
-      let~ '(_, result) :=
-        let~ usr'dollar'y2_1 := [[ addmod ~(| mulmod ~(| usr'dollar'y2, usr'dollar'zzz1, usr'dollar'_p |), sub ~(| usr'dollar'_p, usr'dollar'y1 |), usr'dollar'_p |) ]] in
-        let~ usr'dollar'x2_1 := [[ addmod ~(| mulmod ~(| usr'dollar'x2, usr'dollar'zz1, usr'dollar'_p |), sub ~(| usr'dollar'_p, usr'dollar'x1 |), usr'dollar'_p |) ]] in
-        let~ usr_x_1 := [[ mulmod ~(| usr'dollar'x2_1, usr'dollar'x2_1, usr'dollar'_p |) ]] in
-        let~ usr_y_1 := [[ mulmod ~(| usr_x_1, usr'dollar'x2_1, usr'dollar'_p |) ]] in
-        let~ usr_zz := [[ mulmod ~(| usr'dollar'zz1, usr_x_1, usr'dollar'_p |) ]] in
-        let~ usr_zzz := [[ mulmod ~(| usr'dollar'zzz1, usr_y_1, usr'dollar'_p |) ]] in
-        let~ usr'dollar'zz1_1 := [[ mulmod ~(| usr'dollar'x1, usr_x_1, usr'dollar'_p |) ]] in
-        let~ usr_x := [[ addmod ~(| addmod ~(| mulmod ~(| usr'dollar'y2_1, usr'dollar'y2_1, usr'dollar'_p |), sub ~(| usr'dollar'_p, usr_y_1 |), usr'dollar'_p |), mulmod ~(| add ~(| usr'dollar'_p, not ~(| 1 |) |), usr'dollar'zz1_1, usr'dollar'_p |), usr'dollar'_p |) ]] in
-        let~ usr_y := [[ addmod ~(| mulmod ~(| addmod ~(| usr'dollar'zz1_1, sub ~(| usr'dollar'_p, usr_x |), usr'dollar'_p |), usr'dollar'y2_1, usr'dollar'_p |), mulmod ~(| sub ~(| usr'dollar'_p, usr'dollar'y1 |), usr_y_1, usr'dollar'_p |), usr'dollar'_p |) ]] in
-        M.pure (BlockUnit.Tt, (usr_x, usr_y, usr_zz, usr_zzz))
+    Definition cleanup_t_uint256 (value : U256.t) : M.t U256.t :=
+      let~ '(_, cleaned) :=
+        let cleaned := 0 in
+        let~ cleaned := [[ value ]] in
+        M.pure (BlockUnit.Tt, cleaned)
       in
-      M.pure result.
+      M.pure cleaned.
 
-    Definition usr'dollar'ecAddn2_2189 (usr'dollar'x1 : U256.t) (usr'dollar'y1 : U256.t) (usr'dollar'x2 : U256.t) (usr'dollar'y2 : U256.t) (usr_p : U256.t) : M.t (U256.t * U256.t * U256.t * U256.t) :=
-      let~ '(_, result) :=
-        let~ usr'dollar'y1_1 := [[ sub ~(| usr_p, usr'dollar'y1 |) ]] in
-        let~ usr'dollar'y2_1 := [[ addmod ~(| mulmod ~(| usr'dollar'y2, 1, usr_p |), usr'dollar'y1_1, usr_p |) ]] in
-        let~ usr'dollar'x2_1 := [[ addmod ~(| mulmod ~(| usr'dollar'x2, 1, usr_p |), sub ~(| usr_p, usr'dollar'x1 |), usr_p |) ]] in
-        let~ usr_x_1 := [[ mulmod ~(| usr'dollar'x2_1, usr'dollar'x2_1, usr_p |) ]] in
-        let~ usr_y_1 := [[ mulmod ~(| usr_x_1, usr'dollar'x2_1, usr_p |) ]] in
-        let~ usr_zz := [[ mulmod ~(| 1, usr_x_1, usr_p |) ]] in
-        let~ usr_zzz := [[ mulmod ~(| 1, usr_y_1, usr_p |) ]] in
-        let~ usr'dollar'zz1 := [[ mulmod ~(| usr'dollar'x1, usr_x_1, usr_p |) ]] in
-        let~ usr_x := [[ addmod ~(| addmod ~(| mulmod ~(| usr'dollar'y2_1, usr'dollar'y2_1, usr_p |), sub ~(| usr_p, usr_y_1 |), usr_p |), mulmod ~(| add ~(| usr_p, not ~(| 1 |) |), usr'dollar'zz1, usr_p |), usr_p |) ]] in
-        let~ usr_y := [[ addmod ~(| mulmod ~(| addmod ~(| usr'dollar'zz1, sub ~(| usr_p, usr_x |), usr_p |), usr'dollar'y2_1, usr_p |), mulmod ~(| usr'dollar'y1_1, usr_y_1, usr_p |), usr_p |) ]] in
-        M.pure (BlockUnit.Tt, (usr_x, usr_y, usr_zz, usr_zzz))
-      in
-      M.pure result.
-
-    Definition fun_ecGenMulmuladdX_store_2814 : M.t unit :=
-      let~ '(_, result) :=
-        do~ [[ mstore ~(| 0xa0, 0 |) ]] in
-        do~ [[ mstore ~(| 0x01a0, shl ~(| 127, 1 |) |) ]] in
-        let~ expr := [[ iszero ~(| mload ~(| 0x0120 |) |) ]] in
-        let_state~ expr := [[
-          Shallow.if_ (|
-            expr,
-            let~ expr := [[ iszero ~(| mload ~(| 0x0160 |) |) ]] in
-            M.pure (BlockUnit.Tt, expr),
-            expr
-          |)
-        ]] default~ tt in
+    Definition validator_revert_t_uint256 (value : U256.t) : M.t unit :=
+      let~ '(_, tt) :=
         let_state~ 'tt := [[
           Shallow.if_ (|
-            expr,
-            do~ [[ mstore ~(| 0xa0, 0 |) ]] in
-            M.pure (BlockUnit.Leave, tt),
-            tt
-          |)
-        ]] default~ tt in
-        do~ [[ mstore ~(| 0x0100, 0 |) ]] in
-        do~ [[ mstore ~(| 0xe0, 0 |) ]] in
-        do~ [[ mstore ~(| 0x01c0, 0 |) ]] in
-        let~ _1 := [[ mload ~(| 0x40 |) ]] in
-        do~ [[ mstore ~(| 0x40, add ~(| _1, 2048 |) |) ]] in
-        do~ [[ mstore ~(| add ~(| _1, 4128 |), mload ~(| add ~(| mload ~(| 0x0140 |), 128 |) |) |) ]] in
-        let~ _2 := [[ mload ~(| 0x40 |) ]] in
-        let~ usr_modulusp := [[ mload ~(| add ~(| _2, 2080 |) |) ]] in
-        let~ _3 := [[ add ~(| mload ~(| 0x0140 |), 224 |) ]] in
-        let~ _4 := [[ mload ~(| _3 |) ]] in
-        let~ _5 := [[ add ~(| mload ~(| 0x0140 |), 192 |) ]] in
-        do~ [[ mstore ~(| add ~(| 128, _2 |), mload ~(| _5 |) |) ]] in
-        do~ [[ mstore ~(| add ~(| _2, 160 |), _4 |) ]] in
-        do~ [[ mstore ~(| add ~(| _2, 192 |), 1 |) ]] in
-        do~ [[ mstore ~(| add ~(| _2, 224 |), 1 |) ]] in
-        let~ _6 := [[ add ~(| mload ~(| 0x0140 |), 288 |) ]] in
-        let~ _7 := [[ mload ~(| _6 |) ]] in
-        let~ _8 := [[ add ~(| mload ~(| 0x0140 |), 256 |) ]] in
-        let~ _9 := [[ mload ~(| _8 |) ]] in
-        let~ _10 := [[ mload ~(| 0x40 |) ]] in
-        do~ [[ mstore ~(| add ~(| 256, _10 |), _9 |) ]] in
-        do~ [[ mstore ~(| add ~(| _10, 288 |), _7 |) ]] in
-        do~ [[ mstore ~(| add ~(| _10, 320 |), 1 |) ]] in
-        do~ [[ mstore ~(| add ~(| _10, 352 |), 1 |) ]] in
-        let~ var_X := [[ mload ~(| _8 |) ]] in
-        let~ var_Y := [[ mload ~(| _6 |) ]] in
-        let~ '(var_X_1, var_Y_1, var_ZZ, var_ZZZ) := [[ usr'dollar'ecAddn2_2189 ~(| var_X, var_Y, mload ~(| _5 |), mload ~(| _3 |), usr_modulusp |) ]] in
-        let~ _11 := [[ mload ~(| 0x40 |) ]] in
-        do~ [[ mstore ~(| add ~(| 384, _11 |), var_X_1 |) ]] in
-        do~ [[ mstore ~(| add ~(| _11, 416 |), var_Y_1 |) ]] in
-        do~ [[ mstore ~(| add ~(| _11, 448 |), var_ZZ |) ]] in
-        do~ [[ mstore ~(| add ~(| _11, 480 |), var_ZZZ |) ]] in
-        let~ _12 := [[ mload ~(| add ~(| 32, mload ~(| 0x0140 |) |) |) ]] in
-        let~ _13 := [[ mload ~(| mload ~(| 0x0140 |) |) ]] in
-        let~ _14 := [[ mload ~(| 0x40 |) ]] in
-        do~ [[ mstore ~(| add ~(| 512, _14 |), _13 |) ]] in
-        do~ [[ mstore ~(| add ~(| _14, 544 |), _12 |) ]] in
-        do~ [[ mstore ~(| add ~(| _14, 576 |), 1 |) ]] in
-        do~ [[ mstore ~(| add ~(| _14, 608 |), 1 |) ]] in
-        let~ _15 := [[ mload ~(| _3 |) ]] in
-        let~ _16 := [[ mload ~(| _5 |) ]] in
-        let~ _17 := [[ add ~(| mload ~(| 0x0140 |), 32 |) ]] in
-        let~ '(var_X_2, var_Y_2, var_ZZ_1, var_ZZZ_1) := [[ usr'dollar'ecAddn2_2189 ~(| mload ~(| mload ~(| 0x0140 |) |), mload ~(| _17 |), _16, _15, usr_modulusp |) ]] in
-        let~ _18 := [[ mload ~(| 0x40 |) ]] in
-        do~ [[ mstore ~(| add ~(| 640, _18 |), var_X_2 |) ]] in
-        do~ [[ mstore ~(| add ~(| _18, 672 |), var_Y_2 |) ]] in
-        do~ [[ mstore ~(| add ~(| _18, 704 |), var_ZZ_1 |) ]] in
-        do~ [[ mstore ~(| add ~(| _18, 736 |), var_ZZZ_1 |) ]] in
-        let~ var_X_3 := [[ mload ~(| _8 |) ]] in
-        let~ var_Y_3 := [[ mload ~(| _6 |) ]] in
-        let~ '(var_X_4, var_Y_4, var_ZZ_2, var_ZZZ_2) := [[ usr'dollar'ecAddn2_2189 ~(| var_X_3, var_Y_3, mload ~(| mload ~(| 0x0140 |) |), mload ~(| _17 |), usr_modulusp |) ]] in
-        let~ _19 := [[ mload ~(| 0x40 |) ]] in
-        do~ [[ mstore ~(| add ~(| 768, _19 |), var_X_4 |) ]] in
-        do~ [[ mstore ~(| add ~(| _19, 800 |), var_Y_4 |) ]] in
-        do~ [[ mstore ~(| add ~(| _19, 832 |), var_ZZ_2 |) ]] in
-        do~ [[ mstore ~(| add ~(| _19, 864 |), var_ZZZ_2 |) ]] in
-        let~ '(var_X_5, var_Y_5, var_ZZ_3, var_ZZZ_3) := [[ usr'dollar'ecAddn2 ~(| var_X_4, var_Y_4, var_ZZ_2, var_ZZZ_2, mload ~(| _5 |), mload ~(| _3 |), usr_modulusp |) ]] in
-        let~ _20 := [[ mload ~(| 0x40 |) ]] in
-        do~ [[ mstore ~(| add ~(| 896, _20 |), var_X_5 |) ]] in
-        do~ [[ mstore ~(| add ~(| _20, 928 |), var_Y_5 |) ]] in
-        do~ [[ mstore ~(| add ~(| _20, 960 |), var_ZZ_3 |) ]] in
-        do~ [[ mstore ~(| add ~(| _20, 992 |), var_ZZZ_3 |) ]] in
-        let~ _21 := [[ add ~(| mload ~(| 0x0140 |), 96 |) ]] in
-        let~ _22 := [[ mload ~(| _21 |) ]] in
-        let~ _23 := [[ add ~(| mload ~(| 0x0140 |), 0x40 |) ]] in
-        let~ _24 := [[ mload ~(| _23 |) ]] in
-        let~ _25 := [[ mload ~(| 0x40 |) ]] in
-        do~ [[ mstore ~(| add ~(| 1024, _25 |), _24 |) ]] in
-        do~ [[ mstore ~(| add ~(| _25, 1056 |), _22 |) ]] in
-        do~ [[ mstore ~(| add ~(| _25, 1088 |), 1 |) ]] in
-        do~ [[ mstore ~(| add ~(| _25, 1120 |), 1 |) ]] in
-        let~ _26 := [[ mload ~(| 0x40 |) ]] in
-        let~ '(var_X_6, var_Y_6, var_ZZ_4, var_ZZZ_4) := [[ usr'dollar'ecAddn2_2189 ~(| mload ~(| _23 |), mload ~(| _21 |), mload ~(| _5 |), mload ~(| _3 |), mload ~(| add ~(| _26, 2080 |) |) |) ]] in
-        do~ [[ mstore ~(| add ~(| 1152, _26 |), var_X_6 |) ]] in
-        do~ [[ mstore ~(| add ~(| _26, 1184 |), var_Y_6 |) ]] in
-        do~ [[ mstore ~(| add ~(| _26, 1216 |), var_ZZ_4 |) ]] in
-        do~ [[ mstore ~(| add ~(| _26, 1248 |), var_ZZZ_4 |) ]] in
-        let~ var_X_7 := [[ mload ~(| _8 |) ]] in
-        let~ var_Y_7 := [[ mload ~(| _6 |) ]] in
-        let~ _27 := [[ mload ~(| 0x40 |) ]] in
-        let~ '(var_X_8, var_Y_8, var_ZZ_5, var_ZZZ_5) := [[ usr'dollar'ecAddn2_2189 ~(| mload ~(| _23 |), mload ~(| _21 |), var_X_7, var_Y_7, mload ~(| add ~(| _27, 2080 |) |) |) ]] in
-        do~ [[ mstore ~(| add ~(| 1280, _27 |), var_X_8 |) ]] in
-        do~ [[ mstore ~(| add ~(| _27, 1312 |), var_Y_8 |) ]] in
-        do~ [[ mstore ~(| add ~(| _27, 1344 |), var_ZZ_5 |) ]] in
-        do~ [[ mstore ~(| add ~(| _27, 1376 |), var_ZZZ_5 |) ]] in
-        let~ _28 := [[ mload ~(| 0x40 |) ]] in
-        let~ '(var_X_9, var_Y_9, var_ZZ_6, var_ZZZ_6) := [[ usr'dollar'ecAddn2 ~(| var_X_8, var_Y_8, var_ZZ_5, var_ZZZ_5, mload ~(| _5 |), mload ~(| _3 |), mload ~(| add ~(| _28, 2080 |) |) |) ]] in
-        do~ [[ mstore ~(| add ~(| 1408, _28 |), var_X_9 |) ]] in
-        do~ [[ mstore ~(| add ~(| _28, 1440 |), var_Y_9 |) ]] in
-        do~ [[ mstore ~(| add ~(| _28, 1472 |), var_ZZ_6 |) ]] in
-        do~ [[ mstore ~(| add ~(| _28, 1504 |), var_ZZZ_6 |) ]] in
-        let~ _29 := [[ mload ~(| 0x40 |) ]] in
-        let~ '(var_X_10, var_Y_10, var_ZZ_7, var_ZZZ_7) := [[ usr'dollar'ecAddn2_2189 ~(| mload ~(| mload ~(| 0x0140 |) |), mload ~(| _17 |), mload ~(| _23 |), mload ~(| _21 |), mload ~(| add ~(| _29, 2080 |) |) |) ]] in
-        do~ [[ mstore ~(| add ~(| 1536, _29 |), var_X_10 |) ]] in
-        do~ [[ mstore ~(| add ~(| _29, 1568 |), var_Y_10 |) ]] in
-        do~ [[ mstore ~(| add ~(| _29, 1600 |), var_ZZ_7 |) ]] in
-        do~ [[ mstore ~(| add ~(| _29, 1632 |), var_ZZZ_7 |) ]] in
-        let~ _30 := [[ mload ~(| 0x40 |) ]] in
-        let~ '(var_X_11, var_Y_11, var_ZZ_8, var_ZZZ_8) := [[ usr'dollar'ecAddn2 ~(| var_X_10, var_Y_10, var_ZZ_7, var_ZZZ_7, mload ~(| _5 |), mload ~(| _3 |), mload ~(| add ~(| _30, 2080 |) |) |) ]] in
-        do~ [[ mstore ~(| add ~(| 1664, _30 |), var_X_11 |) ]] in
-        do~ [[ mstore ~(| add ~(| _30, 1696 |), var_Y_11 |) ]] in
-        do~ [[ mstore ~(| add ~(| _30, 1728 |), var_ZZ_8 |) ]] in
-        do~ [[ mstore ~(| add ~(| _30, 1760 |), var_ZZZ_8 |) ]] in
-        let~ _31 := [[ mload ~(| 0x40 |) ]] in
-        let~ var_X_12 := [[ mload ~(| add ~(| 768, _31 |) |) ]] in
-        let~ var_Y_12 := [[ mload ~(| add ~(| 800, _31 |) |) ]] in
-        let~ var_ZZ_9 := [[ mload ~(| add ~(| 832, _31 |) |) ]] in
-        let~ var_ZZZ_9 := [[ mload ~(| add ~(| 864, _31 |) |) ]] in
-        let~ '(var_X_13, var_Y_13, var_ZZ_10, var_ZZZ_10) := [[ usr'dollar'ecAddn2 ~(| var_X_12, var_Y_12, var_ZZ_9, var_ZZZ_9, mload ~(| _23 |), mload ~(| _21 |), mload ~(| add ~(| _31, 2080 |) |) |) ]] in
-        do~ [[ mstore ~(| add ~(| 1792, _31 |), var_X_13 |) ]] in
-        do~ [[ mstore ~(| add ~(| _31, 1824 |), var_Y_13 |) ]] in
-        do~ [[ mstore ~(| add ~(| _31, 1856 |), var_ZZ_10 |) ]] in
-        do~ [[ mstore ~(| add ~(| _31, 1888 |), var_ZZZ_10 |) ]] in
-        let~ _32 := [[ mload ~(| 0x40 |) ]] in
-        let~ '(var_X_14, var_Y_14, var_ZZ_11, var_ZZZ_11) := [[ usr'dollar'ecAddn2 ~(| var_X_13, var_Y_13, var_ZZ_10, var_ZZZ_10, mload ~(| _5 |), mload ~(| _3 |), mload ~(| add ~(| _32, 2080 |) |) |) ]] in
-        do~ [[ mstore ~(| add ~(| 1920, _32 |), var_X_14 |) ]] in
-        do~ [[ mstore ~(| add ~(| _32, 1952 |), var_Y_14 |) ]] in
-        do~ [[ mstore ~(| add ~(| _32, 1984 |), var_ZZ_11 |) ]] in
-        do~ [[ mstore ~(| add ~(| _32, 2016 |), var_ZZZ_11 |) ]] in
-        do~ [[ mstore ~(| 0xe0, 0 |) ]] in
-        let_state~ 'tt :=
-          (* for loop *)
-          Shallow.for_
-            (* init state *)
-            tt
-            (* condition *)
-            (fun 'tt => [[
-              iszero ~(| mload ~(| 0xe0 |) |)
-            ]])
-            (* body *)
-            (fun 'tt =>
-              do~ [[ mstore ~(| 0xe0, add ~(| add ~(| sub ~(| 1, iszero ~(| and ~(| mload ~(| 0x0120 |), mload ~(| 0x01a0 |) |) |) |), shl ~(| 1, sub ~(| 1, iszero ~(| and ~(| shr ~(| 128, mload ~(| 0x0120 |) |), mload ~(| 0x01a0 |) |) |) |) |) |), add ~(| shl ~(| 2, sub ~(| 1, iszero ~(| and ~(| mload ~(| 0x0160 |), mload ~(| 0x01a0 |) |) |) |) |), shl ~(| 3, sub ~(| 1, iszero ~(| and ~(| shr ~(| 128, mload ~(| 0x0160 |) |), mload ~(| 0x01a0 |) |) |) |) |) |) |) |) ]] in
-              M.pure (BlockUnit.Tt, tt))
-            (* post *)
-            (fun 'tt =>
-              do~ [[ mstore ~(| 0x01a0, shr ~(| 1, mload ~(| 0x01a0 |) |) |) ]] in
-              M.pure (BlockUnit.Tt, tt))
-        default~ tt in
-        do~ [[ mstore ~(| 0x0180, mload ~(| 0x40 |) |) ]] in
-        let~ _33 := [[ add ~(| mload ~(| 0x0180 |), shl ~(| 7, mload ~(| 0xe0 |) |) |) ]] in
-        do~ [[ mstore ~(| 0xa0, mload ~(| _33 |) |) ]] in
-        do~ [[ mstore ~(| 0x0100, mload ~(| add ~(| _33, 32 |) |) |) ]] in
-        do~ [[ mstore ~(| 0x01c0, mload ~(| add ~(| _33, 0x40 |) |) |) ]] in
-        do~ [[ mstore ~(| 0xe0, mload ~(| add ~(| _33, 96 |) |) |) ]] in
-        do~ [[ mstore ~(| 0x01e0, mload ~(| add ~(| mload ~(| 0x0180 |), 2080 |) |) |) ]] in
-        let_state~ 'tt :=
-          (* for loop *)
-          Shallow.for_
-            (* init state *)
-            tt
-            (* condition *)
-            (fun 'tt => [[
-              mload ~(| 0x01a0 |)
-            ]])
-            (* body *)
-            (fun 'tt =>
-              do~ [[ mstore ~(| 0xc0, mulmod ~(| mload ~(| 0xa0 |), mulmod ~(| mulmod ~(| 2, mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| 2, mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |) |) ]] in
-              let~ usr'dollar'T4 := [[ addmod ~(| mulmod ~(| 3, mulmod ~(| mload ~(| 0xa0 |), mload ~(| 0xa0 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mulmod ~(| mload ~(| add ~(| mload ~(| 0x0140 |), 160 |) |), mulmod ~(| mload ~(| 0x01c0 |), mload ~(| 0x01c0 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |) ]] in
-              do~ [[ mstore ~(| 0xe0, mulmod ~(| mulmod ~(| mulmod ~(| 2, mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| mulmod ~(| 2, mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| 2, mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0xe0 |), mload ~(| 0x01e0 |) |) |) ]] in
-              do~ [[ mstore ~(| 0x01c0, mulmod ~(| mulmod ~(| mulmod ~(| 2, mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| 2, mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01c0 |), mload ~(| 0x01e0 |) |) |) ]] in
-              do~ [[ mstore ~(| 0xa0, addmod ~(| mulmod ~(| usr'dollar'T4, usr'dollar'T4, mload ~(| 0x01e0 |) |), mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mload ~(| 0xc0 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |) |) ]] in
-              do~ [[ mstore ~(| 0x0100, addmod ~(| mulmod ~(| mulmod ~(| mulmod ~(| 2, mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| mulmod ~(| 2, mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| 2, mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| usr'dollar'T4, addmod ~(| mload ~(| 0xa0 |), sub ~(| mload ~(| 0x01e0 |), mload ~(| 0xc0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |) |) ]] in
-              let~ usr'dollar'T1 := [[ add ~(| add ~(| sub ~(| 1, iszero ~(| and ~(| mload ~(| 0x0120 |), mload ~(| 0x01a0 |) |) |) |), shl ~(| 1, sub ~(| 1, iszero ~(| and ~(| shr ~(| 128, mload ~(| 0x0120 |) |), mload ~(| 0x01a0 |) |) |) |) |) |), add ~(| shl ~(| 2, sub ~(| 1, iszero ~(| and ~(| mload ~(| 0x0160 |), mload ~(| 0x01a0 |) |) |) |) |), shl ~(| 3, sub ~(| 1, iszero ~(| and ~(| shr ~(| 128, mload ~(| 0x0160 |) |), mload ~(| 0x01a0 |) |) |) |) |) |) |) ]] in
-              let_state~ 'tt := [[
-                Shallow.if_ (|
-                  iszero ~(| usr'dollar'T1 |),
-                  do~ [[ mstore ~(| 0x0100, sub ~(| mload ~(| 0x01e0 |), mload ~(| 0x0100 |) |) |) ]] in
-                  M.pure (BlockUnit.Continue, tt),
-                  tt
-                |)
-              ]] default~ tt in
-              let~ usr'dollar'T4_1 := [[ mload ~(| add ~(| mload ~(| 0x0180 |), shl ~(| 7, usr'dollar'T1 |) |) |) ]] in
-              let~ _34 := [[ add ~(| add ~(| mload ~(| 0x0180 |), shl ~(| 7, usr'dollar'T1 |) |), 96 |) ]] in
-              let~ _35 := [[ mload ~(| _34 |) ]] in
-              do~ [[ mstore ~(| add ~(| mload ~(| 0x0180 |), 2144 |), _35 |) ]] in
-              let_state~ 'tt := [[
-                Shallow.if_ (|
-                  iszero ~(| mload ~(| 0x01c0 |) |),
-                  do~ [[ mstore ~(| 0xa0, usr'dollar'T4_1 |) ]] in
-                  do~ [[ mstore ~(| 0x0100, mload ~(| add ~(| add ~(| mload ~(| 0x0180 |), shl ~(| 7, usr'dollar'T1 |) |), 32 |) |) |) ]] in
-                  do~ [[ mstore ~(| 0x01c0, mload ~(| add ~(| add ~(| mload ~(| 0x0180 |), shl ~(| 7, usr'dollar'T1 |) |), 0x40 |) |) |) ]] in
-                  do~ [[ mstore ~(| 0xe0, mload ~(| _34 |) |) ]] in
-                  M.pure (BlockUnit.Continue, tt),
-                  tt
-                |)
-              ]] default~ tt in
-              let~ _36 := [[ addmod ~(| mulmod ~(| mload ~(| add ~(| add ~(| mload ~(| 0x0180 |), shl ~(| 7, usr'dollar'T1 |) |), 32 |) |), mload ~(| 0xe0 |), mload ~(| 0x01e0 |) |), mulmod ~(| mload ~(| 0x0100 |), _35, mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |) ]] in
-              do~ [[ mstore ~(| add ~(| mload ~(| 0x0180 |), 2112 |), _36 |) ]] in
-              let~ usr'dollar'T1_1 := [[ mload ~(| add ~(| add ~(| mload ~(| 0x0180 |), shl ~(| 7, usr'dollar'T1 |) |), 0x40 |) |) ]] in
-              let~ usr'dollar'T2 := [[ addmod ~(| mulmod ~(| usr'dollar'T4_1, mload ~(| 0x01c0 |), mload ~(| 0x01e0 |) |), sub ~(| mload ~(| 0x01e0 |), mulmod ~(| mload ~(| 0xa0 |), usr'dollar'T1_1, mload ~(| 0x01e0 |) |) |), mload ~(| 0x01e0 |) |) ]] in
-              let_state~ '(usr'dollar'T2, usr'dollar'T4_1) := [[
-                Shallow.if_ (|
-                  iszero ~(| _36 |),
-                  let_state~ '(usr'dollar'T2, usr'dollar'T4_1) := [[
-                    Shallow.if_ (|
-                      iszero ~(| usr'dollar'T2 |),
-                      do~ [[ mstore ~(| 0x80, mulmod ~(| mload ~(| 0xa0 |), mulmod ~(| mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |) |) ]] in
-                      do~ [[ mstore ~(| add ~(| mload ~(| 0x0180 |), 2112 |), mload ~(| 0x80 |) |) ]] in
-                      let~ usr'dollar'T4_1 := [[ addmod ~(| mulmod ~(| 3, mulmod ~(| mload ~(| 0xa0 |), mload ~(| 0xa0 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mulmod ~(| mload ~(| add ~(| mload ~(| 0x0140 |), 160 |) |), mulmod ~(| mload ~(| 0x01c0 |), mload ~(| 0x01c0 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |) ]] in
-                      do~ [[ mstore ~(| 0xe0, mulmod ~(| mulmod ~(| mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0xe0 |), mload ~(| 0x01e0 |) |) |) ]] in
-                      do~ [[ mstore ~(| 0x01c0, mulmod ~(| mulmod ~(| mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01c0 |), mload ~(| 0x01e0 |) |) |) ]] in
-                      do~ [[ mstore ~(| 0xa0, addmod ~(| mulmod ~(| usr'dollar'T4_1, usr'dollar'T4_1, mload ~(| 0x01e0 |) |), mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mload ~(| 0x80 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |) |) ]] in
-                      let~ usr'dollar'T2 := [[ mulmod ~(| usr'dollar'T4_1, addmod ~(| mload ~(| 0x80 |), sub ~(| mload ~(| 0x01e0 |), mload ~(| 0xa0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |) ]] in
-                      do~ [[ mstore ~(| 0x0100, addmod ~(| usr'dollar'T2, mulmod ~(| mulmod ~(| mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x0100 |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |) |) ]] in
-                      M.pure (BlockUnit.Continue, (usr'dollar'T2, usr'dollar'T4_1)),
-                      (usr'dollar'T2, usr'dollar'T4_1)
-                    |)
-                  ]] default~ (usr'dollar'T2, usr'dollar'T4_1) in
-                  M.pure (BlockUnit.Tt, (usr'dollar'T2, usr'dollar'T4_1)),
-                  (usr'dollar'T2, usr'dollar'T4_1)
-                |)
-              ]] default~ tt in
-              do~ [[ mstore ~(| 0x01c0, mulmod ~(| mulmod ~(| mload ~(| 0x01c0 |), mulmod ~(| usr'dollar'T2, usr'dollar'T2, mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), usr'dollar'T1_1, mload ~(| 0x01e0 |) |) |) ]] in
-              let~ usr'dollar'T1_2 := [[ mulmod ~(| mload ~(| 0xa0 |), usr'dollar'T1_1, mload ~(| 0x01e0 |) |) ]] in
-              do~ [[ mstore ~(| 0xe0, mulmod ~(| mulmod ~(| mload ~(| 0xe0 |), mulmod ~(| mulmod ~(| usr'dollar'T2, usr'dollar'T2, mload ~(| 0x01e0 |) |), usr'dollar'T2, mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), _35, mload ~(| 0x01e0 |) |) |) ]] in
-              let~ _37 := [[ mload ~(| add ~(| mload ~(| 0x0180 |), 2112 |) |) ]] in
-              do~ [[ mstore ~(| 0xa0, addmod ~(| addmod ~(| mulmod ~(| _37, _37, mload ~(| 0x01e0 |) |), sub ~(| mload ~(| 0x01e0 |), mulmod ~(| mulmod ~(| usr'dollar'T2, usr'dollar'T2, mload ~(| 0x01e0 |) |), usr'dollar'T2, mload ~(| 0x01e0 |) |) |), mload ~(| 0x01e0 |) |), mulmod ~(| usr'dollar'T1_2, mulmod ~(| add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |), mulmod ~(| usr'dollar'T2, usr'dollar'T2, mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |) |) ]] in
-              do~ [[ mstore ~(| 0x0100, addmod ~(| mulmod ~(| addmod ~(| mulmod ~(| usr'dollar'T1_2, mulmod ~(| usr'dollar'T2, usr'dollar'T2, mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), sub ~(| mload ~(| 0x01e0 |), mload ~(| 0xa0 |) |), mload ~(| 0x01e0 |) |), _37, mload ~(| 0x01e0 |) |), mulmod ~(| mulmod ~(| mload ~(| 0x0100 |), _35, mload ~(| 0x01e0 |) |), mulmod ~(| mulmod ~(| usr'dollar'T2, usr'dollar'T2, mload ~(| 0x01e0 |) |), usr'dollar'T2, mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |), mload ~(| 0x01e0 |) |) |) ]] in
-              M.pure (BlockUnit.Tt, tt))
-            (* post *)
-            (fun 'tt =>
-              do~ [[ mstore ~(| 0x01a0, shr ~(| 1, mload ~(| 0x01a0 |) |) |) ]] in
-              M.pure (BlockUnit.Tt, tt))
-        default~ tt in
-        do~ [[ mstore ~(| 0x40, 2176 |) ]] in
-        do~ [[ mstore ~(| 2272, mload ~(| 0x01c0 |) |) ]] in
-        do~ [[ mstore ~(| 2176, 32 |) ]] in
-        do~ [[ mstore ~(| 2208, 32 |) ]] in
-        do~ [[ mstore ~(| 2240, 32 |) ]] in
-        do~ [[ mstore ~(| 2304, add ~(| mload ~(| 0x01e0 |), not ~(| 1 |) |) |) ]] in
-        do~ [[ mstore ~(| 2336, mload ~(| 0x01e0 |) |) ]] in
-        let_state~ 'tt := [[
-          Shallow.if_ (|
-            iszero ~(| staticcall ~(| not ~(| 0 |), 0x05, 2176, 192, 2176, 32 |) |),
-            do~ [[ mstore ~(| 0x40, 2047 |) ]] in
-            do~ [[ revert ~(| 0x40, 32 |) ]] in
+            iszero ~(| eq ~(| value, cleanup_t_uint256 ~(| value |) |) |),
+            do~ [[ revert ~(| 0, 0 |) ]] in
             M.pure (BlockUnit.Tt, tt),
             tt
           |)
         ]] default~ tt in
-        do~ [[ mstore ~(| 0xa0, mulmod ~(| mload ~(| 0xa0 |), mload ~(| 2176 |), mload ~(| 0x01e0 |) |) |) ]] in
         M.pure (BlockUnit.Tt, tt)
       in
-      M.pure result.
+      M.pure tt.
 
-    Definition fun_ecGenMulmuladdX_store (var_Q_mpos : U256.t) (var_scalar_u : U256.t) (var_scalar_v : U256.t) : M.t U256.t :=
+    Definition abi_decode_t_uint256 (offset : U256.t) (end_ : U256.t) : M.t U256.t :=
+      let~ '(_, value) :=
+        let value := 0 in
+        let~ value := [[ calldataload ~(| offset |) ]] in
+        do~ [[ validator_revert_t_uint256 ~(| value |) ]] in
+        M.pure (BlockUnit.Tt, value)
+      in
+      M.pure value.
+
+    Definition allocate_unbounded : M.t U256.t :=
+      let~ '(_, memPtr) :=
+        let memPtr := 0 in
+        let~ memPtr := [[ mload ~(| 64 |) ]] in
+        M.pure (BlockUnit.Tt, memPtr)
+      in
+      M.pure memPtr.
+
+    Definition panic_error_0x41 : M.t unit :=
+      let~ '(_, tt) :=
+        do~ [[ mstore ~(| 0, 35408467139433450592217433187231851964531694900788300625387963629091585785856 |) ]] in
+        do~ [[ mstore ~(| 4, 0x41 |) ]] in
+        do~ [[ revert ~(| 0, 0x24 |) ]] in
+        M.pure (BlockUnit.Tt, tt)
+      in
+      M.pure tt.
+
+    Definition round_up_to_mul_of_32 (value : U256.t) : M.t U256.t :=
       let~ '(_, result) :=
-        do~ [[ mstore ~(| 0x0140, var_Q_mpos |) ]] in
-        do~ [[ mstore ~(| 0x0120, var_scalar_u |) ]] in
-        do~ [[ mstore ~(| 0x0160, var_scalar_v |) ]] in
-        do~ [[ mstore ~(| 0xa0, 0 |) ]] in
-        do~ [[ fun_ecGenMulmuladdX_store_2814 ~(||) ]] in
-        let~ var_X := [[ mload ~(| 0xa0 |) ]] in
-        M.pure (BlockUnit.Tt, var_X)
+        let result := 0 in
+        let~ result := [[ and ~(| add ~(| value, 31 |), not ~(| 31 |) |) ]] in
+        M.pure (BlockUnit.Tt, result)
       in
       M.pure result.
 
+    Definition finalize_allocation (memPtr : U256.t) (size : U256.t) : M.t unit :=
+      let~ '(_, tt) :=
+        let~ newFreePtr := [[ add ~(| memPtr, round_up_to_mul_of_32 ~(| size |) |) ]] in
+        let_state~ 'tt := [[
+          Shallow.if_ (|
+            or ~(| gt ~(| newFreePtr, 0xffffffffffffffff |), lt ~(| newFreePtr, memPtr |) |),
+            do~ [[ panic_error_0x41 ~(||) ]] in
+            M.pure (BlockUnit.Tt, tt),
+            tt
+          |)
+        ]] default~ tt in
+        do~ [[ mstore ~(| 64, newFreePtr |) ]] in
+        M.pure (BlockUnit.Tt, tt)
+      in
+      M.pure tt.
+
+    Definition allocate_memory (size : U256.t) : M.t U256.t :=
+      let~ '(_, memPtr) :=
+        let memPtr := 0 in
+        let~ memPtr := [[ allocate_unbounded ~(||) ]] in
+        do~ [[ finalize_allocation ~(| memPtr, size |) ]] in
+        M.pure (BlockUnit.Tt, memPtr)
+      in
+      M.pure memPtr.
+
+    Definition array_allocation_size_t_arrayδ_t_uint256_δ10_memory_ptr (length : U256.t) : M.t U256.t :=
+      let~ '(_, size) :=
+        let size := 0 in
+        let_state~ 'tt := [[
+          Shallow.if_ (|
+            gt ~(| length, 0xffffffffffffffff |),
+            do~ [[ panic_error_0x41 ~(||) ]] in
+            M.pure (BlockUnit.Tt, tt),
+            tt
+          |)
+        ]] default~ size in
+        let~ size := [[ mul ~(| length, 0x20 |) ]] in
+        M.pure (BlockUnit.Tt, size)
+      in
+      M.pure size.
+
+    Definition revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef : M.t unit :=
+      let~ '(_, tt) :=
+        do~ [[ revert ~(| 0, 0 |) ]] in
+        M.pure (BlockUnit.Tt, tt)
+      in
+      M.pure tt.
+
+    Definition abi_decode_available_length_t_arrayδ_t_uint256_δ10_memory_ptr (offset : U256.t) (length : U256.t) (end_ : U256.t) : M.t U256.t :=
+      let~ '(_, array) :=
+        let array := 0 in
+        let~ array := [[ allocate_memory ~(| array_allocation_size_t_arrayδ_t_uint256_δ10_memory_ptr ~(| length |) |) ]] in
+        let~ dst := [[ array ]] in
+        let~ srcEnd := [[ add ~(| offset, mul ~(| length, 0x20 |) |) ]] in
+        let_state~ 'tt := [[
+          Shallow.if_ (|
+            gt ~(| srcEnd, end_ |),
+            do~ [[ revert_error_81385d8c0b31fffe14be1da910c8bd3a80be4cfa248e04f42ec0faea3132a8ef ~(||) ]] in
+            M.pure (BlockUnit.Tt, tt),
+            tt
+          |)
+        ]] default~ array in
+        let_state~ dst :=
+          let~ src := [[ offset ]] in
+          let_state~ '(dst, src) :=
+            (* for loop *)
+            Shallow.for_
+              (* init state *)
+              (dst, src)
+              (* condition *)
+              (fun '(dst, src) => [[
+                lt ~(| src, srcEnd |)
+              ]])
+              (* body *)
+              (fun '(dst, src) =>
+                Shallow.lift_state_update
+                  (fun dst => (dst, src))
+                  (let~ elementPos := [[ src ]] in
+                  do~ [[ mstore ~(| dst, abi_decode_t_uint256 ~(| elementPos, end_ |) |) ]] in
+                  let~ dst := [[ add ~(| dst, 0x20 |) ]] in
+                  M.pure (BlockUnit.Tt, dst)))
+              (* post *)
+              (fun '(dst, src) =>
+                Shallow.lift_state_update
+                  (fun src => (dst, src))
+                  (let~ src := [[ add ~(| src, 0x20 |) ]] in
+                  M.pure (BlockUnit.Tt, src)))
+          default~ dst in
+          M.pure (BlockUnit.Tt, dst)
+        default~ array in
+        M.pure (BlockUnit.Tt, array)
+      in
+      M.pure array.
+
+    Definition revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d : M.t unit :=
+      let~ '(_, tt) :=
+        do~ [[ revert ~(| 0, 0 |) ]] in
+        M.pure (BlockUnit.Tt, tt)
+      in
+      M.pure tt.
+
+    Definition abi_decode_t_arrayδ_t_uint256_δ10_memory_ptr (offset : U256.t) (end_ : U256.t) : M.t U256.t :=
+      let~ '(_, array) :=
+        let array := 0 in
+        let_state~ 'tt := [[
+          Shallow.if_ (|
+            iszero ~(| slt ~(| add ~(| offset, 0x1f |), end_ |) |),
+            do~ [[ revert_error_1b9f4a0a5773e33b91aa01db23bf8c55fce1411167c872835e7fa00a4f17d46d ~(||) ]] in
+            M.pure (BlockUnit.Tt, tt),
+            tt
+          |)
+        ]] default~ array in
+        let~ length := [[ 0x0a ]] in
+        let~ array := [[ abi_decode_available_length_t_arrayδ_t_uint256_δ10_memory_ptr ~(| offset, length, end_ |) ]] in
+        M.pure (BlockUnit.Tt, array)
+      in
+      M.pure array.
+
+    Definition revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b : M.t unit :=
+      let~ '(_, tt) :=
+        do~ [[ revert ~(| 0, 0 |) ]] in
+        M.pure (BlockUnit.Tt, tt)
+      in
+      M.pure tt.
+
+    Definition abi_decode_tuple_t_arrayδ_t_uint256_δ10_memory_ptrt_uint256t_uint256 (headStart : U256.t) (dataEnd : U256.t) : M.t (U256.t * U256.t * U256.t) :=
+      let~ '(_, (value0, value1, value2)) :=
+        let '(value0, value1, value2) := (0, 0, 0) in
+        let_state~ 'tt := [[
+          Shallow.if_ (|
+            slt ~(| sub ~(| dataEnd, headStart |), 384 |),
+            do~ [[ revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b ~(||) ]] in
+            M.pure (BlockUnit.Tt, tt),
+            tt
+          |)
+        ]] default~ (value0, value1, value2) in
+        let_state~ value0 :=
+          let~ offset := [[ 0 ]] in
+          let~ value0 := [[ abi_decode_t_arrayδ_t_uint256_δ10_memory_ptr ~(| add ~(| headStart, offset |), dataEnd |) ]] in
+          M.pure (BlockUnit.Tt, value0)
+        default~ (value0, value1, value2) in
+        let_state~ value1 :=
+          let~ offset := [[ 320 ]] in
+          let~ value1 := [[ abi_decode_t_uint256 ~(| add ~(| headStart, offset |), dataEnd |) ]] in
+          M.pure (BlockUnit.Tt, value1)
+        default~ (value0, value1, value2) in
+        let_state~ value2 :=
+          let~ offset := [[ 352 ]] in
+          let~ value2 := [[ abi_decode_t_uint256 ~(| add ~(| headStart, offset |), dataEnd |) ]] in
+          M.pure (BlockUnit.Tt, value2)
+        default~ (value0, value1, value2) in
+        M.pure (BlockUnit.Tt, (value0, value1, value2))
+      in
+      M.pure (value0, value1, value2).
+
+    Definition abi_encode_t_uint256_to_t_uint256_fromStack (value : U256.t) (pos : U256.t) : M.t unit :=
+      let~ '(_, tt) :=
+        do~ [[ mstore ~(| pos, cleanup_t_uint256 ~(| value |) |) ]] in
+        M.pure (BlockUnit.Tt, tt)
+      in
+      M.pure tt.
+
+    Definition abi_encode_tuple_t_uint256__to_t_uint256__fromStack (headStart : U256.t) (value0 : U256.t) : M.t U256.t :=
+      let~ '(_, tail) :=
+        let tail := 0 in
+        let~ tail := [[ add ~(| headStart, 32 |) ]] in
+        do~ [[ abi_encode_t_uint256_to_t_uint256_fromStack ~(| value0, add ~(| headStart, 0 |) |) ]] in
+        M.pure (BlockUnit.Tt, tail)
+      in
+      M.pure tail.
+
+    Definition cleanup_t_rational_0_by_1 (value : U256.t) : M.t U256.t :=
+      let~ '(_, cleaned) :=
+        let cleaned := 0 in
+        let~ cleaned := [[ value ]] in
+        M.pure (BlockUnit.Tt, cleaned)
+      in
+      M.pure cleaned.
+
+    Definition cleanup_t_rational_170141183460469231731687303715884105728_by_1 (value : U256.t) : M.t U256.t :=
+      let~ '(_, cleaned) :=
+        let cleaned := 0 in
+        let~ cleaned := [[ value ]] in
+        M.pure (BlockUnit.Tt, cleaned)
+      in
+      M.pure cleaned.
+
+    Definition identity (value : U256.t) : M.t U256.t :=
+      let~ '(_, ret) :=
+        let ret := 0 in
+        let~ ret := [[ value ]] in
+        M.pure (BlockUnit.Tt, ret)
+      in
+      M.pure ret.
+
+    Definition convert_t_rational_0_by_1_to_t_uint256 (value : U256.t) : M.t U256.t :=
+      let~ '(_, converted) :=
+        let converted := 0 in
+        let~ converted := [[ cleanup_t_uint256 ~(| identity ~(| cleanup_t_rational_0_by_1 ~(| value |) |) |) ]] in
+        M.pure (BlockUnit.Tt, converted)
+      in
+      M.pure converted.
+
+    Definition convert_t_rational_170141183460469231731687303715884105728_by_1_to_t_uint256 (value : U256.t) : M.t U256.t :=
+      let~ '(_, converted) :=
+        let converted := 0 in
+        let~ converted := [[ cleanup_t_uint256 ~(| identity ~(| cleanup_t_rational_170141183460469231731687303715884105728_by_1 ~(| value |) |) |) ]] in
+        M.pure (BlockUnit.Tt, converted)
+      in
+      M.pure converted.
+
+    Definition usrδecAddn2 (usrδx1 : U256.t) (usrδy1 : U256.t) (usrδzz1 : U256.t) (usrδzzz1 : U256.t) (usrδx2 : U256.t) (usrδy2 : U256.t) (usrδ_p : U256.t) : M.t (U256.t * U256.t * U256.t * U256.t) :=
+      let~ '(_, (usrδ_x, usrδ_y, usrδ_zz, usrδ_zzz, usrδx1, usrδx2, usrδy1, usrδy2, usrδzz1)) :=
+        let '(usrδ_x, usrδ_y, usrδ_zz, usrδ_zzz) := (0, 0, 0, 0) in
+        let~ usrδy1 := [[ sub ~(| usrδ_p, usrδy1 |) ]] in
+        let~ usrδy2 := [[ addmod ~(| mulmod ~(| usrδy2, usrδzzz1, usrδ_p |), usrδy1, usrδ_p |) ]] in
+        let~ usrδx2 := [[ addmod ~(| mulmod ~(| usrδx2, usrδzz1, usrδ_p |), sub ~(| usrδ_p, usrδx1 |), usrδ_p |) ]] in
+        let~ usrδ_x := [[ mulmod ~(| usrδx2, usrδx2, usrδ_p |) ]] in
+        let~ usrδ_y := [[ mulmod ~(| usrδ_x, usrδx2, usrδ_p |) ]] in
+        let~ usrδ_zz := [[ mulmod ~(| usrδzz1, usrδ_x, usrδ_p |) ]] in
+        let~ usrδ_zzz := [[ mulmod ~(| usrδzzz1, usrδ_y, usrδ_p |) ]] in
+        let~ usrδzz1 := [[ mulmod ~(| usrδx1, usrδ_x, usrδ_p |) ]] in
+        let~ usrδ_x := [[ addmod ~(| addmod ~(| mulmod ~(| usrδy2, usrδy2, usrδ_p |), sub ~(| usrδ_p, usrδ_y |), usrδ_p |), mulmod ~(| sub ~(| usrδ_p, 2 |), usrδzz1, usrδ_p |), usrδ_p |) ]] in
+        let~ usrδx1 := [[ mulmod ~(| addmod ~(| usrδzz1, sub ~(| usrδ_p, usrδ_x |), usrδ_p |), usrδy2, usrδ_p |) ]] in
+        let~ usrδ_y := [[ addmod ~(| usrδx1, mulmod ~(| usrδy1, usrδ_y, usrδ_p |), usrδ_p |) ]] in
+        M.pure (BlockUnit.Tt, (usrδ_x, usrδ_y, usrδ_zz, usrδ_zzz, usrδx1, usrδx2, usrδy1, usrδy2, usrδzz1))
+      in
+      M.pure (usrδ_x, usrδ_y, usrδ_zz, usrδ_zzz).
+
+    Definition usrδmstore4 (usrδaddr : U256.t) (usrδoffset : U256.t) (usrδval1 : U256.t) (usrδval2 : U256.t) (usrδval3 : U256.t) (usrδval4 : U256.t) : M.t unit :=
+      let~ '(_, usrδoffset) :=
+        do~ [[ mstore ~(| add ~(| usrδoffset, usrδaddr |), usrδval1 |) ]] in
+        let~ usrδoffset := [[ add ~(| 32, usrδoffset |) ]] in
+        do~ [[ mstore ~(| add ~(| usrδoffset, usrδaddr |), usrδval2 |) ]] in
+        let~ usrδoffset := [[ add ~(| 32, usrδoffset |) ]] in
+        do~ [[ mstore ~(| add ~(| usrδoffset, usrδaddr |), usrδval3 |) ]] in
+        let~ usrδoffset := [[ add ~(| 32, usrδoffset |) ]] in
+        do~ [[ mstore ~(| add ~(| usrδoffset, usrδaddr |), usrδval4 |) ]] in
+        let~ usrδoffset := [[ add ~(| 32, usrδoffset |) ]] in
+        M.pure (BlockUnit.Tt, usrδoffset)
+      in
+      M.pure tt.
+
+    Definition zero_value_for_split_t_uint256 : M.t U256.t :=
+      let~ '(_, ret) :=
+        let ret := 0 in
+        let~ ret := [[ 0 ]] in
+        M.pure (BlockUnit.Tt, ret)
+      in
+      M.pure ret.
+
+    Definition fun_ecGenMulmuladdX_store_90 (var_Q_53_mpos : U256.t) (var_scalar_u_55 : U256.t) (var_scalar_v_57 : U256.t) : M.t U256.t :=
+      let~ '(_, var_X_60) :=
+        let var_X_60 := 0 in
+        let~ zero_t_uint256_1 := [[ zero_value_for_split_t_uint256 ~(||) ]] in
+        let~ var_X_60 := [[ zero_t_uint256_1 ]] in
+        let~ expr_66 := [[ 0x80000000000000000000000000000000 ]] in
+        let~ var_mask_63 := [[ convert_t_rational_170141183460469231731687303715884105728_by_1_to_t_uint256 ~(| expr_66 |) ]] in
+        let~ _2 := [[ var_scalar_u_55 ]] in
+        let~ expr_68 := [[ _2 ]] in
+        let~ expr_69 := [[ 0x00 ]] in
+        let~ expr_70 := [[ eq ~(| cleanup_t_uint256 ~(| expr_68 |), convert_t_rational_0_by_1_to_t_uint256 ~(| expr_69 |) |) ]] in
+        let~ expr_74 := [[ expr_70 ]] in
+        let_state~ expr_74 := [[
+          Shallow.if_ (|
+            expr_74,
+            let~ _3 := [[ var_scalar_v_57 ]] in
+            let~ expr_71 := [[ _3 ]] in
+            let~ expr_72 := [[ 0x00 ]] in
+            let~ expr_73 := [[ eq ~(| cleanup_t_uint256 ~(| expr_71 |), convert_t_rational_0_by_1_to_t_uint256 ~(| expr_72 |) |) ]] in
+            let~ expr_74 := [[ expr_73 ]] in
+            M.pure (BlockUnit.Tt, expr_74),
+            expr_74
+          |)
+        ]] default~ var_X_60 in
+        let_state~ var_X_60 := [[
+          Shallow.if_ (|
+            expr_74,
+            let~ expr_75 := [[ 0x00 ]] in
+            let~ var_X_60 := [[ convert_t_rational_0_by_1_to_t_uint256 ~(| expr_75 |) ]] in
+            M.pure (BlockUnit.Leave, var_X_60),
+            var_X_60
+          |)
+        ]] default~ var_X_60 in
+        let~ var_Y_80 := [[ 0 ]] in
+        let~ zero_t_uint256_4 := [[ zero_value_for_split_t_uint256 ~(||) ]] in
+        let~ var_Y_80 := [[ zero_t_uint256_4 ]] in
+        let~ var_ZZZ_83 := [[ 0 ]] in
+        let~ zero_t_uint256_5 := [[ zero_value_for_split_t_uint256 ~(||) ]] in
+        let~ var_ZZZ_83 := [[ zero_t_uint256_5 ]] in
+        let~ var_ZZ_86 := [[ 0 ]] in
+        let~ zero_t_uint256_6 := [[ zero_value_for_split_t_uint256 ~(||) ]] in
+        let~ var_ZZ_86 := [[ zero_t_uint256_6 ]] in
+        let_state~ '(var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63) :=
+          do~ [[ mstore ~(| 0x40, add ~(| mload ~(| 0x40 |), 2048 |) |) ]] in
+          do~ [[ mstore ~(| add ~(| mload ~(| 0x40 |), 2080 |), mload ~(| add ~(| var_Q_53_mpos, 128 |) |) |) ]] in
+          let_state~ '(var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86) :=
+            let~ usrδ_modulusp := [[ mload ~(| add ~(| mload ~(| 0x40 |), 2080 |) |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 128, mload ~(| add ~(| var_Q_53_mpos, 192 |) |), mload ~(| add ~(| var_Q_53_mpos, 224 |) |), 1, 1 |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 256, mload ~(| add ~(| var_Q_53_mpos, 256 |) |), mload ~(| add ~(| var_Q_53_mpos, 288 |) |), 1, 1 |) ]] in
+            let~ var_X_60 := [[ mload ~(| add ~(| var_Q_53_mpos, 256 |) |) ]] in
+            let~ var_Y_80 := [[ mload ~(| add ~(| var_Q_53_mpos, 288 |) |) ]] in
+            let~ '(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83) := [[ usrδecAddn2 ~(| var_X_60, var_Y_80, 1, 1, mload ~(| add ~(| var_Q_53_mpos, 192 |) |), mload ~(| add ~(| var_Q_53_mpos, 224 |) |), usrδ_modulusp |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 384, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 512, mload ~(| var_Q_53_mpos |), mload ~(| add ~(| 32, var_Q_53_mpos |) |), 1, 1 |) ]] in
+            let~ '(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83) := [[ usrδecAddn2 ~(| mload ~(| var_Q_53_mpos |), mload ~(| add ~(| var_Q_53_mpos, 32 |) |), 1, 1, mload ~(| add ~(| var_Q_53_mpos, 192 |) |), mload ~(| add ~(| var_Q_53_mpos, 224 |) |), usrδ_modulusp |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 640, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 |) ]] in
+            let~ var_X_60 := [[ mload ~(| add ~(| var_Q_53_mpos, 256 |) |) ]] in
+            let~ var_Y_80 := [[ mload ~(| add ~(| var_Q_53_mpos, 288 |) |) ]] in
+            let~ '(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83) := [[ usrδecAddn2 ~(| var_X_60, var_Y_80, 1, 1, mload ~(| var_Q_53_mpos |), mload ~(| add ~(| var_Q_53_mpos, 32 |) |), usrδ_modulusp |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 768, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 |) ]] in
+            let~ '(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83) := [[ usrδecAddn2 ~(| var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83, mload ~(| add ~(| var_Q_53_mpos, 192 |) |), mload ~(| add ~(| var_Q_53_mpos, 224 |) |), usrδ_modulusp |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 896, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 1024, mload ~(| add ~(| var_Q_53_mpos, 64 |) |), mload ~(| add ~(| var_Q_53_mpos, 96 |) |), 1, 1 |) ]] in
+            let~ '(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83) := [[ usrδecAddn2 ~(| mload ~(| add ~(| var_Q_53_mpos, 64 |) |), mload ~(| add ~(| var_Q_53_mpos, 96 |) |), 1, 1, mload ~(| add ~(| var_Q_53_mpos, 192 |) |), mload ~(| add ~(| var_Q_53_mpos, 224 |) |), mload ~(| add ~(| mload ~(| 0x40 |), 2080 |) |) |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 1152, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 |) ]] in
+            let~ var_X_60 := [[ mload ~(| add ~(| var_Q_53_mpos, 256 |) |) ]] in
+            let~ var_Y_80 := [[ mload ~(| add ~(| var_Q_53_mpos, 288 |) |) ]] in
+            let~ '(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83) := [[ usrδecAddn2 ~(| mload ~(| add ~(| var_Q_53_mpos, 64 |) |), mload ~(| add ~(| var_Q_53_mpos, 96 |) |), 1, 1, var_X_60, var_Y_80, mload ~(| add ~(| mload ~(| 0x40 |), 2080 |) |) |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 1280, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 |) ]] in
+            let~ '(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83) := [[ usrδecAddn2 ~(| var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83, mload ~(| add ~(| var_Q_53_mpos, 192 |) |), mload ~(| add ~(| var_Q_53_mpos, 224 |) |), mload ~(| add ~(| mload ~(| 0x40 |), 2080 |) |) |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 1408, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 |) ]] in
+            let~ '(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83) := [[ usrδecAddn2 ~(| mload ~(| var_Q_53_mpos |), mload ~(| add ~(| var_Q_53_mpos, 32 |) |), 1, 1, mload ~(| add ~(| var_Q_53_mpos, 64 |) |), mload ~(| add ~(| var_Q_53_mpos, 96 |) |), mload ~(| add ~(| mload ~(| 0x40 |), 2080 |) |) |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 1536, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 |) ]] in
+            let~ '(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83) := [[ usrδecAddn2 ~(| var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83, mload ~(| add ~(| var_Q_53_mpos, 192 |) |), mload ~(| add ~(| var_Q_53_mpos, 224 |) |), mload ~(| add ~(| mload ~(| 0x40 |), 2080 |) |) |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 1664, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 |) ]] in
+            let~ var_X_60 := [[ mload ~(| add ~(| 768, mload ~(| 0x40 |) |) |) ]] in
+            let~ var_Y_80 := [[ mload ~(| add ~(| 800, mload ~(| 0x40 |) |) |) ]] in
+            let~ var_ZZ_86 := [[ mload ~(| add ~(| 832, mload ~(| 0x40 |) |) |) ]] in
+            let~ var_ZZZ_83 := [[ mload ~(| add ~(| 864, mload ~(| 0x40 |) |) |) ]] in
+            let~ '(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83) := [[ usrδecAddn2 ~(| var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83, mload ~(| add ~(| var_Q_53_mpos, 64 |) |), mload ~(| add ~(| var_Q_53_mpos, 96 |) |), mload ~(| add ~(| mload ~(| 0x40 |), 2080 |) |) |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 1792, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 |) ]] in
+            let~ '(var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83) := [[ usrδecAddn2 ~(| var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83, mload ~(| add ~(| var_Q_53_mpos, 0xc0 |) |), mload ~(| add ~(| var_Q_53_mpos, 224 |) |), mload ~(| add ~(| mload ~(| 0x40 |), 2080 |) |) |) ]] in
+            do~ [[ usrδmstore4 ~(| mload ~(| 0x40 |), 1920, var_X_60, var_Y_80, var_ZZ_86, var_ZZZ_83 |) ]] in
+            M.pure (BlockUnit.Tt, (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86))
+          default~ (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63) in
+          let~ var_ZZZ_83 := [[ 0 ]] in
+          let_state~ '(var_ZZZ_83, var_mask_63) :=
+            (* for loop *)
+            Shallow.for_
+              (* init state *)
+              (var_ZZZ_83, var_mask_63)
+              (* condition *)
+              (fun '(var_ZZZ_83, var_mask_63) => [[
+                iszero ~(| var_ZZZ_83 |)
+              ]])
+              (* body *)
+              (fun '(var_ZZZ_83, var_mask_63) =>
+                Shallow.lift_state_update
+                  (fun var_ZZZ_83 => (var_ZZZ_83, var_mask_63))
+                  (let~ var_ZZZ_83 := [[ add ~(| add ~(| sub ~(| 1, iszero ~(| and ~(| var_scalar_u_55, var_mask_63 |) |) |), shl ~(| 1, sub ~(| 1, iszero ~(| and ~(| shr ~(| 128, var_scalar_u_55 |), var_mask_63 |) |) |) |) |), add ~(| shl ~(| 2, sub ~(| 1, iszero ~(| and ~(| var_scalar_v_57, var_mask_63 |) |) |) |), shl ~(| 3, sub ~(| 1, iszero ~(| and ~(| shr ~(| 128, var_scalar_v_57 |), var_mask_63 |) |) |) |) |) |) ]] in
+                  M.pure (BlockUnit.Tt, var_ZZZ_83)))
+              (* post *)
+              (fun '(var_ZZZ_83, var_mask_63) =>
+                Shallow.lift_state_update
+                  (fun var_mask_63 => (var_ZZZ_83, var_mask_63))
+                  (let~ var_mask_63 := [[ shr ~(| 1, var_mask_63 |) ]] in
+                  M.pure (BlockUnit.Tt, var_mask_63)))
+          default~ (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63) in
+          let~ var_X_60 := [[ mload ~(| add ~(| mload ~(| 0x40 |), shl ~(| 7, var_ZZZ_83 |) |) |) ]] in
+          let~ var_Y_80 := [[ mload ~(| add ~(| mload ~(| 0x40 |), add ~(| 32, shl ~(| 7, var_ZZZ_83 |) |) |) |) ]] in
+          let~ var_ZZ_86 := [[ mload ~(| add ~(| mload ~(| 0x40 |), add ~(| 64, shl ~(| 7, var_ZZZ_83 |) |) |) |) ]] in
+          let~ var_ZZZ_83 := [[ mload ~(| add ~(| mload ~(| 0x40 |), add ~(| 96, shl ~(| 7, var_ZZZ_83 |) |) |) |) ]] in
+          let~ usrδMem := [[ mload ~(| 0x40 |) ]] in
+          let~ usrδ_p := [[ mload ~(| add ~(| usrδMem, 2080 |) |) ]] in
+          let_state~ '(var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63) :=
+            (* for loop *)
+            Shallow.for_
+              (* init state *)
+              (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63)
+              (* condition *)
+              (fun '(var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63) => [[
+                gt ~(| var_mask_63, 0 |)
+              ]])
+              (* body *)
+              (fun '(var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63) =>
+                Shallow.lift_state_update
+                  (fun '(var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86) => (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63))
+                  (let_state~ '(var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86) :=
+                    let~ usrδT1 := [[ mulmod ~(| 2, var_Y_80, usrδ_p |) ]] in
+                    let~ usrδT2 := [[ mulmod ~(| usrδT1, usrδT1, usrδ_p |) ]] in
+                    let~ usrδT3 := [[ mulmod ~(| var_X_60, usrδT2, usrδ_p |) ]] in
+                    let~ usrδT1 := [[ mulmod ~(| usrδT1, usrδT2, usrδ_p |) ]] in
+                    let~ usrδT4 := [[ mulmod ~(| mload ~(| add ~(| var_Q_53_mpos, 160 |) |), mulmod ~(| var_ZZ_86, var_ZZ_86, usrδ_p |), usrδ_p |) ]] in
+                    let~ usrδT4 := [[ addmod ~(| mulmod ~(| 3, mulmod ~(| var_X_60, var_X_60, usrδ_p |), usrδ_p |), usrδT4, usrδ_p |) ]] in
+                    let~ var_ZZZ_83 := [[ mulmod ~(| usrδT1, var_ZZZ_83, usrδ_p |) ]] in
+                    let~ var_ZZ_86 := [[ mulmod ~(| usrδT2, var_ZZ_86, usrδ_p |) ]] in
+                    let~ var_X_60 := [[ sub ~(| usrδ_p, 2 |) ]] in
+                    let~ var_X_60 := [[ addmod ~(| mulmod ~(| usrδT4, usrδT4, usrδ_p |), mulmod ~(| var_X_60, usrδT3, usrδ_p |), usrδ_p |) ]] in
+                    let~ usrδT2 := [[ mulmod ~(| usrδT4, addmod ~(| var_X_60, sub ~(| usrδ_p, usrδT3 |), usrδ_p |), usrδ_p |) ]] in
+                    let~ var_Y_80 := [[ addmod ~(| mulmod ~(| usrδT1, var_Y_80, usrδ_p |), usrδT2, usrδ_p |) ]] in
+                    M.pure (BlockUnit.Tt, (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86))
+                  default~ (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86) in
+                  let~ usrδT1 := [[ add ~(| add ~(| sub ~(| 1, iszero ~(| and ~(| var_scalar_u_55, var_mask_63 |) |) |), shl ~(| 1, sub ~(| 1, iszero ~(| and ~(| shr ~(| 128, var_scalar_u_55 |), var_mask_63 |) |) |) |) |), add ~(| shl ~(| 2, sub ~(| 1, iszero ~(| and ~(| var_scalar_v_57, var_mask_63 |) |) |) |), shl ~(| 3, sub ~(| 1, iszero ~(| and ~(| shr ~(| 128, var_scalar_v_57 |), var_mask_63 |) |) |) |) |) |) ]] in
+                  let_state~ var_Y_80 := [[
+                    Shallow.if_ (|
+                      iszero ~(| usrδT1 |),
+                      let~ var_Y_80 := [[ sub ~(| usrδ_p, var_Y_80 |) ]] in
+                      M.pure (BlockUnit.Continue, var_Y_80),
+                      var_Y_80
+                    |)
+                  ]] default~ (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86) in
+                  let~ usrδT1 := [[ shl ~(| 7, usrδT1 |) ]] in
+                  let~ usrδT4 := [[ mload ~(| add ~(| usrδMem, usrδT1 |) |) ]] in
+                  do~ [[ mstore ~(| add ~(| usrδMem, 2144 |), mload ~(| add ~(| usrδMem, add ~(| 96, usrδT1 |) |) |) |) ]] in
+                  let_state~ '(var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86) := [[
+                    Shallow.if_ (|
+                      iszero ~(| var_ZZ_86 |),
+                      let~ var_X_60 := [[ usrδT4 ]] in
+                      let~ var_Y_80 := [[ mload ~(| add ~(| usrδMem, add ~(| 32, usrδT1 |) |) |) ]] in
+                      let~ var_ZZ_86 := [[ mload ~(| add ~(| usrδMem, add ~(| 64, usrδT1 |) |) |) ]] in
+                      let~ var_ZZZ_83 := [[ mload ~(| add ~(| usrδMem, add ~(| 96, usrδT1 |) |) |) ]] in
+                      M.pure (BlockUnit.Continue, (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86)),
+                      (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86)
+                    |)
+                  ]] default~ (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86) in
+                  do~ [[ mstore ~(| add ~(| usrδMem, 2112 |), addmod ~(| mulmod ~(| mload ~(| add ~(| usrδMem, add ~(| 32, usrδT1 |) |) |), var_ZZZ_83, usrδ_p |), mulmod ~(| var_Y_80, mload ~(| add ~(| usrδMem, 2144 |) |), usrδ_p |), usrδ_p |) |) ]] in
+                  let~ usrδT1 := [[ mload ~(| add ~(| usrδMem, add ~(| 64, usrδT1 |) |) |) ]] in
+                  let~ usrδT2 := [[ addmod ~(| mulmod ~(| usrδT4, var_ZZ_86, usrδ_p |), sub ~(| usrδ_p, mulmod ~(| var_X_60, usrδT1, usrδ_p |) |), usrδ_p |) ]] in
+                  let_state~ '(usrδT1, usrδT2, usrδT4, var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86) := [[
+                    Shallow.if_ (|
+                      iszero ~(| mload ~(| add ~(| usrδMem, 2112 |) |) |),
+                      let_state~ '(usrδT1, usrδT2, usrδT4, var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86) := [[
+                        Shallow.if_ (|
+                          iszero ~(| usrδT2 |),
+                          let~ usrδT1 := [[ mulmod ~(| sub ~(| usrδ_p, 2 |), var_Y_80, usrδ_p |) ]] in
+                          let~ usrδT2 := [[ mulmod ~(| usrδT1, usrδT1, usrδ_p |) ]] in
+                          do~ [[ mstore ~(| add ~(| usrδMem, 2112 |), mulmod ~(| var_X_60, usrδT2, usrδ_p |) |) ]] in
+                          let~ usrδT1 := [[ mulmod ~(| usrδT1, usrδT2, usrδ_p |) ]] in
+                          let~ usrδT4 := [[ mulmod ~(| mload ~(| add ~(| var_Q_53_mpos, 160 |) |), mulmod ~(| var_ZZ_86, var_ZZ_86, usrδ_p |), usrδ_p |) ]] in
+                          let~ usrδT4 := [[ addmod ~(| mulmod ~(| 3, mulmod ~(| var_X_60, var_X_60, usrδ_p |), usrδ_p |), usrδT4, usrδ_p |) ]] in
+                          let~ var_ZZZ_83 := [[ mulmod ~(| usrδT1, var_ZZZ_83, usrδ_p |) ]] in
+                          let~ var_ZZ_86 := [[ mulmod ~(| usrδT2, var_ZZ_86, usrδ_p |) ]] in
+                          let~ var_X_60 := [[ addmod ~(| mulmod ~(| usrδT4, usrδT4, usrδ_p |), mulmod ~(| sub ~(| usrδ_p, 2 |), mload ~(| add ~(| usrδMem, 2112 |) |), usrδ_p |), usrδ_p |) ]] in
+                          let~ usrδT2 := [[ mulmod ~(| usrδT4, addmod ~(| mload ~(| add ~(| usrδMem, 2112 |) |), sub ~(| usrδ_p, var_X_60 |), usrδ_p |), usrδ_p |) ]] in
+                          let~ var_Y_80 := [[ addmod ~(| usrδT2, mulmod ~(| usrδT1, var_Y_80, usrδ_p |), usrδ_p |) ]] in
+                          M.pure (BlockUnit.Continue, (usrδT1, usrδT2, usrδT4, var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86)),
+                          (usrδT1, usrδT2, usrδT4, var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86)
+                        |)
+                      ]] default~ (usrδT1, usrδT2, usrδT4, var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86) in
+                      M.pure (BlockUnit.Tt, (usrδT1, usrδT2, usrδT4, var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86)),
+                      (usrδT1, usrδT2, usrδT4, var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86)
+                    |)
+                  ]] default~ (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86) in
+                  let~ usrδT4 := [[ mulmod ~(| usrδT2, usrδT2, usrδ_p |) ]] in
+                  let~ usrδT2 := [[ mulmod ~(| usrδT4, usrδT2, usrδ_p |) ]] in
+                  let~ var_ZZ_86 := [[ mulmod ~(| mulmod ~(| var_ZZ_86, usrδT4, usrδ_p |), usrδT1, usrδ_p |) ]] in
+                  let~ usrδT1 := [[ mulmod ~(| var_X_60, usrδT1, usrδ_p |) ]] in
+                  let~ var_ZZZ_83 := [[ mulmod ~(| mulmod ~(| var_ZZZ_83, usrδT2, usrδ_p |), mload ~(| add ~(| usrδMem, 2144 |) |), usrδ_p |) ]] in
+                  let~ var_X_60 := [[ addmod ~(| addmod ~(| mulmod ~(| mload ~(| add ~(| usrδMem, 2112 |) |), mload ~(| add ~(| usrδMem, 2112 |) |), usrδ_p |), sub ~(| usrδ_p, usrδT2 |), usrδ_p |), mulmod ~(| usrδT1, mulmod ~(| sub ~(| usrδ_p, 2 |), usrδT4, usrδ_p |), usrδ_p |), usrδ_p |) ]] in
+                  let~ usrδT4 := [[ mulmod ~(| usrδT1, usrδT4, usrδ_p |) ]] in
+                  let~ var_Y_80 := [[ addmod ~(| mulmod ~(| addmod ~(| usrδT4, sub ~(| usrδ_p, var_X_60 |), usrδ_p |), mload ~(| add ~(| usrδMem, 2112 |) |), usrδ_p |), mulmod ~(| mulmod ~(| var_Y_80, mload ~(| add ~(| usrδMem, 2144 |) |), usrδ_p |), usrδT2, usrδ_p |), usrδ_p |) ]] in
+                  M.pure (BlockUnit.Tt, (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86))))
+              (* post *)
+              (fun '(var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63) =>
+                Shallow.lift_state_update
+                  (fun var_mask_63 => (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63))
+                  (let~ var_mask_63 := [[ shr ~(| 1, var_mask_63 |) ]] in
+                  M.pure (BlockUnit.Tt, var_mask_63)))
+          default~ (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63) in
+          do~ [[ mstore ~(| 0x40, 2176 |) ]] in
+          let~ usrδT := [[ mload ~(| 0x40 |) ]] in
+          do~ [[ mstore ~(| add ~(| usrδT, 0x60 |), var_ZZ_86 |) ]] in
+          do~ [[ mstore ~(| usrδT, 0x20 |) ]] in
+          do~ [[ mstore ~(| add ~(| usrδT, 0x20 |), 0x20 |) ]] in
+          do~ [[ mstore ~(| add ~(| usrδT, 0x40 |), 0x20 |) ]] in
+          do~ [[ mstore ~(| add ~(| usrδT, 0x80 |), sub ~(| usrδ_p, 2 |) |) ]] in
+          do~ [[ mstore ~(| add ~(| usrδT, 0xa0 |), usrδ_p |) ]] in
+          let_state~ 'tt := [[
+            Shallow.if_ (|
+              iszero ~(| staticcall ~(| not ~(| 0 |), 0x05, usrδT, 0xc0, usrδT, 0x20 |) |),
+              do~ [[ mstore ~(| 0x40, 2047 |) ]] in
+              do~ [[ revert ~(| 0x40, 0x20 |) ]] in
+              M.pure (BlockUnit.Tt, tt),
+              tt
+            |)
+          ]] default~ (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63) in
+          let~ var_X_60 := [[ mulmod ~(| var_X_60, mload ~(| usrδT |), usrδ_p |) ]] in
+          M.pure (BlockUnit.Tt, (var_X_60, var_Y_80, var_ZZZ_83, var_ZZ_86, var_mask_63))
+        default~ var_X_60 in
+        M.pure (BlockUnit.Tt, var_X_60)
+      in
+      M.pure var_X_60.
+
+    Definition revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb : M.t unit :=
+      let~ '(_, tt) :=
+        do~ [[ revert ~(| 0, 0 |) ]] in
+        M.pure (BlockUnit.Tt, tt)
+      in
+      M.pure tt.
+
+    Definition external_fun_ecGenMulmuladdX_store_90 : M.t unit :=
+      let~ '(_, tt) :=
+        let_state~ 'tt := [[
+          Shallow.if_ (|
+            callvalue ~(||),
+            do~ [[ revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb ~(||) ]] in
+            M.pure (BlockUnit.Tt, tt),
+            tt
+          |)
+        ]] default~ tt in
+        let~ '(param_0, param_1, param_2) := [[ abi_decode_tuple_t_arrayδ_t_uint256_δ10_memory_ptrt_uint256t_uint256 ~(| 4, calldatasize ~(||) |) ]] in
+        let~ ret_0 := [[ fun_ecGenMulmuladdX_store_90 ~(| param_0, param_1, param_2 |) ]] in
+        let~ memPos := [[ allocate_unbounded ~(||) ]] in
+        let~ memEnd := [[ abi_encode_tuple_t_uint256__to_t_uint256__fromStack ~(| memPos, ret_0 |) ]] in
+        do~ [[ return_ ~(| memPos, sub ~(| memEnd, memPos |) |) ]] in
+        M.pure (BlockUnit.Tt, tt)
+      in
+      M.pure tt.
+
+    Definition revert_error_42b3090547df1d2001c96683413b8cf91c1b902ef5e3cb8d9f6f304cf7446f74 : M.t unit :=
+      let~ '(_, tt) :=
+        do~ [[ revert ~(| 0, 0 |) ]] in
+        M.pure (BlockUnit.Tt, tt)
+      in
+      M.pure tt.
+
+    Definition revert_error_c1322bf8034eace5e0b5c7295db60986aa89aae5e0ea0873e4689e076861a5db : M.t unit :=
+      let~ '(_, tt) :=
+        do~ [[ revert ~(| 0, 0 |) ]] in
+        M.pure (BlockUnit.Tt, tt)
+      in
+      M.pure tt.
+
+    Definition shift_right_224_unsigned (value : U256.t) : M.t U256.t :=
+      let~ '(_, newValue) :=
+        let newValue := 0 in
+        let~ newValue := [[ shr ~(| 224, value |) ]] in
+        M.pure (BlockUnit.Tt, newValue)
+      in
+      M.pure newValue.
+
     Definition body : M.t unit :=
-      do~
-        let~ _1 := [[ memoryguard ~(| 0x0200 |) ]] in
+      let~ '(_, result) :=
+        do~ [[ mstore ~(| 64, memoryguard ~(| 128 |) |) ]] in
         let_state~ 'tt := [[
           Shallow.if_ (|
             iszero ~(| lt ~(| calldatasize ~(||), 4 |) |),
+            let~ selector := [[ shift_right_224_unsigned ~(| calldataload ~(| 0 |) |) ]] in
             let_state~ 'tt := [[
-              Shallow.if_ (|
-                eq ~(| 0x81a379ec, shr ~(| 224, calldataload ~(| 0 |) |) |),
-                let_state~ 'tt := [[
-                  Shallow.if_ (|
-                    callvalue ~(||),
-                    do~ [[ revert ~(| 0, 0 |) ]] in
-                    M.pure (BlockUnit.Tt, tt),
-                    tt
-                  |)
-                ]] default~ tt in
-                let_state~ 'tt := [[
-                  Shallow.if_ (|
-                    slt ~(| add ~(| calldatasize ~(||), not ~(| 3 |) |), 384 |),
-                    do~ [[ revert ~(| 0, 0 |) ]] in
-                    M.pure (BlockUnit.Tt, tt),
-                    tt
-                  |)
-                ]] default~ tt in
-                let_state~ 'tt := [[
-                  Shallow.if_ (|
-                    iszero ~(| slt ~(| 35, calldatasize ~(||) |) |),
-                    do~ [[ revert ~(| 0, 0 |) ]] in
-                    M.pure (BlockUnit.Tt, tt),
-                    tt
-                  |)
-                ]] default~ tt in
-                let~ newFreePtr := [[ add ~(| _1, 320 |) ]] in
-                let_state~ 'tt := [[
-                  Shallow.if_ (|
-                    or ~(| gt ~(| newFreePtr, 0xffffffffffffffff |), lt ~(| newFreePtr, _1 |) |),
-                    do~ [[ mstore ~(| 0, shl ~(| 224, 0x4e487b71 |) |) ]] in
-                    do~ [[ mstore ~(| 4, 0x41 |) ]] in
-                    do~ [[ revert ~(| 0, 0x24 |) ]] in
-                    M.pure (BlockUnit.Tt, tt),
-                    tt
-                  |)
-                ]] default~ tt in
-                do~ [[ mstore ~(| 64, newFreePtr |) ]] in
-                let~ dst := [[ _1 ]] in
-                let_state~ 'tt := [[
-                  Shallow.if_ (|
-                    gt ~(| 324, calldatasize ~(||) |),
-                    do~ [[ revert ~(| 0, 0 |) ]] in
-                    M.pure (BlockUnit.Tt, tt),
-                    tt
-                  |)
-                ]] default~ tt in
-                let~ src := [[ 4 ]] in
-                let_state~ '(dst, src) :=
-                  (* for loop *)
-                  Shallow.for_
-                    (* init state *)
-                    (dst, src)
-                    (* condition *)
-                    (fun '(dst, src) => [[
-                      lt ~(| src, 324 |)
-                    ]])
-                    (* body *)
-                    (fun '(dst, src) =>
-                      Shallow.lift_state_update
-                        (fun dst => (dst, src))
-                        (do~ [[ mstore ~(| dst, calldataload ~(| src |) |) ]] in
-                        let~ dst := [[ add ~(| dst, 0x20 |) ]] in
-                        M.pure (BlockUnit.Tt, dst)))
-                    (* post *)
-                    (fun '(dst, src) =>
-                      Shallow.lift_state_update
-                        (fun src => (dst, src))
-                        (let~ src := [[ add ~(| src, 0x20 |) ]] in
-                        M.pure (BlockUnit.Tt, src)))
-                default~ tt in
-                let~ ret := [[ fun_ecGenMulmuladdX_store ~(| _1, calldataload ~(| 324 |), calldataload ~(| 356 |) |) ]] in
-                let~ memPos := [[ mload ~(| 64 |) ]] in
-                do~ [[ mstore ~(| memPos, ret |) ]] in
-                do~ [[ return_ ~(| memPos, 0x20 |) ]] in
-                M.pure (BlockUnit.Tt, tt),
-                tt
-              |)
+              (* switch *)
+              let~ δ := [[ selector ]] in
+              if δ =? 0x81a379ec then
+                do~ [[ external_fun_ecGenMulmuladdX_store_90 ~(||) ]] in
+                M.pure (BlockUnit.Tt, tt)
+              else
+                M.pure (BlockUnit.Tt, tt)
             ]] default~ tt in
             M.pure (BlockUnit.Tt, tt),
             tt
           |)
         ]] default~ tt in
-        do~ [[ revert ~(| 0, 0 |) ]] in
+        do~ [[ revert_error_42b3090547df1d2001c96683413b8cf91c1b902ef5e3cb8d9f6f304cf7446f74 ~(||) ]] in
         M.pure (BlockUnit.Tt, tt)
       in
-      M.pure tt.
+      M.pure result.
   End Contract_91_deployed.
 End Contract_91.
