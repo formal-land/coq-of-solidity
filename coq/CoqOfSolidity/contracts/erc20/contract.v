@@ -505,7 +505,7 @@ Module Erc20.
             )
           );
           Code.Function.make (
-            "abi_decode_address_2305",
+            "abi_decode_t_address",
             [],
             ["value"],
             M.scope (
@@ -1885,7 +1885,7 @@ Module Erc20.
                                 M.declare (|
                                   ["value1"],
                                   Some (M.call_function (|
-                                    "abi_decode_address_2305",
+                                    "abi_decode_t_address",
                                     []
                                   |))
                                 |)
@@ -2924,7 +2924,7 @@ Module Erc20.
                                 M.declare (|
                                   ["value1_1"],
                                   Some (M.call_function (|
-                                    "abi_decode_address_2305",
+                                    "abi_decode_t_address",
                                     []
                                   |))
                                 |)

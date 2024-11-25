@@ -84,7 +84,7 @@ Module Erc20_403.
       in
       M.pure value.
 
-    Definition abi_decode_address_2305 : M.t U256.t :=
+    Definition abi_decode_t_address : M.t U256.t :=
       let~ '(_, value) :=
         let value := 0 in
         let~ value := [[ calldataload ~(| 36 |) ]] in
@@ -293,7 +293,7 @@ Module Erc20_403.
                     |)
                   ]] default~ tt in
                   let~ value0_1 := [[ abi_decode_address ~(||) ]] in
-                  let~ value1 := [[ abi_decode_address_2305 ~(||) ]] in
+                  let~ value1 := [[ abi_decode_t_address ~(||) ]] in
                   let~ value := [[ calldataload ~(| 68 |) ]] in
                   do~ [[ fun_transfer ~(| value0_1, value1, value |) ]] in
                   do~ [[ mstore ~(| 0, and ~(| value0_1, sub ~(| shl ~(| 160, 1 |), 1 |) |) |) ]] in
@@ -433,7 +433,7 @@ Module Erc20_403.
                     |)
                   ]] default~ tt in
                   let~ value0_5 := [[ abi_decode_address ~(||) ]] in
-                  let~ value1_1 := [[ abi_decode_address_2305 ~(||) ]] in
+                  let~ value1_1 := [[ abi_decode_t_address ~(||) ]] in
                   do~ [[ mstore ~(| 0, and ~(| value0_5, sub ~(| shl ~(| 160, 1 |), 1 |) |) |) ]] in
                   do~ [[ mstore ~(| 32, 0x01 |) ]] in
                   let~ dataSlot_6 := [[ keccak256 ~(| 0, 64 |) ]] in

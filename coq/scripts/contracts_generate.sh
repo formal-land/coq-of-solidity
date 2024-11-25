@@ -39,3 +39,15 @@ python scripts/shallow_embed.py CoqOfSolidity/contracts/scl/mulmuladdX_fullgen_b
   > CoqOfSolidity/contracts/scl/mulmuladdX_fullgen_b4/shallow.v
 # python scripts/shallow_embed_proof.py CoqOfSolidity/contracts/scl/mulmuladdX_fullgen_b4/contract.json \
 #   > CoqOfSolidity/contracts/scl/mulmuladdX_fullgen_b4/shallow_proof.v
+
+# tutorial
+../build/solc/solc --ir-coq --optimize CoqOfSolidity/contracts/tutorial/contract.sol \
+  > CoqOfSolidity/contracts/tutorial/contract.v
+../build/solc/solc --ir CoqOfSolidity/contracts/tutorial/contract.sol \
+  > CoqOfSolidity/contracts/tutorial/contract.yul
+../build/solc/solc --ir-ast-json CoqOfSolidity/contracts/tutorial/contract.sol \
+  | tail -1 \
+  | jq 'walk(if type == "object" then del(.nativeSrc, .src, .type) else . end)' \
+  > CoqOfSolidity/contracts/tutorial/contract.json
+python scripts/shallow_embed.py CoqOfSolidity/contracts/tutorial/contract.json \
+  > CoqOfSolidity/contracts/tutorial/shallow.v

@@ -83,7 +83,7 @@ object "Erc20_403" {
                         if callvalue() { revert(0, 0) }
                         if slt(add(calldatasize(), not(3)), 96) { revert(0, 0) }
                         let value0_1 := abi_decode_address()
-                        let value1 := abi_decode_address_2305()
+                        let value1 := abi_decode_t_address()
                         let value := calldataload(68)
                         /// @src 0:1219:1224  "value"
                         fun_transfer(value0_1, value1, value)
@@ -171,7 +171,7 @@ object "Erc20_403" {
                         if callvalue() { revert(0, 0) }
                         if slt(add(calldatasize(), not(3)), 64) { revert(0, 0) }
                         let value0_5 := abi_decode_address()
-                        let value1_1 := abi_decode_address_2305()
+                        let value1_1 := abi_decode_t_address()
                         mstore(0, and(value0_5, sub(shl(160, 1), 1)))
                         mstore(32, /** @src 0:770:781  "_allowances" */ 0x01)
                         /// @src 0:65:3516  "contract Erc20 {..."
@@ -197,7 +197,7 @@ object "Erc20_403" {
                 value := calldataload(4)
                 if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }
             }
-            function abi_decode_address_2305() -> value
+            function abi_decode_t_address() -> value
             {
                 value := calldataload(36)
                 if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }
@@ -307,7 +307,7 @@ object "Erc20_403" {
                 log3(_5, /** @src 0:65:3516  "contract Erc20 {..." */ 0x20, /** @src 0:2251:2276  "Transfer(from, to, value)" */ 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef, _2, _1)
             }
         }
-        data ".metadata" hex"a26469706673582212201a1fe65a5b6e9a889cfa2e0e3e08138191bebe93076641e37824cf6a4c5c784264736f6c634300081b0033"
+        data ".metadata" hex"a2646970667358221220d281a516cd90dd74be97397d2ed1953fb71afa6324f6cfa5aa3855fe59e15c9364736f6c634300081d0033"
     }
 }
 
