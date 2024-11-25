@@ -2,6 +2,6 @@
 
 [Introduction](./introduction.md)
 
-<!-- # User Guide
+# User Guide
 
-- [Installation](guide/installation.md) -->
+- [Getting Started](guide/getting_started.md)
