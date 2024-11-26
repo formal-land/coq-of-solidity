@@ -27,7 +27,7 @@ Lemma run_checked_add_t_uint256 codes environment state
 Proof.
   unfold safe_add in H_sum.
   destruct (_ <? _) eqn:? in H_sum; inversion_clear H_sum.
-  unfold Contract_16.Contract_16_deployed.checked_add_t_uint256, safe_add in *.
+  unfold Contract_16.Contract_16_deployed.checked_add_t_uint256.
   lu.
   repeat (lu || cu || p).
   s.

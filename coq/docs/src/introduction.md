@@ -12,7 +12,10 @@ Thanks to `coq-of-solidity`, you can:
 - Prove that your business rules are always respected.
 - Run these checks in your CI/CD pipeline to ensure that no bug is introduced in your codebase.
 
-This adds a final layer of security to traditional code audits which are based on human reasoning and testing which only checks a finite amount of cases.
+This adds a final layer of security to traditional code audits which are based on human reasoning and testing which only checks a finite amount of cases. This verification even goes beyond other formal verification methods.
+
+![Verification process](./verification-techniques.png)
+_Picture from a [presentation](https://mikedodds.github.io/files/talks/2024-10-09-n-things-I-learned.pdf) of [Galois](https://galois.com/)_
 
 ## Typical workflow
 
@@ -129,3 +132,5 @@ We recommend only translating the unoptimized version of Yul. That way you are s
 
 - Keep the same variable names in the Coq translation as in the source Solidity, helping for the proof process.
 - Have a diff in the translation that is proportional to the diff in the source code.
+
+The implementation of `coq-of-solidity` is actually fairly simple and relies on the existing Coq system for the heavy work! 🏋️
