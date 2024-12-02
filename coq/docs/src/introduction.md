@@ -1,6 +1,6 @@
 # Introduction
 
-[coq-of-solidity](https://github.com/formal-land/coq-of-solidity) is a tool to formally verify properties about smart contracts written in 🪨&nbsp;[Solidity](https://soliditylang.org/). Formal verification is about checking properties on a program for _every possible inputs_. This contrasts with testing which only checks a finite amount of cases. It is the most powerful way to ensure your code is bug-free! ✅ It was originally developed for critical software in 🧑‍🚀 space systems, nuclear plants, etc. but it is now becoming more and more popular for the blockchain.
+[coq-of-solidity](https://github.com/formal-land/coq-of-solidity) is a tool to formally verify properties about smart contracts written in 🪨&nbsp;[Solidity](https://soliditylang.org/). Formal verification is about checking properties on a program for _every possible input_. This contrasts with testing, which only checks a finite number of cases. It is the most powerful way to ensure your code is bug-free! ✅ It was originally developed for critical software in 🧑‍🚀 space systems, nuclear plants, etc. but it is now becoming more and more popular for the blockchain.
 
 > In the rest of the documentation, we assume you have some knowledge in formal verification and in particular in the 🐓&nbsp;[Coq](https://coq.inria.fr/) proof assistant which we use. On a general note, expect it to be _harder_ to fully formally verify a program than to write it. Still, it must be the _simplest way_ to truly ensure your program is correct.
 
@@ -22,7 +22,7 @@ _Picture from a [presentation](https://mikedodds.github.io/files/talks/2024-10-0
 Formal verification is expensive ⏲️, so you should apply it after every other verification (testing, code review, etc.) is done. Here is a typical workflow:
 
 1. You model your smart contract in the Coq proof system. For this step, you manually rewrite your smart contract in idiomatic Coq code.
-2. You start expressing and proving a few properties in Coq about your model. For example, that for any possible call the total number of tokens in your contract is constant, if that is a business rule.
+2. You start expressing and proving a few properties in Coq about your model. For example, for any possible call the total number of tokens in your contract is constant, if that is a business rule.
 3. Once you are confident in the approach, you show that your model is equivalent to the Solidity source code using `coq-of-solidity` and integrate this check into your CI/CD pipeline. At this step, you will probably discover some differences between your model and the source code, like unaccounted integer overflows, and you will have to refine your model to take them into account.
 4. When your code evolves, you can update your model and your proofs to ensure that your new code is still correct. `coq-of-solidity` will make sure that your model is still equivalent to your source code 🚀.
 
@@ -99,7 +99,7 @@ Lemma run_checked_add_t_uint256 codes environment state
 
 It says that for any initial chain `state` and `x` and `y` such that they are in the range of `uint256`, if the addition does not overflow, then the result of the translation is the sum of `x` and `y`, and the chain `state` is unchanged. We could make a similar statement for the overflow case.
 
-Now we need to prove that this statement is true using the tactic language of Coq and some of the custom tactics provided by `coq-of-solidity`. We write the proof using the interactive mode of Coq. To give an idea, here is our proof:
+Now, we need to prove that this statement is true using the tactic language of Coq and some of the custom tactics provided by `coq-of-solidity`. We write the proof using the interactive mode of Coq. To give an idea, here is our proof:
 
 ```coq
 Proof.
