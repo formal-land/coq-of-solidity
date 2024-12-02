@@ -1,6 +1,6 @@
 # Presentation
 
-Here is a 🏎️&nbsp;quick presentation, in simple words, of what `coq-of-solidity` does.
+Here is a 🏎️&nbsp;quick presentation, in simple words, of what [coq-of-solidity](https://github.com/formal-land/coq-of-solidity) does.
 
 > With `coq-of-solidity` you make sure that the money stored on your Solidity smart contract cannot be stolen. 🛡️
 
@@ -24,6 +24,8 @@ At [🌲&nbsp;Formal Land](https://formal.land/), where we developed `coq-of-sol
 
 ## How much? 💸
 
-For a large smart contract (5,000 lines of Solidity), consider a price of **$50,000** for a formal verification of a _model_ of the code, and **$100,000** for a verification at the level of the _source code_ (more precise). So, this is competitive with traditional audits.
+For a large smart contract (5,000 lines of Solidity), consider a price of **$50,000** for a formal verification of a _model_ of the code, and **$100,000** for a verification at the level of the _source code_ (more precise). So, this is competitive with traditional audits in terms of pricing.
 
 [💌&nbsp;Contact us](mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;formal&#046;&#108;&#097;&#110;&#100;) for an evaluation!
+
+> `coq-of-solidity` is fully open-source, under MIT licence, so you can also use it by yourself! 🚀
