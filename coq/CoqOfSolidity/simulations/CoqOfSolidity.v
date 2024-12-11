@@ -1,5 +1,5 @@
 Require Import CoqOfSolidity.CoqOfSolidity.
-Require EVM.Crypto.Keccak.
+Require CoqOfSolidity.CoqEvm.Crypto.Keccak.
 
 (** We should probably use an existing library for the [Dict.t] definition. We have mainly two kinds
     of keys in our code:
@@ -373,7 +373,7 @@ End State.
 
 (** Compute a selector from the signature of an entrypoint *)
 Definition get_selector (entrypoint_name : string) : U256.t :=
-  let hash : list Nibble.byte := EVM.Crypto.Keccak.keccak_256_of_string entrypoint_name in
+  let hash : list Nibble.byte := CoqEvm.Crypto.Keccak.keccak_256_of_string entrypoint_name in
   let hash : list Z := (List.map (fun byte => Z.of_N (Nibble.N_of_byte byte))) hash in
   Memory.bytes_as_u256 (List.firstn 4 hash).
 
@@ -389,7 +389,7 @@ Module StdlibAux.
 
   Definition keccak256 (bytes : list U256.t) : U256.t :=
     let bytes := Memory.bytes_as_bytes bytes in
-    let hash : list Nibble.byte := EVM.Crypto.Keccak.keccak_256 bytes in
+    let hash : list Nibble.byte := CoqEvm.Crypto.Keccak.keccak_256 bytes in
     let hash : list Z := List.map (fun byte => Z.of_N (Nibble.N_of_byte byte)) hash in
     Memory.bytes_as_u256 hash.
 
@@ -791,7 +791,7 @@ Module Stdlib.
       let bytes : list Z :=
         Memory.u256_as_bytes address ++ Memory.u256_as_bytes nonce in
       let bytes : list Nibble.byte := Memory.bytes_as_bytes bytes in
-      let hash : list Nibble.byte := EVM.Crypto.Keccak.keccak_256 bytes in
+      let hash : list Nibble.byte := CoqEvm.Crypto.Keccak.keccak_256 bytes in
       let hash : list Z := (List.map (fun byte => Z.of_N (Nibble.N_of_byte byte))) hash in
       M.pure (Z.land ((2 ^ 160) - 1) (Memory.bytes_as_u256 hash)) in
     if n <? 32 then

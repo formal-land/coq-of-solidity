@@ -38,13 +38,6 @@ jobs:
           startGroup "Check that the diff is empty (excluding submodules)"
             git -c color.ui=always diff --exit-code --ignore-submodules=dirty
           endGroup
-          startGroup "Install Coq dependencies"
-            cd coq/third-party/coq-evm
-            ./configure
-            make
-            make install
-            cd ../../..
-          endGroup
           startGroup "Compile Coq project"
             cd coq/CoqOfSolidity
             make
