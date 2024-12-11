@@ -44,7 +44,7 @@ Ltac2 record_with_set_val (ty : constr) (record : constr)
   let (h, args) :=
     match Constr.Unsafe.kind ty with
     | Constr.Unsafe.App h args => (h, args)
-    | _ => (ty, Array.empty ())
+    | _ => (ty, Array.empty)
     end in
   let ctor := constructor_of_record h in
   let getters := List.map (fun getterRef =>
