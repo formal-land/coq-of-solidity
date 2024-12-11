@@ -17,7 +17,7 @@ assuming you have installed the Solidity compiler `solc`.
 Then clone the repository of [coq-of-solidity](https://github.com/formal-land/coq-of-solidity):
 
 ```
-git clone --recursive https://github.com/formal-land/coq-of-solidity.git
+git clone https://github.com/formal-land/coq-of-solidity.git
 cd coq-of-solidity
 ```
 
@@ -41,26 +41,14 @@ opam install --deps-only coq/CoqOfSolidity/coq-of-solidity.opam
 Then go to the directory with the Coq code:
 
 ```
-cd coq
-```
-
-Install the `coq-evm` dependency including the definition of cryptographic primitives such as Keccak256:
-
-```
-third-party/coq-evm
-./configure
-make
-make install
-cd ../..
+cd coq/CoqOfSolidity
 ```
 
 Compile and install the `CoqOfSolidity` library:
 
 ```
-cd CoqOfSolidity
-make
+make -j3
 make install
-cd ..
 ```
 
 You can now compile your generated `shallow.v` file, for example opening it in VSCode with the Coq extension installed.

@@ -207,7 +207,7 @@ Definition nodup_list_diff {M: Type} (E: forall x y: M, {x = y} + {x <> y})
                              (a b: {l : list M | NoDup l})
 : {l : list M | NoDup l}
 := exist _ (set_diff E (proj1_sig a) (proj1_sig b))
-           (set_diff_nodup E (proj2_sig a) (proj2_sig b)).
+           (set_diff_nodup E (proj1_sig b) (proj2_sig a)).
 
 Lemma nodup_list_union_ok {M: Type} (E: forall x y: M, {x = y} + {x <> y})
                      (a b: {l : list M | NoDup l}) (x: M):
