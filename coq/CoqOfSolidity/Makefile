@@ -6,7 +6,7 @@ default: all
 
 CoqMakefile: $(VFILES) blacklist.txt
 	echo "-R . CoqOfSolidity" > _CoqProject
-	echo "-arg -impredicative-set" >> _CoqProject
+	echo "-arg -impredicative-set -arg -w -arg -stdlib-vector" >> _CoqProject
 	# We copy & paste the command to find files as this variable is too long on command line
 	find -L . -name "*.v" | grep -v -f blacklist.txt | sort >> _CoqProject
 	coq_makefile -f _CoqProject -o $@

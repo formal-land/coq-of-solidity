@@ -273,7 +273,7 @@ remember (byte_of_int start ::
           nil) as l.
 assert (cons_length: forall {T} h (t: list T), List.length (h :: t) = S (List.length t)) by easy.
 destruct len; cbn; subst;
-  repeat (rewrite List.app_length || rewrite List.repeat_length || rewrite cons_length);
+  repeat (rewrite List.length_app || rewrite List.repeat_length || rewrite cons_length);
   replace (List.length (@nil byte)) with 0 by trivial; lia.
 Qed.
 
@@ -307,7 +307,7 @@ Definition pad (unpadded_data: list byte) (rate: positive) (start: int)
 Lemma pad_ok_mod (data: list byte) (rate: positive) (start: int):
   (N.of_nat (List.length (pad data rate start)) mod N.pos rate = 0)%N.
 Proof.
-unfold pad. rewrite List.app_length. rewrite Nat2N.inj_add.
+unfold pad. rewrite List.length_app. rewrite Nat2N.inj_add.
 remember (List.length data) as n. rewrite padding_ok.
 rewrite positive_nat_N. rewrite padding_length_ok.
 trivial.
@@ -354,7 +354,7 @@ Lemma pad_by_136_and_gather_into_uint64s_length (data: list byte) (s: int):
   (List.length (pad data 136 s)) / 136 * 17.
 Proof.
 unfold pad_by_136_and_gather_into_uint64s.
-rewrite List.map_length.
+rewrite List.length_map.
 apply (Tuplevector.gather_length (pad data 136 s)
              (Datatypes.length (pad data 136 s) / 136 * 17) 8
              (can_gather_by_8 (Datatypes.length (pad data 136 s)) (pad_ok data 136 s))).

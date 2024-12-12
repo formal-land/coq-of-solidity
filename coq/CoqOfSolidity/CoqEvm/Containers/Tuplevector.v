@@ -211,7 +211,7 @@ Local Lemma gather_helper_skipn {T k block_len l}
   length (snd (proj1_sig p)) = k * block_len.
 Proof.
 assert (P := proj2_sig p). cbn in P. rewrite P.
-rewrite List.skipn_length.
+rewrite List.length_skipn.
 rewrite ok.
 cbn.
 rewrite Nat.add_comm.

@@ -127,7 +127,7 @@ Lemma pad_ok_mod (data: list byte):
   ((N.of_nat (List.length (pad data))) mod 64 = 0)%N.
 Proof.
 unfold pad.
-repeat rewrite List.app_length.
+repeat rewrite List.length_app.
 rewrite Tuplevector.app_to_list_length.
 repeat rewrite Nat2N.inj_add.
 rewrite N.add_assoc.
@@ -180,7 +180,7 @@ Lemma pad_and_gather_into_uint32s_length (data: list byte):
     (List.length (pad_and_gather_into_uint32s data) = d * 16)%nat.
 Proof.
 unfold pad_and_gather_into_uint32s.
-rewrite List.map_length.
+rewrite List.length_map.
 apply (Tuplevector.gather_length (pad data) (Datatypes.length (pad data) / 64 * 16) 4
      (can_gather_by_4 (Datatypes.length (pad data)) (pad_ok data))).
 Qed.

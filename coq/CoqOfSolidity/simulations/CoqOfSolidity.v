@@ -1424,8 +1424,7 @@ Fixpoint eval {A : Set}
   end.
 
 Module Run.
-  Reserved Notation "{{ codes , environment , state | e ⇓ output | state' }}"
-    (at level 70, no associativity).
+  Reserved Notation "{{ codes , environment , state | e ⇓ output | state' }}".
 
   Inductive t {A : Set} (codes : Codes.t) (environment : Environment.t)
       (state : State.t) (output : A) :
@@ -1458,8 +1457,7 @@ Import Run.
 (** Run with a resulting state that is optional, to avoid handling complex cases when we are
     actually reverting and not caring about the precise result. *)
 Module RunO.
-  Reserved Notation "{{? codes , environment , state | e ⇓ output | state' ?}}"
-    (at level 70, no associativity).
+  Reserved Notation "{{? codes , environment , state | e ⇓ output | state' ?}}".
 
   Inductive t {A : Set} (codes : Codes.t) (environment : Environment.t) (output : A) :
       option State.t -> LowM.t A -> option State.t -> Prop :=
@@ -1637,8 +1635,7 @@ End RunO.
 Import RunO.
 
 Module RunP.
-  Reserved Notation "{{{ codes , environment , state | e ⇓ P_output_state' }}}"
-    (at level 70, no associativity).
+  Reserved Notation "{{{ codes , environment , state | e ⇓ P_output_state' }}}".
 
   Inductive t {A : Set} (codes : Codes.t) (environment : Environment.t)
       (state : State.t) (P_output_state' : A -> State.t -> Prop) :

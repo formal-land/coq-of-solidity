@@ -241,7 +241,7 @@ symmetry. rewrite IHfuel.
      with (S ((N.to_nat (next_valid_instruction_position i b - (i + 1))))) by lia.
   now rewrite List.skipn_cons.
 }
-rewrite List.skipn_length.
+rewrite List.length_skipn.
 cbn in EnoughFuel.
 lia.
 Qed.
