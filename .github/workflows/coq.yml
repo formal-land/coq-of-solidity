@@ -24,7 +24,8 @@ jobs:
         custom_script: |
           startGroup "Install dependencies"
             sudo apt-get update
-            sudo apt-get install -y cmake libboost-all-dev
+            sudo apt-get install -y cmake libboost-all-dev jq
+            sudo ln -s `which python3` /usr/bin/python
             opam install -y --deps-only coq/CoqOfSolidity/coq-of-solidity.opam
           endGroup
           startGroup "Build"
@@ -33,6 +34,11 @@ jobs:
             cd build
             cmake ..
             # make
+            cd ..
+          endGroup
+          startGroup "Translate contracts"
+            # We cannot do it as we need to have solc compiled and it takes too long
+            cd coq/
             cd ..
           endGroup
           startGroup "Check that the diff is empty (excluding submodules)"

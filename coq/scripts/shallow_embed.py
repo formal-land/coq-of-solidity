@@ -21,6 +21,7 @@ def paren(condition: bool, value: str) -> str:
 def name_to_coq(name: str) -> str:
     reserved_names = [
         "end",
+        "mod",
         "return",
     ]
 
