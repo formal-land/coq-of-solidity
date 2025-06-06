@@ -1,7 +1,7 @@
 # 🪨🐓 coq-of-solidity
-> A formal verification tool for [Solidity](https://soliditylang.org/) using the [Coq](https://coq.inria.fr/) proof system. Make smart contracts without bugs!
+> A formal verification tool for [Solidity](https://soliditylang.org/) using the [Rocq](https://rocq-prover.org/) proof system. Make smart contracts without bugs!
 
-The `coq-of-solidity` project is a tool to automatically translate Solidity smart contracts to the Coq proof system. This allows to formally verify the correctness of the smart contracts.
+The `coq-of-solidity` project is a tool to automatically translate Solidity smart contracts to the Rocq proof system. This allows to formally verify the correctness of the smart contracts.
 
 Formal verification is about verifying code for all possible input, and goes further than traditional testing that only covers a finite amount of cases. Formal verification relies on mathematical methods to analyze the code.
 
@@ -10,7 +10,7 @@ This project provides:
 1. **More security for code audits:** all the combinations of inputs are covered, in contrast to testing.
 2. **Reusable audits** for future code changes: we can re-run the proofs as the code evolves.
 
-The `coq-of-solidity` tool uses an interactive theorem prover (Coq) to check arbitrarily complex code properties and business rules for your smart contracts.
+The `coq-of-solidity` tool uses an interactive theorem prover (Rocq) to check arbitrarily complex code properties and business rules for your smart contract, with the highest possible level of guarantees.
 
 ## ✅ Audits
 
@@ -30,23 +30,23 @@ Then, assuming that you are at the root of this project, run the following comma
 build/solc/solc --ir-coq --optimize my_smart_contract.sol
 ```
 
-It will pretty-print on the terminal a Coq version of the code. Examples of contracts that are already translated in Coq are in the [CoqOfSolidity/](CoqOfSolidity/) folder.
+It will pretty-print on the terminal a Rocq version of the code. Examples of contracts that are already translated in Rocq are in the [CoqOfSolidity/](CoqOfSolidity/) folder.
 
-We successfully translate and run more than 90% of the Solidity compiler tests in [test/libsolidity/semanticTests/](test/libsolidity/semanticTests/). The main missing features are the pre-compiled contracts and error cases in contract calls. The main file to extract the semantic tests with the execution trace to Coq is [test/libsolidity/SemanticTest.cpp](test/libsolidity/SemanticTest.cpp):
+We successfully translate and run more than 90% of the Solidity compiler tests in [test/libsolidity/semanticTests/](test/libsolidity/semanticTests/). The main missing features are the pre-compiled contracts and error cases in contract calls. The main file to extract the semantic tests with the execution trace to Rocq is [test/libsolidity/SemanticTest.cpp](test/libsolidity/SemanticTest.cpp):
 
 - example source test: [test/libsolidity/semanticTests/various/erc20.sol](test/libsolidity/semanticTests/various/erc20.sol)
-- Coq output: [CoqOfSolidity/test/libsolidity/semanticTests/various/erc20/GeneratedTest.v](CoqOfSolidity/test/libsolidity/semanticTests/various/erc20/GeneratedTest.v)
+- Rocq output: [CoqOfSolidity/test/libsolidity/semanticTests/various/erc20/GeneratedTest.v](CoqOfSolidity/test/libsolidity/semanticTests/various/erc20/GeneratedTest.v)
 
-Assuming that you have a working installation of the Coq system, you can compile the existing translated code with:
+Assuming that you have a working installation of the Rocq system, you can compile the existing translated code with:
 
 ```sh
 cd CoqOfSolidity
 make -j4 -k
 ```
 
-The Coq compilation takes a lot of time as there are a lot of generated files.
+The Rocq compilation takes a lot of time, as there are a lot of generated files.
 
-The translated Coq files can sometimes be a bit too verbose. You can have a better readability by generating the original Yul code that we use to generate the Coq translation with:
+The translated Rocq files can sometimes be a bit too verbose. You can have better readability by generating the original Yul code that we use to generate the Rocq translation with:
 
 ```sh
 build/solc/solc --ir-optimized --optimize my_smart_contract.sol
@@ -56,20 +56,20 @@ build/solc/solc --ir-optimized --optimize my_smart_contract.sol
 
 This project is built as a fork of the official `solc` compiler in order to re-use the frontend (parser, type-checker, ...) and stay up-to-date with the Solidity language. The `solc` compiler is a C++ project that compiles Solidity code to EVM bytecode.
 
-We translate the intermediate language [Yul](https://docs.soliditylang.org/en/latest/yul.html) to Coq. Yul is a low-level intermediate language used by the Solidity compiler that is both simpler than Solidity and more high-level than EVM bytecode. The relevant code is in [libyul/AsmCoqConverter.cpp](libyul/AsmCoqConverter.cpp).
+We translate the intermediate language [Yul](https://docs.soliditylang.org/en/latest/yul.html) to Rocq. Yul is a low-level intermediate language used by the Solidity compiler that is both simpler than Solidity and higher-level than EVM bytecode. The relevant code is in [libyul/AsmCoqConverter.cpp](libyul/AsmCoqConverter.cpp).
 
-We then define in Coq the semantics of the Yul language as well as of all the EVM primitives (addition, multiplication, keccak256, contract calls, ...). This is done in the two following files:
+We then define in Rocq the semantics of the Yul language as well as of all the EVM primitives (addition, multiplication, keccak256, contract calls, ...). This is done in the two following files:
 
 - [CoqOfSolidity/CoqOfSolidity.v](CoqOfSolidity/CoqOfSolidity.v) for the semantics of the Yul language
 - [CoqOfSolidity/simulations/CoqOfSolidity.v](CoqOfSolidity/simulations/CoqOfSolidity.v) for the semantics of the EVM primitives
 
-To prevent mistakes in our Coq definitions, we also translate the `semanticTests` of the Solidity compiler to Coq and re-run them in Coq. We then check that we get the exact same outputs as the code generated by the official Solidity compiler.
+To prevent mistakes in our Rocq definitions, we also translate the `semanticTests` of the Solidity compiler to Rocq and re-run them in Rocq. We then check that we get the exact same outputs as the code generated by the official Solidity compiler.
 
 ## 🧪 Build the tests
 
-To build the tests you need to:
+To build the tests, you need to:
 
-1. Translate the test files to Coq with the following commands:
+1. Translate the test files to Rocq with the following commands:
     ```sh
     cd CoqOfSolidity
     python translate_from_tests.py
@@ -85,13 +85,13 @@ To build the tests you need to:
     cd CoqOfSolidity
     make -j4 -k
     ```
-    For the syntax tests it will verify that the translated Coq code type checks. For the semantic tests it will verify that the execution trace of the contract is the same in Coq as with the Solidity compiler, in addition of type checking the translated code.
+    For the syntax tests it will verify that the translated Rocq code type checks. For the semantic tests it will verify that the execution trace of the contract is the same in Rocq as with the Solidity compiler, in addition of type checking the translated code.
 
 We do not support yet all the semantic tests but around 90% and are working on the remaining ones.
 
 ## 📚 Example
 
-Here is what the Coq translation looks like for an example of Solidity code:
+Here is what the Rocq translation looks like for an example of Solidity code:
 
 ```solidity
 function _transfer(address from, address to, uint256 value) internal {
@@ -104,7 +104,7 @@ function _transfer(address from, address to, uint256 value) internal {
 }
 ```
 
-translates in Coq to:
+translates in Rocq to:
 
 ```coq
 (* Generated by coq-of-solidity *)
@@ -142,9 +142,9 @@ Definition fun_transfer (var_from : U256.t) (var_to : U256.t) (var_value : U256.
   M.pure tt.
 ```
 
-The Coq output is based on the Yul compilation of the above Solidity code. It is a **shallow embedding** when we can, as in this example, and a **deep embedding** otherwise.
+The Rocq output is based on the Yul compilation of the above Solidity code. It is a **shallow embedding** when we can, as in this example, and a **deep embedding** otherwise.
 
-We have proven the code above to be equivalent to the high-level Coq version:
+We have proven the code above to be equivalent to the high-level Rocq version:
 ```coq
 Definition _transfer (from to : Address.t) (value : U256.t) (s : Storage.t) : Result.t Storage.t :=
   if to =? 0 then
@@ -163,11 +163,11 @@ Definition _transfer (from to : Address.t) (value : U256.t) (s : Storage.t) : Re
         Dict.declare_or_assign s.(Storage.balances) to (balanceOf s to + value)
       |>.
 ```
-In the high-level version we make explicit all the overflow checks and use real maps instead of Keccak-encoded keys.
+In the high-level version, we make explicit all the overflow checks and use real maps instead of Keccak-encoded keys.
 
 ## 📝 License
 
-The code of the translation is under the GPL-3.0 license as this is a fork of the Solidity compiler. The code of the Coq semantics is under the MIT license.
+The code of the translation is under the GPL-3.0 license as this is a fork of the Solidity compiler. The code of the Rocq semantics is under the MIT license.
 
 ## 👥 Developers
 
