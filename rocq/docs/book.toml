@@ -1,0 +1,6 @@
+[book]
+authors = ["Guillaume Claret"]
+language = "en"
+multilingual = false
+src = "src"
+title = "rocq-of-solidity"

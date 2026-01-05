@@ -49,9 +49,15 @@ std::ostream& solidity::frontend::test::operator<<(std::ostream& _output, Requir
 {
 	switch (_requiresYulOptimizer)
 	{
-	case RequiresYulOptimizer::False: _output << "false"; break;
-	case RequiresYulOptimizer::MinimalStack: _output << "minimalStack"; break;
-	case RequiresYulOptimizer::Full: _output << "full"; break;
+	case RequiresYulOptimizer::False:
+		_output << "false";
+		break;
+	case RequiresYulOptimizer::MinimalStack:
+		_output << "minimalStack";
+		break;
+	case RequiresYulOptimizer::Full:
+		_output << "full";
+		break;
 	}
 	return _output;
 }
@@ -62,16 +68,11 @@ SemanticTest::SemanticTest(
 	std::optional<uint8_t> _eofVersion,
 	std::vector<boost::filesystem::path> const& _vmPaths,
 	bool _enforceGasCost,
-	u256 _enforceGasCostMinValue
-):
-	SolidityExecutionFramework(_evmVersion, _eofVersion, _vmPaths, false),
-	EVMVersionRestrictedTestCase(_filename),
-	m_sources(m_reader.sources()),
-	m_lineOffset(m_reader.lineNumber()),
-	m_builtins(makeBuiltins()),
-	m_sideEffectHooks(makeSideEffectHooks()),
-	m_enforceGasCost(_enforceGasCost),
-	m_enforceGasCostMinValue(std::move(_enforceGasCostMinValue))
+	u256 _enforceGasCostMinValue)
+	: SolidityExecutionFramework(_evmVersion, _eofVersion, _vmPaths, false), EVMVersionRestrictedTestCase(_filename),
+	  m_sources(m_reader.sources()), m_lineOffset(m_reader.lineNumber()), m_builtins(makeBuiltins()),
+	  m_sideEffectHooks(makeSideEffectHooks()), m_enforceGasCost(_enforceGasCost),
+	  m_enforceGasCostMinValue(std::move(_enforceGasCostMinValue))
 {
 	static std::set<std::string> const compileViaYulAllowedValues{"also", "true", "false"};
 	static std::set<std::string> const yulRunTriggers{"also", "true"};
@@ -84,8 +85,7 @@ SemanticTest::SemanticTest(
 			{toString(RequiresYulOptimizer::MinimalStack), RequiresYulOptimizer::MinimalStack},
 			{toString(RequiresYulOptimizer::Full), RequiresYulOptimizer::Full},
 		},
-		toString(RequiresYulOptimizer::False)
-	);
+		toString(RequiresYulOptimizer::False));
 
 	m_runWithABIEncoderV1Only = m_reader.boolSetting("ABIEncoderV1Only", false);
 	if (m_runWithABIEncoderV1Only && !solidity::test::CommonOptions::get().useABIEncoderV1)
@@ -93,10 +93,8 @@ SemanticTest::SemanticTest(
 
 	std::string compileViaYul = m_reader.stringSetting("compileViaYul", "also");
 	if (m_runWithABIEncoderV1Only && compileViaYul != "false")
-		BOOST_THROW_EXCEPTION(std::runtime_error(
-			"ABIEncoderV1Only tests cannot be run via yul, "
-			"so they need to also specify ``compileViaYul: false``"
-		));
+		BOOST_THROW_EXCEPTION(std::runtime_error("ABIEncoderV1Only tests cannot be run via yul, "
+												 "so they need to also specify ``compileViaYul: false``"));
 	if (!util::contains(compileViaYulAllowedValues, compileViaYul))
 		BOOST_THROW_EXCEPTION(std::runtime_error("Invalid compileViaYul value: " + compileViaYul + "."));
 	m_testCaseWantsYulRun = util::contains(yulRunTriggers, compileViaYul);
@@ -117,60 +115,47 @@ SemanticTest::SemanticTest(
 		m_compiler.setMetadataHash(CompilerStack::MetadataHash::None);
 	}
 
-	outputCoqTestFile(_filename);
+	outputRocqTestFile(_filename);
 }
 
 std::map<std::string, Builtin> SemanticTest::makeBuiltins()
 {
 	return {
-		{
-			"isoltest_builtin_test",
-			[](FunctionCall const&) -> std::optional<bytes>
-			{
-				return toBigEndian(u256(0x1234));
-			}
-		},
-		{
-			"isoltest_side_effects_test",
-			[](FunctionCall const& _call) -> std::optional<bytes>
-			{
-				if (_call.arguments.parameters.empty())
-					return toBigEndian(0);
-				else
-					return _call.arguments.rawBytes();
-			}
-		},
-		{
-			"balance",
-			[this](FunctionCall const& _call) -> std::optional<bytes>
-			{
-				soltestAssert(_call.arguments.parameters.size() <= 1, "Account address expected.");
-				h160 address;
-				if (_call.arguments.parameters.size() == 1)
-					address = h160(_call.arguments.parameters.at(0).rawString);
-				else
-					address = m_contractAddress;
-				return toBigEndian(balanceAt(address));
-			}
-		},
-		{
-			"storageEmpty",
-			[this](FunctionCall const& _call) -> std::optional<bytes>
-			{
-				soltestAssert(_call.arguments.parameters.empty(), "No arguments expected.");
-				return toBigEndian(u256(storageEmpty(m_contractAddress) ? 1 : 0));
-			}
-		},
-		{
-			"account",
-			[this](FunctionCall const& _call) -> std::optional<bytes>
-			{
-				soltestAssert(_call.arguments.parameters.size() == 1, "Account number expected.");
-				size_t accountNumber = static_cast<size_t>(stoi(_call.arguments.parameters.at(0).rawString));
-				// Need to pad it to 32-bytes to workaround limitations in BytesUtils::formatHex.
-				return toBigEndian(h256(ExecutionFramework::setAccount(accountNumber).asBytes(), h256::AlignRight));
-			}
-		},
+		{"isoltest_builtin_test",
+		 [](FunctionCall const&) -> std::optional<bytes> { return toBigEndian(u256(0x1234)); }},
+		{"isoltest_side_effects_test",
+		 [](FunctionCall const& _call) -> std::optional<bytes>
+		 {
+			 if (_call.arguments.parameters.empty())
+				 return toBigEndian(0);
+			 else
+				 return _call.arguments.rawBytes();
+		 }},
+		{"balance",
+		 [this](FunctionCall const& _call) -> std::optional<bytes>
+		 {
+			 soltestAssert(_call.arguments.parameters.size() <= 1, "Account address expected.");
+			 h160 address;
+			 if (_call.arguments.parameters.size() == 1)
+				 address = h160(_call.arguments.parameters.at(0).rawString);
+			 else
+				 address = m_contractAddress;
+			 return toBigEndian(balanceAt(address));
+		 }},
+		{"storageEmpty",
+		 [this](FunctionCall const& _call) -> std::optional<bytes>
+		 {
+			 soltestAssert(_call.arguments.parameters.empty(), "No arguments expected.");
+			 return toBigEndian(u256(storageEmpty(m_contractAddress) ? 1 : 0));
+		 }},
+		{"account",
+		 [this](FunctionCall const& _call) -> std::optional<bytes>
+		 {
+			 soltestAssert(_call.arguments.parameters.size() == 1, "Account number expected.");
+			 size_t accountNumber = static_cast<size_t>(stoi(_call.arguments.parameters.at(0).rawString));
+			 // Need to pad it to 32-bytes to workaround limitations in BytesUtils::formatHex.
+			 return toBigEndian(h256(ExecutionFramework::setAccount(accountNumber).asBytes(), h256::AlignRight));
+		 }},
 	};
 }
 
@@ -189,11 +174,11 @@ std::vector<SideEffectHook> SemanticTest::makeSideEffectHooks() const
 			}
 			return {};
 		},
-		bind(&SemanticTest::eventSideEffectHook, this, _1)
-	};
+		bind(&SemanticTest::eventSideEffectHook, this, _1)};
 }
 
-std::string SemanticTest::formatEventParameter(std::optional<AnnotatedEventSignature> _signature, bool _indexed, size_t _index, bytes const& _data)
+std::string SemanticTest::formatEventParameter(
+	std::optional<AnnotatedEventSignature> _signature, bool _indexed, size_t _index, bytes const& _data)
 {
 	auto isPrintableASCII = [](bytes const& s)
 	{
@@ -205,7 +190,8 @@ std::string SemanticTest::formatEventParameter(std::optional<AnnotatedEventSigna
 				zeroes = false;
 				if (static_cast<unsigned>(c) <= 0x1f || static_cast<unsigned>(c) >= 0x7f)
 					return false;
-			} else
+			}
+			else
 				break;
 		}
 		return !zeroes;
@@ -334,21 +320,14 @@ TestCase::TestResult SemanticTest::run(std::ostream& _stream, std::string const&
 	}
 
 	if (result != TestResult::Success)
-		solidity::test::CommonOptions::get().printSelectedOptions(
-			_stream,
-			_linePrefix,
-			{"evmVersion", "optimize", "useABIEncoderV1", "batch"}
-		);
+		solidity::test::CommonOptions::get()
+			.printSelectedOptions(_stream, _linePrefix, {"evmVersion", "optimize", "useABIEncoderV1", "batch"});
 
 	return result;
 }
 
-TestCase::TestResult SemanticTest::runTest(
-	std::ostream& _stream,
-	std::string const& _linePrefix,
-	bool _formatted,
-	bool _isYulRun
-)
+TestCase::TestResult
+SemanticTest::runTest(std::ostream& _stream, std::string const& _linePrefix, bool _formatted, bool _isYulRun)
 {
 	bool success = true;
 	m_gasCostFailure = false;
@@ -378,12 +357,10 @@ TestCase::TestResult SemanticTest::runTest(
 		{
 			soltestAssert(
 				test.call().kind != FunctionCall::Kind::Library,
-				"Libraries have to be deployed before any other call."
-			);
+				"Libraries have to be deployed before any other call.");
 			soltestAssert(
 				test.call().kind != FunctionCall::Kind::Constructor,
-				"Constructor has to be the first function call expect for library deployments."
-			);
+				"Constructor has to be the first function call expect for library deployments.");
 		}
 		else if (test.call().kind == FunctionCall::Kind::Library)
 		{
@@ -437,31 +414,28 @@ TestCase::TestResult SemanticTest::runTest(
 			else
 			{
 				soltestAssert(
-					m_allowNonExistingFunctions ||
-					m_compiler.interfaceSymbols(m_compiler.lastContractName(m_sources.mainSourceFile))["methods"].contains(test.call().signature),
-					"The function " + test.call().signature + " is not known to the compiler"
-				);
+					m_allowNonExistingFunctions
+						|| m_compiler.interfaceSymbols(m_compiler.lastContractName(m_sources.mainSourceFile))["methods"]
+							   .contains(test.call().signature),
+					"The function " + test.call().signature + " is not known to the compiler");
 
 				std::cout << std::endl;
-				std::cout << "Last contract name: " << m_compiler.lastContractName(m_sources.mainSourceFile) << std::endl;
-				std::cout << "Main source file: " <<  m_sources.mainSourceFile << std::endl;
+				std::cout << "Last contract name: " << m_compiler.lastContractName(m_sources.mainSourceFile)
+						  << std::endl;
+				std::cout << "Main source file: " << m_sources.mainSourceFile << std::endl;
 				std::cout << std::endl;
 
 				output = callContractFunctionWithValueNoEncoding(
-					test.call().signature,
-					test.call().value.value,
-					test.call().arguments.rawBytes()
-				);
+					test.call().signature, test.call().value.value, test.call().arguments.rawBytes());
 
-				writeCoqCallTest(
+				writeRocqCallTest(
 					test.format(),
 					test.call().signature,
 					test.call().value.value,
 					test.call().arguments.rawBytes(),
 					output,
 					test.call().expectations,
-					testIndex
-				);
+					testIndex);
 
 				testIndex++;
 			}
@@ -505,8 +479,8 @@ TestCase::TestResult SemanticTest::runTest(
 				_linePrefix,
 				TestFunctionCall::RenderMode::ExpectedValuesExpectedGas,
 				_formatted,
-				/* _interactivePrint */ true
-			) << std::endl;
+				/* _interactivePrint */ true)
+					<< std::endl;
 			_stream << errorReporter.format(_linePrefix, _formatted);
 		}
 		_stream << std::endl;
@@ -517,10 +491,11 @@ TestCase::TestResult SemanticTest::runTest(
 			_stream << test.format(
 				errorReporter,
 				_linePrefix,
-				m_gasCostFailure ? TestFunctionCall::RenderMode::ExpectedValuesActualGas : TestFunctionCall::RenderMode::ActualValuesExpectedGas,
+				m_gasCostFailure ? TestFunctionCall::RenderMode::ExpectedValuesActualGas
+								 : TestFunctionCall::RenderMode::ActualValuesExpectedGas,
 				_formatted,
-				/* _interactivePrint */ true
-			) << std::endl;
+				/* _interactivePrint */ true)
+					<< std::endl;
 			_stream << errorReporter.format(_linePrefix, _formatted);
 		}
 		AnsiColorized(_stream, _formatted, {BOLD, RED})
@@ -542,23 +517,17 @@ TestCase::TestResult SemanticTest::runTest(
 	return TestResult::Success;
 }
 
-TestCase::TestResult SemanticTest::tryRunTestWithYulOptimizer(
-	std::ostream& _stream,
-	std::string const& _linePrefix,
-	bool _formatted
-)
+TestCase::TestResult
+SemanticTest::tryRunTestWithYulOptimizer(std::ostream& _stream, std::string const& _linePrefix, bool _formatted)
 {
 	TestResult result{};
 	for (auto requiresYulOptimizer: {
-		RequiresYulOptimizer::False,
-		RequiresYulOptimizer::MinimalStack,
-		RequiresYulOptimizer::Full,
-	})
+			 RequiresYulOptimizer::False,
+			 RequiresYulOptimizer::MinimalStack,
+			 RequiresYulOptimizer::Full,
+		 })
 	{
-		ScopedSaveAndRestore optimizerSettings(
-			m_optimiserSettings,
-			optimizerSettingsFor(requiresYulOptimizer)
-		);
+		ScopedSaveAndRestore optimizerSettings(m_optimiserSettings, optimizerSettingsFor(requiresYulOptimizer));
 
 		try
 		{
@@ -578,8 +547,8 @@ TestCase::TestResult SemanticTest::tryRunTestWithYulOptimizer(
 
 			AnsiColorized(_stream, _formatted, {BOLD, YELLOW})
 				<< _linePrefix << std::endl
-				<< _linePrefix << "requiresYulOptimizer is set to " << m_requiresYulOptimizer
-				<< " but should be " << requiresYulOptimizer << std::endl;
+				<< _linePrefix << "requiresYulOptimizer is set to " << m_requiresYulOptimizer << " but should be "
+				<< requiresYulOptimizer << std::endl;
 			m_requiresYulOptimizer = requiresYulOptimizer;
 			return TestResult::Failure;
 		}
@@ -591,14 +560,12 @@ TestCase::TestResult SemanticTest::tryRunTestWithYulOptimizer(
 
 bool SemanticTest::checkGasCostExpectation(TestFunctionCall& io_test, bool _compileViaYul) const
 {
-	std::string setting =
-		(_compileViaYul ? "ir"s : "legacy"s) +
-		(m_optimiserSettings == OptimiserSettings::full() ? "Optimized" : "");
+	std::string setting
+		= (_compileViaYul ? "ir"s : "legacy"s) + (m_optimiserSettings == OptimiserSettings::full() ? "Optimized" : "");
 
 	soltestAssert(
-		io_test.call().expectations.gasUsedExcludingCode.count(setting) ==
-		io_test.call().expectations.gasUsedForCodeDeposit.count(setting)
-	);
+		io_test.call().expectations.gasUsedExcludingCode.count(setting)
+		== io_test.call().expectations.gasUsedForCodeDeposit.count(setting));
 
 	// We don't check gas if enforce gas cost is not active
 	// or test is run with abi encoder v1 only
@@ -606,13 +573,9 @@ bool SemanticTest::checkGasCostExpectation(TestFunctionCall& io_test, bool _comp
 	// or the test has used up all available gas (test will fail anyway)
 	// or setting is "ir" and it's not included in expectations
 	// or if the called function is an isoltest builtin e.g. `smokeTest` or `storageEmpty`
-	if (
-		!m_enforceGasCost ||
-		m_gasUsed < m_enforceGasCostMinValue ||
-		m_gasUsed >= InitialGas ||
-		(setting == "ir" && io_test.call().expectations.gasUsedExcludingCode.count(setting) == 0) ||
-		io_test.call().kind == FunctionCall::Kind::Builtin
-	)
+	if (!m_enforceGasCost || m_gasUsed < m_enforceGasCostMinValue || m_gasUsed >= InitialGas
+		|| (setting == "ir" && io_test.call().expectations.gasUsedExcludingCode.count(setting) == 0)
+		|| io_test.call().kind == FunctionCall::Kind::Builtin)
 		return true;
 
 	solAssert(!m_runWithABIEncoderV1Only, "");
@@ -623,10 +586,9 @@ bool SemanticTest::checkGasCostExpectation(TestFunctionCall& io_test, bool _comp
 	io_test.setGasCostExcludingCode(setting, m_gasUsed - m_gasUsedForCodeDeposit);
 	io_test.setCodeDepositGasCost(setting, m_gasUsedForCodeDeposit);
 
-	return
-		io_test.call().expectations.gasUsedExcludingCode.count(setting) > 0 &&
-		m_gasUsed - m_gasUsedForCodeDeposit == io_test.call().expectations.gasUsedExcludingCode.at(setting) &&
-		m_gasUsedForCodeDeposit == io_test.call().expectations.gasUsedForCodeDeposit.at(setting);
+	return io_test.call().expectations.gasUsedExcludingCode.count(setting) > 0
+		   && m_gasUsed - m_gasUsedForCodeDeposit == io_test.call().expectations.gasUsedExcludingCode.at(setting)
+		   && m_gasUsedForCodeDeposit == io_test.call().expectations.gasUsedForCodeDeposit.at(setting);
 }
 
 void SemanticTest::printSource(std::ostream& _stream, std::string const& _linePrefix, bool _formatted) const
@@ -634,7 +596,9 @@ void SemanticTest::printSource(std::ostream& _stream, std::string const& _linePr
 	if (m_sources.sources.empty())
 		return;
 
-	bool outputNames = (m_sources.sources.size() - m_sources.externalSources.size() != 1 || !m_sources.sources.begin()->first.empty());
+	bool outputNames
+		= (m_sources.sources.size() - m_sources.externalSources.size() != 1
+		   || !m_sources.sources.begin()->first.empty());
 
 	std::set<std::string> externals;
 	for (auto const& [name, path]: m_sources.externalSources)
@@ -647,7 +611,8 @@ void SemanticTest::printSource(std::ostream& _stream, std::string const& _linePr
 			externalSource = name + "=" + path.generic_string();
 
 		if (_formatted)
-			_stream << _linePrefix  << formatting::CYAN << "==== ExternalSource: " << externalSource << " ===="s << formatting::RESET << std::endl;
+			_stream << _linePrefix << formatting::CYAN << "==== ExternalSource: " << externalSource << " ===="s
+					<< formatting::RESET << std::endl;
 		else
 			_stream << _linePrefix << "==== ExternalSource: " << externalSource << " ===="s << std::endl;
 	}
@@ -695,9 +660,10 @@ void SemanticTest::printUpdatedExpectations(std::ostream& _stream, std::string c
 	for (TestFunctionCall const& test: m_tests)
 		_stream << test.format(
 			"",
-			m_gasCostFailure ? TestFunctionCall::RenderMode::ExpectedValuesActualGas : TestFunctionCall::RenderMode::ActualValuesExpectedGas,
-			/* _highlight = */ false
-		) << std::endl;
+			m_gasCostFailure ? TestFunctionCall::RenderMode::ExpectedValuesActualGas
+							 : TestFunctionCall::RenderMode::ActualValuesExpectedGas,
+			/* _highlight = */ false)
+				<< std::endl;
 }
 
 void SemanticTest::printUpdatedSettings(std::ostream& _stream, std::string const& _linePrefix)
@@ -712,7 +678,7 @@ void SemanticTest::printUpdatedSettings(std::ostream& _stream, std::string const
 
 	for (auto const& [settingName, settingValue]: settings)
 		if (settingName != "requiresYulOptimizer")
-			_stream << _linePrefix << "// " << settingName << ": " << settingValue<< std::endl;
+			_stream << _linePrefix << "// " << settingName << ": " << settingValue << std::endl;
 }
 
 void SemanticTest::parseExpectations(std::istream& _stream)
@@ -724,28 +690,28 @@ bool SemanticTest::deploy(
 	std::string const& _contractName,
 	u256 const& _value,
 	bytes const& _arguments,
-	std::map<std::string, solidity::test::Address> const& _libraries
-)
+	std::map<std::string, solidity::test::Address> const& _libraries)
 {
-	auto output = compileAndRunWithoutCheck(m_sources.sources, _value, _contractName, _arguments, _libraries, m_sources.mainSourceFile);
+	auto output = compileAndRunWithoutCheck(
+		m_sources.sources, _value, _contractName, _arguments, _libraries, m_sources.mainSourceFile);
 
 	std::cout << "DEPLOY" << std::endl;
 	std::cout << "Contract name: " << _contractName << std::endl;
 	std::cout << "Contract path: " << m_reader.fileName() << std::endl;
 
 	// Create the output file
-	std::ofstream outputFile(testCoqFilename());
+	std::ofstream outputFile(testRocqFilename());
 
 	// Check if the output file was created
 	if (!outputFile.is_open())
 	{
-		std::cerr << "Unable to create the output file: " << testCoqFilename() << std::endl;
+		std::cerr << "Unable to create the output file: " << testRocqFilename() << std::endl;
 		return false;
 	}
 	// Write the contract name to the output file
 	outputFile << "(* Generated test file *)" << std::endl;
-	outputFile << "Require Import CoqOfSolidity.CoqOfSolidity." << std::endl;
-	outputFile << "Require Import simulations.CoqOfSolidity." << std::endl;
+	outputFile << "Require Import RocqOfSolidity.RocqOfSolidity." << std::endl;
+	outputFile << "Require Import simulations.RocqOfSolidity." << std::endl;
 	outputFile << std::endl;
 
 	// For each contract
@@ -758,10 +724,12 @@ bool SemanticTest::deploy(
 	outputFile << std::endl;
 	std::string lastContractName = m_compiler.lastContractName(m_sources.mainSourceFile).substr(1);
 	outputFile << "Definition constructor_code : Code.t :=" << std::endl;
-	outputFile << "  " << requirePathPrefix() << "." << lastContractName << "." << lastContractName << ".code." << std::endl;
+	outputFile << "  " << requirePathPrefix() << "." << lastContractName << "." << lastContractName << ".code."
+			   << std::endl;
 	outputFile << std::endl;
 	outputFile << "Definition deployed_code : Code.t :=" << std::endl;
-	outputFile << "  " << requirePathPrefix() << "." << lastContractName << "." << lastContractName << ".deployed.code." << std::endl;
+	outputFile << "  " << requirePathPrefix() << "." << lastContractName << "." << lastContractName << ".deployed.code."
+			   << std::endl;
 	outputFile << std::endl;
 	outputFile << "Definition codes : list Code.t :=" << std::endl;
 	outputFile << "  " << requirePathPrefix() << "." << lastContractName << ".codes." << std::endl;
@@ -781,19 +749,22 @@ bool SemanticTest::deploy(
 	outputFile << "      Account.balance := environment.(Environment.callvalue);" << std::endl;
 	outputFile << "      Account.nonce := 1;" << std::endl;
 	outputFile << "      Account.code := constructor_code.(Code.hex_name);" << std::endl;
-	outputFile << "      Account.codedata := Memory.hex_string_as_bytes \"" << util::toHex(_arguments) << "\";" << std::endl;
+	outputFile << "      Account.codedata := Memory.hex_string_as_bytes \"" << util::toHex(_arguments) << "\";"
+			   << std::endl;
 	outputFile << "      Account.storage := Memory.empty;" << std::endl;
 	outputFile << "      Account.immutables := [];" << std::endl;
 	outputFile << "    |} in" << std::endl;
 	outputFile << "    State.init <| State.accounts := [(address, account)] |>." << std::endl;
 	outputFile << std::endl;
 	outputFile << "  Definition result_state :=" << std::endl;
-	outputFile << "    eval_with_revert 5000 codes environment constructor_code.(Code.body) initial_state." << std::endl;
+	outputFile << "    eval_with_revert 5000 codes environment constructor_code.(Code.body) initial_state."
+			   << std::endl;
 	outputFile << std::endl;
 	outputFile << "  Definition result := fst result_state." << std::endl;
 	outputFile << "  Definition state := snd result_state." << std::endl;
 	outputFile << std::endl;
-	outputFile << "  Goal Test.is_return result state = inl (Memory.u256_as_bytes deployed_code.(Code.hex_name))." << std::endl;
+	outputFile << "  Goal Test.is_return result state = inl (Memory.u256_as_bytes deployed_code.(Code.hex_name))."
+			   << std::endl;
 	outputFile << "  Proof." << std::endl;
 	outputFile << "    vm_compute." << std::endl;
 	outputFile << "    reflexivity." << std::endl;
@@ -801,7 +772,8 @@ bool SemanticTest::deploy(
 	outputFile << std::endl;
 	outputFile << "Definition final_state : State.t :=" << std::endl;
 	outputFile << "  snd (" << std::endl;
-	outputFile << "    eval 5000 codes environment (update_current_code_for_deploy deployed_code.(Code.hex_name)) state" << std::endl;
+	outputFile << "    eval 5000 codes environment (update_current_code_for_deploy deployed_code.(Code.hex_name)) state"
+			   << std::endl;
 	outputFile << "  )." << std::endl;
 	outputFile << "End Constructor." << std::endl;
 
@@ -820,14 +792,15 @@ bool SemanticTest::deploy(
 
 std::string SemanticTest::contractPathWithoutExtension() const
 {
-	std::string contractPath = fs::relative(m_reader.fileName(), fs::current_path() / "test" / "libsolidity").generic_string();
+	std::string contractPath
+		= fs::relative(m_reader.fileName(), fs::current_path() / "test" / "libsolidity").generic_string();
 
 	return contractPath.substr(0, contractPath.size() - 4);
 }
 
-std::string SemanticTest::testCoqFilename() const
+std::string SemanticTest::testRocqFilename() const
 {
-	return "coq/CoqOfSolidityTests/" + contractPathWithoutExtension() + "/GeneratedTest.v";
+	return "rocq/RocqOfSolidityTests/" + contractPathWithoutExtension() + "/GeneratedTest.v";
 }
 
 std::string SemanticTest::requirePathPrefix() const
@@ -838,18 +811,17 @@ std::string SemanticTest::requirePathPrefix() const
 	return requirePathPrefix;
 }
 
-void SemanticTest::writeCoqCallTest(
+void SemanticTest::writeRocqCallTest(
 	std::string const& asComment,
 	std::string const& _signature,
 	u256 const& _value,
 	bytes const& _arguments,
 	bytes const& _output,
 	FunctionCallExpectations const& expectations,
-	size_t testIndex
-) const
+	size_t testIndex) const
 {
 	// Re-open the output file
-	std::ofstream outputFile(testCoqFilename(), std::ios::app);
+	std::ofstream outputFile(testRocqFilename(), std::ios::app);
 
 	outputFile << std::endl;
 	outputFile << "(* " << asComment << " *)" << std::endl;
@@ -858,15 +830,14 @@ void SemanticTest::writeCoqCallTest(
 	outputFile << "    Environment.caller := 0x" << m_sender << ";" << std::endl;
 	outputFile << "    Environment.callvalue := " << _value << ";" << std::endl;
 	bytes arguments = util::selectorFromSignatureH32(_signature).asBytes() + _arguments;
-	outputFile << "    Environment.calldata := Memory.hex_string_as_bytes \"" << util::toHex(arguments) << "\";" << std::endl;
+	outputFile << "    Environment.calldata := Memory.hex_string_as_bytes \"" << util::toHex(arguments) << "\";"
+			   << std::endl;
 	outputFile << "    Environment.address := 0x" << m_contractAddress << ";" << std::endl;
 	outputFile << "    Environment.code_name := deployed_code.(Code.hex_name);" << std::endl;
 	outputFile << "  |}." << std::endl;
 	outputFile << std::endl;
-	std::string initialState =
-		testIndex == 0 ?
-			"Constructor.final_state" :
-			"Step" + std::to_string(testIndex) + ".state";
+	std::string initialState
+		= testIndex == 0 ? "Constructor.final_state" : "Step" + std::to_string(testIndex) + ".state";
 	outputFile << "  Definition initial_state : State.t :=" << std::endl;
 	outputFile << "    State.init <| State.accounts := " << initialState << ".(State.accounts) |>." << std::endl;
 	outputFile << std::endl;
@@ -881,14 +852,12 @@ void SemanticTest::writeCoqCallTest(
 	outputFile << std::endl;
 	std::string status = expectations.failure ? "Failure" : "Success";
 	// These three kinds of comments can appear in the expectations
-	if (
-		expectations.comment == " Out-of-gas " ||
-		expectations.comment == " out-of-gas " ||
-		expectations.comment == " Out of gas "
-	)
+	if (expectations.comment == " Out-of-gas " || expectations.comment == " out-of-gas "
+		|| expectations.comment == " Out of gas ")
 		status = "OutOfGas";
 	std::cout << "COMMENT: " << expectations.comment << std::endl;
-	outputFile << "  Goal Test.extract_output result state Test.Status." << status << " = inl expected_output." << std::endl;
+	outputFile << "  Goal Test.extract_output result state Test.Status." << status << " = inl expected_output."
+			   << std::endl;
 	outputFile << "  Proof." << std::endl;
 	outputFile << "    vm_compute." << std::endl;
 	outputFile << "    reflexivity." << std::endl;
@@ -899,7 +868,7 @@ void SemanticTest::writeCoqCallTest(
 	outputFile.close();
 }
 
-void SemanticTest::outputCoqTestFile(std::string const& _filename)
+void SemanticTest::outputRocqTestFile(std::string const& _filename)
 {
 	std::cout << "Running " << _filename << " with " << m_tests.size() << " tests." << std::endl;
 

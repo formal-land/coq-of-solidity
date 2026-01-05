@@ -21,10 +21,10 @@
 
 #include <libyul/Object.h>
 
-#include <libyul/AsmPrinter.h>
-#include <libyul/AsmCoqConverter.h>
-#include <libyul/AsmJsonConverter.h>
 #include <libyul/AST.h>
+#include <libyul/AsmJsonConverter.h>
+#include <libyul/AsmPrinter.h>
+#include <libyul/AsmRocqConverter.h>
 #include <libyul/Exceptions.h>
 
 #include <libsolutil/CommonData.h>
@@ -44,29 +44,20 @@ std::string Data::toString(DebugInfoSelection const&, CharStreamProvider const*)
 	return "data \"" + name + "\" hex\"" + util::toHex(data) + "\"";
 }
 
-std::string Object::toString(
-	DebugInfoSelection const& _debugInfoSelection,
-	CharStreamProvider const* _soliditySourceProvider
-) const
+std::string
+Object::toString(DebugInfoSelection const& _debugInfoSelection, CharStreamProvider const* _soliditySourceProvider) const
 {
 	yulAssert(hasCode(), "No code");
 	yulAssert(debugData, "No debug data");
 
-	std::string inner = "code " + AsmPrinter(
-		m_dialect,
-		debugData->sourceNames,
-		_debugInfoSelection,
-		_soliditySourceProvider
-	)(code()->root());
+	std::string inner
+		= "code "
+		  + AsmPrinter(m_dialect, debugData->sourceNames, _debugInfoSelection, _soliditySourceProvider)(code()->root());
 
 	for (auto const& obj: subObjects)
 		inner += "\n" + obj->toString(_debugInfoSelection, _soliditySourceProvider);
 
-	return
-		debugData->formatUseSrcComment() +
-		"object \"" + name + "\" {\n" +
-		indent(inner) + "\n" +
-		"}";
+	return debugData->formatUseSrcComment() + "object \"" + name + "\" {\n" + indent(inner) + "\n" + "}";
 }
 
 Json Data::toJson() const
@@ -82,13 +73,10 @@ std::string ObjectDebugData::formatUseSrcComment() const
 	if (!sourceNames)
 		return "";
 
-	auto formatIdNamePair = [](auto&& _pair) {
-		return std::to_string(_pair.first) + ":" + util::escapeAndQuoteString(*_pair.second);
-	};
+	auto formatIdNamePair
+		= [](auto&& _pair) { return std::to_string(_pair.first) + ":" + util::escapeAndQuoteString(*_pair.second); };
 
-	std::string serializedSourceNames = joinHumanReadable(
-		ranges::views::transform(*sourceNames, formatIdNamePair)
-	);
+	std::string serializedSourceNames = joinHumanReadable(ranges::views::transform(*sourceNames, formatIdNamePair));
 	return "/// @use-src " + serializedSourceNames + "\n";
 }
 
@@ -112,7 +100,7 @@ Json Object::toJson() const
 	return ret;
 }
 
-std::string Object::toCoq() const
+std::string Object::toRocq() const
 {
 	yulAssert(hasCode(), "No code");
 
@@ -121,16 +109,16 @@ std::string Object::toCoq() const
 	std::string hex_name = util::toHex(util::asBytes(name));
 	inner += "  Code.hex_name := 0x" + hex_name + std::string(64 - hex_name.size(), '0') + ";\n";
 	inner += "  Code.functions :=\n";
-	inner += prefixLines(AsmCoqConverter(0).functions(code()->root()), "    ") + ";\n";
+	inner += prefixLines(AsmRocqConverter(0).functions(code()->root()), "    ") + ";\n";
 	inner += "  Code.body :=\n";
-	inner += prefixLines(AsmCoqConverter(0).body(code()->root()), "    ") + ";\n";
+	inner += prefixLines(AsmRocqConverter(0).body(code()->root()), "    ") + ";\n";
 	inner += "|}.";
 
 	for (auto const& subObject: subObjects)
 		if (auto* objectPtr = dynamic_cast<Object*>(subObject.get()))
-			inner += "\n\n" + objectPtr->toCoq();
+			inner += "\n\n" + objectPtr->toRocq();
 
-	// We remove the id from the name has it makes things more difficult to find the definition in Coq,
+	// We remove the id from the name has it makes things more difficult to find the definition in Rocq,
 	// especially for the generated test files from the tests of the Solidity compiler.
 	std::string nameWithoutId = name;
 	bool hasDeployed = boost::ends_with(nameWithoutId, "_deployed");
@@ -161,10 +149,8 @@ Object::Structure Object::summarizeStructure() const
 {
 	Structure structure;
 
-	structure.objectPaths =
-		name.empty() || util::contains(name, '.') ?
-		std::set<std::string>{} :
-		std::set<std::string>{name};
+	structure.objectPaths
+		= name.empty() || util::contains(name, '.') ? std::set<std::string>{} : std::set<std::string>{name};
 
 	structure.objectName = name;
 
@@ -221,8 +207,7 @@ std::vector<size_t> Object::pathToSubObject(std::string_view _qualifiedName) con
 		auto subIndexIt = object->subIndexByName.find(currentSubObjectName);
 		yulAssert(
 			subIndexIt != object->subIndexByName.end(),
-			"Assembly object <" + std::string(_qualifiedName) + "> not found or does not contain code."
-		);
+			"Assembly object <" + std::string(_qualifiedName) + "> not found or does not contain code.");
 		object = dynamic_cast<Object const*>(object->subObjects[subIndexIt->second].get());
 		yulAssert(object, "Assembly object <" + std::string(_qualifiedName) + "> not found or does not contain code.");
 		yulAssert(object->subId != std::numeric_limits<size_t>::max(), "");
@@ -232,10 +217,7 @@ std::vector<size_t> Object::pathToSubObject(std::string_view _qualifiedName) con
 	return path;
 }
 
-std::shared_ptr<AST const> Object::code() const
-{
-	return m_code;
-}
+std::shared_ptr<AST const> Object::code() const { return m_code; }
 
 bool Object::hasCode() const { return code() != nullptr; }
 
