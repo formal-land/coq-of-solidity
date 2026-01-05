@@ -9,8 +9,8 @@ add_library(yul
 	ASTForward.h
 	ASTLabelRegistry.cpp
 	ASTLabelRegistry.h
-	AsmCoqConverter.h
-	AsmCoqConverter.cpp
+	AsmRocqConverter.h
+	AsmRocqConverter.cpp
 	AsmJsonConverter.h
 	AsmJsonConverter.cpp
 	AsmJsonImporter.h

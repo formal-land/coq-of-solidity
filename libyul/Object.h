@@ -32,9 +32,9 @@
 #include <libsolutil/Common.h>
 #include <libsolutil/JSON.h>
 
+#include <limits>
 #include <memory>
 #include <set>
-#include <limits>
 
 namespace solidity::yul
 {
@@ -57,8 +57,8 @@ struct ObjectNode
 	std::string name;
 	virtual std::string toString(
 		langutil::DebugInfoSelection const& _debugInfoSelection,
-		langutil::CharStreamProvider const* _soliditySourceProvider
-	) const = 0;
+		langutil::CharStreamProvider const* _soliditySourceProvider) const
+		= 0;
 	virtual Json toJson() const = 0;
 };
 
@@ -73,8 +73,7 @@ struct Data: public ObjectNode
 
 	std::string toString(
 		langutil::DebugInfoSelection const& _debugInfoSelection,
-		langutil::CharStreamProvider const* _soliditySourceProvider
-	) const override;
+		langutil::CharStreamProvider const* _soliditySourceProvider) const override;
 	Json toJson() const override;
 };
 
@@ -96,12 +95,11 @@ public:
 	/// @returns a (parseable) string representation.
 	std::string toString(
 		langutil::DebugInfoSelection const& _debugInfoSelection = langutil::DebugInfoSelection::Default(),
-		langutil::CharStreamProvider const* _soliditySourceProvider = nullptr
-	) const override;
+		langutil::CharStreamProvider const* _soliditySourceProvider = nullptr) const override;
 	/// @returns a compact JSON representation of the AST.
 	Json toJson() const override;
 
-	std::string toCoq() const;
+	std::string toRocq() const;
 
 	/// Summarizes the structure of the subtree rooted at a given object,
 	/// in particular the paths that can be used from within to refer to nested nodes (objects and data).

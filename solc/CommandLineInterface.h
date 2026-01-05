@@ -47,13 +47,10 @@ public:
 		std::istream& _sin,
 		std::ostream& _sout,
 		std::ostream& _serr,
-		CommandLineOptions const& _options = CommandLineOptions{}
-	):
-		m_sin(_sin),
-		m_sout(_sout),
-		m_serr(_serr),
-		m_options(_options)
-	{}
+		CommandLineOptions const& _options = CommandLineOptions{})
+		: m_sin(_sin), m_sout(_sout), m_serr(_serr), m_options(_options)
+	{
+	}
 
 	/// Parses command-line arguments, executes the requested operation and handles validation and
 	/// execution errors.
@@ -102,7 +99,7 @@ private:
 	void handleCombinedJSON();
 	void handleAst();
 	void handleEthdebug();
-	void handleCoq();
+	void handleRocq();
 	void handleEVMAssembly(std::string const& _contract);
 	void handleBinary(std::string const& _contract);
 	void handleOpcode(std::string const& _contract);
@@ -110,7 +107,7 @@ private:
 	void handleIRAst(std::string const& _contract);
 	void handleIROptimized(std::string const& _contract);
 	void handleIROptimizedAst(std::string const& _contract);
-	void handleIRCoq(std::string const& _contract);
+	void handleIRRocq(std::string const& _contract);
 	void handleYulCFGExport(std::string const& _contract);
 	void handleBytecode(std::string const& _contract);
 	void handleSignatureHashes(std::string const& _contract);

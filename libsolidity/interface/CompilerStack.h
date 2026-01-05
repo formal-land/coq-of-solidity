@@ -25,11 +25,11 @@
 #pragma once
 
 #include <libsolidity/analysis/FunctionCallGraph.h>
-#include <libsolidity/interface/ReadFile.h>
+#include <libsolidity/interface/DebugSettings.h>
 #include <libsolidity/interface/ImportRemapper.h>
 #include <libsolidity/interface/OptimiserSettings.h>
+#include <libsolidity/interface/ReadFile.h>
 #include <libsolidity/interface/Version.h>
-#include <libsolidity/interface/DebugSettings.h>
 
 #include <libsolidity/formal/ModelCheckerSettings.h>
 
@@ -37,8 +37,8 @@
 
 #include <liblangutil/CharStreamProvider.h>
 #include <liblangutil/DebugInfoSelection.h>
-#include <liblangutil/ErrorReporter.h>
 #include <liblangutil/EVMVersion.h>
+#include <liblangutil/ErrorReporter.h>
 #include <liblangutil/SourceLocation.h>
 
 #include <libevmasm/AbstractAssemblyStack.h>
@@ -46,8 +46,8 @@
 
 #include <libsolutil/Common.h>
 #include <libsolutil/FixedHash.h>
-#include <libsolutil/LazyInit.h>
 #include <libsolutil/JSON.h>
+#include <libsolutil/LazyInit.h>
 
 #include <libyul/ObjectOptimizer.h>
 
@@ -105,7 +105,8 @@ public:
 	CompilerStack(CompilerStack const&) = delete;
 	CompilerStack& operator=(CompilerStack const&) = delete;
 
-	enum State {
+	enum State
+	{
 		Empty,
 		SourcesSet,
 		Parsed,
@@ -114,19 +115,22 @@ public:
 		CompilationSuccessful
 	};
 
-	enum class MetadataFormat {
+	enum class MetadataFormat
+	{
 		WithReleaseVersionTag,
 		WithPrereleaseVersionTag,
 		NoMetadata
 	};
 
-	enum class MetadataHash {
+	enum class MetadataHash
+	{
 		IPFS,
 		Bzzr1,
 		None
 	};
 
-	enum class CompilationSourceType {
+	enum class CompilationSourceType
+	{
 		/// Regular compilation from Solidity source files.
 		Solidity,
 		/// Compilation from an imported Solidity AST.
@@ -138,27 +142,17 @@ public:
 	/// Note that parsing and analysis are not selectable, since they cannot be skipped.
 	struct PipelineConfig
 	{
-		bool irCodegen = false;      ///< Want IR output straight from code generator.
-		bool irOptimization = false; ///< Want reparsed IR that went through YulStack. May be optimized or not, depending on settings.
-		bool bytecode = false;       ///< Want EVM-level outputs, especially EVM assembly and bytecode. May be optimized or not, depending on settings.
+		bool irCodegen = false; ///< Want IR output straight from code generator.
+		bool irOptimization
+			= false; ///< Want reparsed IR that went through YulStack. May be optimized or not, depending on settings.
+		bool bytecode = false; ///< Want EVM-level outputs, especially EVM assembly and bytecode. May be optimized or
+							   ///< not, depending on settings.
 
-		bool needIR(bool _viaIR) const
-		{
-			return
-				irCodegen ||
-				irOptimization ||
-				(bytecode && _viaIR);
-		}
+		bool needIR(bool _viaIR) const { return irCodegen || irOptimization || (bytecode && _viaIR); }
 
-		bool needIRCodegenOnly(bool _viaIR) const
-		{
-			return !(bytecode && _viaIR) && !irOptimization;
-		}
+		bool needIRCodegenOnly(bool _viaIR) const { return !(bytecode && _viaIR) && !irOptimization; }
 
-		bool needBytecode() const
-		{
-			return bytecode;
-		}
+		bool needBytecode() const { return bytecode; }
 
 		PipelineConfig operator|(PipelineConfig const& _other) const
 		{
@@ -172,10 +166,8 @@ public:
 		bool operator!=(PipelineConfig const& _other) const { return !(*this == _other); }
 		bool operator==(PipelineConfig const& _other) const
 		{
-			return
-				irCodegen == _other.irCodegen &&
-				irOptimization == _other.irOptimization &&
-				bytecode == _other.bytecode;
+			return irCodegen == _other.irCodegen && irOptimization == _other.irOptimization
+				   && bytecode == _other.bytecode;
 		}
 	};
 
@@ -292,10 +284,7 @@ public:
 
 	/// Checks whether experimental analysis is on; used in SyntaxTests to skip compilation in case it's ``true``.
 	/// @returns true if experimental analysis is set
-	bool isExperimentalAnalysis() const
-	{
-		return !!m_experimentalAnalysis;
-	}
+	bool isExperimentalAnalysis() const { return !!m_experimentalAnalysis; }
 
 	/// @returns the list of sources (paths) used
 	virtual std::vector<std::string> sourceNames() const override;
@@ -321,7 +310,8 @@ public:
 	/// @returns a list of the contract names in the sources.
 	virtual std::vector<std::string> contractNames() const override;
 
-	/// @returns the name of the last contract. If _sourceName is defined the last contract of that source will be returned.
+	/// @returns the name of the last contract. If _sourceName is defined the last contract of that source will be
+	/// returned.
 	std::string const lastContractName(std::optional<std::string> const& _sourceName = std::nullopt) const;
 
 	/// @returns either the contract's name or a mixture of its name and source file, sanitized for filesystem use
@@ -339,8 +329,8 @@ public:
 	/// @returns the optimized IR representation of a contract AST in JSON format.
 	std::optional<Json> yulIROptimizedAst(std::string const& _contractName) const;
 
-	/// @returns the IR representation of a contract in Coq format.
-	std::string const& yulIRCoq(std::string const& _contractName) const;
+	/// @returns the IR representation of a contract in Rocq format.
+	std::string const& yulIRRocq(std::string const& _contractName) const;
 
 	std::optional<Json> yulCFGJson(std::string const& _contractName) const;
 
@@ -371,7 +361,8 @@ public:
 	/// @return a verbose text representation of the assembly.
 	/// @arg _sourceCodes is the map of input files to source code strings
 	/// Prerequisite: Successful compilation.
-	virtual std::string assemblyString(std::string const& _contractName, StringMap const& _sourceCodes = StringMap()) const override;
+	virtual std::string
+	assemblyString(std::string const& _contractName, StringMap const& _sourceCodes = StringMap()) const override;
 
 	/// @returns a JSON representation of the assembly.
 	/// @arg _sourceCodes is the map of input files to source code strings
@@ -398,7 +389,8 @@ public:
 	/// Prerequisite: Successful call to parse or compile.
 	Json const& natspecDev(std::string const& _contractName) const;
 
-	/// @returns a JSON object with the three members ``methods``, ``events``, ``errors``. Each is a map, mapping identifiers (hashes) to function names.
+	/// @returns a JSON object with the three members ``methods``, ``events``, ``errors``. Each is a map, mapping
+	/// identifiers (hashes) to function names.
 	Json interfaceSymbols(std::string const& _contractName) const;
 
 	/// @returns a JSON representing the ethdebug data of the specified contract.
@@ -463,16 +455,18 @@ private:
 
 		std::shared_ptr<evmasm::Assembly> evmAssembly;
 		std::shared_ptr<evmasm::Assembly> evmRuntimeAssembly;
-		std::optional<std::string> generatedYulUtilityCode; ///< Extra Yul utility code that was used when compiling the creation assembly
-		std::optional<std::string> runtimeGeneratedYulUtilityCode; ///< Extra Yul utility code that was used when compiling the deployed assembly
-		evmasm::LinkerObject object; ///< Deployment object (includes the runtime sub-object).
-		evmasm::LinkerObject runtimeObject; ///< Runtime object.
-		std::optional<std::string> yulIR; ///< Yul IR code straight from the code generator.
-		std::optional<std::string> yulIROptimized; ///< Reparsed and possibly optimized Yul IR code.
-		Json yulIRAst; ///< JSON AST of Yul IR code.
-		Json yulIROptimizedAst; ///< JSON AST of optimized Yul IR code.
-		std::string yulIRCoq; ///< Yul IR code in Coq format.
-		Json yulCFGJson; ///< JSON CFG of Yul IR code.
+		std::optional<std::string>
+			generatedYulUtilityCode; ///< Extra Yul utility code that was used when compiling the creation assembly
+		std::optional<std::string> runtimeGeneratedYulUtilityCode; ///< Extra Yul utility code that was used when
+																   ///< compiling the deployed assembly
+		evmasm::LinkerObject object;				///< Deployment object (includes the runtime sub-object).
+		evmasm::LinkerObject runtimeObject;			///< Runtime object.
+		std::optional<std::string> yulIR;			///< Yul IR code straight from the code generator.
+		std::optional<std::string> yulIROptimized;	///< Reparsed and possibly optimized Yul IR code.
+		Json yulIRAst;								///< JSON AST of Yul IR code.
+		Json yulIROptimizedAst;						///< JSON AST of optimized Yul IR code.
+		std::string yulIRRocq;						///< Yul IR code in Rocq format.
+		Json yulCFGJson;							///< JSON CFG of Yul IR code.
 		util::LazyInit<std::string const> metadata; ///< The metadata json that will be hashed into the chain.
 		util::LazyInit<Json const> abi;
 		util::LazyInit<Json const> storageLayout;
@@ -523,16 +517,14 @@ private:
 	void assembleYul(
 		ContractDefinition const& _contract,
 		std::shared_ptr<evmasm::Assembly> _assembly,
-		std::shared_ptr<evmasm::Assembly> _runtimeAssembly
-	);
+		std::shared_ptr<evmasm::Assembly> _runtimeAssembly);
 
 	/// Compile a single contract.
 	/// @param _otherCompilers provides access to compilers of other contracts, to get
 	///                        their bytecode if needed. Only filled after they have been compiled.
 	void compileContract(
 		ContractDefinition const& _contract,
-		std::map<ContractDefinition const*, std::shared_ptr<Compiler const>>& _otherCompilers
-	);
+		std::map<ContractDefinition const*, std::shared_ptr<Compiler const>>& _otherCompilers);
 
 	/// Generate Yul IR for a single contract.
 	/// Unoptimized IR is stored but otherwise unused, while optimized IR may be used for code
@@ -604,10 +596,7 @@ private:
 
 	/// @returns the offset of the entry point of the given function into the list of assembly items
 	/// or zero if it is not found or does not exist.
-	size_t functionEntryPoint(
-		std::string const& _contractName,
-		FunctionDefinition const& _function
-	) const;
+	size_t functionEntryPoint(std::string const& _contractName, FunctionDefinition const& _function) const;
 
 	void reportUnimplementedFeatureError(
 		langutil::UnimplementedFeatureError const& _error,

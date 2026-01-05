@@ -21,13 +21,13 @@
 #include <liblangutil/CharStream.h>
 #include <liblangutil/ErrorReporter.h>
 
+#include <libyul/AST.h>
 #include <libyul/AsmAnalysis.h>
 #include <libyul/AsmAnalysisInfo.h>
-#include <libyul/AsmCoqConverter.h>
 #include <libyul/AsmJsonConverter.h>
 #include <libyul/AsmParser.h>
 #include <libyul/AsmPrinter.h>
-#include <libyul/AST.h>
+#include <libyul/AsmRocqConverter.h>
 #include <libyul/ObjectParser.h>
 #include <libyul/YulName.h>
 #include <libyul/backends/evm/EVMDialect.h>
@@ -76,10 +76,8 @@ std::variant<Program, ErrorList> Program::load(CharStream& _sourceCode)
 	if (std::holds_alternative<ErrorList>(astOrErrors))
 		return std::get<ErrorList>(astOrErrors);
 
-	std::variant<std::unique_ptr<AsmAnalysisInfo>, ErrorList> analysisInfoOrErrors = analyzeAST(
-		dialect,
-		*std::get<std::unique_ptr<AST>>(astOrErrors)
-	);
+	std::variant<std::unique_ptr<AsmAnalysisInfo>, ErrorList> analysisInfoOrErrors
+		= analyzeAST(dialect, *std::get<std::unique_ptr<AST>>(astOrErrors));
 	if (std::holds_alternative<ErrorList>(analysisInfoOrErrors))
 		return std::get<ErrorList>(analysisInfoOrErrors);
 
@@ -88,9 +86,7 @@ std::variant<Program, ErrorList> Program::load(CharStream& _sourceCode)
 		disambiguateAST(
 			dialect,
 			*std::get<std::unique_ptr<AST>>(astOrErrors),
-			*std::get<std::unique_ptr<AsmAnalysisInfo>>(analysisInfoOrErrors)
-		)
-	);
+			*std::get<std::unique_ptr<AsmAnalysisInfo>>(analysisInfoOrErrors)));
 	program.optimise({
 		FunctionHoister::name,
 		FunctionGrouper::name,
@@ -171,11 +167,8 @@ std::variant<std::unique_ptr<AsmAnalysisInfo>, ErrorList> Program::analyzeAST(Di
 	return std::variant<std::unique_ptr<AsmAnalysisInfo>, ErrorList>(std::move(analysisInfo));
 }
 
-std::unique_ptr<AST> Program::disambiguateAST(
-	Dialect const& _dialect,
-	AST const& _ast,
-	AsmAnalysisInfo const& _analysisInfo
-)
+std::unique_ptr<AST>
+Program::disambiguateAST(Dialect const& _dialect, AST const& _ast, AsmAnalysisInfo const& _analysisInfo)
 {
 	std::set<YulName> const externallyUsedIdentifiers = {};
 	Disambiguator disambiguator(_dialect, _analysisInfo, externallyUsedIdentifiers);
@@ -187,8 +180,7 @@ std::unique_ptr<AST> Program::applyOptimisationSteps(
 	Dialect const& _dialect,
 	NameDispenser& _nameDispenser,
 	std::unique_ptr<AST> _ast,
-	std::vector<std::string> const& _optimisationSteps
-)
+	std::vector<std::string> const& _optimisationSteps)
 {
 	// An empty set of reserved identifiers. It could be a constructor parameter but I don't
 	// think it would be useful in this tool. Other tools (like yulopti) have it empty too.
@@ -197,8 +189,7 @@ std::unique_ptr<AST> Program::applyOptimisationSteps(
 		_dialect,
 		_nameDispenser,
 		externallyUsedIdentifiers,
-		frontend::OptimiserSettings::standard().expectedExecutionsPerDeployment
-	};
+		frontend::OptimiserSettings::standard().expectedExecutionsPerDeployment};
 
 	auto astRoot = std::get<Block>(ASTCopier{}(_ast->root()));
 	for (std::string const& step: _optimisationSteps)

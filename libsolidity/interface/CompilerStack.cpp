@@ -26,32 +26,32 @@
 #include <libsolidity/interface/CompilerStack.h>
 #include <libsolidity/interface/ImportRemapper.h>
 
+#include <libsolidity/analysis/ContractLevelChecker.h>
 #include <libsolidity/analysis/ControlFlowAnalyzer.h>
 #include <libsolidity/analysis/ControlFlowGraph.h>
 #include <libsolidity/analysis/ControlFlowRevertPruner.h>
-#include <libsolidity/analysis/ContractLevelChecker.h>
 #include <libsolidity/analysis/DeclarationTypeChecker.h>
 #include <libsolidity/analysis/DocStringAnalyser.h>
 #include <libsolidity/analysis/DocStringTagParser.h>
 #include <libsolidity/analysis/GlobalContext.h>
+#include <libsolidity/analysis/ImmutableValidator.h>
 #include <libsolidity/analysis/NameAndTypeResolver.h>
 #include <libsolidity/analysis/PostTypeChecker.h>
 #include <libsolidity/analysis/PostTypeContractLevelChecker.h>
+#include <libsolidity/analysis/Scoper.h>
 #include <libsolidity/analysis/StaticAnalyzer.h>
 #include <libsolidity/analysis/SyntaxChecker.h>
-#include <libsolidity/analysis/Scoper.h>
 #include <libsolidity/analysis/TypeChecker.h>
 #include <libsolidity/analysis/ViewPureChecker.h>
-#include <libsolidity/analysis/ImmutableValidator.h>
 
 #include <libsolidity/ast/AST.h>
-#include <libsolidity/ast/TypeProvider.h>
 #include <libsolidity/ast/ASTJsonImporter.h>
+#include <libsolidity/ast/TypeProvider.h>
 #include <libsolidity/codegen/Compiler.h>
 #include <libsolidity/formal/ModelChecker.h>
 #include <libsolidity/interface/ABI.h>
-#include <libsolidity/interface/Natspec.h>
 #include <libsolidity/interface/GasEstimator.h>
+#include <libsolidity/interface/Natspec.h>
 #include <libsolidity/interface/StorageLayout.h>
 #include <libsolidity/interface/UniversalCallback.h>
 #include <libsolidity/interface/Version.h>
@@ -66,24 +66,31 @@
 
 #include <libstdlib/stdlib.h>
 
-#include <libyul/YulName.h>
-#include <libyul/AsmPrinter.h>
-#include <libyul/AsmCoqConverter.h>
-#include <libyul/AsmJsonConverter.h>
-#include <libyul/YulStack.h>
 #include <libyul/AST.h>
+#include <libyul/AsmJsonConverter.h>
 #include <libyul/AsmParser.h>
+#include <libyul/AsmPrinter.h>
+#include <libyul/AsmRocqConverter.h>
+#include <libyul/YulName.h>
+#include <libyul/YulStack.h>
 #include <libyul/optimiser/Suite.h>
 
 #include <liblangutil/Scanner.h>
 #include <liblangutil/SemVerHandler.h>
 #include <liblangutil/SourceReferenceFormatter.h>
 
+<<<<<<< HEAD
 #include <libsolutil/SwarmHash.h>
 #include <libsolutil/IpfsHash.h>
 #include <libsolutil/JSON.h>
+=======
+
+>>>>>>> 3f41217f5a (refacto: rename the project as rocq-of-solidity)
 #include <libsolutil/Algorithms.h>
 #include <libsolutil/FunctionSelector.h>
+#include <libsolutil/IpfsHash.h>
+#include <libsolutil/JSON.h>
+#include <libsolutil/SwarmHash.h>
 
 #include <libevmasm/Ethdebug.h>
 
@@ -95,10 +102,10 @@
 
 #include <fmt/format.h>
 
-#include <utility>
-#include <map>
 #include <limits>
+#include <map>
 #include <string>
+#include <utility>
 
 using namespace solidity;
 using namespace solidity::langutil;
@@ -111,10 +118,9 @@ using solidity::util::errinfo_comment;
 
 static int g_compilerStackCounts = 0;
 
-CompilerStack::CompilerStack(ReadCallback::Callback _readFile):
-	m_readFile{std::move(_readFile)},
-	m_objectOptimizer(std::make_shared<yul::ObjectOptimizer>()),
-	m_errorReporter{m_errorList}
+CompilerStack::CompilerStack(ReadCallback::Callback _readFile)
+	: m_readFile{std::move(_readFile)}, m_objectOptimizer(std::make_shared<yul::ObjectOptimizer>()),
+	  m_errorReporter{m_errorList}
 {
 	// Because TypeProvider is currently a singleton API, we must ensure that
 	// no more than one entity is actually using it at a time.
@@ -137,18 +143,13 @@ void CompilerStack::createAndAssignCallGraphs()
 
 		for (ContractDefinition const* contract: ASTNode::filteredNodes<ContractDefinition>(source->ast->nodes()))
 		{
-			ContractDefinitionAnnotation& annotation =
-				m_contracts.at(contract->fullyQualifiedName()).contract->annotation();
+			ContractDefinitionAnnotation& annotation
+				= m_contracts.at(contract->fullyQualifiedName()).contract->annotation();
 
-			annotation.creationCallGraph = std::make_unique<CallGraph>(
-				FunctionCallGraphBuilder::buildCreationGraph(*contract)
-			);
+			annotation.creationCallGraph
+				= std::make_unique<CallGraph>(FunctionCallGraphBuilder::buildCreationGraph(*contract));
 			annotation.deployedCallGraph = std::make_unique<CallGraph>(
-				FunctionCallGraphBuilder::buildDeployedGraph(
-					*contract,
-					**annotation.creationCallGraph
-				)
-			);
+				FunctionCallGraphBuilder::buildDeployedGraph(*contract, **annotation.creationCallGraph));
 
 			solAssert(annotation.contractDependencies.empty(), "contractDependencies expected to be empty?!");
 
@@ -170,26 +171,25 @@ void CompilerStack::findAndReportCyclicContractDependencies()
 		if (!source->ast)
 			continue;
 
-		for (ContractDefinition const* contractDefinition: ASTNode::filteredNodes<ContractDefinition>(source->ast->nodes()))
+		for (ContractDefinition const* contractDefinition:
+			 ASTNode::filteredNodes<ContractDefinition>(source->ast->nodes()))
 		{
-			util::CycleDetector<ContractDefinition> cycleDetector{[&](
-				ContractDefinition const& _contract,
-				util::CycleDetector<ContractDefinition>& _cycleDetector,
-				size_t _depth
-			)
-			{
-				// No specific reason for exactly that number, just a limit we're unlikely to hit.
-				if (_depth >= 256)
-					m_errorReporter.fatalTypeError(
-						7864_error,
-						_contract.location(),
-						"Contract dependencies exhausting cyclic dependency validator"
-					);
+			util::CycleDetector<ContractDefinition> cycleDetector{
+				[&](ContractDefinition const& _contract,
+					util::CycleDetector<ContractDefinition>& _cycleDetector,
+					size_t _depth)
+				{
+					// No specific reason for exactly that number, just a limit we're unlikely to hit.
+					if (_depth >= 256)
+						m_errorReporter.fatalTypeError(
+							7864_error,
+							_contract.location(),
+							"Contract dependencies exhausting cyclic dependency validator");
 
-				for (auto& [dependencyContract, referencee]: _contract.annotation().contractDependencies)
-					if (_cycleDetector.run(*dependencyContract))
-						return;
-			}};
+					for (auto& [dependencyContract, referencee]: _contract.annotation().contractDependencies)
+						if (_cycleDetector.run(*dependencyContract))
+							return;
+				}};
 
 			ContractDefinition const* cycle = cycleDetector.run(*contractDefinition);
 
@@ -208,8 +208,8 @@ void CompilerStack::findAndReportCyclicContractDependencies()
 				7813_error,
 				referencee->location(),
 				secondaryLocation,
-				"Circular reference to contract bytecode either via \"new\" or \"type(...).creationCode\" / \"type(...).runtimeCode\"."
-			);
+				"Circular reference to contract bytecode either via \"new\" or \"type(...).creationCode\" / "
+				"\"type(...).runtimeCode\".");
 
 			foundCycles.emplace(referencee);
 		}
@@ -247,7 +247,8 @@ void CompilerStack::setEVMVersion(langutil::EVMVersion _version)
 	solAssert(m_stackState < ParsedAndImported, "Must set EVM version before parsing.");
 	m_evmVersion = _version;
 	// GlobalContext depends on evmVersion since the Cancun hardfork.
-	// Therefore, we reset it whenever we set a new EVM version, ensuring that the context is never reused with a mismatched version.
+	// Therefore, we reset it whenever we set a new EVM version, ensuring that the context is never reused with a
+	// mismatched version.
 	m_globalContext.reset();
 }
 
@@ -358,7 +359,8 @@ void CompilerStack::setSources(StringMap _sources)
 	solAssert(m_stackState != SourcesSet, "Cannot change sources once set.");
 	solAssert(m_stackState == Empty, "Must set sources before parsing.");
 	for (auto source: _sources)
-		m_sources[source.first].charStream = std::make_unique<CharStream>(/*content*/std::move(source.second), /*name*/source.first);
+		m_sources[source.first].charStream
+			= std::make_unique<CharStream>(/*content*/ std::move(source.second), /*name*/ source.first);
 	m_stackState = SourcesSet;
 }
 
@@ -368,7 +370,8 @@ bool CompilerStack::parse()
 	m_errorReporter.clear();
 
 	if (SemVerVersion{std::string(VersionString)}.isPrerelease())
-		m_errorReporter.warning(3805_error, "This is a pre-release compiler version, please do not use it in production.");
+		m_errorReporter
+			.warning(3805_error, "This is a pre-release compiler version, please do not use it in production.");
 
 	try
 	{
@@ -384,7 +387,8 @@ bool CompilerStack::parse()
 			Source& source = m_sources[path];
 			source.ast = parser.parse(*source.charStream);
 			if (!source.ast)
-				solAssert(Error::containsErrors(m_errorReporter.errors()), "Parser returned null but did not report error.");
+				solAssert(
+					Error::containsErrors(m_errorReporter.errors()), "Parser returned null but did not report error.");
 			else
 			{
 				source.ast->annotation().path = path;
@@ -405,10 +409,7 @@ bool CompilerStack::parse()
 					// The current value of `path` is the absolute path as seen from this source file.
 					// We first have to apply remappings before we can store the actual absolute path
 					// as seen globally.
-					import->annotation().absolutePath = applyRemapping(util::absolutePath(
-						import->path(),
-						path
-					), path);
+					import->annotation().absolutePath = applyRemapping(util::absolutePath(import->path(), path), path);
 				}
 
 				if (m_stopAfter >= ParsedAndImported)
@@ -443,8 +444,8 @@ bool CompilerStack::parse()
 void CompilerStack::importASTs(std::map<std::string, Json> const& _sources)
 {
 	solAssert(m_stackState == Empty, "Must call importASTs only before the SourcesSet state.");
-	std::map<std::string, ASTPointer<SourceUnit>> reconstructedSources =
-		ASTJsonImporter(m_evmVersion, m_eofVersion).jsonToSourceUnit(_sources);
+	std::map<std::string, ASTPointer<SourceUnit>> reconstructedSources
+		= ASTJsonImporter(m_evmVersion, m_eofVersion).jsonToSourceUnit(_sources);
 	for (auto& src: reconstructedSources)
 	{
 		solUnimplementedAssert(!src.second->experimentalSolidity());
@@ -694,7 +695,8 @@ bool CompilerStack::analyzeLegacy(bool _noErrorsSoFar)
 		// m_modelCheckerSettings is spread to engines and solver interfaces,
 		// so we need to check whether the enabled ones are available before building the classes.
 		if (m_modelCheckerSettings.engine.any())
-			m_modelCheckerSettings.solvers = ModelChecker::checkRequestedSolvers(m_modelCheckerSettings.solvers, m_errorReporter);
+			m_modelCheckerSettings.solvers
+				= ModelChecker::checkRequestedSolvers(m_modelCheckerSettings.solvers, m_errorReporter);
 
 		ModelChecker modelChecker(m_errorReporter, *this, m_smtlib2Responses, m_modelCheckerSettings, m_readFile);
 		modelChecker.checkRequestedSourcesAndContracts(allSources);
@@ -711,7 +713,8 @@ bool CompilerStack::analyzeExperimental()
 {
 	solAssert(!m_experimentalAnalysis);
 	solAssert(m_maxAstId && *m_maxAstId >= 0);
-	m_experimentalAnalysis = std::make_unique<experimental::Analysis>(m_errorReporter, static_cast<std::uint64_t>(*m_maxAstId));
+	m_experimentalAnalysis
+		= std::make_unique<experimental::Analysis>(m_errorReporter, static_cast<std::uint64_t>(*m_maxAstId));
 	std::vector<std::shared_ptr<SourceUnit const>> sourceAsts;
 	for (Source const* source: m_sourceOrder)
 		if (source->ast)
@@ -733,10 +736,7 @@ bool CompilerStack::parseAndAnalyze(State _stopAfter)
 
 bool CompilerStack::isRequestedSource(std::string const& _sourceName) const
 {
-	return
-		m_selectedContracts.empty() ||
-		m_selectedContracts.count("") ||
-		m_selectedContracts.count(_sourceName);
+	return m_selectedContracts.empty() || m_selectedContracts.count("") || m_selectedContracts.count(_sourceName);
 }
 
 bool CompilerStack::isRequestedContract(ContractDefinition const& _contract) const
@@ -812,7 +812,8 @@ bool CompilerStack::compile(State _stopAfter)
 							else
 							{
 								if (m_experimentalAnalysis)
-									solThrow(CompilerError, "Legacy codegen after experimental analysis is unsupported.");
+									solThrow(
+										CompilerError, "Legacy codegen after experimental analysis is unsupported.");
 								compileContract(*contract, otherCompilers);
 							}
 						}
@@ -854,8 +855,7 @@ YulStack CompilerStack::loadGeneratedIR(std::string const& _ir) const
 		m_optimiserSettings,
 		m_debugInfoSelection,
 		this, // _soliditySourceProvider
-		m_objectOptimizer
-	);
+		m_objectOptimizer);
 	bool yulAnalysisSuccessful = stack.parseAndAnalyze("", _ir);
 	solAssert(
 		yulAnalysisSuccessful,
@@ -901,7 +901,8 @@ evmasm::AssemblyItems const* CompilerStack::assemblyItems(std::string const& _co
 	if (!currentContract.evmAssembly)
 		return nullptr;
 	solUnimplementedAssert(!m_eofVersion.has_value(), "EVM assembly output not implemented for EOF yet.");
-	solAssert(currentContract.evmAssembly->codeSections().size() == 1, "Expected a single code section in legacy codegen.");
+	solAssert(
+		currentContract.evmAssembly->codeSections().size() == 1, "Expected a single code section in legacy codegen.");
 	return &currentContract.evmAssembly->codeSections().front().items;
 }
 
@@ -914,7 +915,9 @@ evmasm::AssemblyItems const* CompilerStack::runtimeAssemblyItems(std::string con
 	if (!currentContract.evmRuntimeAssembly)
 		return nullptr;
 	solUnimplementedAssert(!m_eofVersion.has_value(), "EVM assembly output not implemented for EOF yet.");
-	solAssert(currentContract.evmRuntimeAssembly->codeSections().size() == 1, "Expected a single code section in legacy codegen.");
+	solAssert(
+		currentContract.evmRuntimeAssembly->codeSections().size() == 1,
+		"Expected a single code section in legacy codegen.");
 	return &currentContract.evmRuntimeAssembly->codeSections().front().items;
 }
 
@@ -930,10 +933,7 @@ Json CompilerStack::generatedSources(std::string const& _contractName, bool _run
 	{
 		solAssert(c.generatedYulUtilityCode.has_value() == c.runtimeGeneratedYulUtilityCode.has_value());
 		solAssert(!m_viaIR);
-		std::string source =
-			_runtime ?
-			*c.runtimeGeneratedYulUtilityCode :
-			*c.generatedYulUtilityCode;
+		std::string source = _runtime ? *c.runtimeGeneratedYulUtilityCode : *c.generatedYulUtilityCode;
 		if (!source.empty())
 		{
 			std::string sourceName = CompilerContext::yulUtilityFileName();
@@ -983,9 +983,7 @@ std::string const* CompilerStack::runtimeSourceMapping(std::string const& _contr
 	if (!c.runtimeSourceMapping)
 	{
 		if (auto items = runtimeAssemblyItems(_contractName))
-			c.runtimeSourceMapping.emplace(
-				evmasm::AssemblyItem::computeSourceMapping(*items, sourceIndices())
-			);
+			c.runtimeSourceMapping.emplace(evmasm::AssemblyItem::computeSourceMapping(*items, sourceIndices()));
 	}
 	return c.runtimeSourceMapping ? &*c.runtimeSourceMapping : nullptr;
 }
@@ -999,8 +997,8 @@ std::string const CompilerStack::filesystemFriendlyName(std::string const& _cont
 	// Check to see if it could collide on name
 	for (auto const& contract: m_contracts)
 	{
-		if (contract.second.contract->name() == matchContract.contract->name() &&
-				contract.second.contract != matchContract.contract)
+		if (contract.second.contract->name() == matchContract.contract->name()
+			&& contract.second.contract != matchContract.contract)
 		{
 			// If it does, then return its fully-qualified name, made fs-friendly
 			std::string friendlyName = boost::algorithm::replace_all_copy(_contractName, "/", "_");
@@ -1070,12 +1068,12 @@ std::optional<Json> CompilerStack::yulIROptimizedAst(std::string const& _contrac
 	return loadGeneratedIR(*currentContract.yulIROptimized).astJson();
 }
 
-std::string const& CompilerStack::yulIRCoq(std::string const& _contractName) const
+std::string const& CompilerStack::yulIRRocq(std::string const& _contractName) const
 {
 	if (m_stackState != CompilationSuccessful)
 		solThrow(CompilerError, "Compilation was not successful.");
 
-	return contract(_contractName).yulIRCoq;
+	return contract(_contractName).yulIRRocq;
 }
 
 evmasm::LinkerObject const& CompilerStack::object(std::string const& _contractName) const
@@ -1142,7 +1140,7 @@ Json const& CompilerStack::contractABI(Contract const& _contract) const
 	solAssert(m_stackState >= AnalysisSuccessful, "Analysis was not successful.");
 	solAssert(_contract.contract);
 	solUnimplementedAssert(!isExperimentalSolidity());
-	return _contract.abi.init([&]{ return ABI::generate(*_contract.contract); });
+	return _contract.abi.init([&] { return ABI::generate(*_contract.contract); });
 }
 
 Json const& CompilerStack::storageLayout(std::string const& _contractName) const
@@ -1157,7 +1155,8 @@ Json const& CompilerStack::storageLayout(Contract const& _contract) const
 	solAssert(_contract.contract);
 	solUnimplementedAssert(!isExperimentalSolidity());
 
-	return _contract.storageLayout.init([&]{ return StorageLayout().generate(*_contract.contract, DataLocation::Storage); });
+	return _contract.storageLayout.init(
+		[&] { return StorageLayout().generate(*_contract.contract, DataLocation::Storage); });
 }
 
 Json const& CompilerStack::transientStorageLayout(std::string const& _contractName) const
@@ -1172,7 +1171,8 @@ Json const& CompilerStack::transientStorageLayout(Contract const& _contract) con
 	solAssert(_contract.contract);
 	solUnimplementedAssert(!isExperimentalSolidity());
 
-	return _contract.transientStorageLayout.init([&]{ return StorageLayout().generate(*_contract.contract, DataLocation::Transient); });
+	return _contract.transientStorageLayout.init(
+		[&] { return StorageLayout().generate(*_contract.contract, DataLocation::Transient); });
 }
 
 Json const& CompilerStack::natspecUser(std::string const& _contractName) const
@@ -1186,7 +1186,7 @@ Json const& CompilerStack::natspecUser(Contract const& _contract) const
 	solAssert(m_stackState >= AnalysisSuccessful, "Analysis was not successful.");
 	solAssert(_contract.contract);
 	solUnimplementedAssert(!isExperimentalSolidity());
-	return _contract.userDocumentation.init([&]{ return Natspec::userDocumentation(*_contract.contract); });
+	return _contract.userDocumentation.init([&] { return Natspec::userDocumentation(*_contract.contract); });
 }
 
 Json const& CompilerStack::natspecDev(std::string const& _contractName) const
@@ -1200,7 +1200,7 @@ Json const& CompilerStack::natspecDev(Contract const& _contract) const
 	solAssert(m_stackState >= AnalysisSuccessful, "Analysis was not successful.");
 	solAssert(_contract.contract);
 	solUnimplementedAssert(!isExperimentalSolidity());
-	return _contract.devDocumentation.init([&]{ return Natspec::devDocumentation(*_contract.contract); });
+	return _contract.devDocumentation.init([&] { return Natspec::devDocumentation(*_contract.contract); });
 }
 
 Json CompilerStack::interfaceSymbols(std::string const& _contractName) const
@@ -1217,13 +1217,13 @@ Json CompilerStack::interfaceSymbols(std::string const& _contractName) const
 	for (ErrorDefinition const* error: contractDefinition(_contractName).interfaceErrors())
 	{
 		std::string signature = error->functionType(true)->externalSignature();
-		interfaceSymbols["errors"][signature] = util::toHex(toCompactBigEndian(util::selectorFromSignatureU32(signature), 4));
+		interfaceSymbols["errors"][signature]
+			= util::toHex(toCompactBigEndian(util::selectorFromSignatureU32(signature), 4));
 	}
 
 	for (EventDefinition const* event: ranges::concat_view(
-		contractDefinition(_contractName).definedInterfaceEvents(),
-		contractDefinition(_contractName).usedInterfaceEvents()
-	))
+			 contractDefinition(_contractName).definedInterfaceEvents(),
+			 contractDefinition(_contractName).usedInterfaceEvents()))
 		if (!event->isAnonymous())
 		{
 			std::string signature = event->functionType(true)->externalSignature();
@@ -1275,7 +1275,7 @@ std::string const& CompilerStack::metadata(Contract const& _contract) const
 	solAssert(m_stackState >= AnalysisSuccessful, "Analysis was not successful.");
 	solAssert(_contract.contract);
 	solUnimplementedAssert(!isExperimentalSolidity());
-	return _contract.metadata.init([&]{ return createMetadata(_contract, m_viaIR); });
+	return _contract.metadata.init([&] { return createMetadata(_contract, m_viaIR); });
 }
 
 CharStream const& CompilerStack::charStream(std::string const& _sourceName) const
@@ -1300,10 +1300,7 @@ ContractDefinition const& CompilerStack::contractDefinition(std::string const& _
 	return *contract(_contractName).contract;
 }
 
-size_t CompilerStack::functionEntryPoint(
-	std::string const& _contractName,
-	FunctionDefinition const& _function
-) const
+size_t CompilerStack::functionEntryPoint(std::string const& _contractName, FunctionDefinition const& _function) const
 {
 	solAssert(m_stackState == CompilationSuccessful, "Compilation was not successful.");
 
@@ -1360,8 +1357,7 @@ StringMap CompilerStack::loadMissingSources(SourceUnit const& _ast)
 					m_errorReporter.parserError(
 						6275_error,
 						import->location(),
-						std::string("Source \"" + importPath + "\" not found: " + result.responseOrErrorMessage)
-					);
+						std::string("Source \"" + importPath + "\" not found: " + result.responseOrErrorMessage));
 					continue;
 				}
 			}
@@ -1417,7 +1413,8 @@ bool CompilerStack::resolveImports()
 		if (sourcePair.second.ast && sourcePair.second.ast->experimentalSolidity())
 			for (ASTPointer<ASTNode> const& node: sourcePair.second.ast->nodes())
 				if (PragmaDirective const* pragma = dynamic_cast<PragmaDirective*>(node.get()))
-					if (pragma->literals().size() >=2 && pragma->literals()[0] == "experimental" && pragma->literals()[1] == "solidity")
+					if (pragma->literals().size() >= 2 && pragma->literals()[0] == "experimental"
+						&& pragma->literals()[1] == "solidity")
 					{
 						experimentalPragmaDirectives.push_back(pragma);
 						break;
@@ -1426,12 +1423,12 @@ bool CompilerStack::resolveImports()
 
 	if (!experimentalPragmaDirectives.empty() && experimentalPragmaDirectives.size() != m_sources.size())
 	{
-		for (auto &&pragma: experimentalPragmaDirectives)
+		for (auto&& pragma: experimentalPragmaDirectives)
 			m_errorReporter.parserError(
-					2141_error,
-					pragma->location(),
-					"File declares \"pragma experimental solidity\". If you want to enable the experimental mode, all source units must include the pragma."
-			);
+				2141_error,
+				pragma->location(),
+				"File declares \"pragma experimental solidity\". If you want to enable the experimental mode, all "
+				"source units must include the pragma.");
 		return false;
 	}
 
@@ -1443,10 +1440,8 @@ void CompilerStack::storeContractDefinitions()
 {
 	for (auto const& pair: m_sources)
 		if (pair.second.ast)
-			for (
-				ContractDefinition const* contract:
-				ASTNode::filteredNodes<ContractDefinition>(pair.second.ast->nodes())
-			)
+			for (ContractDefinition const* contract:
+				 ASTNode::filteredNodes<ContractDefinition>(pair.second.ast->nodes()))
 			{
 				std::string fullyQualifiedName = *pair.second.ast->annotation().path + ":" + contract->name();
 				// Note that we now reference contracts by their fully qualified names, and
@@ -1469,7 +1464,8 @@ void CompilerStack::annotateInternalFunctionIDs()
 			uint64_t internalFunctionID = 1;
 			ContractDefinitionAnnotation& annotation = contract->annotation();
 
-			if (auto const* deployTimeInternalDispatch = util::valueOrNullptr((*annotation.deployedCallGraph)->edges, CallGraph::SpecialNode::InternalDispatch))
+			if (auto const* deployTimeInternalDispatch = util::
+					valueOrNullptr((*annotation.deployedCallGraph)->edges, CallGraph::SpecialNode::InternalDispatch))
 				for (auto const& node: *deployTimeInternalDispatch)
 					if (auto const* callable = std::get_if<CallableDeclaration const*>(&node))
 						if (auto const* function = dynamic_cast<FunctionDefinition const*>(*callable))
@@ -1477,11 +1473,13 @@ void CompilerStack::annotateInternalFunctionIDs()
 							solAssert(contract->annotation().internalFunctionIDs.count(function) == 0);
 							contract->annotation().internalFunctionIDs[function] = internalFunctionID++;
 						}
-			if (auto const* creationTimeInternalDispatch = util::valueOrNullptr((*annotation.creationCallGraph)->edges, CallGraph::SpecialNode::InternalDispatch))
+			if (auto const* creationTimeInternalDispatch = util::
+					valueOrNullptr((*annotation.creationCallGraph)->edges, CallGraph::SpecialNode::InternalDispatch))
 				for (auto const& node: *creationTimeInternalDispatch)
 					if (auto const* callable = std::get_if<CallableDeclaration const*>(&node))
 						if (auto const* function = dynamic_cast<FunctionDefinition const*>(*callable))
-							// Make sure the function already got an ID since it also occurs in the deploy-time internal dispatch.
+							// Make sure the function already got an ID since it also occurs in the deploy-time internal
+							// dispatch.
 							solAssert(contract->annotation().internalFunctionIDs.count(function) != 0);
 		}
 	}
@@ -1490,8 +1488,7 @@ void CompilerStack::annotateInternalFunctionIDs()
 void CompilerStack::assembleYul(
 	ContractDefinition const& _contract,
 	std::shared_ptr<evmasm::Assembly> _assembly,
-	std::shared_ptr<evmasm::Assembly> _runtimeAssembly
-)
+	std::shared_ptr<evmasm::Assembly> _runtimeAssembly)
 {
 	solAssert(m_stackState >= AnalysisSuccessful, "");
 
@@ -1525,47 +1522,38 @@ void CompilerStack::assembleYul(
 	// Throw a warning if EIP-170 limits are exceeded:
 	//   If contract creation returns data with length greater than 0x6000 (2^14 + 2^13) bytes,
 	//   contract creation fails with an out of gas error.
-	if (
-		m_evmVersion >= langutil::EVMVersion::spuriousDragon() &&
-		compiledContract.runtimeObject.bytecode.size() > 0x6000
-	)
+	if (m_evmVersion >= langutil::EVMVersion::spuriousDragon()
+		&& compiledContract.runtimeObject.bytecode.size() > 0x6000)
 		m_errorReporter.warning(
 			5574_error,
 			_contract.location(),
-			"Contract code size is "s +
-			std::to_string(compiledContract.runtimeObject.bytecode.size()) +
-			" bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). "
-			"This contract may not be deployable on Mainnet. "
-			"Consider enabling the optimizer (with a low \"runs\" value!), "
-			"turning off revert strings, or using libraries."
-		);
+			"Contract code size is "s + std::to_string(compiledContract.runtimeObject.bytecode.size())
+				+ " bytes and exceeds 24576 bytes (a limit introduced in Spurious Dragon). "
+				  "This contract may not be deployable on Mainnet. "
+				  "Consider enabling the optimizer (with a low \"runs\" value!), "
+				  "turning off revert strings, or using libraries.");
 
 	// Throw a warning if EIP-3860 limits are exceeded:
 	//   If initcode is larger than 0xC000 bytes (twice the runtime code limit),
 	//   then contract creation fails with an out of gas error.
-	if (
-		m_evmVersion >= langutil::EVMVersion::shanghai() &&
-		compiledContract.object.bytecode.size() > 0xC000
-	)
+	if (m_evmVersion >= langutil::EVMVersion::shanghai() && compiledContract.object.bytecode.size() > 0xC000)
 		m_errorReporter.warning(
 			3860_error,
 			_contract.location(),
-			"Contract initcode size is "s +
-			std::to_string(compiledContract.object.bytecode.size()) +
-			" bytes and exceeds 49152 bytes (a limit introduced in Shanghai). "
-			"This contract may not be deployable on Mainnet. "
-			"Consider enabling the optimizer (with a low \"runs\" value!), "
-			"turning off revert strings, or using libraries."
-		);
+			"Contract initcode size is "s + std::to_string(compiledContract.object.bytecode.size())
+				+ " bytes and exceeds 49152 bytes (a limit introduced in Shanghai). "
+				  "This contract may not be deployable on Mainnet. "
+				  "Consider enabling the optimizer (with a low \"runs\" value!), "
+				  "turning off revert strings, or using libraries.");
 }
 
 void CompilerStack::compileContract(
 	ContractDefinition const& _contract,
-	std::map<ContractDefinition const*, std::shared_ptr<Compiler const>>& _otherCompilers
-)
+	std::map<ContractDefinition const*, std::shared_ptr<Compiler const>>& _otherCompilers)
 {
 	solAssert(!m_viaIR, "");
-	solUnimplementedAssert(!m_eofVersion.has_value(), "Experimental EOF support is only available for via-IR compilation.");
+	solUnimplementedAssert(
+		!m_eofVersion.has_value(), "Experimental EOF support is only available for via-IR compilation.");
 	solAssert(m_stackState >= AnalysisSuccessful, "");
 
 	if (_otherCompilers.count(&_contract))
@@ -1614,8 +1602,7 @@ void CompilerStack::generateIR(ContractDefinition const& _contract, bool _unopti
 			2066_error,
 			_contract.location(),
 			"Contract requests the ABI coder v1, which is incompatible with the IR. "
-			"Using ABI coder v2 instead."
-		);
+			"Using ABI coder v2 instead.");
 
 	std::string dependenciesSource;
 	for (auto const& [dependency, referencee]: _contract.annotation().contractDependencies)
@@ -1637,13 +1624,11 @@ void CompilerStack::generateIR(ContractDefinition const& _contract, bool _unopti
 			sourceIndices(),
 			m_debugInfoSelection,
 			this,
-			*m_experimentalAnalysis
-		);
+			*m_experimentalAnalysis);
 		compiledContract.yulIR = generator.run(
 			_contract,
 			{}, // TODO: createCBORMetadata(compiledContract, /* _forIR */ true),
-			otherYulSources
-		);
+			otherYulSources);
 	}
 	else
 	{
@@ -1654,13 +1639,9 @@ void CompilerStack::generateIR(ContractDefinition const& _contract, bool _unopti
 			sourceIndices(),
 			m_debugInfoSelection,
 			this,
-			m_optimiserSettings
-		);
-		compiledContract.yulIR = generator.run(
-			_contract,
-			createCBORMetadata(compiledContract, /* _forIR */ true),
-			otherYulSources
-		);
+			m_optimiserSettings);
+		compiledContract.yulIR
+			= generator.run(_contract, createCBORMetadata(compiledContract, /* _forIR */ true), otherYulSources);
 	}
 
 	yulAssert(compiledContract.yulIR);
@@ -1670,7 +1651,7 @@ void CompilerStack::generateIR(ContractDefinition const& _contract, bool _unopti
 		stack.optimize();
 		compiledContract.yulIROptimized = stack.print();
 		compiledContract.yulIROptimizedAst = stack.astJson();
-		compiledContract.yulIRCoq = stack.astCoq();
+		compiledContract.yulIRRocq = stack.astRocq();
 	}
 }
 
@@ -1692,6 +1673,7 @@ void CompilerStack::generateEVMFromIR(ContractDefinition const& _contract)
 
 	std::string deployedName = IRNames::deployedObject(_contract);
 	solAssert(!deployedName.empty(), "");
+<<<<<<< HEAD
 	tie(compiledContract.evmAssembly, compiledContract.evmRuntimeAssembly) = stack.assembleEVMWithDeployed(deployedName, m_viaSSACFG);
 
 	if (stack.hasErrors())
@@ -1701,6 +1683,10 @@ void CompilerStack::generateEVMFromIR(ContractDefinition const& _contract)
 		return;
 	}
 
+=======
+	tie(compiledContract.evmAssembly, compiledContract.evmRuntimeAssembly)
+		= stack.assembleEVMWithDeployed(deployedName);
+>>>>>>> 3f41217f5a (refacto: rename the project as rocq-of-solidity)
 	assembleYul(_contract, compiledContract.evmAssembly, compiledContract.evmRuntimeAssembly);
 }
 
@@ -1786,8 +1772,13 @@ std::string CompilerStack::createMetadata(Contract const& _contract, bool _forIR
 		}
 	}
 
-	static_assert(sizeof(m_optimiserSettings.expectedExecutionsPerDeployment) <= sizeof(Json::number_integer_t), "Invalid word size.");
-	solAssert(static_cast<Json::number_integer_t>(m_optimiserSettings.expectedExecutionsPerDeployment) < std::numeric_limits<Json::number_integer_t>::max(), "");
+	static_assert(
+		sizeof(m_optimiserSettings.expectedExecutionsPerDeployment) <= sizeof(Json::number_integer_t),
+		"Invalid word size.");
+	solAssert(
+		static_cast<Json::number_integer_t>(m_optimiserSettings.expectedExecutionsPerDeployment)
+			< std::numeric_limits<Json::number_integer_t>::max(),
+		"");
 	meta["settings"]["optimizer"]["runs"] = Json::number_integer_t(m_optimiserSettings.expectedExecutionsPerDeployment);
 
 	/// Backwards compatibility: If set to one of the default settings, do not provide details.
@@ -1815,9 +1806,11 @@ std::string CompilerStack::createMetadata(Contract const& _contract, bool _forIR
 		{
 			details["yulDetails"] = Json::object();
 			details["yulDetails"]["stackAllocation"] = m_optimiserSettings.optimizeStackAllocation;
-			details["yulDetails"]["optimizerSteps"] = m_optimiserSettings.yulOptimiserSteps + ":" + m_optimiserSettings.yulOptimiserCleanupSteps;
+			details["yulDetails"]["optimizerSteps"]
+				= m_optimiserSettings.yulOptimiserSteps + ":" + m_optimiserSettings.yulOptimiserCleanupSteps;
 		}
-		else if (OptimiserSuite::isEmptyOptimizerSequence(m_optimiserSettings.yulOptimiserSteps + ":" + m_optimiserSettings.yulOptimiserCleanupSteps))
+		else if (OptimiserSuite::isEmptyOptimizerSequence(
+					 m_optimiserSettings.yulOptimiserSteps + ":" + m_optimiserSettings.yulOptimiserCleanupSteps))
 		{
 			solAssert(m_optimiserSettings.optimizeStackAllocation == false);
 			details["yulDetails"] = Json::object();
@@ -1827,7 +1820,8 @@ std::string CompilerStack::createMetadata(Contract const& _contract, bool _forIR
 		{
 			solAssert(m_optimiserSettings.optimizeStackAllocation == false);
 			solAssert(m_optimiserSettings.yulOptimiserSteps == OptimiserSettings::DefaultYulOptimiserSteps);
-			solAssert(m_optimiserSettings.yulOptimiserCleanupSteps == OptimiserSettings::DefaultYulOptimiserCleanupSteps);
+			solAssert(
+				m_optimiserSettings.yulOptimiserCleanupSteps == OptimiserSettings::DefaultYulOptimiserCleanupSteps);
 		}
 
 		meta["settings"]["optimizer"]["details"] = std::move(details);
@@ -1852,10 +1846,15 @@ std::string CompilerStack::createMetadata(Contract const& _contract, bool _forIR
 		meta["settings"]["experimental"] = m_experimental;
 	if (m_eofVersion.has_value())
 		meta["settings"]["eofVersion"] = *m_eofVersion;
+<<<<<<< HEAD
 	if (m_viaSSACFG)
 		meta["settings"]["viaSSACFG"] = m_viaSSACFG;
 	meta["settings"]["compilationTarget"][_contract.contract->sourceUnitName()] =
 		*_contract.contract->annotation().canonicalName;
+=======
+	meta["settings"]["compilationTarget"][_contract.contract->sourceUnitName()]
+		= *_contract.contract->annotation().canonicalName;
+>>>>>>> 3f41217f5a (refacto: rename the project as rocq-of-solidity)
 
 	meta["settings"]["remappings"] = Json::array();
 	std::set<std::string> remappings;
@@ -1963,10 +1962,15 @@ bytes CompilerStack::createCBORMetadata(Contract const& _contract, bool _forIR) 
 	if (m_metadataFormat == MetadataFormat::NoMetadata)
 		return bytes{};
 
+<<<<<<< HEAD
 	bool const usesExperimentalSyntax = !_contract.contract->sourceUnit().annotation().experimentalFeatures.empty();
 	bool const onlySafeExperimentalFeatures = onlySafeExperimentalFeaturesActivated(
 		_contract.contract->sourceUnit().annotation().experimentalFeatures
 	);
+=======
+	bool const experimentalMode
+		= !onlySafeExperimentalFeaturesActivated(_contract.contract->sourceUnit().annotation().experimentalFeatures);
+>>>>>>> 3f41217f5a (refacto: rename the project as rocq-of-solidity)
 
 	if (m_eofVersion.has_value() || (usesExperimentalSyntax && !onlySafeExperimentalFeatures))
 		solAssert(m_experimental, "Experimental mode not enabled");
@@ -1988,10 +1992,7 @@ bytes CompilerStack::createCBORMetadata(Contract const& _contract, bool _forIR) 
 		encoder.pushBytes("solc", VersionCompactBytes);
 	else
 	{
-		solAssert(
-			m_metadataFormat == MetadataFormat::WithPrereleaseVersionTag,
-			"Invalid metadata format."
-		);
+		solAssert(m_metadataFormat == MetadataFormat::WithPrereleaseVersionTag, "Invalid metadata format.");
 		encoder.pushString("solc", VersionStringStrict);
 	}
 	return encoder.serialise();
@@ -2089,10 +2090,8 @@ Json CompilerStack::gasEstimates(std::string const& _contractName) const
 
 bool CompilerStack::isExperimentalSolidity() const
 {
-	return
-		!m_sourceOrder.empty() &&
-		ranges::all_of(m_sourceOrder, [](auto const* _source) { return _source->ast->experimentalSolidity(); } )
-	;
+	return !m_sourceOrder.empty()
+		   && ranges::all_of(m_sourceOrder, [](auto const* _source) { return _source->ast->experimentalSolidity(); });
 }
 
 experimental::Analysis const& CompilerStack::experimentalAnalysis() const

@@ -53,8 +53,8 @@ set(sources
 	ast/ASTAnnotations.h
 	ast/ASTEnums.h
 	ast/ASTForward.h
-	ast/ASTCoqExporter.cpp
-	ast/ASTCoqExporter.h
+	ast/ASTRocqExporter.cpp
+	ast/ASTRocqExporter.h
 	ast/ASTJsonExporter.cpp
 	ast/ASTJsonExporter.h
 	ast/ASTUtils.cpp

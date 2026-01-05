@@ -1,4 +1,4 @@
-name: Coq docs
+name: Rocq docs
 on:
   push:
     branches:
@@ -26,7 +26,7 @@ jobs:
         run: |
           # This assumes your book is in the root of your repository.
           # Just add a `cd` here if you need to change to another directory.
-          cd coq/docs
+          cd rocq/docs
           mdbook build
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: 'book'
+          path: 'rocq/docs/book'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
