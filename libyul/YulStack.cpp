@@ -18,20 +18,20 @@
 
 #include <libyul/YulStack.h>
 
-#include <libyul/AsmAnalysis.h>
-#include <libyul/AsmAnalysisInfo.h>
-#include <libyul/backends/evm/SSAControlFlowGraphBuilder.h>
-#include <libyul/backends/evm/EthAssemblyAdapter.h>
-#include <libyul/backends/evm/EVMCodeTransform.h>
-#include <libyul/backends/evm/EVMDialect.h>
-#include <libyul/backends/evm/EVMObjectCompiler.h>
-#include <libyul/ObjectParser.h>
-#include <libyul/optimiser/Semantics.h>
-#include <libyul/optimiser/Suite.h>
-#include <libyul/YulControlFlowGraphExporter.h>
 #include <libevmasm/Assembly.h>
 #include <liblangutil/Scanner.h>
 #include <liblangutil/SourceReferenceFormatter.h>
+#include <libyul/AsmAnalysis.h>
+#include <libyul/AsmAnalysisInfo.h>
+#include <libyul/ObjectParser.h>
+#include <libyul/YulControlFlowGraphExporter.h>
+#include <libyul/backends/evm/EVMCodeTransform.h>
+#include <libyul/backends/evm/EVMDialect.h>
+#include <libyul/backends/evm/EVMObjectCompiler.h>
+#include <libyul/backends/evm/EthAssemblyAdapter.h>
+#include <libyul/backends/evm/SSAControlFlowGraphBuilder.h>
+#include <libyul/optimiser/Semantics.h>
+#include <libyul/optimiser/Suite.h>
 
 #include <boost/algorithm/string.hpp>
 
@@ -57,7 +57,8 @@ bool YulStack::parse(std::string const& _sourceName, std::string const& _source)
 	{
 		m_charStream = std::make_unique<CharStream>(_source, _sourceName);
 		std::shared_ptr<Scanner> scanner = std::make_shared<Scanner>(*m_charStream);
-		m_parserResult = ObjectParser(m_errorReporter, languageToDialect(m_language, m_evmVersion, m_eofVersion)).parse(scanner, false);
+		m_parserResult = ObjectParser(m_errorReporter, languageToDialect(m_language, m_evmVersion, m_eofVersion))
+							 .parse(scanner, false);
 	}
 	catch (UnimplementedFeatureError const& _error)
 	{
@@ -92,26 +93,27 @@ void YulStack::optimize()
 
 	try
 	{
-		if (
-			!m_optimiserSettings.runYulOptimiser &&
-			yul::MSizeFinder::containsMSize(languageToDialect(m_language, m_evmVersion, m_eofVersion), *m_parserResult)
-		)
+		if (!m_optimiserSettings.runYulOptimiser
+			&& yul::MSizeFinder::
+				containsMSize(languageToDialect(m_language, m_evmVersion, m_eofVersion), *m_parserResult))
 			return;
 
-		auto [optimizeStackAllocation, yulOptimiserSteps, yulOptimiserCleanupSteps] = [&]() -> std::tuple<bool, std::string, std::string>
+		auto [optimizeStackAllocation, yulOptimiserSteps, yulOptimiserCleanupSteps]
+			= [&]() -> std::tuple<bool, std::string, std::string>
 		{
 			if (!m_optimiserSettings.runYulOptimiser)
 			{
 				// Yul optimizer disabled, but empty sequence (:) explicitly provided
-				if (OptimiserSuite::isEmptyOptimizerSequence(m_optimiserSettings.yulOptimiserSteps + ":" + m_optimiserSettings.yulOptimiserCleanupSteps))
+				if (OptimiserSuite::isEmptyOptimizerSequence(
+						m_optimiserSettings.yulOptimiserSteps + ":" + m_optimiserSettings.yulOptimiserCleanupSteps))
 					return std::make_tuple(true, "", "");
 				// Yul optimizer disabled, and no sequence explicitly provided (assumes default sequence)
 				else
 				{
 					yulAssert(
-						m_optimiserSettings.yulOptimiserSteps == OptimiserSettings::DefaultYulOptimiserSteps &&
-						m_optimiserSettings.yulOptimiserCleanupSteps == OptimiserSettings::DefaultYulOptimiserCleanupSteps
-					);
+						m_optimiserSettings.yulOptimiserSteps == OptimiserSettings::DefaultYulOptimiserSteps
+						&& m_optimiserSettings.yulOptimiserCleanupSteps
+							   == OptimiserSettings::DefaultYulOptimiserCleanupSteps);
 					// Defaults are the minimum necessary to avoid running into "Stack too deep" constantly.
 					return std::make_tuple(true, "u", "");
 				}
@@ -119,8 +121,7 @@ void YulStack::optimize()
 			return std::make_tuple(
 				m_optimiserSettings.optimizeStackAllocation,
 				m_optimiserSettings.yulOptimiserSteps,
-				m_optimiserSettings.yulOptimiserCleanupSteps
-			);
+				m_optimiserSettings.yulOptimiserCleanupSteps);
 		}();
 
 		m_stackState = Parsed;
@@ -134,9 +135,7 @@ void YulStack::optimize()
 				optimizeStackAllocation,
 				yulOptimiserSteps,
 				yulOptimiserCleanupSteps,
-				m_optimiserSettings.expectedExecutionsPerDeployment
-			}
-		);
+				m_optimiserSettings.expectedExecutionsPerDeployment});
 
 		// Optimizer does not maintain correct native source locations in the AST.
 		// We can work around it by regenerating the AST from scratch from optimized IR.
@@ -166,8 +165,7 @@ bool YulStack::analyzeParsed(Object& _object)
 		m_errorReporter,
 		languageToDialect(m_language, m_evmVersion, m_eofVersion),
 		{},
-		_object.summarizeStructure()
-	);
+		_object.summarizeStructure());
 
 	bool success = false;
 	try
@@ -195,13 +193,13 @@ void YulStack::compileEVM(AbstractAssembly& _assembly, bool _optimize) const
 	EVMDialect const* dialect = nullptr;
 	switch (m_language)
 	{
-		case Language::Assembly:
-		case Language::StrictAssembly:
-			dialect = &EVMDialect::strictAssemblyForEVMObjects(m_evmVersion, m_eofVersion);
-			break;
-		default:
-			yulAssert(false, "Invalid language.");
-			break;
+	case Language::Assembly:
+	case Language::StrictAssembly:
+		dialect = &EVMDialect::strictAssemblyForEVMObjects(m_evmVersion, m_eofVersion);
+		break;
+	default:
+		yulAssert(false, "Invalid language.");
+		break;
 	}
 
 	EVMObjectCompiler::compile(*m_parserResult, _assembly, *dialect, _optimize, m_eofVersion);
@@ -224,15 +222,14 @@ void YulStack::reparse()
 		m_optimiserSettings,
 		m_debugInfoSelection,
 		m_soliditySourceProvider,
-		m_objectOptimizer
-	);
+		m_objectOptimizer);
 	bool reanalysisSuccessful = cleanStack.parseAndAnalyze(m_charStream->name(), source);
 	yulAssert(
 		reanalysisSuccessful,
-		source + "\n\n"
-		"Invalid IR generated:\n" +
-		SourceReferenceFormatter::formatErrorInformation(cleanStack.errors(), cleanStack) + "\n"
-	);
+		source
+			+ "\n\n"
+			  "Invalid IR generated:\n"
+			+ SourceReferenceFormatter::formatErrorInformation(cleanStack.errors(), cleanStack) + "\n");
 
 	m_stackState = AnalysisSuccessful;
 	m_parserResult = std::move(cleanStack.m_parserResult);
@@ -274,10 +271,8 @@ YulStack::assembleWithDeployed(std::optional<std::string_view> _deployName)
 		creationObject.sourceMappings = std::make_unique<std::string>();
 		for (auto const& codeSection: creationAssembly->codeSections())
 		{
-			*creationObject.sourceMappings += evmasm::AssemblyItem::computeSourceMapping(
-				codeSection.items,
-				{{m_charStream->name(), 0}}
-			);
+			*creationObject.sourceMappings
+				+= evmasm::AssemblyItem::computeSourceMapping(codeSection.items, {{m_charStream->name(), 0}});
 		}
 
 		if (deployedAssembly)
@@ -286,11 +281,8 @@ YulStack::assembleWithDeployed(std::optional<std::string_view> _deployName)
 			deployedObject.assembly = deployedAssembly;
 			solAssert(deployedAssembly->codeSections().size() == 1);
 			deployedObject.sourceMappings = std::make_unique<std::string>(
-				evmasm::AssemblyItem::computeSourceMapping(
-					deployedAssembly->codeSections().front().items,
-					{{m_charStream->name(), 0}}
-					)
-			);
+				evmasm::AssemblyItem::
+					computeSourceMapping(deployedAssembly->codeSections().front().items, {{m_charStream->name(), 0}}));
 		}
 	}
 	catch (UnimplementedFeatureError const& _error)
@@ -315,10 +307,11 @@ YulStack::assembleEVMWithDeployed(std::optional<std::string_view> _deployName)
 	// NOTE: We always need stack optimization when Yul optimizer is disabled (unless code contains
 	// msize). It being disabled just means that we don't use the full step sequence. We still run
 	// it with the minimal steps required to avoid "stack too deep".
-	bool optimize = m_optimiserSettings.optimizeStackAllocation || (
-		!m_optimiserSettings.runYulOptimiser &&
-		!yul::MSizeFinder::containsMSize(languageToDialect(m_language, m_evmVersion, m_eofVersion), *m_parserResult)
-	);
+	bool optimize
+		= m_optimiserSettings.optimizeStackAllocation
+		  || (!m_optimiserSettings.runYulOptimiser
+			  && !yul::MSizeFinder::
+					 containsMSize(languageToDialect(m_language, m_evmVersion, m_eofVersion), *m_parserResult));
 	try
 	{
 		compileEVM(adapter, optimize);
@@ -362,10 +355,7 @@ std::string YulStack::print() const
 	yulAssert(m_stackState >= Parsed);
 	yulAssert(m_parserResult, "");
 	yulAssert(m_parserResult->hasCode(), "");
-	return m_parserResult->toString(
-		m_debugInfoSelection,
-		m_soliditySourceProvider
-	) + "\n";
+	return m_parserResult->toString(m_debugInfoSelection, m_soliditySourceProvider) + "\n";
 }
 
 Json YulStack::astJson() const
@@ -373,16 +363,16 @@ Json YulStack::astJson() const
 	yulAssert(m_stackState >= Parsed);
 	yulAssert(m_parserResult, "");
 	yulAssert(m_parserResult->hasCode(), "");
-	return  m_parserResult->toJson();
+	return m_parserResult->toJson();
 }
 
-std::string YulStack::astCoq() const
+std::string YulStack::astRocq() const
 {
 	yulAssert(m_parserResult, "");
 	yulAssert(m_parserResult->hasCode(), "");
 
-	std::string result = "(* Generated by coq-of-solidity *)\nRequire Import CoqOfSolidity.CoqOfSolidity.\n\n";
-	result += m_parserResult->toCoq() + "\n";
+	std::string result = "(* Generated by rocq-of-solidity *)\nRequire Import RocqOfSolidity.RocqOfSolidity.\n\n";
+	result += m_parserResult->toRocq() + "\n";
 	result += "\n";
 	result += "Import Ltac2.\n";
 	result += "\n";
@@ -401,19 +391,20 @@ Json YulStack::cfgJson() const
 	yulAssert(m_parserResult->hasCode(), "");
 	yulAssert(m_parserResult->analysisInfo, "");
 	// FIXME: we should not regenerate the cfg, but for now this is sufficient for testing purposes
-	auto exportCFGFromObject = [&](Object const& _object) -> Json {
+	auto exportCFGFromObject = [&](Object const& _object) -> Json
+	{
 		// NOTE: The block Ids are reset for each object
 		std::unique_ptr<ControlFlow> controlFlow = SSAControlFlowGraphBuilder::build(
 			*_object.analysisInfo.get(),
 			languageToDialect(m_language, m_evmVersion, m_eofVersion),
-			_object.code()->root()
-		);
+			_object.code()->root());
 		YulControlFlowGraphExporter exporter(*controlFlow);
 		return exporter.run();
 	};
 
 	std::function<Json(std::vector<std::shared_ptr<ObjectNode>>)> exportCFGFromSubObjects;
-	exportCFGFromSubObjects = [&](std::vector<std::shared_ptr<ObjectNode>> _subObjects) -> Json {
+	exportCFGFromSubObjects = [&](std::vector<std::shared_ptr<ObjectNode>> _subObjects) -> Json
+	{
 		Json subObjectsJson = Json::object();
 		for (std::shared_ptr<ObjectNode> const& subObjectNode: _subObjects)
 			if (Object const* subObject = dynamic_cast<Object const*>(subObjectNode.get()))

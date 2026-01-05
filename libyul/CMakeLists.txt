@@ -7,8 +7,8 @@ add_library(yul
 	AST.h
 	AST.cpp
 	ASTForward.h
-	AsmCoqConverter.h
-	AsmCoqConverter.cpp
+	AsmRocqConverter.h
+	AsmRocqConverter.cpp
 	AsmJsonConverter.h
 	AsmJsonConverter.cpp
 	AsmJsonImporter.h

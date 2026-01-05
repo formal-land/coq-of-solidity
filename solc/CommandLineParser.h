@@ -32,8 +32,8 @@
 
 #include <libsolutil/JSON.h>
 
-#include <boost/program_options.hpp>
 #include <boost/filesystem/path.hpp>
+#include <boost/program_options.hpp>
 
 #include <map>
 #include <memory>
@@ -81,7 +81,7 @@ struct CompilerOutputs
 			{"ir-ast-json", &CompilerOutputs::irAstJson},
 			{"ir-optimized", &CompilerOutputs::irOptimized},
 			{"ir-optimized-ast-json", &CompilerOutputs::irOptimizedAstJson},
-			{"ir-coq", &CompilerOutputs::irCoq},
+			{"ir-rocq", &CompilerOutputs::irRocq},
 			{"hashes", &CompilerOutputs::signatureHashes},
 			{"userdoc", &CompilerOutputs::natspecUser},
 			{"devdoc", &CompilerOutputs::natspecDev},
@@ -105,7 +105,7 @@ struct CompilerOutputs
 	bool yulCFGJson = false;
 	bool irOptimized = false;
 	bool irOptimizedAstJson = false;
-	bool irCoq = false;
+	bool irRocq = false;
 	bool signatureHashes = false;
 	bool natspecUser = false;
 	bool natspecDev = false;

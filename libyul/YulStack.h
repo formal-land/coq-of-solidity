@@ -23,8 +23,8 @@
 
 #include <liblangutil/CharStreamProvider.h>
 #include <liblangutil/DebugInfoSelection.h>
-#include <liblangutil/ErrorReporter.h>
 #include <liblangutil/EVMVersion.h>
+#include <liblangutil/ErrorReporter.h>
 #include <libsolutil/JSON.h>
 
 #include <libyul/Object.h>
@@ -67,22 +67,26 @@ class YulStack: public langutil::CharStreamProvider
 {
 public:
 	using Language = yul::Language;
-	enum class Machine { EVM };
-	enum State {
+	enum class Machine
+	{
+		EVM
+	};
+	enum State
+	{
 		Empty,
 		Parsed,
 		AnalysisSuccessful
 	};
 
-	YulStack():
-		YulStack(
-			langutil::EVMVersion{},
-			std::nullopt,
-			Language::Assembly,
-			solidity::frontend::OptimiserSettings::none(),
-			langutil::DebugInfoSelection::Default()
-		)
-	{}
+	YulStack()
+		: YulStack(
+			  langutil::EVMVersion{},
+			  std::nullopt,
+			  Language::Assembly,
+			  solidity::frontend::OptimiserSettings::none(),
+			  langutil::DebugInfoSelection::Default())
+	{
+	}
 
 	YulStack(
 		langutil::EVMVersion _evmVersion,
@@ -91,17 +95,13 @@ public:
 		solidity::frontend::OptimiserSettings _optimiserSettings,
 		langutil::DebugInfoSelection const& _debugInfoSelection,
 		langutil::CharStreamProvider const* _soliditySourceProvider = nullptr,
-		std::shared_ptr<ObjectOptimizer> _objectOptimizer = nullptr
-	):
-		m_language(_language),
-		m_evmVersion(_evmVersion),
-		m_eofVersion(_eofVersion),
-		m_optimiserSettings(std::move(_optimiserSettings)),
-		m_debugInfoSelection(_debugInfoSelection),
-		m_soliditySourceProvider(_soliditySourceProvider),
-		m_errorReporter(m_errors),
-		m_objectOptimizer(_objectOptimizer ? std::move(_objectOptimizer) : std::make_shared<ObjectOptimizer>())
-	{}
+		std::shared_ptr<ObjectOptimizer> _objectOptimizer = nullptr)
+		: m_language(_language), m_evmVersion(_evmVersion), m_eofVersion(_eofVersion),
+		  m_optimiserSettings(std::move(_optimiserSettings)), m_debugInfoSelection(_debugInfoSelection),
+		  m_soliditySourceProvider(_soliditySourceProvider), m_errorReporter(m_errors),
+		  m_objectOptimizer(_objectOptimizer ? std::move(_objectOptimizer) : std::make_shared<ObjectOptimizer>())
+	{
+	}
 
 	/// @returns the char stream used during parsing
 	langutil::CharStream const& charStream(std::string const& _sourceName) const override;
@@ -122,17 +122,13 @@ public:
 	/// a second object that is the runtime code.
 	/// Only available for EVM.
 	std::pair<MachineAssemblyObject, MachineAssemblyObject>
-	assembleWithDeployed(
-		std::optional<std::string_view> _deployName = {}
-	);
+	assembleWithDeployed(std::optional<std::string_view> _deployName = {});
 
 	/// Run the assembly step (should only be called after parseAndAnalyze).
 	/// Similar to @a assemblyWithDeployed, but returns EVM assembly objects.
 	/// Only available for EVM.
 	std::pair<std::shared_ptr<evmasm::Assembly>, std::shared_ptr<evmasm::Assembly>>
-	assembleEVMWithDeployed(
-		std::optional<std::string_view> _deployName = {}
-	);
+	assembleEVMWithDeployed(std::optional<std::string_view> _deployName = {});
 
 	/// @returns the errors generated during parsing, analysis (and potentially assembly).
 	langutil::ErrorList const& errors() const { return m_errors; }
@@ -141,7 +137,7 @@ public:
 	/// Pretty-print the input after having parsed it.
 	std::string print() const;
 	Json astJson() const;
-	std::string astCoq() const;
+	std::string astRocq() const;
 
 	// return the JSON representation of the YuL CFG (experimental)
 	Json cfgJson() const;

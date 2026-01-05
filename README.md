@@ -1,7 +1,7 @@
-# 🪨🐓 coq-of-solidity
-> A formal verification tool for [Solidity](https://soliditylang.org/) using the [Rocq](https://rocq-prover.org/) proof system. Make smart contracts without bugs!
+# rocq-of-solidity
+> A formal verification tool for [Solidity](https://soliditylang.org/) using the [Rocq](https://rocq-prover.org/) thereom prover. Ensure no vulnerabilities for your smart contracts.
 
-The `coq-of-solidity` project is a tool to automatically translate Solidity smart contracts to the Rocq proof system. This allows to formally verify the correctness of the smart contracts.
+The `rocq-of-solidity` project is a tool to automatically translate Solidity smart contracts to the Rocq proof system. This allows to formally verify the correctness of the smart contracts.
 
 Formal verification is about verifying code for all possible input, and goes further than traditional testing that only covers a finite amount of cases. Formal verification relies on mathematical methods to analyze the code.
 
@@ -10,11 +10,11 @@ This project provides:
 1. **More security for code audits:** all the combinations of inputs are covered, in contrast to testing.
 2. **Reusable audits** for future code changes: we can re-run the proofs as the code evolves.
 
-The `coq-of-solidity` tool uses an interactive theorem prover (Rocq) to check arbitrarily complex code properties and business rules for your smart contract, with the highest possible level of guarantees.
+The `rocq-of-solidity` tool uses an interactive theorem prover (Rocq) to check arbitrarily complex code properties and business rules for your smart contract, with the highest possible level of guarantees.
 
 ## ✅ Audits
 
-To audit your smart contracts with `coq-of-solidity` contact us at [contact@formal.land](mailto:contact@formal.land). We provide formal verification services for [Solidity](https://soliditylang.org/), [Rust](https://www.rust-lang.org/), and we have already secured thousands of lines of code for the blockchain industry ([Tezos](https://tezos.com/), [Aleph Zero](https://alephzero.org/), [Sui](https://sui.io/)).
+To audit your smart contracts with `rocq-of-solidity` contact us at [contact@formal.land](mailto:contact@formal.land). We provide formal verification services for [Solidity](https://soliditylang.org/), [Rust](https://www.rust-lang.org/), and we have already secured thousands of lines of code for the blockchain industry ([Tezos](https://tezos.com/), [Aleph Zero](https://alephzero.org/), [Sui](https://sui.io/)).
 
 ## 🙏 Thanks
 
@@ -27,20 +27,20 @@ This project is based on a fork of the [`solc` Solidity compiler](https://github
 Then, assuming that you are at the root of this project, run the following commands:
 
 ```sh
-build/solc/solc --ir-coq --optimize my_smart_contract.sol
+build/solc/solc --ir-rocq --optimize my_smart_contract.sol
 ```
 
-It will pretty-print on the terminal a Rocq version of the code. Examples of contracts that are already translated in Rocq are in the [CoqOfSolidity/](CoqOfSolidity/) folder.
+It will pretty-print on the terminal a Rocq version of the code. Examples of contracts that are already translated in Rocq are in the [RocqOfSolidity/](RocqOfSolidity/) folder.
 
 We successfully translate and run more than 90% of the Solidity compiler tests in [test/libsolidity/semanticTests/](test/libsolidity/semanticTests/). The main missing features are the pre-compiled contracts and error cases in contract calls. The main file to extract the semantic tests with the execution trace to Rocq is [test/libsolidity/SemanticTest.cpp](test/libsolidity/SemanticTest.cpp):
 
 - example source test: [test/libsolidity/semanticTests/various/erc20.sol](test/libsolidity/semanticTests/various/erc20.sol)
-- Rocq output: [CoqOfSolidity/test/libsolidity/semanticTests/various/erc20/GeneratedTest.v](CoqOfSolidity/test/libsolidity/semanticTests/various/erc20/GeneratedTest.v)
+- Rocq output: [RocqOfSolidity/test/libsolidity/semanticTests/various/erc20/GeneratedTest.v](RocqOfSolidity/test/libsolidity/semanticTests/various/erc20/GeneratedTest.v)
 
 Assuming that you have a working installation of the Rocq system, you can compile the existing translated code with:
 
 ```sh
-cd CoqOfSolidity
+cd rocq/RocqOfSolidity
 make -j4 -k
 ```
 
@@ -56,12 +56,12 @@ build/solc/solc --ir-optimized --optimize my_smart_contract.sol
 
 This project is built as a fork of the official `solc` compiler in order to re-use the frontend (parser, type-checker, ...) and stay up-to-date with the Solidity language. The `solc` compiler is a C++ project that compiles Solidity code to EVM bytecode.
 
-We translate the intermediate language [Yul](https://docs.soliditylang.org/en/latest/yul.html) to Rocq. Yul is a low-level intermediate language used by the Solidity compiler that is both simpler than Solidity and higher-level than EVM bytecode. The relevant code is in [libyul/AsmCoqConverter.cpp](libyul/AsmCoqConverter.cpp).
+We translate the intermediate language [Yul](https://docs.soliditylang.org/en/latest/yul.html) to Rocq. Yul is a low-level intermediate language used by the Solidity compiler that is both simpler than Solidity and higher-level than EVM bytecode. The relevant code is in [libyul/AsmRocqConverter.cpp](libyul/AsmRocqConverter.cpp).
 
 We then define in Rocq the semantics of the Yul language as well as of all the EVM primitives (addition, multiplication, keccak256, contract calls, ...). This is done in the two following files:
 
-- [CoqOfSolidity/CoqOfSolidity.v](CoqOfSolidity/CoqOfSolidity.v) for the semantics of the Yul language
-- [CoqOfSolidity/simulations/CoqOfSolidity.v](CoqOfSolidity/simulations/CoqOfSolidity.v) for the semantics of the EVM primitives
+- [RocqOfSolidity/RocqOfSolidity.v](RocqOfSolidity/RocqOfSolidity.v) for the semantics of the Yul language
+- [RocqOfSolidity/simulations/RocqOfSolidity.v](RocqOfSolidity/simulations/RocqOfSolidity.v) for the semantics of the EVM primitives
 
 To prevent mistakes in our Rocq definitions, we also translate the `semanticTests` of the Solidity compiler to Rocq and re-run them in Rocq. We then check that we get the exact same outputs as the code generated by the official Solidity compiler.
 
@@ -71,8 +71,8 @@ To build the tests, you need to:
 
 1. Translate the test files to Rocq with the following commands:
     ```sh
-    cd CoqOfSolidity
-    python translate_from_tests.py
+    cd rocq
+    python scripts/tests_generate.py
     ```
     This will generate one `.v` file per contract in the `semanticTests` and `syntaxTests` folders.
 2. Generate the test files corresponding to the execution traces with the following commands:
@@ -82,7 +82,7 @@ To build the tests, you need to:
     This will generate one `GeneratedTest.v` file per semantic test. This command takes several minutes to run, as it also compiles and executes each of the contracts in the semantic tests. This command might require a few dependencies to run, like [evmone](https://github.com/ethereum/evmone). You can first try to make this test command work in te upstream repository of Solidity.
 3. Then you can compile them with:
     ```sh
-    cd CoqOfSolidity
+    cd rocq/RocqOfSolidity
     make -j4 -k
     ```
     For the syntax tests it will verify that the translated Rocq code type checks. For the semantic tests it will verify that the execution trace of the contract is the same in Rocq as with the Solidity compiler, in addition of type checking the translated code.
@@ -107,7 +107,7 @@ function _transfer(address from, address to, uint256 value) internal {
 translates in Rocq to:
 
 ```coq
-(* Generated by coq-of-solidity *)
+(* Generated by rocq-of-solidity *)
 
 Definition fun_transfer (var_from : U256.t) (var_to : U256.t) (var_value : U256.t) : M.t unit :=
   let~ _1 := [[ and ~(| var_to, (sub ~(| (shl ~(| 160, 1 |)), 1 |)) |) ]] in
@@ -176,5 +176,5 @@ Some scripts or commands that can be useful for the development of this project:
 To generate the JSON of the Yul of an example:
 
 ```sh
-./build/solc/solc --ir-optimized-ast-json --optimize test/libsolidity/semanticTests/various/erc20.sol |tail -1 |jq 'walk(if type == "object" then del(.nativeSrc, .src, .type) else . end)' >CoqOfSolidity/test/libsolidity/semanticTests/various/erc20/ERC20.json
+./build/solc/solc --ir-optimized-ast-json --optimize test/libsolidity/semanticTests/various/erc20.sol |tail -1 |jq 'walk(if type == "object" then del(.nativeSrc, .src, .type) else . end)' >RocqOfSolidity/test/libsolidity/semanticTests/various/erc20/ERC20.json
 ```
