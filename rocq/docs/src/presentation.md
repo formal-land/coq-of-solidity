@@ -22,10 +22,6 @@ Verifying reasoning about code is called 🔎&nbsp;_formal verification_. This i
 
 At [🌲&nbsp;Formal Land](https://formal.land/), where we developed `rocq-of-solidity`, we are one of the leading teams applying formal verification to large-scale programs. We have developed two other formal verification tools, with [rocq-of-rust](https://github.com/formal-land/rocq-of-rust) for 🦀&nbsp;Rust and [rocq-of-ocaml](https://github.com/formal-land/rocq-of-ocaml) for 🐫&nbsp;OCaml. Read more about what we do on our [📖&nbsp;blog](https://formal.land/blog).
 
-## How much? 💸
-
-For a large smart contract (5,000 lines of Solidity), consider a price of **$50,000** for a formal verification of a _model_ of the code, and **$100,000** for a verification at the level of the _source code_ (more precise). So, this is competitive with traditional audits in terms of pricing.
-
 [💌&nbsp;Contact us](mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;formal&#046;&#108;&#097;&#110;&#100;) for an evaluation!
 
 > `rocq-of-solidity` is fully open-source, under MIT licence, so you can also use it by yourself! 🚀
