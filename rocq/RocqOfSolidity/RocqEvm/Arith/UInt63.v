@@ -2,7 +2,7 @@
   This file continues theories/Numbers/Cyclic/Int63/Int63.v from the standard library of Rocq.
  *)
 
-From Coq Require Import Uint63 NArith ZArith Lia.
+From Stdlib Require Import Uint63 NArith ZArith Lia.
 
 From RocqOfSolidity Require Import Logic2 Arith2.
 

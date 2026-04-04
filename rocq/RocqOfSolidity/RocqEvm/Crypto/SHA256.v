@@ -1,7 +1,7 @@
 (** This is a port of Go's crypto/sha256. *)
 
-From Coq Require Import NArith ZArith Lia Uint63.
-From Coq Require Import String HexString.
+From Stdlib Require Import NArith ZArith Lia Uint63.
+From Stdlib Require Import String HexString.
 
 From RocqOfSolidity Require Import Nibble UInt64.
 From RocqOfSolidity Require Tuplevector Vec8.

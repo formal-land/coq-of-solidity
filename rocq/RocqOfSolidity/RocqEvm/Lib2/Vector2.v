@@ -1,5 +1,5 @@
-From Coq Require Vector.
-From Coq Require List.
+From Stdlib Require Vector.
+From Stdlib Require List.
 
 Fixpoint append_one {A: Type} {n: nat} (v: Vector.t A n) (new: A)
 : Vector.t A (S n)

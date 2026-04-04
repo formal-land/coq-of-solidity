@@ -1,6 +1,6 @@
-From Coq Require Import ZArith Lia.
-From Coq Require Import Uint63.
-From Coq Require Bool.
+From Stdlib Require Import ZArith Lia.
+From Stdlib Require Import Uint63.
+From Stdlib Require Bool.
 
 From RocqOfSolidity Require Import Arith2 UInt63 Nibble.
 

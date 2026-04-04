@@ -2,9 +2,9 @@
   Warning: proof terms may blow up during computation.
  *)
 
-From Coq Require Import NArith ZArith.
-From Coq Require Import Bool Eqdep_dec.
-From Coq Require Import Lia.
+From Stdlib Require Import NArith ZArith.
+From Stdlib Require Import Bool Eqdep_dec.
+From Stdlib Require Import Lia.
 
 From RocqOfSolidity Require Import Logic2 Arith2.
 

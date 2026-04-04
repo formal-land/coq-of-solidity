@@ -1,6 +1,6 @@
 (* Ethereum instructions that deal with signed ints: SDIV SMOD SIGNEXTEND SLT SGT SAR *)
 
-From Coq Require Import NArith ZArith Lia.
+From Stdlib Require Import NArith ZArith Lia.
 
 Require Import UInt.
 Require Import Arith2.

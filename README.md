@@ -1,20 +1,20 @@
 # rocq-of-solidity
-> A formal verification tool for [Solidity](https://soliditylang.org/) using the [Rocq](https://rocq-prover.org/) thereom prover. Ensure no vulnerabilities for your smart contracts.
+> A formal verification tool for [Solidity](https://soliditylang.org/) using the [Rocq](https://rocq-prover.org/) interactive theorem prover.
+>
+> It enables protecting your smart contracts better, in particular against the new wave of AI attacks.
 
-The `rocq-of-solidity` project is a tool to automatically translate Solidity smart contracts to the Rocq proof system. This allows to formally verify the correctness of the smart contracts.
-
-Formal verification is about verifying code for all possible input, and goes further than traditional testing that only covers a finite amount of cases. Formal verification relies on mathematical methods to analyze the code.
+Formal verification is about verifying code for all possible input, and goes further than traditional testing that only covers a finite amount of cases. Formal verification relies on mathematical methods to analyze the code. We recommend to continue complementing formal verification work with traditional security methods. Do your own research about security approaches.
 
 This project provides:
 
 1. **More security for code audits:** all the combinations of inputs are covered, in contrast to testing.
 2. **Reusable audits** for future code changes: we can re-run the proofs as the code evolves.
 
-The `rocq-of-solidity` tool uses an interactive theorem prover (Rocq) to check arbitrarily complex code properties and business rules for your smart contract, with the highest possible level of guarantees.
+The `rocq-of-solidity` tool uses an interactive theorem prover (Rocq) to check arbitrarily complex code properties and business rules for your smart contract. This is the most expressive kind of formal verification tool, and it can cover advanced properties like game-theory, ZK cryptography, compiler verification, ...
 
 ## ✅ Audits
 
-To audit your smart contracts with `rocq-of-solidity` contact us at [contact@formal.land](mailto:contact@formal.land). We provide formal verification services for [Solidity](https://soliditylang.org/), [Rust](https://www.rust-lang.org/), and we have already secured thousands of lines of code for the blockchain industry ([Tezos](https://tezos.com/), [Aleph Zero](https://alephzero.org/), [Sui](https://sui.io/)).
+To audit your smart contracts with `rocq-of-solidity` contact us at [contact@formal.land](mailto:contact@formal.land). We provide formal verification services for [Solidity](https://soliditylang.org/), [Rust](https://www.rust-lang.org/), and we have already secured thousands of lines of code for the blockchain industry ([Tezos](https://tezos.com/), [Aleph Zero](https://alephzero.org/), [Sui](https://sui.io/)) and we work right now for the Ethereum Foundation, in particular to secure upcoming ZK systems.
 
 ## 🙏 Thanks
 

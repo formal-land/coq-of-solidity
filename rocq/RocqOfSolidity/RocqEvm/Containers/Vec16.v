@@ -1,4 +1,4 @@
-From Coq Require Import Uint63.
+From Stdlib Require Import Uint63.
 From RocqOfSolidity Require Import Nibble UInt63.
 
 Inductive vec16 (T: Type)

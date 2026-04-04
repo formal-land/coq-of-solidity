@@ -1,5 +1,5 @@
-From Coq Require Import NArith ZArith Uint63 String.
-From Coq Require HexString.
+From Stdlib Require Import NArith ZArith Uint63 String.
+From Stdlib Require HexString.
 
 From RocqOfSolidity Require Import Nibble.
 From RocqOfSolidity Require Vec16.

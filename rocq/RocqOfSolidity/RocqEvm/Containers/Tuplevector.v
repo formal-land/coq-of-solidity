@@ -1,5 +1,5 @@
-From Coq Require Import Arith.
-From Coq Require List.
+From Stdlib Require Import Arith.
+From Stdlib Require List.
 
 (** A tuplevector is a tuple containing items of the same type. *)
 Fixpoint t (T: Type) (n: nat)

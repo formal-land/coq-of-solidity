@@ -1,4 +1,4 @@
-From Coq Require Setoid.
+From Stdlib Require Setoid.
 
 Lemma b_false {b: bool} {P: Prop} (R: b = true <-> P):
   b = false <-> ~P.
