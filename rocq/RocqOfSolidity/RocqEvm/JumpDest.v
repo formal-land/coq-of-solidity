@@ -1,4 +1,4 @@
-From Coq Require Import Arith NArith Lia.
+From Stdlib Require Import Arith NArith Lia.
 Require Import Nibble Instructions List2 Logic2.
 
 (** This is N(i, w) defined in (141), quite close to the paper. *)

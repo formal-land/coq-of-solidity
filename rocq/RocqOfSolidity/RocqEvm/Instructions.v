@@ -1,7 +1,7 @@
-From Coq Require Import Arith NArith ZArith String.
-From Coq Require Import Lia Bool.
-From Coq Require Import Eqdep_dec.
-From Coq Require Import Uint63.
+From Stdlib Require Import Arith NArith ZArith String.
+From Stdlib Require Import Lia Bool.
+From Stdlib Require Import Eqdep_dec.
+From Stdlib Require Import Uint63.
 
 Require Import Nibble.
 Local Open Scope N_scope.

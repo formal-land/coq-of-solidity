@@ -1,4 +1,4 @@
-From Coq Require Import NArith ZArith Lia.
+From Stdlib Require Import NArith ZArith Lia.
 
 From RocqOfSolidity Require Import Logic2.
 

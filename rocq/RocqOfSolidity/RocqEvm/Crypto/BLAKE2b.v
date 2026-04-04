@@ -1,8 +1,8 @@
-From Coq Require Import List.
-From Coq Require HexString.
-From Coq Require Import String.
-From Coq Require Import NArith ZArith Lia.
-From Coq Require Import Uint63.
+From Stdlib Require Import List.
+From Stdlib Require HexString.
+From Stdlib Require Import String.
+From Stdlib Require Import NArith ZArith Lia.
+From Stdlib Require Import Uint63.
 
 From RocqOfSolidity Require UInt64 Tuplevector Vec8 Vec16.
 From RocqOfSolidity Require Import Nibble.

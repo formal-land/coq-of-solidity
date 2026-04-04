@@ -1,4 +1,4 @@
-From Coq Require Import QArith Qround.
+From Stdlib Require Import QArith Qround.
 
 Require Arith2.
 

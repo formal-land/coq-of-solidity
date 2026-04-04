@@ -1,4 +1,4 @@
-From Coq Require Import Uint63.
+From Stdlib Require Import Uint63.
 
 Inductive vec8 (T: Type)
 := Vec8 (a b c d e f g h: T).

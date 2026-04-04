@@ -1,9 +1,9 @@
-From Coq Require Import Ascii.
-From Coq Require Import NArith.
-From Coq Require Import ZArith.
-From Coq Require Import Uint63.
-From Coq Require Import Lia.
-From Coq Require String Ascii.
+From Stdlib Require Import Ascii.
+From Stdlib Require Import NArith.
+From Stdlib Require Import ZArith.
+From Stdlib Require Import Uint63.
+From Stdlib Require Import Lia.
+From Stdlib Require String Ascii.
 
 From RocqOfSolidity Require Import UInt63 Arith2.
 

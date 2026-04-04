@@ -2,7 +2,7 @@
  This file continues theories/Lists/ListSet.v from the standard library of Rocq.
  *)
 
-From Coq Require Import List ListSet.
+From Stdlib Require Import List ListSet.
 
 (** in_dec is a sumbool version of set_mem. *)
 Lemma set_mem_in_dec {M: Type} (E: forall x y: M, {x = y} + {x <> y})

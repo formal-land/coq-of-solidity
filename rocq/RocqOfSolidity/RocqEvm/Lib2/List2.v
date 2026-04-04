@@ -1,4 +1,4 @@
-From Coq Require Import List Arith.
+From Stdlib Require Import List Arith.
 
 Local Open Scope list_scope.
 
