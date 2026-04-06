@@ -885,43 +885,55 @@ Module Stdlib.
     M.pure tt.
 
   Definition chainid : M.t U256.t :=
-    LowM.Impossible "chainid".
+    let* env := LowM.Primitive Primitive.GetEnvironment M.pure in
+    M.pure env.(Environment.chainid).
 
   Definition basefee : M.t U256.t :=
-    LowM.Impossible "basefee".
+    let* env := LowM.Primitive Primitive.GetEnvironment M.pure in
+    M.pure env.(Environment.basefee).
 
   Definition blobbasefee : M.t U256.t :=
-    LowM.Impossible "blobbasefee".
+    let* env := LowM.Primitive Primitive.GetEnvironment M.pure in
+    M.pure env.(Environment.blobbasefee).
 
   Definition origin : M.t U256.t :=
-    LowM.Impossible "origin".
+    let* env := LowM.Primitive Primitive.GetEnvironment M.pure in
+    M.pure env.(Environment.origin).
 
   Definition gasprice : M.t U256.t :=
-    LowM.Impossible "gasprice".
+    let* env := LowM.Primitive Primitive.GetEnvironment M.pure in
+    M.pure env.(Environment.gasprice).
 
-  Definition blockhash (b : U256.t) : M.t U256.t :=
-    LowM.Impossible "blockhash".
+  Definition blockhash (_ : U256.t) : M.t U256.t :=
+    M.pure 0.
 
   Definition blobhash (i : U256.t) : M.t U256.t :=
-    LowM.Impossible "blobhash".
+    let* env := LowM.Primitive Primitive.GetEnvironment M.pure in
+    M.pure (List.nth (Z.to_nat i) env.(Environment.blob_hashes) 0).
 
   Definition coinbase : M.t U256.t :=
-    LowM.Impossible "coinbase".
+    let* env := LowM.Primitive Primitive.GetEnvironment M.pure in
+    M.pure env.(Environment.coinbase).
 
   Definition timestamp : M.t U256.t :=
-    LowM.Impossible "timestamp".
+    let* env := LowM.Primitive Primitive.GetEnvironment M.pure in
+    M.pure env.(Environment.timestamp).
 
   Definition number : M.t U256.t :=
-    LowM.Impossible "number".
+    let* env := LowM.Primitive Primitive.GetEnvironment M.pure in
+    M.pure env.(Environment.number).
 
   Definition difficulty : M.t U256.t :=
-    LowM.Impossible "difficulty".
+    let* env := LowM.Primitive Primitive.GetEnvironment M.pure in
+    M.pure env.(Environment.prevrandao).
 
   Definition prevrandao : M.t U256.t :=
-    LowM.Impossible "prevrandao".
+    let* env := LowM.Primitive Primitive.GetEnvironment M.pure in
+    M.pure env.(Environment.prevrandao).
 
   Definition gaslimit : M.t U256.t :=
-    LowM.Impossible "gaslimit".
+    let* env := LowM.Primitive Primitive.GetEnvironment M.pure in
+    M.pure env.(Environment.gaslimit).
 
   Definition loadimmutable (name : U256.t) : M.t U256.t :=
     LowM.Primitive (Primitive.LoadImmutable name) M.pure.
@@ -1383,13 +1395,18 @@ Fixpoint eval {A : Set}
             eval fuel codes environment (k 1) state
           | Some callee_account =>
             let callee_code_name : U256.t := callee_account.(Account.code) in
-            let callee_environment := {|
-              Environment.caller := environment.(Environment.address);
-              Environment.callvalue := value;
-              Environment.calldata := input;
-              Environment.address := address;
-              Environment.code_name := callee_code_name;
-            |} in
+            let callee_environment :=
+              environment <|
+                Environment.caller := environment.(Environment.address)
+              |> <|
+                Environment.callvalue := value
+              |> <|
+                Environment.calldata := input
+              |> <|
+                Environment.address := address
+              |> <|
+                Environment.code_name := callee_code_name
+              |> in
             let callee_contract :=
               match Codes.get codes callee_code_name with
               | None => LowM.Impossible "code not found"
