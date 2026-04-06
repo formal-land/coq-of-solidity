@@ -67,6 +67,18 @@ Module Environment.
     address : U256.t;
     (** The name of the current code that is being executed. *)
     code_name : U256.t;
+    (** Block and transaction context *)
+    origin : U256.t;
+    gasprice : U256.t;
+    chainid : U256.t;
+    coinbase : U256.t;
+    timestamp : U256.t;
+    number : U256.t;
+    prevrandao : U256.t;
+    gaslimit : U256.t;
+    basefee : U256.t;
+    blobbasefee : U256.t;
+    blob_hashes : list U256.t;
   }.
 End Environment.
 

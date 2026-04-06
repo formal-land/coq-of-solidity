@@ -741,6 +741,17 @@ bool SemanticTest::deploy(
 	outputFile << "    Environment.calldata := [];" << std::endl;
 	outputFile << "    Environment.address := 0x" << m_contractAddress << ";" << std::endl;
 	outputFile << "    Environment.code_name := constructor_code.(Code.hex_name);" << std::endl;
+	outputFile << "    Environment.origin := 0x9292929292929292929292929292929292929292;" << std::endl;
+	outputFile << "    Environment.gasprice := 3000000000;" << std::endl;
+	outputFile << "    Environment.chainid := 1;" << std::endl;
+	outputFile << "    Environment.coinbase := 0x7878787878787878787878787878787878787878;" << std::endl;
+	outputFile << "    Environment.timestamp := 1;" << std::endl;
+	outputFile << "    Environment.number := 1;" << std::endl;
+	outputFile << "    Environment.prevrandao := 0xa86c2e601b6c44eb4848f7d23d9df3113fbcac42041c49cbed5000cb4f118777;" << std::endl;
+	outputFile << "    Environment.gaslimit := 20000000;" << std::endl;
+	outputFile << "    Environment.basefee := 7;" << std::endl;
+	outputFile << "    Environment.blobbasefee := 1;" << std::endl;
+	outputFile << "    Environment.blob_hashes := [0x0100000000000000000000000000000000000000000000000000000000000001; 0x0100000000000000000000000000000000000000000000000000000000000002];" << std::endl;
 	outputFile << "  |}." << std::endl;
 	outputFile << std::endl;
 	outputFile << "  Definition initial_state : State.t :=" << std::endl;
@@ -834,6 +845,17 @@ void SemanticTest::writeRocqCallTest(
 			   << std::endl;
 	outputFile << "    Environment.address := 0x" << m_contractAddress << ";" << std::endl;
 	outputFile << "    Environment.code_name := deployed_code.(Code.hex_name);" << std::endl;
+	outputFile << "    Environment.origin := 0x9292929292929292929292929292929292929292;" << std::endl;
+	outputFile << "    Environment.gasprice := 3000000000;" << std::endl;
+	outputFile << "    Environment.chainid := 1;" << std::endl;
+	outputFile << "    Environment.coinbase := 0x7878787878787878787878787878787878787878;" << std::endl;
+	outputFile << "    Environment.timestamp := 1;" << std::endl;
+	outputFile << "    Environment.number := 1;" << std::endl;
+	outputFile << "    Environment.prevrandao := 0xa86c2e601b6c44eb4848f7d23d9df3113fbcac42041c49cbed5000cb4f118777;" << std::endl;
+	outputFile << "    Environment.gaslimit := 20000000;" << std::endl;
+	outputFile << "    Environment.basefee := 7;" << std::endl;
+	outputFile << "    Environment.blobbasefee := 1;" << std::endl;
+	outputFile << "    Environment.blob_hashes := [0x0100000000000000000000000000000000000000000000000000000000000001; 0x0100000000000000000000000000000000000000000000000000000000000002];" << std::endl;
 	outputFile << "  |}." << std::endl;
 	outputFile << std::endl;
 	std::string initialState
