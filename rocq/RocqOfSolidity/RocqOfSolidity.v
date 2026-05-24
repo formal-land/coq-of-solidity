@@ -115,14 +115,23 @@ Module Primitive.
   | SLoad (address : U256.t) : t U256.t
   | SStore (address value : U256.t) : t unit
   | RLoad : t (list Z)
+  | RStore (bytes : list Z) : t unit
   | TLoad (address : U256.t) : t U256.t
   | TStore (address value : U256.t) : t unit
+  | GetGas : t U256.t
+  | GetBlockNumber : t U256.t
+  | GetBlockTimestamp : t U256.t
   | Log (topics : list U256.t) (payload : list Z) : t unit
   | GetEnvironment : t Environment.t
   | GetNonce : t U256.t
   | GetCodedata (address : U256.t) : t (list Z)
+  | GetCodeBytes (address : U256.t) : t (list Z)
+  | GetBalance (address : U256.t) : t U256.t
+  | AccountExists (address : U256.t) : t bool
   | CreateAccount (address code : U256.t) (codedata : list Z) : t unit
   | UpdateCodeForDeploy (address code : U256.t) : t unit
+  | UpdateCodeBytesForDeploy (address : U256.t) (code_bytes : list Z) : t unit
+  | Selfdestruct (beneficiary : U256.t) : t unit
   | LoadImmutable (name : U256.t) : t U256.t
   | SetImmutable (name value : U256.t) : t unit
   (** The call stack is there to debug the semantics of Yul. *)
@@ -152,6 +161,8 @@ Module LowM.
       (address : U256.t)
       (value : U256.t)
       (input : list Z)
+      (is_static : bool)
+      (is_delegate : bool)
       (k : U256.t -> t A)
   (** Explicit cut in the monadic expressions, to provide better composition for the proofs. *)
   | Let {B : Set} (e1 : t B) (k : B -> t A)
@@ -177,8 +188,8 @@ Module LowM.
       CallFunction name arguments (fun result => let_ (k result) e2)
     | Loop input body break_with k =>
       Loop input body break_with (fun result => let_ (k result) e2)
-    | CallContract contract value input k =>
-      CallContract contract value input (fun result => let_ (k result) e2)
+    | CallContract contract value input is_static is_delegate k =>
+      CallContract contract value input is_static is_delegate (fun result => let_ (k result) e2)
     | Let e1 k =>
       Let e1 (fun result => let_ (k result) e2)
     | Call e k =>

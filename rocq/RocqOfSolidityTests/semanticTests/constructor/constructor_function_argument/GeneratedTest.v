@@ -25,14 +25,17 @@ Module Constructor.
   Definition initial_state : State.t :=
     let address := environment.(Environment.address) in
     let account := {|
-      Account.balance := environment.(Environment.callvalue);
+      Account.balance := 0;
       Account.nonce := 1;
       Account.code := constructor_code.(Code.hex_name);
       Account.codedata := Memory.hex_string_as_bytes "0fdd67305928fcac8d213d1e47bfa6165cd0b87b946644cd0000000000000000";
       Account.storage := Memory.empty;
       Account.immutables := [];
     |} in
-    State.init <| State.accounts := [(address, account)] |>.
+    State.init
+      <| State.accounts := [(address, account)] |>
+      <| State.block_number := 1 |>
+      <| State.block_timestamp := 15 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment constructor_code.(Code.body) initial_state.

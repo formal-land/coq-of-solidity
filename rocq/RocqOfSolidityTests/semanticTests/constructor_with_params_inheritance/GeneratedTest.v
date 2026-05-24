@@ -26,7 +26,7 @@ Module Constructor.
   Definition initial_state : State.t :=
     let address := environment.(Environment.address) in
     let account := {|
-      Account.balance := environment.(Environment.callvalue);
+      Account.balance := 0;
       Account.nonce := 1;
       Account.code := constructor_code.(Code.hex_name);
       Account.codedata := Memory.hex_string_as_bytes "00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000";

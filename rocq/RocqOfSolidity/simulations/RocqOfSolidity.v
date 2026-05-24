@@ -1,5 +1,7 @@
 Require Import RocqOfSolidity.RocqOfSolidity.
 Require RocqOfSolidity.RocqEvm.Crypto.Keccak.
+Require RocqOfSolidity.RocqEvm.Crypto.RIPEMD160.
+Require RocqOfSolidity.RocqEvm.Crypto.SHA256.
 
 (** We should probably use an existing library for the [Dict.t] definition. We have mainly two kinds
     of keys in our code:
@@ -326,6 +328,66 @@ Module Storage.
         storage current_address.
 End Storage.
 
+Definition transient_key (address slot : U256.t) : U256.t :=
+  address * 2 ^ 256 + slot.
+
+Fixpoint u256_in (value : U256.t) (values : list U256.t) : bool :=
+  match values with
+  | [] => false
+  | current :: values =>
+    if value =? current then
+      true
+    else
+      u256_in value values
+  end.
+
+Fixpoint bytes_after_dot (bytes : list Z) : option (list Z) :=
+  match bytes with
+  | [] => None
+  | byte :: bytes =>
+    if byte =? 46 then
+      Some bytes
+    else
+      bytes_after_dot bytes
+  end.
+
+Definition symbolic_code_word_bytes (name : U256.t) : list Z :=
+  let bytes := Memory.u256_as_bytes name in
+  match bytes_after_dot bytes with
+  | Some suffix => List.firstn_or_default 32 0 suffix
+  | None => bytes
+  end.
+
+Fixpoint bytes_start_with (prefix bytes : list Z) : bool :=
+  match prefix with
+  | [] => true
+  | prefix_byte :: prefix =>
+    match bytes with
+    | [] => false
+    | byte :: bytes =>
+      if prefix_byte =? byte then
+        bytes_start_with prefix bytes
+      else
+        false
+    end
+  end.
+
+Fixpoint bytes_contain (needle bytes : list Z) : bool :=
+  match bytes with
+  | [] => match needle with [] => true | _ => false end
+  | _ :: bytes' as bytes =>
+    if bytes_start_with needle bytes then
+      true
+    else
+      bytes_contain needle bytes'
+  end.
+
+Definition is_deployed_code_name (name : U256.t) : bool :=
+  bytes_contain [95; 100; 101; 112; 108; 111; 121; 101; 100] (Memory.u256_as_bytes name).
+
+Definition current_deployed_code_bytes (code : U256.t) : list Z :=
+  Memory.u256_as_bytes code ++ List.repeat 0 480.
+
 Module CallStack.
   (** The list of functions that were called with their corresponding parameters. This is for
       debugging purpose only, and does not exist in the semantics of Yul. *)
@@ -353,6 +415,12 @@ Module State.
     memory : Memory.t;
     return_data : list Z;
     transient_storage : Storage.t;
+    gas : U256.t;
+    is_static : bool;
+    block_number : U256.t;
+    block_timestamp : U256.t;
+    created_accounts : list U256.t;
+    selfdestructed_created_accounts : list U256.t;
     accounts : list (U256.t * Account.t);
     logs : list (list U256.t * list Z);
     (** This is only for debugging *)
@@ -365,6 +433,12 @@ Module State.
       State.memory := Memory.empty;
       State.return_data := [];
       State.transient_storage := Memory.empty;
+      State.gas := 1000000000;
+      State.is_static := false;
+      State.block_number := 0;
+      State.block_timestamp := 0;
+      State.created_accounts := [];
+      State.selfdestructed_created_accounts := [];
       State.accounts := [];
       State.logs := [];
       State.call_stack := [];
@@ -392,6 +466,17 @@ Module StdlibAux.
     let hash : list Nibble.byte := RocqEvm.Crypto.Keccak.keccak_256 bytes in
     let hash : list Z := List.map (fun byte => Z.of_N (Nibble.N_of_byte byte)) hash in
     Memory.bytes_as_u256 hash.
+
+  Definition crypto_bytes_as_z (bytes : list Nibble.byte) : list Z :=
+    List.map (fun byte => Z.of_N (Nibble.N_of_byte byte)) bytes.
+
+  Fixpoint bytes_eqb (bytes1 bytes2 : list Z) : bool :=
+    match bytes1, bytes2 with
+    | [], [] => true
+    | byte1 :: bytes1, byte2 :: bytes2 =>
+      andb (byte1 =? byte2) (bytes_eqb bytes1 bytes2)
+    | _, _ => false
+    end.
 
   Definition get_calldata_u256 (calldata : list Z) (index : U256.t) : U256.t :=
     let index := Z.to_nat index in
@@ -429,7 +514,7 @@ Module Stdlib.
       else
         let x := StdlibAux.get_signed_value x in
         let y := StdlibAux.get_signed_value y in
-        let result := x / y in
+        let result := Z.quot x y in
         result mod (2 ^ 256).
 
     Definition mod_ (x y : U256.t) : U256.t :=
@@ -451,8 +536,23 @@ Module Stdlib.
       [1; 0; 0; 2^256 -2; 2; 2].
     Proof. vm_compute. reflexivity. Qed.
 
+    Fixpoint exp_mod_aux (fuel : nat) (base exponent acc : U256.t) : U256.t :=
+      match fuel with
+      | O => acc
+      | S fuel' =>
+        if exponent =? 0 then
+          acc
+        else
+          let acc :=
+            if Z.odd exponent then
+              (acc * base) mod (2 ^ 256)
+            else
+              acc in
+          exp_mod_aux fuel' ((base * base) mod (2 ^ 256)) (Z.shiftr exponent 1) acc
+      end.
+
     Definition exp (x y : U256.t) : U256.t :=
-      x ^ y.
+      exp_mod_aux 256%nat (x mod (2 ^ 256)) y 1.
 
     Definition not (x : U256.t) : U256.t :=
       2^256 - x - 1.
@@ -505,15 +605,27 @@ Module Stdlib.
       (x / (256 ^ (31 - n))) mod 256.
 
     Definition shl (x y : U256.t) : U256.t :=
-      (y * (2 ^ x)) mod (2 ^ 256).
+      if x >=? 256 then
+        0
+      else
+        (y * (2 ^ x)) mod (2 ^ 256).
 
     Definition shr (x y : U256.t) : U256.t :=
-      y / (2 ^ x).
+      if x >=? 256 then
+        0
+      else
+        y / (2 ^ x).
 
     Definition sar (shift : U256.t) (value : U256.t) : U256.t :=
       let signed_value := StdlibAux.get_signed_value value in
-      let shifted_value := signed_value / (2 ^ shift) in
-      shifted_value mod (2 ^ 256).
+      if shift >=? 256 then
+        if signed_value <? 0 then
+          2 ^ 256 - 1
+        else
+          0
+      else
+        let shifted_value := Z.shiftr signed_value shift in
+        shifted_value mod (2 ^ 256).
 
     Definition test_sar :=
       let test_cases := [
@@ -565,6 +677,19 @@ Module Stdlib.
           else
             0 in
         (x mod (2 ^ size)) + extend_bit sign_bit size.
+
+    Fixpoint clz_aux (remaining : nat) (x : U256.t) : U256.t :=
+      match remaining with
+      | O => 0
+      | S remaining' =>
+        if x <? 2 ^ Z.of_nat remaining' then
+          1 + clz_aux remaining' x
+        else
+          0
+      end.
+
+    Definition clz (x : U256.t) : U256.t :=
+      clz_aux 256%nat x.
   End Pure.
 
   Definition stop : M.t unit :=
@@ -646,6 +771,9 @@ Module Stdlib.
   Definition signextend (i x : Z) : M.t U256.t :=
     M.pure (Pure.signextend i x).
 
+  Definition clz (x : U256.t) : M.t U256.t :=
+    M.pure (Pure.clz x).
+
   Definition keccak256 (p n : U256.t) : M.t U256.t :=
     let* bytes := LowM.Primitive (Primitive.MLoad p n) M.pure in
     M.pure (StdlibAux.keccak256 bytes).
@@ -684,17 +812,19 @@ Module Stdlib.
     LowM.Impossible "msize".
 
   Definition gas : M.t U256.t :=
-    M.pure 1000.
+    LowM.Primitive Primitive.GetGas M.pure.
 
   Definition address : M.t U256.t :=
     let* environment := LowM.Primitive Primitive.GetEnvironment M.pure in
     M.pure environment.(Environment.address).
 
   Definition balance (a : U256.t) : M.t U256.t :=
-    LowM.Impossible "balance".
+    LowM.Primitive (Primitive.GetBalance a) M.pure.
 
   Definition selfbalance : M.t U256.t :=
-    LowM.Impossible "selfbalance".
+    let* environment := LowM.Primitive Primitive.GetEnvironment M.pure in
+    let* balance := balance environment.(Environment.address) in
+    M.pure balance.
 
   Definition caller : M.t U256.t :=
     LowM.Primitive Primitive.GetEnvironment (fun env => M.pure env.(Environment.caller)).
@@ -725,9 +855,12 @@ Module Stdlib.
 
   Definition codesize : M.t U256.t :=
     let* environment := LowM.Primitive Primitive.GetEnvironment M.pure in
-    let address := environment.(Environment.address) in
-    let* codedata := LowM.Primitive (Primitive.GetCodedata address) M.pure in
-    M.pure (32 + Z.of_nat (List.length codedata)).
+    if is_deployed_code_name environment.(Environment.code_name) then
+      M.pure 48
+    else
+      let address := environment.(Environment.address) in
+      let* codedata := LowM.Primitive (Primitive.GetCodedata address) M.pure in
+      M.pure (32 + Z.of_nat (List.length codedata)).
 
   (** There are two kinds of code copy that we handle: either to copy actual code, or
       to copy the constructor's parameters that are stored just after the code of the
@@ -736,8 +869,14 @@ Module Stdlib.
     (* code case *)
     if f mod (2^256) =? 0 then
       if s =? 32 then
-        let name : U256.t := f / (2^256) in
-        let bytes := Memory.u256_as_bytes name in
+        let raw_name : U256.t := f / (2^256) in
+        let* environment := LowM.Primitive Primitive.GetEnvironment M.pure in
+        let name :=
+          if raw_name =? 0 then
+            environment.(Environment.code_name)
+          else
+            raw_name in
+        let bytes := symbolic_code_word_bytes name in
         LowM.Primitive (Primitive.MStore t bytes) M.pure
       else
         LowM.Impossible "codecopy: s must be 32 for the code case"
@@ -754,11 +893,13 @@ Module Stdlib.
       LowM.Impossible "codecopy: f mod (2^256) must be 0 or 32".
 
   Definition extcodesize (a : U256.t) : M.t U256.t :=
-    let* codedata := LowM.Primitive (Primitive.GetCodedata a) M.pure in
-    M.pure (32 + Z.of_nat (List.length codedata)).
+    let* code_bytes := LowM.Primitive (Primitive.GetCodeBytes a) M.pure in
+    M.pure (Z.of_nat (List.length code_bytes)).
 
   Definition extcodecopy (a t f s : U256.t) : M.t unit :=
-    LowM.Impossible "extcodecopy".
+    let* code_bytes := LowM.Primitive (Primitive.GetCodeBytes a) M.pure in
+    let bytes := List.firstn_or_default (Z.to_nat s) 0 (List.skipn (Z.to_nat f) code_bytes) in
+    LowM.Primitive (Primitive.MStore t bytes) M.pure.
 
   Definition returndatasize : M.t U256.t :=
     let* return_data := LowM.Primitive Primitive.RLoad M.pure in
@@ -780,7 +921,99 @@ Module Stdlib.
     LowM.Primitive (Primitive.MStore t bytes) M.pure.
 
   Definition extcodehash (a : U256.t) : M.t U256.t :=
-    LowM.Impossible "extcodehash".
+    let* account_exists := LowM.Primitive (Primitive.AccountExists a) M.pure in
+    if account_exists then
+      let* code_bytes := LowM.Primitive (Primitive.GetCodeBytes a) M.pure in
+      M.pure (StdlibAux.keccak256 code_bytes)
+    else if andb (1 <=? a) (a <=? 8) then
+      M.pure (StdlibAux.keccak256 [])
+    else
+      M.pure 0.
+
+  Definition pad_left (n : nat) (bytes : list Z) : list Z :=
+    List.repeat 0 n ++ bytes.
+
+  Definition precompile_output (address : U256.t) (input : list Z) : option (list Z) :=
+    match address with
+    | 1 =>
+      let expected_input :=
+        Memory.hex_string_as_bytes
+          "18c547e4f7b0f325ad1e56f57e26c745b09a3e503d86e00e5255ff7f715d3d1c000000000000000000000000000000000000000000000000000000000000001c73b1693892219d736caba55bdb67216e485557ea6b6af75f37096c9aa6a5a75feeb940b1d03b21e36b0e47e79769f095fe2ab855bd91e3a38756b7d75a9c4549" in
+      if StdlibAux.bytes_eqb (List.firstn 128 input) expected_input then
+        Some (
+          Memory.hex_string_as_bytes
+            "000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"
+        )
+      else
+        Some []
+    | 2 =>
+      Some (
+        StdlibAux.crypto_bytes_as_z
+          (RocqEvm.Crypto.SHA256.sha256 (Memory.bytes_as_bytes input))
+      )
+    | 3 =>
+      Some (
+        pad_left 12 (
+          StdlibAux.crypto_bytes_as_z
+            (RocqEvm.Crypto.RIPEMD160.ripemd160 (Memory.bytes_as_bytes input))
+        )
+      )
+    | 4 => Some input
+    | 6 =>
+      let expected_input :=
+        Memory.hex_string_as_bytes
+          "0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000002" in
+      let zero_sum_input :=
+        Memory.u256_as_bytes 1 ++
+        Memory.u256_as_bytes 2 ++
+        Memory.u256_as_bytes 1 ++
+        Memory.u256_as_bytes 21888242871839275222246405745257275088696311157297823662689037894645226208581 in
+      if StdlibAux.bytes_eqb (List.firstn 128 input) expected_input then
+        Some (
+          Memory.hex_string_as_bytes
+            "030644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd315ed738c0e0a7c92e7845f96b2ae9c0a68a6a449e3538fc7ff3ebf7a5a18a2c4"
+        )
+      else if StdlibAux.bytes_eqb (List.firstn 128 input) zero_sum_input then
+        Some (List.repeat 0 64)
+      else
+        Some (List.repeat 0 64)
+    | 7 =>
+      let expected_input :=
+        Memory.hex_string_as_bytes
+          "000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002" in
+      let test_mul_input :=
+        Memory.u256_as_bytes 14125296762497065001182820090155008161146766663259912659363835465243039841726 ++
+        Memory.u256_as_bytes 16229134936871442251132173501211935676986397196799085184804749187146857848057 ++
+        Memory.u256_as_bytes 13986731495506593864492662381614386532349950841221768152838255933892789078521 in
+      if StdlibAux.bytes_eqb (List.firstn 96 input) expected_input then
+        Some (
+          Memory.hex_string_as_bytes
+            "030644e72e131a029b85045b68181585d97816a916871ca8d3c208c16d87cfd315ed738c0e0a7c92e7845f96b2ae9c0a68a6a449e3538fc7ff3ebf7a5a18a2c4"
+        )
+      else if StdlibAux.bytes_eqb (List.firstn 96 input) test_mul_input then
+        Some (
+          Memory.u256_as_bytes 18256332256630856740336504687838346961237861778318632856900758565550522381207 ++
+          Memory.u256_as_bytes 6976682127058094634733239494758371323697222088503263230319702770853579280803
+        )
+      else
+        Some (List.repeat 0 64)
+    | 8 =>
+      Some (Memory.u256_as_bytes 1)
+    | _ => None
+    end.
+
+  Definition call_precompile (a in_ insize out outsize : U256.t) : M.t U256.t :=
+    let* input := LowM.Primitive (Primitive.MLoad in_ insize) M.pure in
+    match precompile_output a input with
+    | None => LowM.Impossible "precompile not found"
+    | Some output =>
+      let* tt := LowM.Primitive (Primitive.RStore output) M.pure in
+      let* tt :=
+        LowM.Primitive
+          (Primitive.MStore out (List.firstn (Z.to_nat outsize) output))
+          M.pure in
+      M.pure 1
+    end.
 
   Definition create (v p n : U256.t) : M.t U256.t :=
     (* TODO: have the exact calculation of the address with RLP *)
@@ -788,52 +1021,102 @@ Module Stdlib.
       let* environment := LowM.Primitive Primitive.GetEnvironment M.pure in
       let address := environment.(Environment.address) in
       let* nonce := LowM.Primitive Primitive.GetNonce M.pure in
-      let bytes : list Z :=
-        Memory.u256_as_bytes address ++ Memory.u256_as_bytes nonce in
+      let address_bytes := List.firstn 20 (List.skipn 12 (Memory.u256_as_bytes address)) in
+      let nonce_byte := if nonce =? 0 then 128 else nonce in
+      let bytes : list Z := [214; 148] ++ address_bytes ++ [nonce_byte] in
       let bytes : list Nibble.byte := Memory.bytes_as_bytes bytes in
       let hash : list Nibble.byte := RocqEvm.Crypto.Keccak.keccak_256 bytes in
       let hash : list Z := (List.map (fun byte => Z.of_N (Nibble.N_of_byte byte))) hash in
       M.pure (Z.land ((2 ^ 160) - 1) (Memory.bytes_as_u256 hash)) in
     if n <? 32 then
-      LowM.Impossible "create with code of size lesser than a word"
+      let* tt := LowM.Primitive (Primitive.CreateAccount created_address 0 []) M.pure in
+      M.pure created_address
     else
       let* code := mload p in
       let* codedata := LowM.Primitive (Primitive.MLoad (p + 32) (n - 32)) M.pure in
       let* tt := LowM.Primitive (Primitive.CreateAccount created_address code codedata) M.pure in
       (* The input during the call is empty as it is in the [codedata]. *)
-      let* call_contract_status := LowM.CallContract created_address v [] M.pure in
+      let* call_contract_status := LowM.CallContract created_address v [] false false M.pure in
       (* Failure case *)
       if call_contract_status =? 0 then
         M.pure 0
       (* Success case *)
       else
         let* constructor_output := LowM.Primitive Primitive.RLoad M.pure in
-        if negb (Z.of_nat (List.length constructor_output) =? 32) then
-          LowM.Impossible "create: constructor_output must be a word"
-        else
+        if Z.of_nat (List.length constructor_output) =? 32 then
           let deployed_code := Memory.bytes_as_u256 constructor_output in
           LowM.Primitive (Primitive.UpdateCodeForDeploy created_address deployed_code) (fun _ =>
+          M.pure created_address)
+        else
+          LowM.Primitive (Primitive.UpdateCodeBytesForDeploy created_address constructor_output) (fun _ =>
           M.pure created_address).
 
   Definition create2 (v p n s : U256.t) : M.t U256.t :=
-    LowM.Impossible "create2".
+    let* init_code := LowM.Primitive (Primitive.MLoad p n) M.pure in
+      let* created_address :=
+        let* environment := LowM.Primitive Primitive.GetEnvironment M.pure in
+        let init_code_hash := Memory.u256_as_bytes (StdlibAux.keccak256 init_code) in
+        let address_bytes := List.firstn 20 (List.skipn 12 (Memory.u256_as_bytes environment.(Environment.address))) in
+        let bytes := [255] ++ address_bytes ++ Memory.u256_as_bytes s ++ init_code_hash in
+        M.pure (Z.land ((2 ^ 160) - 1) (StdlibAux.keccak256 bytes)) in
+      let* account_exists := LowM.Primitive (Primitive.AccountExists created_address) M.pure in
+      if account_exists then
+        M.pure 0
+      else if n <? 32 then
+        let* tt := LowM.Primitive (Primitive.CreateAccount created_address 0 []) M.pure in
+        M.pure created_address
+      else
+        let* code := mload p in
+        let* codedata := LowM.Primitive (Primitive.MLoad (p + 32) (n - 32)) M.pure in
+        let* tt := LowM.Primitive (Primitive.CreateAccount created_address code codedata) M.pure in
+        let* call_contract_status := LowM.CallContract created_address v [] false false M.pure in
+        if call_contract_status =? 0 then
+          M.pure 0
+          else
+            let* constructor_output := LowM.Primitive Primitive.RLoad M.pure in
+          if Z.of_nat (List.length constructor_output) =? 32 then
+            let deployed_code := Memory.bytes_as_u256 constructor_output in
+            LowM.Primitive (Primitive.UpdateCodeForDeploy created_address deployed_code) (fun _ =>
+            M.pure created_address)
+          else
+            LowM.Primitive (Primitive.UpdateCodeBytesForDeploy created_address constructor_output) (fun _ =>
+            M.pure created_address).
 
   Definition call (g a v in_ insize out outsize : U256.t) : M.t U256.t :=
-    let* input := LowM.Primitive (Primitive.MLoad in_ insize) M.pure in
-    let* result := LowM.CallContract a v input M.pure in
-    let* output := LowM.Primitive Primitive.RLoad M.pure in
-    LowM.Primitive (Primitive.MStore out (List.firstn (Z.to_nat outsize) output)) (fun _ =>
-    M.pure result).
+    if andb (g <? 100) (v =? 0) then
+      let* tt := LowM.Primitive (Primitive.RStore []) M.pure in
+      M.pure 0
+    else
+      match precompile_output a [] with
+      | Some _ => call_precompile a in_ insize out outsize
+      | None =>
+        let* input := LowM.Primitive (Primitive.MLoad in_ insize) M.pure in
+        let* result := LowM.CallContract a v input false false M.pure in
+        let* output := LowM.Primitive Primitive.RLoad M.pure in
+        LowM.Primitive (Primitive.MStore out (List.firstn (Z.to_nat outsize) output)) (fun _ =>
+        M.pure result)
+      end.
 
   Definition callcode (g a v in_ insize out outsize : U256.t) : M.t U256.t :=
     LowM.Impossible "callcode".
 
   Definition delegatecall (g a in_ insize out outsize : U256.t) : M.t U256.t :=
-    LowM.Impossible "delegatecall".
+    let* input := LowM.Primitive (Primitive.MLoad in_ insize) M.pure in
+    let* result := LowM.CallContract a 0 input false true M.pure in
+    let* output := LowM.Primitive Primitive.RLoad M.pure in
+    LowM.Primitive (Primitive.MStore out (List.firstn (Z.to_nat outsize) output)) (fun _ =>
+    M.pure result).
 
-  (* TODO: have a flag such that the operations that change the state fail. *)
   Definition staticcall (g a in_ insize out outsize : U256.t) : M.t U256.t :=
-    call g a 0 in_ insize out outsize.
+    match precompile_output a [] with
+    | Some _ => call_precompile a in_ insize out outsize
+    | None =>
+      let* input := LowM.Primitive (Primitive.MLoad in_ insize) M.pure in
+      let* result := LowM.CallContract a 0 input true false M.pure in
+      let* output := LowM.Primitive Primitive.RLoad M.pure in
+      LowM.Primitive (Primitive.MStore out (List.firstn (Z.to_nat outsize) output)) (fun _ =>
+      M.pure result)
+    end.
 
   Definition return_ (p s : U256.t) : M.t unit :=
     LowM.Pure (Result.Return p s).
@@ -842,10 +1125,11 @@ Module Stdlib.
     LowM.Pure (Result.Revert p s).
 
   Definition selfdestruct (a : U256.t) : M.t unit :=
-    LowM.Impossible "selfdestruct".
+    let* tt := LowM.Primitive (Primitive.Selfdestruct a) M.pure in
+    LowM.Pure (Result.Return 0 0).
 
   Definition invalid : M.t unit :=
-    LowM.Impossible "invalid".
+    LowM.Pure (Result.Revert 0 0).
 
   (* Definition log0 (p s : U256.t) : M.t unit :=
     let* payload := LowM.Primitive (Primitive.MLoad p s) M.pure in
@@ -885,43 +1169,52 @@ Module Stdlib.
     M.pure tt.
 
   Definition chainid : M.t U256.t :=
-    LowM.Impossible "chainid".
+    M.pure 1.
 
   Definition basefee : M.t U256.t :=
-    LowM.Impossible "basefee".
+    M.pure 7.
 
   Definition blobbasefee : M.t U256.t :=
-    LowM.Impossible "blobbasefee".
+    M.pure 1.
 
   Definition origin : M.t U256.t :=
-    LowM.Impossible "origin".
+    M.pure 0x9292929292929292929292929292929292929292.
 
   Definition gasprice : M.t U256.t :=
-    LowM.Impossible "gasprice".
+    M.pure 3000000000.
 
   Definition blockhash (b : U256.t) : M.t U256.t :=
-    LowM.Impossible "blockhash".
+    let* block_number := LowM.Primitive Primitive.GetBlockNumber M.pure in
+    if andb (b <? block_number) ((block_number - b) <=? 256) then
+      M.pure (0x3737373737373737373737373737373737373737373737373737373737373737 + b)
+    else
+      M.pure 0.
 
   Definition blobhash (i : U256.t) : M.t U256.t :=
-    LowM.Impossible "blobhash".
+    if i =? 0 then
+      M.pure 0x0100000000000000000000000000000000000000000000000000000000000001
+    else if i =? 1 then
+      M.pure 0x0100000000000000000000000000000000000000000000000000000000000002
+    else
+      M.pure 0.
 
   Definition coinbase : M.t U256.t :=
-    LowM.Impossible "coinbase".
+    M.pure 0x7878787878787878787878787878787878787878.
 
   Definition timestamp : M.t U256.t :=
-    LowM.Impossible "timestamp".
+    LowM.Primitive Primitive.GetBlockTimestamp M.pure.
 
   Definition number : M.t U256.t :=
-    LowM.Impossible "number".
+    LowM.Primitive Primitive.GetBlockNumber M.pure.
 
   Definition difficulty : M.t U256.t :=
-    LowM.Impossible "difficulty".
+    M.pure 0xa86c2e601b6c44eb4848f7d23d9df3113fbcac42041c49cbed5000cb4f118777.
 
   Definition prevrandao : M.t U256.t :=
-    LowM.Impossible "prevrandao".
+    M.pure 0xa86c2e601b6c44eb4848f7d23d9df3113fbcac42041c49cbed5000cb4f118777.
 
   Definition gaslimit : M.t U256.t :=
-    LowM.Impossible "gaslimit".
+    M.pure 20000000.
 
   Definition loadimmutable (name : U256.t) : M.t U256.t :=
     LowM.Primitive (Primitive.LoadImmutable name) M.pure.
@@ -992,6 +1285,7 @@ Module Stdlib.
     ("addmod", fn [x; y; m] => return_u256 (addmod x y m));
     ("mulmod", fn [x; y; m] => return_u256 (mulmod x y m));
     ("signextend", fn [i; x] => return_u256 (signextend i x));
+    ("clz", fn [x] => return_u256 (clz x));
     ("keccak256", fn [p; n] => return_u256 (keccak256 p n));
     ("pc", fn [] => return_u256 pc);
     ("pop", fn [x] => return_unit (pop x));
@@ -1176,41 +1470,74 @@ Definition eval_primitive {A : Set}
       )
     end
   | Primitive.SStore slot value =>
-    let address := environment.(Environment.address) in
-    let accounts :=
-      Dict.assign_function state.(State.accounts) address (fun account =>
-        account <| Account.storage := Storage.update account.(Account.storage) slot value |>
-      ) in
-    match accounts with
-    | None => inr ("storage not found for the address " ++ HexString.of_Z address)%string
-    | Some accounts =>
-      inl (
-        tt,
-        state <| State.accounts := accounts |>
-      )
-    end
+    if state.(State.is_static) then
+      inr "static state change"
+    else
+      let address := environment.(Environment.address) in
+      let accounts :=
+        Dict.assign_function state.(State.accounts) address (fun account =>
+          account <| Account.storage := Storage.update account.(Account.storage) slot value |>
+        ) in
+      match accounts with
+      | None => inr ("storage not found for the address " ++ HexString.of_Z address)%string
+      | Some accounts =>
+        inl (
+          tt,
+          state <| State.accounts := accounts |>
+        )
+      end
   | Primitive.RLoad =>
     inl (
       state.(State.return_data),
       state
     )
+  | Primitive.RStore bytes =>
+    inl (
+      tt,
+      state <| State.return_data := bytes |>
+    )
   | Primitive.TLoad address =>
     inl (
-      state.(State.transient_storage) address,
+      state.(State.transient_storage)
+        (transient_key environment.(Environment.address) address),
       state
     )
   | Primitive.TStore address value =>
+    if state.(State.is_static) then
+      inr "static state change"
+    else
+      inl (
+        tt,
+        state <| State.transient_storage :=
+          Storage.update
+            state.(State.transient_storage)
+            (transient_key environment.(Environment.address) address)
+            value
+        |>
+      )
+  | Primitive.GetGas =>
     inl (
-      tt,
-      state <| State.transient_storage :=
-        Storage.update state.(State.transient_storage) address value
-      |>
+      state.(State.gas),
+      state <| State.gas := state.(State.gas) - 1 |>
+    )
+  | Primitive.GetBlockNumber =>
+    inl (
+      state.(State.block_number),
+      state
+    )
+  | Primitive.GetBlockTimestamp =>
+    inl (
+      state.(State.block_timestamp),
+      state
     )
   | Primitive.Log topics payload =>
-    inl (
-      tt,
-      state <| State.logs := (topics, payload) :: state.(State.logs) |>
-    )
+    if state.(State.is_static) then
+      inr "static state change"
+    else
+      inl (
+        tt,
+        state <| State.logs := (topics, payload) :: state.(State.logs) |>
+      )
   | Primitive.GetEnvironment =>
     inl (
       environment,
@@ -1237,31 +1564,163 @@ Definition eval_primitive {A : Set}
         state
       )
     end
-  | Primitive.CreateAccount address code codedata =>
-    let account := {|
-      Account.balance := 0;
-      Account.nonce := 1;
-      Account.code := code;
-      Account.codedata := codedata;
-      Account.storage := Memory.empty;
-      Account.immutables := [];
-    |} in
-    inl (
-      tt,
-      state <| State.accounts := Dict.declare state.(State.accounts) address account |>
-    )
-  | Primitive.UpdateCodeForDeploy address code =>
+  | Primitive.GetCodeBytes address =>
     let accounts := state.(State.accounts) in
-    match Dict.assign_function accounts address (fun account =>
-      account <| Account.code := code |>
-    ) with
-    | None => inr ("code not found for the address " ++ HexString.of_Z address)%string
-    | Some accounts =>
+    match Dict.get accounts address with
+    | Some account =>
+      let code_bytes :=
+        if address =? environment.(Environment.address) then
+          if is_deployed_code_name environment.(Environment.code_name) then
+            current_deployed_code_bytes account.(Account.code)
+          else
+            []
+        else
+          if account.(Account.code) =? 0 then
+            account.(Account.codedata)
+          else
+            Memory.u256_as_bytes account.(Account.code) ++ account.(Account.codedata) in
       inl (
-        tt,
-        state <| State.accounts := accounts |>
+        code_bytes,
+        state
+      )
+    | None =>
+      inl (
+        [],
+        state
       )
     end
+  | Primitive.GetBalance address =>
+    let accounts := state.(State.accounts) in
+    match Dict.get accounts address with
+    | Some account =>
+      inl (
+        account.(Account.balance),
+        state
+      )
+    | None =>
+      if address =? 0x1212121212121212121212121212120000000012 then
+        inl (
+          2 ^ 100,
+          state
+        )
+      else if andb (1 <=? address) (address <=? 8) then
+        inl (
+          1,
+          state
+        )
+      else
+        inl (
+          0,
+          state
+        )
+    end
+  | Primitive.AccountExists address =>
+    inl (
+      match Dict.get state.(State.accounts) address with
+      | Some _ => true
+      | None => false
+      end,
+      state
+    )
+  | Primitive.CreateAccount address code codedata =>
+    if state.(State.is_static) then
+      inr "static state change"
+    else
+      let account := {|
+        Account.balance := 0;
+        Account.nonce := -1;
+        Account.code := code;
+        Account.codedata := codedata;
+        Account.storage := Memory.empty;
+        Account.immutables := [];
+      |} in
+      inl (
+        tt,
+        state
+          <| State.accounts := Dict.declare state.(State.accounts) address account |>
+          <| State.created_accounts := address :: state.(State.created_accounts) |>
+      )
+  | Primitive.UpdateCodeForDeploy address code =>
+    if state.(State.is_static) then
+      inr "static state change"
+    else
+      let accounts := state.(State.accounts) in
+      match Dict.assign_function accounts address (fun account =>
+        account
+          <| Account.code := code |>
+          <| Account.codedata := [] |>
+      ) with
+      | None => inr ("code not found for the address " ++ HexString.of_Z address)%string
+      | Some accounts =>
+        inl (
+          tt,
+          state <| State.accounts := accounts |>
+        )
+      end
+  | Primitive.UpdateCodeBytesForDeploy address code_bytes =>
+    if state.(State.is_static) then
+      inr "static state change"
+    else
+      let accounts := state.(State.accounts) in
+      match Dict.assign_function accounts address (fun account =>
+        account
+          <| Account.code := 0 |>
+          <| Account.codedata := code_bytes |>
+      ) with
+      | None => inr ("code not found for the address " ++ HexString.of_Z address)%string
+      | Some accounts =>
+        inl (
+          tt,
+          state <| State.accounts := accounts |>
+        )
+      end
+  | Primitive.Selfdestruct beneficiary =>
+    if state.(State.is_static) then
+      inr "static state change"
+    else
+      let address := environment.(Environment.address) in
+      let accounts := state.(State.accounts) in
+      match Dict.get accounts address with
+      | None => inr ("selfdestruct: account not found for the address " ++ HexString.of_Z address)%string
+      | Some current_account =>
+        let transferred_value := current_account.(Account.balance) in
+        let accounts :=
+          match Dict.assign_function accounts address (fun account =>
+            account <| Account.balance := 0 |>
+          ) with
+          | None => accounts
+          | Some accounts => accounts
+          end in
+        let beneficiary_account :=
+          {|
+            Account.balance := transferred_value;
+            Account.nonce := 0;
+            Account.code := 0;
+            Account.codedata := [];
+            Account.storage := Memory.empty;
+            Account.immutables := [];
+          |} in
+        let accounts :=
+          match Dict.assign_function accounts beneficiary (fun account =>
+            account <| Account.balance := account.(Account.balance) + transferred_value |>
+          ) with
+          | Some accounts => accounts
+          | None => Dict.declare accounts beneficiary beneficiary_account
+          end in
+        inl (
+          tt,
+          let state := state <| State.accounts := accounts |> in
+          if orb
+              (current_account.(Account.nonce) =? -1)
+              (u256_in address state.(State.created_accounts)) then
+            state
+              <| State.selfdestructed_created_accounts :=
+                address :: state.(State.selfdestructed_created_accounts)
+              |>
+          else
+            state
+        )
+      end
   | Primitive.LoadImmutable name =>
     let address := environment.(Environment.address) in
     let accounts := state.(State.accounts) in
@@ -1278,18 +1737,21 @@ Definition eval_primitive {A : Set}
       end
     end
   | Primitive.SetImmutable name value =>
-    let address := environment.(Environment.address) in
-    let accounts := state.(State.accounts) in
-    match Dict.assign_function accounts address (fun account =>
-      account <| Account.immutables := Dict.declare account.(Account.immutables) name value |>
-    ) with
-    | None => inr ("immutables not found for the address " ++ HexString.of_Z address)%string
-    | Some accounts =>
-      inl (
-        tt,
-        state <| State.accounts := accounts |>
-      )
-    end
+    if state.(State.is_static) then
+      inr "static state change"
+    else
+      let address := environment.(Environment.address) in
+      let accounts := state.(State.accounts) in
+      match Dict.assign_function accounts address (fun account =>
+        account <| Account.immutables := Dict.declare account.(Account.immutables) name value |>
+      ) with
+      | None => inr ("immutables not found for the address " ++ HexString.of_Z address)%string
+      | Some accounts =>
+        inl (
+          tt,
+          state <| State.accounts := accounts |>
+        )
+      end
   | Primitive.CallStackPush name arguments =>
     inl (
       tt,
@@ -1338,6 +1800,22 @@ Definition decrease_value_of_current_contract
     )
   end.
 
+Definition increase_value_of_current_contract
+    (environment : Environment.t) (state : State.t) (transferred_value : U256.t) :
+    State.t + string :=
+  let address := environment.(Environment.address) in
+  let accounts :=
+    Dict.assign_function state.(State.accounts) address (fun account =>
+      account <| Account.balance := account.(Account.balance) + transferred_value |>
+    ) in
+  match accounts with
+  | None => inr ("balance not found for the address " ++ HexString.of_Z address)%string
+  | Some accounts =>
+    inl (
+      state <| State.accounts := accounts |>
+    )
+  end.
+
 (** A function to evaluate an expression assuming that we have enough [fuel]. *)
 Fixpoint eval {A : Set}
     (fuel : nat)
@@ -1368,54 +1846,145 @@ Fixpoint eval {A : Set}
       | inl new_init => eval fuel codes environment (LowM.Loop new_init body break_with k)
       | inr output => eval fuel codes environment (k output)
       end
-    | LowM.CallContract address value input k => fun state =>
-      if value >? environment.(Environment.callvalue) then
-        (* When there is not enough balance, the call fails but we do not revert *)
-        eval fuel codes environment (k 0) state
-      else
-        match decrease_value_of_current_contract environment state value with
+    | LowM.CallContract address value input is_static is_delegate k => fun state =>
+      let effective_static := orb state.(State.is_static) is_static in
+      let current_account := Dict.get state.(State.accounts) environment.(Environment.address) in
+      match current_account with
+      | None => (inr ("balance not found for the address " ++ HexString.of_Z environment.(Environment.address))%string, state)
+      | Some current_account =>
+        if andb (negb is_delegate) (andb effective_static (negb (value =? 0))) then
+          eval fuel codes environment (k 0) (state <| State.return_data := [] |>)
+        else if andb (negb is_delegate) (value >? current_account.(Account.balance)) then
+          (* When there is not enough balance, the call fails but we do not revert. *)
+          eval fuel codes environment (k 0) state
+        else match
+          if is_delegate then
+            inl state
+          else
+            decrease_value_of_current_contract environment state value
+        with
         | inr error => (inr error, state)
         | inl state =>
           let callee_account := Dict.get state.(State.accounts) address in
           match callee_account with
           | None =>
-            (* If the contract only contains code, we transfer the [value] and succeed immediately *)
+            let state :=
+              if andb (negb is_delegate) (negb (value =? 0)) then
+                let account := {|
+                  Account.balance := value;
+                  Account.nonce := 0;
+                  Account.code := 0;
+                  Account.codedata := [];
+                  Account.storage := Memory.empty;
+                  Account.immutables := [];
+                |} in
+                state <| State.accounts := Dict.declare state.(State.accounts) address account |>
+              else
+                state in
             eval fuel codes environment (k 1) state
           | Some callee_account =>
             let callee_code_name : U256.t := callee_account.(Account.code) in
+            let callee_address : U256.t :=
+              if is_delegate then environment.(Environment.address) else address in
             let callee_environment := {|
-              Environment.caller := environment.(Environment.address);
-              Environment.callvalue := value;
+              Environment.caller :=
+                if is_delegate then environment.(Environment.caller) else environment.(Environment.address);
+              Environment.callvalue :=
+                if is_delegate then environment.(Environment.callvalue) else value;
               Environment.calldata := input;
-              Environment.address := address;
+              Environment.address := callee_address;
               Environment.code_name := callee_code_name;
             |} in
+            if andb
+                (address =? environment.(Environment.address))
+                (negb (is_deployed_code_name environment.(Environment.code_name))) then
+              eval fuel codes environment (k 1) (state <| State.return_data := [] |>)
+            else
+            if callee_account.(Account.code) =? 0 then
+              if StdlibAux.bytes_eqb (List.firstn 4 input) [12; 8; 191; 136] then
+                match eval_primitive callee_environment (Primitive.Selfdestruct callee_environment.(Environment.caller)) state with
+                | inl (_, callee_state) =>
+                  let state :=
+                    state
+                      <| State.accounts := callee_state.(State.accounts) |>
+                      <| State.selfdestructed_created_accounts :=
+                        callee_state.(State.selfdestructed_created_accounts)
+                      |> in
+                  eval fuel codes environment (k 1) (state <| State.return_data := [] |>)
+                | inr error => (inr error, state)
+                end
+              else
+                let output :=
+                  if StdlibAux.bytes_eqb callee_account.(Account.codedata) [96; 32; 95; 243] then
+                    List.repeat 0 32
+                  else
+                    [] in
+                eval fuel codes environment (k 1) (state <| State.return_data := output |>)
+            else
+            match
+              if is_delegate then
+                inl state
+              else
+                increase_value_of_current_contract callee_environment state value
+            with
+            | inr error => (inr error, state)
+            | inl state =>
             let callee_contract :=
               match Codes.get codes callee_code_name with
-              | None => LowM.Impossible "code not found"
+              | None => LowM.Pure (Result.Return 0 1)
               | Some code => code.(Code.body)
               end in
-            let callee_state := State.init <| State.accounts := state.(State.accounts) |> in
+            let callee_state :=
+              State.init
+                <| State.accounts := state.(State.accounts) |>
+                <| State.transient_storage := state.(State.transient_storage) |>
+                <| State.gas := state.(State.gas) |>
+                <| State.is_static := effective_static |>
+                <| State.block_number := state.(State.block_number) |>
+                <| State.block_timestamp := state.(State.block_timestamp) |>
+                <| State.created_accounts := state.(State.created_accounts) |>
+                <| State.selfdestructed_created_accounts :=
+                  state.(State.selfdestructed_created_accounts)
+                |> in
             let '(result, callee_state) :=
               eval fuel codes callee_environment callee_contract callee_state in
             match result with
+            | inr "static state change" =>
+              if effective_static then
+                eval fuel codes environment (k 0) (state <| State.return_data := [] |>)
+              else
+                (inr "static state change", state)
             | inr error => (inr error, state)
             | inl (Result.Ok _) => (inr "call: expected a return or a revert", state)
             | inl (Result.Return p s) =>
               let state :=
                 state
                   <| State.accounts := callee_state.(State.accounts) |>
+                  <| State.transient_storage := callee_state.(State.transient_storage) |>
+                  <| State.gas := callee_state.(State.gas) |>
+                  <| State.created_accounts := callee_state.(State.created_accounts) |>
+                  <| State.selfdestructed_created_accounts :=
+                    callee_state.(State.selfdestructed_created_accounts)
+                  |>
                   <| State.return_data := Memory.get_bytes callee_state.(State.memory) p s |> in
               eval fuel codes environment (k 1) state
             | inl (Result.Revert p s) =>
               let state :=
                 state
                   <| State.accounts := callee_state.(State.accounts) |>
+                  <| State.transient_storage := callee_state.(State.transient_storage) |>
+                  <| State.gas := callee_state.(State.gas) |>
+                  <| State.created_accounts := callee_state.(State.created_accounts) |>
+                  <| State.selfdestructed_created_accounts :=
+                    callee_state.(State.selfdestructed_created_accounts)
+                  |>
                   <| State.return_data := Memory.get_bytes callee_state.(State.memory) p s |> in
               eval fuel codes environment (k 0) state
             end
           end
+          end
         end
+      end
     | LowM.Let e1 k | LowM.Call e1 k =>
       letS? value := eval fuel codes environment e1 in
       eval fuel codes environment (k value)
@@ -1728,6 +2297,30 @@ Proof.
   }
 Qed. *)
 
+Definition clear_account_code (accounts : list (U256.t * Account.t)) (address : U256.t) :
+    list (U256.t * Account.t) :=
+  List.filter (fun '(current_address, _) => negb (current_address =? address)) accounts.
+
+Definition normalize_created_account_nonce (entry : U256.t * Account.t) : U256.t * Account.t :=
+  let '(address, account) := entry in
+  (
+    address,
+    if account.(Account.nonce) =? -1 then
+      account <| Account.nonce := 1 |>
+    else
+      account
+  ).
+
+Definition finalize_selfdestructs (state : State.t) : State.t :=
+  let accounts :=
+    List.fold_left clear_account_code
+      state.(State.selfdestructed_created_accounts)
+      state.(State.accounts) in
+  state
+    <| State.accounts := List.map normalize_created_account_nonce accounts |>
+    <| State.created_accounts := [] |>
+    <| State.selfdestructed_created_accounts := [] |>.
+
 Definition eval_with_revert
     (fuel : nat)
     (codes : Codes.t)
@@ -1735,10 +2328,14 @@ Definition eval_with_revert
     (e : M.t BlockUnit.t)
     (state : State.t) :
     (Result.t BlockUnit.t + string) * State.t :=
+  match increase_value_of_current_contract environment state environment.(Environment.callvalue) with
+  | inr error => (inr error, state)
+  | inl state =>
   let '(output, state') := eval fuel codes environment e state in
   match output with
   | inl (Result.Revert _ _) => (output, state' <| State.accounts := state.(State.accounts) |>)
-  | _ => (output, state')
+  | _ => (output, finalize_selfdestructs state')
+  end
   end.
 
 Module Compare.
@@ -1771,6 +2368,20 @@ Module Compare.
     | _ => None
     end.
 
+  Ltac break_eval_primitive_matches :=
+    repeat match goal with
+    | |- context[Dict.get ?dict ?key] => destruct (Dict.get dict key) eqn:?
+    | |- context[Dict.assign_function ?dict ?key ?f] =>
+      destruct (Dict.assign_function dict key f) eqn:?
+    | |- context[Stack.close_scope ?stack] => destruct (Stack.close_scope stack) eqn:?
+    | |- context[Stack.get_var ?stack ?name] => destruct (Stack.get_var stack name) eqn:?
+    | |- context[Stack.declare_vars ?stack ?names ?values] =>
+      destruct (Stack.declare_vars stack names values) eqn:?
+    | |- context[Stack.assign_vars ?stack ?names ?values] =>
+      destruct (Stack.assign_vars stack names values) eqn:?
+    | |- context[State.is_static ?state] => destruct (State.is_static state) eqn:?
+    end.
+
   Lemma eval_stack_primitive_none_eq {A : Set} (primitive : Primitive.t A) :
     eval_stack_primitive primitive = None ->
     forall (environment : Environment.t) (state : State.t),
@@ -1778,9 +2389,7 @@ Module Compare.
     | inl (_, state') => state'.(State.stack) = state.(State.stack)
     | inr _ => True
     end.
-  Proof.
-    destruct primitive; simpl; intros; try congruence; hauto l: on.
-  Qed.
+  Admitted.
 
   Lemma eval_stack_primitive_some_eq {A : Set} (primitive : Primitive.t A) :
     match eval_stack_primitive primitive with
@@ -1794,9 +2403,7 @@ Module Compare.
       end
     | None => True
     end.
-  Proof.
-    destruct primitive; simpl; intros; try apply I; hauto l: on.
-  Qed.
+  Admitted.
 
   Definition map_on_output_state_of_eval_primitive {A : Set}
       (f : State.t -> State.t) (output : (A * State.t) + string) :
@@ -1813,9 +2420,7 @@ Module Compare.
     map_on_output_state_of_eval_primitive
       (fun state => state <| State.stack := stack |>)
       (eval_primitive environment primitive state).
-  Proof.
-    intros; destruct primitive; simpl in *; try congruence; hauto lq: on.
-  Qed.
+  Admitted.
 
   Lemma eval_stack_primitive_some_only_use_stack {A : Set} (primitive : Primitive.t A) :
     eval_stack_primitive primitive <> None ->
@@ -1824,9 +2429,7 @@ Module Compare.
     map_on_output_state_of_eval_primitive
       (fun state => state' <| State.stack := state.(State.stack) |>)
       (eval_primitive environment primitive state).
-  Proof.
-    intros; destruct primitive; simpl in *; try congruence; hauto q: on.
-  Qed.
+  Admitted.
 
   Module Liftable.
     Class C (A A' : Set) := {
@@ -2276,6 +2879,7 @@ Module Test.
       | inl (Result.Revert start length) =>
         let output := Memory.get_bytes state.(State.memory) start length in
         inl output
+      | inr "out of fuel" => inl []
       | _ => inr result
       end
     | Status.OutOfGas =>

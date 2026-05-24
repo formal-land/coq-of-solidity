@@ -104,6 +104,13 @@ public:
 		bytes const& _output,
 		FunctionCallExpectations const& expectations,
 		size_t testIndex) const;
+	void writeRocqRawCallTest(
+		std::string const& asComment,
+		u256 const& _value,
+		bytes const& _calldata,
+		bytes const& _output,
+		FunctionCallExpectations const& expectations,
+		size_t testIndex) const;
 
 	void outputRocqTestFile(std::string const& _filename);
 

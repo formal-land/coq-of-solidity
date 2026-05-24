@@ -279,8 +279,8 @@ protected:
 
 	void sendMessage(bytes const& _bytecode, bytes const& _argument, bool _isCreation, u256 const& _value = 0);
 	void sendEther(util::h160 const& _to, u256 const& _value);
-	size_t currentTimestamp();
-	size_t blockTimestamp(u256 _number);
+	size_t currentTimestamp() const;
+	size_t blockTimestamp(u256 _number) const;
 
 	/// @returns the (potentially newly created) _ith address.
 	util::h160 account(size_t _i);

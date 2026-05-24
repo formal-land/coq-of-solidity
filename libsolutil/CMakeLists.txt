@@ -29,6 +29,8 @@ set(sources
 	Profiler.cpp
 	Profiler.h
 	Result.h
+	RocqName.cpp
+	RocqName.h
 	SetOnce.h
 	StackTooDeepString.h
 	StringUtils.cpp

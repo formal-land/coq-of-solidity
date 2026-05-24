@@ -25,14 +25,17 @@ Module Constructor.
   Definition initial_state : State.t :=
     let address := environment.(Environment.address) in
     let account := {|
-      Account.balance := environment.(Environment.callvalue);
+      Account.balance := 0;
       Account.nonce := 1;
       Account.code := constructor_code.(Code.hex_name);
       Account.codedata := Memory.hex_string_as_bytes "";
       Account.storage := Memory.empty;
       Account.immutables := [];
     |} in
-    State.init <| State.accounts := [(address, account)] |>.
+    State.init
+      <| State.accounts := [(address, account)] |>
+      <| State.block_number := 1 |>
+      <| State.block_timestamp := 15 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment constructor_code.(Code.body) initial_state.
@@ -63,7 +66,10 @@ Module Step1.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Constructor.final_state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Constructor.final_state.(State.accounts) |>
+      <| State.block_number := 2 |>
+      <| State.block_timestamp := 30 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
@@ -93,7 +99,10 @@ Module Step2.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Step1.state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Step1.state.(State.accounts) |>
+      <| State.block_number := 3 |>
+      <| State.block_timestamp := 45 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
@@ -122,7 +131,10 @@ Module Step3.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Step2.state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Step2.state.(State.accounts) |>
+      <| State.block_number := 4 |>
+      <| State.block_timestamp := 60 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
@@ -151,7 +163,10 @@ Module Step4.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Step3.state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Step3.state.(State.accounts) |>
+      <| State.block_number := 5 |>
+      <| State.block_timestamp := 75 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
@@ -180,7 +195,10 @@ Module Step5.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Step4.state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Step4.state.(State.accounts) |>
+      <| State.block_number := 6 |>
+      <| State.block_timestamp := 90 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.

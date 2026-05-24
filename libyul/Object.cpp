@@ -28,6 +28,7 @@
 #include <libyul/Exceptions.h>
 
 #include <libsolutil/CommonData.h>
+#include <libsolutil/RocqName.h>
 #include <libsolutil/StringUtils.h>
 
 #include <boost/algorithm/string.hpp>
@@ -141,7 +142,8 @@ std::string Object::toRocq() const
 			nameWithoutId = nameWithoutId.substr(0, idPosition);
 	}
 
-	return "Module " + nameWithoutId + ".\n" + prefixLines(inner, "  ") + "\nEnd " + nameWithoutId + ".";
+	std::string moduleName = util::rocqModuleName(nameWithoutId);
+	return "Module " + moduleName + ".\n" + prefixLines(inner, "  ") + "\nEnd " + moduleName + ".";
 }
 
 std::set<std::string> Object::Structure::topLevelSubObjectNames() const
