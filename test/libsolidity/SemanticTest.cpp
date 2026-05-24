@@ -14,6 +14,7 @@
 
 #include <test/libsolidity/SemanticTest.h>
 
+#include <libsolutil/RocqName.h>
 #include <libsolutil/Whiskers.h>
 #include <libyul/Exceptions.h>
 #include <test/Common.h>
@@ -25,12 +26,10 @@
 #include <boost/throw_exception.hpp>
 
 #include <algorithm>
-#include <cctype>
 #include <fstream>
 #include <functional>
 #include <memory>
 #include <optional>
-#include <set>
 #include <stdexcept>
 #include <string>
 #include <utility>
@@ -45,32 +44,6 @@ using namespace boost::algorithm;
 using namespace boost::unit_test;
 using namespace std::string_literals;
 namespace fs = boost::filesystem;
-
-namespace
-{
-
-std::string rocqModuleName(std::string _name)
-{
-	for (char& character: _name)
-	{
-		unsigned char const byte = static_cast<unsigned char>(character);
-		if (!std::isalnum(byte) && character != '_')
-			character = '_';
-	}
-
-	static std::set<std::string> const reservedNames{
-		"as", "at", "cofix", "else", "end", "exists", "exists2", "fix", "for",
-		"forall", "fun", "if", "in", "let", "match", "mod", "Prop", "return",
-		"Set", "then", "Type", "using", "where", "with"
-	};
-
-	if (_name.empty() || std::isdigit(static_cast<unsigned char>(_name.front())) || reservedNames.count(_name))
-		_name = "Coq_" + _name;
-
-	return _name;
-}
-
-}
 
 std::ostream& solidity::frontend::test::operator<<(std::ostream& _output, RequiresYulOptimizer _requiresYulOptimizer)
 {
@@ -788,7 +761,7 @@ bool SemanticTest::deploy(
 		outputFile << "Require " << requirePath << "." << std::endl;
 	}
 	outputFile << std::endl;
-	std::string lastContractName = rocqModuleName(m_compiler.lastContractName(m_sources.mainSourceFile).substr(1));
+	std::string lastContractName = util::rocqModuleName(m_compiler.lastContractName(m_sources.mainSourceFile).substr(1));
 	outputFile << "Definition constructor_code : Code.t :=" << std::endl;
 	outputFile << "  " << requirePathPrefix() << "." << lastContractName << "." << lastContractName << ".code."
 			   << std::endl;

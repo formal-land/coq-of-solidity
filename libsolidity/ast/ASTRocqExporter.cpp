@@ -32,6 +32,7 @@
 #include <libsolutil/CommonData.h>
 #include <libsolutil/JSON.h>
 #include <libsolutil/Keccak256.h>
+#include <libsolutil/RocqName.h>
 #include <libsolutil/UTF8.h>
 #include <libsolutil/Visitor.h>
 
@@ -330,11 +331,12 @@ bool ASTRocqExporter::visit(ContractDefinition const& _node)
 	m_indent--;
 
 	m_currentValue = "(* "s + contractKind(_node.contractKind()) + " *)\n"s;
-	m_currentValue += "Module "s + _node.name() + ".\n"s;
+	std::string const moduleName = util::rocqModuleName(_node.name());
+	m_currentValue += "Module "s + moduleName + ".\n"s;
 	m_indent++;
 	m_currentValue += indent() + body + "\n"s;
 	m_indent--;
-	m_currentValue += "End "s + _node.name() + ".\n"s;
+	m_currentValue += "End "s + moduleName + ".\n"s;
 
 	return false;
 }
