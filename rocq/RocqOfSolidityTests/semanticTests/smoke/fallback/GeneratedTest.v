@@ -25,14 +25,17 @@ Module Constructor.
   Definition initial_state : State.t :=
     let address := environment.(Environment.address) in
     let account := {|
-      Account.balance := environment.(Environment.callvalue);
+      Account.balance := 0;
       Account.nonce := 1;
       Account.code := constructor_code.(Code.hex_name);
       Account.codedata := Memory.hex_string_as_bytes "";
       Account.storage := Memory.empty;
       Account.immutables := [];
     |} in
-    State.init <| State.accounts := [(address, account)] |>.
+    State.init
+      <| State.accounts := [(address, account)] |>
+      <| State.block_number := 1 |>
+      <| State.block_timestamp := 15 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment constructor_code.(Code.body) initial_state.
@@ -63,7 +66,10 @@ Module Step1.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Constructor.final_state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Constructor.final_state.(State.accounts) |>
+      <| State.block_number := 2 |>
+      <| State.block_timestamp := 30 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
@@ -81,8 +87,40 @@ Module Step1.
   Qed.
 End Step1.
 
-(* // data() -> 1 *)
+(* // () *)
 Module Step2.
+  Definition environment : Environment.t :={|
+    Environment.caller := 0x1212121212121212121212121212120000000012;
+    Environment.callvalue := 0;
+    Environment.calldata := Memory.hex_string_as_bytes "";
+    Environment.address := 0xc06afe3a8444fc0004668591e8306bfb9968e79e;
+    Environment.code_name := deployed_code.(Code.hex_name);
+  |}.
+
+  Definition initial_state : State.t :=
+    State.init
+      <| State.accounts := Step1.state.(State.accounts) |>
+      <| State.block_number := 3 |>
+      <| State.block_timestamp := 45 |>.
+
+  Definition result_state :=
+    eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
+
+  Definition result := fst result_state.
+  Definition state := snd result_state.
+
+  Definition expected_output : list Z :=
+    Memory.hex_string_as_bytes "".
+
+  Goal Test.extract_output result state Test.Status.Success = inl expected_output.
+  Proof.
+    vm_compute.
+    reflexivity.
+  Qed.
+End Step2.
+
+(* // data() -> 1 *)
+Module Step3.
   Definition environment : Environment.t :={|
     Environment.caller := 0x1212121212121212121212121212120000000012;
     Environment.callvalue := 0;
@@ -92,7 +130,10 @@ Module Step2.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Step1.state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Step2.state.(State.accounts) |>
+      <| State.block_number := 4 |>
+      <| State.block_timestamp := 60 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
@@ -108,10 +149,42 @@ Module Step2.
     vm_compute.
     reflexivity.
   Qed.
-End Step2.
+End Step3.
+
+(* // (): hex"42ef" *)
+Module Step4.
+  Definition environment : Environment.t :={|
+    Environment.caller := 0x1212121212121212121212121212120000000012;
+    Environment.callvalue := 0;
+    Environment.calldata := Memory.hex_string_as_bytes "42ef";
+    Environment.address := 0xc06afe3a8444fc0004668591e8306bfb9968e79e;
+    Environment.code_name := deployed_code.(Code.hex_name);
+  |}.
+
+  Definition initial_state : State.t :=
+    State.init
+      <| State.accounts := Step3.state.(State.accounts) |>
+      <| State.block_number := 5 |>
+      <| State.block_timestamp := 75 |>.
+
+  Definition result_state :=
+    eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
+
+  Definition result := fst result_state.
+  Definition state := snd result_state.
+
+  Definition expected_output : list Z :=
+    Memory.hex_string_as_bytes "".
+
+  Goal Test.extract_output result state Test.Status.Success = inl expected_output.
+  Proof.
+    vm_compute.
+    reflexivity.
+  Qed.
+End Step4.
 
 (* // data() -> 2 *)
-Module Step3.
+Module Step5.
   Definition environment : Environment.t :={|
     Environment.caller := 0x1212121212121212121212121212120000000012;
     Environment.callvalue := 0;
@@ -121,7 +194,10 @@ Module Step3.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Step2.state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Step4.state.(State.accounts) |>
+      <| State.block_number := 6 |>
+      <| State.block_timestamp := 90 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
@@ -137,10 +213,10 @@ Module Step3.
     vm_compute.
     reflexivity.
   Qed.
-End Step3.
+End Step5.
 
 (* // externalData() -> 0x20, 2, left(0x42ef) *)
-Module Step4.
+Module Step6.
   Definition environment : Environment.t :={|
     Environment.caller := 0x1212121212121212121212121212120000000012;
     Environment.callvalue := 0;
@@ -150,7 +226,10 @@ Module Step4.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Step3.state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Step5.state.(State.accounts) |>
+      <| State.block_number := 7 |>
+      <| State.block_timestamp := 105 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
@@ -166,10 +245,10 @@ Module Step4.
     vm_compute.
     reflexivity.
   Qed.
-End Step4.
+End Step6.
 
 (* // balance() -> 0 *)
-Module Step5.
+Module Step7.
   Definition environment : Environment.t :={|
     Environment.caller := 0x1212121212121212121212121212120000000012;
     Environment.callvalue := 0;
@@ -179,7 +258,10 @@ Module Step5.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Step4.state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Step6.state.(State.accounts) |>
+      <| State.block_number := 8 |>
+      <| State.block_timestamp := 120 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
@@ -195,10 +277,42 @@ Module Step5.
     vm_compute.
     reflexivity.
   Qed.
-End Step5.
+End Step7.
+
+(* // (), 1 wei *)
+Module Step8.
+  Definition environment : Environment.t :={|
+    Environment.caller := 0x1212121212121212121212121212120000000012;
+    Environment.callvalue := 1;
+    Environment.calldata := Memory.hex_string_as_bytes "";
+    Environment.address := 0xc06afe3a8444fc0004668591e8306bfb9968e79e;
+    Environment.code_name := deployed_code.(Code.hex_name);
+  |}.
+
+  Definition initial_state : State.t :=
+    State.init
+      <| State.accounts := Step7.state.(State.accounts) |>
+      <| State.block_number := 9 |>
+      <| State.block_timestamp := 135 |>.
+
+  Definition result_state :=
+    eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
+
+  Definition result := fst result_state.
+  Definition state := snd result_state.
+
+  Definition expected_output : list Z :=
+    Memory.hex_string_as_bytes "".
+
+  Goal Test.extract_output result state Test.Status.Success = inl expected_output.
+  Proof.
+    vm_compute.
+    reflexivity.
+  Qed.
+End Step8.
 
 (* // balance() -> 1 *)
-Module Step6.
+Module Step9.
   Definition environment : Environment.t :={|
     Environment.caller := 0x1212121212121212121212121212120000000012;
     Environment.callvalue := 0;
@@ -208,7 +322,10 @@ Module Step6.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Step5.state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Step8.state.(State.accounts) |>
+      <| State.block_number := 10 |>
+      <| State.block_timestamp := 150 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
@@ -224,10 +341,42 @@ Module Step6.
     vm_compute.
     reflexivity.
   Qed.
-End Step6.
+End Step9.
+
+(* // (), 2 wei: hex"fefe" *)
+Module Step10.
+  Definition environment : Environment.t :={|
+    Environment.caller := 0x1212121212121212121212121212120000000012;
+    Environment.callvalue := 2;
+    Environment.calldata := Memory.hex_string_as_bytes "fefe";
+    Environment.address := 0xc06afe3a8444fc0004668591e8306bfb9968e79e;
+    Environment.code_name := deployed_code.(Code.hex_name);
+  |}.
+
+  Definition initial_state : State.t :=
+    State.init
+      <| State.accounts := Step9.state.(State.accounts) |>
+      <| State.block_number := 11 |>
+      <| State.block_timestamp := 165 |>.
+
+  Definition result_state :=
+    eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
+
+  Definition result := fst result_state.
+  Definition state := snd result_state.
+
+  Definition expected_output : list Z :=
+    Memory.hex_string_as_bytes "".
+
+  Goal Test.extract_output result state Test.Status.Success = inl expected_output.
+  Proof.
+    vm_compute.
+    reflexivity.
+  Qed.
+End Step10.
 
 (* // balance() -> 2 *)
-Module Step7.
+Module Step11.
   Definition environment : Environment.t :={|
     Environment.caller := 0x1212121212121212121212121212120000000012;
     Environment.callvalue := 0;
@@ -237,7 +386,10 @@ Module Step7.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Step6.state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Step10.state.(State.accounts) |>
+      <| State.block_number := 12 |>
+      <| State.block_timestamp := 180 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
@@ -253,10 +405,10 @@ Module Step7.
     vm_compute.
     reflexivity.
   Qed.
-End Step7.
+End Step11.
 
 (* // externalData() -> 0x20, 2, left(0xfefe) *)
-Module Step8.
+Module Step12.
   Definition environment : Environment.t :={|
     Environment.caller := 0x1212121212121212121212121212120000000012;
     Environment.callvalue := 0;
@@ -266,7 +418,10 @@ Module Step8.
   |}.
 
   Definition initial_state : State.t :=
-    State.init <| State.accounts := Step7.state.(State.accounts) |>.
+    State.init
+      <| State.accounts := Step11.state.(State.accounts) |>
+      <| State.block_number := 13 |>
+      <| State.block_timestamp := 195 |>.
 
   Definition result_state :=
     eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state.
@@ -282,4 +437,4 @@ Module Step8.
     vm_compute.
     reflexivity.
   Qed.
-End Step8.
+End Step12.

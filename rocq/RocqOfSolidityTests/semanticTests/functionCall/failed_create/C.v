@@ -7,7 +7,7 @@ Module C.
     Code.hex_name := 0x435f353500000000000000000000000000000000000000000000000000000000;
     Code.functions :=
       [
-
+        
       ];
     Code.body :=
       M.scope (
@@ -87,7 +87,7 @@ Module C.
       Code.hex_name := 0x435f35355f6465706c6f79656400000000000000000000000000000000000000;
       Code.functions :=
         [
-
+          
         ];
       Code.body :=
         M.scope (
@@ -1309,7 +1309,7 @@ Module C.
         Code.hex_name := 0x445f350000000000000000000000000000000000000000000000000000000000;
         Code.functions :=
           [
-
+            
           ];
         Code.body :=
           M.scope (
@@ -1389,7 +1389,7 @@ Module C.
           Code.hex_name := 0x445f355f6465706c6f7965640000000000000000000000000000000000000000;
           Code.functions :=
             [
-
+              
             ];
           Code.body :=
             M.scope (

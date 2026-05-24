@@ -236,12 +236,12 @@ void ExecutionFramework::sendEther(h160 const& _addr, u256 const& _amount)
 	m_evmcHost->call(message);
 }
 
-size_t ExecutionFramework::currentTimestamp()
+size_t ExecutionFramework::currentTimestamp() const
 {
 	return static_cast<size_t>(m_evmcHost->tx_context.block_timestamp);
 }
 
-size_t ExecutionFramework::blockTimestamp(u256 _block)
+size_t ExecutionFramework::blockTimestamp(u256 _block) const
 {
 	if (_block > blockNumber())
 		return 0;

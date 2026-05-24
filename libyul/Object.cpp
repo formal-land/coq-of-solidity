@@ -34,10 +34,39 @@
 
 #include <range/v3/view/transform.hpp>
 
+#include <cctype>
+#include <set>
+
 using namespace solidity;
 using namespace solidity::langutil;
 using namespace solidity::util;
 using namespace solidity::yul;
+
+namespace
+{
+
+std::string rocqModuleName(std::string _name)
+{
+	for (char& character: _name)
+	{
+		unsigned char const byte = static_cast<unsigned char>(character);
+		if (!std::isalnum(byte) && character != '_')
+			character = '_';
+	}
+
+	static std::set<std::string> const reservedNames{
+		"as", "at", "cofix", "else", "end", "exists", "exists2", "fix", "for",
+		"forall", "fun", "if", "in", "let", "match", "mod", "Prop", "return",
+		"Set", "then", "Type", "using", "where", "with"
+	};
+
+	if (_name.empty() || std::isdigit(static_cast<unsigned char>(_name.front())) || reservedNames.count(_name))
+		_name = "Coq_" + _name;
+
+	return _name;
+}
+
+}
 
 std::string Data::toString(DebugInfoSelection const&, CharStreamProvider const*) const
 {
@@ -141,7 +170,8 @@ std::string Object::toRocq() const
 			nameWithoutId = nameWithoutId.substr(0, idPosition);
 	}
 
-	return "Module " + nameWithoutId + ".\n" + prefixLines(inner, "  ") + "\nEnd " + nameWithoutId + ".";
+	std::string moduleName = rocqModuleName(nameWithoutId);
+	return "Module " + moduleName + ".\n" + prefixLines(inner, "  ") + "\nEnd " + moduleName + ".";
 }
 
 std::set<std::string> Object::Structure::topLevelSubObjectNames() const

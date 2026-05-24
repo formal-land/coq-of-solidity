@@ -30,6 +30,7 @@
 #include <functional>
 #include <memory>
 #include <optional>
+#include <set>
 #include <stdexcept>
 #include <string>
 #include <utility>
@@ -44,6 +45,32 @@ using namespace boost::algorithm;
 using namespace boost::unit_test;
 using namespace std::string_literals;
 namespace fs = boost::filesystem;
+
+namespace
+{
+
+std::string rocqModuleName(std::string _name)
+{
+	for (char& character: _name)
+	{
+		unsigned char const byte = static_cast<unsigned char>(character);
+		if (!std::isalnum(byte) && character != '_')
+			character = '_';
+	}
+
+	static std::set<std::string> const reservedNames{
+		"as", "at", "cofix", "else", "end", "exists", "exists2", "fix", "for",
+		"forall", "fun", "if", "in", "let", "match", "mod", "Prop", "return",
+		"Set", "then", "Type", "using", "where", "with"
+	};
+
+	if (_name.empty() || std::isdigit(static_cast<unsigned char>(_name.front())) || reservedNames.count(_name))
+		_name = "Coq_" + _name;
+
+	return _name;
+}
+
+}
 
 std::ostream& solidity::frontend::test::operator<<(std::ostream& _output, RequiresYulOptimizer _requiresYulOptimizer)
 {
@@ -420,13 +447,23 @@ TestCase::TestResult SemanticTest::runTest(
 			test.setRawBytes(bytes());
 		}
 		else
-		{
-			bytes output;
-			if (test.call().kind == FunctionCall::Kind::LowLevel)
-				output = callLowLevel(test.call().arguments.rawBytes(), test.call().value.value);
-			else if (test.call().kind == FunctionCall::Kind::Builtin)
 			{
-				std::optional<bytes> builtinOutput = m_builtins.at(test.call().signature)(test.call());
+				bytes output;
+				if (test.call().kind == FunctionCall::Kind::LowLevel)
+				{
+					output = callLowLevel(test.call().arguments.rawBytes(), test.call().value.value);
+					writeRocqRawCallTest(
+						test.format(),
+						test.call().value.value,
+						test.call().arguments.rawBytes(),
+						output,
+						test.call().expectations,
+						testIndex);
+					testIndex++;
+				}
+				else if (test.call().kind == FunctionCall::Kind::Builtin)
+				{
+					std::optional<bytes> builtinOutput = m_builtins.at(test.call().signature)(test.call());
 				if (builtinOutput.has_value())
 				{
 					m_transactionSuccessful = true;
@@ -751,7 +788,7 @@ bool SemanticTest::deploy(
 		outputFile << "Require " << requirePath << "." << std::endl;
 	}
 	outputFile << std::endl;
-	std::string lastContractName = m_compiler.lastContractName(m_sources.mainSourceFile).substr(1);
+	std::string lastContractName = rocqModuleName(m_compiler.lastContractName(m_sources.mainSourceFile).substr(1));
 	outputFile << "Definition constructor_code : Code.t :=" << std::endl;
 	outputFile << "  " << requirePathPrefix() << "." << lastContractName << "." << lastContractName << ".code."
 			   << std::endl;
@@ -775,7 +812,7 @@ bool SemanticTest::deploy(
 	outputFile << "  Definition initial_state : State.t :=" << std::endl;
 	outputFile << "    let address := environment.(Environment.address) in" << std::endl;
 	outputFile << "    let account := {|" << std::endl;
-	outputFile << "      Account.balance := environment.(Environment.callvalue);" << std::endl;
+	outputFile << "      Account.balance := 0;" << std::endl;
 	outputFile << "      Account.nonce := 1;" << std::endl;
 	outputFile << "      Account.code := constructor_code.(Code.hex_name);" << std::endl;
 	outputFile << "      Account.codedata := Memory.hex_string_as_bytes \"" << util::toHex(_arguments) << "\";"
@@ -783,7 +820,10 @@ bool SemanticTest::deploy(
 	outputFile << "      Account.storage := Memory.empty;" << std::endl;
 	outputFile << "      Account.immutables := [];" << std::endl;
 	outputFile << "    |} in" << std::endl;
-	outputFile << "    State.init <| State.accounts := [(address, account)] |>." << std::endl;
+	outputFile << "    State.init" << std::endl;
+	outputFile << "      <| State.accounts := [(address, account)] |>" << std::endl;
+	outputFile << "      <| State.block_number := " << blockNumber() << " |>" << std::endl;
+	outputFile << "      <| State.block_timestamp := " << currentTimestamp() << " |>." << std::endl;
 	outputFile << std::endl;
 	outputFile << "  Definition result_state :=" << std::endl;
 	outputFile << "    eval_with_revert 5000 codes environment constructor_code.(Code.body) initial_state."
@@ -849,6 +889,18 @@ void SemanticTest::writeRocqCallTest(
 	FunctionCallExpectations const& expectations,
 	size_t testIndex) const
 {
+	bytes arguments = util::selectorFromSignatureH32(_signature).asBytes() + _arguments;
+	writeRocqRawCallTest(asComment, _value, arguments, _output, expectations, testIndex);
+}
+
+void SemanticTest::writeRocqRawCallTest(
+	std::string const& asComment,
+	u256 const& _value,
+	bytes const& _calldata,
+	bytes const& _output,
+	FunctionCallExpectations const& expectations,
+	size_t testIndex) const
+{
 	// Re-open the output file
 	std::ofstream outputFile(testRocqFilename(), std::ios::app);
 
@@ -858,8 +910,7 @@ void SemanticTest::writeRocqCallTest(
 	outputFile << "  Definition environment : Environment.t :={|" << std::endl;
 	outputFile << "    Environment.caller := 0x" << m_sender << ";" << std::endl;
 	outputFile << "    Environment.callvalue := " << _value << ";" << std::endl;
-	bytes arguments = util::selectorFromSignatureH32(_signature).asBytes() + _arguments;
-	outputFile << "    Environment.calldata := Memory.hex_string_as_bytes \"" << util::toHex(arguments) << "\";"
+	outputFile << "    Environment.calldata := Memory.hex_string_as_bytes \"" << util::toHex(_calldata) << "\";"
 			   << std::endl;
 	outputFile << "    Environment.address := 0x" << m_contractAddress << ";" << std::endl;
 	outputFile << "    Environment.code_name := deployed_code.(Code.hex_name);" << std::endl;
@@ -868,7 +919,10 @@ void SemanticTest::writeRocqCallTest(
 	std::string initialState
 		= testIndex == 0 ? "Constructor.final_state" : "Step" + std::to_string(testIndex) + ".state";
 	outputFile << "  Definition initial_state : State.t :=" << std::endl;
-	outputFile << "    State.init <| State.accounts := " << initialState << ".(State.accounts) |>." << std::endl;
+	outputFile << "    State.init" << std::endl;
+	outputFile << "      <| State.accounts := " << initialState << ".(State.accounts) |>" << std::endl;
+	outputFile << "      <| State.block_number := " << blockNumber() << " |>" << std::endl;
+	outputFile << "      <| State.block_timestamp := " << currentTimestamp() << " |>." << std::endl;
 	outputFile << std::endl;
 	outputFile << "  Definition result_state :=" << std::endl;
 	outputFile << "    eval_with_revert 5000 codes environment deployed_code.(Code.body) initial_state." << std::endl;
