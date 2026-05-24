@@ -101,20 +101,22 @@ void YulStack::optimize()
 		)
 			return;
 
-		auto [optimizeStackAllocation, yulOptimiserSteps, yulOptimiserCleanupSteps] = [&]() -> std::tuple<bool, std::string, std::string>
+		auto [optimizeStackAllocation, yulOptimiserSteps, yulOptimiserCleanupSteps]
+			= [&]() -> std::tuple<bool, std::string, std::string>
 		{
 			if (!m_optimiserSettings.runYulOptimiser)
 			{
 				// Yul optimizer disabled, but empty sequence (:) explicitly provided
-				if (OptimiserSuite::isEmptyOptimizerSequence(m_optimiserSettings.yulOptimiserSteps + ":" + m_optimiserSettings.yulOptimiserCleanupSteps))
+				if (OptimiserSuite::isEmptyOptimizerSequence(
+						m_optimiserSettings.yulOptimiserSteps + ":" + m_optimiserSettings.yulOptimiserCleanupSteps))
 					return std::make_tuple(true, "", "");
 				// Yul optimizer disabled, and no sequence explicitly provided (assumes default sequence)
 				else
 				{
 					yulAssert(
-						m_optimiserSettings.yulOptimiserSteps == OptimiserSettings::DefaultYulOptimiserSteps &&
-						m_optimiserSettings.yulOptimiserCleanupSteps == OptimiserSettings::DefaultYulOptimiserCleanupSteps
-					);
+						m_optimiserSettings.yulOptimiserSteps == OptimiserSettings::DefaultYulOptimiserSteps
+						&& m_optimiserSettings.yulOptimiserCleanupSteps
+							   == OptimiserSettings::DefaultYulOptimiserCleanupSteps);
 					// Defaults are the minimum necessary to avoid running into "Stack too deep" constantly.
 					return std::make_tuple(true, "u", "");
 				}
@@ -122,8 +124,7 @@ void YulStack::optimize()
 			return std::make_tuple(
 				m_optimiserSettings.optimizeStackAllocation,
 				m_optimiserSettings.yulOptimiserSteps,
-				m_optimiserSettings.yulOptimiserCleanupSteps
-			);
+				m_optimiserSettings.yulOptimiserCleanupSteps);
 		}();
 
 		m_stackState = Parsed;
@@ -136,9 +137,7 @@ void YulStack::optimize()
 				optimizeStackAllocation,
 				yulOptimiserSteps,
 				yulOptimiserCleanupSteps,
-				m_optimiserSettings.expectedExecutionsPerDeployment
-			}
-		);
+				m_optimiserSettings.expectedExecutionsPerDeployment});
 
 		// Optimizer does not maintain correct native source locations in the AST.
 		// We can work around it by regenerating the AST from scratch from optimized IR.
@@ -168,8 +167,7 @@ bool YulStack::analyzeParsed(Object& _object)
 		m_errorReporter,
 		EVMDialect::strictAssemblyForEVMObjects(m_evmVersion, m_eofVersion),
 		{},
-		_object.summarizeStructure()
-	);
+		_object.summarizeStructure());
 
 	bool success = false;
 	try
@@ -213,15 +211,14 @@ void YulStack::reparse()
 		m_optimiserSettings,
 		m_debugInfoSelection,
 		m_soliditySourceProvider,
-		m_objectOptimizer
-	);
+		m_objectOptimizer);
 	bool reanalysisSuccessful = cleanStack.parseAndAnalyze(m_charStream->name(), source);
 	yulAssert(
 		reanalysisSuccessful,
-		source + "\n\n"
-		"Invalid IR generated:\n" +
-		SourceReferenceFormatter::formatErrorInformation(cleanStack.errors(), cleanStack) + "\n"
-	);
+		source
+			+ "\n\n"
+			  "Invalid IR generated:\n"
+			+ SourceReferenceFormatter::formatErrorInformation(cleanStack.errors(), cleanStack) + "\n");
 
 	m_stackState = AnalysisSuccessful;
 	m_parserResult = std::move(cleanStack.m_parserResult);
@@ -268,10 +265,8 @@ YulStack::assembleWithDeployed(std::optional<std::string_view> _deployName, bool
 		creationObject.sourceMappings = std::make_unique<std::string>();
 		for (auto const& codeSection: creationAssembly->codeSections())
 		{
-			*creationObject.sourceMappings += evmasm::AssemblyItem::computeSourceMapping(
-				codeSection.items,
-				{{m_charStream->name(), 0}}
-			);
+			*creationObject.sourceMappings
+				+= evmasm::AssemblyItem::computeSourceMapping(codeSection.items, {{m_charStream->name(), 0}});
 		}
 		if (debugInfoSelection().ethdebug)
 			creationObject.ethdebug = evmasm::ethdebug::program(creationObject.assembly->name(), 0, *creationObject.assembly, *creationObject.bytecode);
@@ -284,11 +279,8 @@ YulStack::assembleWithDeployed(std::optional<std::string_view> _deployName, bool
 				deployedObject.ethdebug = evmasm::ethdebug::program(deployedObject.assembly->name(), 0, *deployedObject.assembly, *deployedObject.bytecode);
 			solAssert(deployedAssembly->codeSections().size() == 1);
 			deployedObject.sourceMappings = std::make_unique<std::string>(
-				evmasm::AssemblyItem::computeSourceMapping(
-					deployedAssembly->codeSections().front().items,
-					{{m_charStream->name(), 0}}
-					)
-			);
+				evmasm::AssemblyItem::
+					computeSourceMapping(deployedAssembly->codeSections().front().items, {{m_charStream->name(), 0}}));
 		}
 	}
 	catch (Error const& _error)
@@ -383,7 +375,26 @@ Json YulStack::astJson() const
 	yulAssert(m_stackState >= Parsed);
 	yulAssert(m_parserResult, "");
 	yulAssert(m_parserResult->hasCode(), "");
-	return  m_parserResult->toJson();
+	return m_parserResult->toJson();
+}
+
+std::string YulStack::astRocq() const
+{
+	yulAssert(m_parserResult, "");
+	yulAssert(m_parserResult->hasCode(), "");
+
+	std::string result = "(* Generated by rocq-of-solidity *)\nRequire Import RocqOfSolidity.RocqOfSolidity.\n\n";
+	result += m_parserResult->toRocq() + "\n";
+	result += "\n";
+	result += "Import Ltac2.\n";
+	result += "\n";
+	result += "Definition codes : list Code.t :=\n";
+	result += "  ltac2:(\n";
+	result += "    let codes := Code.get_codes () in\n";
+	result += "    exact $codes\n";
+	result += "  ).\n";
+
+	return result;
 }
 
 Json YulStack::cfgJson() const
@@ -409,7 +420,8 @@ Json YulStack::cfgJson() const
 	};
 
 	std::function<Json(std::vector<std::shared_ptr<ObjectNode>>)> exportCFGFromSubObjects;
-	exportCFGFromSubObjects = [&](std::vector<std::shared_ptr<ObjectNode>> _subObjects) -> Json {
+	exportCFGFromSubObjects = [&](std::vector<std::shared_ptr<ObjectNode>> _subObjects) -> Json
+	{
 		Json subObjectsJson = Json::object();
 		for (std::shared_ptr<ObjectNode> const& subObjectNode: _subObjects)
 			if (Object const* subObject = dynamic_cast<Object const*>(subObjectNode.get()))

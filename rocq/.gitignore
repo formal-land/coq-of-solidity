@@ -1,0 +1,11 @@
+.lia.cache
+.nia.cache
+.RocqMakefile.d
+_RocqProject
+RocqMakefile
+RocqMakefile.conf
+*.vo
+*.vok
+*.vos
+*.glob
+.*.aux

@@ -23,7 +23,6 @@
 
 #include <liblangutil/CharStreamProvider.h>
 #include <liblangutil/DebugInfoSelection.h>
-#include <liblangutil/ErrorReporter.h>
 #include <liblangutil/EVMVersion.h>
 #include <liblangutil/Exceptions.h>
 
@@ -143,6 +142,7 @@ public:
 	/// Pretty-print the input after having parsed it.
 	std::string print() const;
 	Json astJson() const;
+	std::string astRocq() const;
 
 	// return the JSON representation of the YuL CFG (experimental)
 	Json cfgJson() const;

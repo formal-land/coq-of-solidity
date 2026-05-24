@@ -152,6 +152,7 @@ void ExecutionFramework::sendMessage(bytes const& _bytecode, bytes const& _argum
 
 	auto const data = _bytecode + _arguments;
 
+	m_showMessages = true;
 	if (m_showMessages)
 	{
 		if (_isCreation)

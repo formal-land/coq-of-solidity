@@ -14,18 +14,18 @@
 
 #pragma once
 
-#include <test/libsolidity/util/TestFileParser.h>
-#include <test/libsolidity/util/TestFunctionCall.h>
-#include <test/libsolidity/SolidityExecutionFramework.h>
-#include <test/libsolidity/AnalysisFramework.h>
-#include <test/TestCase.h>
 #include <liblangutil/Exceptions.h>
 #include <libsolutil/AnsiColorized.h>
+#include <test/TestCase.h>
+#include <test/libsolidity/AnalysisFramework.h>
+#include <test/libsolidity/SolidityExecutionFramework.h>
+#include <test/libsolidity/util/TestFileParser.h>
+#include <test/libsolidity/util/TestFunctionCall.h>
 
 #include <iosfwd>
 #include <string>
-#include <vector>
 #include <utility>
+#include <vector>
 
 namespace solidity::frontend::test
 {
@@ -63,8 +63,7 @@ public:
 			_options.eofVersion,
 			_options.vmPaths,
 			_options.enforceGasCost,
-			_options.enforceGasCostMinValue
-		);
+			_options.enforceGasCostMinValue);
 	}
 
 	explicit SemanticTest(
@@ -73,11 +72,11 @@ public:
 		std::optional<uint8_t> _eofVersion,
 		std::vector<boost::filesystem::path> const& _vmPaths,
 		bool _enforceGasCost = false,
-		u256 _enforceGasCostMinValue = 100000
-	);
+		u256 _enforceGasCostMinValue = 100000);
 
 	TestResult run(std::ostream& _stream, std::string const& _linePrefix = "", bool _formatted = false) override;
-	void printSource(std::ostream &_stream, std::string const& _linePrefix = "", bool _formatted = false) const override;
+	void
+	printSource(std::ostream& _stream, std::string const& _linePrefix = "", bool _formatted = false) const override;
 	void printUpdatedExpectations(std::ostream& _stream, std::string const& _linePrefix = "") const override;
 	void printUpdatedSettings(std::ostream& _stream, std::string const& _linePrefix = "") override;
 
@@ -89,7 +88,24 @@ public:
 
 	/// Compiles and deploys currently held source.
 	/// Returns true if deployment was successful, false otherwise.
-	bool deploy(std::string const& _contractName, u256 const& _value, bytes const& _arguments, std::map<std::string, solidity::test::Address> const& _libraries = {});
+	bool deploy(
+		std::string const& _contractName,
+		u256 const& _value,
+		bytes const& _arguments,
+		std::map<std::string, solidity::test::Address> const& _libraries = {});
+	std::string contractPathWithoutExtension() const;
+	std::string testRocqFilename() const;
+	std::string requirePathPrefix() const;
+	void writeRocqCallTest(
+		std::string const& asComment,
+		std::string const& _signature,
+		u256 const& _value,
+		bytes const& _arguments,
+		bytes const& _output,
+		FunctionCallExpectations const& expectations,
+		size_t testIndex) const;
+
+	void outputRocqTestFile(std::string const& _filename);
 
 private:
 	TestResult runTest(
@@ -110,7 +126,8 @@ private:
 	std::vector<SideEffectHook> makeSideEffectHooks() const;
 	std::vector<std::string> eventSideEffectHook(FunctionCall const&) const;
 	std::optional<AnnotatedEventSignature> matchEvent(util::h256 const& hash) const;
-	static std::string formatEventParameter(std::optional<AnnotatedEventSignature> _signature, bool _indexed, size_t _index, bytes const& _data);
+	static std::string formatEventParameter(
+		std::optional<AnnotatedEventSignature> _signature, bool _indexed, size_t _index, bytes const& _data);
 
 	OptimiserSettings optimizerSettingsFor(RequiresYulOptimizer _requiresYulOptimizer);
 
